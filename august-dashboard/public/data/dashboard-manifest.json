@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-02T13:56:43.554Z",
+  "sourcePolicy": "public-safe generated manifest only; no raw DM, credentials, OAuth/API keys, private IDs, or private source text",
+  "documents": [
+    {
+      "path": "/data/metaphor-loops/command-garden.md",
+      "title": "Command Garden",
+      "section": "Metaphor Loops",
+      "format": "markdown",
+      "publicSafe": true,
+      "summary": "Chris의 의도가 Karina의 조율을 거쳐 실행 결과로 자라는 루프.",
+      "bodyPreview": "Chris Order → Karina Framing → Agent Team Execution → Muyeol Validation → Karina Synthesis → Chris Feedback"
+    },
+    {
+      "path": "/data/overview/today.md",
+      "title": "Today Summary",
+      "section": "Overview",
+      "format": "markdown",
+      "publicSafe": true,
+      "summary": "오늘 운영 상태를 private 원문 없이 요약하는 로컬 카드 소스.",
+      "bodyPreview": "Local-only placeholder for the daily operating summary. No raw DM, API key, or credential value is stored here."
+    },
+    {
+      "path": "/data/team/agents.md",
+      "title": "Agent Roles",
+      "section": "Team",
+      "format": "markdown",
+      "publicSafe": true,
+      "summary": "Karina, Faker, Yuna, Son, Muyeol의 역할과 handoff boundary.",
+      "bodyPreview": "Karina coordinates. Faker builds. Yuna researches. Son scopes. Muyeol validates."
+    },
+    {
+      "path": "/data/obd/daily/2026-08-01.md",
+      "title": "OBD Daily Sample",
+      "section": "OBD",
+      "format": "markdown",
+      "publicSafe": true,
+      "summary": "일간 성장 기록의 최소 필드 샘플. 실제 private reflection은 별도 분리.",
+      "bodyPreview": "Theme, action, output, reflection summary, growth signal, next action."
+    },
+    {
+      "path": "/data/research/index.json",
+      "title": "Research Index",
+      "section": "Research",
+      "format": "json",
+      "publicSafe": true,
+      "summary": "논문 Markdown 파일을 검색/필터링하기 위한 작은 index 후보.",
+      "bodyPreview": "{ \"papers\": [], \"filters\": [\"topic\", \"year\", \"status\", \"relevance\"] }"
+    },
+    {
+      "path": "/data/reports/muyeol/weekly/2026-W31.md",
+      "title": "Muyeol Weekly Report",
+      "section": "Muyeol Report",
+      "format": "markdown",
+      "publicSafe": true,
+      "summary": "pass/fail보다 risk, category, recommendation을 함께 보는 검증 리포트 샘플.",
+      "bodyPreview": "Validated items, risks found, privacy notes, UX quality notes, final recommendation."
+    }
+  ]
+}

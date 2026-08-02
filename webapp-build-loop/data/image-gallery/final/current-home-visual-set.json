@@ -1,0 +1,133 @@
+{
+  "date_kst": "2026-08-01",
+  "agent": "goyounjung",
+  "status": "final",
+  "finalized_at_kst": "2026-08-01T23:47:08+09:00",
+  "finalization_reason": "explicit_chris_command",
+  "home_component": "HomeVisualHero",
+  "prompt_policy": "exact_prompt_hidden_by_default; share only on Chris request",
+  "lead": {
+    "id": "2026-08-01-goyounjung-01-violet-soft-signal-courtyard",
+    "date_kst": "2026-08-01",
+    "agent": "goyounjung",
+    "status": "final",
+    "title": "Soft Signal Courtyard",
+    "theme": "violet / #B14D92·#EFDCEC·#4C1039",
+    "metaphor": "single rounded courtyard block for holding signals before decisions",
+    "why": [
+      "사용자·시장·브랜드 신호를 바로 결론으로 밀지 않고, 먼저 안전한 안뜰에 모아두는 구조로 OBD의 숙성된 판단을 표현했습니다.",
+      "어제의 keystone/notebook/envelope와 달리, 오늘 1번은 단일 오브젝트 안의 “비어 있는 중심”을 써서 더 건축적이고 시스템적인 방향을 실험했습니다."
+    ],
+    "model": "seedream_v5_pro",
+    "webapp_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/01-violet-soft-signal-courtyard.png",
+    "source_path": "/opt/data/agent-team-work-log/visuals/daily-graphics/2026-08-01/generated/01-violet-soft-signal-courtyard.png",
+    "display_mode": "pinterest_masonry_card",
+    "interaction": "click_to_reveal_reason_drawer_or_modal",
+    "prompt_policy": "exact_prompt_hidden_by_default; share only on Chris request",
+    "finalization_reason": "explicit_chris_command"
+  },
+  "support": [
+    {
+      "id": "2026-08-01-goyounjung-02-mint-context-cradle-planter",
+      "date_kst": "2026-08-01",
+      "agent": "goyounjung",
+      "status": "final",
+      "title": "Context Cradle Planter",
+      "theme": "mint / #10C19F·#A6E6D4·#04221C",
+      "metaphor": "rounded cradle planter with one soft leaf cluster for nurturing user context",
+      "why": [
+        "사용자 맥락을 데이터 덩어리가 아니라 돌봐야 하는 생장 조건으로 보고, “받쳐주는 화분”이라는 더 인간적인 메타포로 바꿨습니다.",
+        "최근의 notebook·capsule·safe 계열 저장 오브젝트에서 벗어나, 맥락을 보관이 아니라 돌봄과 환경 설계의 문제로 읽게 합니다."
+      ],
+      "model": "seedream_v5_pro",
+      "webapp_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/02-mint-context-cradle-planter.png",
+      "source_path": "/opt/data/agent-team-work-log/visuals/daily-graphics/2026-08-01/generated/02-mint-context-cradle-planter.png",
+      "display_mode": "pinterest_masonry_card",
+      "interaction": "click_to_reveal_reason_drawer_or_modal",
+      "prompt_policy": "exact_prompt_hidden_by_default; share only on Chris request",
+      "finalization_reason": "explicit_chris_command"
+    },
+    {
+      "id": "2026-08-01-goyounjung-03-orange-trust-thermos-vessel",
+      "date_kst": "2026-08-01",
+      "agent": "goyounjung",
+      "status": "final",
+      "title": "Trust Thermos Vessel",
+      "theme": "warm orange / #B85C4F·#EEDCD6·#771B0E",
+      "metaphor": "single rounded thermos-like vessel for carrying service trust over time",
+      "why": [
+        "서비스 가치는 한 번의 기능보다 오래 유지되는 온도에 가깝다고 보고, “따뜻함을 보존하는 vessel”로 브랜드 신뢰를 표현했습니다.",
+        "최근 warm 계열의 kiln·spoon·envelope와 겹치지 않게, 먹는 물성이나 문서성이 아닌 시간 지속성/보온성 중심의 오브젝트로 전환했습니다."
+      ],
+      "model": "seedream_v5_lite",
+      "webapp_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/03-orange-trust-thermos-vessel.png",
+      "source_path": "/opt/data/agent-team-work-log/visuals/daily-graphics/2026-08-01/generated/03-orange-trust-thermos-vessel.png",
+      "display_mode": "pinterest_masonry_card",
+      "interaction": "click_to_reveal_reason_drawer_or_modal",
+      "prompt_policy": "exact_prompt_hidden_by_default; share only on Chris request",
+      "finalization_reason": "explicit_chris_command"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-08-01-goyounjung-01-violet-soft-signal-courtyard",
+      "date_kst": "2026-08-01",
+      "agent": "goyounjung",
+      "status": "final",
+      "title": "Soft Signal Courtyard",
+      "theme": "violet / #B14D92·#EFDCEC·#4C1039",
+      "metaphor": "single rounded courtyard block for holding signals before decisions",
+      "why": [
+        "사용자·시장·브랜드 신호를 바로 결론으로 밀지 않고, 먼저 안전한 안뜰에 모아두는 구조로 OBD의 숙성된 판단을 표현했습니다.",
+        "어제의 keystone/notebook/envelope와 달리, 오늘 1번은 단일 오브젝트 안의 “비어 있는 중심”을 써서 더 건축적이고 시스템적인 방향을 실험했습니다."
+      ],
+      "model": "seedream_v5_pro",
+      "webapp_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/01-violet-soft-signal-courtyard.png",
+      "source_path": "/opt/data/agent-team-work-log/visuals/daily-graphics/2026-08-01/generated/01-violet-soft-signal-courtyard.png",
+      "display_mode": "pinterest_masonry_card",
+      "interaction": "click_to_reveal_reason_drawer_or_modal",
+      "prompt_policy": "exact_prompt_hidden_by_default; share only on Chris request",
+      "finalization_reason": "explicit_chris_command"
+    },
+    {
+      "id": "2026-08-01-goyounjung-02-mint-context-cradle-planter",
+      "date_kst": "2026-08-01",
+      "agent": "goyounjung",
+      "status": "final",
+      "title": "Context Cradle Planter",
+      "theme": "mint / #10C19F·#A6E6D4·#04221C",
+      "metaphor": "rounded cradle planter with one soft leaf cluster for nurturing user context",
+      "why": [
+        "사용자 맥락을 데이터 덩어리가 아니라 돌봐야 하는 생장 조건으로 보고, “받쳐주는 화분”이라는 더 인간적인 메타포로 바꿨습니다.",
+        "최근의 notebook·capsule·safe 계열 저장 오브젝트에서 벗어나, 맥락을 보관이 아니라 돌봄과 환경 설계의 문제로 읽게 합니다."
+      ],
+      "model": "seedream_v5_pro",
+      "webapp_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/02-mint-context-cradle-planter.png",
+      "source_path": "/opt/data/agent-team-work-log/visuals/daily-graphics/2026-08-01/generated/02-mint-context-cradle-planter.png",
+      "display_mode": "pinterest_masonry_card",
+      "interaction": "click_to_reveal_reason_drawer_or_modal",
+      "prompt_policy": "exact_prompt_hidden_by_default; share only on Chris request",
+      "finalization_reason": "explicit_chris_command"
+    },
+    {
+      "id": "2026-08-01-goyounjung-03-orange-trust-thermos-vessel",
+      "date_kst": "2026-08-01",
+      "agent": "goyounjung",
+      "status": "final",
+      "title": "Trust Thermos Vessel",
+      "theme": "warm orange / #B85C4F·#EEDCD6·#771B0E",
+      "metaphor": "single rounded thermos-like vessel for carrying service trust over time",
+      "why": [
+        "서비스 가치는 한 번의 기능보다 오래 유지되는 온도에 가깝다고 보고, “따뜻함을 보존하는 vessel”로 브랜드 신뢰를 표현했습니다.",
+        "최근 warm 계열의 kiln·spoon·envelope와 겹치지 않게, 먹는 물성이나 문서성이 아닌 시간 지속성/보온성 중심의 오브젝트로 전환했습니다."
+      ],
+      "model": "seedream_v5_lite",
+      "webapp_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/03-orange-trust-thermos-vessel.png",
+      "source_path": "/opt/data/agent-team-work-log/visuals/daily-graphics/2026-08-01/generated/03-orange-trust-thermos-vessel.png",
+      "display_mode": "pinterest_masonry_card",
+      "interaction": "click_to_reveal_reason_drawer_or_modal",
+      "prompt_policy": "exact_prompt_hidden_by_default; share only on Chris request",
+      "finalization_reason": "explicit_chris_command"
+    }
+  ]
+}

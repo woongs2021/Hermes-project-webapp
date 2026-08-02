@@ -1,0 +1,24 @@
+# Secrets / local runtime
+.env
+.env.*
+!.env.example
+auth.json
+state.db*
+*.db
+*.sqlite
+*.log
+logs/
+sessions/
+request_dumps/
+credential*
+*token*
+*secret*
+
+# Dependencies / generated cache
+node_modules/
+dist/
+.cache/
+__pycache__/
+.pytest_cache/
+.DS_Store
+

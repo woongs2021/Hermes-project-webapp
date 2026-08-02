@@ -1,0 +1,93 @@
+{
+  "date_kst": "2026-07-30",
+  "agent": "goyounjung",
+  "status": "final_current_partial_2_of_3_due_to_higgsfield_credits",
+  "finalized_at_kst": "2026-07-30T09:44:52+09:00",
+  "items": [
+    {
+      "id": "2026-07-30-goyounjung-soft-relation-keel",
+      "date_kst": "2026-07-30",
+      "agent": "goyounjung",
+      "title": "Soft Relation Keel",
+      "theme": "violet / #B14D92·#EFDCEC·#4C1039",
+      "metaphor": "single rounded relation keel for stabilizing categories and value rules",
+      "metaphor_mode": "abstract/metaphysical/systemic",
+      "metaphor_family": "keel/stability/relationship-balance",
+      "why": [
+        "관계와 카테고리를 연결선이 아니라 무게중심을 잡는 하나의 조형물로 바꿔 OBD의 안정감을 표현했습니다.",
+        "보라 계열의 단일 배경과 낮은 3D 조형으로 조용한 균형·방향성 메타포를 분리했습니다.",
+        "Turntable QA: 1080x1080 H.264 MP4, ~5.04s, no audio; start/mid/end contact-sheet check passed for centered object, no text/logo/UI, no particles/pebbles/repeated blobs, no segmented bug-like or eye/lens cues."
+      ],
+      "source_path": "/opt/data/agent-team-work-log/visuals/daily-graphics/2026-07-30/generated/01-violet-soft-relation-keel.png",
+      "hires_still_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-07-30/01-soft-relation-keel.png",
+      "webapp_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-07-30/stills-1080/01-soft-relation-keel-1080.png",
+      "key_screen_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-07-30/stills-1080/01-soft-relation-keel-1080.png",
+      "loop_video_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-07-30/01-soft-relation-keel-turntable.mp4",
+      "turntable_video_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-07-30/01-soft-relation-keel-turntable.mp4",
+      "remote_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260730_001416_a2641645-fe25-4c5d-9c04-fb7e99aadd0f_min.webp",
+      "home_placement": "lead",
+      "model": "seedream_v5_pro + seedance_2_0",
+      "display_mode": "pinterest_masonry_card",
+      "interaction": "click_to_reveal_reason_drawer_or_modal",
+      "detail_view": {
+        "open_trigger": "card_click",
+        "close_trigger": "x_button_or_escape_or_backdrop",
+        "default_media": "turntable_video_asset_path",
+        "fallback_media": "key_screen_asset_path",
+        "video_behavior": "autoplay_muted_loop_playsinline_in_detail_only",
+        "card_behavior": "static_keyscreen_only_no_autoplay_video_in_grid"
+      },
+      "prompt_policy": "exact_prompt_hidden_by_default; share only on Chris request",
+      "private_prompt_path": "/opt/data/agent-team-work-log/visuals/daily-graphics/2026-07-30/prompts.md",
+      "status": "final",
+      "canonical_status": "final_current_partial_2_of_3_due_to_higgsfield_credits",
+      "finalization_reason": "explicit_chris_command_save_two_keyscreen_turntables_due_to_not_enough_credits",
+      "finalized_at_kst": "2026-07-30T09:44:52+09:00"
+    },
+    {
+      "id": "2026-07-30-goyounjung-value-tasting-spoon",
+      "date_kst": "2026-07-30",
+      "agent": "goyounjung",
+      "title": "Value Tasting Spoon",
+      "theme": "warm orange / #B85C4F·#EEDCD6·#771B0E",
+      "metaphor": "single rounded tasting spoon for evaluating service value before decisions",
+      "metaphor_mode": "concrete/object/utensil-value artifact",
+      "metaphor_family": "utensil/tasting/value-judgment",
+      "why": [
+        "서비스 가치와 브랜드 판단을 거창한 전략 도표가 아니라 “맛을 보고 조정하는 도구”로 낮춰 인간적인 디자인경영 감각을 제안했습니다.",
+        "v1보다 안정적인 v2를 대표본으로 사용했고, warm orange 계열에서 작고 쓰임이 분명한 utensil 오브젝트로 정리했습니다.",
+        "Turntable QA: 1080x1080 H.264 MP4, ~5.04s, no audio; start/mid/end contact-sheet check passed for centered object, no text/logo/UI, no particles/pebbles/repeated blobs, no segmented bug-like or eye/lens cues."
+      ],
+      "source_path": "/opt/data/agent-team-work-log/visuals/daily-graphics/2026-07-30/generated/02-orange-value-tasting-spoon-v2.png",
+      "hires_still_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-07-30/02-value-tasting-spoon.png",
+      "webapp_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-07-30/stills-1080/02-value-tasting-spoon-1080.png",
+      "key_screen_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-07-30/stills-1080/02-value-tasting-spoon-1080.png",
+      "loop_video_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-07-30/02-value-tasting-spoon-turntable.mp4",
+      "turntable_video_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-07-30/02-value-tasting-spoon-turntable.mp4",
+      "remote_url": null,
+      "home_placement": "supporting",
+      "model": "seedream_v5_pro + seedance_2_0",
+      "display_mode": "pinterest_masonry_card",
+      "interaction": "click_to_reveal_reason_drawer_or_modal",
+      "detail_view": {
+        "open_trigger": "card_click",
+        "close_trigger": "x_button_or_escape_or_backdrop",
+        "default_media": "turntable_video_asset_path",
+        "fallback_media": "key_screen_asset_path",
+        "video_behavior": "autoplay_muted_loop_playsinline_in_detail_only",
+        "card_behavior": "static_keyscreen_only_no_autoplay_video_in_grid"
+      },
+      "prompt_policy": "exact_prompt_hidden_by_default; share only on Chris request",
+      "private_prompt_path": "/opt/data/agent-team-work-log/visuals/daily-graphics/2026-07-30/prompts.md",
+      "status": "final",
+      "canonical_status": "final_current_partial_2_of_3_due_to_higgsfield_credits",
+      "finalization_reason": "explicit_chris_command_save_two_keyscreen_turntables_due_to_not_enough_credits",
+      "finalized_at_kst": "2026-07-30T09:44:52+09:00"
+    }
+  ],
+  "incomplete_item": {
+    "title": "Quiet OBD Saddle",
+    "reason": "Higgsfield Seedance 2.0 generation blocked by not_enough_credits",
+    "source_path": "/opt/data/agent-team-work-log/visuals/daily-graphics/2026-07-30/generated/03-blue-obd-quiet-saddle.png"
+  }
+}

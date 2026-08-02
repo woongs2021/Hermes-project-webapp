@@ -1,0 +1,13 @@
+{
+  "path": "/opt/data/github-backup-sets/repos/chris-obd-homepage-data",
+  "counts": {
+    "august_dashboard": 25,
+    "webapp_candidates": 9,
+    "webapp_plans": 2,
+    "webapp_daily_md": 14,
+    "image_gallery_data": 23,
+    "image_gallery_assets": 90
+  },
+  "secret_scan_findings": 0,
+  "pruned_files_due_to_secret_scan": 0
+}
