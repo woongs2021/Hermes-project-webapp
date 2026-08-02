@@ -3,7 +3,7 @@
     "id": "2026-08-01-goyounjung-01-violet-soft-signal-courtyard",
     "date_kst": "2026-08-01",
     "agent": "goyounjung",
-    "status": "final",
+    "status": "final_with_turntable",
     "title": "Soft Signal Courtyard",
     "theme": "violet / #B14D92·#EFDCEC·#4C1039",
     "metaphor": "single rounded courtyard block for holding signals before decisions",
@@ -17,13 +17,46 @@
     "display_mode": "pinterest_masonry_card",
     "interaction": "click_to_reveal_reason_drawer_or_modal",
     "prompt_policy": "exact_prompt_hidden_by_default; share only on Chris request",
-    "finalization_reason": "explicit_chris_command"
+    "finalization_reason": "explicit_chris_command",
+    "turntable_video_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/turntables/01-violet-soft-signal-courtyard-turntable-1080.mp4",
+    "loop_video_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/turntables/01-violet-soft-signal-courtyard-turntable-1080.mp4",
+    "turntable_remote_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260802_135604_c1107d41-0089-4474-bad8-0a9547105fbb.mp4",
+    "turntable_model": "seedance_2_0",
+    "turntable_options": {
+      "aspect_ratio": "1:1",
+      "resolution": "1080p",
+      "duration": 5,
+      "mode": "std",
+      "generate_audio": false
+    },
+    "turntable_job_id": "c1107d41-0089-4474-bad8-0a9547105fbb",
+    "turntable_qa": {
+      "ffprobe": {
+        "width": 1080,
+        "height": 1080,
+        "codec": "h264",
+        "audio_streams": 0,
+        "duration": 5.041667,
+        "size": 801263
+      },
+      "contact_sheet_path": "/opt/data/agent-team-work-log/visuals/daily-graphics/2026-08-01/turntable-raw/contact-sheets/01-violet-soft-signal-courtyard-contact-sheet.jpg",
+      "initial_status": "needs_visual_review_by_agent"
+    },
+    "detail_view": {
+      "primary_media": "turntable_video",
+      "turntable_video_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/turntables/01-violet-soft-signal-courtyard-turntable-1080.mp4",
+      "autoplay": true,
+      "muted": true,
+      "loop": true,
+      "playsinline": true,
+      "fallback": "static_still"
+    }
   },
   {
     "id": "2026-08-01-goyounjung-02-mint-context-cradle-planter",
     "date_kst": "2026-08-01",
     "agent": "goyounjung",
-    "status": "final",
+    "status": "final_with_turntable",
     "title": "Context Cradle Planter",
     "theme": "mint / #10C19F·#A6E6D4·#04221C",
     "metaphor": "rounded cradle planter with one soft leaf cluster for nurturing user context",
@@ -37,13 +70,46 @@
     "display_mode": "pinterest_masonry_card",
     "interaction": "click_to_reveal_reason_drawer_or_modal",
     "prompt_policy": "exact_prompt_hidden_by_default; share only on Chris request",
-    "finalization_reason": "explicit_chris_command"
+    "finalization_reason": "explicit_chris_command",
+    "turntable_video_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/turntables/02-mint-context-cradle-planter-turntable-1080.mp4",
+    "loop_video_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/turntables/02-mint-context-cradle-planter-turntable-1080.mp4",
+    "turntable_remote_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260802_140010_055e58be-d62f-42bb-aa14-065649a7aca9.mp4",
+    "turntable_model": "seedance_2_0",
+    "turntable_options": {
+      "aspect_ratio": "1:1",
+      "resolution": "1080p",
+      "duration": 5,
+      "mode": "std",
+      "generate_audio": false
+    },
+    "turntable_job_id": "055e58be-d62f-42bb-aa14-065649a7aca9",
+    "turntable_qa": {
+      "ffprobe": {
+        "width": 1080,
+        "height": 1080,
+        "codec": "h264",
+        "audio_streams": 0,
+        "duration": 5.041667,
+        "size": 789133
+      },
+      "contact_sheet_path": "/opt/data/agent-team-work-log/visuals/daily-graphics/2026-08-01/turntable-raw/contact-sheets/02-mint-context-cradle-planter-contact-sheet.jpg",
+      "initial_status": "needs_visual_review_by_agent"
+    },
+    "detail_view": {
+      "primary_media": "turntable_video",
+      "turntable_video_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/turntables/02-mint-context-cradle-planter-turntable-1080.mp4",
+      "autoplay": true,
+      "muted": true,
+      "loop": true,
+      "playsinline": true,
+      "fallback": "static_still"
+    }
   },
   {
     "id": "2026-08-01-goyounjung-03-orange-trust-thermos-vessel",
     "date_kst": "2026-08-01",
     "agent": "goyounjung",
-    "status": "final",
+    "status": "final_with_turntable",
     "title": "Trust Thermos Vessel",
     "theme": "warm orange / #B85C4F·#EEDCD6·#771B0E",
     "metaphor": "single rounded thermos-like vessel for carrying service trust over time",
@@ -57,6 +123,39 @@
     "display_mode": "pinterest_masonry_card",
     "interaction": "click_to_reveal_reason_drawer_or_modal",
     "prompt_policy": "exact_prompt_hidden_by_default; share only on Chris request",
-    "finalization_reason": "explicit_chris_command"
+    "finalization_reason": "explicit_chris_command",
+    "turntable_video_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/turntables/03-orange-trust-thermos-vessel-turntable-1080.mp4",
+    "loop_video_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/turntables/03-orange-trust-thermos-vessel-turntable-1080.mp4",
+    "turntable_remote_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260802_140307_1cf2b533-11a2-4512-aa70-eef8c227ba28.mp4",
+    "turntable_model": "seedance_2_0",
+    "turntable_options": {
+      "aspect_ratio": "1:1",
+      "resolution": "1080p",
+      "duration": 5,
+      "mode": "std",
+      "generate_audio": false
+    },
+    "turntable_job_id": "1cf2b533-11a2-4512-aa70-eef8c227ba28",
+    "turntable_qa": {
+      "ffprobe": {
+        "width": 1080,
+        "height": 1080,
+        "codec": "h264",
+        "audio_streams": 0,
+        "duration": 5.041667,
+        "size": 312149
+      },
+      "contact_sheet_path": "/opt/data/agent-team-work-log/visuals/daily-graphics/2026-08-01/turntable-raw/contact-sheets/03-orange-trust-thermos-vessel-contact-sheet.jpg",
+      "initial_status": "needs_visual_review_by_agent"
+    },
+    "detail_view": {
+      "primary_media": "turntable_video",
+      "turntable_video_asset_path": "/opt/data/hermes-webapp-build-loop/assets/image-gallery/2026-08-01/turntables/03-orange-trust-thermos-vessel-turntable-1080.mp4",
+      "autoplay": true,
+      "muted": true,
+      "loop": true,
+      "playsinline": true,
+      "fallback": "static_still"
+    }
   }
 ]
