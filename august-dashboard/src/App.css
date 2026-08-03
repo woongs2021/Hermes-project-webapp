@@ -663,6 +663,102 @@
   font-size: 0.92rem;
 }
 
+.graph-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.graph-hero-card {
+  display: grid;
+  min-height: 300px;
+  align-content: end;
+  gap: 18px;
+  background:
+    radial-gradient(circle at 84% 18%, rgba(177, 77, 146, 0.16), transparent 30%),
+    radial-gradient(circle at 14% 8%, rgba(16, 193, 159, 0.16), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(244, 248, 251, 0.9));
+}
+
+.graph-hero-card h3 {
+  max-width: 860px;
+  font-size: clamp(2rem, 4.8vw, 4.6rem);
+  font-weight: 420;
+  letter-spacing: -0.07em;
+  line-height: 0.96;
+}
+
+.graph-hero-card p:not(.card-kicker),
+.graph-layer-card p,
+.relation-card p {
+  max-width: 780px;
+  color: var(--muted-ink);
+}
+
+.graph-layer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.graph-layer-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.graph-layer-card h3,
+.relation-card h3 {
+  font-size: clamp(1.35rem, 2.1vw, 2rem);
+}
+
+.node-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: auto;
+}
+
+.node-chip-row span {
+  border: 1px solid rgba(1, 1, 2, 0.07);
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--muted-ink);
+  font-size: 0.78rem;
+  font-weight: 720;
+}
+
+.relation-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.relation-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(1, 1, 2, 0.07);
+  border-radius: 18px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.relation-row span {
+  color: var(--muted-ink);
+  font-size: 0.92rem;
+}
+
+.relation-row strong {
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: rgba(202, 247, 255, 0.42);
+  color: var(--mid);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+}
+
 @media (max-width: 900px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -692,7 +788,9 @@
   .architecture-grid,
   .screen-spread,
   .sample-data-layout,
-  .boundary-lanes {
+  .boundary-lanes,
+  .graph-layer-grid,
+  .relation-row {
     grid-template-columns: 1fr;
   }
 }

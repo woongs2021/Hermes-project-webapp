@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { fallbackManifest, loadDashboardManifest, type DashboardManifest } from './dashboardContent'
 import './App.css'
 
-type TabId = 'home' | 'intro' | 'team' | 'obd' | 'research' | 'report' | 'architecture'
+type TabId = 'home' | 'intro' | 'team' | 'obd' | 'research' | 'graph' | 'report' | 'architecture'
 
 type Tab = {
   id: TabId
@@ -31,6 +31,19 @@ type ProfileCredential = {
   label: string
   value: string
   detail: string
+}
+
+type GraphLayer = {
+  title: string
+  subtitle: string
+  description: string
+  nodes: string[]
+}
+
+type RelationExample = {
+  from: string
+  relation: string
+  to: string
 }
 
 const tabs: Tab[] = [
@@ -68,6 +81,13 @@ const tabs: Tab[] = [
     eyebrow: 'Knowledge loop',
     title: 'Research Library',
     description: 'A quiet reading surface for papers, insights, and synthesis cards once static sample data is introduced.',
+  },
+  {
+    id: 'graph',
+    label: 'Graph',
+    eyebrow: 'Harness / Loop / Graph Engineering',
+    title: 'Graph Engineering MVP',
+    description: '루프 결과를 공개 안전한 노드와 관계 카드로 바꾸는 첫 번째 파일 기반 그래프 후보입니다.',
   },
   {
     id: 'report',
@@ -111,6 +131,33 @@ const profileLenses = [
   'AI UX · 정서적 안정감 · 인간적인 인터랙션',
   'Research · Awards · IP · Mentoring',
   'Ontology Business Designer for the AI era',
+]
+
+const graphLayers: GraphLayer[] = [
+  {
+    title: 'Harness',
+    subtitle: 'Safe operating base',
+    description: 'Karina, specialist agents, Hermes tools, cron, files, routing, permissions, and public/private boundaries를 한 운영 기반으로 묶습니다.',
+    nodes: ['Agent', 'Tool', 'Route', 'Permission', 'Boundary'],
+  },
+  {
+    title: 'Loop',
+    subtitle: 'Recurring judgment rhythm',
+    description: 'Yuna research, Go Youn-jung visual interpretation, Son growth translation, Faker webapp structuring, Muyeol validation이 매일/매주 반복됩니다.',
+    nodes: ['ResearchItem', 'Insight', 'GrowthQuestion', 'Artifact', 'RiskReview'],
+  },
+  {
+    title: 'Graph Engineering',
+    subtitle: 'Relation-first memory',
+    description: 'Markdown/JSONL 로그를 명시적인 nodes.jsonl, edges.jsonl, schema.md 후보로 바꿔 판단의 연결 구조를 남깁니다.',
+    nodes: ['Theme', 'Decision', 'FEEDS', 'VALIDATED_BY', 'BELONGS_TO_THEME'],
+  },
+]
+
+const relationExamples: RelationExample[] = [
+  { from: 'Yuna ResearchItem', relation: 'SUPPORTS', to: 'AI/AX job-shift Insight' },
+  { from: 'Go Youn-jung Artifact', relation: 'FEEDS', to: 'HomeVisualHero / Visual Archive' },
+  { from: 'Muyeol RiskReview', relation: 'VALIDATED_BY', to: 'public-safe Graph Card' },
 ]
 
 const architectureScreens: ArchitectureScreen[] = [
@@ -291,6 +338,55 @@ function ChrisIntroPanel() {
         <div className="lens-list" aria-label="Profile keywords">
           {profileLenses.map((lens) => (
             <span key={lens}>{lens}</span>
+          ))}
+        </div>
+      </article>
+    </div>
+  )
+}
+
+function GraphEngineeringPanel() {
+  return (
+    <div className="graph-grid" aria-label="Harness Loop Graph Engineering MVP">
+      <article className="content-card graph-hero-card">
+        <p className="card-kicker">Public-safe graph candidate</p>
+        <h3>운영 로그를 관계가 보이는 제품 구조로 바꿉니다</h3>
+        <p>
+          오늘은 무거운 DB 없이, 웹앱 안에서 먼저 읽히는 세 층 설명과 relation breadcrumb를 만들었습니다.
+          이후 nodes.jsonl, edges.jsonl, schema.md로 옮겨도 같은 언어를 유지할 수 있습니다.
+        </p>
+        <div className="status-row" aria-label="Graph MVP status">
+          <span className="status-chip">File-first MVP</span>
+          <span className="status-chip muted">No raw private logs</span>
+          <span className="status-chip muted">Card before network</span>
+        </div>
+      </article>
+
+      <section className="graph-layer-grid" aria-label="Three graph layers">
+        {graphLayers.map((layer) => (
+          <article className="content-card graph-layer-card" key={layer.title}>
+            <p className="card-kicker">{layer.subtitle}</p>
+            <h3>{layer.title}</h3>
+            <p>{layer.description}</p>
+            <div className="node-chip-row" aria-label={`${layer.title} candidate nodes`}>
+              {layer.nodes.map((node) => (
+                <span key={node}>{node}</span>
+              ))}
+            </div>
+          </article>
+        ))}
+      </section>
+
+      <article className="content-card relation-card">
+        <p className="card-kicker">Relation breadcrumb</p>
+        <h3>초기 그래프는 선명한 연결 문장부터</h3>
+        <div className="relation-list" aria-label="Public-safe relation examples">
+          {relationExamples.map((edge) => (
+            <div className="relation-row" key={`${edge.from}-${edge.relation}-${edge.to}`}>
+              <span>{edge.from}</span>
+              <strong>{edge.relation}</strong>
+              <span>{edge.to}</span>
+            </div>
           ))}
         </div>
       </article>
@@ -514,6 +610,8 @@ function App() {
 
         {activeTab.id === 'intro' ? (
           <ChrisIntroPanel />
+        ) : activeTab.id === 'graph' ? (
+          <GraphEngineeringPanel />
         ) : activeTab.id === 'architecture' ? (
           <DevArchitecturePanel />
         ) : (

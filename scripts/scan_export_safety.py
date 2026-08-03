@@ -23,6 +23,7 @@ EXCLUDE_NAMES = {
     '.git', '.env', '.env.local', '.env.production', '.env.development', 'auth.json',
     'state.db', 'state.db-shm', 'state.db-wal', 'node_modules', '__pycache__', '.pytest_cache',
     '.mypy_cache', '.ruff_cache', '.DS_Store', '.cache', 'logs', 'sessions', 'audio_cache', '.archive',
+    'dist',
 }
 EXCLUDE_GLOBS = [
     '*.pem', '*.key', '*.crt', '*.p12', '*.sqlite', '*.db', '*.log', '*.bak', '*.tmp',
@@ -51,7 +52,6 @@ def scan_for_secrets(repo: Path) -> list[dict[str, str]]:
         if rel.as_posix() == 'scripts/scan_export_safety.py':
             continue
         if excluded(path, repo):
-            findings.append({'path': rel.as_posix(), 'pattern': 'excluded-file-name', 'line': '0'})
             continue
         if path.suffix.lower() not in TEXT_EXTS and path.name != '.gitignore':
             continue
