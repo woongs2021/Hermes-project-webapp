@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.august-dashboard/schemas/home-visual-set.schema.json",
+  "title": "August Dashboard public-safe home visual set",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "generatedAt", "sourcePolicy", "homeComponent", "status", "items"],
+  "properties": {
+    "version": { "const": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "sourcePolicy": {
+      "const": "public-safe home visual manifest only; exposes copied still/turntable assets and approved display copy; excludes raw logs, prompts, remote URLs, model/job IDs, credentials, private IDs, and local source paths"
+    },
+    "homeComponent": { "const": "HomeVisualHero" },
+    "status": { "const": "public_home_allowed" },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/homeVisualItem" }
+    }
+  },
+  "$defs": {
+    "homeVisualItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "dateKst",
+        "theme",
+        "metaphor",
+        "why",
+        "imageSrc",
+        "status",
+        "mediaCapability",
+        "detailMedia",
+        "metadata",
+        "publicSafe"
+      ],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "dateKst": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "theme": { "type": "string", "minLength": 1 },
+        "metaphor": { "type": "string", "minLength": 1 },
+        "why": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "imageSrc": { "type": "string", "pattern": "^/assets/home-visuals/[A-Za-z0-9._/-]+\\.png$" },
+        "videoSrc": { "type": "string", "pattern": "^/assets/home-visuals/turntables/[A-Za-z0-9._/-]+\\.mp4$" },
+        "status": { "const": "public_home_allowed" },
+        "mediaCapability": { "enum": ["still_only", "turntable_available"] },
+        "detailMedia": { "enum": ["static_still", "turntable_video"] },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["dateKst", "displayMode", "interaction", "promptPolicy", "sourceStatus", "detailFallback"],
+          "properties": {
+            "dateKst": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+            "displayMode": { "type": "string", "minLength": 1 },
+            "interaction": { "type": "string", "minLength": 1 },
+            "promptPolicy": { "const": "exact_prompt_hidden_by_default; share only on Chris request" },
+            "sourceStatus": { "type": "string", "minLength": 1 },
+            "detailFallback": { "const": "static_still" }
+          }
+        },
+        "publicSafe": { "const": true }
+      }
+    }
+  }
+}

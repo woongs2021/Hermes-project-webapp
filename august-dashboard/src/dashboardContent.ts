@@ -52,7 +52,7 @@ export const fallbackManifest: DashboardManifest = {
 
 export async function loadDashboardManifest(): Promise<DashboardManifest> {
   try {
-    const response = await fetch('/data/dashboard-manifest.json', { cache: 'no-store' })
+    const response = await fetch(`${import.meta.env.BASE_URL}data/dashboard-manifest.json`, { cache: 'no-store' })
 
     if (!response.ok) {
       throw new Error(`manifest request failed: ${response.status}`)

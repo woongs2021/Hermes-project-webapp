@@ -4,10 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npm run generate:manifest && vite",
+    "dev": "npm run generate:data && vite",
+    "generate:data": "npm run generate:manifest && npm run generate:home-visuals && npm run generate:research-board",
+    "validate:data": "npm run validate:manifest && npm run validate:home-visuals && npm run validate:research-board",
     "generate:manifest": "node scripts/generate-dashboard-manifest.mjs",
     "validate:manifest": "node scripts/validate-dashboard-manifest.mjs",
-    "build": "npm run validate:manifest && npm run generate:manifest && tsc -b && vite build",
+    "generate:home-visuals": "node scripts/generate-home-visual-set.mjs",
+    "validate:home-visuals": "node scripts/validate-home-visual-set.mjs",
+    "generate:research-board": "node scripts/generate-research-board.mjs",
+    "validate:research-board": "node scripts/validate-research-board.mjs",
+    "build": "npm run validate:data && npm run generate:data && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },

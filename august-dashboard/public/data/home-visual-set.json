@@ -1,0 +1,933 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-04T03:16:37.816Z",
+  "sourcePolicy": "public-safe home visual manifest only; exposes copied still/turntable assets and approved display copy; excludes raw logs, prompts, remote URLs, model/job IDs, credentials, private IDs, and local source paths",
+  "homeComponent": "HomeVisualHero",
+  "status": "public_home_allowed",
+  "items": [
+    {
+      "id": "2026-07-22-goyounjung-lantern-guidance-refined",
+      "title": "랜턴 안내",
+      "dateKst": "2026-07-22",
+      "theme": "차가운 안내 / 배경 #4065F8 · 오브젝트 #D4F7EC · 포인트 #B85C4F",
+      "metaphor": "단일 랜턴 오브젝트로 표현한 안내와 신뢰",
+      "why": [
+        "어두운 상황에서 과하게 지시하지 않고 주변을 부드럽게 밝혀주는 안내자의 역할을 나타냅니다.",
+        "커넥터/브릿지처럼 유기적으로 보일 수 있는 연결 은유를 제거하고, 단일 오브젝트 중심의 안전한 guidance 메타포로 전환했습니다.",
+        "사틴 세라믹 질감, 베벨, 림라이트, 접촉 그림자를 더해 3D 제품 렌더의 완성감을 높였습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-22-01-01-lantern-guidance-refined-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-22-01-01-lantern-guidance-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-22",
+        "displayMode": "visual_archive_static_still_card_1080",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final_current",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-22-goyounjung-key-possibility-refined",
+      "title": "가능성의 열쇠",
+      "dateKst": "2026-07-22",
+      "theme": "mint possibility / background #10C19F · object #EFDCEC · accent #B14D92",
+      "metaphor": "가능성과 agency를 여는 둥근 키 오브젝트",
+      "why": [
+        "AI가 사용자의 선택권을 대신 가져가는 것이 아니라, 사용자가 다음 문을 열 수 있게 돕는 도구라는 의미를 담았습니다.",
+        "민트 배경과 라일락 오브젝트의 보색 대비로 메타포가 명확히 분리되어 보입니다.",
+        "키 헤드의 베벨, 컷아웃 그림자, 은은한 반사광으로 이전보다 더 사실적인 제품 아이콘 느낌을 강화했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-22-02-02-key-possibility-refined-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-22-02-02-key-possibility-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-22",
+        "displayMode": "visual_archive_static_still_card_1080",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final_current",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-22-goyounjung-anchor-stability-refined",
+      "title": "앵커 안정감",
+      "dateKst": "2026-07-22",
+      "theme": "magenta stability / background #B14D92 · object #D4F7EC · accent #156E5C",
+      "metaphor": "흔들리지 않는 안정감과 책임감을 나타내는 부드러운 앵커 오브젝트",
+      "why": [
+        "책임감과 안정성을 무겁고 권위적으로 표현하지 않고, 부드러운 제품 조각처럼 정서적으로 낮췄습니다.",
+        "마젠타 배경과 제이드 오브젝트의 강한 분리감으로 단색 배경에서도 메타포가 선명합니다.",
+        "베이스 접점의 앰비언트 오클루전과 부드러운 림라이트로 실제 3D 오브젝트 같은 깊이를 더했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-22-03-03-anchor-stability-refined-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-22-03-03-anchor-stability-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-22",
+        "displayMode": "visual_archive_static_still_card_1080",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final_current",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-23-goyounjung-lantern-guidance-no-pebbles",
+      "title": "랜턴 안내",
+      "dateKst": "2026-07-23",
+      "theme": "차가운 안내 / 배경 #4065F8 · 오브젝트 #D4F7EC · 포인트 #B85C4F",
+      "metaphor": "조약돌 배열을 제거하고 하나의 매끈한 조명 오브젝트로 표현한 안내와 신뢰",
+      "why": [
+        "어두운 상황에서 과하게 지시하지 않고 주변을 부드럽게 밝혀주는 안내자의 역할을 나타냅니다.",
+        "Chris 피드백을 반영해 조약돌·입자·연결 배열을 제거하고 단일 smooth 오브젝트로 안정감을 높였습니다.",
+        "푸른 배경과 민트 오브젝트의 보색 대비, 부드러운 스튜디오 조명으로 One UI식 따뜻한 polish를 유지했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-23-04-01-lantern-guidance-no-pebbles-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-23-04-01-lantern-guidance-no-pebbles-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-23",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-23-goyounjung-moss-planter-no-pebbles",
+      "title": "이끼 플랜터",
+      "dateKst": "2026-07-23",
+      "theme": "민트 생태계 / 배경 #10C19F · 플랜터 #A6E6D4 · 이끼 #156E5C",
+      "metaphor": "조약돌 경로 없이 하나의 smooth planter와 연속된 moss cushion으로 표현한 돌봄받는 사용자 맥락",
+      "why": [
+        "사용자 맥락을 데이터 덩어리가 아니라 돌봄이 필요한 작은 생태계로 보는 이미지입니다.",
+        "기존 stepping-stone 구성을 제거해 연결성 과잉이나 반복된 작은 덩어리에서 오는 불편함을 줄였습니다.",
+        "민트 배경, 매끈한 세라믹 플랜터, 연속된 moss 쿠션으로 더 단순하고 제품 아이콘다운 형태로 정리했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-23-05-02-moss-planter-no-pebbles-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-23-05-02-moss-planter-no-pebbles-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-23",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-23-goyounjung-velvet-proof-stamp",
+      "title": "벨벳 증명 스탬프",
+      "dateKst": "2026-07-23",
+      "theme": "보라 검증 / 배경 #B14D92 · 오브젝트 #EFDCEC · 포인트 #4C1039",
+      "metaphor": "검증된 확신을 부드러운 품질 확인 도구로 바꾸는 velvet proof stamp",
+      "why": [
+        "브랜드 경험에서 중요한 검증된 확신을 차갑게 통제하는 도장이 아니라 부드러운 품질 확인 도구로 바꿨습니다.",
+        "Muyeol식 검증·리스크 감각과 Go Youn-jung식 시각 품질 판단을 함께 담는 상징으로 설계했습니다.",
+        "작은 pebble accent는 하나만 유지되어 경로/연결성 과잉이 아니라 정제된 proof cue로 읽히게 했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-23-06-03-velvet-proof-stamp-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-23-06-03-velvet-proof-stamp-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-23",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-24-goyounjung-gyroscope-trust-cradle",
+      "title": "자이로스코프 신뢰 크래들",
+      "dateKst": "2026-07-24",
+      "theme": "균형 잡힌 안내 / 배경 #4065F8 · 오브젝트 #D4F7EC · 포인트 #B85C4F",
+      "metaphor": "마디 없는 하나의 매끈한 gyroscope cradle로 표현한 균형 잡힌 책임과 신뢰 가능한 안내",
+      "why": [
+        "기존 1번의 마디·벌레 같은 인상을 제거하기 위해 조명/마디 구조를 완전히 버리고 gyroscope 계열로 전환했습니다.",
+        "하나의 연속된 링과 중심 구체가 과도하게 지시하지 않는 안정적 안내와 균형 잡힌 책임을 나타냅니다.",
+        "단색 파란 배경과 민트 세라믹 오브젝트, 작은 terracotta accent로 따뜻하지만 정제된 One UI식 polish를 유지합니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-24-07-01-gyroscope-trust-cradle-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-24-07-01-gyroscope-trust-cradle-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-24",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-24-goyounjung-02-listening-pod",
+      "title": "리스닝 포드",
+      "dateKst": "2026-07-24",
+      "theme": "차가운 파랑 / #4065F8·#A1D0F6·#001C33",
+      "metaphor": "사용자 맥락을 조용히 받아들이는 매끈한 리서치 포드",
+      "why": [
+        "사용자 리서치를 “소리를 크게 모으는 장치”가 아니라 맥락을 조용히 받아들이는 포드로 표현했습니다.",
+        "구멍·그릴·입자 없이 매끈한 단일 오브젝트로 만들어, 어제 피드백의 징그러운 반복 요소를 피했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-24-08-02-listening-pod-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-24-08-02-listening-pod-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-24",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-24-goyounjung-03-memory-capsule-safe",
+      "title": "메모리 캡슐 금고",
+      "dateKst": "2026-07-24",
+      "theme": "보라 / #B14D92·#EFDCEC·#4C1039",
+      "metaphor": "중요한 맥락 기억을 안전하게 보관하는 둥근 캡슐 세이프",
+      "why": [
+        "AI가 기억을 많이 쌓는 장면보다, 중요한 맥락을 안전하게 보관하는 태도를 시각화했습니다.",
+        "브랜드 신뢰와 개인화의 균형을 둥근 수납 오브젝트로 정리해 과장된 AI 상징을 피했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-24-09-03-memory-capsule-safe-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-24-09-03-memory-capsule-safe-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-24",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-25-goyounjung-priority-cushion-stack",
+      "title": "Priority Cushion Stack",
+      "dateKst": "2026-07-25",
+      "theme": "mint / #10C19F·#A6E6D4·#04221C",
+      "metaphor": "복잡한 판단의 우선순위가 서로 눌리지 않고 안정적으로 포개지는 부드러운 cushion stack",
+      "why": [
+        "복잡한 판단의 우선순위를 차가운 표나 대시보드가 아니라, 손으로 만질 수 있는 부드러운 층위로 바꿔 본 이미지입니다.",
+        "OBD 관점에서 가치·사용자 맥락·브랜드 기준이 서로 눌리지 않고 안정적으로 포개지는 상태를 표현했습니다.",
+        "단일 쿠션 스택과 민트 계열 대비로, 차갑지 않은 판단 구조와 촉각적 안정감을 유지했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-25-10-01-priority-cushion-stack-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-25-10-01-priority-cushion-stack-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-25",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-25-goyounjung-soft-observatory-parasol",
+      "title": "Soft Observatory Parasol",
+      "dateKst": "2026-07-25",
+      "theme": "cool blue / #4065F8·#A1D0F6·#001C33",
+      "metaphor": "AI/UX 판단에서 안전하게 관찰할 수 있는 거리를 만들어주는 rounded observatory parasol",
+      "why": [
+        "AI/UX 판단에서 더 많이 보는 것보다 “안전하게 관찰할 수 있는 거리”를 만드는 일이 중요하다는 뜻으로 만들었습니다.",
+        "파란 팔레트 안에서 보호·전망·여백을 결합해, 과장된 미래감 없이 리서치의 관찰 품질을 보여주려 했습니다.",
+        "둥근 캐노피와 단색 blue 배경으로 보호적 시야와 리서치의 관찰 품질을 차분하게 표현했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-25-11-02-soft-observatory-parasol-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-25-11-02-soft-observatory-parasol-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-25",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-25-goyounjung-protective-fabric-cover",
+      "title": "Protective Fabric Cover",
+      "dateKst": "2026-07-25",
+      "theme": "warm care / #EFDCEC·#C8847D·#B85C4F·#771B0E",
+      "metaphor": "갈라진 패브릭 인상을 제거하고, 책임과 케어를 부드럽게 감싸는 연속적인 protective fabric cover",
+      "why": [
+        "기존 3번에서 갈라짐/찢김처럼 보일 수 있는 패브릭 신호를 제거하고, 온전한 보호 커버로 재생성했습니다.",
+        "부드러운 연속 드레이프와 따뜻한 rose-lilac 팔레트가 검증/거버넌스를 부정적 통제가 아니라 안정적인 케어로 읽히게 합니다.",
+        "턴테이블 검수에서도 균열·찢김·입자·벌레형 분절 없이 보호적 패브릭으로 유지됩니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-25-12-03-protective-fabric-cover-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-25-12-03-protective-fabric-cover-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-25",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-26-goyounjung-soft-horizon-marker",
+      "title": "Soft Horizon Marker",
+      "dateKst": "2026-07-26",
+      "theme": "cool blue / #4065F8·#A1D0F6·#001C33",
+      "metaphor": "차분한 판단 경계와 OBD 기준점을 부드러운 horizon marker로 표현한 단일 랜드마크 오브젝트",
+      "why": [
+        "사용자 신호와 비즈니스 판단 사이에 필요한 “경계선”을 날카로운 선이 아니라 부드러운 표식으로 해석했습니다.",
+        "최근의 쿠션·캐노피·패브릭 계열을 피하고, 더 조용한 랜드마크/시그널 오브젝트로 OBD의 기준점을 표현했습니다.",
+        "짙은 horizontal inlay는 설계된 기준선으로 남기되, 중앙 eye-like dot이 되지 않도록 턴테이블까지 검수했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-26-13-01-soft-horizon-marker-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-26-13-01-soft-horizon-marker-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-26",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-26-goyounjung-context-capybara-bench",
+      "title": "Context Capybara Bench",
+      "dateKst": "2026-07-26",
+      "theme": "mint / #10C19F·#A6E6D4·#04221C",
+      "metaphor": "사용자 맥락이 분석되기 전에 안전하게 머무를 수 있는 capybara-like context bench",
+      "why": [
+        "사용자 맥락을 “분석 대상”보다 먼저 편안히 머무르게 해야 한다는 리서치 태도를, 조용한 동물형 벤치로 바꿨습니다.",
+        "최근의 보관함·도구·패브릭 반복을 피하고, 더 따뜻한 concrete metaphor로 One UI의 인간적 밀도를 실험했습니다.",
+        "동물형이지만 mascot처럼 과하게 귀엽지 않게, 리서치의 따뜻한 수용성을 표현하는 product-icon sculpture로 유지했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-26-14-02-context-capybara-bench-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-26-14-02-context-capybara-bench-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-26",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-26-goyounjung-violet-rhythm-cradle",
+      "title": "Violet Rhythm Cradle",
+      "dateKst": "2026-07-26",
+      "theme": "violet / #B14D92·#EFDCEC·#4C1039",
+      "metaphor": "중앙 눈알/렌즈 구조를 제거하고, 검수 리듬과 브랜드 품질 판단을 부드러운 균형 크래들로 표현한 revised violet object",
+      "why": [
+        "이전 violet 결과의 중앙 큰 점/렌즈가 눈알처럼 읽히는 문제를 품질 실패로 보고, eye/lens/dot 구조를 제거한 clean prompt로 재생성했습니다.",
+        "부드러운 아치형 크래들이 증거 검토와 브랜드 판단의 안정적인 cadence를 표현합니다.",
+        "턴테이블 검수에서도 중앙 큰 점·눈알·렌즈 느낌이 재발하지 않았고, 입자/분절/텍스트 없이 유지됩니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-26-15-03-violet-rhythm-cradle-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-26-15-03-violet-rhythm-cradle-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-26",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-27-goyounjung-soft-value-hearth",
+      "title": "Soft Value Hearth",
+      "dateKst": "2026-07-27",
+      "theme": "warm orange / #B85C4F·#EEDCD6·#771B0E",
+      "metaphor": "가치 교환과 합의의 기준이 낮고 안정적인 촉각 오브젝트로 따뜻하게 자리 잡는 상태",
+      "why": [
+        "가치 교환과 합의의 중심을 “뜨겁게 과장된 불”이 아니라 낮고 안정적인 촉각 오브젝트로 바꿔, OBD 판단의 온도와 기준을 동시에 보여줍니다.",
+        "어제의 marker/동물/악기 계열을 피하고, 단일 블록·단순 배경으로 반복 요소와 wave 느낌을 줄였습니다.",
+        "Normalized to 1080x1080 H.264 MP4, 5.041667s, no audio stream. Contact-sheet QC passed: object stays centered/recognizable, no text/logo/UI, no particles/pebbles/granular creepy texture, no bug-like segmentation, no eye/lens/face-like features."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-27-16-01-soft-value-hearth-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-27-16-01-soft-value-hearth-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-27",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-27-goyounjung-evidence-reading-plinth",
+      "title": "Evidence Reading Plinth",
+      "dateKst": "2026-07-27",
+      "theme": "cool blue / #4065F8·#A1D0F6·#001C33",
+      "metaphor": "버섯/외계인형 램프를 폐기하고, 사용자 근거를 조용히 올려두고 천천히 해석하는 낮은 evidence reading plinth",
+      "why": [
+        "기존 램프가 버섯/외계인처럼 읽혀 징그러웠던 문제를 제거하기 위해, 돔+줄기 실루엣을 완전히 버리고 낮고 수평적인 리서치 도구 형태로 바꿨습니다.",
+        "사용자 근거를 조용히 올려두고 천천히 해석하는 태도를, 생물형이 아닌 건축적 plinth/document-rest 오브젝트로 표현했습니다.",
+        "Normalized to 1080x1080 H.264 MP4, 5.041667s, no audio stream. Contact-sheet QC passed: revised low plinth remains grounded and tool-like; no mushroom/alien cap-and-stem silhouette recurrence, no eye/lens/face, no text/particles/bug-like segmentation."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-27-17-02-evidence-reading-plinth-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-27-17-02-evidence-reading-plinth-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-27",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-27-goyounjung-brand-patina-stone",
+      "title": "Brand Patina Stone",
+      "dateKst": "2026-07-27",
+      "theme": "violet / #B14D92·#EFDCEC·#4C1039",
+      "metaphor": "반복된 품질 판단이 브랜드 신뢰의 표면감으로 축적되는 단일 tactile material sample",
+      "why": [
+        "브랜드 신뢰를 순간의 장식이 아니라 반복된 품질 판단이 쌓여 생기는 ‘재료의 표면감’으로 비유했습니다.",
+        "container/pod/safe 반복을 피하고, 하나의 촉각 샘플 블록으로 디자인경영의 축적성과 절제된 고급감을 보려 했습니다.",
+        "Normalized to 1080x1080 H.264 MP4, 5.041667s, no audio stream. Contact-sheet QC passed: object stays centered/recognizable, no text/logo/UI, no particles/pebbles/granular creepy texture, no bug-like segmentation, no eye/lens/face-like features."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-27-18-03-brand-patina-stone-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-27-18-03-brand-patina-stone-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-27",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-28-goyounjung-soft-taxonomy-keystone",
+      "title": "Soft Taxonomy Keystone",
+      "dateKst": "2026-07-28",
+      "theme": "woongdesignv2-compatible muted yellow / #F3E6B8·#EBCB72·#C79A2E·#5B3A14",
+      "metaphor": "single smooth taxonomy keystone/bookmark wedge for turning scattered signals into usable judgment",
+      "why": [
+        "Chris 피드백에 따라 3개 알약처럼 보이던 반복 돌출 구조를 버리고, 하나의 연속된 keystone/bookmark-wedge 오브젝트로 메타포를 바꿨습니다.",
+        "옐로우/오커 확장 팔레트로 전환해 기존 mint·blue·violet 반복감을 줄이고, 따뜻한 판단·학습·정리의 톤을 만들었습니다.",
+        "Turntable QA: 1080x1080 H.264 MP4, ~5.04s, no audio; start/mid/end contact-sheet check passed for centered object, no text/logo, no particles/pebbles, no creepy segmented cues."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-28-19-01-soft-taxonomy-keystone-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-28-19-01-soft-taxonomy-keystone-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-28",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-28-goyounjung-warm-value-loaf",
+      "title": "Warm Value Loaf",
+      "dateKst": "2026-07-28",
+      "theme": "warm orange / #B85C4F·#EEDCD6·#771B0E",
+      "metaphor": "single rounded value loaf for trust and service value maturing over time",
+      "why": [
+        "가치 교환은 즉시 찍어내는 산출물이 아니라 재료와 시간이 맞아야 완성되는 과정이라는 점을 부드러운 loaf 메타포로 잡았습니다.",
+        "warm/orange 팔레트는 신뢰·온기·비즈니스 감각을 연결하면서도 AI 스타트업식 네온 미감을 피하는 데 적합했습니다.",
+        "Turntable QA: 1080x1080 H.264 MP4, ~5.04s, no audio; start/mid/end contact-sheet check passed for centered object, no text/logo, no particles/pebbles, no creepy segmented cues."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-28-20-02-warm-value-loaf-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-28-20-02-warm-value-loaf-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-28",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-28-goyounjung-soft-quality-anvil",
+      "title": "Soft Quality Anvil",
+      "dateKst": "2026-07-28",
+      "theme": "violet / #B14D92·#EFDCEC·#4C1039",
+      "metaphor": "rounded soft anvil for shaping brand quality without harshness",
+      "why": [
+        "브랜드 품질은 감각적인 장식이 아니라 반복적으로 다듬고 기준을 세우는 작업이라는 점을 soft anvil로 번역했습니다.",
+        "기존의 차갑고 단단한 도구 이미지를 violet의 벨벳·세라믹 질감으로 낮춰, 엄격하지만 공격적이지 않은 거버넌스 톤을 만들었습니다.",
+        "Turntable QA: 1080x1080 H.264 MP4, ~5.04s, no audio; start/mid/end contact-sheet check passed for centered object, no text/logo, no particles/pebbles, no creepy segmented cues."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-28-21-03-soft-quality-anvil-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-28-21-03-soft-quality-anvil-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-28",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-29-goyounjung-quiet-category-clasp",
+      "title": "Quiet Category Clasp",
+      "dateKst": "2026-07-29",
+      "theme": "mint / #10C19F·#A6E6D4·#04221C",
+      "metaphor": "single rounded category clasp for holding relationships without locking them",
+      "why": [
+        "분산된 사용자 신호를 강제로 고정하지 않고, 관계와 범주를 잠깐 안정적으로 잡아두는 OBD 판단 방식을 부드러운 clasp로 표현했습니다.",
+        "mint 팔레트는 정리·회복·신뢰의 톤을 만들면서도 차가운 시스템 다이어그램처럼 보이지 않게 해줍니다.",
+        "Turntable QA: 1080x1080 H.264 MP4, ~5.04s, no audio; start/mid/end contact-sheet check passed for centered object, no text/logo/UI, no particles/pebbles/repeated blobs, no segmented bug-like or eye/lens cues."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-29-22-01-quiet-category-clasp-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-29-22-01-quiet-category-clasp-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-29",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-29-goyounjung-research-sled",
+      "title": "Research Sled",
+      "dateKst": "2026-07-29",
+      "theme": "cool blue / #4065F8·#A1D0F6·#001C33",
+      "metaphor": "single rounded research sled for carrying evidence across context",
+      "why": [
+        "리서치 인사이트는 발견만으로 끝나지 않고 조직·브랜드·제품 판단까지 운반되어야 하므로, 이동성을 가진 조용한 sled로 잡았습니다.",
+        "cool blue는 증거와 해석의 선명함을 주되, 둥근 형태와 단순 배경으로 차갑거나 기술 과시처럼 보이는 느낌을 줄였습니다.",
+        "Turntable QA: 1080x1080 H.264 MP4, ~5.04s, no audio; start/mid/end contact-sheet check passed for centered object, no text/logo/UI, no particles/pebbles/repeated blobs, no segmented bug-like or eye/lens cues."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-29-23-02-research-sled-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-29-23-02-research-sled-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-29",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-29-goyounjung-value-kiln",
+      "title": "Value Kiln",
+      "dateKst": "2026-07-29",
+      "theme": "warm orange / #B85C4F·#EEDCD6·#771B0E",
+      "metaphor": "single rounded value kiln for maturing service value and brand trust",
+      "why": [
+        "서비스 가치와 브랜드 신뢰는 한 번에 만들어지는 결과물이 아니라 열과 시간처럼 반복 조건을 맞추며 성숙하는 과정이라, kiln 메타포를 선택했습니다.",
+        "warm/orange 계열은 온기와 비즈니스 감각을 담되, 불꽃·글로우 없이 세라믹 질감 중심으로 절제했습니다.",
+        "Turntable QA: 1080x1080 H.264 MP4, ~5.04s, no audio; start/mid/end contact-sheet check passed for centered object, no text/logo/UI, no particles/pebbles/repeated blobs, no segmented bug-like or eye/lens cues."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-29-24-03-value-kiln-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-29-24-03-value-kiln-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-29",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-30-goyounjung-soft-relation-keel",
+      "title": "Soft Relation Keel",
+      "dateKst": "2026-07-30",
+      "theme": "violet / #B14D92·#EFDCEC·#4C1039",
+      "metaphor": "single rounded relation keel for stabilizing categories and value rules",
+      "why": [
+        "관계와 카테고리를 연결선이 아니라 무게중심을 잡는 하나의 조형물로 바꿔 OBD의 안정감을 표현했습니다.",
+        "보라 계열의 단일 배경과 낮은 3D 조형으로 조용한 균형·방향성 메타포를 분리했습니다.",
+        "Turntable QA: 1080x1080 H.264 MP4, ~5.04s, no audio; start/mid/end contact-sheet check passed for centered object, no text/logo/UI, no particles/pebbles/repeated blobs, no segmented bug-like or eye/lens cues."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-30-25-01-soft-relation-keel-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-30-25-01-soft-relation-keel-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-30",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-30-goyounjung-value-tasting-spoon",
+      "title": "Value Tasting Spoon",
+      "dateKst": "2026-07-30",
+      "theme": "warm orange / #B85C4F·#EEDCD6·#771B0E",
+      "metaphor": "single rounded tasting spoon for evaluating service value before decisions",
+      "why": [
+        "서비스 가치와 브랜드 판단을 거창한 전략 도표가 아니라 “맛을 보고 조정하는 도구”로 낮춰 인간적인 디자인경영 감각을 제안했습니다.",
+        "v1보다 안정적인 v2를 대표본으로 사용했고, warm orange 계열에서 작고 쓰임이 분명한 utensil 오브젝트로 정리했습니다.",
+        "Turntable QA: 1080x1080 H.264 MP4, ~5.04s, no audio; start/mid/end contact-sheet check passed for centered object, no text/logo/UI, no particles/pebbles/repeated blobs, no segmented bug-like or eye/lens cues."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-30-26-02-value-tasting-spoon-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-30-26-02-value-tasting-spoon-turntable.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-30",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-31-goyounjung-soft-evidence-keystone",
+      "title": "Soft Evidence Keystone",
+      "dateKst": "2026-07-31",
+      "theme": "cool blue / #4065F8·#A1D0F6·#001C33",
+      "metaphor": "single continuous rounded keystone block for evidence becoming the load-bearing piece of judgment",
+      "why": [
+        "기존 1번의 두 덩어리·hinge 계열 인상을 버리고, 하나의 연속된 구조물로 보이는 keystone 메타포로 전환했습니다.",
+        "사용자 근거가 카테고리·원인·가치 판단의 중앙 하중을 받쳐 주는 조용한 구조적 기준이 된다는 의미입니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-31-27-01-soft-evidence-keystone-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-31-27-01-soft-evidence-keystone-turntable-1080.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-31",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final_approved_with_turntable",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-31-goyounjung-context-field-notebook",
+      "title": "Context Field Notebook",
+      "dateKst": "2026-07-31",
+      "theme": "mint / #10C19F·#A6E6D4·#04221C",
+      "metaphor": "single rounded closed field notebook for holding user context without exposing raw details",
+      "why": [
+        "사용자 맥락을 많이 보여주는 대신, 안전하게 덮어 두고 필요할 때 꺼내 읽는 “닫힌 노트”로 프라이버시와 리서치 기억을 함께 표현했습니다.",
+        "최근 pod/safe/capsule 같은 저장 용기 느낌을 피하면서도, 더 조용한 리서치 도구 계열로 Chris님의 작업 맥락에 붙였습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-31-28-02-context-field-notebook-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-31-28-02-context-field-notebook-turntable-1080.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-31",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final_approved_with_turntable",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-07-31-goyounjung-trust-envelope-cushion",
+      "title": "Trust Envelope Cushion",
+      "dateKst": "2026-07-31",
+      "theme": "bright apricot / #F0B48B·#8B3F2D·#B85C4F",
+      "metaphor": "single rounded sealed envelope cushion for value promises and brand trust",
+      "why": [
+        "서비스 가치 교환을 계약서나 UI가 아니라, 약속을 조용히 담는 “부드러운 봉투”로 바꿔 브랜드 신뢰의 감정 온도를 낮췄습니다.",
+        "최근 warm 계열의 kiln/loaf/spoon 같은 덩어리·도구 반복을 피하고, stationery/value promise 계열로 새로운 실루엣을 잡았습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-07-31-29-03-trust-envelope-cushion-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-07-31-29-03-trust-envelope-cushion-turntable-1080.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-07-31",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final_approved_with_turntable",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-01-goyounjung-01-violet-soft-signal-courtyard",
+      "title": "Soft Signal Courtyard",
+      "dateKst": "2026-08-01",
+      "theme": "violet / #B14D92·#EFDCEC·#4C1039",
+      "metaphor": "single rounded courtyard block for holding signals before decisions",
+      "why": [
+        "사용자·시장·브랜드 신호를 바로 결론으로 밀지 않고, 먼저 안전한 안뜰에 모아두는 구조로 OBD의 숙성된 판단을 표현했습니다.",
+        "어제의 keystone/notebook/envelope와 달리, 오늘 1번은 단일 오브젝트 안의 “비어 있는 중심”을 써서 더 건축적이고 시스템적인 방향을 실험했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-01-30-01-violet-soft-signal-courtyard.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-01-30-01-violet-soft-signal-courtyard-turntable-1080.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-01",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final_approved_with_turntable",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-01-goyounjung-02-mint-context-cradle-planter",
+      "title": "Context Cradle Planter",
+      "dateKst": "2026-08-01",
+      "theme": "mint / #10C19F·#A6E6D4·#04221C",
+      "metaphor": "rounded cradle planter with one soft leaf cluster for nurturing user context",
+      "why": [
+        "사용자 맥락을 데이터 덩어리가 아니라 돌봐야 하는 생장 조건으로 보고, “받쳐주는 화분”이라는 더 인간적인 메타포로 바꿨습니다.",
+        "최근의 notebook·capsule·safe 계열 저장 오브젝트에서 벗어나, 맥락을 보관이 아니라 돌봄과 환경 설계의 문제로 읽게 합니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-01-31-02-mint-context-cradle-planter.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-01-31-02-mint-context-cradle-planter-turntable-1080.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-01",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final_approved_with_turntable",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-01-goyounjung-03-orange-trust-thermos-vessel",
+      "title": "Trust Thermos Vessel",
+      "dateKst": "2026-08-01",
+      "theme": "warm orange / #B85C4F·#EEDCD6·#771B0E",
+      "metaphor": "single rounded thermos-like vessel for carrying service trust over time",
+      "why": [
+        "서비스 가치는 한 번의 기능보다 오래 유지되는 온도에 가깝다고 보고, “따뜻함을 보존하는 vessel”로 브랜드 신뢰를 표현했습니다.",
+        "최근 warm 계열의 kiln·spoon·envelope와 겹치지 않게, 먹는 물성이나 문서성이 아닌 시간 지속성/보온성 중심의 오브젝트로 전환했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-01-32-03-orange-trust-thermos-vessel.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-01-32-03-orange-trust-thermos-vessel-turntable-1080.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-01",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final_approved_with_turntable",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-03-goyounjung-01-mint-calm-settlement-basin",
+      "title": "Calm Settlement Basin",
+      "dateKst": "2026-08-03",
+      "theme": "mint / #10C19F·#A6E6D4·#04221C",
+      "metaphor": "single rounded shallow basin for settling signals into shared value rules",
+      "why": [
+        "복잡한 사용자 신호가 즉시 결론으로 튀지 않고, 한 번 가라앉아 공통의 가치 규칙으로 정리되는 과정을 ‘얕은 basin’으로 표현했습니다.",
+        "최근의 lantern·courtyard처럼 구조물이지만, 오늘은 빛/건축이 아니라 조용한 표면과 무게 중심으로 OBD의 판단 안정감을 실험했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-03-33-01-mint-calm-settlement-basin.png",
+      "status": "public_home_allowed",
+      "mediaCapability": "still_only",
+      "detailMedia": "static_still",
+      "metadata": {
+        "dateKst": "2026-08-03",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-03-goyounjung-02-neutral-frictionless-journey-slipper",
+      "title": "Frictionless Journey Slipper",
+      "dateKst": "2026-08-03",
+      "theme": "neutral off-white/ink with blue accent / #FCFCFF·#010102·#4065F8·#A1D0F6",
+      "metaphor": "single rounded soft slipper for low-friction AI UX adoption and emotional safety",
+      "why": [
+        "미래 One UI의 좋은 AI 경험을 “기능을 더하는 것”보다 먼저, 사용자가 부담 없이 발을 들이는 낮은 마찰의 동선으로 해석했습니다.",
+        "최근 노트북·용기·도구 계열에서 벗어나, 오늘은 몸의 감각과 진입 장벽을 다루는 footwear 메타포로 더 인간적인 UX 신호를 봤습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-03-34-02-neutral-frictionless-journey-slipper.png",
+      "status": "public_home_allowed",
+      "mediaCapability": "still_only",
+      "detailMedia": "static_still",
+      "metadata": {
+        "dateKst": "2026-08-03",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-04-goyounjung-01-violet-soft-policy-garden",
+      "title": "Soft Policy Garden",
+      "dateKst": "2026-08-04",
+      "theme": "violet / #B14D92·#EFDCEC·#4C1039",
+      "metaphor": "abstract/metaphysical/systemic / single rounded terraced garden block for keeping policy and value rules alive without becoming rigid",
+      "why": [
+        "정책·가치 기준을 차갑게 잠그는 규칙이 아니라, 계속 가꾸는 “부드러운 지형”으로 보여주어 OBD의 살아있는 판단 체계를 표현했습니다.",
+        "최근 7일의 basin·courtyard·lantern·footwear와 겹치지 않도록 정원/테라스 계열로 이동했고, 물결·입자·구멍 없이 단일 오브젝트로 절제했습니다.",
+        "Turntable QA: 1080×1080 H.264 MP4, ~5.04s, no audio; contact-sheet checked for text/logo/extra objects/pebbles/segmented or eye-like cues. Note: object framing remains slightly tight near the turn end."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-04-35-01-violet-soft-policy-garden-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-04-35-01-violet-soft-policy-garden-turntable-1080.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-04",
+        "displayMode": "visual_archive_static_still_card_1080",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final_current",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-04-goyounjung-02-warm-ux-compass-pillow",
+      "title": "UX Compass Pillow",
+      "dateKst": "2026-08-04",
+      "theme": "warm orange / #B85C4F·#EEDCD6·#771B0E",
+      "metaphor": "concrete/care-object/navigation artifact / single rounded compass-like pillow without needle for emotionally safe orientation",
+      "why": [
+        "AI UX의 첫 경험을 “정답을 가리키는 바늘”이 아니라, 사용자가 편안하게 방향을 찾는 쿠션형 도구로 번역했습니다.",
+        "전날의 슬리퍼/정착 basin과 다르게 care-object·orientation 계열을 선택해, 도입 장벽과 정서적 안정감을 더 직접적으로 다뤘습니다.",
+        "Turntable QA: 1080×1080 H.264 MP4, ~5.04s, no audio; contact-sheet checked for text/logo/extra objects/pebbles/segmented or eye-like cues. Note: object framing remains slightly tight near the turn end."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-04-36-02-warm-ux-compass-pillow-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-04-36-02-warm-ux-compass-pillow-turntable-1080.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-04",
+        "displayMode": "visual_archive_static_still_card_1080",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final_current",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    }
+  ]
+}

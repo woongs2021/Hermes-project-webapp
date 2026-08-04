@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import { fallbackManifest, loadDashboardManifest, type DashboardManifest } from './dashboardContent'
+import { fallbackHomeVisualSet, loadHomeVisualSet, type HomeVisualItem, type HomeVisualSet } from './homeVisualSet'
+import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type ResearchBoardItem } from './researchBoard'
+import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, MuyeolValidationPanel, ObdGrowthTimelinePanel } from './extendedPanels'
 import './App.css'
 
-type TabId = 'home' | 'intro' | 'team' | 'obd' | 'research' | 'graph' | 'report' | 'architecture'
+type TabId = 'home' | 'intro' | 'team' | 'obd' | 'research' | 'report' | 'architecture'
 
 type Tab = {
   id: TabId
@@ -33,37 +36,13 @@ type ProfileCredential = {
   detail: string
 }
 
-type GraphLayer = {
-  title: string
-  subtitle: string
-  description: string
-  nodes: string[]
-}
-
-type RelationExample = {
-  from: string
-  relation: string
-  to: string
-}
-
-type HomeVisualItem = {
-  id: string
-  role: 'Lead' | 'Support'
-  title: string
-  theme: string
-  metaphor: string
-  why: string[]
-  model: string
-  imagePath: string
-}
-
 const tabs: Tab[] = [
   {
     id: 'home',
     label: 'Home',
-    eyebrow: 'Local command center',
-    title: 'August Dashboard',
-    description: 'Chris, Karina, and the agent-team loops will land here as a calm local operating overview.',
+    eyebrow: 'Pinterest-style visual archive',
+    title: 'Home Visual Archive',
+    description: '최종 저장된 홈 비주얼을 hero 없이 시간순 Pinterest-style still 리스트로 보여주고, 클릭하면 turntable 영상과 메타데이터를 엽니다.',
   },
   {
     id: 'intro',
@@ -77,42 +56,35 @@ const tabs: Tab[] = [
     label: 'Team',
     eyebrow: 'Orchestration',
     title: 'Karina Hermes Team',
-    description: 'A future place for agent roles, handoffs, and current task surfaces without exposing private credentials.',
+    description: 'Chris의 지시를 Karina가 조율하고, Agent Team이 실행하며, Muyeol이 검증한 뒤 다시 Chris에게 돌아오는 작업 완료 루프입니다.',
   },
   {
     id: 'obd',
     label: 'OBD',
-    eyebrow: 'Growth loop',
-    title: 'OBD Loop',
-    description: 'A lightweight shell for daily and weekly OBD reflections, patterns, and next-action placeholders.',
+    eyebrow: 'Growth timeline',
+    title: 'OBD Growth Loop',
+    description: '수집된 자료가 온톨로지, 비즈니스 판단, 따뜻한 AI UX 언어로 바뀌는 카드형 성장 타임라인입니다.',
   },
   {
     id: 'research',
     label: 'Research',
-    eyebrow: 'Knowledge loop',
-    title: 'Research Library',
-    description: 'A quiet reading surface for papers, insights, and synthesis cards once static sample data is introduced.',
-  },
-  {
-    id: 'graph',
-    label: 'Graph',
-    eyebrow: 'Harness / Loop / Graph Engineering',
-    title: 'Graph Engineering MVP',
-    description: '루프 결과를 공개 안전한 노드와 관계 카드로 바꾸는 첫 번째 파일 기반 그래프 후보입니다.',
+    eyebrow: 'Chronological research board',
+    title: 'Yuna / Go Youn-jung Research Kanban',
+    description: 'Yuna와 Go Youn-jung의 논문 리서치 루프를 초창기 기록부터 시간순으로 긁어와 썸네일 카드와 클릭 상세 정보로 보여줍니다.',
   },
   {
     id: 'report',
-    label: 'Muyeol Report',
-    eyebrow: 'Validation loop',
-    title: 'Muyeol Report',
-    description: 'A report shell for risk checks, recommendations, and weekly validation notes after Week 1 handoff.',
+    label: 'Monthly',
+    eyebrow: 'Monthly research synthesis',
+    title: 'Research Month Review',
+    description: 'Yuna / Go Youn-jung 리서치 후보를 월간 지표와 주제 hook, 상위 후보로 압축해 Chris의 성장 방향을 읽습니다.',
   },
   {
     id: 'architecture',
-    label: 'Dev Architecture',
-    eyebrow: 'Hierarchy map',
-    title: '2-Screen Dev Architecture',
-    description: 'A UI-native architecture tab that separates the user-facing command loop from the public-safe data contract screen.',
+    label: 'Graph',
+    eyebrow: 'OBD relation graph',
+    title: 'Dashboard Knowledge Graph',
+    description: 'Home visual, research, OBD, Muyeol validation을 Chris에게 돌아오는 하나의 관계 루프로 연결합니다.',
   },
 ]
 
@@ -143,68 +115,6 @@ const profileLenses = [
   'Research · Awards · IP · Mentoring',
   'Ontology Business Designer for the AI era',
 ]
-
-const graphLayers: GraphLayer[] = [
-  {
-    title: 'Harness',
-    subtitle: 'Safe operating base',
-    description: 'Karina, specialist agents, Hermes tools, cron, files, routing, permissions, and public/private boundaries를 한 운영 기반으로 묶습니다.',
-    nodes: ['Agent', 'Tool', 'Route', 'Permission', 'Boundary'],
-  },
-  {
-    title: 'Loop',
-    subtitle: 'Recurring judgment rhythm',
-    description: 'Yuna research, Go Youn-jung visual interpretation, Son growth translation, Faker webapp structuring, Muyeol validation이 매일/매주 반복됩니다.',
-    nodes: ['ResearchItem', 'Insight', 'GrowthQuestion', 'Artifact', 'RiskReview'],
-  },
-  {
-    title: 'Graph Engineering',
-    subtitle: 'Relation-first memory',
-    description: 'Markdown/JSONL 로그를 명시적인 nodes.jsonl, edges.jsonl, schema.md 후보로 바꿔 판단의 연결 구조를 남깁니다.',
-    nodes: ['Theme', 'Decision', 'FEEDS', 'VALIDATED_BY', 'BELONGS_TO_THEME'],
-  },
-]
-
-const relationExamples: RelationExample[] = [
-  { from: 'Yuna ResearchItem', relation: 'SUPPORTS', to: 'AI/AX job-shift Insight' },
-  { from: 'Go Youn-jung Artifact', relation: 'FEEDS', to: 'HomeVisualHero / Visual Archive' },
-  { from: 'Muyeol RiskReview', relation: 'VALIDATED_BY', to: 'public-safe Graph Card' },
-]
-
-const homeVisualSet = {
-  dateKst: '2026-08-03',
-  status: 'final current',
-  source: 'current-home-visual-set.json',
-  promptPolicy: 'Exact prompts hidden by default',
-  items: [
-    {
-      id: '2026-08-03-goyounjung-01-mint-calm-settlement-basin',
-      role: 'Lead',
-      title: 'Calm Settlement Basin',
-      theme: 'mint / #10C19F·#A6E6D4·#04221C',
-      metaphor: 'single rounded shallow basin for settling signals into shared value rules',
-      why: [
-        '복잡한 사용자 신호가 즉시 결론으로 튀지 않고, 한 번 가라앉아 공통의 가치 규칙으로 정리되는 과정을 표현합니다.',
-        '조용한 표면과 무게 중심으로 OBD 판단의 안정감을 실험한 final visual입니다.',
-      ],
-      model: 'seedream_v5_pro',
-      imagePath: 'image-gallery/2026-08-03/01-mint-calm-settlement-basin-1080.png',
-    },
-    {
-      id: '2026-08-03-goyounjung-02-neutral-frictionless-journey-slipper',
-      role: 'Support',
-      title: 'Frictionless Journey Slipper',
-      theme: 'neutral off-white/ink with blue accent / #FCFCFF·#010102·#4065F8·#A1D0F6',
-      metaphor: 'single rounded soft slipper for low-friction AI UX adoption and emotional safety',
-      why: [
-        '미래 One UI의 좋은 AI 경험을 사용자가 부담 없이 발을 들이는 낮은 마찰의 동선으로 해석합니다.',
-        '몸의 감각과 진입 장벽을 다루는 footwear 메타포로 더 인간적인 UX 신호를 보여줍니다.',
-      ],
-      model: 'seedream_v5_pro',
-      imagePath: 'image-gallery/2026-08-03/02-neutral-frictionless-journey-slipper-1080.png',
-    },
-  ] satisfies HomeVisualItem[],
-}
 
 const architectureScreens: ArchitectureScreen[] = [
   {
@@ -391,52 +301,239 @@ function ChrisIntroPanel() {
   )
 }
 
-function GraphEngineeringPanel() {
-  return (
-    <div className="graph-grid" aria-label="Harness Loop Graph Engineering MVP">
-      <article className="content-card graph-hero-card">
-        <p className="card-kicker">Public-safe graph candidate</p>
-        <h3>운영 로그를 관계가 보이는 제품 구조로 바꿉니다</h3>
-        <p>
-          오늘은 무거운 DB 없이, 웹앱 안에서 먼저 읽히는 세 층 설명과 relation breadcrumb를 만들었습니다.
-          이후 nodes.jsonl, edges.jsonl, schema.md로 옮겨도 같은 언어를 유지할 수 있습니다.
-        </p>
-        <div className="status-row" aria-label="Graph MVP status">
-          <span className="status-chip">File-first MVP</span>
-          <span className="status-chip muted">No raw private logs</span>
-          <span className="status-chip muted">Card before network</span>
-        </div>
-      </article>
+function toAppAssetSrc(path: string) {
+  return path.startsWith('/') ? `${import.meta.env.BASE_URL}${path.slice(1)}` : path
+}
 
-      <section className="graph-layer-grid" aria-label="Three graph layers">
-        {graphLayers.map((layer) => (
-          <article className="content-card graph-layer-card" key={layer.title}>
-            <p className="card-kicker">{layer.subtitle}</p>
-            <h3>{layer.title}</h3>
-            <p>{layer.description}</p>
-            <div className="node-chip-row" aria-label={`${layer.title} candidate nodes`}>
-              {layer.nodes.map((node) => (
-                <span key={node}>{node}</span>
-              ))}
+function HomeVisualHeroPanel() {
+  const [visualSet, setVisualSet] = useState<HomeVisualSet>(fallbackHomeVisualSet)
+  const [selectedId, setSelectedId] = useState('')
+
+  useEffect(() => {
+    let isMounted = true
+
+    loadHomeVisualSet().then((loadedSet) => {
+      if (!isMounted) return
+
+      setVisualSet(loadedSet)
+      setSelectedId((currentId) => {
+        const currentStillExists = loadedSet.items.some((item) => item.id === currentId)
+        return currentStillExists ? currentId : loadedSet.items[0]?.id ?? ''
+      })
+    })
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  const selectedItem = visualSet.items.find((item) => item.id === selectedId) ?? visualSet.items[0]
+
+  return (
+    <div className="home-visual-grid" aria-label="Public-safe home visual archive">
+      <section className="visual-board visual-archive-board" aria-label="Final public home visual archive cards">
+        {visualSet.items.map((item, index) => (
+          <button
+            key={item.id}
+            type="button"
+            className={item.id === selectedItem?.id ? 'visual-card active' : 'visual-card'}
+            onClick={() => setSelectedId(item.id)}
+          >
+            <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} public home still`} />
+            <span className="visual-index">{String(index + 1).padStart(2, '0')} · {item.dateKst}</span>
+            <div className="visual-card-copy">
+              <strong>{item.title}</strong>
+              <span>{item.theme}</span>
             </div>
-          </article>
+          </button>
         ))}
       </section>
 
-      <article className="content-card relation-card">
-        <p className="card-kicker">Relation breadcrumb</p>
-        <h3>초기 그래프는 선명한 연결 문장부터</h3>
-        <div className="relation-list" aria-label="Public-safe relation examples">
-          {relationExamples.map((edge) => (
-            <div className="relation-row" key={`${edge.from}-${edge.relation}-${edge.to}`}>
-              <span>{edge.from}</span>
-              <strong>{edge.relation}</strong>
-              <span>{edge.to}</span>
-            </div>
-          ))}
+      {selectedItem ? <HomeVisualDetail item={selectedItem} generatedAt={visualSet.generatedAt} policy={visualSet.sourcePolicy} /> : (
+        <article className="content-card visual-detail-card">
+          <p className="card-kicker">Manifest pending</p>
+          <h3>home-visual-set.json을 기다리는 중</h3>
+          <p>생성된 public-safe visual manifest가 없으면 UI는 비공개 source를 직접 읽지 않고 빈 fallback 상태로 멈춥니다.</p>
+        </article>
+      )}
+    </div>
+  )
+}
+
+function HomeVisualDetail({ item, generatedAt, policy }: { item: HomeVisualItem; generatedAt: string; policy: string }) {
+  return (
+    <article className="content-card visual-detail-card" aria-label="Selected public home visual detail">
+      <div className="visual-detail-header">
+        <div>
+          <p className="card-kicker">Selected still</p>
+          <h3>{item.title}</h3>
+        </div>
+        <span className="status-chip">{item.status}</span>
+      </div>
+
+      <div className="visual-detail-layout">
+        <div className="visual-media-frame">
+          {item.videoSrc ? (
+            <video
+              src={toAppAssetSrc(item.videoSrc)}
+              poster={toAppAssetSrc(item.imageSrc)}
+              controls
+              muted
+              loop
+              playsInline
+              aria-label={`${item.title} turntable detail video`}
+            />
+          ) : (
+            <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} large static still`} />
+          )}
+        </div>
+        <div className="visual-detail-copy">
+          <p><strong>Metaphor</strong> {item.metaphor}</p>
+          <p><strong>Dashboard display</strong> chronological static still</p>
+          <p><strong>Detail media</strong> {item.detailMedia}</p>
+          <p><strong>Media capability</strong> {item.mediaCapability}</p>
+          <div className="metadata-grid" aria-label="Public-safe visual metadata">
+            <span>Date: {item.metadata.dateKst}</span>
+            <span>Source status: {item.metadata.sourceStatus}</span>
+            <span>Display: {item.metadata.displayMode}</span>
+            <span>Fallback: {item.metadata.detailFallback}</span>
+            <span>Prompt: hidden by default</span>
+          </div>
+          <div className="why-list" aria-label="Public display rationale">
+            {item.why.map((reason) => (
+              <p key={reason}>{reason}</p>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <p className="manifest-policy">{policy}</p>
+      <p className="visual-generated-at">Generated: {generatedAt}</p>
+    </article>
+  )
+}
+
+function laneLabel(lane: ResearchBoardItem['lane']) {
+  return lane === 'yuna' ? 'Yuna · AI / agent UX' : 'Go Youn-jung · UX / brand / design'
+}
+
+function ResearchKanbanPanel() {
+  const [board, setBoard] = useState<ResearchBoard>(fallbackResearchBoard)
+  const [selectedId, setSelectedId] = useState('')
+
+  useEffect(() => {
+    let isMounted = true
+
+    loadResearchBoard().then((loadedBoard) => {
+      if (!isMounted) return
+
+      setBoard(loadedBoard)
+      setSelectedId((currentId) => {
+        const currentStillExists = loadedBoard.items.some((item) => item.id === currentId)
+        return currentStillExists ? currentId : loadedBoard.items[0]?.id ?? ''
+      })
+    })
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  const selectedItem = board.items.find((item) => item.id === selectedId) ?? board.items[0]
+  const lanes: ResearchBoardItem['lane'][] = ['yuna', 'goyounjung']
+
+  return (
+    <div className="research-board-grid" aria-label="Chronological research kanban board">
+      <article className="content-card research-board-brief">
+        <p className="card-kicker">Research loop archive</p>
+        <h3>초창기 기록부터 시간순으로 보는 논문 칸반</h3>
+        <p>
+          `all-research-items.jsonl`에 쌓인 Yuna / Go Youn-jung 리서치 후보를 public-safe manifest로 정규화했습니다.
+          대시보드에서는 작은 썸네일 카드로 빠르게 훑고, 클릭하면 상세 근거와 Chris relevance를 확인합니다.
+        </p>
+        <div className="status-row" aria-label="Research board status">
+          <span className="status-chip">items {board.items.length}</span>
+          <span className="status-chip muted">oldest first</span>
+          <span className="status-chip muted">public-safe metadata</span>
         </div>
       </article>
+
+      <section className="research-kanban" aria-label="Yuna and Go Youn-jung chronological research lanes">
+        {lanes.map((lane) => {
+          const laneItems = board.items.filter((item) => item.lane === lane)
+          return (
+            <article className={`research-lane ${lane}`} key={lane}>
+              <div className="research-lane-header">
+                <p className="card-kicker">{laneLabel(lane)}</p>
+                <strong>{laneItems.length} items</strong>
+              </div>
+              <div className="research-card-list">
+                {laneItems.map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    className={item.id === selectedItem?.id ? 'research-card active' : 'research-card'}
+                    onClick={() => setSelectedId(item.id)}
+                  >
+                    <span className="research-thumb">{item.thumbnailLabel}</span>
+                    <span className="research-card-copy">
+                      <strong>{item.title}</strong>
+                      <small>{item.dateKst} · {item.isoWeek}</small>
+                      <span>{item.summary}</span>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </article>
+          )
+        })}
+      </section>
+
+      {selectedItem ? <ResearchDetailPanel item={selectedItem} generatedAt={board.generatedAt} policy={board.sourcePolicy} /> : (
+        <article className="content-card research-detail-card">
+          <p className="card-kicker">Manifest pending</p>
+          <h3>research-board.json을 기다리는 중</h3>
+          <p>생성된 public-safe research manifest가 없으면 원본 작업 로그를 직접 읽지 않고 fallback 상태로 멈춥니다.</p>
+        </article>
+      )}
     </div>
+  )
+}
+
+function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoardItem; generatedAt: string; policy: string }) {
+  return (
+    <article className="content-card research-detail-card" aria-label="Selected research item detail">
+      <div className="research-detail-header">
+        <div>
+          <p className="card-kicker">{laneLabel(item.lane)}</p>
+          <h3>{item.title}</h3>
+        </div>
+        <span className="status-chip">score {item.score.toFixed(1)}</span>
+      </div>
+
+      <div className="research-detail-layout">
+        <div className={`research-detail-thumb ${item.lane}`} aria-hidden="true">
+          <span>{item.thumbnailLabel}</span>
+          <small>{item.dateKst}</small>
+        </div>
+        <div className="research-detail-copy">
+          <p><strong>간단 설명</strong>{item.summary}</p>
+          <p><strong>Chris relevance</strong>{item.chrisRelevance}</p>
+          <div className="metadata-grid" aria-label="Research metadata">
+            <span>Week: {item.isoWeek}</span>
+            <span>Publication: {item.publicationDate}</span>
+            <span>Access: {item.sourceAccess}</span>
+            <span>Korean source: {item.koreanSourceStatus}</span>
+          </div>
+          <p><strong>Source / ID</strong>{item.sourceUrlOrId}</p>
+          <p><strong>Venue</strong>{item.sourceVenue}</p>
+          <p><strong>De-dup note</strong>{item.duplicateSignal}</p>
+        </div>
+      </div>
+
+      <p className="manifest-policy">{policy}</p>
+      <p className="visual-generated-at">Generated: {generatedAt}</p>
+    </article>
   )
 }
 
@@ -473,68 +570,6 @@ function PlaceholderPanel({ tab }: { tab: Tab }) {
         </div>
       </article>
     </div>
-  )
-}
-
-function HomeVisualHero() {
-  const [leadItem, ...supportItems] = homeVisualSet.items
-
-  return (
-    <div className="home-visual-grid" aria-label="Today's Visual System">
-      <article className="content-card home-visual-copy-card">
-        <p className="card-kicker">Today&apos;s Visual System</p>
-        <h3>Go Youn-jung의 final visual set을 홈의 첫 장면으로 연결합니다</h3>
-        <p>
-          최신 canonical final 세트를 public-safe card로 변환했습니다. 원본 프롬프트는 숨기고,
-          이미지가 왜 필요한지와 Harness / Loop / Graph Engineering 맥락만 노출합니다.
-        </p>
-        <div className="status-row" aria-label="Home visual source status">
-          <span className="status-chip">{homeVisualSet.status}</span>
-          <span className="status-chip muted">{homeVisualSet.dateKst}</span>
-          <span className="status-chip muted">{homeVisualSet.promptPolicy}</span>
-        </div>
-      </article>
-
-      {leadItem ? (
-        <article className="content-card visual-card visual-card-lead" key={leadItem.id}>
-          <img src={`${import.meta.env.BASE_URL}${leadItem.imagePath}`} alt={`${leadItem.title} visual`} />
-          <div className="visual-card-body">
-            <p className="card-kicker">{leadItem.role} · {homeVisualSet.source}</p>
-            <h3>{leadItem.title}</h3>
-            <p>{leadItem.metaphor}</p>
-            <ul>
-              {leadItem.why.map((reason) => (
-                <li key={reason}>{reason}</li>
-              ))}
-            </ul>
-            <span>{leadItem.model}</span>
-          </div>
-        </article>
-      ) : null}
-
-      <section className="support-visual-stack" aria-label="Supporting visual cards">
-        {supportItems.map((item) => (
-          <article className="content-card visual-card visual-card-support" key={item.id}>
-            <img src={`${import.meta.env.BASE_URL}${item.imagePath}`} alt={`${item.title} visual`} />
-            <div className="visual-card-body">
-              <p className="card-kicker">{item.role}</p>
-              <h3>{item.title}</h3>
-              <p>{item.theme}</p>
-              <span>{item.model}</span>
-            </div>
-          </article>
-        ))}
-      </section>
-    </div>
-  )
-}
-
-function HomePanel() {
-  return (
-    <>
-      <HomeVisualHero />
-      <PlaceholderPanel tab={tabs[0]} />
-    </>
   )
 }
 
@@ -717,13 +752,23 @@ function App() {
         </div>
 
         {activeTab.id === 'home' ? (
-          <HomePanel />
+          <HomeVisualHeroPanel />
         ) : activeTab.id === 'intro' ? (
           <ChrisIntroPanel />
-        ) : activeTab.id === 'graph' ? (
-          <GraphEngineeringPanel />
+        ) : activeTab.id === 'obd' ? (
+          <ObdGrowthTimelinePanel />
+        ) : activeTab.id === 'research' ? (
+          <ResearchKanbanPanel />
+        ) : activeTab.id === 'report' ? (
+          <>
+            <MonthlyResearchSynthesisPanel />
+            <MuyeolValidationPanel />
+          </>
         ) : activeTab.id === 'architecture' ? (
-          <DevArchitecturePanel />
+          <>
+            <GraphRelationshipPanel />
+            <DevArchitecturePanel />
+          </>
         ) : (
           <PlaceholderPanel tab={activeTab} />
         )}
