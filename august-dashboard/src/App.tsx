@@ -46,6 +46,17 @@ type RelationExample = {
   to: string
 }
 
+type HomeVisualItem = {
+  id: string
+  role: 'Lead' | 'Support'
+  title: string
+  theme: string
+  metaphor: string
+  why: string[]
+  model: string
+  imagePath: string
+}
+
 const tabs: Tab[] = [
   {
     id: 'home',
@@ -159,6 +170,41 @@ const relationExamples: RelationExample[] = [
   { from: 'Go Youn-jung Artifact', relation: 'FEEDS', to: 'HomeVisualHero / Visual Archive' },
   { from: 'Muyeol RiskReview', relation: 'VALIDATED_BY', to: 'public-safe Graph Card' },
 ]
+
+const homeVisualSet = {
+  dateKst: '2026-08-03',
+  status: 'final current',
+  source: 'current-home-visual-set.json',
+  promptPolicy: 'Exact prompts hidden by default',
+  items: [
+    {
+      id: '2026-08-03-goyounjung-01-mint-calm-settlement-basin',
+      role: 'Lead',
+      title: 'Calm Settlement Basin',
+      theme: 'mint / #10C19F·#A6E6D4·#04221C',
+      metaphor: 'single rounded shallow basin for settling signals into shared value rules',
+      why: [
+        '복잡한 사용자 신호가 즉시 결론으로 튀지 않고, 한 번 가라앉아 공통의 가치 규칙으로 정리되는 과정을 표현합니다.',
+        '조용한 표면과 무게 중심으로 OBD 판단의 안정감을 실험한 final visual입니다.',
+      ],
+      model: 'seedream_v5_pro',
+      imagePath: 'image-gallery/2026-08-03/01-mint-calm-settlement-basin-1080.png',
+    },
+    {
+      id: '2026-08-03-goyounjung-02-neutral-frictionless-journey-slipper',
+      role: 'Support',
+      title: 'Frictionless Journey Slipper',
+      theme: 'neutral off-white/ink with blue accent / #FCFCFF·#010102·#4065F8·#A1D0F6',
+      metaphor: 'single rounded soft slipper for low-friction AI UX adoption and emotional safety',
+      why: [
+        '미래 One UI의 좋은 AI 경험을 사용자가 부담 없이 발을 들이는 낮은 마찰의 동선으로 해석합니다.',
+        '몸의 감각과 진입 장벽을 다루는 footwear 메타포로 더 인간적인 UX 신호를 보여줍니다.',
+      ],
+      model: 'seedream_v5_pro',
+      imagePath: 'image-gallery/2026-08-03/02-neutral-frictionless-journey-slipper-1080.png',
+    },
+  ] satisfies HomeVisualItem[],
+}
 
 const architectureScreens: ArchitectureScreen[] = [
   {
@@ -430,6 +476,68 @@ function PlaceholderPanel({ tab }: { tab: Tab }) {
   )
 }
 
+function HomeVisualHero() {
+  const [leadItem, ...supportItems] = homeVisualSet.items
+
+  return (
+    <div className="home-visual-grid" aria-label="Today's Visual System">
+      <article className="content-card home-visual-copy-card">
+        <p className="card-kicker">Today&apos;s Visual System</p>
+        <h3>Go Youn-jung의 final visual set을 홈의 첫 장면으로 연결합니다</h3>
+        <p>
+          최신 canonical final 세트를 public-safe card로 변환했습니다. 원본 프롬프트는 숨기고,
+          이미지가 왜 필요한지와 Harness / Loop / Graph Engineering 맥락만 노출합니다.
+        </p>
+        <div className="status-row" aria-label="Home visual source status">
+          <span className="status-chip">{homeVisualSet.status}</span>
+          <span className="status-chip muted">{homeVisualSet.dateKst}</span>
+          <span className="status-chip muted">{homeVisualSet.promptPolicy}</span>
+        </div>
+      </article>
+
+      {leadItem ? (
+        <article className="content-card visual-card visual-card-lead" key={leadItem.id}>
+          <img src={`${import.meta.env.BASE_URL}${leadItem.imagePath}`} alt={`${leadItem.title} visual`} />
+          <div className="visual-card-body">
+            <p className="card-kicker">{leadItem.role} · {homeVisualSet.source}</p>
+            <h3>{leadItem.title}</h3>
+            <p>{leadItem.metaphor}</p>
+            <ul>
+              {leadItem.why.map((reason) => (
+                <li key={reason}>{reason}</li>
+              ))}
+            </ul>
+            <span>{leadItem.model}</span>
+          </div>
+        </article>
+      ) : null}
+
+      <section className="support-visual-stack" aria-label="Supporting visual cards">
+        {supportItems.map((item) => (
+          <article className="content-card visual-card visual-card-support" key={item.id}>
+            <img src={`${import.meta.env.BASE_URL}${item.imagePath}`} alt={`${item.title} visual`} />
+            <div className="visual-card-body">
+              <p className="card-kicker">{item.role}</p>
+              <h3>{item.title}</h3>
+              <p>{item.theme}</p>
+              <span>{item.model}</span>
+            </div>
+          </article>
+        ))}
+      </section>
+    </div>
+  )
+}
+
+function HomePanel() {
+  return (
+    <>
+      <HomeVisualHero />
+      <PlaceholderPanel tab={tabs[0]} />
+    </>
+  )
+}
+
 function ArchitectureColumn({ title, branches }: { title: string; branches: ArchitectureBranch[] }) {
   return (
     <article className="content-card architecture-column">
@@ -608,7 +716,9 @@ function App() {
           <p>{activeTab.description}</p>
         </div>
 
-        {activeTab.id === 'intro' ? (
+        {activeTab.id === 'home' ? (
+          <HomePanel />
+        ) : activeTab.id === 'intro' ? (
           <ChrisIntroPanel />
         ) : activeTab.id === 'graph' ? (
           <GraphEngineeringPanel />
