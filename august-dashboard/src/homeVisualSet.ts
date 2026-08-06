@@ -52,7 +52,7 @@ export async function loadHomeVisualSet(): Promise<HomeVisualSet> {
     const visualSet = (await response.json()) as HomeVisualSet
     const publicSafeItems = visualSet.items
       .filter((item) => item.publicSafe && item.status === 'public_home_allowed')
-      .sort((left, right) => left.dateKst.localeCompare(right.dateKst) || left.title.localeCompare(right.title))
+      .sort((left, right) => right.dateKst.localeCompare(left.dateKst))
 
     return {
       ...visualSet,

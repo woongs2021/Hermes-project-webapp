@@ -40,9 +40,9 @@ const tabs: Tab[] = [
   {
     id: 'home',
     label: 'Home',
-    eyebrow: 'Pinterest-style visual archive',
+    eyebrow: 'Today’s visual system',
     title: 'Home Visual Archive',
-    description: '최종 저장된 홈 비주얼을 hero 없이 시간순 Pinterest-style still 리스트로 보여주고, 클릭하면 turntable 영상과 메타데이터를 엽니다.',
+    description: '최신 최종 저장된 Go Youn-jung 홈 비주얼을 먼저 보여주고, 과거 세트는 아래로 이어지는 Pinterest-style still archive로 확인합니다.',
   },
   {
     id: 'intro',
