@@ -420,6 +420,8 @@ function laneLabel(lane: ResearchBoardItem['lane']) {
 function ResearchKanbanPanel() {
   const [board, setBoard] = useState<ResearchBoard>(fallbackResearchBoard)
   const [selectedId, setSelectedId] = useState('')
+  const [query, setQuery] = useState('')
+  const [laneFilter, setLaneFilter] = useState<'all' | ResearchBoardItem['lane']>('all')
 
   useEffect(() => {
     let isMounted = true
@@ -439,7 +441,28 @@ function ResearchKanbanPanel() {
     }
   }, [])
 
-  const selectedItem = board.items.find((item) => item.id === selectedId) ?? board.items[0]
+  const normalizedQuery = query.trim().toLowerCase()
+  const filteredItems = board.items.filter((item) => {
+    const laneMatches = laneFilter === 'all' || item.lane === laneFilter
+    const searchableText = [
+      item.title,
+      item.sourceVenue,
+      item.sourceAccess,
+      item.sourceUrlOrId,
+      item.isoWeek,
+      item.dateKst,
+      item.summary,
+      item.chrisRelevance,
+      item.koreanSourceStatus,
+      item.duplicateSignal,
+      laneLabel(item.lane),
+    ]
+      .join(' ')
+      .toLowerCase()
+
+    return laneMatches && (!normalizedQuery || searchableText.includes(normalizedQuery))
+  })
+  const selectedItem = filteredItems.find((item) => item.id === selectedId) ?? filteredItems[0]
   const lanes: ResearchBoardItem['lane'][] = ['yuna', 'goyounjung']
 
   return (
@@ -453,14 +476,39 @@ function ResearchKanbanPanel() {
         </p>
         <div className="status-row" aria-label="Research board status">
           <span className="status-chip">items {board.items.length}</span>
+          <span className="status-chip">showing {filteredItems.length}</span>
           <span className="status-chip muted">oldest first</span>
           <span className="status-chip muted">public-safe metadata</span>
         </div>
       </article>
 
+      <section className="content-card research-filter-card" aria-label="Research board search and lane filters">
+        <label className="research-search-field">
+          <span>Search papers, sources, weeks, relevance notes</span>
+          <input
+            type="search"
+            value={query}
+            placeholder="예: agent UX, KCI, 2026-W32, 브랜드, responsibility"
+            onChange={(event) => setQuery(event.target.value)}
+          />
+        </label>
+        <div className="research-filter-chips" aria-label="Research lane filter">
+          {(['all', 'yuna', 'goyounjung'] as const).map((lane) => (
+            <button
+              key={lane}
+              type="button"
+              className={laneFilter === lane ? 'filter-chip active' : 'filter-chip'}
+              onClick={() => setLaneFilter(lane)}
+            >
+              {lane === 'all' ? 'All lanes' : laneLabel(lane)}
+            </button>
+          ))}
+        </div>
+      </section>
+
       <section className="research-kanban" aria-label="Yuna and Go Youn-jung chronological research lanes">
         {lanes.map((lane) => {
-          const laneItems = board.items.filter((item) => item.lane === lane)
+          const laneItems = filteredItems.filter((item) => item.lane === lane)
           return (
             <article className={`research-lane ${lane}`} key={lane}>
               <div className="research-lane-header">
@@ -491,9 +539,13 @@ function ResearchKanbanPanel() {
 
       {selectedItem ? <ResearchDetailPanel item={selectedItem} generatedAt={board.generatedAt} policy={board.sourcePolicy} /> : (
         <article className="content-card research-detail-card">
-          <p className="card-kicker">Manifest pending</p>
-          <h3>research-board.json을 기다리는 중</h3>
-          <p>생성된 public-safe research manifest가 없으면 원본 작업 로그를 직접 읽지 않고 fallback 상태로 멈춥니다.</p>
+          <p className="card-kicker">{board.items.length > 0 ? 'No matching result' : 'Manifest pending'}</p>
+          <h3>{board.items.length > 0 ? '검색 조건에 맞는 카드가 없습니다' : 'research-board.json을 기다리는 중'}</h3>
+          <p>
+            {board.items.length > 0
+              ? '검색어를 줄이거나 All lanes로 되돌리면 public-safe 리서치 후보를 다시 볼 수 있습니다.'
+              : '생성된 public-safe research manifest가 없으면 원본 작업 로그를 직접 읽지 않고 fallback 상태로 멈춥니다.'}
+          </p>
         </article>
       )}
     </div>
