@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-06T00:47:37.283Z",
+  "generatedAt": "2026-08-09T00:47:34.435Z",
   "sourcePolicy": "public-safe home visual manifest only; exposes copied still/turntable assets and approved display copy; excludes raw logs, prompts, remote URLs, model/job IDs, credentials, private IDs, and local source paths",
   "homeComponent": "HomeVisualHero",
   "status": "public_home_allowed",
@@ -1021,6 +1021,56 @@
         "interaction": "dashboard_still_click_opens_turntable_detail_view",
         "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
         "sourceStatus": "final_current",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-08-goyounjung-01-mint-reciprocity-atelier",
+      "title": "Reciprocity Atelier",
+      "dateKst": "2026-08-08",
+      "theme": "mint-neutral / #10C19F·#A6E6D4·#04221C·#FCFCFF",
+      "metaphor": "single rounded atelier-like system block for balancing user value, brand promise, and AI agency",
+      "why": [
+        "OBD 관점에서 AI UX를 기능 묶음이 아니라 사용자 가치·브랜드 약속·서비스 대가가 조율되는 조용한 작업실로 은유했습니다.",
+        "최근 threshold·mat·chair 계열과 겹치지 않도록 낮은 건축적 실루엣과 mint-neutral 팔레트로 안정감 있는 시스템 이미지를 만들었습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-08-41-01-mint-reciprocity-atelier-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-08-41-01-mint-reciprocity-atelier-turntable-1080.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-08",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-08-goyounjung-02-warm-quiet-pace-keystone",
+      "title": "Quiet Pace Keystone",
+      "dateKst": "2026-08-08",
+      "theme": "warm parchment–olive / #F3E6B8·#697038·#2E351B·#FCFCFF (woongdesignv2-compatible extension)",
+      "metaphor": "single smooth keystone-like support block for calm AI guidance that supports the user’s pace",
+      "why": [
+        "거북이의 ‘느린 동반자’ 의미는 유지하되, 생명체 얼굴 결핍에서 생기는 uncanny 리스크를 제거하고 비생명 조형 오브젝트로 바꿨습니다.",
+        "OBD 관점에서는 사용자를 밀어붙이지 않고 서비스 가치와 브랜드 신뢰를 조용히 받쳐주는 ‘속도 조율의 받침돌’로 읽히도록 설계했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-08-42-02-warm-quiet-pace-keystone-1080.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-08-42-02-warm-quiet-pace-keystone-turntable-1080.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-08",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
         "detailFallback": "static_still"
       },
       "publicSafe": true

@@ -464,6 +464,12 @@ function ResearchKanbanPanel() {
   })
   const selectedItem = filteredItems.find((item) => item.id === selectedId) ?? filteredItems[0]
   const lanes: ResearchBoardItem['lane'][] = ['yuna', 'goyounjung']
+  const researchMetrics = {
+    yuna: board.items.filter((item) => item.lane === 'yuna').length,
+    goyounjung: board.items.filter((item) => item.lane === 'goyounjung').length,
+    korean: board.items.filter((item) => /yes|korean|한국|KCI|Korea/i.test(item.koreanSourceStatus)).length,
+    avgScore: board.items.length === 0 ? 0 : board.items.reduce((sum, item) => sum + item.score, 0) / board.items.length,
+  }
 
   return (
     <div className="research-board-grid" aria-label="Chronological research kanban board">
@@ -503,6 +509,12 @@ function ResearchKanbanPanel() {
               {lane === 'all' ? 'All lanes' : laneLabel(lane)}
             </button>
           ))}
+        </div>
+        <div className="research-context-strip" aria-label="Research board public-safe context metrics">
+          <span>Yuna {researchMetrics.yuna}</span>
+          <span>Go Youn-jung {researchMetrics.goyounjung}</span>
+          <span>Korean signal {researchMetrics.korean}</span>
+          <span>Avg relevance {researchMetrics.avgScore.toFixed(1)}</span>
         </div>
       </section>
 

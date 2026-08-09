@@ -124,6 +124,23 @@
   align-items: end;
 }
 
+.research-context-strip {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.research-context-strip span {
+  border: 1px solid rgba(1, 1, 2, 0.07);
+  border-radius: 16px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.56);
+  color: var(--muted-ink);
+  font-size: 0.82rem;
+  font-weight: 740;
+}
+
 .research-search-field {
   display: grid;
   gap: 8px;
@@ -1395,6 +1412,7 @@
   .visual-board,
   .visual-detail-layout,
   .research-filter-card,
+  .research-context-strip,
   .research-kanban,
   .research-detail-layout,
   .architecture-grid,
