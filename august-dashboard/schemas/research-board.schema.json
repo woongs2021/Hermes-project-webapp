@@ -39,6 +39,8 @@
         "koreanSourceStatus",
         "score",
         "duplicateSignal",
+        "status",
+        "validationStatus",
         "publicSafe"
       ],
       "properties": {
@@ -58,6 +60,8 @@
         "koreanSourceStatus": { "type": "string", "minLength": 1 },
         "score": { "type": "number", "minimum": 0, "maximum": 5 },
         "duplicateSignal": { "type": "string", "minLength": 1 },
+        "status": { "enum": ["daily_candidate", "friday_final_pick"] },
+        "validationStatus": { "enum": ["unreviewed", "GO", "WATCH", "HOLD"] },
         "publicSafe": { "const": true }
       }
     }

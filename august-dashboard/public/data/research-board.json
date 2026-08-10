@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-09T00:47:34.792Z",
+  "generatedAt": "2026-08-10T00:48:15.289Z",
   "sourcePolicy": "public-safe research board manifest only; exposes chronological paper metadata, safe summaries, source links, lane labels, and validation/caution text; excludes raw logs, credentials, private IDs, local source paths, and hidden prompts",
   "status": "public_research_board_allowed",
   "items": [
@@ -21,6 +21,8 @@
       "koreanSourceStatus": "no; 해외 ACM DIS/ICTD·small business UX 소스.",
       "score": 4.7,
       "duplicateSignal": "new; 이번 주 후보 및 JSONL 검색에서 동일 제목/DOI 없음.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -40,6 +42,8 @@
       "koreanSourceStatus": "no; 해외 DRS/design management·design education 소스.",
       "score": 4.9,
       "duplicateSignal": "new; 이번 주 후보 및 JSONL 검색에서 동일 제목/DOI 없음.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -59,6 +63,8 @@
       "koreanSourceStatus": "yes; KCI 등재 한국브랜드디자인학회, 디자인경영 전공 저자 포함.",
       "score": 4.8,
       "duplicateSignal": "new; 이번 주 후보 및 JSONL 검색에서 동일 ART ID/DOI 없음.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -78,6 +84,8 @@
       "koreanSourceStatus": "해외 논문; 한국어 후보 아님.",
       "score": 4.8,
       "duplicateSignal": "new; 이번 주 파일·JSONL 내 제목/DOI 중복 없음.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -97,6 +105,8 @@
       "koreanSourceStatus": "해외 논문; 한국어 후보 아님.",
       "score": 4.7,
       "duplicateSignal": "new; 이번 주 파일·JSONL 내 제목/DOI 중복 없음.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -116,6 +126,8 @@
       "koreanSourceStatus": "credible Korean paper included.",
       "score": 4.6,
       "duplicateSignal": "new; KCI ART003355599 기준 이번 주 파일·JSONL 내 중복 없음.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -135,6 +147,8 @@
       "koreanSourceStatus": "no; 해외 Emerald 논문",
       "score": 4.8,
       "duplicateSignal": "new; week file/jsonl search showed no same DOI",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -154,6 +168,8 @@
       "koreanSourceStatus": "no; 해외 DRS 논문",
       "score": 4.9,
       "duplicateSignal": "new; week file/jsonl search showed no same title/DOI",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -173,6 +189,8 @@
       "koreanSourceStatus": "yes; KCI 등재 국내 플랫폼/브랜드·고객경험 연구",
       "score": 4.7,
       "duplicateSignal": "new; week file/jsonl search showed no same ART ID/DOI",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -192,6 +210,8 @@
       "koreanSourceStatus": "yes; KCI 등재 한국 논문",
       "score": 4.8,
       "duplicateSignal": "new; no week-file or JSONL duplicate found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -211,6 +231,8 @@
       "koreanSourceStatus": "no; 해외 ACM CHI 논문",
       "score": 4.9,
       "duplicateSignal": "new; arXiv variant merged into ACM CHI primary DOI",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -230,6 +252,8 @@
       "koreanSourceStatus": "no; 해외 ACL Workshop 논문",
       "score": 4.7,
       "duplicateSignal": "new; no week-file or JSONL duplicate found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -249,6 +273,8 @@
       "koreanSourceStatus": "yes; KoreaScience Korean research item with full PDF",
       "score": 4.5,
       "duplicateSignal": "new; no same-week/local duplicate found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -268,6 +294,8 @@
       "koreanSourceStatus": "no; China SME cases, international DRS source",
       "score": 4.7,
       "duplicateSignal": "new; no same-week/local duplicate found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -287,6 +315,8 @@
       "koreanSourceStatus": "no; international CHI source",
       "score": 4.4,
       "duplicateSignal": "new; no same-week/local duplicate found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -306,6 +336,8 @@
       "koreanSourceStatus": "no; non-Korean ACL source",
       "score": 4.7,
       "duplicateSignal": "new for 2026-W29; no current-week duplicate found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -325,6 +357,8 @@
       "koreanSourceStatus": "yes; Korean KCI-accredited journal with Yonsei University authors",
       "score": 4.3,
       "duplicateSignal": "new for 2026-W29; no current-week duplicate found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -344,6 +378,8 @@
       "koreanSourceStatus": "no; non-Korean ACM/CHI source",
       "score": 4.5,
       "duplicateSignal": "new for 2026-W29; no current-week duplicate found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -363,6 +399,8 @@
       "koreanSourceStatus": "no; international ACM HCI source.",
       "score": 4.5,
       "duplicateSignal": "new; no same-week/local duplicate found.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -382,6 +420,8 @@
       "koreanSourceStatus": "no; international DRS/design-management source.",
       "score": 4.8,
       "duplicateSignal": "new; no same-week/local duplicate found.",
+      "status": "friday_final_pick",
+      "validationStatus": "GO",
       "publicSafe": true
     },
     {
@@ -401,6 +441,8 @@
       "koreanSourceStatus": "yes; Korean KCI-listed design education/UX source.",
       "score": 4.4,
       "duplicateSignal": "new; no same-week/local duplicate found.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -420,6 +462,8 @@
       "koreanSourceStatus": "no — non-Korean source",
       "score": 4.5,
       "duplicateSignal": "new; no exact current-week duplicate found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -439,6 +483,8 @@
       "koreanSourceStatus": "no — non-Korean source",
       "score": 4.6,
       "duplicateSignal": "new; no exact current-week duplicate found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -458,6 +504,8 @@
       "koreanSourceStatus": "yes — Korean KCI-accredited journal",
       "score": 4.3,
       "duplicateSignal": "new; related Korean LLM-agent item logged 2026-07-13 but this is a distinct paper/topic",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -477,6 +525,8 @@
       "koreanSourceStatus": "yes; Korean HCI Society journal source",
       "score": 4.3,
       "duplicateSignal": "new; same-week/local duplicate not found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -496,6 +546,8 @@
       "koreanSourceStatus": "no; international business/consumer digital service source",
       "score": 4.7,
       "duplicateSignal": "new; same-week/local duplicate not found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -515,6 +567,8 @@
       "koreanSourceStatus": "no; international ACM HCI/community-centered AI source",
       "score": 4.6,
       "duplicateSignal": "new; same-week/local duplicate not found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -534,6 +588,8 @@
       "koreanSourceStatus": "yes — Korean source via KoreaScience; Korean title/abstract available",
       "score": 4.4,
       "duplicateSignal": "new — no current-week duplicate found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -553,6 +609,8 @@
       "koreanSourceStatus": "no — non-Korean ACL source",
       "score": 4.7,
       "duplicateSignal": "new — no current-week duplicate found before logging",
+      "status": "friday_final_pick",
+      "validationStatus": "GO",
       "publicSafe": true
     },
     {
@@ -572,6 +630,8 @@
       "koreanSourceStatus": "no — non-Korean arXiv source",
       "score": 4.5,
       "duplicateSignal": "new — no current-week duplicate found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -591,6 +651,8 @@
       "koreanSourceStatus": "yes; Korean journal/source, DOI metadata and OpenAlex abstract accessible.",
       "score": 4.5,
       "duplicateSignal": "new; same-week/local duplicate not found by title/DOI search",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -610,6 +672,8 @@
       "koreanSourceStatus": "no; international IJHCI source.",
       "score": 4.4,
       "duplicateSignal": "new; same-week/local duplicate not found by title/DOI search",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -629,6 +693,8 @@
       "koreanSourceStatus": "no; international brand ethics/business source.",
       "score": 4.7,
       "duplicateSignal": "new; same-week/local duplicate not found by title/DOI search",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -648,6 +714,8 @@
       "koreanSourceStatus": "no — non-Korean source",
       "score": 4.5,
       "duplicateSignal": "new — no Yuna W29 duplicate found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -667,6 +735,8 @@
       "koreanSourceStatus": "no — non-Korean source",
       "score": 4.6,
       "duplicateSignal": "new — no Yuna W29 duplicate found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -686,6 +756,8 @@
       "koreanSourceStatus": "yes — Korean design/HCI-adjacent source via DBpia/DOI",
       "score": 4.3,
       "duplicateSignal": "new for Yuna W29; related Korean design-education item appeared in Go Youn-jung lane, but this is a distinct paper/topic",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -705,6 +777,8 @@
       "koreanSourceStatus": "yes; Korean source via KoreaScience with Korean/English abstract and PDF link.",
       "score": 4.7,
       "duplicateSignal": "new; same-week/local duplicate not found by title/DOI/KoreaScience ID search",
+      "status": "friday_final_pick",
+      "validationStatus": "WATCH",
       "publicSafe": true
     },
     {
@@ -724,6 +798,8 @@
       "koreanSourceStatus": "no; international design-method/design-education source.",
       "score": 4.4,
       "duplicateSignal": "new; same-week/local duplicate not found by title/DOI search",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -743,6 +819,8 @@
       "koreanSourceStatus": "no; international ACM HCI/work source.",
       "score": 4.6,
       "duplicateSignal": "new; same-week/local duplicate not found by title/DOI search",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -762,6 +840,8 @@
       "koreanSourceStatus": "no — non-Korean ACL source.",
       "score": 4.6,
       "duplicateSignal": "new — no current-week title/URL duplicate found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -781,6 +861,8 @@
       "koreanSourceStatus": "yes — Korean source via KoreaScience/KIPS; Korean abstract available.",
       "score": 4.5,
       "duplicateSignal": "new — no current-week title/URL duplicate found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -800,6 +882,8 @@
       "koreanSourceStatus": "no — non-Korean ACM source.",
       "score": 4.4,
       "duplicateSignal": "new — no current-week title/URL duplicate found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -819,6 +903,8 @@
       "koreanSourceStatus": "no; international privacy/HCI product-team source",
       "score": 4.7,
       "duplicateSignal": "new; same-week/local duplicate not found by title/DOI search",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -838,6 +924,8 @@
       "koreanSourceStatus": "yes; Korean-language research item with Korean abstract",
       "score": 4.5,
       "duplicateSignal": "new; same-week/local duplicate not found by title/DOI search; selected despite 2026-07-08 date because stronger last-7-day Korean UX/design-management candidates were limited",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -857,6 +945,8 @@
       "koreanSourceStatus": "no; international design/creativity source",
       "score": 4.6,
       "duplicateSignal": "new; same-week/local duplicate not found by title/DOI search",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -876,6 +966,8 @@
       "koreanSourceStatus": "yes — Korean journal/source; Korean local public-sector/service-design context",
       "score": 4.3,
       "duplicateSignal": "new — Yuna W29/JSONL title·DOI duplicate not found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -895,6 +987,8 @@
       "koreanSourceStatus": "no — non-Korean source",
       "score": 4.5,
       "duplicateSignal": "new — Yuna W29/JSONL title·DOI duplicate not found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -914,6 +1008,8 @@
       "koreanSourceStatus": "no — non-Korean source",
       "score": 4.7,
       "duplicateSignal": "new — Yuna W29/JSONL title·DOI duplicate not found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -933,6 +1029,8 @@
       "koreanSourceStatus": "yes; Korean journal/source with OA PDF signal.",
       "score": 4.4,
       "duplicateSignal": "new",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -952,6 +1050,8 @@
       "koreanSourceStatus": "no; international city-branding/decision-support source.",
       "score": 4.5,
       "duplicateSignal": "new",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -971,6 +1071,8 @@
       "koreanSourceStatus": "no; international ACM DIS design/HCI source.",
       "score": 4.6,
       "duplicateSignal": "new",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -990,6 +1092,8 @@
       "koreanSourceStatus": "yes — Korean source via KoreaScience; Korean UX/design research context",
       "score": 4.3,
       "duplicateSignal": "new — Yuna W29/JSONL search found no title·DOI duplicate before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1009,6 +1113,8 @@
       "koreanSourceStatus": "no — non-Korean arXiv source",
       "score": 4.7,
       "duplicateSignal": "new — Yuna W29/JSONL title·ID duplicate not found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1028,6 +1134,8 @@
       "koreanSourceStatus": "no — non-Korean ACL source",
       "score": 4.5,
       "duplicateSignal": "new — Yuna W29/JSONL title·URL duplicate not found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1047,6 +1155,8 @@
       "koreanSourceStatus": "no; international brand/consumer research source",
       "score": 4.7,
       "duplicateSignal": "new; no local title/DOI duplicate found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1066,6 +1176,8 @@
       "koreanSourceStatus": "no; international AI governance/management education source",
       "score": 4.5,
       "duplicateSignal": "new; no local title/DOI duplicate found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1085,6 +1197,8 @@
       "koreanSourceStatus": "yes; Korean journal/source, Korean abstract accessible",
       "score": 4.4,
       "duplicateSignal": "new; no local title/DOI duplicate found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1104,6 +1218,8 @@
       "koreanSourceStatus": "no — non-Korean ACL source",
       "score": 4.5,
       "duplicateSignal": "new — exact title/URL duplicate not found; partial ACL ID matches were unrelated",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1123,6 +1239,8 @@
       "koreanSourceStatus": "no — non-Korean arXiv source",
       "score": 4.7,
       "duplicateSignal": "new — no exact title/arXiv duplicate found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1142,6 +1260,8 @@
       "koreanSourceStatus": "yes — Korean design journal source; Korean abstract available",
       "score": 4.4,
       "duplicateSignal": "new — no exact title/DOI duplicate found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1161,6 +1281,8 @@
       "koreanSourceStatus": "no; international HCI/accessibility source",
       "score": 4.6,
       "duplicateSignal": "new; current week file and JSONL search found no title/DOI duplicate",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1180,6 +1302,8 @@
       "koreanSourceStatus": "yes; Korean design journal/source via Crossref DOI metadata",
       "score": 4.4,
       "duplicateSignal": "new; current week file and JSONL search found no title/DOI duplicate",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1199,6 +1323,8 @@
       "koreanSourceStatus": "no; international sustainability/design-behavior source",
       "score": 4.7,
       "duplicateSignal": "new; current week file and JSONL search found no title/DOI duplicate",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1218,6 +1344,8 @@
       "koreanSourceStatus": "no — non-Korean arXiv HCI/accessibility source.",
       "score": 4.6,
       "duplicateSignal": "new — no exact title/DOI/URL duplicate found in weekly candidate search before logging.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1237,6 +1365,8 @@
       "koreanSourceStatus": "no — non-Korean ACL source.",
       "score": 4.8,
       "duplicateSignal": "new — no exact title/DOI/URL duplicate found in weekly candidate search before logging.",
+      "status": "friday_final_pick",
+      "validationStatus": "GO",
       "publicSafe": true
     },
     {
@@ -1256,6 +1386,8 @@
       "koreanSourceStatus": "yes — Korean journal source; Korean/English full text accessible via journal page.",
       "score": 4.4,
       "duplicateSignal": "new — no exact title/DOI/URL duplicate found in weekly candidate search before logging.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1275,6 +1407,8 @@
       "koreanSourceStatus": "yes; Korea-focused source about G-STAR/Korean game industry, English journal article with Korean industry context.",
       "score": 4.5,
       "duplicateSignal": "new",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1294,6 +1428,8 @@
       "koreanSourceStatus": "no; international brand/community/business proceedings source.",
       "score": 4.6,
       "duplicateSignal": "new",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1313,6 +1449,8 @@
       "koreanSourceStatus": "no; international HCI/accessibility source.",
       "score": 4.8,
       "duplicateSignal": "new",
+      "status": "friday_final_pick",
+      "validationStatus": "GO",
       "publicSafe": true
     },
     {
@@ -1332,6 +1470,8 @@
       "koreanSourceStatus": "no — non-Korean privacy/security venue source",
       "score": 4.8,
       "duplicateSignal": "new — no exact title/DOI/URL duplicate found in weekly logs before logging",
+      "status": "friday_final_pick",
+      "validationStatus": "GO",
       "publicSafe": true
     },
     {
@@ -1351,6 +1491,8 @@
       "koreanSourceStatus": "no — non-Korean ACM healthcare/HCI-adjacent source",
       "score": 4.6,
       "duplicateSignal": "new — no exact title/DOI/URL duplicate found in weekly logs before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1370,6 +1512,8 @@
       "koreanSourceStatus": "yes — Korean DBpia journal item; metadata/abstract snippet accessible",
       "score": 4.7,
       "duplicateSignal": "new — no exact title/DOI/URL duplicate found in weekly logs before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1389,6 +1533,8 @@
       "koreanSourceStatus": "no; international design-management/business journal source.",
       "score": 4.8,
       "duplicateSignal": "new; no local title/DOI/duplicate-key duplicate found.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1408,6 +1554,8 @@
       "koreanSourceStatus": "yes; Korea-based design-adjacent journal/DOI metadata, English title/abstract accessible.",
       "score": 4.5,
       "duplicateSignal": "new; no local title/DOI/duplicate-key duplicate found.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1427,6 +1575,8 @@
       "koreanSourceStatus": "no; international ACM CUI/HCI source.",
       "score": 4.7,
       "duplicateSignal": "new; no local title/DOI/duplicate-key duplicate found.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1446,6 +1596,8 @@
       "koreanSourceStatus": "no — non-Korean SAGE journal source; Korean search pass did not yield a stronger new credible item today.",
       "score": 4.4,
       "duplicateSignal": "new — no exact title/DOI duplicate found in weekly/all-candidate search before logging.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1465,6 +1617,8 @@
       "koreanSourceStatus": "no — non-Korean arXiv source.",
       "score": 4.7,
       "duplicateSignal": "new — no exact title/arXiv duplicate found in weekly/all-candidate search before logging.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1484,6 +1638,8 @@
       "koreanSourceStatus": "no — non-Korean arXiv source.",
       "score": 4.6,
       "duplicateSignal": "new — no exact title/arXiv duplicate found in weekly/all-candidate search before logging.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1503,6 +1659,8 @@
       "koreanSourceStatus": "no; international B2B marketing/design-management-adjacent source.",
       "score": 4.8,
       "duplicateSignal": "new; no current-week/JSONL duplicate found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1522,6 +1680,8 @@
       "koreanSourceStatus": "no; international OA HCI/design research source.",
       "score": 4.7,
       "duplicateSignal": "new; no current-week/JSONL duplicate found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1541,6 +1701,8 @@
       "koreanSourceStatus": "yes; Korea-focused research item using Korean-language data; OA source.",
       "score": 4.5,
       "duplicateSignal": "new; no current-week/JSONL duplicate found before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1560,6 +1722,8 @@
       "koreanSourceStatus": "no — non-Korean ACM CUI/HCI source",
       "score": 4.7,
       "duplicateSignal": "new — no exact title/DOI duplicate found in weekly/all-candidate search before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1579,6 +1743,8 @@
       "koreanSourceStatus": "yes — Korea-based KSII journal source; last-7-day Korean AI×design 후보가 약해 2026-03 항목을 한국 맥락 후보로 포함",
       "score": 4.6,
       "duplicateSignal": "new — no exact title/DOI duplicate found in weekly/all-candidate search before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1598,6 +1764,8 @@
       "koreanSourceStatus": "no — non-Korean arXiv source",
       "score": 4.8,
       "duplicateSignal": "new — no exact title/arXiv duplicate found in weekly/all-candidate search before logging",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1617,6 +1785,8 @@
       "koreanSourceStatus": "no; international ACM CUI/HCI source",
       "score": 4.8,
       "duplicateSignal": "new in Go lane; no local title/DOI duplicate found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1636,6 +1806,8 @@
       "koreanSourceStatus": "no; international platform governance/business research source",
       "score": 4.9,
       "duplicateSignal": "new; no local title/DOI duplicate found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1655,6 +1827,8 @@
       "koreanSourceStatus": "yes; Korean design journal/source via Crossref DOI metadata and Semantic Scholar metadata",
       "score": 4.6,
       "duplicateSignal": "new; no local title/DOI duplicate found",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1674,6 +1848,8 @@
       "koreanSourceStatus": "no — non-Korean arXiv source",
       "score": 4.8,
       "duplicateSignal": "new — current-week/all-후보에서 exact title/arXiv duplicate 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1693,6 +1869,8 @@
       "koreanSourceStatus": "yes — Korean design-education journal item; recent last-7-day Korean 후보는 약해 2026-06-30 강한 후보로 포함",
       "score": 4.5,
       "duplicateSignal": "new — current-week/all-후보에서 exact title/DOI duplicate 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1712,6 +1890,8 @@
       "koreanSourceStatus": "no — non-Korean ACM CUI source",
       "score": 4.7,
       "duplicateSignal": "new — DOI/title duplicate 없음; CUI 2026 반복 출현은 venue-level weighting signal",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1731,6 +1911,8 @@
       "koreanSourceStatus": "yes; Korean design/UX research source via Crossref DOI metadata.",
       "score": 4.7,
       "duplicateSignal": "new",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1750,6 +1932,8 @@
       "koreanSourceStatus": "no; international design/brand research source.",
       "score": 4.8,
       "duplicateSignal": "new",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1769,6 +1953,8 @@
       "koreanSourceStatus": "no; international ACM CUI/HCI source.",
       "score": 4.8,
       "duplicateSignal": "new",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1788,6 +1974,8 @@
       "koreanSourceStatus": "no — non-Korean medical/UX review source; 민감 주제라 Muyeol 검증 필요.",
       "score": 4.6,
       "duplicateSignal": "new — exact title/DOI duplicate 없음; mental-health AI는 민감 영역 WATCH 신호.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1807,6 +1995,8 @@
       "koreanSourceStatus": "no — non-Korean ACL primary venue source; 오늘 한국어권 검색에서는 중복되지 않는 강한 last-7-day 후보를 확인하지 못함.",
       "score": 4.8,
       "duplicateSignal": "new — exact title/ACL ID/URL duplicate 없음; 모바일 GUI-agent 벤치마크 반복 출현은 주제 가중 신호.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1826,6 +2016,8 @@
       "koreanSourceStatus": "no — non-Korean ACM CUI source; 한국 후보는 오늘 강한 신규/비중복 항목이 부족해 제외.",
       "score": 4.7,
       "duplicateSignal": "new — exact title/DOI duplicate 없음; CUI 2026 반복 출현은 conversational-agent governance/UX 주제 가중 신호.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1845,6 +2037,8 @@
       "koreanSourceStatus": "no — 글로벌 ACM/SIGCHI 계열 소스",
       "score": 4.3,
       "duplicateSignal": "new — 로컬 후보 파일 검색에서 동일 DOI/제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1864,6 +2058,8 @@
       "koreanSourceStatus": "yes — 한국콘텐츠학회논문지/국내 DOI",
       "score": 4.1,
       "duplicateSignal": "new — 로컬 후보 파일 검색에서 동일 DOI/제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1883,6 +2079,8 @@
       "koreanSourceStatus": "no — 글로벌 arXiv HCI 소스",
       "score": 4.4,
       "duplicateSignal": "new — 로컬 후보 파일 검색에서 동일 arXiv ID/제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1902,6 +2100,8 @@
       "koreanSourceStatus": "no — non-Korean Google Research/HCI source",
       "score": 4.8,
       "duplicateSignal": "new — weekly/all-후보 search에서 exact title/URL duplicate 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1921,6 +2121,8 @@
       "koreanSourceStatus": "no — non-Korean ACL source",
       "score": 4.9,
       "duplicateSignal": "new — weekly/all-후보 search에서 exact title/URL duplicate 없음",
+      "status": "friday_final_pick",
+      "validationStatus": "GO",
       "publicSafe": true
     },
     {
@@ -1940,6 +2142,8 @@
       "koreanSourceStatus": "yes — KCI 한국 논문; 한국어/영어 초록 확인",
       "score": 4.5,
       "duplicateSignal": "new — weekly/all-후보 search에서 exact title/KCI ID duplicate 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1959,6 +2163,8 @@
       "koreanSourceStatus": "no — 글로벌 arXiv HCI/AI 소스",
       "score": 4.5,
       "duplicateSignal": "new in this week file; 반복 검색 신호 있음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1978,6 +2184,8 @@
       "koreanSourceStatus": "yes — 국내 학회/DOI, OpenAlex 초록 확인",
       "score": 4.2,
       "duplicateSignal": "repeat/merged signal — Yuna 2026-W28 후보 파일에 기존 기록, Go Youn-jung W31에서는 신규",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -1997,6 +2205,8 @@
       "koreanSourceStatus": "no — 글로벌 Springer HCI/접근성 저널 소스",
       "score": 4.3,
       "duplicateSignal": "new in local candidate search",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2016,6 +2226,8 @@
       "koreanSourceStatus": "no — 비한국 Springer 출처; 오늘 한국 KCI/DBpia/KoreaScience 후보 검색은 접근/신호가 약해 약한 한국어 후보로 패딩하지 않음.",
       "score": 4.2,
       "duplicateSignal": "new — 이번 주 yuna 파일 및 all-후보에서 exact title/DOI duplicate 없음.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2035,6 +2247,8 @@
       "koreanSourceStatus": "no — 비한국 ACL 출처.",
       "score": 4.6,
       "duplicateSignal": "new — 이번 주 yuna 파일 및 all-후보에서 exact title/ACL ID duplicate 없음.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2054,6 +2268,8 @@
       "koreanSourceStatus": "no — 비한국 Google/ACM CHI 출처.",
       "score": 4.7,
       "duplicateSignal": "new — 이번 주 yuna 파일 및 all-후보에서 exact title/URL duplicate 없음.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2073,6 +2289,8 @@
       "koreanSourceStatus": "no — 글로벌 ACM CHI HCI 소스.",
       "score": 4.4,
       "duplicateSignal": "new in this week file; UX 리서치 실무/교육 relevance 강함.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2092,6 +2310,8 @@
       "koreanSourceStatus": "yes — 한국디자인문화학회지/DBpia 국내 DOI, 한국어 메타·초록 일부 확인.",
       "score": 4.3,
       "duplicateSignal": "new in this week file; 국내 소스 다양성 신호.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2111,6 +2331,8 @@
       "koreanSourceStatus": "no — 글로벌 Taylor & Francis UX/AI 경험 설계 챕터.",
       "score": 4.6,
       "duplicateSignal": "new in this week file; Taylor & Francis 페이지에서 초록 확인.",
+      "status": "friday_final_pick",
+      "validationStatus": "WATCH",
       "publicSafe": true
     },
     {
@@ -2130,6 +2352,8 @@
       "koreanSourceStatus": "yes — KCI 한국 논문; 한국어/영어 초록 확인",
       "score": 4.5,
       "duplicateSignal": "new — 주간 파일 및 all-후보에서 exact title/KCI ID 중복 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2149,6 +2373,8 @@
       "koreanSourceStatus": "no — 비한국 OpenReview/ICLR 출처",
       "score": 4.8,
       "duplicateSignal": "new — 주간 파일 및 all-후보에서 exact title/OpenReview ID 중복 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2168,6 +2394,8 @@
       "koreanSourceStatus": "no — 비한국 ACL 출처",
       "score": 4.7,
       "duplicateSignal": "new — 주간 파일 및 all-후보에서 exact title/ACL ID 중복 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2187,6 +2415,8 @@
       "koreanSourceStatus": "yes — 국내 Design Convergence Study/DOI 메타 확인; 이전 주 후보에서 한 번 발견된 반복 신호.",
       "score": 4.3,
       "duplicateSignal": "repeat from 2026-W30 all-research-items; W31 파일에는 신규로 병합 기록.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2206,6 +2436,8 @@
       "koreanSourceStatus": "no — 글로벌 오픈액세스 심리/브랜드·HCI 인접 소스.",
       "score": 4.2,
       "duplicateSignal": "new in this week file; Crossref/OpenAlex 검색에서 branding/customer experience 신호로 발견.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2225,6 +2457,8 @@
       "koreanSourceStatus": "no — 유럽 은행/비즈니스 저널 소스.",
       "score": 4.4,
       "duplicateSignal": "new in this week file; Crossref/OpenAlex 검색에서 고객경험·비즈니스 성과 신호로 발견.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2244,6 +2478,8 @@
       "koreanSourceStatus": "no — 비한국 ACL 출처",
       "score": 4.9,
       "duplicateSignal": "new — 이번 주 yuna 파일 및 all-후보에서 exact title/DOI duplicate 없음",
+      "status": "friday_final_pick",
+      "validationStatus": "GO",
       "publicSafe": true
     },
     {
@@ -2263,6 +2499,8 @@
       "koreanSourceStatus": "no — 비한국 arXiv 출처",
       "score": 4.6,
       "duplicateSignal": "new — 이번 주 yuna 파일 및 all-후보에서 exact title/arXiv ID duplicate 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2282,6 +2520,8 @@
       "koreanSourceStatus": "yes — KCI 한국 논문; 제목·저널·연도 메타데이터 확인",
       "score": 4.5,
       "duplicateSignal": "new — 이번 주 yuna 파일 및 all-후보에서 exact title/KCI ID duplicate 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2301,6 +2541,8 @@
       "koreanSourceStatus": "no — 글로벌 MHCI/브랜드 광고 소스.",
       "score": 4.5,
       "duplicateSignal": "new in this week file; 브랜드 일관성·문화 적응 UX 신호.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2320,6 +2562,8 @@
       "koreanSourceStatus": "yes — 한국디자인문화학회지 국내 DOI, 메타데이터 확인.",
       "score": 4.1,
       "duplicateSignal": "new in this week file; 국내 UX/AI 적용 프레임워크 신호.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2339,6 +2583,8 @@
       "koreanSourceStatus": "no — 글로벌 Elsevier 소비자서비스/경험 연구 소스.",
       "score": 4.7,
       "duplicateSignal": "new in this week file; UX·CX·생태계 경험 키워드 반복 검색 신호.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2358,6 +2604,8 @@
       "koreanSourceStatus": "no — 비한국 ACL 출처.",
       "score": 4.6,
       "duplicateSignal": "new — 이번 주 yuna 파일 및 all-후보에서 title/DOI/ACL ID duplicate 없음.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2377,6 +2625,8 @@
       "koreanSourceStatus": "no — 비한국 Google/ACL 출처.",
       "score": 4.7,
       "duplicateSignal": "new — 이번 주 yuna 파일 및 all-후보에서 title/arXiv/URL duplicate 없음.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2396,6 +2646,8 @@
       "koreanSourceStatus": "yes — KCI 한국 논문; 한국어/영어 제목·키워드·메타데이터 확인.",
       "score": 4.4,
       "duplicateSignal": "new — 이번 주 yuna 파일 및 all-후보에서 title/KCI ID duplicate 없음.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2415,6 +2667,8 @@
       "koreanSourceStatus": "no — 글로벌 Elsevier 서비스/CX 연구 소스.",
       "score": 4.7,
       "duplicateSignal": "new in this week file; OpenAlex/Crossref DOI 메타와 초록 확인.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2434,6 +2688,8 @@
       "koreanSourceStatus": "no — 글로벌 ACM C&C/HCI 창의성 지원 도구 연구. 오늘 검색에서 신규·강한 한국 후보는 부족해 약한 국내 후보로 채우지 않았습니다.",
       "score": 4.4,
       "duplicateSignal": "new in this week file; ACM DOI/Crossref venue와 OpenAlex 초록 확인.",
+      "status": "friday_final_pick",
+      "validationStatus": "WATCH",
       "publicSafe": true
     },
     {
@@ -2453,6 +2709,8 @@
       "koreanSourceStatus": "no — 글로벌 Design and Culture 디자인 연구 소스.",
       "score": 4.5,
       "duplicateSignal": "new in this week file; OpenAlex/Crossref DOI 메타와 초록 확인.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2472,6 +2730,8 @@
       "koreanSourceStatus": "no — 비한국 arXiv/Hugging Face 출처",
       "score": 4.7,
       "duplicateSignal": "new — 이번 주 yuna 파일 및 all-후보에서 title/arXiv ID duplicate 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2491,6 +2751,8 @@
       "koreanSourceStatus": "no — 비한국 arXiv/Hugging Face 출처",
       "score": 4.8,
       "duplicateSignal": "new — 이번 주 yuna 파일 및 all-후보에서 title/arXiv ID duplicate 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2510,6 +2772,8 @@
       "koreanSourceStatus": "yes — RISS에서 KCI등재 한국어 학술지 메타데이터와 국문 초록 확인",
       "score": 4.5,
       "duplicateSignal": "new — 이번 주 yuna 파일 및 all-후보에서 title/RISS ID duplicate 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2529,6 +2793,8 @@
       "koreanSourceStatus": "no — 글로벌 오픈액세스 커뮤니케이션/브랜드 연구 소스.",
       "score": 4.4,
       "duplicateSignal": "new in W31 Go Youn-jung file; 브랜드/OBD 신호로 선별.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2548,6 +2814,8 @@
       "koreanSourceStatus": "no — 글로벌 Springer HCI/접근성 저널 소스.",
       "score": 4.6,
       "duplicateSignal": "new in W31 Go Youn-jung file; 2026-08-02 검색에서 신규 발견.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2567,6 +2835,8 @@
       "koreanSourceStatus": "yes — 국내 한국콘텐츠학회논문지 DOI/한국어 초록 확인.",
       "score": 4.3,
       "duplicateSignal": "new in W31 Go Youn-jung file; Crossref 검색에서 국내 GenAI UX 가이드라인 후보로 반복 노출.",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2586,6 +2856,8 @@
       "koreanSourceStatus": "no — 비한국 arXiv 출처.",
       "score": 4.6,
       "duplicateSignal": "new — 오늘 신규 후보로 기록",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2605,6 +2877,8 @@
       "koreanSourceStatus": "no — 비한국 arXiv 출처.",
       "score": 4.7,
       "duplicateSignal": "new — 오늘 신규 후보로 기록",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2624,6 +2898,8 @@
       "koreanSourceStatus": "yes — RISS에서 KCI등재 한국어 학술지 메타데이터와 영어 초록 확인.",
       "score": 4.6,
       "duplicateSignal": "new — 오늘 신규 후보로 기록",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2643,6 +2919,8 @@
       "koreanSourceStatus": "no — 글로벌 DRS 디자인 리서치 소스",
       "score": 4.1,
       "duplicateSignal": "new",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2662,6 +2940,8 @@
       "koreanSourceStatus": "yes — 한국디자인학회 Archives of Design Research",
       "score": 4.3,
       "duplicateSignal": "new",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2681,6 +2961,8 @@
       "koreanSourceStatus": "no — 글로벌 CRC Press 단행본 챕터",
       "score": 4.2,
       "duplicateSignal": "new; W31에 같은 책의 Scaling Agentic UX가 선정되어 인접 주제 반복 신호로만 반영",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2700,6 +2982,8 @@
       "koreanSourceStatus": "yes — 한국 학회/한국 전통복식 데이터 기반",
       "score": 4.1,
       "duplicateSignal": "new — 동일 제목 기존 로그 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2719,6 +3003,8 @@
       "koreanSourceStatus": "no — 글로벌 영문 연구/실무서 챕터",
       "score": 4.2,
       "duplicateSignal": "new — 이번 주 Yuna 파일 및 전체 후보 검색에서 동일 제목 노출 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2738,6 +3024,8 @@
       "koreanSourceStatus": "no — 글로벌 ACM 계열 연구",
       "score": 4,
       "duplicateSignal": "new — 동일 제목 기존 로그 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2757,6 +3045,8 @@
       "koreanSourceStatus": "no — 글로벌 DRS 디자인 리서치 소스",
       "score": 4.3,
       "duplicateSignal": "new — 이번 주 Go Youn-jung 파일 및 전체 후보 로그에서 동일 DOI 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2776,6 +3066,8 @@
       "koreanSourceStatus": "yes — 한국디자인학회 Archives of Design Research, 전문 HTML 접근 가능",
       "score": 4.5,
       "duplicateSignal": "new — 이번 주 Go Youn-jung 파일 및 전체 후보 로그에서 동일 DOI 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2795,6 +3087,8 @@
       "koreanSourceStatus": "no — 글로벌 DRS 디자인 리서치 소스",
       "score": 4.4,
       "duplicateSignal": "new — 10.21606/drs.2026.1108 전략디자인 논문은 이전 주 최종 선정 이력이 있어 제외하고, 인접하지만 다른 서비스혁신 사례로 기록",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2814,6 +3108,8 @@
       "koreanSourceStatus": "yes — 한국 학회지/한국 K-POP 시각 사례 기반",
       "score": 3.8,
       "duplicateSignal": "new — 이번 주 Yuna 파일 및 전체 후보 로그에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2833,6 +3129,8 @@
       "koreanSourceStatus": "no — 글로벌 OpenReview/KDD 워크숍 계열 후보",
       "score": 4.3,
       "duplicateSignal": "new — 이번 주 Yuna 파일 및 전체 후보 로그에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2852,6 +3150,8 @@
       "koreanSourceStatus": "no — 글로벌 IEEE HAXD 연구 항목",
       "score": 4.4,
       "duplicateSignal": "new — 이번 주 Yuna 파일 및 전체 후보 로그에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2871,6 +3171,8 @@
       "koreanSourceStatus": "no — ACM CHI 글로벌 HCI 소스",
       "score": 4.3,
       "duplicateSignal": "new",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2890,6 +3192,8 @@
       "koreanSourceStatus": "no — 글로벌 헬스/서비스디자인 소스, 한국 출처 아님",
       "score": 4.4,
       "duplicateSignal": "new",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2909,6 +3213,8 @@
       "koreanSourceStatus": "no — ACM CHI 글로벌 HCI/콘텐츠 provenance 소스",
       "score": 4.2,
       "duplicateSignal": "new",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2928,6 +3234,8 @@
       "koreanSourceStatus": "no — 글로벌 Human Factors/HCI 계열 연구",
       "score": 4.5,
       "duplicateSignal": "new — 이번 주 Yuna 파일 및 전체 후보 검색에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2947,6 +3255,8 @@
       "koreanSourceStatus": "no — 글로벌 디자인 교육 저널",
       "score": 4.6,
       "duplicateSignal": "new — 이번 주 Yuna 파일 및 전체 후보 검색에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2966,6 +3276,8 @@
       "koreanSourceStatus": "yes — 한국 학술지/대학생 AI 리터러시·윤리 교육 맥락",
       "score": 4,
       "duplicateSignal": "new — 이번 주 Yuna 파일 및 전체 후보 검색에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -2985,6 +3297,8 @@
       "koreanSourceStatus": "no — 중국 사례 기반 글로벌 오픈액세스 저널",
       "score": 4.1,
       "duplicateSignal": "new — 이번 주 파일 및 전체 후보 검색에서 동일 DOI/제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -3004,6 +3318,8 @@
       "koreanSourceStatus": "no — 글로벌 비즈니스/UX 저널 소스",
       "score": 4.3,
       "duplicateSignal": "new — 이번 주 파일 및 전체 후보 검색에서 동일 DOI/제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -3023,6 +3339,8 @@
       "koreanSourceStatus": "yes — 한국 학술지/DBpia, 한국어 초록 접근 가능",
       "score": 4.2,
       "duplicateSignal": "new — 이번 주 파일 및 전체 후보 검색에서 동일 DOI/제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -3042,6 +3360,8 @@
       "koreanSourceStatus": "yes — 한국 학술지/미학·이미지 이론 맥락",
       "score": 4.2,
       "duplicateSignal": "new — 이번 주 Yuna 파일 및 전체 후보 검색에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -3061,6 +3381,8 @@
       "koreanSourceStatus": "no — 글로벌 IJHCI 연구",
       "score": 4.5,
       "duplicateSignal": "new — 이번 주 Yuna 파일 및 전체 후보 검색에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -3080,6 +3402,8 @@
       "koreanSourceStatus": "no — 글로벌 AHFE/Human Factors 계열 연구",
       "score": 4.6,
       "duplicateSignal": "new — 이번 주 Yuna 파일 및 전체 후보 검색에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -3099,6 +3423,8 @@
       "koreanSourceStatus": "yes — 한국상품문화디자인학회/KISS 한국 논문, 한국어 초록 접근 가능",
       "score": 4.5,
       "duplicateSignal": "new — 이번 주 파일 및 전체 후보 로그에서 동일 제목/DOI 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -3118,6 +3444,8 @@
       "koreanSourceStatus": "no — 글로벌 VR/브랜드 경험 오픈액세스 저널, 한국 출처 아님",
       "score": 4.3,
       "duplicateSignal": "new — 이번 주 파일 및 전체 후보 로그에서 동일 제목/DOI 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -3137,6 +3465,8 @@
       "koreanSourceStatus": "no — 글로벌 arXiv 연구",
       "score": 4.6,
       "duplicateSignal": "new — 이번 주 Yuna 파일 및 전체 후보 검색에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -3156,6 +3486,8 @@
       "koreanSourceStatus": "yes — 한국HCI학회 국내 학술대회 논문",
       "score": 4.4,
       "duplicateSignal": "new — 이번 주 Yuna 파일 및 전체 후보 검색에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -3175,6 +3507,8 @@
       "koreanSourceStatus": "no — 글로벌 브랜딩/비즈니스 윤리 저널 소스",
       "score": 4.4,
       "duplicateSignal": "new — 이번 주 파일 및 전체 후보 로그에서 동일 제목/DOI 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -3194,6 +3528,8 @@
       "koreanSourceStatus": "no — 글로벌 HCI/UX 교육 소스",
       "score": 4.5,
       "duplicateSignal": "new — 이번 주 파일 및 전체 후보 로그에서 동일 제목/DOI 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -3213,6 +3549,8 @@
       "koreanSourceStatus": "yes — 한국 학술지/earticle, 한국어 메타데이터와 초록 스니펫 접근 가능",
       "score": 4.2,
       "duplicateSignal": "new — 이번 주 파일 및 전체 후보 로그에서 동일 제목/DOI 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -3232,6 +3570,8 @@
       "koreanSourceStatus": "yes — 한국 학술지/한국어 교육·생성형 AI 수업 설계 맥락",
       "score": 4.1,
       "duplicateSignal": "new — 이번 주 Yuna 파일 및 전체 후보 검색에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     },
     {
@@ -3251,6 +3591,92 @@
       "koreanSourceStatus": "no — 글로벌 JoVE 연구 항목",
       "score": 4.3,
       "duplicateSignal": "new — 이번 주 Yuna 파일 및 전체 후보 검색에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-10-goyounjung-comparative-analysis-of-user-experience-ux-in-generative-ai-based-design-tools-f",
+      "dateKst": "2026-08-10",
+      "isoWeek": "2026-W33",
+      "lane": "goyounjung",
+      "owner": "goyounjung",
+      "title": "Comparative Analysis of User Experience(UX) in Generative AI-Based Design Tools : Focusing on Adobe Firefly, Canva Magic Design, and Figma AI",
+      "thumbnailLabel": "GJ-W33",
+      "sourceVenue": "Korea Institute of Design Research Society / 교보문고 스콜라",
+      "sourceAccess": "abstract",
+      "sourceUrlOrId": "https://doi.org/10.46248/kidrs.2025.3.532",
+      "publicationDate": "2025-09-30",
+      "summary": "Adobe Firefly, Canva Magic Design, Figma AI의 UX를 과업시간·오류율·산출 만족·전반 만족으로 비교하며, 초보자에게는 Canva의 자동화와 직관성이, 숙련자에게는 Firefly의 표현력과 산출 품질이 강했고 Figma AI는 협업성은 좋지만 직관성과 접근성 개선이 필요하다고 보고한다.",
+      "chrisRelevance": "AI 디자인 툴 평가를 기능 비교가 아니라 숙련도·교육·협업·산출 품질 기준으로 나누어 판단하게 해주는 자료다.",
+      "koreanSourceStatus": "yes — 한국 디자인 연구 출처, 한국어 landing page 확인",
+      "score": 4.3,
+      "duplicateSignal": "new — 이번 주 파일 및 후보 로그에서 동일 DOI/제목 반복 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-10-goyounjung-impacts-of-design-aesthetics-brand-equity-and-trust-on-electric-vehicle-purchase",
+      "dateKst": "2026-08-10",
+      "isoWeek": "2026-W33",
+      "lane": "goyounjung",
+      "owner": "goyounjung",
+      "title": "Impacts of design aesthetics, brand equity, and trust on electric vehicle purchase intention: an empirical study",
+      "thumbnailLabel": "GJ-W33",
+      "sourceVenue": "Journal of Brand Management / Springer Nature Link",
+      "sourceAccess": "abstract/metadata",
+      "sourceUrlOrId": "https://doi.org/10.1057/s41262-025-00408-w",
+      "publicationDate": "2025-07-12 online; 2026-01 print issue",
+      "summary": "EV 시장에서 디자인 미학은 구매의도에 직접 작동하기보다 브랜드 자산과 신뢰를 통해 매개되며, 브랜드 인지도와 이미지가 구매의도를 유의하게 높인다고 설명한다.",
+      "chrisRelevance": "제품 디자인 품질을 브랜드 자산·신뢰·구매 판단으로 번역하는 디자인 리더십 언어를 제공한다.",
+      "koreanSourceStatus": "no — 글로벌 브랜드/경영 저널 출처",
+      "score": 4.5,
+      "duplicateSignal": "new — 이번 주 파일 및 후보 로그에서 동일 DOI/제목 반복 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-10-yuna-intentlint-supporting-intent-scaffolding-and-prompt-time-linting-in-human-ai-col",
+      "dateKst": "2026-08-10",
+      "isoWeek": "2026-W33",
+      "lane": "yuna",
+      "owner": "yuna",
+      "title": "IntentLint: Supporting Intent Scaffolding and Prompt-time Linting in Human-AI Collaborative Data Analysis",
+      "thumbnailLabel": "YU-W33",
+      "sourceVenue": "arXiv / abstract page; OpenAlex 색인일 2026-08-05",
+      "sourceAccess": "abstract/full PDF link metadata; full paper는 아직 정독 전",
+      "sourceUrlOrId": "https://arxiv.org/abs/2608.04331",
+      "publicationDate": "2026-08-05",
+      "summary": "인간-AI 공동 데이터 분석에서 공유 의도를 구조화하고 prompt-time linting으로 프롬프트 충돌을 점검해 원치 않는 에이전트 행동을 줄인다.",
+      "chrisRelevance": "에이전트 UX를 프롬프트 입력창이 아니라 공유 의도·규칙·위임 경계의 외재화 문제로 보게 하는 온톨로지 설계 후보다.",
+      "koreanSourceStatus": "no — 글로벌 arXiv 연구",
+      "score": 4.6,
+      "duplicateSignal": "new — 2026-W33 파일 및 전체 후보 로그에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-10-yuna-nodal-prompting-rethinking-authorial-practice-in-generative-ai",
+      "dateKst": "2026-08-10",
+      "isoWeek": "2026-W33",
+      "lane": "yuna",
+      "owner": "yuna",
+      "title": "Nodal Prompting: rethinking authorial practice in Generative AI",
+      "thumbnailLabel": "YU-W33",
+      "sourceVenue": "DigitCult - Scientific Journal on Digital Cultures / University of Milan OJS",
+      "sourceAccess": "abstract/full HTML/PDF link available; full paper는 아직 정독 전",
+      "sourceUrlOrId": "https://doi.org/10.54103/2531-5994/31893",
+      "publicationDate": "2026-08-06",
+      "summary": "생성형 AI 프롬프트를 단일 텍스트가 아니라 ComfyUI식 node-based workflow에 분산된 파라메트릭 저작 구조로 재정의한다.",
+      "chrisRelevance": "AI 비주얼/브랜드 제작에서 저자성, 통제 지점, 반복 경로를 워크플로우 인터페이스로 설계해야 한다는 신호다.",
+      "koreanSourceStatus": "no — 글로벌 영문 디지털문화/미디어 연구",
+      "score": 4.4,
+      "duplicateSignal": "new — 2026-W33 파일 및 전체 후보 로그에서 동일 제목 없음",
+      "status": "daily_candidate",
+      "validationStatus": "unreviewed",
       "publicSafe": true
     }
   ]

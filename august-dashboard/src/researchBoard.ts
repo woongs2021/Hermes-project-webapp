@@ -17,6 +17,8 @@ export type ResearchBoardItem = {
   koreanSourceStatus: string
   score: number
   duplicateSignal: string
+  status: 'daily_candidate' | 'friday_final_pick'
+  validationStatus: 'unreviewed' | 'GO' | 'WATCH' | 'HOLD'
   publicSafe: boolean
 }
 

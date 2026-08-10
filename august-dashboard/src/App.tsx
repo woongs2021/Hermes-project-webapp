@@ -417,11 +417,15 @@ function laneLabel(lane: ResearchBoardItem['lane']) {
   return lane === 'yuna' ? 'Yuna · AI / agent UX' : 'Go Youn-jung · UX / brand / design'
 }
 
+function boardLaneLabel(lane: ResearchBoardItem['lane'] | 'final') {
+  return lane === 'final' ? 'Friday final picks · Muyeol validated' : laneLabel(lane)
+}
+
 function ResearchKanbanPanel() {
   const [board, setBoard] = useState<ResearchBoard>(fallbackResearchBoard)
   const [selectedId, setSelectedId] = useState('')
   const [query, setQuery] = useState('')
-  const [laneFilter, setLaneFilter] = useState<'all' | ResearchBoardItem['lane']>('all')
+  const [laneFilter, setLaneFilter] = useState<'all' | ResearchBoardItem['lane'] | 'final'>('all')
 
   useEffect(() => {
     let isMounted = true
@@ -443,7 +447,7 @@ function ResearchKanbanPanel() {
 
   const normalizedQuery = query.trim().toLowerCase()
   const filteredItems = board.items.filter((item) => {
-    const laneMatches = laneFilter === 'all' || item.lane === laneFilter
+    const laneMatches = laneFilter === 'all' || item.lane === laneFilter || (laneFilter === 'final' && item.status === 'friday_final_pick')
     const searchableText = [
       item.title,
       item.sourceVenue,
@@ -455,6 +459,8 @@ function ResearchKanbanPanel() {
       item.chrisRelevance,
       item.koreanSourceStatus,
       item.duplicateSignal,
+      item.status,
+      item.validationStatus,
       laneLabel(item.lane),
     ]
       .join(' ')
@@ -463,10 +469,11 @@ function ResearchKanbanPanel() {
     return laneMatches && (!normalizedQuery || searchableText.includes(normalizedQuery))
   })
   const selectedItem = filteredItems.find((item) => item.id === selectedId) ?? filteredItems[0]
-  const lanes: ResearchBoardItem['lane'][] = ['yuna', 'goyounjung']
+  const lanes: Array<ResearchBoardItem['lane'] | 'final'> = ['yuna', 'goyounjung', 'final']
   const researchMetrics = {
     yuna: board.items.filter((item) => item.lane === 'yuna').length,
     goyounjung: board.items.filter((item) => item.lane === 'goyounjung').length,
+    final: board.items.filter((item) => item.status === 'friday_final_pick').length,
     korean: board.items.filter((item) => /yes|korean|한국|KCI|Korea/i.test(item.koreanSourceStatus)).length,
     avgScore: board.items.length === 0 ? 0 : board.items.reduce((sum, item) => sum + item.score, 0) / board.items.length,
   }
@@ -499,32 +506,35 @@ function ResearchKanbanPanel() {
           />
         </label>
         <div className="research-filter-chips" aria-label="Research lane filter">
-          {(['all', 'yuna', 'goyounjung'] as const).map((lane) => (
+          {(['all', 'yuna', 'goyounjung', 'final'] as const).map((lane) => (
             <button
               key={lane}
               type="button"
               className={laneFilter === lane ? 'filter-chip active' : 'filter-chip'}
               onClick={() => setLaneFilter(lane)}
             >
-              {lane === 'all' ? 'All lanes' : laneLabel(lane)}
+              {lane === 'all' ? 'All lanes' : boardLaneLabel(lane)}
             </button>
           ))}
         </div>
         <div className="research-context-strip" aria-label="Research board public-safe context metrics">
           <span>Yuna {researchMetrics.yuna}</span>
           <span>Go Youn-jung {researchMetrics.goyounjung}</span>
+          <span>Friday picks {researchMetrics.final}</span>
           <span>Korean signal {researchMetrics.korean}</span>
-          <span>Avg relevance {researchMetrics.avgScore.toFixed(1)}</span>
+          <span>Avg {researchMetrics.avgScore.toFixed(1)}</span>
         </div>
       </section>
 
-      <section className="research-kanban" aria-label="Yuna and Go Youn-jung chronological research lanes">
+      <section className="research-kanban" aria-label="Yuna, Go Youn-jung, and Friday final pick research lanes">
         {lanes.map((lane) => {
-          const laneItems = filteredItems.filter((item) => item.lane === lane)
+          const laneItems = lane === 'final'
+            ? filteredItems.filter((item) => item.status === 'friday_final_pick')
+            : filteredItems.filter((item) => item.lane === lane)
           return (
             <article className={`research-lane ${lane}`} key={lane}>
               <div className="research-lane-header">
-                <p className="card-kicker">{laneLabel(lane)}</p>
+                <p className="card-kicker">{boardLaneLabel(lane)}</p>
                 <strong>{laneItems.length} items</strong>
               </div>
               <div className="research-card-list">
@@ -539,6 +549,7 @@ function ResearchKanbanPanel() {
                     <span className="research-card-copy">
                       <strong>{item.title}</strong>
                       <small>{item.dateKst} · {item.isoWeek}</small>
+                      {item.status === 'friday_final_pick' ? <em>{item.validationStatus} final pick</em> : null}
                       <span>{item.summary}</span>
                     </span>
                   </button>
@@ -585,6 +596,8 @@ function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoar
           <p><strong>Chris relevance</strong>{item.chrisRelevance}</p>
           <div className="metadata-grid" aria-label="Research metadata">
             <span>Week: {item.isoWeek}</span>
+            <span>Status: {item.status}</span>
+            <span>Muyeol: {item.validationStatus}</span>
             <span>Publication: {item.publicationDate}</span>
             <span>Access: {item.sourceAccess}</span>
             <span>Korean source: {item.koreanSourceStatus}</span>

@@ -3,6 +3,7 @@ import { dirname, resolve } from 'node:path'
 import { mkdirSync } from 'node:fs'
 
 export const researchInputPath = '/opt/data/agent-team-work-log/paper-candidates/all-research-items.jsonl'
+export const weeklySelectedPath = '/opt/data/agent-team-work-log/paper-candidates/weekly-selected-papers.md'
 export const researchOutputPath = resolve('public/data/research-board.json')
 export const researchSchemaPath = resolve('schemas/research-board.schema.json')
 export const researchSourcePolicy = 'public-safe research board manifest only; exposes chronological paper metadata, safe summaries, source links, lane labels, and validation/caution text; excludes raw logs, credentials, private IDs, local source paths, and hidden prompts'
@@ -26,6 +27,8 @@ const allowedItemKeys = new Set([
   'koreanSourceStatus',
   'score',
   'duplicateSignal',
+  'status',
+  'validationStatus',
   'publicSafe',
 ])
 
@@ -70,6 +73,35 @@ function thumbnailLabel(item) {
   return `${lanePrefix}-${week}`
 }
 
+function normalizeComparableTitle(text = '') {
+  return text
+    .toLowerCase()
+    .replace(/[“”"'`’]/g, '')
+    .replace(/[^a-z0-9가-힣]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function readWeeklySelectedIndex(path = weeklySelectedPath) {
+  if (!existsSync(path)) return new Map()
+
+  const text = readFileSync(path, 'utf8')
+  const lines = text.split('\n')
+  const selected = new Map()
+
+  for (const [index, line] of lines.entries()) {
+    const titleMatch = line.match(/^####\s+\d+\)\s+(.+)$/) ?? line.match(/^[🧠✨🇰🇷🎨🧭🔬]+\s+\*\*(.+)\*\*$/u)
+    if (!titleMatch) continue
+
+    const title = titleMatch[1].trim()
+    const window = lines.slice(index + 1, index + 9).join(' ')
+    const statusMatch = window.match(/Muyeol status(?:\/caution)?:\s*([A-Z]+)/i)
+    selected.set(normalizeComparableTitle(title), statusMatch?.[1]?.toUpperCase() ?? 'WATCH')
+  }
+
+  return selected
+}
+
 export function readResearchSource(path = researchInputPath) {
   const text = readFileSync(path, 'utf8')
   const records = []
@@ -87,7 +119,7 @@ export function readResearchSource(path = researchInputPath) {
   return records
 }
 
-function normalizeResearchItem(item, index) {
+function normalizeResearchItem(item, index, selectedIndex = new Map()) {
   if (!item || typeof item !== 'object' || Array.isArray(item)) fail(`source item[${index}] must be an object`)
 
   const lane = item.lane ?? item.owner
@@ -99,6 +131,8 @@ function normalizeResearchItem(item, index) {
 
   const score = Number(item.initial_score_5 ?? 0)
   if (!Number.isFinite(score) || score < 0 || score > 5) fail(`source item[${index}].initial_score_5 must be 0-5`)
+
+  const selectedStatus = selectedIndex.get(normalizeComparableTitle(item.title))
 
   return {
     id: `${item.date_kst}-${lane}-${slugify(item.title) || index}`,
@@ -117,14 +151,17 @@ function normalizeResearchItem(item, index) {
     koreanSourceStatus: item.korean_source_status,
     score,
     duplicateSignal: item.duplicate_repeat_signal,
+    status: selectedStatus ? 'friday_final_pick' : 'daily_candidate',
+    validationStatus: selectedStatus ?? 'unreviewed',
     publicSafe: true,
   }
 }
 
 export function buildResearchBoardManifest(records, generatedAt = new Date().toISOString()) {
+  const selectedIndex = readWeeklySelectedIndex()
   const items = records
     .filter((record) => allowedLanes.has(record.lane ?? record.owner))
-    .map(normalizeResearchItem)
+    .map((record, index) => normalizeResearchItem(record, index, selectedIndex))
     .sort((left, right) => left.dateKst.localeCompare(right.dateKst) || left.lane.localeCompare(right.lane) || left.title.localeCompare(right.title))
 
   return validateResearchBoardManifest({
@@ -164,6 +201,8 @@ export function validateResearchBoardManifest(manifest) {
     if (!/^\d{4}-W\d{2}$/.test(item.isoWeek)) fail(`items[${index}].isoWeek must be YYYY-Www`)
     if (!allowedLanes.has(item.lane) || item.owner !== item.lane) fail(`items[${index}].lane/owner mismatch`)
     if (typeof item.score !== 'number' || item.score < 0 || item.score > 5) fail(`items[${index}].score must be 0-5`)
+    if (!['daily_candidate', 'friday_final_pick'].includes(item.status)) fail(`items[${index}].status is not allowed`)
+    if (!['unreviewed', 'GO', 'WATCH', 'HOLD'].includes(item.validationStatus)) fail(`items[${index}].validationStatus is not allowed`)
     if (item.publicSafe !== true) fail(`items[${index}].publicSafe must be true`)
 
     const combined = JSON.stringify(item)

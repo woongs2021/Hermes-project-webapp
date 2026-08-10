@@ -127,7 +127,7 @@
 .research-context-strip {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -198,7 +198,7 @@
 
 .research-kanban {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   align-items: start;
 }
@@ -277,6 +277,25 @@
     radial-gradient(circle at 30% 20%, rgba(252, 252, 255, 0.88), transparent 32%),
     linear-gradient(150deg, rgba(177, 77, 146, 0.18), rgba(238, 220, 214, 0.72));
   color: #771b5e;
+}
+
+.research-lane.final .research-thumb {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(252, 252, 255, 0.88), transparent 32%),
+    linear-gradient(150deg, rgba(118, 132, 77, 0.2), rgba(246, 239, 225, 0.8));
+  color: #4f5638;
+}
+
+.research-card-copy em {
+  display: inline-flex;
+  width: fit-content;
+  border: 1px solid rgba(1, 1, 2, 0.08);
+  border-radius: 999px;
+  padding: 3px 8px;
+  color: var(--quiet-ink);
+  font-size: 0.68rem;
+  font-style: normal;
+  font-weight: 760;
 }
 
 .research-card-copy {
