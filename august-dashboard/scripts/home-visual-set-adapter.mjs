@@ -1,4 +1,4 @@
-import { copyFileSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs'
+import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs'
 import { basename, dirname, join, resolve } from 'node:path'
 
 export const sourceAssetRoot = '/opt/data/hermes-webapp-build-loop/assets/image-gallery'
@@ -116,6 +116,16 @@ function assertNonEmptyString(value, label) {
   }
 }
 
+function findPublicApprovedTurntablePath(item, assetPath) {
+  if (typeof item.turntable_video_asset_path === 'string' && item.turntable_video_asset_path.length > 0) {
+    return item.turntable_video_asset_path
+  }
+
+  const stillStem = basename(assetPath, '.png')
+  const candidatePath = join(dirname(assetPath), 'turntables', `${stillStem}-turntable-1080.mp4`)
+  return existsSync(candidatePath) ? candidatePath : undefined
+}
+
 function sanitizeVisualItem(item, index) {
   if (!item || typeof item !== 'object' || Array.isArray(item)) {
     fail(`item[${index}] must be an object`)
@@ -151,11 +161,11 @@ function sanitizeVisualItem(item, index) {
   const publicAssetPath = resolve(publicAssetDir, publicFileName)
   copyFileSync(assetPath, publicAssetPath)
 
-  const hasTurntable = typeof item.turntable_video_asset_path === 'string' && item.turntable_video_asset_path.length > 0
+  const turntablePath = findPublicApprovedTurntablePath(item, assetPath)
+  const hasTurntable = typeof turntablePath === 'string' && turntablePath.length > 0
   let publicVideoSrc
 
   if (hasTurntable) {
-    const turntablePath = item.turntable_video_asset_path
     if (!turntablePath.startsWith(sourceAssetRoot)) {
       fail(`item[${index}].turntable_video_asset_path must stay inside the approved gallery asset tree`)
     }
@@ -230,6 +240,7 @@ export function validateHomeVisualManifest(manifest) {
   if (!Array.isArray(manifest.items) || manifest.items.length === 0) fail('manifest.items must contain at least one item')
 
   const seenIds = new Set()
+  let turntableCount = 0
   for (const [index, item] of manifest.items.entries()) {
     if (!item || typeof item !== 'object' || Array.isArray(item)) fail(`items[${index}] must be an object`)
 
@@ -259,6 +270,7 @@ export function validateHomeVisualManifest(manifest) {
       fail(`items[${index}].detailMedia is not allowed`)
     }
     if (item.detailMedia === 'turntable_video') {
+      turntableCount += 1
       assertNonEmptyString(item.videoSrc, `items[${index}].videoSrc`)
       if (!item.videoSrc.startsWith('/assets/home-visuals/turntables/') || !item.videoSrc.endsWith('.mp4')) {
         fail(`items[${index}].videoSrc must point to a copied public MP4`)
@@ -291,6 +303,10 @@ export function validateHomeVisualManifest(manifest) {
         fail(`items[${index}] appears to expose private/source/secret-like text`)
       }
     }
+  }
+
+  if (turntableCount !== manifest.items.length) {
+    fail(`turntable parity mismatch: stills=${manifest.items.length} turntables=${turntableCount}`)
   }
 
   return manifest
