@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-09T00:47:34.435Z",
+  "generatedAt": "2026-08-11T00:46:56.241Z",
   "sourcePolicy": "public-safe home visual manifest only; exposes copied still/turntable assets and approved display copy; excludes raw logs, prompts, remote URLs, model/job IDs, credentials, private IDs, and local source paths",
   "homeComponent": "HomeVisualHero",
   "status": "public_home_allowed",
@@ -1067,6 +1067,158 @@
       "detailMedia": "turntable_video",
       "metadata": {
         "dateKst": "2026-08-08",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-09-goyounjung-01-blue-neutral-context-meridian",
+      "title": "Context Meridian",
+      "dateKst": "2026-08-09",
+      "theme": "cool blue-neutral / #4065F8·#A1D0F6·#001C33·#FCFCFF",
+      "metaphor": "single rounded meridian marker for aligning user context, service promise, and AI agency without forcing a path",
+      "why": [
+        "사용자 맥락·브랜드 약속·AI 대리성이 한 방향으로 과속하지 않고 조용히 정렬되는 기준선을 추상적 신호표식으로 표현했습니다.",
+        "최근 atelier·threshold·mat·chair 계열과 겹치지 않도록 낮고 넓은 물체가 아니라 세로형 rounded marker 실루엣으로 오늘의 장을 분리했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-09-43-01-blue-neutral-context-meridian.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-09-43-01-blue-neutral-context-meridian.kling-turntable.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-09",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-09-goyounjung-02-warm-violet-steward-seedling",
+      "title": "Steward Seedling",
+      "dateKst": "2026-08-09",
+      "theme": "warm-violet / #B85C4F·#EEDCD6·#B14D92·#4C1039·#FCFCFF",
+      "metaphor": "single rounded seedling-like companion for growing trust and product judgment patiently",
+      "why": [
+        "OBD와 미래 One UI에서 신뢰는 한 번에 ‘설치’되는 기능이 아니라, 사용자 피드백을 받아 천천히 자라는 관계라는 점을 식물 은유로 잡았습니다.",
+        "오늘 1번의 추상적 기준선과 달리 concrete plant metaphor를 써서 따뜻함·돌봄·성장 리듬을 더했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-09-44-02-warm-violet-steward-seedling.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-09-44-02-warm-violet-steward-seedling.kling-turntable.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-09",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-10-goyounjung-01-covenant-fulcrum",
+      "title": "Covenant Fulcrum",
+      "dateKst": "2026-08-10",
+      "theme": "neutral-violet / #D7C8DD·#7D8FCB·#30305F·#FCFCFF",
+      "metaphor": "사용자 허락, 브랜드 약속, AI 대리성 사이의 균형을 잡는 둥근 받침점",
+      "why": [
+        "복잡한 장면이 아니라 하나의 오브젝트로 거버넌스의 중심축을 보이게 했습니다.",
+        "단색 배경과 부드러운 형태로 Future One UI의 안정감과 신뢰감을 유지했습니다.",
+        "최근 반복된 blue/mint/violet 계열을 줄이고 neutral-violet 확장 팔레트로 차분한 구분감을 만들었습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-10-45-01-covenant-fulcrum.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-10-45-01-covenant-fulcrum.kling-turntable.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-10",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-10-goyounjung-02-evidence-capsule",
+      "title": "Evidence Capsule",
+      "dateKst": "2026-08-10",
+      "theme": "warm-mint / #F3E6B8·#10C19F·#156E5C·#FCFCFF",
+      "metaphor": "리서치 근거를 제품 판단까지 안전하게 운반하는 증거 캡슐",
+      "why": [
+        "리서치 결과가 장식이 아니라 의사결정으로 이동하는 운반성을 오브젝트로 단순화했습니다.",
+        "배경을 줄이고 형태만 남겨 Hermes/OBD 비주얼 시스템에 더 잘 쌓이도록 했습니다.",
+        "따뜻한 parchment 계열과 mint object 조합으로 전날 팔레트와 분리했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-10-46-02-evidence-capsule.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-10-46-02-evidence-capsule.kling-turntable.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-10",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-11-goyounjung-01-reciprocity-nest",
+      "title": "Reciprocity Nest",
+      "dateKst": "2026-08-11",
+      "theme": "mint-neutral / #10C19F·#A6E6D4·#04221C·#FCFCFF·#010102",
+      "metaphor": "사용자 가치와 AI agency가 먼저 균형을 잡는 낮은 calibration nest",
+      "why": [
+        "AI가 먼저 움직이기보다, 사용자 가치가 놓일 자리를 먼저 만드는 OBD적 교환 구조를 보여줍니다.",
+        "단일 둥근 그릇형 오브젝트라 One UI의 정서적 안정감과 “부드러운 제어권”을 차분하게 읽힙니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-11-47-01-reciprocity-nest.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-11-47-01-reciprocity-nest.kling-turntable.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-11",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-11-goyounjung-02-listening-lamp",
+      "title": "Listening Lamp",
+      "dateKst": "2026-08-11",
+      "theme": "warm-violet / #B85C4F·#EEDCD6·#B14D92·#4C1039·#FCFCFF",
+      "metaphor": "사용자를 방해하지 않고 곁에 머무는 따뜻한 AI attention lamp",
+      "why": [
+        "AI의 존재감을 “강한 인터페이스”가 아니라 필요한 순간만 켜지는 조용한 관심으로 바꿔 읽게 합니다.",
+        "보라-테라코타 조합은 기술적 차가움보다 돌봄·집중·브랜드 온도를 강조하는 구체 은유입니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-11-48-02-listening-lamp.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-11-48-02-listening-lamp.kling-turntable.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-11",
         "displayMode": "pinterest_masonry_card",
         "interaction": "dashboard_still_click_opens_turntable_detail_view",
         "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",

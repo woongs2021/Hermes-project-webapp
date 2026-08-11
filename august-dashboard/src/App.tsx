@@ -417,6 +417,14 @@ function laneLabel(lane: ResearchBoardItem['lane']) {
   return lane === 'yuna' ? 'Yuna · AI / agent UX' : 'Go Youn-jung · UX / brand / design'
 }
 
+function researchGraphTrace(item: ResearchBoardItem) {
+  const sourceNode = item.lane === 'yuna' ? 'Yuna ResearchItem' : 'Go Youn-jung ResearchItem'
+  const insightNode = item.lane === 'yuna' ? 'AI/AX Insight' : 'UX·Design Insight'
+  const validationNode = item.status === 'friday_final_pick' ? 'Muyeol final pick' : `${item.validationStatus} review queue`
+
+  return [sourceNode, insightNode, 'Chris OBD relevance', validationNode, 'Research Board Artifact']
+}
+
 function boardLaneLabel(lane: ResearchBoardItem['lane'] | 'final') {
   return lane === 'final' ? 'Friday final picks · Muyeol validated' : laneLabel(lane)
 }
@@ -605,6 +613,14 @@ function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoar
           <p><strong>Source / ID</strong>{item.sourceUrlOrId}</p>
           <p><strong>Venue</strong>{item.sourceVenue}</p>
           <p><strong>De-dup note</strong>{item.duplicateSignal}</p>
+          <div className="research-graph-trace" aria-label="Research item graph breadcrumb">
+            <span>Graph trace</span>
+            <ol>
+              {researchGraphTrace(item).map((node) => (
+                <li key={node}>{node}</li>
+              ))}
+            </ol>
+          </div>
         </div>
       </div>
 

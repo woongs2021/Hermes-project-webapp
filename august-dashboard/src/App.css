@@ -391,6 +391,49 @@
   text-transform: uppercase;
 }
 
+.research-graph-trace {
+  display: grid;
+  gap: 10px;
+  border: 1px solid rgba(64, 101, 248, 0.13);
+  border-radius: 20px;
+  padding: 14px;
+  background: linear-gradient(135deg, rgba(252, 252, 255, 0.84), rgba(202, 247, 255, 0.28));
+}
+
+.research-graph-trace > span {
+  color: var(--quiet-ink);
+  font-size: 0.74rem;
+  font-weight: 780;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.research-graph-trace ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.research-graph-trace li {
+  position: relative;
+  border: 1px solid rgba(1, 1, 2, 0.07);
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: rgba(255, 255, 255, 0.74);
+  color: var(--mid);
+  font-size: 0.78rem;
+  font-weight: 720;
+}
+
+.research-graph-trace li:not(:last-child)::after {
+  content: '→';
+  margin-left: 8px;
+  color: var(--quiet-ink);
+}
+
 .dashboard-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.28fr) minmax(280px, 0.72fr);
