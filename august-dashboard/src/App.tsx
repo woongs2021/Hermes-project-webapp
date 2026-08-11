@@ -42,7 +42,7 @@ const tabs: Tab[] = [
     label: 'Home',
     eyebrow: 'Today’s visual system',
     title: 'Home Visual Archive',
-    description: '최신 최종 저장된 Go Youn-jung 홈 비주얼을 먼저 보여주고, 과거 세트는 아래로 이어지는 Pinterest-style still archive로 확인합니다.',
+    description: '최종 승인된 Go Youn-jung 홈 비주얼을 오래된 순서로 누적하고, 각 still을 클릭하면 turntable detail을 확인합니다.',
   },
   {
     id: 'intro',
@@ -328,18 +328,40 @@ function HomeVisualHeroPanel() {
   }, [])
 
   const selectedItem = visualSet.items.find((item) => item.id === selectedId) ?? visualSet.items[0]
+  const selectedIndex = selectedItem ? visualSet.items.findIndex((item) => item.id === selectedItem.id) : -1
+  const turntableCount = visualSet.items.filter((item) => item.videoSrc).length
+  const firstDate = visualSet.items[0]?.dateKst ?? 'pending'
+  const latestDate = visualSet.items.at(-1)?.dateKst ?? 'pending'
 
   return (
     <div className="home-visual-grid" aria-label="Public-safe home visual archive">
+      <article className="content-card home-visual-brief archive-summary-card">
+        <div>
+          <p className="card-kicker">Cumulative visual archive</p>
+          <h3>최종 승인 비주얼을 오래된 순서로 쌓아 보는 홈</h3>
+          <p>
+            한 장의 최신 hero로 덮어쓰지 않고, 승인된 still을 oldest-first archive로 누적합니다.
+            카드를 누르면 아래 detail 영역에서 해당 still 또는 turntable을 바로 확인합니다.
+          </p>
+        </div>
+        <div className="archive-stat-grid" aria-label="Home visual archive summary">
+          <span><strong>{visualSet.items.length}</strong> approved stills</span>
+          <span><strong>{turntableCount}</strong> turntables</span>
+          <span><strong>{firstDate}</strong> first saved</span>
+          <span><strong>{latestDate}</strong> latest saved</span>
+        </div>
+      </article>
+
       <section className="visual-board visual-archive-board" aria-label="Final public home visual archive cards">
         {visualSet.items.map((item, index) => (
           <button
             key={item.id}
             type="button"
             className={item.id === selectedItem?.id ? 'visual-card active' : 'visual-card'}
+            aria-pressed={item.id === selectedItem?.id}
             onClick={() => setSelectedId(item.id)}
           >
-            <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} public home still`} />
+            <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} public home still`} loading="lazy" />
             <span className="visual-index">{String(index + 1).padStart(2, '0')} · {item.dateKst}</span>
             <div className="visual-card-copy">
               <strong>{item.title}</strong>
@@ -349,7 +371,7 @@ function HomeVisualHeroPanel() {
         ))}
       </section>
 
-      {selectedItem ? <HomeVisualDetail item={selectedItem} generatedAt={visualSet.generatedAt} policy={visualSet.sourcePolicy} /> : (
+      {selectedItem ? <HomeVisualDetail item={selectedItem} selectedPosition={selectedIndex + 1} totalItems={visualSet.items.length} generatedAt={visualSet.generatedAt} policy={visualSet.sourcePolicy} /> : (
         <article className="content-card visual-detail-card">
           <p className="card-kicker">Manifest pending</p>
           <h3>home-visual-set.json을 기다리는 중</h3>
@@ -360,12 +382,24 @@ function HomeVisualHeroPanel() {
   )
 }
 
-function HomeVisualDetail({ item, generatedAt, policy }: { item: HomeVisualItem; generatedAt: string; policy: string }) {
+function HomeVisualDetail({
+  item,
+  selectedPosition,
+  totalItems,
+  generatedAt,
+  policy,
+}: {
+  item: HomeVisualItem
+  selectedPosition: number
+  totalItems: number
+  generatedAt: string
+  policy: string
+}) {
   return (
     <article className="content-card visual-detail-card" aria-label="Selected public home visual detail">
       <div className="visual-detail-header">
         <div>
-          <p className="card-kicker">Selected still</p>
+          <p className="card-kicker">Selected archive item · {selectedPosition}/{totalItems}</p>
           <h3>{item.title}</h3>
         </div>
         <span className="status-chip">{item.status}</span>

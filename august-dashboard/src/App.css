@@ -653,6 +653,37 @@
   line-height: 0.96;
 }
 
+.archive-summary-card {
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.42fr);
+  align-items: end;
+  background: rgba(252, 252, 255, 0.92);
+}
+
+.archive-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.archive-stat-grid span {
+  display: grid;
+  gap: 4px;
+  border: 1px solid rgba(1, 1, 2, 0.07);
+  border-radius: 18px;
+  padding: 13px 14px;
+  background: rgba(255, 255, 255, 0.66);
+  color: var(--muted-ink);
+  font-size: 0.78rem;
+  font-weight: 720;
+}
+
+.archive-stat-grid strong {
+  color: var(--ink);
+  font-size: clamp(1.05rem, 1.8vw, 1.45rem);
+  font-weight: 520;
+  letter-spacing: -0.05em;
+}
+
 .home-visual-brief p:not(.card-kicker),
 .visual-detail-copy p,
 .visual-generated-at {
@@ -666,9 +697,10 @@
 }
 
 .visual-archive-board {
-  display: block;
-  column-count: 4;
-  column-gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
 }
 
 .visual-card {
@@ -689,11 +721,7 @@
 }
 
 .visual-archive-board .visual-card {
-  display: inline-grid;
-  width: 100%;
   min-height: 0;
-  margin: 0 0 12px;
-  break-inside: avoid;
   transform: none;
 }
 
@@ -749,19 +777,30 @@
   z-index: 1;
   display: grid;
   gap: 4px;
+  overflow: hidden;
   color: #fff;
   text-align: left;
 }
 
 .visual-card-copy strong {
+  display: -webkit-box;
+  overflow: hidden;
   font-size: clamp(1rem, 1.6vw, 1.35rem);
   letter-spacing: -0.04em;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .visual-card-copy span {
+  display: -webkit-box;
+  overflow: hidden;
   color: rgba(255, 255, 255, 0.78);
   font-size: 0.78rem;
   line-height: 1.35;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .visual-detail-card {
@@ -1471,6 +1510,8 @@
   .intro-grid,
   .profile-credential-grid,
   .home-visual-grid,
+  .archive-summary-card,
+  .archive-stat-grid,
   .visual-board,
   .visual-detail-layout,
   .research-filter-card,
@@ -1491,7 +1532,7 @@
   }
 
   .visual-archive-board {
-    column-count: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1527,7 +1568,7 @@
   }
 
   .visual-archive-board {
-    column-count: 1;
+    grid-template-columns: 1fr;
   }
 
   .hero-card,

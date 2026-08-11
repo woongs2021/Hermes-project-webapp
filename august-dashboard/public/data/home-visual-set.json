@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T00:46:56.241Z",
+  "generatedAt": "2026-08-11T01:45:43.446Z",
   "sourcePolicy": "public-safe home visual manifest only; exposes copied still/turntable assets and approved display copy; excludes raw logs, prompts, remote URLs, model/job IDs, credentials, private IDs, and local source paths",
   "homeComponent": "HomeVisualHero",
   "status": "public_home_allowed",
@@ -1178,17 +1178,18 @@
       "publicSafe": true
     },
     {
-      "id": "2026-08-11-goyounjung-01-reciprocity-nest",
-      "title": "Reciprocity Nest",
+      "id": "2026-08-11-goyounjung-01-decision-cushion",
+      "title": "Decision Cushion",
       "dateKst": "2026-08-11",
-      "theme": "mint-neutral / #10C19F·#A6E6D4·#04221C·#FCFCFF·#010102",
-      "metaphor": "사용자 가치와 AI agency가 먼저 균형을 잡는 낮은 calibration nest",
+      "theme": "warm parchment / #F6DFA6·#B96E4D·#FFF6DE",
+      "metaphor": "어려운 제품 판단이 증거와 돌봄 위에 안전하게 내려앉는 부드러운 결정 쿠션",
       "why": [
-        "AI가 먼저 움직이기보다, 사용자 가치가 놓일 자리를 먼저 만드는 OBD적 교환 구조를 보여줍니다.",
-        "단일 둥근 그릇형 오브젝트라 One UI의 정서적 안정감과 “부드러운 제어권”을 차분하게 읽힙니다."
+        "최근 blue/mint/violet 반복을 피해 warm parchment·terracotta 계열로 전환했습니다.",
+        "하나의 낮고 부드러운 오브젝트만 남겨 의사결정의 정서적 안전감을 표현했습니다.",
+        "구멍·점·입자·마디·동물/버섯 실루엣 없이 안정적인 product-icon 형태로 정리했습니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-11-47-01-reciprocity-nest.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-11-47-01-reciprocity-nest.kling-turntable.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-11-47-01-decision-cushion.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-11-47-01-decision-cushion.kling-turntable.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
@@ -1203,17 +1204,18 @@
       "publicSafe": true
     },
     {
-      "id": "2026-08-11-goyounjung-02-listening-lamp",
-      "title": "Listening Lamp",
+      "id": "2026-08-11-goyounjung-02-trust-block",
+      "title": "Trust Block",
       "dateKst": "2026-08-11",
-      "theme": "warm-violet / #B85C4F·#EEDCD6·#B14D92·#4C1039·#FCFCFF",
-      "metaphor": "사용자를 방해하지 않고 곁에 머무는 따뜻한 AI attention lamp",
+      "theme": "olive ochre / #D9C875·#6F7442·#FFF2C8",
+      "metaphor": "AI 제품 판단을 흔들리지 않게 받치는 신뢰의 둥근 기반 블록",
       "why": [
-        "AI의 존재감을 “강한 인터페이스”가 아니라 필요한 순간만 켜지는 조용한 관심으로 바꿔 읽게 합니다.",
-        "보라-테라코타 조합은 기술적 차가움보다 돌봄·집중·브랜드 온도를 강조하는 구체 은유입니다."
+        "전날 neutral-violet·warm-mint와 분리되는 olive/ochre 확장 팔레트를 사용했습니다.",
+        "복잡한 상징보다 하나의 매끈한 기초 블록으로 신뢰의 비즈니스/브랜드 기반을 단순화했습니다.",
+        "금지된 점·렌즈·입자·연결·마디 패턴 없이 홈 갤러리에 안전하게 쌓일 수 있는 형태입니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-11-48-02-listening-lamp.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-11-48-02-listening-lamp.kling-turntable.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-11-48-02-trust-block.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-11-48-02-trust-block.kling-turntable.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
