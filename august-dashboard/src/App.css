@@ -329,6 +329,47 @@
   -webkit-line-clamp: 3;
 }
 
+.research-card-copy .research-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+
+.research-card-copy .research-card-venue {
+  display: -webkit-box;
+  color: var(--quiet-ink);
+  font-size: 0.76rem;
+  font-weight: 720;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.research-source-row {
+  display: grid;
+  gap: 10px;
+}
+
+.research-source-link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border: 1px solid rgba(64, 101, 248, 0.16);
+  border-radius: 999px;
+  padding: 9px 12px;
+  background: rgba(202, 247, 255, 0.22);
+  color: var(--mid);
+  font-size: 0.8rem;
+  font-weight: 780;
+  text-decoration: none;
+}
+
+.research-source-link:hover {
+  border-color: rgba(64, 101, 248, 0.34);
+  background: rgba(202, 247, 255, 0.36);
+}
+
 .research-detail-card {
   display: grid;
   gap: 18px;

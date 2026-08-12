@@ -463,6 +463,17 @@ function boardLaneLabel(lane: ResearchBoardItem['lane'] | 'final') {
   return lane === 'final' ? 'Friday final picks · Muyeol validated' : laneLabel(lane)
 }
 
+function primarySourceHref(sourceUrlOrId: string) {
+  return sourceUrlOrId.match(/https?:\/\/[^\s;)]+/i)?.[0]
+}
+
+function sourceAccessLabel(item: ResearchBoardItem) {
+  if (/full/i.test(item.sourceAccess)) return 'full read'
+  if (/abstract|metadata/i.test(item.sourceAccess)) return 'abstract / metadata'
+  if (/paywall|purchase|subscriber/i.test(item.sourceAccess)) return 'access limited'
+  return 'source noted'
+}
+
 function ResearchKanbanPanel() {
   const [board, setBoard] = useState<ResearchBoard>(fallbackResearchBoard)
   const [selectedId, setSelectedId] = useState('')
@@ -591,7 +602,12 @@ function ResearchKanbanPanel() {
                     <span className="research-card-copy">
                       <strong>{item.title}</strong>
                       <small>{item.dateKst} · {item.isoWeek}</small>
-                      {item.status === 'friday_final_pick' ? <em>{item.validationStatus} final pick</em> : null}
+                      <span className="research-card-meta">
+                        <em>{item.validationStatus}</em>
+                        <em>{sourceAccessLabel(item)}</em>
+                        {item.status === 'friday_final_pick' ? <em>final pick</em> : null}
+                      </span>
+                      <span className="research-card-venue">{item.sourceVenue}</span>
                       <span>{item.summary}</span>
                     </span>
                   </button>
@@ -618,6 +634,8 @@ function ResearchKanbanPanel() {
 }
 
 function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoardItem; generatedAt: string; policy: string }) {
+  const primaryHref = primarySourceHref(item.sourceUrlOrId)
+
   return (
     <article className="content-card research-detail-card" aria-label="Selected research item detail">
       <div className="research-detail-header">
@@ -644,7 +662,14 @@ function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoar
             <span>Access: {item.sourceAccess}</span>
             <span>Korean source: {item.koreanSourceStatus}</span>
           </div>
-          <p><strong>Source / ID</strong>{item.sourceUrlOrId}</p>
+          <div className="research-source-row">
+            <p><strong>Source / ID</strong>{item.sourceUrlOrId}</p>
+            {primaryHref ? (
+              <a className="research-source-link" href={primaryHref} target="_blank" rel="noreferrer">
+                안전한 공개 소스 열기
+              </a>
+            ) : null}
+          </div>
           <p><strong>Venue</strong>{item.sourceVenue}</p>
           <p><strong>De-dup note</strong>{item.duplicateSignal}</p>
           <div className="research-graph-trace" aria-label="Research item graph breadcrumb">

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T02:07:43.786Z",
+  "generatedAt": "2026-08-12T00:46:39.051Z",
   "sourcePolicy": "public-safe home visual manifest only; exposes copied still/turntable assets and approved display copy; excludes raw logs, prompts, remote URLs, model/job IDs, credentials, private IDs, and local source paths",
   "homeComponent": "HomeVisualHero",
   "status": "public_home_allowed",
@@ -1225,6 +1225,58 @@
       "detailMedia": "turntable_video",
       "metadata": {
         "dateKst": "2026-08-11",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-12-goyounjung-01-calibration-shuttle",
+      "title": "Calibration Shuttle",
+      "dateKst": "2026-08-12",
+      "theme": "blue-neutral / #4065F8·#A1D0F6·#001C33·#FCFCFF·#010102",
+      "metaphor": "사용자 근거에 맞춰 AI 에이전시를 부드럽게 조율하는 둥근 캘리브레이션 셔틀",
+      "why": [
+        "전날 warm parchment·olive ochre와 겹치지 않게 차분한 blue-neutral 계열을 사용했습니다.",
+        "AI가 앞서 달리는 느낌보다 사용자 증거에 맞춰 정밀하게 조절되는 상호작용 품질을 표현했습니다.",
+        "단일 product-icon 오브젝트로 텍스트·로고·UI·입자·동물/버섯 실루엣 없이 정리했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-12-49-01-calibration-shuttle.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-12-49-01-calibration-shuttle.kling-turntable.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-12",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-12-goyounjung-02-memory-keel",
+      "title": "Memory Keel",
+      "dateKst": "2026-08-12",
+      "theme": "clay lavender-steel / #F2C7A1·#8E635C·#74869A·#FCFCFF·#010102",
+      "metaphor": "누적된 디자인 기억이 AI 제품 판단을 흔들리지 않게 잡아주는 부드러운 밸러스트 킬",
+      "why": [
+        "금지된 #EEDCD6을 배제하고 warm clay·lavender-steel 확장 팔레트로 전환했습니다.",
+        "책·블록·식물·동물 계열 반복을 피하고, 하나의 연속적인 keel form으로 판단의 안정감을 표현했습니다.",
+        "Kling 원본의 중앙 dark dot은 로컬 소스 번들에 기록한 뒤 최종 turntable 생성 전 결정적 후처리로 제거했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-12-50-02-memory-keel.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-12-50-02-memory-keel.kling-turntable.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-12",
         "displayMode": "pinterest_masonry_card",
         "interaction": "dashboard_still_click_opens_turntable_detail_view",
         "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
