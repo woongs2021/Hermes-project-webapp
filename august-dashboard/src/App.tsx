@@ -332,25 +332,54 @@ function HomeVisualHeroPanel() {
   const turntableCount = visualSet.items.filter((item) => item.videoSrc).length
   const firstDate = visualSet.items[0]?.dateKst ?? 'pending'
   const latestDate = visualSet.items.at(-1)?.dateKst ?? 'pending'
+  const latestItems = visualSet.items.filter((item) => item.dateKst === latestDate)
 
   return (
     <div className="home-visual-grid" aria-label="Public-safe home visual archive">
       <article className="content-card home-visual-brief archive-summary-card">
         <div>
-          <p className="card-kicker">Cumulative visual archive</p>
-          <h3>최종 승인 비주얼을 오래된 순서로 쌓아 보는 홈</h3>
+          <p className="card-kicker">Today’s visual system</p>
+          <h3>최신 final 세트를 먼저 읽고, 아래에 archive를 누적합니다</h3>
           <p>
-            한 장의 최신 hero로 덮어쓰지 않고, 승인된 still을 oldest-first archive로 누적합니다.
-            카드를 누르면 아래 detail 영역에서 해당 still 또는 turntable을 바로 확인합니다.
+            홈은 canonical final set을 오늘의 시각 시스템으로 먼저 보여주고, 승인된 still history는 아래 masonry archive에 이어 붙입니다.
+            카드를 누르면 detail 영역에서 해당 still 또는 turntable을 바로 확인합니다.
           </p>
         </div>
         <div className="archive-stat-grid" aria-label="Home visual archive summary">
           <span><strong>{visualSet.items.length}</strong> approved stills</span>
           <span><strong>{turntableCount}</strong> turntables</span>
           <span><strong>{firstDate}</strong> first saved</span>
-          <span><strong>{latestDate}</strong> latest saved</span>
+          <span><strong>{latestDate}</strong> current final</span>
         </div>
       </article>
+
+      {latestItems.length > 0 ? (
+        <section className="content-card latest-visual-system" aria-label="Latest final home visual set">
+          <div className="latest-visual-copy">
+            <p className="card-kicker">Canonical source gate</p>
+            <h3>{latestDate} final visual set</h3>
+            <p>
+              pending 이미지는 섞지 않고, public-safe manifest를 통과한 최신 final 항목만 홈 상단에 고정합니다.
+              아래 전체 archive와 같은 detail disclosure를 공유합니다.
+            </p>
+          </div>
+          <div className="latest-visual-cards">
+            {latestItems.map((item, index) => (
+              <button
+                key={item.id}
+                type="button"
+                className={item.id === selectedItem?.id ? 'latest-visual-card active' : 'latest-visual-card'}
+                aria-pressed={item.id === selectedItem?.id}
+                onClick={() => setSelectedId(item.id)}
+              >
+                <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} latest final still`} loading="lazy" />
+                <span>{index === 0 ? 'Lead' : 'Support'} · {item.mediaCapability}</span>
+                <strong>{item.title}</strong>
+              </button>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="visual-board visual-archive-board" aria-label="Final public home visual archive cards">
         {visualSet.items.map((item, index) => (

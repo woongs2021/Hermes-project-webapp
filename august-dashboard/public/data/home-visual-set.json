@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T00:46:39.051Z",
+  "generatedAt": "2026-08-13T00:47:59.360Z",
   "sourcePolicy": "public-safe home visual manifest only; exposes copied still/turntable assets and approved display copy; excludes raw logs, prompts, remote URLs, model/job IDs, credentials, private IDs, and local source paths",
   "homeComponent": "HomeVisualHero",
   "status": "public_home_allowed",
@@ -1234,18 +1234,17 @@
       "publicSafe": true
     },
     {
-      "id": "2026-08-12-goyounjung-01-calibration-shuttle",
-      "title": "Calibration Shuttle",
+      "id": "2026-08-12-goyounjung-01-calibration-capsule",
+      "title": "Calibration Capsule",
       "dateKst": "2026-08-12",
       "theme": "blue-neutral / #4065F8·#A1D0F6·#001C33·#FCFCFF·#010102",
-      "metaphor": "사용자 근거에 맞춰 AI 에이전시를 부드럽게 조율하는 둥근 캘리브레이션 셔틀",
+      "metaphor": "single monolithic rounded calibration capsule for adjusting AI agency with user evidence",
       "why": [
-        "전날 warm parchment·olive ochre와 겹치지 않게 차분한 blue-neutral 계열을 사용했습니다.",
-        "AI가 앞서 달리는 느낌보다 사용자 증거에 맞춰 정밀하게 조절되는 상호작용 품질을 표현했습니다.",
-        "단일 product-icon 오브젝트로 텍스트·로고·UI·입자·동물/버섯 실루엣 없이 정리했습니다."
+        "추상적인 조절 도구 은유로, AI가 앞서 나가는 느낌보다 사용자 근거에 맞춰 천천히 맞춰지는 경험을 잡았습니다.",
+        "최근의 nest/lamp/dock/umbrella 계열을 피하고, 차분한 blue-neutral 팔레트로 One UI식 신뢰감과 판단의 정밀도를 우선했습니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-12-49-01-calibration-shuttle.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-12-49-01-calibration-shuttle.kling-turntable.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-12-49-01-calibration-capsule.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-12-49-01-calibration-capsule.kling-turntable.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
@@ -1260,23 +1259,74 @@
       "publicSafe": true
     },
     {
-      "id": "2026-08-12-goyounjung-02-memory-keel",
-      "title": "Memory Keel",
+      "id": "2026-08-12-goyounjung-02-quiet-ledger-block",
+      "title": "Quiet Ledger Block",
       "dateKst": "2026-08-12",
-      "theme": "clay lavender-steel / #F2C7A1·#8E635C·#74869A·#FCFCFF·#010102",
-      "metaphor": "누적된 디자인 기억이 AI 제품 판단을 흔들리지 않게 잡아주는 부드러운 밸러스트 킬",
+      "theme": "orange-neutral / #B85C4F·#EEDCD6·#771B0E·#FCFCFF·#010102",
+      "metaphor": "single monolithic rounded ledger block for durable OBD design judgment memory",
       "why": [
-        "금지된 #EEDCD6을 배제하고 warm clay·lavender-steel 확장 팔레트로 전환했습니다.",
-        "책·블록·식물·동물 계열 반복을 피하고, 하나의 연속적인 keel form으로 판단의 안정감을 표현했습니다.",
-        "Kling 원본의 중앙 dark dot은 로컬 소스 번들에 기록한 뒤 최종 turntable 생성 전 결정적 후처리로 제거했습니다."
+        "구체적인 책/장부 은유로, OBD 판단이 순간 생성물이 아니라 누적되는 설계 기억이라는 메시지를 전달합니다.",
+        "최근의 식물·동물·램프·보호물 계열과 겹치지 않게 document artifact로 전환했고, warm orange-neutral로 오늘 1번의 냉정한 조율감과 온도를 분리했습니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-12-50-02-memory-keel.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-12-50-02-memory-keel.kling-turntable.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-12-50-02-quiet-ledger-block.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-12-50-02-quiet-ledger-block.kling-turntable.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
       "metadata": {
         "dateKst": "2026-08-12",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-13-goyounjung-01-alignment-wedge",
+      "title": "Alignment Wedge",
+      "dateKst": "2026-08-13",
+      "theme": "ochre / #E0B54A background · deep olive clay #56663E object",
+      "metaphor": "single smooth rounded wedge that helps AI and product judgment lean into the right level of responsibility",
+      "why": [
+        "최근 blue/mint/violet 반복을 피해서 ochre·olive 계열로 전환했습니다.",
+        "하나의 매끈한 쐐기/받침점 형태로 AI 대리성의 방향 조율과 책임 균형을 단순하게 표현했습니다.",
+        "점·입자·연결·마디 패턴 없이 제품 아이콘처럼 안정적으로 보이도록 골랐습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-13-51-01-alignment-wedge.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-13-51-01-alignment-wedge.kling-turntable.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-13",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-13-goyounjung-02-care-canopy",
+      "title": "Care Canopy",
+      "dateKst": "2026-08-13",
+      "theme": "clay-coral / #D8694A background · parchment cream #FFF2C8 object",
+      "metaphor": "single intact soft canopy that shelters the user while AI acts on their behalf",
+      "why": [
+        "전날 ledger/capsule 계열과 분리해 보호·돌봄 은유로 바꿨습니다.",
+        "갈라짐·찢김 없이 하나의 부드러운 덮개로 정서적 안전감과 신뢰를 표현했습니다.",
+        "배경은 단색 clay-coral로 유지하고 텍스트·로고·UI 없이 홈 갤러리용 시각 밀도를 낮췄습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-13-52-02-care-canopy.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-13-52-02-care-canopy.kling-turntable.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-13",
         "displayMode": "pinterest_masonry_card",
         "interaction": "dashboard_still_click_opens_turntable_detail_view",
         "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
