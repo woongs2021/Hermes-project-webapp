@@ -333,6 +333,8 @@ function HomeVisualHeroPanel() {
   const firstDate = visualSet.items[0]?.dateKst ?? 'pending'
   const latestDate = visualSet.items.at(-1)?.dateKst ?? 'pending'
   const latestItems = visualSet.items.filter((item) => item.dateKst === latestDate)
+  const latestLead = latestItems[0]
+  const latestSupport = latestItems.slice(1)
 
   return (
     <div className="home-visual-grid" aria-label="Public-safe home visual archive">
@@ -362,21 +364,42 @@ function HomeVisualHeroPanel() {
               pending 이미지는 섞지 않고, public-safe manifest를 통과한 최신 final 항목만 홈 상단에 고정합니다.
               아래 전체 archive와 같은 detail disclosure를 공유합니다.
             </p>
+            <ol className="latest-visual-trace" aria-label="Home visual graph bridge">
+              <li>Final visual source</li>
+              <li>HomeVisualHero</li>
+              <li>Visual Archive</li>
+              <li>Graph Artifact</li>
+            </ol>
           </div>
           <div className="latest-visual-cards">
-            {latestItems.map((item, index) => (
+            {latestLead ? (
               <button
-                key={item.id}
+                key={latestLead.id}
                 type="button"
-                className={item.id === selectedItem?.id ? 'latest-visual-card active' : 'latest-visual-card'}
-                aria-pressed={item.id === selectedItem?.id}
-                onClick={() => setSelectedId(item.id)}
+                className={latestLead.id === selectedItem?.id ? 'latest-visual-card lead active' : 'latest-visual-card lead'}
+                aria-pressed={latestLead.id === selectedItem?.id}
+                onClick={() => setSelectedId(latestLead.id)}
               >
-                <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} latest final still`} loading="lazy" />
-                <span>{index === 0 ? 'Lead' : 'Support'} · {item.mediaCapability}</span>
-                <strong>{item.title}</strong>
+                <img src={toAppAssetSrc(latestLead.imageSrc)} alt={`${latestLead.title} latest final lead still`} loading="lazy" />
+                <span>Lead · {latestLead.mediaCapability}</span>
+                <strong>{latestLead.title}</strong>
               </button>
-            ))}
+            ) : null}
+            <div className="latest-support-stack" aria-label="Supporting latest visual cards">
+              {latestSupport.map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  className={item.id === selectedItem?.id ? 'latest-visual-card support active' : 'latest-visual-card support'}
+                  aria-pressed={item.id === selectedItem?.id}
+                  onClick={() => setSelectedId(item.id)}
+                >
+                  <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} latest final support still`} loading="lazy" />
+                  <span>Support · {item.mediaCapability}</span>
+                  <strong>{item.title}</strong>
+                </button>
+              ))}
+            </div>
           </div>
         </section>
       ) : null}
@@ -466,6 +489,16 @@ function HomeVisualDetail({
             {item.why.map((reason) => (
               <p key={reason}>{reason}</p>
             ))}
+          </div>
+          <div className="research-graph-trace visual-graph-trace" aria-label="Home visual graph breadcrumb">
+            <span>HomeVisualGraphBridge</span>
+            <ol>
+              <li>Artifact</li>
+              <li>{item.metadata.sourceStatus}</li>
+              <li>Theme: {item.theme}</li>
+              <li>HomeVisualHero</li>
+              <li>Visual Archive</li>
+            </ol>
           </div>
         </div>
       </div>

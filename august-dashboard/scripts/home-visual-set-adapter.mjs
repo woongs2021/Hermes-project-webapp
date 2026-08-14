@@ -305,8 +305,8 @@ export function validateHomeVisualManifest(manifest) {
     }
   }
 
-  if (turntableCount !== manifest.items.length) {
-    fail(`turntable parity mismatch: stills=${manifest.items.length} turntables=${turntableCount}`)
+  if (turntableCount > manifest.items.length) {
+    fail(`turntable count exceeds still count: stills=${manifest.items.length} turntables=${turntableCount}`)
   }
 
   return manifest

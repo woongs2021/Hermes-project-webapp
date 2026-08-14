@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T00:47:59.360Z",
+  "generatedAt": "2026-08-14T00:54:10.890Z",
   "sourcePolicy": "public-safe home visual manifest only; exposes copied still/turntable assets and approved display copy; excludes raw logs, prompts, remote URLs, model/job IDs, credentials, private IDs, and local source paths",
   "homeComponent": "HomeVisualHero",
   "status": "public_home_allowed",
@@ -1284,21 +1284,19 @@
       "publicSafe": true
     },
     {
-      "id": "2026-08-13-goyounjung-01-alignment-wedge",
-      "title": "Alignment Wedge",
+      "id": "2026-08-13-goyounjung-01-violet-neutral-consent-weighing-cushion",
+      "title": "Consent Weighing Cushion",
       "dateKst": "2026-08-13",
-      "theme": "ochre / #E0B54A background · deep olive clay #56663E object",
-      "metaphor": "single smooth rounded wedge that helps AI and product judgment lean into the right level of responsibility",
+      "theme": "violet-neutral / #B14D92·#EFDCEC·#4C1039·#FCFCFF·#010102",
+      "metaphor": "동의와 제품 판단의 무게를 먼저 받쳐보는 낮은 쿠션형 기준점",
       "why": [
-        "최근 blue/mint/violet 반복을 피해서 ochre·olive 계열로 전환했습니다.",
-        "하나의 매끈한 쐐기/받침점 형태로 AI 대리성의 방향 조율과 책임 균형을 단순하게 표현했습니다.",
-        "점·입자·연결·마디 패턴 없이 제품 아이콘처럼 안정적으로 보이도록 골랐습니다."
+        "AI 기능의 세기를 먼저 키우는 대신, 사용자의 동의와 맥락을 부드럽게 받아내는 기준면으로 해석했습니다.",
+        "보라-뉴트럴 조합은 프라이버시·거버넌스의 긴장감을 차분하게 낮추면서도 One UI식 신뢰감을 유지합니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-13-51-01-alignment-wedge.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-13-51-01-alignment-wedge.kling-turntable.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-13-51-01-violet-neutral-consent-weighing-cushion.png",
       "status": "public_home_allowed",
-      "mediaCapability": "turntable_available",
-      "detailMedia": "turntable_video",
+      "mediaCapability": "still_only",
+      "detailMedia": "static_still",
       "metadata": {
         "dateKst": "2026-08-13",
         "displayMode": "pinterest_masonry_card",
@@ -1310,23 +1308,71 @@
       "publicSafe": true
     },
     {
-      "id": "2026-08-13-goyounjung-02-care-canopy",
-      "title": "Care Canopy",
+      "id": "2026-08-13-goyounjung-02-mint-quiet-context-lunchbox",
+      "title": "Quiet Context Lunchbox",
       "dateKst": "2026-08-13",
-      "theme": "clay-coral / #D8694A background · parchment cream #FFF2C8 object",
-      "metaphor": "single intact soft canopy that shelters the user while AI acts on their behalf",
+      "theme": "mint / #10C19F·#A6E6D4·#04221C·#FCFCFF",
+      "metaphor": "사용자 맥락을 감시하지 않고 조심스럽게 보관해 이동시키는 작은 런치박스",
       "why": [
-        "전날 ledger/capsule 계열과 분리해 보호·돌봄 은유로 바꿨습니다.",
-        "갈라짐·찢김 없이 하나의 부드러운 덮개로 정서적 안전감과 신뢰를 표현했습니다.",
-        "배경은 단색 clay-coral로 유지하고 텍스트·로고·UI 없이 홈 갤러리용 시각 밀도를 낮췄습니다."
+        "처음 후보의 쌍안경은 “관찰/감시” 인상이 강해, 사용자 맥락을 더 안전하게 보관하는 구체 사물로 한 번 재생성했습니다.",
+        "민트 계열은 돌봄·회복·낮은 마찰을 전달해, Hermes/OBD 탐구에서 “맥락을 다루는 태도”를 부드럽게 보여줍니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-13-52-02-care-canopy.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-13-52-02-care-canopy.kling-turntable.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-13-52-02-mint-quiet-context-lunchbox.png",
+      "status": "public_home_allowed",
+      "mediaCapability": "still_only",
+      "detailMedia": "static_still",
+      "metadata": {
+        "dateKst": "2026-08-13",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-14-goyounjung-01-direction-comma",
+      "title": "Direction Comma",
+      "dateKst": "2026-08-14",
+      "theme": "ochre-parchment / bg #F4D67B · object #667044 · accent #C99B3A",
+      "metaphor": "사용자 근거 위에서 AI 제품 방향을 부드럽게 꺾어 잡는 하나의 방향 콤마",
+      "why": [
+        "최근 violet·mint·blue 반복을 피해 ochre/parchment와 deep olive 계열로 전환했습니다.",
+        "구멍·점·연결·마디 없이 하나의 연속적인 matte 3D 형태로 판단의 방향성을 단순화했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-14-53-01-direction-comma.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-14-53-01-direction-comma.kling-turntable.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
       "metadata": {
-        "dateKst": "2026-08-13",
+        "dateKst": "2026-08-14",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-14-goyounjung-02-protective-arc",
+      "title": "Protective Arc",
+      "dateKst": "2026-08-14",
+      "theme": "lavender-steel / bg #C9C7E8 · object #B8644C · rim #F8E7C6",
+      "metaphor": "사람 중심 AI 경험을 감정적으로 안전하게 덮어주는 하나의 보호 아치",
+      "why": [
+        "전날 mint/violet 계열과 겹치지 않도록 lavender-steel 배경과 clay-red 오브젝트로 분리했습니다.",
+        "찢김·균열·입자·동물/버섯 실루엣 없이 매끈한 단일 보호 형태로 정서적 안정감을 잡았습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-14-54-02-protective-arc.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-14-54-02-protective-arc.kling-turntable.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-14",
         "displayMode": "pinterest_masonry_card",
         "interaction": "dashboard_still_click_opens_turntable_detail_view",
         "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
