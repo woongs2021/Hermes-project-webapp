@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-15T00:46:42.889Z",
+  "generatedAt": "2026-08-15T02:35:38.493Z",
   "sourcePolicy": "public-safe research board manifest only; exposes chronological paper metadata, safe summaries, source links, lane labels, and validation/caution text; excludes raw logs, credentials, private IDs, local source paths, and hidden prompts",
   "status": "public_research_board_allowed",
   "items": [

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-15T00:46:42.438Z",
+  "generatedAt": "2026-08-15T02:35:37.992Z",
   "sourcePolicy": "public-safe home visual manifest only; exposes copied still/turntable assets and approved display copy; excludes raw logs, prompts, remote URLs, model/job IDs, credentials, private IDs, and local source paths",
   "homeComponent": "HomeVisualHero",
   "status": "public_home_allowed",
@@ -1410,18 +1410,18 @@
       "publicSafe": true
     },
     {
-      "id": "2026-08-15-goyounjung-02-steel-care-vessel",
-      "title": "Care Vessel Cradle",
+      "id": "2026-08-15-goyounjung-02-new-keystone-pillar",
+      "title": "Keystone Guidance Pillar",
       "dateKst": "2026-08-15",
-      "theme": "lavender-steel bg #D8DDEB · terracotta-clay object #B6674F · warm cream inner plane",
-      "metaphor": "사용자 맥락을 감시하지 않고 부드럽게 담아두는 보호 그릇",
+      "theme": "warm parchment bg #D8BC87 · muted terracotta object #A86B58 · soft ivory rim light",
+      "metaphor": "책임 있는 AI 경험이 사용자의 판단을 조용히 지지해 주는 단단한 기둥",
       "why": [
-        "반복된 보호막·램프·브릿지 대신, 하나의 연속된 care vessel로 정서적 안전감을 표현했습니다.",
-        "terracotta와 lavender-steel 대비로 따뜻함과 차분한 제품 아이콘 감각을 균형 있게 잡았습니다.",
-        "입자·자갈·마디·동물형 실루엣 없이 넓은 매트 곡면 중심으로 정리했습니다."
+        "기존 2번처럼 바닥에 누운 그릇·크래들 계열을 버리고, 세워진 단일 기둥 메타포로 완전히 전환했습니다.",
+        "정면·측면 깊이가 명확한 비대칭 솔리드 형태라 턴테이블에서 회전감이 더 안정적으로 읽힙니다.",
+        "blue·mint·violet 반복을 피하고 parchment·terracotta 계열로 따뜻한 분리감을 유지했습니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-15-56-02-steel-care-vessel.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-15-56-02-steel-care-vessel.turntable.1080.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-15-56-02-new-keystone-pillar.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-15-56-02-new-keystone-pillar.turntable.1080.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
