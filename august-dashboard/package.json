@@ -14,6 +14,7 @@
     "generate:research-board": "node scripts/generate-research-board.mjs",
     "validate:research-board": "node scripts/validate-research-board.mjs",
     "build": "npm run validate:data && npm run generate:data && tsc -b && vite build",
+    "build:public": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },

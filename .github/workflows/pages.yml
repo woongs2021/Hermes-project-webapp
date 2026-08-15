@@ -29,9 +29,9 @@ jobs:
       - name: Install dependencies
         working-directory: august-dashboard
         run: npm ci
-      - name: Build
+      - name: Build committed public dashboard
         working-directory: august-dashboard
-        run: npm run build
+        run: npm run build:public
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
