@@ -90,6 +90,22 @@ const tabs: Tab[] = [
 
 const metricPlaceholders = ['Primary signal', 'Open loops', 'Weekly check-in']
 const listPlaceholders = ['Next handoff note', 'Recent validation slot', 'Reference card surface']
+const researchLaneFilters = ['all', 'yuna', 'goyounjung', 'final'] as const
+
+type ResearchLaneFilter = (typeof researchLaneFilters)[number]
+
+function getInitialResearchQuery() {
+  if (typeof window === 'undefined') return ''
+
+  return new URLSearchParams(window.location.search).get('q') ?? ''
+}
+
+function getInitialResearchLaneFilter(): ResearchLaneFilter {
+  if (typeof window === 'undefined') return 'all'
+
+  const lane = new URLSearchParams(window.location.search).get('lane')
+  return researchLaneFilters.includes(lane as ResearchLaneFilter) ? (lane as ResearchLaneFilter) : 'all'
+}
 
 const profileCredentials: ProfileCredential[] = [
   {
@@ -539,8 +555,8 @@ function sourceAccessLabel(item: ResearchBoardItem) {
 function ResearchKanbanPanel() {
   const [board, setBoard] = useState<ResearchBoard>(fallbackResearchBoard)
   const [selectedId, setSelectedId] = useState('')
-  const [query, setQuery] = useState('')
-  const [laneFilter, setLaneFilter] = useState<'all' | ResearchBoardItem['lane'] | 'final'>('all')
+  const [query, setQuery] = useState(getInitialResearchQuery)
+  const [laneFilter, setLaneFilter] = useState<ResearchLaneFilter>(getInitialResearchLaneFilter)
 
   useEffect(() => {
     let isMounted = true
@@ -559,6 +575,31 @@ function ResearchKanbanPanel() {
       isMounted = false
     }
   }, [])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const searchParams = new URLSearchParams(window.location.search)
+
+    if (query.trim()) {
+      searchParams.set('q', query.trim())
+    } else {
+      searchParams.delete('q')
+    }
+
+    if (laneFilter !== 'all') {
+      searchParams.set('lane', laneFilter)
+    } else {
+      searchParams.delete('lane')
+    }
+
+    const nextSearch = searchParams.toString()
+    const nextUrl = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ''}${window.location.hash}`
+
+    if (nextUrl !== `${window.location.pathname}${window.location.search}${window.location.hash}`) {
+      window.history.replaceState(null, '', nextUrl)
+    }
+  }, [query, laneFilter])
 
   const normalizedQuery = query.trim().toLowerCase()
   const filteredItems = board.items.filter((item) => {
@@ -621,7 +662,7 @@ function ResearchKanbanPanel() {
           />
         </label>
         <div className="research-filter-chips" aria-label="Research lane filter">
-          {(['all', 'yuna', 'goyounjung', 'final'] as const).map((lane) => (
+          {researchLaneFilters.map((lane) => (
             <button
               key={lane}
               type="button"
@@ -631,7 +672,22 @@ function ResearchKanbanPanel() {
               {lane === 'all' ? 'All lanes' : boardLaneLabel(lane)}
             </button>
           ))}
+          {(query || laneFilter !== 'all') ? (
+            <button
+              type="button"
+              className="filter-chip quiet"
+              onClick={() => {
+                setQuery('')
+                setLaneFilter('all')
+              }}
+            >
+              Clear filters
+            </button>
+          ) : null}
         </div>
+        <p className="research-filter-note">
+          검색어와 lane 선택은 URL의 <code>q</code>, <code>lane</code> 파라미터로 조용히 보존됩니다. 특정 연구 묶음을 다시 열 때 같은 화면 상태로 복원됩니다.
+        </p>
         <div className="research-context-strip" aria-label="Research board public-safe context metrics">
           <span>Yuna {researchMetrics.yuna}</span>
           <span>Go Youn-jung {researchMetrics.goyounjung}</span>

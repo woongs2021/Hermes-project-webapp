@@ -124,6 +124,22 @@
   align-items: end;
 }
 
+.research-filter-note {
+  grid-column: 1 / -1;
+  margin: -4px 0 0;
+  color: var(--quiet-ink);
+  font-size: 0.84rem;
+}
+
+.research-filter-note code {
+  border: 1px solid rgba(1, 1, 2, 0.06);
+  border-radius: 8px;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--mid);
+  font-size: 0.78rem;
+}
+
 .research-context-strip {
   grid-column: 1 / -1;
   display: grid;
@@ -194,6 +210,11 @@
   background: rgba(202, 247, 255, 0.36);
   color: var(--mid);
   outline: none;
+}
+
+.filter-chip.quiet {
+  border-style: dashed;
+  color: var(--quiet-ink);
 }
 
 .research-kanban {

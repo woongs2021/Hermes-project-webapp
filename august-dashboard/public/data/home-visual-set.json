@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T00:54:10.890Z",
+  "generatedAt": "2026-08-15T00:46:42.438Z",
   "sourcePolicy": "public-safe home visual manifest only; exposes copied still/turntable assets and approved display copy; excludes raw logs, prompts, remote URLs, model/job IDs, credentials, private IDs, and local source paths",
   "homeComponent": "HomeVisualHero",
   "status": "public_home_allowed",
@@ -1332,17 +1332,18 @@
       "publicSafe": true
     },
     {
-      "id": "2026-08-14-goyounjung-01-direction-comma",
-      "title": "Direction Comma",
+      "id": "2026-08-14-goyounjung-01-neutral-blue-boundary-tab-marker",
+      "title": "Boundary Tab Marker",
       "dateKst": "2026-08-14",
-      "theme": "ochre-parchment / bg #F4D67B · object #667044 · accent #C99B3A",
-      "metaphor": "사용자 근거 위에서 AI 제품 방향을 부드럽게 꺾어 잡는 하나의 방향 콤마",
+      "theme": "neutral-blue / #FCFCFF·#010102·#4065F8·#A1D0F6",
+      "metaphor": "AI가 행동하기 전 멈춰야 하는 안전 경계 표시",
       "why": [
-        "최근 violet·mint·blue 반복을 피해 ochre/parchment와 deep olive 계열로 전환했습니다.",
-        "구멍·점·연결·마디 없이 하나의 연속적인 matte 3D 형태로 판단의 방향성을 단순화했습니다."
+        "AI UX에서 중요한 것은 더 많은 실행보다, 사용자의 동의와 맥락 앞에서 멈출 수 있는 경계 감각이라고 보았습니다.",
+        "off-white와 deep blue 대비로 One UI식 차분함과 판단의 선명도를 함께 잡았습니다.",
+        "Chris 승인 후 모든 턴테이블은 시작/끝 포즈가 이어지는 loopable forward→reverse 패키지로 저장했습니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-14-53-01-direction-comma.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-14-53-01-direction-comma.kling-turntable.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-14-53-01-neutral-blue-boundary-tab-marker.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-14-53-01-neutral-blue-boundary-tab-marker.turntable.loopable-forward-reverse.1080.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
@@ -1357,22 +1358,75 @@
       "publicSafe": true
     },
     {
-      "id": "2026-08-14-goyounjung-02-protective-arc",
-      "title": "Protective Arc",
+      "id": "2026-08-14-goyounjung-02-ochre-evidence-loom-shuttle",
+      "title": "Evidence Loom Shuttle",
       "dateKst": "2026-08-14",
-      "theme": "lavender-steel / bg #C9C7E8 · object #B8644C · rim #F8E7C6",
-      "metaphor": "사람 중심 AI 경험을 감정적으로 안전하게 덮어주는 하나의 보호 아치",
+      "theme": "ochre-caramel / parchment · muted ochre clay object · deep warm brown accent",
+      "metaphor": "사용자 근거를 다음 제품·비즈니스 판단으로 운반하고 엮어주는 셔틀/브릿지 오브젝트",
       "why": [
-        "전날 mint/violet 계열과 겹치지 않도록 lavender-steel 배경과 clay-red 오브젝트로 분리했습니다.",
-        "찢김·균열·입자·동물/버섯 실루엣 없이 매끈한 단일 보호 형태로 정서적 안정감을 잡았습니다."
+        "보온병 메타포가 회전감과 형태 안정성에서 맞지 않아, 사용자 근거를 보관이 아니라 다음 판단으로 운반·연결하는 셔틀/브릿지 메타포로 전환했습니다.",
+        "ochre/caramel/parchment 계열로 반복되던 blue·mint·violet에서 벗어나 따뜻한 UX 리서치 감각을 유지했습니다.",
+        "비대칭 실루엣과 측면 깊이가 있어 턴테이블 회전감이 이전 2번보다 더 잘 읽힙니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-14-54-02-protective-arc.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-14-54-02-protective-arc.kling-turntable.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-14-54-02-ochre-evidence-loom-shuttle.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-14-54-02-ochre-evidence-loom-shuttle.turntable.loopable-forward-reverse.1080.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
       "metadata": {
         "dateKst": "2026-08-14",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-15-goyounjung-01-clay-decision-handle",
+      "title": "Decision Handle Block",
+      "dateKst": "2026-08-15",
+      "theme": "warm clay-parchment bg #F2C18E · deep olive object #496A3A · warm ivory edge",
+      "metaphor": "AI가 실행하기 전 사용자가 직접 당겨야 하는 조용한 결정 손잡이",
+      "why": [
+        "최근 blue·mint·violet 반복을 피하고 olive·clay 계열로 전환했습니다.",
+        "하나의 손잡이형 오브젝트로 “AI가 먼저 움직이지 않고, 사용자의 의도적 행동을 기다린다”는 메시지를 잡았습니다.",
+        "비대칭 측면 깊이가 있어 5초 턴테이블에서 회전감이 읽히도록 선택했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-15-55-01-clay-decision-handle.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-15-55-01-clay-decision-handle.turntable.1080.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-15",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-15-goyounjung-02-steel-care-vessel",
+      "title": "Care Vessel Cradle",
+      "dateKst": "2026-08-15",
+      "theme": "lavender-steel bg #D8DDEB · terracotta-clay object #B6674F · warm cream inner plane",
+      "metaphor": "사용자 맥락을 감시하지 않고 부드럽게 담아두는 보호 그릇",
+      "why": [
+        "반복된 보호막·램프·브릿지 대신, 하나의 연속된 care vessel로 정서적 안전감을 표현했습니다.",
+        "terracotta와 lavender-steel 대비로 따뜻함과 차분한 제품 아이콘 감각을 균형 있게 잡았습니다.",
+        "입자·자갈·마디·동물형 실루엣 없이 넓은 매트 곡면 중심으로 정리했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-15-56-02-steel-care-vessel.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-15-56-02-steel-care-vessel.turntable.1080.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-15",
         "displayMode": "pinterest_masonry_card",
         "interaction": "dashboard_still_click_opens_turntable_detail_view",
         "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
