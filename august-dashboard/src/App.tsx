@@ -99,7 +99,7 @@ function getInitialThemeMode(): ThemeMode {
   const savedTheme = window.localStorage.getItem('august-dashboard-theme')
   if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme
 
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  return 'light'
 }
 
 type ResearchLaneFilter = (typeof researchLaneFilters)[number]

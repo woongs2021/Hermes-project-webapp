@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light;
+
   --canvas: #fcfcff;
   --ink: #010102;
   --muted-ink: rgba(1, 1, 2, 0.62);
@@ -32,6 +34,8 @@
 }
 
 :root[data-theme='dark'] {
+  color-scheme: dark;
+
   --canvas: #0d1117;
   --ink: #f4f8ff;
   --muted-ink: rgba(244, 248, 255, 0.68);
