@@ -11,6 +11,15 @@
   --mid: #16427c;
   --shadow-soft: 0 24px 70px rgba(1, 28, 51, 0.08);
   --shadow-card: 0 14px 42px rgba(1, 28, 51, 0.06);
+  --body-wash: radial-gradient(circle at top left, rgba(202, 247, 255, 0.34), transparent 34rem),
+    linear-gradient(180deg, #fcfcff 0%, #f7f6f2 100%);
+  --field-surface: rgba(255, 255, 255, 0.76);
+  --chip-surface: rgba(255, 255, 255, 0.58);
+  --panel-surface: rgba(252, 252, 255, 0.78);
+  --panel-surface-strong: rgba(252, 252, 255, 0.94);
+  --active-surface: rgba(202, 247, 255, 0.42);
+  --active-surface-soft: rgba(202, 247, 255, 0.36);
+  --focus-stroke: rgba(64, 101, 248, 0.22);
 
   font-family: Pretendard, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', sans-serif;
@@ -22,6 +31,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root[data-theme='dark'] {
+  --canvas: #0d1117;
+  --ink: #f4f8ff;
+  --muted-ink: rgba(244, 248, 255, 0.68);
+  --quiet-ink: rgba(244, 248, 255, 0.46);
+  --stroke: rgba(219, 232, 255, 0.14);
+  --surface: rgba(17, 24, 34, 0.86);
+  --surface-soft: #111925;
+  --primary: #8fb1ff;
+  --soft: #1d3a49;
+  --mid: #b8cdfc;
+  --shadow-soft: 0 28px 80px rgba(0, 0, 0, 0.38);
+  --shadow-card: 0 18px 54px rgba(0, 0, 0, 0.3);
+  --body-wash: radial-gradient(circle at top left, rgba(88, 125, 255, 0.22), transparent 32rem),
+    radial-gradient(circle at bottom right, rgba(16, 193, 159, 0.12), transparent 34rem),
+    linear-gradient(180deg, #0d1117 0%, #101720 100%);
+  --field-surface: rgba(8, 13, 20, 0.72);
+  --chip-surface: rgba(18, 27, 38, 0.7);
+  --panel-surface: rgba(17, 24, 34, 0.8);
+  --panel-surface-strong: rgba(17, 24, 34, 0.96);
+  --active-surface: rgba(64, 101, 248, 0.22);
+  --active-surface-soft: rgba(64, 101, 248, 0.18);
+  --focus-stroke: rgba(143, 177, 255, 0.34);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -30,9 +64,8 @@ body {
   min-width: 320px;
   min-height: 100svh;
   margin: 0;
-  background:
-    radial-gradient(circle at top left, rgba(202, 247, 255, 0.34), transparent 34rem),
-    linear-gradient(180deg, #fcfcff 0%, #f7f6f2 100%);
+  background: var(--body-wash);
+  color: var(--ink);
 }
 
 button {

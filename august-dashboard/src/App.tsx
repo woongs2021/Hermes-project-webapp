@@ -6,6 +6,7 @@ import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, MuyeolValidation
 import './App.css'
 
 type TabId = 'home' | 'intro' | 'team' | 'obd' | 'research' | 'report' | 'architecture'
+type ThemeMode = 'light' | 'dark'
 
 type Tab = {
   id: TabId
@@ -91,6 +92,15 @@ const tabs: Tab[] = [
 const metricPlaceholders = ['Primary signal', 'Open loops', 'Weekly check-in']
 const listPlaceholders = ['Next handoff note', 'Recent validation slot', 'Reference card surface']
 const researchLaneFilters = ['all', 'yuna', 'goyounjung', 'final'] as const
+
+function getInitialThemeMode(): ThemeMode {
+  if (typeof window === 'undefined') return 'light'
+
+  const savedTheme = window.localStorage.getItem('august-dashboard-theme')
+  if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme
+
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+}
 
 type ResearchLaneFilter = (typeof researchLaneFilters)[number]
 
@@ -985,10 +995,22 @@ function App() {
     const hashTab = tabs.find((tab) => `#${tab.id}` === window.location.hash)
     return hashTab ?? tabs[0]
   })
+  const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialThemeMode)
+  const isDarkMode = themeMode === 'dark'
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = themeMode
+    document.documentElement.style.colorScheme = themeMode
+    window.localStorage.setItem('august-dashboard-theme', themeMode)
+  }, [themeMode])
 
   function selectTab(tab: Tab) {
     setActiveTab(tab)
     window.history.replaceState(null, '', `#${tab.id}`)
+  }
+
+  function toggleThemeMode() {
+    setThemeMode((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'))
   }
 
   return (
@@ -997,6 +1019,21 @@ function App() {
         <div className="brand-block">
           <p className="eyebrow">August Dashboard</p>
           <h1>Local admin shell</h1>
+        </div>
+
+        <div className="theme-mode-panel" aria-label="Display mode">
+          <span>{isDarkMode ? 'Dark mode' : 'Light mode'}</span>
+          <button
+            type="button"
+            className="theme-toggle-button"
+            aria-pressed={isDarkMode}
+            onClick={toggleThemeMode}
+          >
+            <span className="theme-toggle-track" aria-hidden="true">
+              <span className="theme-toggle-thumb" />
+            </span>
+            {isDarkMode ? 'Switch to light' : 'Switch to dark'}
+          </button>
         </div>
 
         <nav className="tab-nav" aria-label="Sections">
