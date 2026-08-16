@@ -712,11 +712,18 @@ function ResearchKanbanPanel() {
           const laneItems = lane === 'final'
             ? filteredItems.filter((item) => item.status === 'friday_final_pick')
             : filteredItems.filter((item) => item.lane === lane)
+          const laneTotal = lane === 'final'
+            ? board.items.filter((item) => item.status === 'friday_final_pick').length
+            : board.items.filter((item) => item.lane === lane).length
+          const laneCountLabel = laneItems.length === laneTotal
+            ? `${laneItems.length} items`
+            : `${laneItems.length} / ${laneTotal} shown`
+
           return (
             <article className={`research-lane ${lane}`} key={lane}>
               <div className="research-lane-header">
                 <p className="card-kicker">{boardLaneLabel(lane)}</p>
-                <strong>{laneItems.length} items</strong>
+                <strong>{laneCountLabel}</strong>
               </div>
               <div className="research-card-list">
                 {laneItems.map((item) => (

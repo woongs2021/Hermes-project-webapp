@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-15T02:35:37.992Z",
+  "generatedAt": "2026-08-16T00:46:53.967Z",
   "sourcePolicy": "public-safe home visual manifest only; exposes copied still/turntable assets and approved display copy; excludes raw logs, prompts, remote URLs, model/job IDs, credentials, private IDs, and local source paths",
   "homeComponent": "HomeVisualHero",
   "status": "public_home_allowed",
@@ -1427,6 +1427,58 @@
       "detailMedia": "turntable_video",
       "metadata": {
         "dateKst": "2026-08-15",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-16-goyounjung-01-stewardship-ledger-monolith",
+      "title": "Stewardship Ledger Monolith",
+      "dateKst": "2026-08-16",
+      "theme": "solid parchment yellow bg #F4D36A · deep aubergine object #5B3D67 · warm ivory bevel",
+      "metaphor": "AI UX의 가치 교환과 책임 있는 비즈니스 판단을 조용히 기록하는 단일 원장형 모노리스",
+      "why": [
+        "최근 clay·olive·terracotta 흐름과 겹치지 않도록 parchment yellow와 aubergine 계열로 확장했습니다.",
+        "하나의 접힌 원장형 오브젝트로 “AI가 만든 행동의 가치와 책임을 사용자가 읽고 판단한다”는 OBD 관점을 담았습니다.",
+        "비대칭 측면 깊이와 넓은 면이 있어 5초 턴테이블에서 회전감이 안정적으로 읽힙니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-16-57-01-stewardship-ledger-monolith.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-16-57-01-stewardship-ledger-monolith.turntable.1080.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-16",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-16-goyounjung-02-careful-threshold-arch",
+      "title": "Careful Threshold Arch",
+      "dateKst": "2026-08-16",
+      "theme": "solid leaf-green bg #BEE46B · cinnamon clay object #B56F3B · muted cream rim",
+      "metaphor": "AI가 실행 전에 사용자의 동의와 맥락을 확인하게 만드는 차분한 문턱/경계 아치",
+      "why": [
+        "반복되던 blue·mint·violet을 피하고 leaf-green과 cinnamon clay로 더 밝은 대비를 만들었습니다.",
+        "하나의 연속적인 문턱 오브젝트로 “넘어가기 전 확인해야 하는 경계”를 직관적으로 표현했습니다.",
+        "전면과 측면 두께 차이가 있어 턴테이블에서 형태 변화가 분명합니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-16-58-02-careful-threshold-arch.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-16-58-02-careful-threshold-arch.turntable.1080.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-16",
         "displayMode": "pinterest_masonry_card",
         "interaction": "dashboard_still_click_opens_turntable_detail_view",
         "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
