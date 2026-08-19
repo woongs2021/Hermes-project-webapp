@@ -641,6 +641,8 @@ function ResearchKanbanPanel() {
     goyounjung: board.items.filter((item) => item.lane === 'goyounjung').length,
     final: board.items.filter((item) => item.status === 'friday_final_pick').length,
     korean: board.items.filter((item) => /yes|korean|한국|KCI|Korea/i.test(item.koreanSourceStatus)).length,
+    validated: board.items.filter((item) => item.validationStatus === 'GO').length,
+    watch: board.items.filter((item) => item.validationStatus === 'WATCH').length,
     avgScore: board.items.length === 0 ? 0 : board.items.reduce((sum, item) => sum + item.score, 0) / board.items.length,
   }
 
@@ -702,6 +704,8 @@ function ResearchKanbanPanel() {
           <span>Yuna {researchMetrics.yuna}</span>
           <span>Go Youn-jung {researchMetrics.goyounjung}</span>
           <span>Friday picks {researchMetrics.final}</span>
+          <span>Muyeol GO {researchMetrics.validated}</span>
+          <span>WATCH {researchMetrics.watch}</span>
           <span>Korean signal {researchMetrics.korean}</span>
           <span>Avg {researchMetrics.avgScore.toFixed(1)}</span>
         </div>
