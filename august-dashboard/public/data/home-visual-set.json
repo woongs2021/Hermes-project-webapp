@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-15T02:35:37.992Z",
+  "generatedAt": "2026-08-20T03:05:24.182Z",
   "sourcePolicy": "public-safe home visual manifest only; exposes copied still/turntable assets and approved display copy; excludes raw logs, prompts, remote URLs, model/job IDs, credentials, private IDs, and local source paths",
   "homeComponent": "HomeVisualHero",
   "status": "public_home_allowed",
@@ -1431,6 +1431,162 @@
         "interaction": "dashboard_still_click_opens_turntable_detail_view",
         "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
         "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-16-goyounjung-01-attentive-signal-tuning-fork",
+      "title": "Attentive Signal Tuning Fork",
+      "dateKst": "2026-08-16",
+      "theme": "Pale Olive Mist bg #DCE3B0 · Deep Blue Violet object #30305F · Muted Ochre trim #C79A2E",
+      "metaphor": "사용자의 미세한 신호를 과장 없이 맞춰 듣는 AI UX의 조율 감각",
+      "why": [
+        "뭉뚝한 덩어리감 대신 얇은 포크와 한 줄의 공명 아크로 더 섬세한 형태 언어를 만들었습니다.",
+        "One UI식 따뜻한 AI에서 중요한 “먼저 듣고 미세하게 맞추는 태도”를 조율 도구 메타포로 바꿨습니다.",
+        "사선/쓰리쿼터 구도라 5초 턴테이블에서도 측면 깊이와 회전감이 비교적 잘 읽힙니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-16-57-01-attentive-signal-tuning-fork.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-16-57-01-attentive-signal-tuning-fork.turntable.1080.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-16",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-16-goyounjung-02-calibrated-counterweight-mobile",
+      "title": "Calibrated Counterweight Mobile",
+      "dateKst": "2026-08-16",
+      "theme": "Mist Lavender Grey bg #D7C8DD · Deep Olive Ink object #2E351B · Muted Ochre weight #C79A2E",
+      "metaphor": "책임·속도·사용자 맥락 사이의 균형을 정밀하게 잡는 제품 판단",
+      "why": [
+        "두꺼운 블록 대신 얇은 선, 낮은 받침, 작은 추의 비대칭으로 더 정교한 균형감을 만들었습니다.",
+        "OBD 관점에서 AI 제품의 가치는 기능 실행보다 “어떤 부담과 책임을 어디에 놓을지”를 조율하는 데 있다는 의미를 담았습니다.",
+        "비대칭 실루엣과 측면 두께가 있어 루프에서 형태 변화가 선명합니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-16-58-02-calibrated-counterweight-mobile.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-16-58-02-calibrated-counterweight-mobile.turntable.1080.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-16",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-17-goyounjung-01-folded-decision-ribbon",
+      "title": "Folded Decision Ribbon",
+      "dateKst": "2026-08-17",
+      "theme": "Warm parchment bg #F6D58B · deep olive object #3F552E · ochre face #C79A2E · ivory edge #FCFCFF",
+      "metaphor": "AI가 행동하기 전, 사람의 판단이 조용히 접히고 표시되는 결정 지점",
+      "why": [
+        "전날 olive·lavender 계열과 이어지되 blue/mint 반복을 피하고 warm parchment·ochre 쪽으로 이동했습니다.",
+        "하나의 접힌 리본형 오브젝트로 “AI 실행 전 사용자가 멈춰 결정하는 순간”을 텍스트 없이 표현했습니다.",
+        "비대칭 다리와 상단 롤의 측면 깊이가 있어 5초 턴테이블에서 회전 변화가 명확합니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-17-59-01-folded-decision-ribbon.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-17-59-01-folded-decision-ribbon.turntable.1080.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-17",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-17-goyounjung-02-protective-context-canopy",
+      "title": "Protective Context Canopy",
+      "dateKst": "2026-08-17",
+      "theme": "Lavender-steel bg #C9CEDC · burnt clay object #B65F4B · deep burgundy plane #5A2435 · ivory edge #FCFCFF",
+      "metaphor": "사용자 맥락과 불확실성을 먼저 안전하게 받아 주는 보호 표면",
+      "why": [
+        "금지된 #EEDCD6와 blue/mint 과다 반복을 피하고 lavender-steel·clay 조합으로 전환했습니다.",
+        "조개/리브/중앙 렌즈처럼 읽히는 후보를 폐기하고, 매끈한 단일 방패형 캐노피로 정리했습니다.",
+        "전면·측면 컬러 분리와 두께가 있어 턴테이블에서 방향 변화가 안정적으로 보입니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-17-60-02-protective-context-canopy.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-17-60-02-protective-context-canopy.turntable.1080.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-17",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-19-goyounjung-01-quiet-keystone",
+      "title": "Quiet Keystone",
+      "dateKst": "2026-08-19",
+      "theme": "Parchment bg · deep olive continuous keystone object",
+      "metaphor": "판단을 안정적으로 받쳐주는 조용한 구조물",
+      "why": [
+        "Chris가 새 메타포 2종 중 1번만 오늘 최종 저장하도록 승인했습니다.",
+        "단일 연속 오브젝트, 대각/3⁄4 뷰, 넉넉한 여백으로 안정적인 제품 아이콘 감각을 유지합니다.",
+        "반복 재생 안정성을 위해 direct Kling 결과를 1080×1080 muted H.264 forward→reverse loopable 턴테이블로 패키징했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-19-61-01-quiet-keystone.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-19-61-01-quiet-keystone.turntable.1080.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-19",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final_single_approved",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-20-goyounjung-01-gentle-agency-sail",
+      "title": "Gentle Agency Sail",
+      "dateKst": "2026-08-20",
+      "theme": "Buttercream background · muted clay-coral single folded sail object",
+      "metaphor": "사용자가 방향을 정하면 AI가 조용히 바람을 받아주는 돛",
+      "why": [
+        "Chris가 새 메타포 후보 중 1번 Gentle Agency Sail을 최종 저장하도록 승인했습니다.",
+        "기존 keystone/받침대 계열보다 가볍고 우아한 방향성 메타포로, 사용자가 주도권을 갖고 AI는 추진력을 보조한다는 메시지가 선명합니다.",
+        "단일 연속 오브젝트, 대각/3⁄4 뷰, 넉넉한 여백을 유지했고 direct Kling 턴테이블은 1080×1080 muted H.264 forward→reverse loopable로 패키징했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-20-62-01-gentle-agency-sail.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-20-62-01-gentle-agency-sail.turntable.1080.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-20",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final_single_approved",
         "detailFallback": "static_still"
       },
       "publicSafe": true

@@ -14,6 +14,8 @@ const allowedSourceStatuses = new Set([
   'final_current_stills_only_no_turntables',
   'final_approved_with_turntable',
   'final_current_partial_2_of_3_due_to_higgsfield_credits',
+  'final_single_approved',
+  'final_single_approved_current',
   'final_current',
   'archived_final',
   'final',

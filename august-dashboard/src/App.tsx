@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState, type CSSProperties, type WheelEvent } from 'react'
 import { fallbackManifest, loadDashboardManifest, type DashboardManifest } from './dashboardContent'
 import { fallbackHomeVisualSet, loadHomeVisualSet, type HomeVisualItem, type HomeVisualSet } from './homeVisualSet'
 import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type ResearchBoardItem } from './researchBoard'
@@ -331,9 +331,23 @@ function toAppAssetSrc(path: string) {
   return path.startsWith('/') ? `${import.meta.env.BASE_URL}${path.slice(1)}` : path
 }
 
+function wrapVisualIndex(index: number, total: number) {
+  if (total <= 0) return 0
+  return ((index % total) + total) % total
+}
+
+function getVisualCarouselOffset(index: number, activeIndex: number, total: number) {
+  if (total <= 0) return 0
+  let offset = index - activeIndex
+  if (offset > total / 2) offset -= total
+  if (offset < -total / 2) offset += total
+  return offset
+}
+
 function HomeVisualHeroPanel() {
   const [visualSet, setVisualSet] = useState<HomeVisualSet>(fallbackHomeVisualSet)
-  const [selectedId, setSelectedId] = useState('')
+  const [activeIndex, setActiveIndex] = useState(0)
+  const lastWheelAtRef = useRef(0)
 
   useEffect(() => {
     let isMounted = true
@@ -342,9 +356,9 @@ function HomeVisualHeroPanel() {
       if (!isMounted) return
 
       setVisualSet(loadedSet)
-      setSelectedId((currentId) => {
-        const currentStillExists = loadedSet.items.some((item) => item.id === currentId)
-        return currentStillExists ? currentId : loadedSet.items[0]?.id ?? ''
+      setActiveIndex((currentIndex) => {
+        if (loadedSet.items.length === 0) return 0
+        return currentIndex > 0 && currentIndex < loadedSet.items.length ? currentIndex : loadedSet.items.length - 1
       })
     })
 
@@ -353,103 +367,106 @@ function HomeVisualHeroPanel() {
     }
   }, [])
 
-  const selectedItem = visualSet.items.find((item) => item.id === selectedId) ?? visualSet.items[0]
-  const selectedIndex = selectedItem ? visualSet.items.findIndex((item) => item.id === selectedItem.id) : -1
+  const totalItems = visualSet.items.length
+  const selectedIndex = totalItems > 0 ? wrapVisualIndex(activeIndex, totalItems) : -1
+  const selectedItem = selectedIndex >= 0 ? visualSet.items[selectedIndex] : undefined
   const turntableCount = visualSet.items.filter((item) => item.videoSrc).length
   const firstDate = visualSet.items[0]?.dateKst ?? 'pending'
   const latestDate = visualSet.items.at(-1)?.dateKst ?? 'pending'
-  const latestItems = visualSet.items.filter((item) => item.dateKst === latestDate)
-  const latestLead = latestItems[0]
-  const latestSupport = latestItems.slice(1)
+  const latestCount = visualSet.items.filter((item) => item.dateKst === latestDate).length
+
+  const moveCarousel = (delta: number) => {
+    setActiveIndex((currentIndex) => wrapVisualIndex(currentIndex + delta, totalItems))
+  }
+
+  const handleCarouselWheel = (event: WheelEvent<HTMLDivElement>) => {
+    if (totalItems < 2 || Math.abs(event.deltaY) < 20) return
+
+    const now = Date.now()
+    if (now - lastWheelAtRef.current < 420) return
+    lastWheelAtRef.current = now
+    moveCarousel(event.deltaY > 0 ? 1 : -1)
+  }
 
   return (
-    <div className="home-visual-grid" aria-label="Public-safe home visual archive">
-      <article className="content-card home-visual-brief archive-summary-card">
-        <div>
-          <p className="card-kicker">Today’s visual system</p>
-          <h3>최신 final 세트를 먼저 읽고, 아래에 archive를 누적합니다</h3>
+    <div className="home-visual-grid" aria-label="Public-safe home visual carousel">
+      <section className="content-card home-visual-carousel-system" aria-label="Viscose-inspired home visual carousel">
+        <div className="home-visual-carousel-copy">
+          <p className="card-kicker">Home visual carousel</p>
+          <h3>62개의 final visual을 하나의 회전하는 시각 시스템으로 읽습니다</h3>
           <p>
-            홈은 canonical final set을 오늘의 시각 시스템으로 먼저 보여주고, 승인된 still history는 아래 masonry archive에 이어 붙입니다.
-            카드를 누르면 detail 영역에서 해당 still 또는 turntable을 바로 확인합니다.
+            Viscose-carousel의 off-screen ring, scroll snap, front-card metadata 원리를 가볍게 번역했습니다.
+            새 이미지는 추가하지 않고, 현재 public-safe manifest의 승인 still과 turntable detail만 사용합니다.
           </p>
-        </div>
-        <div className="archive-stat-grid" aria-label="Home visual archive summary">
-          <span><strong>{visualSet.items.length}</strong> approved stills</span>
-          <span><strong>{turntableCount}</strong> turntables</span>
-          <span><strong>{firstDate}</strong> first saved</span>
-          <span><strong>{latestDate}</strong> current final</span>
-        </div>
-      </article>
-
-      {latestItems.length > 0 ? (
-        <section className="content-card latest-visual-system" aria-label="Latest final home visual set">
-          <div className="latest-visual-copy">
-            <p className="card-kicker">Canonical source gate</p>
-            <h3>{latestDate} final visual set</h3>
-            <p>
-              pending 이미지는 섞지 않고, public-safe manifest를 통과한 최신 final 항목만 홈 상단에 고정합니다.
-              아래 전체 archive와 같은 detail disclosure를 공유합니다.
-            </p>
-            <ol className="latest-visual-trace" aria-label="Home visual graph bridge">
-              <li>Final visual source</li>
-              <li>HomeVisualHero</li>
-              <li>Visual Archive</li>
-              <li>Graph Artifact</li>
-            </ol>
+          <div className="archive-stat-grid" aria-label="Home visual archive summary">
+            <span><strong>{totalItems}</strong> approved stills</span>
+            <span><strong>{turntableCount}</strong> turntables</span>
+            <span><strong>{firstDate}</strong> first saved</span>
+            <span><strong>{latestDate}</strong> latest final · {latestCount}</span>
           </div>
-          <div className="latest-visual-cards">
-            {latestLead ? (
-              <button
-                key={latestLead.id}
-                type="button"
-                className={latestLead.id === selectedItem?.id ? 'latest-visual-card lead active' : 'latest-visual-card lead'}
-                aria-pressed={latestLead.id === selectedItem?.id}
-                onClick={() => setSelectedId(latestLead.id)}
-              >
-                <img src={toAppAssetSrc(latestLead.imageSrc)} alt={`${latestLead.title} latest final lead still`} loading="lazy" />
-                <span>Lead · {latestLead.mediaCapability}</span>
-                <strong>{latestLead.title}</strong>
-              </button>
-            ) : null}
-            <div className="latest-support-stack" aria-label="Supporting latest visual cards">
-              {latestSupport.map((item) => (
+        </div>
+
+        <div className="viscose-stage-shell">
+          <div
+            className="viscose-carousel-stage"
+            aria-label="Scrollable viscose-style visual ring"
+            onWheel={handleCarouselWheel}
+          >
+            {visualSet.items.map((item, index) => {
+              const offset = getVisualCarouselOffset(index, selectedIndex, totalItems)
+              const distance = Math.abs(offset)
+              const isVisible = distance <= 6
+              const style = {
+                '--offset': offset,
+                '--depth': Math.min(distance, 6),
+                '--direction': offset === 0 ? 0 : offset > 0 ? 1 : -1,
+              } as CSSProperties
+
+              return (
                 <button
                   key={item.id}
                   type="button"
-                  className={item.id === selectedItem?.id ? 'latest-visual-card support active' : 'latest-visual-card support'}
-                  aria-pressed={item.id === selectedItem?.id}
-                  onClick={() => setSelectedId(item.id)}
+                  className={index === selectedIndex ? 'viscose-card active' : 'viscose-card'}
+                  style={style}
+                  aria-hidden={!isVisible}
+                  aria-pressed={index === selectedIndex}
+                  tabIndex={isVisible ? 0 : -1}
+                  onClick={() => setActiveIndex(index)}
                 >
-                  <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} latest final support still`} loading="lazy" />
-                  <span>Support · {item.mediaCapability}</span>
-                  <strong>{item.title}</strong>
+                  <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} public home still`} loading={distance <= 2 ? 'eager' : 'lazy'} />
+                  <span className="visual-index">{String(index + 1).padStart(2, '0')} · {item.dateKst}</span>
+                  <div className="visual-card-copy">
+                    <strong>{item.title}</strong>
+                    <span>{item.theme}</span>
+                  </div>
                 </button>
-              ))}
-            </div>
+              )
+            })}
           </div>
-        </section>
-      ) : null}
+          <div className="viscose-controls" aria-label="Home visual carousel controls">
+            <button type="button" onClick={() => moveCarousel(-1)} disabled={totalItems < 2}>Previous</button>
+            <span>{selectedIndex + 1 > 0 ? String(selectedIndex + 1).padStart(2, '0') : '00'} / {String(totalItems).padStart(2, '0')}</span>
+            <button type="button" onClick={() => moveCarousel(1)} disabled={totalItems < 2}>Next</button>
+          </div>
+        </div>
+      </section>
 
-      <section className="visual-board visual-archive-board" aria-label="Final public home visual archive cards">
+      <section className="visual-filmstrip" aria-label="Chronological visual archive quick jump">
         {visualSet.items.map((item, index) => (
           <button
             key={item.id}
             type="button"
-            className={item.id === selectedItem?.id ? 'visual-card active' : 'visual-card'}
-            aria-pressed={item.id === selectedItem?.id}
-            onClick={() => setSelectedId(item.id)}
+            className={index === selectedIndex ? 'filmstrip-card active' : 'filmstrip-card'}
+            aria-pressed={index === selectedIndex}
+            onClick={() => setActiveIndex(index)}
           >
-            <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} public home still`} loading="lazy" />
-            <span className="visual-index">{String(index + 1).padStart(2, '0')} · {item.dateKst}</span>
-            <div className="visual-card-copy">
-              <strong>{item.title}</strong>
-              <span>{item.theme}</span>
-            </div>
+            <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} thumbnail`} loading="lazy" />
+            <span>{String(index + 1).padStart(2, '0')}</span>
           </button>
         ))}
       </section>
 
-      {selectedItem ? <HomeVisualDetail item={selectedItem} selectedPosition={selectedIndex + 1} totalItems={visualSet.items.length} generatedAt={visualSet.generatedAt} policy={visualSet.sourcePolicy} /> : (
+      {selectedItem ? <HomeVisualDetail item={selectedItem} selectedPosition={selectedIndex + 1} totalItems={totalItems} generatedAt={visualSet.generatedAt} policy={visualSet.sourcePolicy} /> : (
         <article className="content-card visual-detail-card">
           <p className="card-kicker">Manifest pending</p>
           <h3>home-visual-set.json을 기다리는 중</h3>
@@ -641,6 +658,8 @@ function ResearchKanbanPanel() {
     goyounjung: board.items.filter((item) => item.lane === 'goyounjung').length,
     final: board.items.filter((item) => item.status === 'friday_final_pick').length,
     korean: board.items.filter((item) => /yes|korean|한국|KCI|Korea/i.test(item.koreanSourceStatus)).length,
+    validated: board.items.filter((item) => item.validationStatus === 'GO').length,
+    watch: board.items.filter((item) => item.validationStatus === 'WATCH').length,
     avgScore: board.items.length === 0 ? 0 : board.items.reduce((sum, item) => sum + item.score, 0) / board.items.length,
   }
 
@@ -702,6 +721,8 @@ function ResearchKanbanPanel() {
           <span>Yuna {researchMetrics.yuna}</span>
           <span>Go Youn-jung {researchMetrics.goyounjung}</span>
           <span>Friday picks {researchMetrics.final}</span>
+          <span>Muyeol GO {researchMetrics.validated}</span>
+          <span>WATCH {researchMetrics.watch}</span>
           <span>Korean signal {researchMetrics.korean}</span>
           <span>Avg {researchMetrics.avgScore.toFixed(1)}</span>
         </div>
@@ -712,11 +733,18 @@ function ResearchKanbanPanel() {
           const laneItems = lane === 'final'
             ? filteredItems.filter((item) => item.status === 'friday_final_pick')
             : filteredItems.filter((item) => item.lane === lane)
+          const laneTotal = lane === 'final'
+            ? board.items.filter((item) => item.status === 'friday_final_pick').length
+            : board.items.filter((item) => item.lane === lane).length
+          const laneCountLabel = laneItems.length === laneTotal
+            ? `${laneItems.length} items`
+            : `${laneItems.length} / ${laneTotal} shown`
+
           return (
             <article className={`research-lane ${lane}`} key={lane}>
               <div className="research-lane-header">
                 <p className="card-kicker">{boardLaneLabel(lane)}</p>
-                <strong>{laneItems.length} items</strong>
+                <strong>{laneCountLabel}</strong>
               </div>
               <div className="research-card-list">
                 {laneItems.map((item) => (
