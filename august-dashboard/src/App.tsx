@@ -1192,21 +1192,8 @@ function App() {
   return (
     <main className="app-shell">
       <header className="topbar" aria-label="Dashboard navigation">
-        <button
-          type="button"
-          className="hamburger-button"
-          aria-label={isMenuOpen ? 'Close section menu' : 'Open section menu'}
-          aria-expanded={isMenuOpen}
-          onClick={() => setIsMenuOpen((open) => !open)}
-        >
-          <svg className="menu-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
-            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-        </button>
-
         <div className="brand-block">
-          <p className="eyebrow">August Dashboard</p>
-          <h1>Local admin shell</h1>
+          <h1>Hermes Project Webapp</h1>
         </div>
 
         <button
@@ -1226,6 +1213,18 @@ function App() {
               <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.7 6.7 0 0 0 9.8 9.8Z" />
             </svg>
           )}
+        </button>
+
+        <button
+          type="button"
+          className="hamburger-button"
+          aria-label={isMenuOpen ? 'Close section menu' : 'Open section menu'}
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          <svg className="menu-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
         </button>
 
         <nav className={isMenuOpen ? 'tab-nav open' : 'tab-nav'} aria-label="Sections">
