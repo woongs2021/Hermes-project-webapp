@@ -3574,3 +3574,67 @@
     transform: rotate(90deg);
   }
 }
+
+/* Follow-up 6: validation readability, About spacing, fully opaque popups */
+.validation-hero-card h3 {
+  font-size: clamp(1.4rem, 2.66vw, 2.8rem);
+}
+
+.validation-hero-card p:not(.card-kicker) {
+  max-width: 700px;
+  font-size: 0.72rem;
+}
+
+:root[data-theme='dark'] .validation-hero-card {
+  border-color: var(--stroke);
+  background: var(--panel-surface-strong);
+  color: var(--ink);
+}
+
+:root[data-theme='dark'] .validation-hero-card h3,
+:root[data-theme='dark'] .validation-check-card h3 {
+  color: var(--ink);
+}
+
+:root[data-theme='dark'] .validation-hero-card p:not(.card-kicker),
+:root[data-theme='dark'] .validation-check-card p {
+  color: var(--muted-ink);
+}
+
+.about-workspace {
+  gap: 18px;
+}
+
+.about-workspace .workspace-header {
+  gap: 6px;
+  padding-bottom: 0;
+}
+
+.about-workspace .intro-grid {
+  margin-top: -6px;
+}
+
+.topbar .tab-nav {
+  background: var(--surface);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+:root[data-theme='dark'] .topbar .tab-nav {
+  background: var(--surface);
+}
+
+.research-modal-backdrop {
+  background: rgba(1, 1, 2, 0.86);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.research-modal-panel {
+  background: var(--surface);
+}
+
+:root[data-theme='dark'] .research-modal-panel,
+:root[data-theme='dark'] .research-modal-header {
+  background: var(--surface);
+}

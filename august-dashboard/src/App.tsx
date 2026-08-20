@@ -1299,7 +1299,7 @@ function App() {
         </nav>
       </header>
 
-      <section className="workspace" aria-live="polite">
+      <section className={`workspace ${activeTab.id}-workspace`} aria-live="polite">
         <div className="workspace-header">
           <p className="eyebrow">{activeTab.eyebrow}</p>
           <h2>{activeTab.title}</h2>
