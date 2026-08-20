@@ -3638,3 +3638,122 @@
 :root[data-theme='dark'] .research-modal-header {
   background: var(--surface);
 }
+
+/* Follow-up 7: About card crop, title scales, modal alignment, brand link, safer visual strip */
+.brand-block {
+  padding-left: 10px;
+}
+
+.brand-home-button {
+  overflow: hidden;
+  max-width: 42vw;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: clamp(0.82rem, 1.2vw, 1rem);
+  font-weight: 760;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-align: left;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.brand-home-button:hover,
+.brand-home-button:focus-visible {
+  color: var(--mid);
+  outline: none;
+}
+
+.topbar .brand-block h1 {
+  display: none;
+}
+
+.intro-hero-card {
+  min-height: 0;
+  align-content: start;
+  padding-block: 22px;
+}
+
+.about-workspace .intro-grid {
+  margin-top: -12px;
+}
+
+.report-workspace .workspace-header h2,
+.architecture-workspace .workspace-header h2 {
+  font-size: clamp(1.54rem, 3.15vw, 3.5rem);
+}
+
+.report-workspace .workspace-header p:not(.eyebrow),
+.architecture-workspace .workspace-header p:not(.eyebrow) {
+  font-size: clamp(0.78rem, 1.12vw, 0.92rem);
+}
+
+.monthly-hero-card h3,
+.graph-hero-card h3 {
+  font-size: clamp(1.4rem, 2.66vw, 2.8rem);
+}
+
+.monthly-hero-card p:not(.card-kicker),
+.graph-hero-card p:not(.card-kicker) {
+  font-size: 0.72rem;
+}
+
+.research-modal-header {
+  justify-content: center;
+  text-align: center;
+}
+
+.research-modal-header > div {
+  display: grid;
+  justify-items: center;
+  max-width: 680px;
+}
+
+.research-modal-header h3 {
+  font-size: clamp(1rem, 1.55vw, 1.35rem);
+}
+
+.research-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+.research-modal-panel {
+  position: relative;
+}
+
+.topbar .tab-nav,
+.research-modal-panel,
+:root[data-theme='dark'] .topbar .tab-nav,
+:root[data-theme='dark'] .research-modal-panel {
+  background: var(--surface);
+}
+
+.visual-filmstrip {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 12px 2px 18px;
+  scroll-padding-block: 12px;
+}
+
+.home-visual-grid > .visual-filmstrip {
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 560px) {
+  .brand-home-button {
+    max-width: 52vw;
+    font-size: 0.72rem;
+  }
+
+  .research-modal-header {
+    padding-right: 64px;
+  }
+}

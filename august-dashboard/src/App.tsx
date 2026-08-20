@@ -1249,7 +1249,9 @@ function App() {
     <main className="app-shell">
       <header className="topbar" aria-label="Dashboard navigation">
         <div className="brand-block">
-          <h1>Hermes Project Webapp</h1>
+          <button type="button" className="brand-home-button" onClick={() => selectTab(tabs[0])}>
+            Hermes Project Webapp
+          </button>
         </div>
 
         <button
