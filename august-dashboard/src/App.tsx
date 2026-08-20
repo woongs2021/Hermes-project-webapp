@@ -5,7 +5,7 @@ import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type Rese
 import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, MuyeolValidationPanel, ObdGrowthTimelinePanel } from './extendedPanels'
 import './App.css'
 
-type TabId = 'home' | 'intro' | 'team' | 'obd' | 'research' | 'report' | 'architecture'
+type TabId = 'home' | 'team' | 'obd' | 'research' | 'report' | 'architecture' | 'about'
 type ThemeMode = 'light' | 'dark'
 
 type Tab = {
@@ -54,13 +54,6 @@ const tabs: Tab[] = [
     description: '최종 승인된 Go Youn-jung 홈 비주얼을 오래된 순서로 누적하고, 각 still을 클릭하면 turntable detail을 확인합니다.',
   },
   {
-    id: 'intro',
-    label: 'Intro',
-    eyebrow: 'Chris profile',
-    title: 'Ontology Business Designer',
-    description: 'Chris의 이력과 AI 시대 OBD 포지셔닝을 한 장의 소개 화면으로 정리합니다.',
-  },
-  {
     id: 'team',
     label: 'Team',
     eyebrow: 'Orchestration',
@@ -94,6 +87,13 @@ const tabs: Tab[] = [
     eyebrow: 'OBD relation graph',
     title: 'Dashboard Knowledge Graph',
     description: 'Home visual, research, OBD, Muyeol validation을 Chris에게 돌아오는 하나의 관계 루프로 연결합니다.',
+  },
+  {
+    id: 'about',
+    label: 'About',
+    eyebrow: 'Chris profile',
+    title: 'Ontology Business Designer',
+    description: 'Chris의 이력과 AI 시대 OBD 포지셔닝을 한 장의 소개 화면으로 정리합니다.',
   },
 ]
 
@@ -437,7 +437,7 @@ function HomeVisualHeroPanel() {
   const [visualSet, setVisualSet] = useState<HomeVisualSet>(fallbackHomeVisualSet)
   const [activeIndex, setActiveIndex] = useState(0)
   const lastWheelAtRef = useRef(0)
-  const dragStartXRef = useRef<number | null>(null)
+  const dragStartRef = useRef<{ x: number; time: number } | null>(null)
 
   useEffect(() => {
     let isMounted = true
@@ -478,6 +478,21 @@ function HomeVisualHeroPanel() {
     moveCarousel(event.deltaY > 0 ? 1 : -1)
   }
 
+  const handleCarouselSwipeEnd = (clientX: number) => {
+    if (!dragStartRef.current || totalItems < 2) return
+
+    const deltaX = clientX - dragStartRef.current.x
+    const elapsed = Math.max(Date.now() - dragStartRef.current.time, 1)
+    dragStartRef.current = null
+    if (Math.abs(deltaX) < 42) return
+
+    const distanceSteps = Math.floor(Math.abs(deltaX) / 140)
+    const velocity = Math.abs(deltaX) / elapsed
+    const velocitySteps = velocity > 1.45 ? 2 : velocity > 0.9 ? 1 : 0
+    const steps = Math.min(8, Math.max(1, distanceSteps + velocitySteps))
+    moveCarousel(deltaX < 0 ? steps : -steps)
+  }
+
   return (
     <div className="home-visual-grid" aria-label="Public-safe home visual carousel">
       <section className="content-card home-visual-carousel-system" aria-label="Viscose-inspired home visual carousel">
@@ -502,16 +517,13 @@ function HomeVisualHeroPanel() {
             aria-label="Scrollable viscose-style visual ring"
             onWheel={handleCarouselWheel}
             onPointerDown={(event) => {
-              dragStartXRef.current = event.clientX
+              dragStartRef.current = { x: event.clientX, time: Date.now() }
             }}
             onPointerUp={(event) => {
-              if (dragStartXRef.current === null) return
-              const deltaX = event.clientX - dragStartXRef.current
-              dragStartXRef.current = null
-              if (Math.abs(deltaX) > 42) moveCarousel(deltaX < 0 ? 1 : -1)
+              handleCarouselSwipeEnd(event.clientX)
             }}
             onPointerCancel={() => {
-              dragStartXRef.current = null
+              dragStartRef.current = null
             }}
           >
             {visualSet.items.map((item, index) => {
@@ -1122,7 +1134,8 @@ function DevArchitecturePanel() {
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>(() => {
-    const hashTab = tabs.find((tab) => `#${tab.id}` === window.location.hash)
+    const normalizedHash = window.location.hash === '#intro' ? '#about' : window.location.hash
+    const hashTab = tabs.find((tab) => `#${tab.id}` === normalizedHash)
     return hashTab ?? tabs[0]
   })
   const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialThemeMode)
@@ -1157,6 +1170,7 @@ function App() {
         >
           <span />
           <span />
+          <span />
         </button>
 
         <div className="brand-block">
@@ -1171,7 +1185,9 @@ function App() {
           aria-pressed={isDarkMode}
           onClick={toggleThemeMode}
         >
-          <span className="theme-icon" aria-hidden="true" />
+          <svg className="theme-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+            <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.7 6.7 0 0 0 9.8 9.8Z" />
+          </svg>
         </button>
 
         <nav className={isMenuOpen ? 'tab-nav open' : 'tab-nav'} aria-label="Sections">
@@ -1199,7 +1215,7 @@ function App() {
 
         {activeTab.id === 'home' ? (
           <HomeVisualHeroPanel />
-        ) : activeTab.id === 'intro' ? (
+        ) : activeTab.id === 'about' ? (
           <ChrisIntroPanel />
         ) : activeTab.id === 'team' ? (
           <TeamPanel />

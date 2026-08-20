@@ -2485,3 +2485,100 @@
     border-radius: 22px;
   }
 }
+
+/* Follow-up refinements: sourced moon glyph, 3-line menu, blurred popover, smaller titles */
+.hamburger-button {
+  gap: 4px;
+}
+
+.hamburger-button span {
+  width: 18px;
+  height: 1.4px;
+}
+
+.hamburger-button[aria-expanded='true'] span:first-child,
+.hamburger-button[aria-expanded='true'] span:last-child {
+  transform: none;
+}
+
+.theme-icon {
+  width: 21px;
+  height: 21px;
+  border: 0;
+  border-radius: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  box-shadow: none;
+}
+
+.theme-icon::after,
+.theme-icon-button[aria-pressed='false'] .theme-icon::after {
+  display: none;
+}
+
+.theme-icon-button[aria-pressed='false'] .theme-icon,
+.theme-icon-button[aria-pressed='true'] .theme-icon {
+  box-shadow: none;
+}
+
+.topbar .tab-nav {
+  background: color-mix(in srgb, var(--panel-surface-strong) 72%, transparent);
+  backdrop-filter: blur(28px) saturate(1.25);
+  -webkit-backdrop-filter: blur(28px) saturate(1.25);
+}
+
+.workspace-header h2 {
+  font-size: clamp(1.35rem, 3vw, 2.6rem);
+  letter-spacing: -0.055em;
+  line-height: 1;
+}
+
+.workspace-header p:not(.eyebrow) {
+  max-width: 620px;
+  font-size: clamp(0.92rem, 1.15vw, 1rem);
+}
+
+.home-visual-carousel-copy h3,
+.team-loop-card h3,
+.intro-hero-card h3,
+.screen-card-copy h3 {
+  font-size: clamp(1.55rem, 3vw, 2.8rem);
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+
+.research-board-brief h3,
+.architecture-summary h3,
+.hero-card h3,
+.list-card h3 {
+  font-size: clamp(1.25rem, 2.2vw, 2rem);
+  letter-spacing: -0.055em;
+  line-height: 1.02;
+}
+
+.profile-statement-card h3,
+.credential-card h3,
+.profile-lens-card h3,
+.visual-detail-header h3,
+.agent-profile-copy h3,
+.architecture-column-header h3,
+.boundary-card h3,
+.sample-data-header h3 {
+  font-size: clamp(1.05rem, 1.6vw, 1.55rem);
+}
+
+@media (max-width: 560px) {
+  .workspace-header h2 {
+    font-size: clamp(1.25rem, 9vw, 2rem);
+  }
+
+  .home-visual-carousel-copy h3,
+  .team-loop-card h3,
+  .intro-hero-card h3,
+  .screen-card-copy h3 {
+    font-size: clamp(1.45rem, 8vw, 2.2rem);
+  }
+}
