@@ -729,7 +729,7 @@ function ResearchKanbanPanel() {
   const [selectedId, setSelectedId] = useState('')
   const [query, setQuery] = useState(getInitialResearchQuery)
   const [laneFilter, setLaneFilter] = useState<ResearchLaneFilter>(getInitialResearchLaneFilter)
-  const [isResearchModalOpen, setIsResearchModalOpen] = useState(false)
+  const [researchModalLane, setResearchModalLane] = useState<ResearchLaneFilter | null>(null)
 
   useEffect(() => {
     let isMounted = true
@@ -798,6 +798,18 @@ function ResearchKanbanPanel() {
     return laneMatches && (!normalizedQuery || searchableText.includes(normalizedQuery))
   })
   const selectedItem = filteredItems.find((item) => item.id === selectedId) ?? filteredItems[0]
+  const modalItems = researchModalLane === 'all'
+    ? filteredItems
+    : researchModalLane === 'final'
+      ? filteredItems.filter((item) => item.status === 'friday_final_pick')
+      : researchModalLane
+        ? filteredItems.filter((item) => item.lane === researchModalLane)
+        : []
+  const modalTitle = researchModalLane === 'yuna'
+    ? 'Yuna 리서치 아이템 전체 보기'
+    : researchModalLane === 'goyounjung'
+      ? 'Go Youn-jung 리서치 아이템 전체 보기'
+      : '현재 조건의 리서치 아이템 전체 보기'
   const lanes: Array<ResearchBoardItem['lane'] | 'final'> = ['yuna', 'goyounjung', 'final']
   const researchMetrics = {
     yuna: board.items.filter((item) => item.lane === 'yuna').length,
@@ -823,7 +835,7 @@ function ResearchKanbanPanel() {
           <span className="status-chip">showing {filteredItems.length}</span>
           <span className="status-chip muted">oldest first</span>
           <span className="status-chip muted">public-safe metadata</span>
-          <button type="button" className="research-more-button" onClick={() => setIsResearchModalOpen(true)}>More</button>
+          <button type="button" className="research-more-button" onClick={() => setResearchModalLane('all')}>More</button>
         </div>
       </article>
 
@@ -890,8 +902,15 @@ function ResearchKanbanPanel() {
           return (
             <article className={`research-lane ${lane}`} key={lane}>
               <div className="research-lane-header">
-                <p className="card-kicker">{boardLaneLabel(lane)}</p>
-                <strong>{laneCountLabel}</strong>
+                <div>
+                  <p className="card-kicker">{boardLaneLabel(lane)}</p>
+                  <strong>{laneCountLabel}</strong>
+                </div>
+                {lane === 'yuna' || lane === 'goyounjung' ? (
+                  <button type="button" className="research-more-button lane-more" onClick={() => setResearchModalLane(lane)}>
+                    More
+                  </button>
+                ) : null}
               </div>
               <div className="research-card-list">
                 {laneItems.map((item) => (
@@ -922,25 +941,25 @@ function ResearchKanbanPanel() {
       </section>
 
 
-      {isResearchModalOpen ? (
+      {researchModalLane ? (
         <div className="research-modal-backdrop" role="dialog" aria-modal="true" aria-label="All visible research items">
           <section className="research-modal-panel">
             <div className="research-modal-header">
               <div>
-                <p className="card-kicker">Research popup · {filteredItems.length} visible</p>
-                <h3>현재 조건의 리서치 아이템 전체 보기</h3>
+                <p className="card-kicker">Research popup · {modalItems.length} visible</p>
+                <h3>{modalTitle}</h3>
               </div>
-              <button type="button" className="research-modal-close" aria-label="Close research popup" onClick={() => setIsResearchModalOpen(false)}>×</button>
+              <button type="button" className="research-modal-close" aria-label="Close research popup" onClick={() => setResearchModalLane(null)}>×</button>
             </div>
             <div className="research-modal-list">
-              {filteredItems.map((item) => (
+              {modalItems.map((item) => (
                 <button
                   key={item.id}
                   type="button"
                   className={item.id === selectedItem?.id ? 'research-modal-item active' : 'research-modal-item'}
                   onClick={() => {
                     setSelectedId(item.id)
-                    setIsResearchModalOpen(false)
+                    setResearchModalLane(null)
                   }}
                 >
                   <span>{item.thumbnailLabel}</span>
