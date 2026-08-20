@@ -729,6 +729,7 @@ function ResearchKanbanPanel() {
   const [selectedId, setSelectedId] = useState('')
   const [query, setQuery] = useState(getInitialResearchQuery)
   const [laneFilter, setLaneFilter] = useState<ResearchLaneFilter>(getInitialResearchLaneFilter)
+  const [isResearchModalOpen, setIsResearchModalOpen] = useState(false)
 
   useEffect(() => {
     let isMounted = true
@@ -822,6 +823,7 @@ function ResearchKanbanPanel() {
           <span className="status-chip">showing {filteredItems.length}</span>
           <span className="status-chip muted">oldest first</span>
           <span className="status-chip muted">public-safe metadata</span>
+          <button type="button" className="research-more-button" onClick={() => setIsResearchModalOpen(true)}>More</button>
         </div>
       </article>
 
@@ -918,6 +920,41 @@ function ResearchKanbanPanel() {
           )
         })}
       </section>
+
+
+      {isResearchModalOpen ? (
+        <div className="research-modal-backdrop" role="dialog" aria-modal="true" aria-label="All visible research items">
+          <section className="research-modal-panel">
+            <div className="research-modal-header">
+              <div>
+                <p className="card-kicker">Research popup · {filteredItems.length} visible</p>
+                <h3>현재 조건의 리서치 아이템 전체 보기</h3>
+              </div>
+              <button type="button" className="research-modal-close" aria-label="Close research popup" onClick={() => setIsResearchModalOpen(false)}>×</button>
+            </div>
+            <div className="research-modal-list">
+              {filteredItems.map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  className={item.id === selectedItem?.id ? 'research-modal-item active' : 'research-modal-item'}
+                  onClick={() => {
+                    setSelectedId(item.id)
+                    setIsResearchModalOpen(false)
+                  }}
+                >
+                  <span>{item.thumbnailLabel}</span>
+                  <div>
+                    <strong>{item.title}</strong>
+                    <small>{laneLabel(item.lane)} · {item.dateKst} · {item.isoWeek} · {item.validationStatus}</small>
+                    <p>{item.summary}</p>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </section>
+        </div>
+      ) : null}
 
       {selectedItem ? <ResearchDetailPanel item={selectedItem} generatedAt={board.generatedAt} policy={board.sourcePolicy} /> : (
         <article className="content-card research-detail-card">

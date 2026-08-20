@@ -3084,3 +3084,254 @@
     transform: translate(-50%, -50%) translateX(-24px) translateY(0) rotate(0deg) scale(1.06);
   }
 }
+
+/* Follow-up 4: restore 60-item Home still strip, dark readability, research scroll + popup */
+.visual-filmstrip {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(54px, 1fr));
+  gap: 8px;
+  overflow-x: auto;
+  padding: 2px 2px 8px;
+}
+
+.home-visual-grid > .visual-filmstrip {
+  grid-column: 1 / -1;
+  margin-top: 12px;
+}
+
+.research-more-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  border: 1px solid var(--focus-stroke);
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: var(--active-surface);
+  color: var(--mid);
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.research-lane {
+  grid-template-rows: auto minmax(0, 1fr);
+  height: min(72svh, 760px);
+  max-height: none;
+}
+
+.research-card-list {
+  min-height: 0;
+  max-height: none;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+.research-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(1, 1, 2, 0.32);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.research-modal-panel {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: min(980px, 100%);
+  max-height: min(82svh, 860px);
+  border: 1px solid var(--stroke);
+  border-radius: 28px;
+  background: var(--panel-surface-strong);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.research-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--stroke);
+  padding: 20px;
+}
+
+.research-modal-header h3 {
+  margin-top: 6px;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+.research-modal-close {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  background: var(--chip-surface);
+  color: var(--ink);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.research-modal-list {
+  display: grid;
+  gap: 10px;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 16px;
+  scrollbar-width: thin;
+}
+
+.research-modal-item {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 12px;
+  width: 100%;
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 12px;
+  background: var(--chip-surface);
+  color: var(--muted-ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.research-modal-item.active {
+  border-color: var(--focus-stroke);
+  background: var(--active-surface-soft);
+}
+
+.research-modal-item > span {
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--active-surface-soft);
+  color: var(--mid);
+  font-weight: 820;
+}
+
+.research-modal-item strong {
+  color: var(--ink);
+  font-size: 0.96rem;
+}
+
+.research-modal-item small,
+.research-modal-item p {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted-ink);
+  font-size: 0.82rem;
+}
+
+/* Targeted dark-mode readability fixes for reported surfaces. */
+:root[data-theme='dark'] .visual-graph-trace,
+:root[data-theme='dark'] .research-graph-trace {
+  border-color: var(--stroke);
+  background: var(--panel-surface-strong);
+}
+
+:root[data-theme='dark'] .visual-graph-trace li,
+:root[data-theme='dark'] .research-graph-trace li {
+  border-color: var(--stroke);
+  background: var(--chip-surface);
+  color: var(--ink);
+}
+
+:root[data-theme='dark'] .obd-hero-card,
+:root[data-theme='dark'] .monthly-hero-card,
+:root[data-theme='dark'] .graph-hero-card,
+:root[data-theme='dark'] .graph-edge-card,
+:root[data-theme='dark'] .graph-contract-card,
+:root[data-theme='dark'] .monthly-shortlist-card,
+:root[data-theme='dark'] .theme-card,
+:root[data-theme='dark'] .monthly-metric,
+:root[data-theme='dark'] .validation-check-card {
+  background: var(--panel-surface-strong);
+  color: var(--ink);
+}
+
+:root[data-theme='dark'] .timeline-card,
+:root[data-theme='dark'] .graph-node,
+:root[data-theme='dark'] .graph-node.artifact,
+:root[data-theme='dark'] .graph-node.validation,
+:root[data-theme='dark'] .graph-node.synthesis,
+:root[data-theme='dark'] .edge-row,
+:root[data-theme='dark'] .graph-contract-item,
+:root[data-theme='dark'] .shortlist-row,
+:root[data-theme='dark'] .research-lane,
+:root[data-theme='dark'] .research-lane-header,
+:root[data-theme='dark'] .research-card,
+:root[data-theme='dark'] .research-modal-panel,
+:root[data-theme='dark'] .research-modal-item {
+  border-color: var(--stroke);
+  background: var(--panel-surface);
+  color: var(--muted-ink);
+}
+
+:root[data-theme='dark'] .research-card.active,
+:root[data-theme='dark'] .research-modal-item.active {
+  border-color: var(--focus-stroke);
+  background: var(--active-surface);
+}
+
+:root[data-theme='dark'] .research-thumb,
+:root[data-theme='dark'] .research-detail-thumb,
+:root[data-theme='dark'] .research-lane.goyounjung .research-thumb,
+:root[data-theme='dark'] .research-detail-thumb.goyounjung,
+:root[data-theme='dark'] .research-lane.final .research-thumb {
+  background: var(--active-surface-soft);
+  color: var(--ink);
+}
+
+:root[data-theme='dark'] .graph-node h3,
+:root[data-theme='dark'] .timeline-card h3,
+:root[data-theme='dark'] .monthly-hero-card h3,
+:root[data-theme='dark'] .graph-hero-card h3,
+:root[data-theme='dark'] .obd-hero-card h3,
+:root[data-theme='dark'] .research-card-copy strong,
+:root[data-theme='dark'] .shortlist-row strong,
+:root[data-theme='dark'] .edge-row strong,
+:root[data-theme='dark'] .graph-contract-item strong,
+:root[data-theme='dark'] .monthly-metric h3 {
+  color: var(--ink);
+}
+
+:root[data-theme='dark'] .timeline-card strong,
+:root[data-theme='dark'] .graph-node strong,
+:root[data-theme='dark'] .monthly-metric h3,
+:root[data-theme='dark'] .research-lane-header strong,
+:root[data-theme='dark'] .research-more-button {
+  color: var(--mid);
+}
+
+:root[data-theme='dark'] .research-search-field input {
+  border-color: var(--stroke);
+  background: var(--field-surface);
+  color: var(--ink);
+  box-shadow: none;
+}
+
+@media (max-width: 900px) {
+  .research-lane {
+    height: min(58svh, 620px);
+  }
+}
+
+@media (max-width: 560px) {
+  .visual-filmstrip {
+    grid-template-columns: repeat(8, minmax(48px, 1fr));
+  }
+
+  .research-modal-backdrop {
+    padding: 10px;
+  }
+
+  .research-modal-item {
+    grid-template-columns: 1fr;
+  }
+}
