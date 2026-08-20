@@ -37,6 +37,14 @@ type ProfileCredential = {
   detail: string
 }
 
+type AgentProfile = {
+  name: string
+  title: string
+  faceSrc: string
+  summary: string
+  handoff: string
+}
+
 const tabs: Tab[] = [
   {
     id: 'home',
@@ -140,6 +148,51 @@ const profileLenses = [
   'AI UX · 정서적 안정감 · 인간적인 인터랙션',
   'Research · Awards · IP · Mentoring',
   'Ontology Business Designer for the AI era',
+]
+
+const agentProfiles: AgentProfile[] = [
+  {
+    name: 'Karina',
+    title: 'Coordination Lead · CDO Partner',
+    faceSrc: '/assets/team/karina_profile.jpg',
+    summary: 'Chris의 요청을 제품 언어와 실행 순서로 정리하고, Agent Team 전체의 우선순위와 handoff를 조율합니다.',
+    handoff: '최종 응답은 Karina가 하나의 명확한 synthesis로 묶어 Chris에게 돌려주는 역할입니다.',
+  },
+  {
+    name: 'Yuna',
+    title: 'Research Intelligence',
+    faceSrc: '/assets/team/yuna_profile.jpg',
+    summary: '논문, 시장, 레퍼런스, 지식 탐색을 맡아 AI UX와 OBD 판단에 필요한 근거를 수집합니다.',
+    handoff: 'Faker나 Son이 실행 방향을 잡을 수 있도록 핵심 signal과 source 맥락을 넘깁니다.',
+  },
+  {
+    name: 'Go Youn-jung',
+    title: 'Visual / Experience Muse',
+    faceSrc: '/assets/team/goyounjung_profile.jpg',
+    summary: '홈 비주얼, 정서적 톤, 브랜드 감각을 통해 따뜻하고 인간적인 AI UX의 분위기를 구체화합니다.',
+    handoff: '승인된 still과 turntable은 public-safe manifest를 통해 Home Visual Archive에 반영됩니다.',
+  },
+  {
+    name: 'Son',
+    title: 'Scope / Priority Strategist',
+    faceSrc: '/assets/team/son_profile.jpg',
+    summary: '범위, 수용 기준, 프로젝트 순서를 정리해 팀이 작은 단위로 끝까지 완료할 수 있게 합니다.',
+    handoff: '속도와 품질 사이의 선택지를 분명하게 나누고 다음 실행 단위를 제안합니다.',
+  },
+  {
+    name: 'Faker',
+    title: 'Coding / Automation Builder',
+    faceSrc: '/assets/team/faker_profile.jpg',
+    summary: '프로토타입, 스크립트, 웹 대시보드, GitHub Pages 배포처럼 실제 작동하는 산출물을 구현합니다.',
+    handoff: '빌드, lint, manifest readback, Pages smoke처럼 실행 근거를 남겨 Karina가 신뢰 있게 종합할 수 있게 합니다.',
+  },
+  {
+    name: 'Muyeol',
+    title: 'QA / Risk Validation',
+    faceSrc: '/assets/team/muyeol_profile.jpg',
+    summary: '보안, 프라이버시, public-safe 경계, 최종 품질 리스크를 검토하는 validation 담당입니다.',
+    handoff: '비밀값 노출, private source leakage, UI/데이터 불일치를 점검한 뒤 final go/no-go를 제공합니다.',
+  },
 ]
 
 const architectureScreens: ArchitectureScreen[] = [
@@ -327,6 +380,42 @@ function ChrisIntroPanel() {
   )
 }
 
+function TeamPanel() {
+  return (
+    <div className="team-grid" aria-label="Karina Hermes Agent Team">
+      <article className="content-card team-loop-card">
+        <p className="card-kicker">Task completion loop</p>
+        <h3>Chris → Karina → Agent Team → Muyeol → Karina → Chris</h3>
+        <p>
+          팀은 하나의 루프로 움직입니다. Chris의 지시는 Karina가 정리하고, 각 전문 에이전트가 실행한 뒤,
+          Muyeol이 리스크와 public-safe 경계를 확인하고, Karina가 다시 하나의 결과로 종합합니다.
+        </p>
+        <div className="team-loop-steps" aria-label="Team operating sequence">
+          {['Chris order', 'Karina framing', 'Specialist execution', 'Muyeol validation', 'Karina synthesis'].map((step, index) => (
+            <span key={step}>{String(index + 1).padStart(2, '0')} · {step}</span>
+          ))}
+        </div>
+      </article>
+
+      <section className="agent-card-grid" aria-label="Agent character profiles">
+        {agentProfiles.map((agent) => (
+          <article className="content-card agent-profile-card" key={agent.name}>
+            <div className="agent-face-frame">
+              <img src={toAppAssetSrc(agent.faceSrc)} alt={`${agent.name} character face`} loading="lazy" />
+            </div>
+            <div className="agent-profile-copy">
+              <p className="card-kicker">{agent.title}</p>
+              <h3>{agent.name}</h3>
+              <p>{agent.summary}</p>
+              <p className="agent-handoff">{agent.handoff}</p>
+            </div>
+          </article>
+        ))}
+      </section>
+    </div>
+  )
+}
+
 function toAppAssetSrc(path: string) {
   return path.startsWith('/') ? `${import.meta.env.BASE_URL}${path.slice(1)}` : path
 }
@@ -348,6 +437,7 @@ function HomeVisualHeroPanel() {
   const [visualSet, setVisualSet] = useState<HomeVisualSet>(fallbackHomeVisualSet)
   const [activeIndex, setActiveIndex] = useState(0)
   const lastWheelAtRef = useRef(0)
+  const dragStartXRef = useRef<number | null>(null)
 
   useEffect(() => {
     let isMounted = true
@@ -393,7 +483,7 @@ function HomeVisualHeroPanel() {
       <section className="content-card home-visual-carousel-system" aria-label="Viscose-inspired home visual carousel">
         <div className="home-visual-carousel-copy">
           <p className="card-kicker">Home visual carousel</p>
-          <h3>62개의 final visual을 하나의 회전하는 시각 시스템으로 읽습니다</h3>
+          <h3>{totalItems}개의 turntable-ready final visual을 하나의 회전하는 시각 시스템으로 읽습니다</h3>
           <p>
             Viscose-carousel의 off-screen ring, scroll snap, front-card metadata 원리를 가볍게 번역했습니다.
             새 이미지는 추가하지 않고, 현재 public-safe manifest의 승인 still과 turntable detail만 사용합니다.
@@ -411,6 +501,18 @@ function HomeVisualHeroPanel() {
             className="viscose-carousel-stage"
             aria-label="Scrollable viscose-style visual ring"
             onWheel={handleCarouselWheel}
+            onPointerDown={(event) => {
+              dragStartXRef.current = event.clientX
+            }}
+            onPointerUp={(event) => {
+              if (dragStartXRef.current === null) return
+              const deltaX = event.clientX - dragStartXRef.current
+              dragStartXRef.current = null
+              if (Math.abs(deltaX) > 42) moveCarousel(deltaX < 0 ? 1 : -1)
+            }}
+            onPointerCancel={() => {
+              dragStartXRef.current = null
+            }}
           >
             {visualSet.items.map((item, index) => {
               const offset = getVisualCarouselOffset(index, selectedIndex, totalItems)
@@ -533,21 +635,21 @@ function HomeVisualDetail({
               <p key={reason}>{reason}</p>
             ))}
           </div>
-          <div className="research-graph-trace visual-graph-trace" aria-label="Home visual graph breadcrumb">
-            <span>HomeVisualGraphBridge</span>
-            <ol>
-              <li>Artifact</li>
-              <li>{item.metadata.sourceStatus}</li>
-              <li>Theme: {item.theme}</li>
-              <li>HomeVisualHero</li>
-              <li>Visual Archive</li>
-            </ol>
-          </div>
         </div>
       </div>
 
       <p className="manifest-policy">{policy}</p>
       <p className="visual-generated-at">Generated: {generatedAt}</p>
+      <div className="research-graph-trace visual-graph-trace" aria-label="Home visual graph breadcrumb">
+        <span>HomeVisualGraphBridge</span>
+        <ol>
+          <li>Artifact</li>
+          <li>{item.metadata.sourceStatus}</li>
+          <li>Theme: {item.theme}</li>
+          <li>HomeVisualHero</li>
+          <li>Visual Archive</li>
+        </ol>
+      </div>
     </article>
   )
 }
@@ -1024,6 +1126,7 @@ function App() {
     return hashTab ?? tabs[0]
   })
   const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialThemeMode)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const isDarkMode = themeMode === 'dark'
 
   useEffect(() => {
@@ -1034,6 +1137,7 @@ function App() {
 
   function selectTab(tab: Tab) {
     setActiveTab(tab)
+    setIsMenuOpen(false)
     window.history.replaceState(null, '', `#${tab.id}`)
   }
 
@@ -1043,28 +1147,34 @@ function App() {
 
   return (
     <main className="app-shell">
-      <aside className="app-sidebar" aria-label="Dashboard navigation">
+      <header className="topbar" aria-label="Dashboard navigation">
+        <button
+          type="button"
+          className="hamburger-button"
+          aria-label={isMenuOpen ? 'Close section menu' : 'Open section menu'}
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+        </button>
+
         <div className="brand-block">
           <p className="eyebrow">August Dashboard</p>
           <h1>Local admin shell</h1>
         </div>
 
-        <div className="theme-mode-panel" aria-label="Display mode">
-          <span>{isDarkMode ? 'Dark mode' : 'Light mode'}</span>
-          <button
-            type="button"
-            className="theme-toggle-button"
-            aria-pressed={isDarkMode}
-            onClick={toggleThemeMode}
-          >
-            <span className="theme-toggle-track" aria-hidden="true">
-              <span className="theme-toggle-thumb" />
-            </span>
-            {isDarkMode ? 'Switch to light' : 'Switch to dark'}
-          </button>
-        </div>
+        <button
+          type="button"
+          className="theme-icon-button"
+          aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+          aria-pressed={isDarkMode}
+          onClick={toggleThemeMode}
+        >
+          <span className="theme-icon" aria-hidden="true" />
+        </button>
 
-        <nav className="tab-nav" aria-label="Sections">
+        <nav className={isMenuOpen ? 'tab-nav open' : 'tab-nav'} aria-label="Sections">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -1073,11 +1183,12 @@ function App() {
               aria-pressed={tab.id === activeTab.id}
               onClick={() => selectTab(tab)}
             >
-              {tab.label}
+              <span>{tab.label}</span>
+              <small>{tab.eyebrow}</small>
             </button>
           ))}
         </nav>
-      </aside>
+      </header>
 
       <section className="workspace" aria-live="polite">
         <div className="workspace-header">
@@ -1090,6 +1201,8 @@ function App() {
           <HomeVisualHeroPanel />
         ) : activeTab.id === 'intro' ? (
           <ChrisIntroPanel />
+        ) : activeTab.id === 'team' ? (
+          <TeamPanel />
         ) : activeTab.id === 'obd' ? (
           <ObdGrowthTimelinePanel />
         ) : activeTab.id === 'research' ? (

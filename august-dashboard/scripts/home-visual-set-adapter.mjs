@@ -216,7 +216,9 @@ export function buildHomeVisualManifest(source, generatedAt = new Date().toISOSt
     sourcePolicy: visualSourcePolicy,
     homeComponent: 'HomeVisualHero',
     status: 'public_home_allowed',
-    items: getSourceItems(source).map(sanitizeVisualItem),
+    items: getSourceItems(source)
+      .filter((item) => Boolean(findPublicApprovedTurntablePath(item, item.webapp_asset_path)))
+      .map(sanitizeVisualItem),
   })
 }
 
@@ -240,6 +242,7 @@ export function validateHomeVisualManifest(manifest) {
   if (manifest.homeComponent !== 'HomeVisualHero') fail('manifest.homeComponent must be HomeVisualHero')
   if (manifest.status !== 'public_home_allowed') fail('manifest.status must be public_home_allowed')
   if (!Array.isArray(manifest.items) || manifest.items.length === 0) fail('manifest.items must contain at least one item')
+  if (manifest.items.length !== 60) fail(`manifest.items must contain exactly 60 turntable-ready items; received ${manifest.items.length}`)
 
   const seenIds = new Set()
   let turntableCount = 0
@@ -265,11 +268,11 @@ export function validateHomeVisualManifest(manifest) {
       fail(`items[${index}].imageSrc must point to a copied public still PNG`)
     }
     if (item.status !== 'public_home_allowed') fail(`items[${index}].status must be public_home_allowed`)
-    if (!['still_only', 'turntable_available'].includes(item.mediaCapability)) {
-      fail(`items[${index}].mediaCapability is not allowed`)
+    if (item.mediaCapability !== 'turntable_available') {
+      fail(`items[${index}].mediaCapability must be turntable_available`)
     }
-    if (!['static_still', 'turntable_video'].includes(item.detailMedia)) {
-      fail(`items[${index}].detailMedia is not allowed`)
+    if (item.detailMedia !== 'turntable_video') {
+      fail(`items[${index}].detailMedia must be turntable_video`)
     }
     if (item.detailMedia === 'turntable_video') {
       turntableCount += 1
@@ -307,8 +310,8 @@ export function validateHomeVisualManifest(manifest) {
     }
   }
 
-  if (turntableCount > manifest.items.length) {
-    fail(`turntable count exceeds still count: stills=${manifest.items.length} turntables=${turntableCount}`)
+  if (turntableCount !== manifest.items.length) {
+    fail(`turntable count must match still count: stills=${manifest.items.length} turntables=${turntableCount}`)
   }
 
   return manifest

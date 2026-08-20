@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-20T03:05:24.182Z",
+  "generatedAt": "2026-08-20T04:39:47.400Z",
   "sourcePolicy": "public-safe home visual manifest only; exposes copied still/turntable assets and approved display copy; excludes raw logs, prompts, remote URLs, model/job IDs, credentials, private IDs, and local source paths",
   "homeComponent": "HomeVisualHero",
   "status": "public_home_allowed",
@@ -1284,54 +1284,6 @@
       "publicSafe": true
     },
     {
-      "id": "2026-08-13-goyounjung-01-violet-neutral-consent-weighing-cushion",
-      "title": "Consent Weighing Cushion",
-      "dateKst": "2026-08-13",
-      "theme": "violet-neutral / #B14D92·#EFDCEC·#4C1039·#FCFCFF·#010102",
-      "metaphor": "동의와 제품 판단의 무게를 먼저 받쳐보는 낮은 쿠션형 기준점",
-      "why": [
-        "AI 기능의 세기를 먼저 키우는 대신, 사용자의 동의와 맥락을 부드럽게 받아내는 기준면으로 해석했습니다.",
-        "보라-뉴트럴 조합은 프라이버시·거버넌스의 긴장감을 차분하게 낮추면서도 One UI식 신뢰감을 유지합니다."
-      ],
-      "imageSrc": "/assets/home-visuals/2026-08-13-51-01-violet-neutral-consent-weighing-cushion.png",
-      "status": "public_home_allowed",
-      "mediaCapability": "still_only",
-      "detailMedia": "static_still",
-      "metadata": {
-        "dateKst": "2026-08-13",
-        "displayMode": "pinterest_masonry_card",
-        "interaction": "dashboard_still_click_opens_turntable_detail_view",
-        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
-        "sourceStatus": "final",
-        "detailFallback": "static_still"
-      },
-      "publicSafe": true
-    },
-    {
-      "id": "2026-08-13-goyounjung-02-mint-quiet-context-lunchbox",
-      "title": "Quiet Context Lunchbox",
-      "dateKst": "2026-08-13",
-      "theme": "mint / #10C19F·#A6E6D4·#04221C·#FCFCFF",
-      "metaphor": "사용자 맥락을 감시하지 않고 조심스럽게 보관해 이동시키는 작은 런치박스",
-      "why": [
-        "처음 후보의 쌍안경은 “관찰/감시” 인상이 강해, 사용자 맥락을 더 안전하게 보관하는 구체 사물로 한 번 재생성했습니다.",
-        "민트 계열은 돌봄·회복·낮은 마찰을 전달해, Hermes/OBD 탐구에서 “맥락을 다루는 태도”를 부드럽게 보여줍니다."
-      ],
-      "imageSrc": "/assets/home-visuals/2026-08-13-52-02-mint-quiet-context-lunchbox.png",
-      "status": "public_home_allowed",
-      "mediaCapability": "still_only",
-      "detailMedia": "static_still",
-      "metadata": {
-        "dateKst": "2026-08-13",
-        "displayMode": "pinterest_masonry_card",
-        "interaction": "dashboard_still_click_opens_turntable_detail_view",
-        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
-        "sourceStatus": "final",
-        "detailFallback": "static_still"
-      },
-      "publicSafe": true
-    },
-    {
       "id": "2026-08-14-goyounjung-01-neutral-blue-boundary-tab-marker",
       "title": "Boundary Tab Marker",
       "dateKst": "2026-08-14",
@@ -1342,8 +1294,8 @@
         "off-white와 deep blue 대비로 One UI식 차분함과 판단의 선명도를 함께 잡았습니다.",
         "Chris 승인 후 모든 턴테이블은 시작/끝 포즈가 이어지는 loopable forward→reverse 패키지로 저장했습니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-14-53-01-neutral-blue-boundary-tab-marker.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-14-53-01-neutral-blue-boundary-tab-marker.turntable.loopable-forward-reverse.1080.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-14-51-01-neutral-blue-boundary-tab-marker.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-14-51-01-neutral-blue-boundary-tab-marker.turntable.loopable-forward-reverse.1080.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
@@ -1368,8 +1320,8 @@
         "ochre/caramel/parchment 계열로 반복되던 blue·mint·violet에서 벗어나 따뜻한 UX 리서치 감각을 유지했습니다.",
         "비대칭 실루엣과 측면 깊이가 있어 턴테이블 회전감이 이전 2번보다 더 잘 읽힙니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-14-54-02-ochre-evidence-loom-shuttle.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-14-54-02-ochre-evidence-loom-shuttle.turntable.loopable-forward-reverse.1080.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-14-52-02-ochre-evidence-loom-shuttle.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-14-52-02-ochre-evidence-loom-shuttle.turntable.loopable-forward-reverse.1080.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
@@ -1394,8 +1346,8 @@
         "하나의 손잡이형 오브젝트로 “AI가 먼저 움직이지 않고, 사용자의 의도적 행동을 기다린다”는 메시지를 잡았습니다.",
         "비대칭 측면 깊이가 있어 5초 턴테이블에서 회전감이 읽히도록 선택했습니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-15-55-01-clay-decision-handle.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-15-55-01-clay-decision-handle.turntable.1080.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-15-53-01-clay-decision-handle.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-15-53-01-clay-decision-handle.turntable.1080.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
@@ -1420,8 +1372,8 @@
         "정면·측면 깊이가 명확한 비대칭 솔리드 형태라 턴테이블에서 회전감이 더 안정적으로 읽힙니다.",
         "blue·mint·violet 반복을 피하고 parchment·terracotta 계열로 따뜻한 분리감을 유지했습니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-15-56-02-new-keystone-pillar.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-15-56-02-new-keystone-pillar.turntable.1080.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-15-54-02-new-keystone-pillar.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-15-54-02-new-keystone-pillar.turntable.1080.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
@@ -1446,8 +1398,8 @@
         "One UI식 따뜻한 AI에서 중요한 “먼저 듣고 미세하게 맞추는 태도”를 조율 도구 메타포로 바꿨습니다.",
         "사선/쓰리쿼터 구도라 5초 턴테이블에서도 측면 깊이와 회전감이 비교적 잘 읽힙니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-16-57-01-attentive-signal-tuning-fork.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-16-57-01-attentive-signal-tuning-fork.turntable.1080.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-16-55-01-attentive-signal-tuning-fork.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-16-55-01-attentive-signal-tuning-fork.turntable.1080.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
@@ -1472,8 +1424,8 @@
         "OBD 관점에서 AI 제품의 가치는 기능 실행보다 “어떤 부담과 책임을 어디에 놓을지”를 조율하는 데 있다는 의미를 담았습니다.",
         "비대칭 실루엣과 측면 두께가 있어 루프에서 형태 변화가 선명합니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-16-58-02-calibrated-counterweight-mobile.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-16-58-02-calibrated-counterweight-mobile.turntable.1080.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-16-56-02-calibrated-counterweight-mobile.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-16-56-02-calibrated-counterweight-mobile.turntable.1080.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
@@ -1498,8 +1450,8 @@
         "하나의 접힌 리본형 오브젝트로 “AI 실행 전 사용자가 멈춰 결정하는 순간”을 텍스트 없이 표현했습니다.",
         "비대칭 다리와 상단 롤의 측면 깊이가 있어 5초 턴테이블에서 회전 변화가 명확합니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-17-59-01-folded-decision-ribbon.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-17-59-01-folded-decision-ribbon.turntable.1080.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-17-57-01-folded-decision-ribbon.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-17-57-01-folded-decision-ribbon.turntable.1080.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
@@ -1524,8 +1476,8 @@
         "조개/리브/중앙 렌즈처럼 읽히는 후보를 폐기하고, 매끈한 단일 방패형 캐노피로 정리했습니다.",
         "전면·측면 컬러 분리와 두께가 있어 턴테이블에서 방향 변화가 안정적으로 보입니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-17-60-02-protective-context-canopy.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-17-60-02-protective-context-canopy.turntable.1080.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-17-58-02-protective-context-canopy.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-17-58-02-protective-context-canopy.turntable.1080.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
@@ -1550,8 +1502,8 @@
         "단일 연속 오브젝트, 대각/3⁄4 뷰, 넉넉한 여백으로 안정적인 제품 아이콘 감각을 유지합니다.",
         "반복 재생 안정성을 위해 direct Kling 결과를 1080×1080 muted H.264 forward→reverse loopable 턴테이블로 패키징했습니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-19-61-01-quiet-keystone.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-19-61-01-quiet-keystone.turntable.1080.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-19-59-01-quiet-keystone.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-19-59-01-quiet-keystone.turntable.1080.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
@@ -1576,8 +1528,8 @@
         "기존 keystone/받침대 계열보다 가볍고 우아한 방향성 메타포로, 사용자가 주도권을 갖고 AI는 추진력을 보조한다는 메시지가 선명합니다.",
         "단일 연속 오브젝트, 대각/3⁄4 뷰, 넉넉한 여백을 유지했고 direct Kling 턴테이블은 1080×1080 muted H.264 forward→reverse loopable로 패키징했습니다."
       ],
-      "imageSrc": "/assets/home-visuals/2026-08-20-62-01-gentle-agency-sail.png",
-      "videoSrc": "/assets/home-visuals/turntables/2026-08-20-62-01-gentle-agency-sail.turntable.1080.muted.mp4",
+      "imageSrc": "/assets/home-visuals/2026-08-20-60-01-gentle-agency-sail.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-20-60-01-gentle-agency-sail.turntable.1080.muted.mp4",
       "status": "public_home_allowed",
       "mediaCapability": "turntable_available",
       "detailMedia": "turntable_video",
