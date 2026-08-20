@@ -460,6 +460,9 @@ function HomeVisualHeroPanel() {
   const totalItems = visualSet.items.length
   const selectedIndex = totalItems > 0 ? wrapVisualIndex(activeIndex, totalItems) : -1
   const selectedItem = selectedIndex >= 0 ? visualSet.items[selectedIndex] : undefined
+  const visibleRingItems = totalItems > 0
+    ? visualSet.items.map((item, index) => ({ item, index, offset: getVisualCarouselOffset(index, selectedIndex, totalItems) })).filter(({ offset }) => Math.abs(offset) <= 5)
+    : []
   const turntableCount = visualSet.items.filter((item) => item.videoSrc).length
   const firstDate = visualSet.items[0]?.dateKst ?? 'pending'
   const latestDate = visualSet.items.at(-1)?.dateKst ?? 'pending'
@@ -500,8 +503,8 @@ function HomeVisualHeroPanel() {
           <p className="card-kicker">Home visual carousel</p>
           <h3>{totalItems}개의 turntable-ready final visual을 하나의 회전하는 시각 시스템으로 읽습니다</h3>
           <p>
-            Viscose-carousel의 off-screen ring, scroll snap, front-card metadata 원리를 가볍게 번역했습니다.
-            새 이미지는 추가하지 않고, 현재 public-safe manifest의 승인 still과 turntable detail만 사용합니다.
+            Viscose의 off-screen ring, front-card metadata anchor, side index, soft thread motion을 대시보드용 React/CSS로 더 자연스럽게 번역했습니다.
+            데이터는 public-safe manifest의 승인 still과 turntable detail만 사용합니다.
           </p>
           <div className="archive-stat-grid" aria-label="Home visual archive summary">
             <span><strong>{totalItems}</strong> approved stills</span>
@@ -512,6 +515,19 @@ function HomeVisualHeroPanel() {
         </div>
 
         <div className="viscose-stage-shell">
+          {selectedItem ? (
+            <div className="viscose-meta-lockup" aria-label="Selected visual carousel metadata">
+              <div className="viscose-meta-left">
+                <span>{String(selectedIndex + 1).padStart(2, '0')}</span>
+                <strong>{selectedItem.title}</strong>
+                <small>{selectedItem.dateKst}</small>
+              </div>
+              <div className="viscose-meta-right">
+                <span>{selectedItem.theme}</span>
+                <strong>{selectedItem.mediaCapability}</strong>
+              </div>
+            </div>
+          ) : null}
           <div
             className="viscose-carousel-stage"
             aria-label="Scrollable viscose-style visual ring"
@@ -526,6 +542,21 @@ function HomeVisualHeroPanel() {
               dragStartRef.current = null
             }}
           >
+            <div className="viscose-thread-field" aria-hidden="true" />
+            <div className="viscose-index-column" aria-label="Visible carousel index column">
+              {visibleRingItems.map(({ item, index, offset }) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  className={index === selectedIndex ? 'viscose-index-item active' : 'viscose-index-item'}
+                  style={{ '--offset': offset } as CSSProperties}
+                  onClick={() => setActiveIndex(index)}
+                >
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <strong>{item.title}</strong>
+                </button>
+              ))}
+            </div>
             {visualSet.items.map((item, index) => {
               const offset = getVisualCarouselOffset(index, selectedIndex, totalItems)
               const distance = Math.abs(offset)
@@ -1168,9 +1199,9 @@ function App() {
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((open) => !open)}
         >
-          <span />
-          <span />
-          <span />
+          <svg className="menu-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
         </button>
 
         <div className="brand-block">
@@ -1185,9 +1216,16 @@ function App() {
           aria-pressed={isDarkMode}
           onClick={toggleThemeMode}
         >
-          <svg className="theme-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
-            <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.7 6.7 0 0 0 9.8 9.8Z" />
-          </svg>
+          {isDarkMode ? (
+            <svg className="theme-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+              <path d="M12 2.75v2.5M12 18.75v2.5M4.5 4.5l1.8 1.8M17.7 17.7l1.8 1.8M2.75 12h2.5M18.75 12h2.5M4.5 19.5l1.8-1.8M17.7 6.3l1.8-1.8" />
+              <circle cx="12" cy="12" r="4.25" />
+            </svg>
+          ) : (
+            <svg className="theme-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+              <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.7 6.7 0 0 0 9.8 9.8Z" />
+            </svg>
+          )}
         </button>
 
         <nav className={isMenuOpen ? 'tab-nav open' : 'tab-nav'} aria-label="Sections">

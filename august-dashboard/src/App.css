@@ -2582,3 +2582,324 @@
     font-size: clamp(1.45rem, 8vw, 2.2rem);
   }
 }
+
+/* Follow-up 2: icon sources, dark readability repair, richer Viscose adaptation */
+.menu-icon,
+.theme-icon {
+  width: 22px;
+  height: 22px;
+  border: 0;
+  border-radius: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  box-shadow: none;
+}
+
+.hamburger-button span {
+  display: none;
+}
+
+/* Dark-mode readability: retokenize older light hard-coded surfaces. */
+:root[data-theme='dark'] .hero-card,
+:root[data-theme='dark'] .intro-hero-card,
+:root[data-theme='dark'] .architecture-summary,
+:root[data-theme='dark'] .screen-card:first-child,
+:root[data-theme='dark'] .screen-card:last-child,
+:root[data-theme='dark'] .research-board-brief,
+:root[data-theme='dark'] .team-loop-card {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(143, 177, 255, 0.14), transparent 32%),
+    var(--panel-surface-strong);
+}
+
+:root[data-theme='dark'] .status-chip.muted,
+:root[data-theme='dark'] .list-item,
+:root[data-theme='dark'] .source-button,
+:root[data-theme='dark'] .source-preview,
+:root[data-theme='dark'] .boundary-lanes > div,
+:root[data-theme='dark'] .architecture-node,
+:root[data-theme='dark'] .loop-step,
+:root[data-theme='dark'] .lens-list span,
+:root[data-theme='dark'] .focus-chip,
+:root[data-theme='dark'] .metadata-grid span,
+:root[data-theme='dark'] .why-list p,
+:root[data-theme='dark'] .manifest-policy,
+:root[data-theme='dark'] .research-context-strip span,
+:root[data-theme='dark'] .research-filter-note code,
+:root[data-theme='dark'] .team-loop-steps span {
+  border-color: var(--stroke);
+  background: var(--chip-surface);
+  color: var(--muted-ink);
+}
+
+:root[data-theme='dark'] .source-preview pre {
+  border-color: var(--stroke);
+  background: rgba(0, 0, 0, 0.24);
+  color: rgba(244, 248, 255, 0.78);
+}
+
+:root[data-theme='dark'] .visual-media-frame,
+:root[data-theme='dark'] .research-detail-thumb,
+:root[data-theme='dark'] .filmstrip-card,
+:root[data-theme='dark'] .visual-card,
+:root[data-theme='dark'] .viscose-card {
+  border-color: var(--stroke);
+  background: var(--panel-surface);
+}
+
+:root[data-theme='dark'] .visual-index,
+:root[data-theme='dark'] .filmstrip-card span {
+  background: rgba(17, 24, 34, 0.86);
+  color: var(--ink);
+}
+
+:root[data-theme='dark'] .visual-card-copy,
+:root[data-theme='dark'] .visual-card-copy span {
+  color: rgba(244, 248, 255, 0.9);
+}
+
+:root[data-theme='dark'] .viscose-carousel-stage {
+  background:
+    radial-gradient(circle at 80% 50%, rgba(143, 177, 255, 0.2), transparent 36%),
+    linear-gradient(90deg, rgba(13, 17, 23, 0.18), rgba(17, 24, 34, 0.74));
+}
+
+/* Viscose reference translation: metadata lockup, side index, threads, simpler cards. */
+.viscose-stage-shell {
+  grid-template-rows: auto minmax(500px, 1fr) auto;
+}
+
+.viscose-meta-lockup {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 0.45fr);
+  gap: 16px;
+  align-items: end;
+  min-height: 84px;
+  border: 1px solid var(--stroke);
+  border-radius: 22px;
+  padding: 16px;
+  background: color-mix(in srgb, var(--panel-surface-strong) 82%, transparent);
+  backdrop-filter: blur(18px);
+}
+
+.viscose-meta-left,
+.viscose-meta-right {
+  display: grid;
+  gap: 4px;
+}
+
+.viscose-meta-left span,
+.viscose-meta-right span {
+  color: var(--quiet-ink);
+  font-size: 0.74rem;
+  font-weight: 760;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.viscose-meta-left strong {
+  color: var(--ink);
+  font-size: clamp(1.15rem, 2.2vw, 2.3rem);
+  font-weight: 430;
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+
+.viscose-meta-left small,
+.viscose-meta-right strong {
+  color: var(--muted-ink);
+  font-size: 0.86rem;
+  font-weight: 720;
+}
+
+.viscose-meta-right {
+  justify-items: end;
+  text-align: right;
+}
+
+.viscose-carousel-stage {
+  isolation: isolate;
+  cursor: grab;
+}
+
+.viscose-carousel-stage:active {
+  cursor: grabbing;
+}
+
+.viscose-thread-field {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.viscose-thread-field::before,
+.viscose-thread-field::after {
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  width: min(56vw, 520px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--ink) 18%, transparent), transparent);
+  content: '';
+  opacity: 0.5;
+  transform-origin: right center;
+}
+
+.viscose-thread-field::before {
+  transform: translateY(-96px) rotate(-11deg);
+}
+
+.viscose-thread-field::after {
+  transform: translateY(104px) rotate(10deg);
+}
+
+.viscose-index-column {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 5;
+  display: grid;
+  width: min(210px, 36%);
+  gap: 6px;
+  pointer-events: auto;
+}
+
+.viscose-index-item {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: color-mix(in srgb, var(--panel-surface-strong) 62%, transparent);
+  color: var(--muted-ink);
+  text-align: left;
+  cursor: pointer;
+  opacity: calc(1 - (max(var(--offset), calc(var(--offset) * -1)) * 0.08));
+  backdrop-filter: blur(16px);
+}
+
+.viscose-index-item span {
+  color: var(--quiet-ink);
+  font-size: 0.7rem;
+  font-weight: 780;
+}
+
+.viscose-index-item strong {
+  overflow: hidden;
+  font-size: 0.75rem;
+  font-weight: 720;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.viscose-index-item.active {
+  border-color: var(--focus-stroke);
+  background: var(--active-surface);
+  color: var(--ink);
+}
+
+.viscose-card {
+  z-index: calc(8 - var(--depth));
+  width: clamp(160px, 21vw, 260px);
+  aspect-ratio: 4 / 5;
+  border-color: color-mix(in srgb, var(--ink) 12%, transparent);
+  border-radius: 20px;
+  background: var(--panel-surface-strong);
+  box-shadow: 0 18px 48px rgba(1, 28, 51, 0.13);
+  opacity: calc(1 - (var(--depth) * 0.1));
+  transform:
+    translate(-50%, -50%)
+    translateX(calc((var(--offset) * 66px) + 210px))
+    translateY(calc(var(--offset) * 46px))
+    rotate(calc(var(--offset) * -4.25deg))
+    scale(calc(1 - (var(--depth) * 0.045)));
+  transition: transform 560ms cubic-bezier(0.16, 1, 0.3, 1), opacity 320ms ease, filter 320ms ease, border-color 320ms ease;
+}
+
+.viscose-card:hover {
+  filter: saturate(1.05) contrast(1.02);
+  transform:
+    translate(-50%, -50%)
+    translateX(calc((var(--offset) * 72px) + 204px))
+    translateY(calc(var(--offset) * 50px))
+    rotate(calc(var(--offset) * -3deg))
+    scale(calc(1 - (var(--depth) * 0.035)));
+}
+
+.viscose-card.active {
+  border-color: var(--focus-stroke);
+  box-shadow: 0 24px 66px rgba(1, 28, 51, 0.18);
+  transform: translate(-50%, -50%) translateX(-72px) translateY(0) rotate(0deg) scale(1.08);
+}
+
+.viscose-card::after {
+  background: linear-gradient(180deg, transparent 62%, rgba(1, 1, 2, 0.3));
+}
+
+.viscose-card .visual-card-copy {
+  display: none;
+}
+
+.viscose-card .visual-index {
+  top: auto;
+  right: auto;
+  bottom: 12px;
+  left: 12px;
+  padding: 6px 9px;
+  background: color-mix(in srgb, var(--panel-surface-strong) 80%, transparent);
+  color: var(--ink);
+  backdrop-filter: blur(12px);
+}
+
+:root[data-theme='dark'] .viscose-card {
+  box-shadow: 0 22px 58px rgba(0, 0, 0, 0.42);
+}
+
+:root[data-theme='dark'] .viscose-card::after {
+  background: linear-gradient(180deg, transparent 62%, rgba(0, 0, 0, 0.52));
+}
+
+@media (max-width: 900px) {
+  .viscose-meta-lockup {
+    grid-template-columns: 1fr;
+  }
+
+  .viscose-meta-right {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .viscose-index-column {
+    width: min(190px, 48%);
+  }
+}
+
+@media (max-width: 560px) {
+  .viscose-stage-shell {
+    grid-template-rows: auto minmax(360px, 1fr) auto;
+  }
+
+  .viscose-index-column {
+    display: none;
+  }
+
+  .viscose-card {
+    width: clamp(138px, 44vw, 190px);
+    transform:
+      translate(-50%, -50%)
+      translateX(calc((var(--offset) * 42px) + 118px))
+      translateY(calc(var(--offset) * 34px))
+      rotate(calc(var(--offset) * -4deg))
+      scale(calc(1 - (var(--depth) * 0.04)));
+  }
+
+  .viscose-card.active {
+    transform: translate(-50%, -50%) translateX(-54px) translateY(0) rotate(0deg) scale(1.06);
+  }
+}
