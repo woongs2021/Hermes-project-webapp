@@ -1584,12 +1584,14 @@
   font-size: 0.9rem;
 }
 
-.graph-edge-card {
+.graph-edge-card,
+.graph-contract-card {
   display: grid;
   gap: 18px;
 }
 
 .graph-edge-card h3,
+.graph-contract-card h3,
 .monthly-shortlist-card h3 {
   font-size: clamp(1.35rem, 2.2vw, 2.2rem);
 }
@@ -1598,7 +1600,8 @@
 .shortlist-stack,
 .validation-check-grid,
 .monthly-theme-grid,
-.monthly-metric-grid {
+.monthly-metric-grid,
+.graph-contract-grid {
   display: grid;
   gap: 12px;
 }
@@ -1612,6 +1615,39 @@
   border-radius: 16px;
   padding: 12px 14px;
   background: var(--chip-surface);
+}
+
+.graph-contract-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.graph-contract-item {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  min-height: 170px;
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 16px;
+  background: var(--panel-surface);
+}
+
+.graph-contract-item span {
+  color: var(--quiet-ink);
+  font-size: 0.78rem;
+  font-weight: 780;
+  letter-spacing: 0.08em;
+}
+
+.graph-contract-item strong {
+  color: var(--mid);
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.graph-contract-item p {
+  color: var(--muted-ink);
+  font-size: 0.9rem;
 }
 
 .edge-row span,
@@ -1776,6 +1812,7 @@
   .research-detail-layout,
   .architecture-grid,
   .graph-node-board,
+  .graph-contract-grid,
   .edge-row,
   .timeline-card,
   .monthly-metric-grid,

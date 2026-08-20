@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-19T00:47:08.207Z",
+  "generatedAt": "2026-08-20T00:47:45.746Z",
   "sourcePolicy": "public-safe home visual manifest only; exposes copied still/turntable assets and approved display copy; excludes raw logs, prompts, remote URLs, model/job IDs, credentials, private IDs, and local source paths",
   "homeComponent": "HomeVisualHero",
   "status": "public_home_allowed",
@@ -1531,6 +1531,58 @@
       "detailMedia": "turntable_video",
       "metadata": {
         "dateKst": "2026-08-17",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-19-goyounjung-01-quiet-keystone",
+      "title": "Quiet Keystone",
+      "dateKst": "2026-08-19",
+      "theme": "Parchment bg · deep olive continuous keystone object",
+      "metaphor": "판단을 안정적으로 받쳐주는 조용한 구조물",
+      "why": [
+        "Chris가 새 메타포 2종 중 1번만 오늘 최종 저장하도록 승인했습니다.",
+        "단일 연속 오브젝트, 대각/3⁄4 뷰, 넉넉한 여백으로 안정적인 제품 아이콘 감각을 유지합니다.",
+        "반복 재생 안정성을 위해 direct Kling 결과를 1080×1080 muted H.264 forward→reverse loopable 턴테이블로 패키징했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-19-61-01-quiet-keystone.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-19-61-01-quiet-keystone.turntable.1080.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-19",
+        "displayMode": "pinterest_masonry_card",
+        "interaction": "dashboard_still_click_opens_turntable_detail_view",
+        "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",
+        "sourceStatus": "final_single_approved",
+        "detailFallback": "static_still"
+      },
+      "publicSafe": true
+    },
+    {
+      "id": "2026-08-20-goyounjung-01-quiet-reading-rest",
+      "title": "Quiet Reading Rest",
+      "dateKst": "2026-08-20",
+      "theme": "woongdesignv2-compatible extension · Burnt Coral bg #D96F55 · Warm Parchment object #F3E6B8 · Deep Umber underside #5B3A14",
+      "metaphor": "AI가 실행되기 전, 근거를 조용히 올려 두고 사람이 다시 읽는 받침대",
+      "why": [
+        "최근 Quiet Keystone·Folded Ribbon 계열 반복을 피하고, 지식/검토용 받침대 메타포로 전환했습니다.",
+        "blue/mint/violet 반복과 금지색 #EEDCD6를 피하고 Burnt Coral·Warm Parchment 확장 팔레트로 오늘 색감을 분리했습니다.",
+        "단일 매트 3D 오브젝트 중심, 텍스트·로고·입자·자갈·마디형 구조 없이 1080×1080 direct Kling 턴테이블로 패키징했습니다."
+      ],
+      "imageSrc": "/assets/home-visuals/2026-08-20-62-01-quiet-reading-rest.png",
+      "videoSrc": "/assets/home-visuals/turntables/2026-08-20-62-01-quiet-reading-rest.turntable.1080.muted.mp4",
+      "status": "public_home_allowed",
+      "mediaCapability": "turntable_available",
+      "detailMedia": "turntable_video",
+      "metadata": {
+        "dateKst": "2026-08-20",
         "displayMode": "pinterest_masonry_card",
         "interaction": "dashboard_still_click_opens_turntable_detail_view",
         "promptPolicy": "exact_prompt_hidden_by_default; share only on Chris request",

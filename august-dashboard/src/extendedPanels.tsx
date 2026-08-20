@@ -164,6 +164,24 @@ const graphEdges: GraphEdge[] = [
   { from: 'Muyeol', to: 'Chris', label: 'returns safe synthesis' },
 ]
 
+const graphMvpContracts = [
+  {
+    label: 'nodes.jsonl',
+    value: 'Agent · ResearchItem · Insight · Artifact · Decision',
+    detail: '루프 산출물을 공개 가능한 노드 단위로만 승격합니다.',
+  },
+  {
+    label: 'edges.jsonl',
+    value: 'SUPPORTS · FEEDS · VALIDATED_BY · BELONGS_TO_THEME',
+    detail: '근거가 어떤 화면과 판단으로 이어지는지 relation breadcrumb를 남깁니다.',
+  },
+  {
+    label: 'schema.md',
+    value: 'public-safe boundary · validation_status · source confidence',
+    detail: 'raw log, prompt, credential, private path는 기본 UI 계약 밖에 둡니다.',
+  },
+]
+
 export function GraphRelationshipPanel() {
   const { visualSet, researchBoard } = useDashboardSources()
   const nodes = useMemo(() => buildGraphNodes(visualSet, researchBoard), [visualSet, researchBoard])
@@ -206,6 +224,20 @@ export function GraphRelationshipPanel() {
               <small>{edge.label}</small>
               <strong>{edge.to}</strong>
             </div>
+          ))}
+        </div>
+      </article>
+
+      <article className="content-card graph-contract-card">
+        <p className="card-kicker">File-based MVP contract</p>
+        <h3>무거운 DB 전에, 안전한 파일 그래프 계약부터 고정합니다</h3>
+        <div className="graph-contract-grid" aria-label="Graph MVP file contract">
+          {graphMvpContracts.map((contract) => (
+            <section className="graph-contract-item" key={contract.label}>
+              <span>{contract.label}</span>
+              <strong>{contract.value}</strong>
+              <p>{contract.detail}</p>
+            </section>
           ))}
         </div>
       </article>
