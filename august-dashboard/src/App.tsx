@@ -433,6 +433,30 @@ function getVisualCarouselOffset(index: number, activeIndex: number, total: numb
   return offset
 }
 
+function getVisualSphereStyle(index: number, activeIndex: number, total: number): CSSProperties {
+  const offset = getVisualCarouselOffset(index, activeIndex, total)
+  const depth = Math.min(Math.abs(offset), 12)
+  const theta = offset * 18
+  const verticalSeed = ((index * 7) % 13) - 6
+  const y = offset === 0 ? 0 : verticalSeed * 15
+  const tilt = offset === 0 ? 0 : verticalSeed * -2.2
+  const x = Math.sin((theta * Math.PI) / 180) * 210
+  const z = Math.cos((theta * Math.PI) / 180) * 120
+  const visibility = offset === 0 ? 1 : Math.max(0.18, 1 - depth * 0.055)
+
+  return {
+    '--offset': offset,
+    '--depth': depth,
+    '--sphere-x': `${x.toFixed(1)}px`,
+    '--sphere-y': `${y.toFixed(1)}px`,
+    '--sphere-z': `${z.toFixed(1)}px`,
+    '--sphere-rotate': `${theta.toFixed(1)}deg`,
+    '--sphere-tilt': `${tilt.toFixed(1)}deg`,
+    '--sphere-opacity': visibility,
+    '--sphere-layer': 100 - depth,
+  } as CSSProperties
+}
+
 function HomeVisualHeroPanel() {
   const [visualSet, setVisualSet] = useState<HomeVisualSet>(fallbackHomeVisualSet)
   const [activeIndex, setActiveIndex] = useState(0)
@@ -500,11 +524,11 @@ function HomeVisualHeroPanel() {
     <div className="home-visual-grid" aria-label="Public-safe home visual carousel">
       <section className="content-card home-visual-carousel-system" aria-label="Viscose-inspired home visual carousel">
         <div className="home-visual-carousel-copy">
-          <p className="card-kicker">Home visual carousel</p>
-          <h3>{totalItems}개의 turntable-ready final visual을 하나의 회전하는 시각 시스템으로 읽습니다</h3>
+          <p className="card-kicker">Home visual sphere</p>
+          <h3>투명한 360° 구체 위에 붙은 final visual cards</h3>
           <p>
-            Viscose의 off-screen ring, front-card metadata anchor, side index, soft thread motion을 대시보드용 React/CSS로 더 자연스럽게 번역했습니다.
-            데이터는 public-safe manifest의 승인 still과 turntable detail만 사용합니다.
+            작은 카드들이 구체 표면을 따라 돌고, 스크롤하거나 클릭하면 선택 카드가 정면으로 옵니다.
+            아래 detail 영상은 선택된 카드의 turntable에 맞춰 자동재생됩니다.
           </p>
           <div className="archive-stat-grid" aria-label="Home visual archive summary">
             <span><strong>{totalItems}</strong> approved stills</span>
@@ -529,8 +553,8 @@ function HomeVisualHeroPanel() {
             </div>
           ) : null}
           <div
-            className="viscose-carousel-stage"
-            aria-label="Scrollable viscose-style visual ring"
+            className="viscose-carousel-stage visual-sphere-stage"
+            aria-label="Scrollable 360 degree transparent visual sphere"
             onWheel={handleCarouselWheel}
             onPointerDown={(event) => {
               dragStartRef.current = { x: event.clientX, time: Date.now() }
@@ -560,12 +584,8 @@ function HomeVisualHeroPanel() {
             {visualSet.items.map((item, index) => {
               const offset = getVisualCarouselOffset(index, selectedIndex, totalItems)
               const distance = Math.abs(offset)
-              const isVisible = distance <= 6
-              const style = {
-                '--offset': offset,
-                '--depth': Math.min(distance, 6),
-                '--direction': offset === 0 ? 0 : offset > 0 ? 1 : -1,
-              } as CSSProperties
+              const isVisible = distance <= 12
+              const style = getVisualSphereStyle(index, selectedIndex, totalItems)
 
               return (
                 <button

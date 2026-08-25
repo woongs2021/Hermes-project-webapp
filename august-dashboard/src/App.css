@@ -4360,3 +4360,238 @@
     max-height: 210px;
   }
 }
+
+/* Follow-up 14: transparent 3D sphere mapped visual card loop */
+.visual-sphere-stage,
+:root[data-theme='dark'] .visual-sphere-stage {
+  --sphere-size: min(520px, 74vw);
+  min-height: 540px;
+  overflow: hidden;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(252, 252, 255, 0.18), transparent 34%),
+    radial-gradient(circle at 50% 50%, rgba(64, 101, 248, 0.08), transparent 58%),
+    transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.visual-sphere-stage::before,
+.visual-sphere-stage::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--sphere-size);
+  height: var(--sphere-size);
+  border-radius: 999px;
+  pointer-events: none;
+  content: '';
+  transform: translate(-50%, -50%);
+}
+
+.visual-sphere-stage::before {
+  border: 1px solid rgba(64, 101, 248, 0.18);
+  background:
+    radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.34), transparent 10%),
+    radial-gradient(circle at 68% 72%, rgba(64, 101, 248, 0.12), transparent 28%),
+    linear-gradient(135deg, rgba(252, 252, 255, 0.1), rgba(252, 252, 255, 0.02));
+  box-shadow:
+    inset 0 0 60px rgba(64, 101, 248, 0.1),
+    inset 0 0 120px rgba(255, 255, 255, 0.12),
+    0 28px 80px rgba(1, 1, 2, 0.08);
+}
+
+.visual-sphere-stage::after {
+  border: 1px dashed rgba(1, 1, 2, 0.12);
+  background:
+    repeating-radial-gradient(circle at center, transparent 0 34px, rgba(64, 101, 248, 0.08) 35px 36px),
+    linear-gradient(90deg, transparent 49.6%, rgba(1, 1, 2, 0.08) 49.6% 50.4%, transparent 50.4%),
+    linear-gradient(0deg, transparent 49.6%, rgba(1, 1, 2, 0.08) 49.6% 50.4%, transparent 50.4%);
+  opacity: 0.62;
+  transform: translate(-50%, -50%) rotateX(64deg) rotateZ(-14deg);
+}
+
+:root[data-theme='dark'] .visual-sphere-stage::before {
+  border-color: rgba(252, 252, 255, 0.16);
+  background:
+    radial-gradient(circle at 35% 28%, rgba(252, 252, 255, 0.16), transparent 10%),
+    radial-gradient(circle at 68% 72%, rgba(112, 139, 255, 0.18), transparent 28%),
+    linear-gradient(135deg, rgba(252, 252, 255, 0.06), rgba(252, 252, 255, 0.015));
+  box-shadow:
+    inset 0 0 70px rgba(112, 139, 255, 0.12),
+    inset 0 0 140px rgba(252, 252, 255, 0.04),
+    0 30px 90px rgba(0, 0, 0, 0.26);
+}
+
+:root[data-theme='dark'] .visual-sphere-stage::after {
+  border-color: rgba(252, 252, 255, 0.12);
+  background:
+    repeating-radial-gradient(circle at center, transparent 0 34px, rgba(252, 252, 255, 0.07) 35px 36px),
+    linear-gradient(90deg, transparent 49.6%, rgba(252, 252, 255, 0.08) 49.6% 50.4%, transparent 50.4%),
+    linear-gradient(0deg, transparent 49.6%, rgba(252, 252, 255, 0.08) 49.6% 50.4%, transparent 50.4%);
+}
+
+.visual-sphere-stage .viscose-thread-field {
+  display: none;
+}
+
+.visual-sphere-stage .viscose-index-column {
+  right: 14px;
+  z-index: 120;
+}
+
+.visual-sphere-stage .viscose-card {
+  width: clamp(74px, 8.2vw, 116px);
+  height: clamp(98px, 11.4vw, 154px);
+  z-index: calc(var(--sphere-layer) * 1);
+  opacity: var(--sphere-opacity);
+  transform:
+    translate(-50%, -50%)
+    translate3d(var(--sphere-x), var(--sphere-y), var(--sphere-z))
+    rotateY(calc(var(--sphere-rotate) * -1))
+    rotateX(var(--sphere-tilt))
+    scale(calc(0.62 + (1 - min(var(--depth), 10) * 0.035)));
+  transform-style: preserve-3d;
+  border-color: rgba(252, 252, 255, 0.42);
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(1, 1, 2, 0.16);
+  filter: saturate(calc(1 - min(var(--depth), 8) * 0.035));
+  transition:
+    transform 640ms cubic-bezier(0.18, 0.9, 0.18, 1),
+    opacity 360ms ease,
+    filter 360ms ease,
+    box-shadow 360ms ease;
+}
+
+.visual-sphere-stage .viscose-card.active {
+  z-index: 140;
+  opacity: 1;
+  transform: translate(-50%, -50%) translate3d(0, 0, 182px) rotateY(0deg) rotateX(0deg) scale(1.18);
+  border-color: rgba(64, 101, 248, 0.72);
+  box-shadow:
+    0 22px 54px rgba(1, 1, 2, 0.2),
+    0 0 0 1px rgba(252, 252, 255, 0.45) inset;
+  filter: saturate(1.04);
+}
+
+.visual-sphere-stage .viscose-card[aria-hidden='true'] {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.visual-sphere-stage .visual-index {
+  font-size: 0.5rem;
+  padding: 4px 6px;
+}
+
+.visual-sphere-stage .visual-card-copy {
+  padding: 8px;
+}
+
+.visual-sphere-stage .visual-card-copy strong {
+  font-size: 0.68rem;
+}
+
+.visual-sphere-stage .visual-card-copy span {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .visual-sphere-stage,
+  :root[data-theme='dark'] .visual-sphere-stage {
+    --sphere-size: min(440px, 88vw);
+    min-height: 470px;
+    perspective: 940px;
+  }
+
+  .visual-sphere-stage .viscose-card {
+    width: clamp(62px, 16vw, 92px);
+    height: clamp(84px, 21vw, 124px);
+  }
+
+  .visual-sphere-stage .viscose-card.active {
+    transform: translate(-50%, -50%) translate3d(0, 0, 148px) rotateY(0deg) rotateX(0deg) scale(1.12);
+  }
+}
+
+@media (max-width: 560px) {
+  .visual-sphere-stage,
+  :root[data-theme='dark'] .visual-sphere-stage {
+    --sphere-size: min(340px, 90vw);
+    min-height: 390px;
+    perspective: 820px;
+  }
+
+  .visual-sphere-stage::after {
+    opacity: 0.5;
+  }
+
+  .visual-sphere-stage .viscose-index-column {
+    display: none;
+  }
+
+  .visual-sphere-stage .viscose-card {
+    width: clamp(52px, 17vw, 76px);
+    height: clamp(72px, 23vw, 104px);
+    border-radius: 14px;
+  }
+
+  .visual-sphere-stage .viscose-card.active {
+    transform: translate(-50%, -50%) translate3d(0, 0, 118px) rotateY(0deg) rotateX(0deg) scale(1.16);
+  }
+}
+
+/* Follow-up 14b: make transparent globe visibly read as a 3D mapped sphere */
+.visual-sphere-stage::before {
+  z-index: 2;
+  border-color: rgba(64, 101, 248, 0.28);
+  background:
+    radial-gradient(circle at 32% 24%, rgba(255, 255, 255, 0.42), transparent 9%),
+    radial-gradient(circle at 50% 50%, rgba(64, 101, 248, 0.1), transparent 62%),
+    linear-gradient(135deg, rgba(252, 252, 255, 0.16), rgba(252, 252, 255, 0.03));
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.28),
+    inset 0 0 70px rgba(64, 101, 248, 0.14),
+    inset 0 0 150px rgba(255, 255, 255, 0.14),
+    0 28px 80px rgba(1, 1, 2, 0.08);
+}
+
+.visual-sphere-stage::after {
+  z-index: 118;
+  border-color: rgba(64, 101, 248, 0.24);
+  background:
+    repeating-radial-gradient(ellipse at center, transparent 0 33px, rgba(64, 101, 248, 0.16) 34px 35px),
+    repeating-linear-gradient(90deg, transparent 0 49px, rgba(64, 101, 248, 0.11) 50px 51px),
+    linear-gradient(90deg, transparent 49.5%, rgba(1, 1, 2, 0.12) 49.5% 50.5%, transparent 50.5%),
+    linear-gradient(0deg, transparent 49.5%, rgba(1, 1, 2, 0.1) 49.5% 50.5%, transparent 50.5%);
+  mix-blend-mode: multiply;
+  opacity: 0.76;
+}
+
+.visual-sphere-stage .viscose-card {
+  z-index: calc(20 + var(--sphere-layer));
+}
+
+.visual-sphere-stage .viscose-card.active {
+  z-index: 160;
+}
+
+:root[data-theme='dark'] .visual-sphere-stage::before {
+  border-color: rgba(252, 252, 255, 0.22);
+  box-shadow:
+    inset 0 0 0 1px rgba(252, 252, 255, 0.12),
+    inset 0 0 80px rgba(112, 139, 255, 0.16),
+    inset 0 0 160px rgba(252, 252, 255, 0.05),
+    0 32px 90px rgba(0, 0, 0, 0.28);
+}
+
+:root[data-theme='dark'] .visual-sphere-stage::after {
+  border-color: rgba(252, 252, 255, 0.18);
+  background:
+    repeating-radial-gradient(ellipse at center, transparent 0 33px, rgba(252, 252, 255, 0.13) 34px 35px),
+    repeating-linear-gradient(90deg, transparent 0 49px, rgba(252, 252, 255, 0.08) 50px 51px),
+    linear-gradient(90deg, transparent 49.5%, rgba(252, 252, 255, 0.1) 49.5% 50.5%, transparent 50.5%),
+    linear-gradient(0deg, transparent 49.5%, rgba(252, 252, 255, 0.1) 49.5% 50.5%, transparent 50.5%);
+  mix-blend-mode: screen;
+}
