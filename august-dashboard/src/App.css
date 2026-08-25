@@ -4393,9 +4393,9 @@
 
 .visual-marquee-stage .viscose-card {
   --card-w: clamp(118px, 13vw, 176px);
-  --slot-w: calc(var(--card-w) * 1.22);
+  --slot-w: calc(var(--card-w) * 1.62);
   --travel: calc(var(--slot-w) * var(--marquee-count));
-  --marquee-step-time: 5.6s;
+  --marquee-step-time: 7.4s;
   position: absolute;
   top: 50%;
   left: 0;
@@ -4521,8 +4521,8 @@
 
   .visual-marquee-stage .viscose-card {
     --card-w: clamp(100px, 24vw, 146px);
-    --slot-w: calc(var(--card-w) * 1.18);
-    --marquee-step-time: 5.6s;
+    --slot-w: calc(var(--card-w) * 1.7);
+    --marquee-step-time: 7.8s;
     border-radius: 18px;
   }
 }
@@ -4535,8 +4535,8 @@
 
   .visual-marquee-stage .viscose-card {
     --card-w: clamp(82px, 29vw, 112px);
-    --slot-w: calc(var(--card-w) * 1.18);
-    --marquee-step-time: 5.6s;
+    --slot-w: calc(var(--card-w) * 1.7);
+    --marquee-step-time: 7.8s;
     border-radius: 16px;
   }
 
