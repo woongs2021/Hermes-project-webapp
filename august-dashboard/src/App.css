@@ -4393,25 +4393,26 @@
 
 .visual-marquee-stage .viscose-card {
   --card-w: clamp(118px, 13vw, 176px);
-  --gap-w: clamp(28px, 4vw, 56px);
-  --travel: calc((var(--card-w) + var(--gap-w)) * var(--marquee-count));
+  --slot-w: calc(var(--card-w) * 0.67);
+  --travel: calc(var(--slot-w) * var(--marquee-count));
+  --marquee-step-time: 4.2s;
   position: absolute;
   top: 50%;
   left: 0;
   width: var(--card-w);
   height: calc(var(--card-w) * 1.32);
-  opacity: 0.78;
-  z-index: 2;
+  opacity: 0.82;
+  z-index: calc(2 + var(--marquee-slot));
   transform:
-    translateX(calc(100vw + ((var(--card-w) + var(--gap-w)) * var(--marquee-slot))))
+    translateX(calc(100vw + (var(--slot-w) * var(--marquee-slot))))
     translateY(-50%)
     rotate(-20deg);
   transform-origin: 50% 70%;
   border: 0;
   border-radius: 22px;
   box-shadow: 0 18px 42px rgba(1, 1, 2, 0.16);
-  animation: visualMarqueeFlow calc(max(var(--marquee-count), 12) * 1.15s) linear infinite;
-  animation-delay: calc(var(--marquee-slot) * -1.15s);
+  animation: visualMarqueeFlow calc(max(var(--marquee-count), 12) * var(--marquee-step-time)) linear infinite;
+  animation-delay: calc(var(--marquee-slot) * -1 * var(--marquee-step-time));
   will-change: transform;
 }
 
@@ -4458,13 +4459,13 @@
 @keyframes visualMarqueeFlow {
   from {
     transform:
-      translateX(calc(100vw + ((var(--card-w) + var(--gap-w)) * var(--marquee-slot))))
+      translateX(calc(100vw + (var(--slot-w) * var(--marquee-slot))))
       translateY(-50%)
       rotate(-20deg);
   }
   to {
     transform:
-      translateX(calc(-1 * var(--travel) + ((var(--card-w) + var(--gap-w)) * var(--marquee-slot))))
+      translateX(calc(-1 * var(--travel) + (var(--slot-w) * var(--marquee-slot))))
       translateY(-50%)
       rotate(-20deg);
   }
@@ -4478,7 +4479,8 @@
 
   .visual-marquee-stage .viscose-card {
     --card-w: clamp(100px, 24vw, 146px);
-    --gap-w: clamp(22px, 6vw, 42px);
+    --slot-w: calc(var(--card-w) * 0.67);
+    --marquee-step-time: 4.2s;
     border-radius: 18px;
   }
 }
@@ -4491,7 +4493,8 @@
 
   .visual-marquee-stage .viscose-card {
     --card-w: clamp(82px, 29vw, 112px);
-    --gap-w: 24px;
+    --slot-w: calc(var(--card-w) * 0.67);
+    --marquee-step-time: 4.2s;
     border-radius: 16px;
   }
 
