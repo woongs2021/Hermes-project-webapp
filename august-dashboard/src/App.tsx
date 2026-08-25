@@ -649,8 +649,10 @@ function HomeVisualDetail({
         <div className="visual-media-frame">
           {item.videoSrc ? (
             <video
+              key={item.id}
               src={toAppAssetSrc(item.videoSrc)}
               poster={toAppAssetSrc(item.imageSrc)}
+              autoPlay
               controls
               muted
               loop
@@ -1237,7 +1239,6 @@ function App() {
 
   function selectTab(tab: Tab) {
     setActiveTab(tab)
-    setIsMenuOpen(false)
     window.history.replaceState(null, '', `#${tab.id}`)
   }
 
