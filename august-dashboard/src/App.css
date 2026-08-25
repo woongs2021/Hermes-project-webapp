@@ -3976,3 +3976,116 @@
     border: 0;
   }
 }
+
+/* Follow-up 10: visible mobile hero rescue after real Pages screenshot QA */
+.home-visual-carousel-system {
+  align-items: start;
+}
+
+.home-visual-carousel-copy {
+  align-content: start;
+}
+
+@media (max-width: 900px) {
+  .home-visual-carousel-system {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: 20px 0 0;
+  }
+
+  .home-visual-carousel-copy {
+    gap: 12px;
+    padding-inline: 4px;
+  }
+
+  .home-visual-carousel-copy h3 {
+    font-size: clamp(1.55rem, 7vw, 2.4rem);
+    line-height: 0.98;
+  }
+
+  .home-visual-carousel-copy p:not(.card-kicker) {
+    font-size: 0.88rem;
+  }
+
+  .archive-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .viscose-stage-shell {
+    grid-template-rows: auto minmax(300px, 1fr) auto;
+  }
+
+  .viscose-meta-lockup {
+    min-height: 0;
+    padding: 12px;
+  }
+
+  .viscose-carousel-stage {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 560px) {
+  .workspace {
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .workspace-header {
+    gap: 8px;
+  }
+
+  .home-visual-carousel-system {
+    gap: 16px;
+    padding-top: 18px;
+  }
+
+  .home-visual-carousel-copy h3 {
+    font-size: clamp(1.42rem, 6.4vw, 2rem);
+  }
+
+  .home-visual-carousel-copy p:not(.card-kicker) {
+    max-width: 100%;
+    font-size: 0.82rem;
+  }
+
+  .archive-stat-grid span {
+    padding: 10px;
+    font-size: 0.68rem;
+  }
+
+  .archive-stat-grid strong {
+    font-size: 0.98rem;
+  }
+
+  .viscose-stage-shell {
+    grid-template-rows: auto minmax(270px, 1fr) auto;
+    gap: 10px;
+  }
+
+  .viscose-meta-lockup {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .viscose-meta-right {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .viscose-carousel-stage {
+    min-height: 270px;
+  }
+
+  .viscose-card {
+    width: clamp(128px, 43vw, 168px);
+  }
+
+  .viscose-card.active {
+    transform: translate(-50%, -50%) translateX(0) translateY(0) rotate(0deg) scale(1.02);
+  }
+
+  .visual-filmstrip {
+    margin-top: 0;
+  }
+}
