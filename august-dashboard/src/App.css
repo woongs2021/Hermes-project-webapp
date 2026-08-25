@@ -4301,3 +4301,62 @@
     margin-top: 10px;
   }
 }
+
+/* Follow-up 13: mobile/fold fixed top blur and +10px inner offset */
+.theme-icon-button,
+.topbar .brand-block,
+.hamburger-button {
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    padding-top: 82px;
+  }
+
+  .topbar,
+  :root[data-theme='dark'] .topbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    margin: 0;
+    padding: 0 12px 10px;
+    transform: none;
+  }
+
+  .theme-icon-button,
+  .topbar .brand-block,
+  .hamburger-button {
+    margin-top: 20px;
+  }
+
+  .topbar .tab-nav.open,
+  :root[data-theme='dark'] .topbar .tab-nav.open {
+    max-height: 170px;
+  }
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    padding-top: 78px;
+  }
+
+  .topbar,
+  :root[data-theme='dark'] .topbar {
+    padding-inline: 8px;
+    padding-bottom: 8px;
+  }
+
+  .theme-icon-button,
+  .topbar .brand-block,
+  .hamburger-button {
+    margin-top: 20px;
+  }
+
+  .topbar .tab-nav.open,
+  :root[data-theme='dark'] .topbar .tab-nav.open {
+    max-height: 210px;
+  }
+}
