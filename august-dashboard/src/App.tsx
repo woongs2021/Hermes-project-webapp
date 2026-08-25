@@ -433,27 +433,10 @@ function getVisualCarouselOffset(index: number, activeIndex: number, total: numb
   return offset
 }
 
-function getVisualSphereStyle(index: number, activeIndex: number, total: number): CSSProperties {
-  const offset = getVisualCarouselOffset(index, activeIndex, total)
-  const depth = Math.min(Math.abs(offset), 12)
-  const theta = offset * 18
-  const verticalSeed = ((index * 7) % 13) - 6
-  const y = offset === 0 ? 0 : verticalSeed * 15
-  const tilt = offset === 0 ? 0 : verticalSeed * -2.2
-  const x = Math.sin((theta * Math.PI) / 180) * 210
-  const z = Math.cos((theta * Math.PI) / 180) * 120
-  const visibility = offset === 0 ? 1 : Math.max(0.18, 1 - depth * 0.055)
-
+function getVisualMarqueeStyle(index: number, total: number): CSSProperties {
   return {
-    '--offset': offset,
-    '--depth': depth,
-    '--sphere-x': `${x.toFixed(1)}px`,
-    '--sphere-y': `${y.toFixed(1)}px`,
-    '--sphere-z': `${z.toFixed(1)}px`,
-    '--sphere-rotate': `${theta.toFixed(1)}deg`,
-    '--sphere-tilt': `${tilt.toFixed(1)}deg`,
-    '--sphere-opacity': visibility,
-    '--sphere-layer': 100 - depth,
+    '--marquee-slot': index,
+    '--marquee-count': Math.max(total, 1),
   } as CSSProperties
 }
 
@@ -484,9 +467,6 @@ function HomeVisualHeroPanel() {
   const totalItems = visualSet.items.length
   const selectedIndex = totalItems > 0 ? wrapVisualIndex(activeIndex, totalItems) : -1
   const selectedItem = selectedIndex >= 0 ? visualSet.items[selectedIndex] : undefined
-  const visibleRingItems = totalItems > 0
-    ? visualSet.items.map((item, index) => ({ item, index, offset: getVisualCarouselOffset(index, selectedIndex, totalItems) })).filter(({ offset }) => Math.abs(offset) <= 5)
-    : []
   const turntableCount = visualSet.items.filter((item) => item.videoSrc).length
   const firstDate = visualSet.items[0]?.dateKst ?? 'pending'
   const latestDate = visualSet.items.at(-1)?.dateKst ?? 'pending'
@@ -524,11 +504,10 @@ function HomeVisualHeroPanel() {
     <div className="home-visual-grid" aria-label="Public-safe home visual carousel">
       <section className="content-card home-visual-carousel-system" aria-label="Viscose-inspired home visual carousel">
         <div className="home-visual-carousel-copy">
-          <p className="card-kicker">Home visual sphere</p>
-          <h3>투명한 360° 구체 위에 붙은 final visual cards</h3>
+          <p className="card-kicker">Home visual flow</p>
+          <h3>20°로 기울어진 visual cards가 한 줄로 빠르게 흐릅니다</h3>
           <p>
-            작은 카드들이 구체 표면을 따라 돌고, 스크롤하거나 클릭하면 선택 카드가 정면으로 옵니다.
-            아래 detail 영상은 선택된 카드의 turntable에 맞춰 자동재생됩니다.
+            모든 final visual이 좌측으로 흘러가고, 카드를 클릭하거나 화살표로 빠르게 넘기면 아래 turntable detail이 선택 카드에 맞춰 자동재생됩니다.
           </p>
           <div className="archive-stat-grid" aria-label="Home visual archive summary">
             <span><strong>{totalItems}</strong> approved stills</span>
@@ -553,8 +532,8 @@ function HomeVisualHeroPanel() {
             </div>
           ) : null}
           <div
-            className="viscose-carousel-stage visual-sphere-stage"
-            aria-label="Scrollable 360 degree transparent visual sphere"
+            className="viscose-carousel-stage visual-marquee-stage"
+            aria-label="Scrolling tilted visual card flow"
             onWheel={handleCarouselWheel}
             onPointerDown={(event) => {
               dragStartRef.current = { x: event.clientX, time: Date.now() }
@@ -566,26 +545,10 @@ function HomeVisualHeroPanel() {
               dragStartRef.current = null
             }}
           >
-            <div className="viscose-thread-field" aria-hidden="true" />
-            <div className="viscose-index-column" aria-label="Visible carousel index column">
-              {visibleRingItems.map(({ item, index, offset }) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  className={index === selectedIndex ? 'viscose-index-item active' : 'viscose-index-item'}
-                  style={{ '--offset': offset } as CSSProperties}
-                  onClick={() => setActiveIndex(index)}
-                >
-                  <span>{String(index + 1).padStart(2, '0')}</span>
-                  <strong>{item.title}</strong>
-                </button>
-              ))}
-            </div>
             {visualSet.items.map((item, index) => {
               const offset = getVisualCarouselOffset(index, selectedIndex, totalItems)
               const distance = Math.abs(offset)
-              const isVisible = distance <= 12
-              const style = getVisualSphereStyle(index, selectedIndex, totalItems)
+              const style = getVisualMarqueeStyle(index, totalItems)
 
               return (
                 <button
@@ -593,9 +556,7 @@ function HomeVisualHeroPanel() {
                   type="button"
                   className={index === selectedIndex ? 'viscose-card active' : 'viscose-card'}
                   style={style}
-                  aria-hidden={!isVisible}
                   aria-pressed={index === selectedIndex}
-                  tabIndex={isVisible ? 0 : -1}
                   onClick={() => setActiveIndex(index)}
                 >
                   <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} public home still`} loading={distance <= 2 ? 'eager' : 'lazy'} />
@@ -609,9 +570,9 @@ function HomeVisualHeroPanel() {
             })}
           </div>
           <div className="viscose-controls" aria-label="Home visual carousel controls">
-            <button type="button" onClick={() => moveCarousel(-1)} disabled={totalItems < 2}>Previous</button>
+            <button type="button" onClick={() => moveCarousel(-6)} disabled={totalItems < 2} aria-label="Move visual flow quickly left">← Fast</button>
             <span>{selectedIndex + 1 > 0 ? String(selectedIndex + 1).padStart(2, '0') : '00'} / {String(totalItems).padStart(2, '0')}</span>
-            <button type="button" onClick={() => moveCarousel(1)} disabled={totalItems < 2}>Next</button>
+            <button type="button" onClick={() => moveCarousel(6)} disabled={totalItems < 2} aria-label="Move visual flow quickly right">Fast →</button>
           </div>
         </div>
       </section>
