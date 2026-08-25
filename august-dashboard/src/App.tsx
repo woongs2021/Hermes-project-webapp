@@ -443,8 +443,10 @@ function getVisualMarqueeStyle(index: number, total: number): CSSProperties {
 function HomeVisualHeroPanel() {
   const [visualSet, setVisualSet] = useState<HomeVisualSet>(fallbackHomeVisualSet)
   const [activeIndex, setActiveIndex] = useState(0)
+  const [marqueeBoost, setMarqueeBoost] = useState<'left' | 'right' | null>(null)
   const lastWheelAtRef = useRef(0)
   const dragStartRef = useRef<{ x: number; time: number } | null>(null)
+  const marqueeBoostTimeoutRef = useRef<number | null>(null)
 
   useEffect(() => {
     let isMounted = true
@@ -464,6 +466,14 @@ function HomeVisualHeroPanel() {
     }
   }, [])
 
+  useEffect(() => {
+    return () => {
+      if (marqueeBoostTimeoutRef.current !== null) {
+        window.clearTimeout(marqueeBoostTimeoutRef.current)
+      }
+    }
+  }, [])
+
   const totalItems = visualSet.items.length
   const selectedIndex = totalItems > 0 ? wrapVisualIndex(activeIndex, totalItems) : -1
   const selectedItem = selectedIndex >= 0 ? visualSet.items[selectedIndex] : undefined
@@ -472,17 +482,38 @@ function HomeVisualHeroPanel() {
   const latestDate = visualSet.items.at(-1)?.dateKst ?? 'pending'
   const latestCount = visualSet.items.filter((item) => item.dateKst === latestDate).length
 
-  const moveCarousel = (delta: number) => {
+  const triggerMarqueeBoost = (direction: 'left' | 'right') => {
+    setMarqueeBoost(direction)
+    if (marqueeBoostTimeoutRef.current !== null) {
+      window.clearTimeout(marqueeBoostTimeoutRef.current)
+    }
+    marqueeBoostTimeoutRef.current = window.setTimeout(() => {
+      setMarqueeBoost(null)
+      marqueeBoostTimeoutRef.current = null
+    }, 900)
+  }
+
+  const moveCarousel = (delta: number, shouldBoost = false) => {
+    if (totalItems < 2) return
     setActiveIndex((currentIndex) => wrapVisualIndex(currentIndex + delta, totalItems))
+    if (shouldBoost) triggerMarqueeBoost(delta > 0 ? 'left' : 'right')
+  }
+
+  const handleFastMove = (delta: number) => {
+    moveCarousel(delta, true)
   }
 
   const handleCarouselWheel = (event: WheelEvent<HTMLDivElement>) => {
-    if (totalItems < 2 || Math.abs(event.deltaY) < 20) return
+    if (totalItems < 2) return
+
+    const dominantDelta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY
+    if (Math.abs(dominantDelta) < 20) return
 
     const now = Date.now()
-    if (now - lastWheelAtRef.current < 420) return
+    if (now - lastWheelAtRef.current < 260) return
     lastWheelAtRef.current = now
-    moveCarousel(event.deltaY > 0 ? 1 : -1)
+    const steps = Math.min(10, Math.max(3, Math.round(Math.abs(dominantDelta) / 42)))
+    moveCarousel(dominantDelta > 0 ? steps : -steps, Math.abs(event.deltaX) >= Math.abs(event.deltaY))
   }
 
   const handleCarouselSwipeEnd = (clientX: number) => {
@@ -491,13 +522,24 @@ function HomeVisualHeroPanel() {
     const deltaX = clientX - dragStartRef.current.x
     const elapsed = Math.max(Date.now() - dragStartRef.current.time, 1)
     dragStartRef.current = null
-    if (Math.abs(deltaX) < 42) return
+    if (Math.abs(deltaX) < 28) return
 
-    const distanceSteps = Math.floor(Math.abs(deltaX) / 140)
+    const distanceSteps = Math.floor(Math.abs(deltaX) / 34)
     const velocity = Math.abs(deltaX) / elapsed
-    const velocitySteps = velocity > 1.45 ? 2 : velocity > 0.9 ? 1 : 0
-    const steps = Math.min(8, Math.max(1, distanceSteps + velocitySteps))
-    moveCarousel(deltaX < 0 ? steps : -steps)
+    const velocitySteps = velocity > 1.45 ? 6 : velocity > 0.9 ? 4 : 2
+    const steps = Math.min(18, Math.max(4, distanceSteps + velocitySteps))
+    moveCarousel(deltaX < 0 ? steps : -steps, true)
+  }
+
+  const handleCarouselDragMove = (clientX: number) => {
+    if (!dragStartRef.current || totalItems < 2) return
+
+    const deltaX = clientX - dragStartRef.current.x
+    if (Math.abs(deltaX) < 72) return
+
+    const steps = Math.min(12, Math.max(5, Math.round(Math.abs(deltaX) / 32)))
+    moveCarousel(deltaX < 0 ? steps : -steps, true)
+    dragStartRef.current = { x: clientX, time: Date.now() }
   }
 
   return (
@@ -532,11 +574,14 @@ function HomeVisualHeroPanel() {
             </div>
           ) : null}
           <div
-            className="viscose-carousel-stage visual-marquee-stage"
+            className={`viscose-carousel-stage visual-marquee-stage${marqueeBoost ? ` boost-${marqueeBoost}` : ''}`}
             aria-label="Scrolling tilted visual card flow"
             onWheel={handleCarouselWheel}
             onPointerDown={(event) => {
               dragStartRef.current = { x: event.clientX, time: Date.now() }
+            }}
+            onPointerMove={(event) => {
+              handleCarouselDragMove(event.clientX)
             }}
             onPointerUp={(event) => {
               handleCarouselSwipeEnd(event.clientX)
@@ -570,9 +615,15 @@ function HomeVisualHeroPanel() {
             })}
           </div>
           <div className="viscose-controls" aria-label="Home visual carousel controls">
-            <button type="button" onClick={() => moveCarousel(-6)} disabled={totalItems < 2} aria-label="Move visual flow quickly left">← Fast</button>
+            <button type="button" className="viscose-arrow-button" onClick={() => handleFastMove(-8)} disabled={totalItems < 2} aria-label="Move visual flow quickly left">
+              <span aria-hidden="true">←</span>
+              <strong>Prev</strong>
+            </button>
             <span>{selectedIndex + 1 > 0 ? String(selectedIndex + 1).padStart(2, '0') : '00'} / {String(totalItems).padStart(2, '0')}</span>
-            <button type="button" onClick={() => moveCarousel(6)} disabled={totalItems < 2} aria-label="Move visual flow quickly right">Fast →</button>
+            <button type="button" className="viscose-arrow-button" onClick={() => handleFastMove(8)} disabled={totalItems < 2} aria-label="Move visual flow quickly right">
+              <strong>Next</strong>
+              <span aria-hidden="true">→</span>
+            </button>
           </div>
         </div>
       </section>

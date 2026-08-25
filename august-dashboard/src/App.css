@@ -4393,9 +4393,9 @@
 
 .visual-marquee-stage .viscose-card {
   --card-w: clamp(118px, 13vw, 176px);
-  --slot-w: calc(var(--card-w) * 0.67);
+  --slot-w: calc(var(--card-w) * 1.22);
   --travel: calc(var(--slot-w) * var(--marquee-count));
-  --marquee-step-time: 4.2s;
+  --marquee-step-time: 5.6s;
   position: absolute;
   top: 50%;
   left: 0;
@@ -4452,8 +4452,50 @@
   animation-play-state: paused;
 }
 
+.visual-marquee-stage.boost-left .viscose-card,
+.visual-marquee-stage.boost-right .viscose-card {
+  --marquee-step-time: 0.72s;
+  animation-timing-function: cubic-bezier(0.12, 0.82, 0.22, 1);
+}
+
+.visual-marquee-stage.boost-left .viscose-card {
+  filter: saturate(1.08) contrast(1.03);
+}
+
+.visual-marquee-stage.boost-right .viscose-card {
+  filter: saturate(1.02) contrast(1.04);
+}
+
 .viscose-controls button {
   min-width: 92px;
+}
+
+.viscose-controls .viscose-arrow-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 104px;
+}
+
+.viscose-arrow-button span[aria-hidden='true'] {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--active-surface-soft);
+  color: var(--mid);
+  font-size: 1.15rem;
+  font-weight: 720;
+  line-height: 1;
+}
+
+.viscose-arrow-button strong {
+  font-size: 0.68rem;
+  font-weight: 640;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 @keyframes visualMarqueeFlow {
@@ -4479,8 +4521,8 @@
 
   .visual-marquee-stage .viscose-card {
     --card-w: clamp(100px, 24vw, 146px);
-    --slot-w: calc(var(--card-w) * 0.67);
-    --marquee-step-time: 4.2s;
+    --slot-w: calc(var(--card-w) * 1.18);
+    --marquee-step-time: 5.6s;
     border-radius: 18px;
   }
 }
@@ -4493,8 +4535,8 @@
 
   .visual-marquee-stage .viscose-card {
     --card-w: clamp(82px, 29vw, 112px);
-    --slot-w: calc(var(--card-w) * 0.67);
-    --marquee-step-time: 4.2s;
+    --slot-w: calc(var(--card-w) * 1.18);
+    --marquee-step-time: 5.6s;
     border-radius: 16px;
   }
 
@@ -4505,5 +4547,16 @@
   .viscose-controls button {
     min-width: 78px;
     padding-inline: 10px;
+  }
+
+  .viscose-controls .viscose-arrow-button {
+    min-width: 86px;
+    gap: 6px;
+  }
+
+  .viscose-arrow-button span[aria-hidden='true'] {
+    width: 22px;
+    height: 22px;
+    font-size: 1.05rem;
   }
 }
