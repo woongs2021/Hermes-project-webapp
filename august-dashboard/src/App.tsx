@@ -63,10 +63,10 @@ const tabs: Tab[] = [
   },
   {
     id: 'obd',
-    label: 'OBD Graph',
-    eyebrow: 'Growth loop + relation graph',
-    title: 'OBD Knowledge Loop',
-    description: 'OBD 성장 타임라인과 Dashboard Knowledge Graph를 하나의 탭 안에서 하위 흐름으로 묶어 봅니다.',
+    label: 'OBD Map',
+    eyebrow: 'Operating map',
+    title: 'OBD Operating Map',
+    description: 'Chris의 자료가 신호, 개념, 비즈니스 판단, 검증으로 순환하는 방식을 하나의 운영 지도로 정리합니다.',
   },
   {
     id: 'research',
@@ -97,15 +97,15 @@ const researchLaneFilters = ['all', 'yuna', 'goyounjung', 'final'] as const
 const obdSubTabs: { id: ObdSubTabId; label: string; eyebrow: string; description: string }[] = [
   {
     id: 'growth',
-    label: 'Growth Loop',
-    eyebrow: 'OBD timeline',
-    description: '신호가 ontology, business translation, validation loop으로 확장되는 성장 흐름입니다.',
+    label: 'Signal Loop',
+    eyebrow: 'from source to judgment',
+    description: '논문, 비주얼, 작업 로그가 OBD 관점의 질문과 판단 언어로 바뀌는 변환 순서입니다.',
   },
   {
     id: 'graph',
-    label: 'Relation Graph',
-    eyebrow: 'Dashboard knowledge map',
-    description: 'Home visual, Research, OBD, Muyeol 검증을 Chris에게 돌아오는 하나의 관계 지도로 연결합니다.',
+    label: 'Operating Map',
+    eyebrow: 'team loop and evidence flow',
+    description: 'Karina의 조율, 에이전트 실행, Muyeol 검증, Chris의 최종 판단이 어떻게 이어지는지 보여줍니다.',
   },
 ]
 

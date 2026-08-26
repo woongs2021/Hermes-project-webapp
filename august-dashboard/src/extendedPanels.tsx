@@ -27,38 +27,38 @@ type ObdMilestone = {
 const obdMilestones: ObdMilestone[] = [
   {
     number: '01',
-    title: 'Collect signals',
-    lens: '논문 · 시각자료 · 작업 로그',
-    output: '흩어진 자료를 public-safe 카드로 변환',
-    detail: 'Yuna/Go Youn-jung research, HomeVisualHero, 팀 작업 로그를 같은 시간축에 올립니다.',
+    title: 'Catch the signal',
+    lens: 'papers · visuals · team notes',
+    output: '판단 가능한 신호만 public-safe 카드로 정리',
+    detail: '리서치, 홈 비주얼, 팀 작업 노트를 같은 작업대 위에 올려 Chris가 바로 훑을 수 있게 만듭니다.',
   },
   {
     number: '02',
-    title: 'Name the pattern',
-    lens: 'Ontology design',
-    output: '반복되는 개념을 노드와 관계로 명명',
-    detail: 'AI agency, trust, accessibility, brand value, design education 같은 반복 주제를 Chris의 성장 언어로 묶습니다.',
+    title: 'Frame the question',
+    lens: 'ontology framing',
+    output: '반복 신호를 OBD 질문으로 재명명',
+    detail: 'AI agency, trust, accessibility, brand value 같은 키워드를 단순 태그가 아니라 다음 판단을 여는 질문으로 바꿉니다.',
   },
   {
     number: '03',
-    title: 'Translate to business',
-    lens: 'Business design',
-    output: '제품/조직 판단 기준으로 번역',
-    detail: '논문 요약에서 끝내지 않고 One UI, AI UX, 디자인 리더십의 의사결정 문장으로 바꿉니다.',
+    title: 'Translate the value',
+    lens: 'business design',
+    output: '제품·조직·브랜드 판단 언어로 변환',
+    detail: '논문 요약에서 멈추지 않고 One UI, AI UX, 디자인 리더십에 적용 가능한 결정 문장으로 압축합니다.',
   },
   {
     number: '04',
-    title: 'Prototype the surface',
-    lens: 'Warm AI dashboard',
-    output: '대시보드·칸반·상세뷰로 시각화',
-    detail: '사용자가 바로 훑고, 클릭하고, 근거를 확인할 수 있는 조용한 작업실 UI를 만듭니다.',
+    title: 'Shape the surface',
+    lens: 'warm AI UX',
+    output: '읽히는 화면과 카드 구조로 구체화',
+    detail: '카드, 칸반, 상세뷰, 홈 비주얼처럼 사람이 훑고 비교하고 기억할 수 있는 형태로 옮깁니다.',
   },
   {
     number: '05',
-    title: 'Validate the loop',
-    lens: 'Muyeol QA',
-    output: '리스크·공개범위·다음 행동 확인',
-    detail: '비밀값과 private source를 분리하고, 공개 가능한 근거와 다음 구현 단위를 남깁니다.',
+    title: 'Return with proof',
+    lens: 'Muyeol validation',
+    output: '공개 범위·근거 강도·다음 행동 확정',
+    detail: '민감 정보는 분리하고, Chris에게 돌아갈 수 있는 검증된 근거와 다음 실행 단위를 남깁니다.',
   },
 ]
 
@@ -105,80 +105,80 @@ function buildGraphNodes(visualSet: HomeVisualSet, researchBoard: ResearchBoard)
     {
       id: 'chris',
       label: 'Chris',
-      value: 'OBD command',
-      description: '방향을 주고, 어떤 자료가 성장과 제품 판단으로 이어질지 결정합니다.',
+      value: 'direction and final judgment',
+      description: '질문을 열고, 어떤 신호를 OBD 성장과 제품 판단으로 연결할지 최종 결정합니다.',
       cluster: 'input',
     },
     {
       id: 'karina',
       label: 'Karina',
       value: 'coordination lead',
-      description: '팀 실행을 조율하고 결과를 하나의 읽기 쉬운 루프로 종합합니다.',
+      description: 'Chris의 방향을 실행 가능한 루프로 쪼개고, 각 에이전트의 결과를 하나의 판단 흐름으로 묶습니다.',
       cluster: 'orchestration',
     },
     {
       id: 'home',
       label: 'Home visuals',
       value: `${visualSet.items.length} stills`,
-      description: '시간순 still 카드와 클릭 turntable detail로 AI visual 자료를 안전하게 보여줍니다.',
+      description: '시각 은유와 톤을 제공해 OBD 질문이 화면 언어로 바뀌는 출발점을 만듭니다.',
       cluster: 'artifact',
     },
     {
       id: 'research-yuna',
       label: 'Yuna research',
       value: `${yunaCount} papers`,
-      description: 'AI / agent UX / future interface 논문을 시간순 칸반으로 정리합니다.',
+      description: 'AI, agent UX, future interface 논문에서 Chris가 써먹을 수 있는 근거 신호를 뽑습니다.',
       cluster: 'artifact',
     },
     {
       id: 'research-go',
       label: 'Go Youn-jung research',
       value: `${goCount} papers`,
-      description: 'UX, brand, design management 논문과 사례를 성장 렌즈로 정리합니다.',
+      description: 'UX, brand, design management 연구를 비즈니스와 디자인 리더십 언어로 연결합니다.',
       cluster: 'artifact',
     },
     {
       id: 'obd',
-      label: 'OBD growth loop',
-      value: '5-step timeline',
-      description: '수집 → 패턴 명명 → 비즈니스 번역 → 시각화 → 검증의 반복 구조입니다.',
+      label: 'OBD operating logic',
+      value: 'signal → judgment loop',
+      description: '수집한 자료를 질문, 가치, 화면, 검증으로 통과시켜 Chris의 다음 선택으로 되돌립니다.',
       cluster: 'synthesis',
     },
     {
       id: 'muyeol',
       label: 'Muyeol validation',
       value: `${koreanCount} Korean signals`,
-      description: '공개 범위, 근거 강도, 민감 리스크, 전이 가능성을 최종 확인하는 검증 관문입니다.',
+      description: '근거 강도, 공개 가능성, 민감 리스크를 확인해 판단 루프가 안전하게 닫히도록 합니다.',
       cluster: 'validation',
     },
   ]
 }
 
 const graphEdges: GraphEdge[] = [
-  { from: 'Chris', to: 'Karina', label: 'asks / sets priority' },
-  { from: 'Karina', to: 'Research lanes', label: 'routes papers' },
-  { from: 'Karina', to: 'Home visuals', label: 'routes visual material' },
-  { from: 'Research lanes', to: 'OBD loop', label: 'feeds concepts' },
-  { from: 'Home visuals', to: 'OBD loop', label: 'feeds metaphors' },
-  { from: 'OBD loop', to: 'Muyeol', label: 'requests validation' },
-  { from: 'Muyeol', to: 'Chris', label: 'returns safe synthesis' },
+  { from: 'Chris', to: 'Karina', label: 'sets direction' },
+  { from: 'Karina', to: 'Research lanes', label: 'routes evidence search' },
+  { from: 'Karina', to: 'Home visuals', label: 'routes visual language' },
+  { from: 'Research lanes', to: 'OBD logic', label: 'turns evidence into questions' },
+  { from: 'Home visuals', to: 'OBD logic', label: 'turns imagery into metaphors' },
+  { from: 'OBD logic', to: 'Muyeol', label: 'asks for risk check' },
+  { from: 'Muyeol', to: 'Chris', label: 'returns usable judgment' },
 ]
 
 const graphMvpContracts = [
   {
     label: 'nodes.jsonl',
-    value: 'Agent · ResearchItem · Insight · Artifact · Decision',
-    detail: '루프 산출물을 공개 가능한 노드 단위로만 승격합니다.',
+    value: 'Signal · Question · Evidence · Artifact · Decision',
+    detail: '대시보드의 모든 조각을 “무엇을 판단하게 해주는가” 기준으로만 노드화합니다.',
   },
   {
     label: 'edges.jsonl',
-    value: 'SUPPORTS · FEEDS · VALIDATED_BY · BELONGS_TO_THEME',
-    detail: '근거가 어떤 화면과 판단으로 이어지는지 relation breadcrumb를 남깁니다.',
+    value: 'FRAMES · SUPPORTS · TRANSLATES_TO · VALIDATED_BY',
+    detail: '근거가 어떤 질문을 만들고 어떤 판단으로 이어졌는지 연결의 이유를 남깁니다.',
   },
   {
-    label: 'schema.md',
-    value: 'public-safe boundary · validation_status · source confidence',
-    detail: 'raw log, prompt, credential, private path는 기본 UI 계약 밖에 둡니다.',
+    label: 'boundary.md',
+    value: 'public-safe source · confidence · next action',
+    detail: 'private 원문이 아니라 공개 가능한 근거 수준과 다음 행동만 화면 계약에 올립니다.',
   },
 ]
 
@@ -187,13 +187,13 @@ export function GraphRelationshipPanel() {
   const nodes = useMemo(() => buildGraphNodes(visualSet, researchBoard), [visualSet, researchBoard])
 
   return (
-    <div className="graph-panel-grid" aria-label="OBD dashboard relationship graph">
+    <div className="graph-panel-grid" aria-label="OBD operating relationship map">
       <article className="content-card graph-hero-card">
-        <p className="card-kicker">Graph tab · living map</p>
-        <h3>자료가 Chris의 OBD 판단으로 돌아오는 관계 지도</h3>
+        <p className="card-kicker">Operating map · evidence flow</p>
+        <h3>자료가 판단이 되어 Chris에게 돌아오는 운영 지도</h3>
         <p>
-          Home visual, Yuna research, Go Youn-jung research, OBD growth loop, Muyeol validation을 하나의 작업 완료 루프로 연결했습니다.
-          아직 DB graph가 아니라 화면에서 바로 읽히는 IA-style relation graph입니다.
+          이 화면은 “그래프 탭”이 아니라 Karina가 조율한 실행, 리서치와 비주얼 근거, OBD 해석, Muyeol 검증이
+          어떤 순서로 Chris의 다음 선택을 만드는지 읽게 해주는 관계 지도입니다.
         </p>
         <div className="status-row">
           <span className="status-chip">home {visualSet.items.length}</span>
@@ -202,7 +202,7 @@ export function GraphRelationshipPanel() {
         </div>
       </article>
 
-      <section className="graph-node-board" aria-label="Dashboard relation nodes">
+      <section className="graph-node-board" aria-label="OBD operating map nodes">
         {nodes.map((node) => (
           <article className={`graph-node ${node.cluster}`} key={node.id}>
             <p className="card-kicker">{node.cluster}</p>
@@ -214,9 +214,9 @@ export function GraphRelationshipPanel() {
       </section>
 
       <article className="content-card graph-edge-card">
-        <p className="card-kicker">Completion loop</p>
-        <h3>Chris → Karina → Agent Team → Muyeol → Chris</h3>
-        <div className="edge-list" aria-label="Graph edges">
+        <p className="card-kicker">Judgment loop</p>
+        <h3>Chris의 질문이 검증된 다음 행동으로 돌아오는 순서</h3>
+        <div className="edge-list" aria-label="Operating map edges">
           {graphEdges.map((edge, index) => (
             <div className="edge-row" key={`${edge.from}-${edge.to}`}>
               <span>{String(index + 1).padStart(2, '0')}</span>
@@ -229,9 +229,9 @@ export function GraphRelationshipPanel() {
       </article>
 
       <article className="content-card graph-contract-card">
-        <p className="card-kicker">File-based MVP contract</p>
-        <h3>무거운 DB 전에, 안전한 파일 그래프 계약부터 고정합니다</h3>
-        <div className="graph-contract-grid" aria-label="Graph MVP file contract">
+        <p className="card-kicker">Public-safe map contract</p>
+        <h3>관계도는 예쁜 선이 아니라, 판단 근거를 잃지 않기 위한 계약입니다</h3>
+        <div className="graph-contract-grid" aria-label="OBD operating map file contract">
           {graphMvpContracts.map((contract) => (
             <section className="graph-contract-item" key={contract.label}>
               <span>{contract.label}</span>
@@ -247,17 +247,18 @@ export function GraphRelationshipPanel() {
 
 export function ObdGrowthTimelinePanel() {
   return (
-    <div className="obd-timeline-grid" aria-label="OBD growth loop timeline">
+    <div className="obd-timeline-grid" aria-label="OBD signal loop timeline">
       <article className="content-card obd-hero-card">
-        <p className="card-kicker">OBD growth loop</p>
-        <h3>Ontology Business Designer로 성장하는 5단계 루프</h3>
+        <p className="card-kicker">Signal loop · source to judgment</p>
+        <h3>흩어진 자료를 OBD 판단 언어로 바꾸는 5단계</h3>
         <p>
-          이 탭은 일간 기록장이 아니라 Chris의 자료가 어떤 순서로 의미 체계, 비즈니스 판단, 제품/브랜드 언어로 바뀌는지 보여주는 카드형 타임라인입니다.
+          여기서는 “성장 기록”을 나열하지 않습니다. Chris가 모은 자료가 어떤 과정을 거쳐 질문, 가치, 화면 언어,
+          검증 가능한 다음 행동으로 바뀌는지 보여주는 변환 루프입니다.
         </p>
         <div className="status-row">
-          <span className="status-chip">signal → ontology</span>
-          <span className="status-chip muted">business translation</span>
-          <span className="status-chip muted">validation loop</span>
+          <span className="status-chip">signal → question</span>
+          <span className="status-chip muted">value translation</span>
+          <span className="status-chip muted">validated action</span>
         </div>
       </article>
 
@@ -383,7 +384,7 @@ export function MuyeolValidationPanel() {
     ['Public-safe manifests', 'home-visual-set과 research-board 모두 generator/validator를 통해 public/data로만 노출합니다.'],
     ['Source separation', 'raw logs, private paths, model/job IDs, credentials-like strings는 UI 계약 밖에 둡니다.'],
     ['Evidence quality', '논문 상세뷰에는 source access, Korean source status, duplicate signal을 함께 보여 과잉 일반화를 줄입니다.'],
-    ['Next QA focus', 'Graph tab은 현재 IA-style relation graph이므로 실제 nodes/edges DB로 승격하기 전 schema가 필요합니다.'],
+    ['Next QA focus', 'OBD Operating Map은 현재 화면에서 읽히는 public-safe 운영 지도이므로, 실제 nodes/edges DB로 승격하기 전 판단 근거 schema가 필요합니다.'],
   ]
 
   return (
