@@ -4730,3 +4730,44 @@
     font-size: 1.08rem;
   }
 }
+
+/* Follow-up 19: simplified top separators */
+.home-workspace .content-card {
+  border-top: 1px solid var(--stroke);
+}
+
+.home-flow-meta {
+  border-top: 0;
+  padding-top: 2px;
+}
+
+.home-flow-stage,
+:root[data-theme='dark'] .home-flow-stage {
+  background: linear-gradient(90deg, var(--canvas) 0%, transparent 10%, transparent 90%, var(--canvas) 100%);
+}
+
+.obd-subtab-nav {
+  border-top: 0;
+  border-bottom: 1px solid var(--stroke);
+  padding: 0 0 12px;
+}
+
+.obd-subtab-intro {
+  border-top: 0;
+  padding-top: 4px;
+}
+
+.obd-knowledge-shell > .obd-timeline-grid,
+.obd-knowledge-shell > .graph-panel-grid {
+  margin-top: 2px;
+}
+
+@media (max-width: 560px) {
+  .home-flow-meta {
+    padding-top: 0;
+  }
+
+  .obd-subtab-nav {
+    padding-bottom: 10px;
+  }
+}
