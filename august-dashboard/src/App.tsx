@@ -89,6 +89,12 @@ const listPlaceholders = ['Next handoff note', 'Recent validation slot', 'Refere
 const researchLaneFilters = ['all', 'yuna', 'goyounjung', 'final'] as const
 const obdSubTabs: { id: ObdSubTabId; label: string; eyebrow: string; description: string }[] = [
   {
+    id: 'about',
+    label: 'About OBD',
+    eyebrow: 'definition and Chris profile',
+    description: 'OBD 루프가 무엇인지 쉽게 정의하고, Chris가 왜 이 관점으로 AI 시대의 경험과 비즈니스를 탐구하는지 설명합니다.',
+  },
+  {
     id: 'growth',
     label: 'Signal Loop',
     eyebrow: 'from source to judgment',
@@ -99,12 +105,6 @@ const obdSubTabs: { id: ObdSubTabId; label: string; eyebrow: string; description
     label: 'Operating Map',
     eyebrow: 'team loop and evidence flow',
     description: 'Karina의 조율, 에이전트 실행, Muyeol 검증, Chris의 최종 판단이 어떻게 이어지는지 보여줍니다.',
-  },
-  {
-    id: 'about',
-    label: 'About OBD',
-    eyebrow: 'definition and Chris profile',
-    description: 'OBD 루프가 무엇인지 쉽게 정의하고, Chris가 왜 이 관점으로 AI 시대의 경험과 비즈니스를 탐구하는지 설명합니다.',
   },
 ]
 
@@ -343,6 +343,19 @@ function ChrisIntroPanel() {
             <span key={step}>{String(index + 1).padStart(2, '0')} · {step}</span>
           ))}
         </div>
+      </article>
+
+      <article className="content-card profile-statement-card">
+        <p className="card-kicker">Why this loop exists</p>
+        <h3>크리스의 일은 좋은 자료를 많이 아는 것보다, 그것을 다음 선택으로 바꾸는 일에 가깝습니다</h3>
+        <p>
+          크리스는 AI UX, One UI, 브랜드, 리서치, 디자인 전략을 동시에 다룹니다. 그래서 자료가 많아질수록 단순한 저장소만으로는
+          방향을 잡기 어렵습니다. OBD 루프는 그 복잡한 자료를 크리스의 질문, 판단 기준, 화면 언어, 실행 순서로 계속 번역하기 위해 만들어졌습니다.
+        </p>
+        <p>
+          이 루프 안에서 Chris는 마지막 결정을 내리는 사람이고, Karina와 Agent Team은 자료를 정리하고 검증 가능한 형태로 되돌려주는 운영 체계입니다.
+          즉 OBD 루프는 크리스의 사고방식을 대체하는 것이 아니라, 크리스가 더 빠르고 선명하게 판단하도록 도와주는 작업 리듬입니다.
+        </p>
       </article>
 
       <article className="content-card profile-statement-card">
@@ -1308,7 +1321,7 @@ function DevArchitecturePanel() {
 
 function ObdKnowledgeLoopPanel() {
   const [activeObdSubTab, setActiveObdSubTab] = useState<ObdSubTabId>(() => (
-    window.location.hash === '#about' || window.location.hash === '#intro' ? 'about' : 'growth'
+    window.location.hash === '#architecture' ? 'graph' : 'about'
   ))
   const currentSubTab = obdSubTabs.find((subTab) => subTab.id === activeObdSubTab) ?? obdSubTabs[0]
 
