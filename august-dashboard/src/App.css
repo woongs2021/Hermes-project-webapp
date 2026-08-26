@@ -4771,3 +4771,250 @@
     padding-bottom: 10px;
   }
 }
+
+/* Follow-up 20: OBD Map code-built infographics */
+.obd-infographic {
+  display: grid;
+  gap: 20px;
+  border-top: 1px solid var(--stroke);
+  padding: clamp(22px, 4vw, 34px) 0 4px;
+}
+
+.obd-infographic-header {
+  display: grid;
+  max-width: 820px;
+  gap: 8px;
+}
+
+.obd-infographic-header h3 {
+  max-width: 760px;
+  font-size: clamp(1.55rem, 2.8vw, 2.8rem);
+  font-weight: 420;
+  letter-spacing: -0.065em;
+  line-height: 1;
+}
+
+.obd-infographic-header p:not(.card-kicker) {
+  max-width: 720px;
+  color: var(--muted-ink);
+}
+
+.signal-loop-diagram {
+  position: relative;
+  min-height: 520px;
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--focus-stroke) 12%, transparent) 0 24%, transparent 25%),
+    linear-gradient(180deg, color-mix(in srgb, var(--chip-surface) 78%, transparent), transparent);
+  overflow: hidden;
+}
+
+.signal-loop-diagram::before,
+.signal-loop-diagram::after {
+  position: absolute;
+  inset: 70px 13%;
+  border: 1px solid color-mix(in srgb, var(--stroke) 72%, transparent);
+  border-radius: 50%;
+  content: '';
+}
+
+.signal-loop-diagram::after {
+  inset: 128px 24%;
+  border-style: dashed;
+  opacity: 0.62;
+}
+
+.signal-loop-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: grid;
+  width: min(240px, 44vw);
+  min-height: 148px;
+  place-content: center;
+  gap: 6px;
+  border: 1px solid var(--stroke);
+  border-radius: 28px;
+  padding: 22px;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.signal-loop-core span,
+.operating-loop-node span,
+.signal-loop-node span {
+  color: var(--quiet-ink);
+  font-size: 0.72rem;
+  font-weight: 760;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.signal-loop-core strong {
+  color: var(--ink);
+  font-size: clamp(1.18rem, 2vw, 1.8rem);
+  font-weight: 480;
+  letter-spacing: -0.055em;
+  line-height: 1;
+}
+
+.signal-loop-core small {
+  color: var(--muted-ink);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+}
+
+.signal-loop-node {
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  width: min(250px, 27vw);
+  gap: 8px;
+  border: 1px solid color-mix(in srgb, var(--stroke) 82%, transparent);
+  border-radius: 24px;
+  padding: 18px;
+  background: color-mix(in srgb, var(--panel-surface) 94%, transparent);
+}
+
+.signal-loop-node h4,
+.operating-loop-node h4 {
+  color: var(--ink);
+  font-size: clamp(1rem, 1.45vw, 1.38rem);
+  font-weight: 520;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.signal-loop-node p,
+.operating-loop-node p {
+  color: var(--muted-ink);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.signal-loop-node-1 {
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.signal-loop-node-2 {
+  top: 178px;
+  right: 4%;
+}
+
+.signal-loop-node-3 {
+  right: 16%;
+  bottom: 28px;
+}
+
+.signal-loop-node-4 {
+  bottom: 28px;
+  left: 16%;
+}
+
+.signal-loop-node-5 {
+  top: 178px;
+  left: 4%;
+}
+
+.operating-loop-diagram {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  align-items: stretch;
+  border-radius: 30px;
+  padding: 14px;
+  background:
+    linear-gradient(90deg, transparent, color-mix(in srgb, var(--focus-stroke) 10%, transparent), transparent),
+    color-mix(in srgb, var(--chip-surface) 52%, transparent);
+}
+
+.operating-loop-node {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  min-height: 176px;
+  border: 1px solid color-mix(in srgb, var(--stroke) 78%, transparent);
+  border-radius: 22px;
+  padding: 18px 16px;
+  background: color-mix(in srgb, var(--panel-surface) 94%, transparent);
+}
+
+.operating-loop-node small {
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  z-index: 2;
+  display: inline-grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--mid);
+  font-size: 0.9rem;
+  transform: translateY(-50%);
+}
+
+:root[data-theme='dark'] .signal-loop-diagram,
+:root[data-theme='dark'] .operating-loop-diagram {
+  background: color-mix(in srgb, var(--chip-surface) 42%, transparent);
+}
+
+@media (max-width: 1020px) {
+  .signal-loop-diagram {
+    display: grid;
+    min-height: 0;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .signal-loop-diagram::before,
+  .signal-loop-diagram::after {
+    display: none;
+  }
+
+  .signal-loop-core,
+  .signal-loop-node {
+    position: static;
+    width: auto;
+    transform: none;
+  }
+
+  .signal-loop-core {
+    min-height: 120px;
+  }
+
+  .signal-loop-node {
+    padding: 16px;
+  }
+
+  .operating-loop-diagram {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .operating-loop-node small {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .obd-infographic {
+    gap: 16px;
+    padding-top: 20px;
+  }
+
+  .operating-loop-diagram {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .operating-loop-node {
+    min-height: 0;
+  }
+}

@@ -182,6 +182,65 @@ const graphMvpContracts = [
   },
 ]
 
+const operatingMapInfographicNodes = [
+  { number: '01', label: 'Chris', value: '질문과 우선순위' },
+  { number: '02', label: 'Karina', value: '실행 루프 설계' },
+  { number: '03', label: 'Evidence', value: '리서치와 비주얼 근거' },
+  { number: '04', label: 'OBD Logic', value: '질문·가치·화면 언어' },
+  { number: '05', label: 'Muyeol', value: '리스크와 공개 범위 검증' },
+  { number: '06', label: 'Chris', value: '다음 판단과 실행' },
+]
+
+function SignalLoopInfographic() {
+  return (
+    <section className="obd-infographic signal-loop-infographic" aria-label="Signal Loop transformation infographic">
+      <div className="obd-infographic-header">
+        <p className="card-kicker">Signal transformation engine</p>
+        <h3>자료가 판단 언어로 바뀌는 순간을 한눈에 보기</h3>
+        <p>각 신호는 바로 결론이 되지 않고, 질문·가치·화면·검증을 통과한 뒤 Chris가 쓸 수 있는 판단 단위가 됩니다.</p>
+      </div>
+
+      <div className="signal-loop-diagram" aria-label="Five-step signal loop">
+        <div className="signal-loop-core">
+          <span>OBD</span>
+          <strong>Decision Language</strong>
+          <small>signal becomes judgment</small>
+        </div>
+        {obdMilestones.map((milestone, index) => (
+          <article className={`signal-loop-node signal-loop-node-${index + 1}`} key={milestone.number}>
+            <span>{milestone.number}</span>
+            <h4>{milestone.title}</h4>
+            <p>{milestone.output}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function OperatingMapInfographic() {
+  return (
+    <section className="obd-infographic operating-map-infographic" aria-label="Operating Map loop infographic">
+      <div className="obd-infographic-header">
+        <p className="card-kicker">Operating loop · who moves what</p>
+        <h3>팀의 실행이 Chris의 다음 판단으로 돌아오는 지도</h3>
+        <p>운영 지도는 조직도나 기술 그래프가 아니라, 누가 어떤 근거를 움직여 어떤 판단으로 되돌리는지 보여주는 작업 루프입니다.</p>
+      </div>
+
+      <div className="operating-loop-diagram" aria-label="Chris Karina evidence OBD Muyeol operating loop">
+        {operatingMapInfographicNodes.map((node, index) => (
+          <article className="operating-loop-node" key={`${node.number}-${node.label}`}>
+            <span>{node.number}</span>
+            <h4>{node.label}</h4>
+            <p>{node.value}</p>
+            {index < operatingMapInfographicNodes.length - 1 ? <small aria-hidden="true">→</small> : null}
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 export function GraphRelationshipPanel() {
   const { visualSet, researchBoard } = useDashboardSources()
   const nodes = useMemo(() => buildGraphNodes(visualSet, researchBoard), [visualSet, researchBoard])
@@ -201,6 +260,8 @@ export function GraphRelationshipPanel() {
           <span className="status-chip muted">oldest-first public manifests</span>
         </div>
       </article>
+
+      <OperatingMapInfographic />
 
       <section className="graph-node-board" aria-label="OBD operating map nodes">
         {nodes.map((node) => (
@@ -261,6 +322,8 @@ export function ObdGrowthTimelinePanel() {
           <span className="status-chip muted">validated action</span>
         </div>
       </article>
+
+      <SignalLoopInfographic />
 
       <section className="timeline-rail" aria-label="OBD timeline cards">
         {obdMilestones.map((milestone) => (
