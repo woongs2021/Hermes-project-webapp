@@ -606,11 +606,11 @@ function HomeVisualHeroPanel() {
             </div>
           </div>
           <div className="home-flow-controls" aria-label="Home visual flow controls">
-            <button type="button" className="home-flow-arrow" onClick={() => handleFastMove(-8)} disabled={totalItems < 2} aria-label="Move home visual flow quickly left">
+            <button type="button" className="home-flow-arrow" onClick={() => handleFastMove(-8)} disabled={totalItems < 2} aria-label="홈 비주얼 이전으로 빠르게 이동">
               <span aria-hidden="true">←</span>
             </button>
             <span>{selectedIndex + 1 > 0 ? String(selectedIndex + 1).padStart(2, '0') : '00'} / {String(totalItems).padStart(2, '0')}</span>
-            <button type="button" className="home-flow-arrow" onClick={() => handleFastMove(8)} disabled={totalItems < 2} aria-label="Move home visual flow quickly right">
+            <button type="button" className="home-flow-arrow" onClick={() => handleFastMove(8)} disabled={totalItems < 2} aria-label="홈 비주얼 다음으로 빠르게 이동">
               <span aria-hidden="true">→</span>
             </button>
           </div>
