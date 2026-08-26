@@ -4458,7 +4458,7 @@
   position: relative;
   display: block;
   flex: 0 0 auto;
-  width: clamp(130px, 14.3vw, 194px);
+  width: clamp(156px, 17.16vw, 233px);
   aspect-ratio: 4 / 5;
   overflow: hidden;
   border: 0;
@@ -4602,7 +4602,7 @@
 
   .home-flow-card,
   .home-flow-card.active {
-    width: clamp(110px, 26.4vw, 161px);
+    width: clamp(132px, 31.68vw, 193px);
     border-radius: 18px;
   }
 }
@@ -4635,7 +4635,7 @@
 
   .home-flow-card,
   .home-flow-card.active {
-    width: clamp(90px, 31.9vw, 123px);
+    width: clamp(108px, 38.28vw, 148px);
     border-radius: 16px;
   }
 
