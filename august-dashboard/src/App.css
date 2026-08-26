@@ -4458,7 +4458,7 @@
   position: relative;
   display: block;
   flex: 0 0 auto;
-  width: clamp(118px, 13vw, 176px);
+  width: clamp(130px, 14.3vw, 194px);
   aspect-ratio: 4 / 5;
   overflow: hidden;
   border: 0;
@@ -4544,15 +4544,15 @@
 }
 
 .home-flow-arrow {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-width: 104px;
-  min-height: 38px;
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
   border: 1px solid var(--stroke);
   border-radius: 999px;
-  padding: 8px 14px;
+  padding: 0;
   background: var(--chip-surface);
   color: var(--ink);
   cursor: pointer;
@@ -4566,21 +4566,14 @@
 .home-flow-arrow span[aria-hidden='true'] {
   display: inline-grid;
   place-items: center;
-  width: 24px;
-  height: 24px;
+  width: 100%;
+  height: 100%;
   border-radius: 999px;
-  background: var(--active-surface-soft);
+  background: transparent;
   color: var(--mid);
-  font-size: 1.15rem;
-  font-weight: 720;
+  font-size: 1.18rem;
+  font-weight: 760;
   line-height: 1;
-}
-
-.home-flow-arrow strong {
-  font-size: 0.68rem;
-  font-weight: 640;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 @keyframes homeFlowTrackSlide {
@@ -4609,7 +4602,7 @@
 
   .home-flow-card,
   .home-flow-card.active {
-    width: clamp(100px, 24vw, 146px);
+    width: clamp(110px, 26.4vw, 161px);
     border-radius: 18px;
   }
 }
@@ -4642,7 +4635,7 @@
 
   .home-flow-card,
   .home-flow-card.active {
-    width: clamp(82px, 29vw, 112px);
+    width: clamp(90px, 31.9vw, 123px);
     border-radius: 16px;
   }
 
@@ -4651,13 +4644,16 @@
   }
 
   .home-flow-arrow {
-    min-width: 86px;
-    padding-inline: 10px;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0;
   }
 
   .home-flow-arrow span[aria-hidden='true'] {
-    width: 22px;
-    height: 22px;
-    font-size: 1.05rem;
+    width: 100%;
+    height: 100%;
+    font-size: 1.08rem;
   }
 }

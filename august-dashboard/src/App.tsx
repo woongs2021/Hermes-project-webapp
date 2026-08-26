@@ -608,11 +608,9 @@ function HomeVisualHeroPanel() {
           <div className="home-flow-controls" aria-label="Home visual flow controls">
             <button type="button" className="home-flow-arrow" onClick={() => handleFastMove(-8)} disabled={totalItems < 2} aria-label="Move home visual flow quickly left">
               <span aria-hidden="true">←</span>
-              <strong>Prev</strong>
             </button>
             <span>{selectedIndex + 1 > 0 ? String(selectedIndex + 1).padStart(2, '0') : '00'} / {String(totalItems).padStart(2, '0')}</span>
             <button type="button" className="home-flow-arrow" onClick={() => handleFastMove(8)} disabled={totalItems < 2} aria-label="Move home visual flow quickly right">
-              <strong>Next</strong>
               <span aria-hidden="true">→</span>
             </button>
           </div>
