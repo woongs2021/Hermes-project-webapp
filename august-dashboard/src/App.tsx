@@ -734,12 +734,6 @@ function boardLaneLabel(lane: ResearchBoardItem['lane'] | 'final') {
   return lane === 'final' ? 'Friday final picks · Muyeol validated' : laneLabel(lane)
 }
 
-function researchAgentFace(item: Pick<ResearchBoardItem, 'lane'>) {
-  return item.lane === 'yuna'
-    ? { name: 'Yuna', src: `${import.meta.env.BASE_URL}assets/team/yuna_profile.jpg` }
-    : { name: 'Go Youn-jung', src: `${import.meta.env.BASE_URL}assets/team/goyounjung_profile.jpg` }
-}
-
 function laneAgentFaces(lane: ResearchBoardItem['lane'] | 'final') {
   if (lane === 'yuna') return [{ name: 'Yuna', src: `${import.meta.env.BASE_URL}assets/team/yuna_profile.jpg` }]
   if (lane === 'goyounjung') return [{ name: 'Go Youn-jung', src: `${import.meta.env.BASE_URL}assets/team/goyounjung_profile.jpg` }]
@@ -768,9 +762,25 @@ function ResearchKanbanPanel() {
   const [query, setQuery] = useState(getInitialResearchQuery)
   const [laneFilter, setLaneFilter] = useState<ResearchLaneFilter>(getInitialResearchLaneFilter)
   const [researchModalLane, setResearchModalLane] = useState<ResearchLaneFilter | null>(null)
+  const [scrollingResearchLane, setScrollingResearchLane] = useState<ResearchBoardItem['lane'] | 'final' | null>(null)
+  const researchScrollTimers = useRef<Partial<Record<ResearchBoardItem['lane'] | 'final', number>>>({})
+
+  const handleResearchLaneScroll = (lane: ResearchBoardItem['lane'] | 'final') => {
+    setScrollingResearchLane(lane)
+
+    if (researchScrollTimers.current[lane]) {
+      window.clearTimeout(researchScrollTimers.current[lane])
+    }
+
+    researchScrollTimers.current[lane] = window.setTimeout(() => {
+      setScrollingResearchLane((currentLane) => (currentLane === lane ? null : currentLane))
+      delete researchScrollTimers.current[lane]
+    }, 900)
+  }
 
   useEffect(() => {
     let isMounted = true
+    const scrollTimers = researchScrollTimers.current
 
     loadResearchBoard().then((loadedBoard) => {
       if (!isMounted) return
@@ -784,6 +794,9 @@ function ResearchKanbanPanel() {
 
     return () => {
       isMounted = false
+      Object.values(scrollTimers).forEach((timer) => {
+        if (timer) window.clearTimeout(timer)
+      })
     }
   }, [])
 
@@ -958,7 +971,10 @@ function ResearchKanbanPanel() {
                   </button>
                 ) : null}
               </div>
-              <div className="research-card-list">
+              <div
+                className={scrollingResearchLane === lane ? 'research-card-list is-scrolling' : 'research-card-list'}
+                onScroll={() => handleResearchLaneScroll(lane)}
+              >
                 {laneItems.map((item) => (
                   <button
                     key={item.id}
@@ -966,8 +982,7 @@ function ResearchKanbanPanel() {
                     className={item.id === selectedItem?.id ? 'research-card active' : 'research-card'}
                     onClick={() => setSelectedId(item.id)}
                   >
-                    <span className="research-thumb research-agent-thumb">
-                      <img src={researchAgentFace(item).src} alt={researchAgentFace(item).name} />
+                    <span className="research-thumb">
                       <span>{item.thumbnailLabel}</span>
                     </span>
                     <span className="research-card-copy">
