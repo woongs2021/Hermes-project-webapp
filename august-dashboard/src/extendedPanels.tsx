@@ -27,38 +27,38 @@ type ObdMilestone = {
 const obdMilestones: ObdMilestone[] = [
   {
     number: '01',
-    title: 'Catch the signal',
-    lens: 'papers · visuals · team notes',
-    output: '판단 가능한 신호만 public-safe 카드로 정리',
-    detail: '리서치, 홈 비주얼, 팀 작업 노트를 같은 작업대 위에 올려 Chris가 바로 훑을 수 있게 만듭니다.',
+    title: '자료를 모읍니다',
+    lens: '논문 · 비주얼 · 팀 노트',
+    output: '흩어진 자료 중 지금 볼 만한 것만 골라 한곳에 모읍니다.',
+    detail: '논문, 이미지, 작업 노트처럼 서로 다른 자료를 먼저 같은 책상 위에 올립니다. 이 단계의 목표는 결론을 내리는 것이 아니라, 놓치면 아까운 단서를 모으는 것입니다.',
   },
   {
     number: '02',
-    title: 'Frame the question',
-    lens: 'ontology framing',
-    output: '반복 신호를 OBD 질문으로 재명명',
-    detail: 'AI agency, trust, accessibility, brand value 같은 키워드를 단순 태그가 아니라 다음 판단을 여는 질문으로 바꿉니다.',
+    title: '질문으로 바꿉니다',
+    lens: '무엇을 봐야 하는지 정리',
+    output: '모은 자료를 “그래서 무엇을 판단해야 하지?”라는 질문으로 바꿉니다.',
+    detail: '좋아 보이는 자료를 그대로 쌓아두지 않고, Chris가 실제로 결정해야 할 질문으로 바꿉니다. 예를 들면 “이 기술이 왜 중요한가?”, “우리 화면에 어떻게 보이면 좋은가?”처럼 다시 묻습니다.',
   },
   {
     number: '03',
-    title: 'Translate the value',
-    lens: 'business design',
-    output: '제품·조직·브랜드 판단 언어로 변환',
-    detail: '논문 요약에서 멈추지 않고 One UI, AI UX, 디자인 리더십에 적용 가능한 결정 문장으로 압축합니다.',
+    title: '의미를 뽑아냅니다',
+    lens: '제품 · 브랜드 · 사용자 경험',
+    output: '어려운 내용을 제품, 브랜드, 사용자 경험 관점의 쉬운 의미로 풀어냅니다.',
+    detail: '논문 요약이나 전문 용어에서 멈추지 않고, One UI나 AI UX에 어떤 도움이 되는지 사람이 이해할 수 있는 문장으로 바꿉니다.',
   },
   {
     number: '04',
-    title: 'Shape the surface',
-    lens: 'warm AI UX',
-    output: '읽히는 화면과 카드 구조로 구체화',
-    detail: '카드, 칸반, 상세뷰, 홈 비주얼처럼 사람이 훑고 비교하고 기억할 수 있는 형태로 옮깁니다.',
+    title: '화면으로 보여줍니다',
+    lens: '카드 · 칸반 · 대시보드',
+    output: '읽고 비교하기 쉬운 카드, 리스트, 대시보드 형태로 정리합니다.',
+    detail: '좋은 생각도 화면에서 바로 읽히지 않으면 쓰기 어렵습니다. 그래서 핵심만 남겨 카드, 칸반, 상세 화면처럼 훑어보기 쉬운 형태로 만듭니다.',
   },
   {
     number: '05',
-    title: 'Return with proof',
-    lens: 'Muyeol validation',
-    output: '공개 범위·근거 강도·다음 행동 확정',
-    detail: '민감 정보는 분리하고, Chris에게 돌아갈 수 있는 검증된 근거와 다음 실행 단위를 남깁니다.',
+    title: '근거를 확인합니다',
+    lens: '검증 · 공개 가능 범위 · 다음 행동',
+    output: '공개해도 되는지, 근거가 충분한지, 다음에 무엇을 할지 확인합니다.',
+    detail: '마지막에는 Muyeol 기준으로 민감한 정보는 빼고, 근거가 약한 내용은 표시합니다. Chris에게 돌아가는 결과는 “이제 무엇을 선택하면 되는지”가 보이는 상태여야 합니다.',
   },
 ]
 
@@ -230,9 +230,9 @@ function SignalLoopInfographic() {
   return (
     <section className="obd-infographic signal-loop-infographic" aria-label="Signal Loop transformation infographic">
       <div className="obd-infographic-header">
-        <p className="card-kicker">Signal transformation engine</p>
-        <h3>자료가 판단 언어로 바뀌는 순간을 한눈에 보기</h3>
-        <p>각 신호는 바로 결론이 되지 않고, 질문·가치·화면·검증을 통과한 뒤 Chris가 쓸 수 있는 판단 단위가 됩니다.</p>
+        <p className="card-kicker">Signal loop · easy version</p>
+        <h3>자료가 Chris의 다음 선택으로 바뀌는 5단계</h3>
+        <p>Signal Loop는 어려운 분석표가 아니라, 흩어진 자료를 모아 “무엇을 결정하면 되는지”까지 정리해 돌려주는 과정입니다.</p>
       </div>
 
       <div className="signal-loop-diagram" aria-label="Five-step signal loop">

@@ -99,7 +99,7 @@ const obdSubTabs: { id: ObdSubTabId; label: string; eyebrow: string; description
     id: 'growth',
     label: 'Signal Loop',
     eyebrow: 'from source to judgment',
-    description: '논문, 비주얼, 작업 로그가 OBD 관점의 질문과 판단 언어로 바뀌는 변환 순서입니다.',
+    description: '흩어진 자료를 모으고, 질문으로 바꾸고, 화면에 올린 뒤 검증해서 Chris의 다음 선택으로 되돌리는 쉬운 5단계입니다.',
   },
   {
     id: 'graph',
