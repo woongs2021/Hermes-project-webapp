@@ -5,9 +5,9 @@ import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type Rese
 import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, MuyeolValidationPanel, ObdGrowthTimelinePanel } from './extendedPanels'
 import './App.css'
 
-type TabId = 'home' | 'obd' | 'visuals' | 'research' | 'report' | 'about'
+type TabId = 'home' | 'obd' | 'visuals' | 'research' | 'report'
 type ThemeMode = 'light' | 'dark'
-type ObdSubTabId = 'growth' | 'graph'
+type ObdSubTabId = 'growth' | 'graph' | 'about'
 
 type Tab = {
   id: TabId
@@ -82,13 +82,6 @@ const tabs: Tab[] = [
     title: 'Research Month Review',
     description: 'Yuna / Go Youn-jung 리서치 후보를 월간 지표와 주제 hook, 상위 후보로 압축해 Chris의 성장 방향을 읽습니다.',
   },
-  {
-    id: 'about',
-    label: 'About',
-    eyebrow: 'Chris profile',
-    title: 'Ontology Business Designer',
-    description: 'Chris의 이력과 AI 시대 OBD 포지셔닝을 한 장의 소개 화면으로 정리합니다.',
-  },
 ]
 
 const metricPlaceholders = ['Primary signal', 'Open loops', 'Weekly check-in']
@@ -106,6 +99,12 @@ const obdSubTabs: { id: ObdSubTabId; label: string; eyebrow: string; description
     label: 'Operating Map',
     eyebrow: 'team loop and evidence flow',
     description: 'Karina의 조율, 에이전트 실행, Muyeol 검증, Chris의 최종 판단이 어떻게 이어지는지 보여줍니다.',
+  },
+  {
+    id: 'about',
+    label: 'About OBD',
+    eyebrow: 'definition and Chris profile',
+    description: 'OBD 루프가 무엇인지 쉽게 정의하고, Chris가 왜 이 관점으로 AI 시대의 경험과 비즈니스를 탐구하는지 설명합니다.',
   },
 ]
 
@@ -333,10 +332,34 @@ function ChrisIntroPanel() {
   return (
     <div className="intro-grid" aria-label="Chris introduction slide">
       <article className="content-card intro-hero-card">
+        <p className="card-kicker">OBD loop definition</p>
+        <h3>OBD 루프는 자료를 결정 가능한 의미로 바꾸는 반복 구조입니다</h3>
+        <p>
+          OBD는 Ontology Business Design의 약자입니다. 쉽게 말해 흩어진 논문, 이미지, 작업 기록을 그냥 쌓아두지 않고,
+          “무엇이 중요하고, 왜 중요하며, 다음에 무엇을 선택해야 하는가”로 정리해 다시 실행으로 돌려보내는 방식입니다.
+        </p>
+        <div className="team-loop-steps" aria-label="OBD loop definition sequence">
+          {['자료 수집', '질문 정리', '의미 추출', '화면화', '근거 확인', '다음 선택'].map((step, index) => (
+            <span key={step}>{String(index + 1).padStart(2, '0')} · {step}</span>
+          ))}
+        </div>
+      </article>
+
+      <article className="content-card profile-statement-card">
+        <p className="card-kicker">Chris profile</p>
+        <h3>크리스는 AI 시대의 경험과 비즈니스 언어를 설계하는 OBD입니다</h3>
+        <p>
+          크리스(Chris)는 UX, 브랜드, 디자인 전략을 연결해 사람이 이해하고 신뢰할 수 있는 AI 경험을 탐구합니다.
+          기술 자체보다 “이 기술이 사람에게 어떤 의미가 되는가”를 먼저 묻고, 그 의미를 제품 화면, 서비스 구조,
+          브랜드 언어, 의사결정 기준으로 번역합니다.
+        </p>
+      </article>
+
+      <article className="content-card intro-hero-card">
         <p className="card-kicker">Personal positioning</p>
         <h3>OBD: Ontology Business Designer</h3>
         <p>
-          Designing meaning, systems, and business for the AI era. Chris는 UX, 브랜드,
+          Designing meaning, systems, and business for the AI era. 크리스는 UX, 브랜드,
           디자인 전략을 바탕으로 사람이 안심하고 이해할 수 있는 AI 경험과 미래 One UI의 언어를 탐구합니다.
         </p>
         <div className="status-row" aria-label="Profile positioning tags">
@@ -1284,8 +1307,15 @@ function DevArchitecturePanel() {
 }
 
 function ObdKnowledgeLoopPanel() {
-  const [activeObdSubTab, setActiveObdSubTab] = useState<ObdSubTabId>('growth')
+  const [activeObdSubTab, setActiveObdSubTab] = useState<ObdSubTabId>(() => (
+    window.location.hash === '#about' || window.location.hash === '#intro' ? 'about' : 'growth'
+  ))
   const currentSubTab = obdSubTabs.find((subTab) => subTab.id === activeObdSubTab) ?? obdSubTabs[0]
+
+  function selectObdSubTab(subTab: ObdSubTabId) {
+    setActiveObdSubTab(subTab)
+    window.history.replaceState(null, '', subTab === 'about' ? '#about' : '#obd')
+  }
 
   return (
     <div className="obd-knowledge-shell">
@@ -1296,7 +1326,7 @@ function ObdKnowledgeLoopPanel() {
             type="button"
             className={subTab.id === activeObdSubTab ? 'obd-subtab-button active' : 'obd-subtab-button'}
             aria-pressed={subTab.id === activeObdSubTab}
-            onClick={() => setActiveObdSubTab(subTab.id)}
+            onClick={() => selectObdSubTab(subTab.id)}
           >
             <span>{subTab.label}</span>
             <small>{subTab.eyebrow}</small>
@@ -1312,6 +1342,8 @@ function ObdKnowledgeLoopPanel() {
 
       {activeObdSubTab === 'growth' ? (
         <ObdGrowthTimelinePanel />
+      ) : activeObdSubTab === 'about' ? (
+        <ChrisIntroPanel />
       ) : (
         <>
           <GraphRelationshipPanel />
@@ -1324,8 +1356,8 @@ function ObdKnowledgeLoopPanel() {
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>(() => {
-    const normalizedHash = window.location.hash === '#intro'
-      ? '#about'
+    const normalizedHash = window.location.hash === '#intro' || window.location.hash === '#about'
+      ? '#obd'
       : window.location.hash === '#architecture'
         ? '#obd'
         : window.location.hash === '#team'
@@ -1418,8 +1450,6 @@ function App() {
 
         {activeTab.id === 'home' ? (
           <TeamPanel />
-        ) : activeTab.id === 'about' ? (
-          <ChrisIntroPanel />
         ) : activeTab.id === 'visuals' ? (
           <HomeVisualHeroPanel />
         ) : activeTab.id === 'obd' ? (
