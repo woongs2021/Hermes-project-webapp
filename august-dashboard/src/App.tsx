@@ -154,7 +154,7 @@ const profileLenses = [
   'UX / Brand / Design Strategy',
   'AI UX · 정서적 안정감 · 인간적인 인터랙션',
   'Research · Awards · IP · Mentoring',
-  'Ontology Business Designer for the AI era',
+  'Karina Hermes Agent Team이 만들어가는 OBD operating rhythm',
 ]
 
 const agentProfiles: AgentProfile[] = [
@@ -347,33 +347,34 @@ function ChrisIntroPanel() {
 
       <article className="content-card profile-statement-card">
         <p className="card-kicker">Why this loop exists</p>
-        <h3>크리스의 일은 좋은 자료를 많이 아는 것보다, 그것을 다음 선택으로 바꾸는 일에 가깝습니다</h3>
+        <h3>OBD는 크리스가 이미 갖고 있는 직함이 아니라, Karina Hermes Agent Team이 함께 만들어가는 역할입니다</h3>
         <p>
           크리스는 AI UX, One UI, 브랜드, 리서치, 디자인 전략을 동시에 다룹니다. 그래서 자료가 많아질수록 단순한 저장소만으로는
-          방향을 잡기 어렵습니다. OBD 루프는 그 복잡한 자료를 크리스의 질문, 판단 기준, 화면 언어, 실행 순서로 계속 번역하기 위해 만들어졌습니다.
+          방향을 잡기 어렵습니다. OBD 루프는 Karina Hermes Agent Team이 그 복잡한 자료를 크리스의 질문, 판단 기준, 화면 언어, 실행 순서로 계속 번역하기 위해 만들어졌습니다.
         </p>
         <p>
           이 루프 안에서 Chris는 마지막 결정을 내리는 사람이고, Karina와 Agent Team은 자료를 정리하고 검증 가능한 형태로 되돌려주는 운영 체계입니다.
-          즉 OBD 루프는 크리스의 사고방식을 대체하는 것이 아니라, 크리스가 더 빠르고 선명하게 판단하도록 도와주는 작업 리듬입니다.
+          즉 OBD 루프는 크리스를 이미 완성된 OBD로 규정하는 것이 아니라, 크리스가 더 빠르고 선명하게 판단하며 점점 OBD로 성장하도록 만드는 작업 리듬입니다.
         </p>
       </article>
 
       <article className="content-card profile-statement-card">
         <p className="card-kicker">Chris profile</p>
-        <h3>크리스는 AI 시대의 경험과 비즈니스 언어를 설계하는 OBD입니다</h3>
+        <h3>Karina Hermes Agent Team은 크리스가 OBD로 작동할 수 있는 환경을 만듭니다</h3>
         <p>
           크리스(Chris)는 UX, 브랜드, 디자인 전략을 연결해 사람이 이해하고 신뢰할 수 있는 AI 경험을 탐구합니다.
-          기술 자체보다 “이 기술이 사람에게 어떤 의미가 되는가”를 먼저 묻고, 그 의미를 제품 화면, 서비스 구조,
-          브랜드 언어, 의사결정 기준으로 번역합니다.
+          Karina Hermes Agent Team은 그 탐구가 흩어지지 않도록 자료를 정리하고, 질문을 세우고, 근거를 검증해
+          크리스가 Ontology Business Designer처럼 판단하고 실행할 수 있는 구조를 만들어줍니다.
         </p>
       </article>
 
       <article className="content-card intro-hero-card">
         <p className="card-kicker">Personal positioning</p>
-        <h3>OBD: Ontology Business Designer</h3>
+        <h3>OBD: Becoming an Ontology Business Designer</h3>
         <p>
           Designing meaning, systems, and business for the AI era. 크리스는 UX, 브랜드,
-          디자인 전략을 바탕으로 사람이 안심하고 이해할 수 있는 AI 경험과 미래 One UI의 언어를 탐구합니다.
+          디자인 전략을 바탕으로 사람이 안심하고 이해할 수 있는 AI 경험과 미래 One UI의 언어를 탐구하고,
+          Karina Hermes Agent Team은 그 탐구가 OBD의 작업 방식으로 축적되도록 돕습니다.
         </p>
         <div className="status-row" aria-label="Profile positioning tags">
           <span className="status-chip">CEO lens</span>
@@ -384,10 +385,10 @@ function ChrisIntroPanel() {
 
       <article className="content-card profile-statement-card">
         <p className="card-kicker">Profile statement</p>
-        <h3>기술을 사람의 의미 체계로 번역하는 디자이너</h3>
+        <h3>기술을 사람의 의미 체계로 번역하는 힘을 키우는 과정</h3>
         <p>
-          Samsung MX의 시니어 UX 디자이너이자 전 LG BX 브랜드 디자이너로서, 제품 경험과 브랜드 시스템,
-          리서치와 전략을 연결해 AI 시대의 새로운 판단 구조와 비즈니스 언어를 설계합니다.
+          Samsung MX의 시니어 UX 디자이너이자 전 LG BX 브랜드 디자이너로서 쌓아온 제품 경험과 브랜드 시스템,
+          리서치와 전략 역량을 Karina Hermes Agent Team이 계속 구조화해, AI 시대의 새로운 판단 구조와 비즈니스 언어로 확장할 수 있게 만듭니다.
         </p>
       </article>
 
