@@ -552,23 +552,23 @@ function HomeVisualHeroPanel() {
           </div>
         </div>
 
-        <div className="viscose-stage-shell">
+        <div className="home-flow-shell">
           {selectedItem ? (
-            <div className="viscose-meta-lockup" aria-label="Selected visual carousel metadata">
-              <div className="viscose-meta-left">
+            <div className="home-flow-meta" aria-label="Selected visual flow metadata">
+              <div>
                 <span>{String(selectedIndex + 1).padStart(2, '0')}</span>
                 <strong>{selectedItem.title}</strong>
                 <small>{selectedItem.dateKst}</small>
               </div>
-              <div className="viscose-meta-right">
+              <div>
                 <span>{selectedItem.theme}</span>
                 <strong>{selectedItem.mediaCapability}</strong>
               </div>
             </div>
           ) : null}
           <div
-            className={`viscose-carousel-stage visual-marquee-stage${marqueeBoost ? ` boost-${marqueeBoost}` : ''}`}
-            aria-label="Scrolling front-facing visual card flow"
+            className={`home-flow-stage${marqueeBoost ? ` boost-${marqueeBoost}` : ''}`}
+            aria-label="Clean front-facing home visual flow"
             onWheel={handleCarouselWheel}
             onPointerDown={(event) => {
               dragStartRef.current = { x: event.clientX, time: Date.now() }
@@ -583,7 +583,7 @@ function HomeVisualHeroPanel() {
               dragStartRef.current = null
             }}
           >
-            <div className="visual-marquee-track" aria-label="Duplicated continuous visual card track">
+            <div className="home-flow-track" aria-label="Continuous front-facing home visual card row">
               {[...visualSet.items, ...visualSet.items].map((item, loopIndex) => {
                 const originalIndex = totalItems > 0 ? loopIndex % totalItems : 0
                 const offset = getVisualCarouselOffset(originalIndex, selectedIndex, totalItems)
@@ -593,28 +593,25 @@ function HomeVisualHeroPanel() {
                   <button
                     key={`${item.id}-${loopIndex}`}
                     type="button"
-                    className={originalIndex === selectedIndex ? 'viscose-card active' : 'viscose-card'}
+                    className={originalIndex === selectedIndex ? 'home-flow-card active' : 'home-flow-card'}
                     aria-pressed={originalIndex === selectedIndex}
                     onClick={() => setActiveIndex(originalIndex)}
                   >
                     <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} public home still`} loading={distance <= 2 ? 'eager' : 'lazy'} />
-                    <span className="visual-index">{String(originalIndex + 1).padStart(2, '0')} · {item.dateKst}</span>
-                    <div className="visual-card-copy">
-                      <strong>{item.title}</strong>
-                      <span>{item.theme}</span>
-                    </div>
+                    <span className="home-flow-index">{String(originalIndex + 1).padStart(2, '0')}</span>
+                    <strong>{item.title}</strong>
                   </button>
                 )
               })}
             </div>
           </div>
-          <div className="viscose-controls" aria-label="Home visual carousel controls">
-            <button type="button" className="viscose-arrow-button" onClick={() => handleFastMove(-8)} disabled={totalItems < 2} aria-label="Move visual flow quickly left">
+          <div className="home-flow-controls" aria-label="Home visual flow controls">
+            <button type="button" className="home-flow-arrow" onClick={() => handleFastMove(-8)} disabled={totalItems < 2} aria-label="Move home visual flow quickly left">
               <span aria-hidden="true">←</span>
               <strong>Prev</strong>
             </button>
             <span>{selectedIndex + 1 > 0 ? String(selectedIndex + 1).padStart(2, '0') : '00'} / {String(totalItems).padStart(2, '0')}</span>
-            <button type="button" className="viscose-arrow-button" onClick={() => handleFastMove(8)} disabled={totalItems < 2} aria-label="Move visual flow quickly right">
+            <button type="button" className="home-flow-arrow" onClick={() => handleFastMove(8)} disabled={totalItems < 2} aria-label="Move home visual flow quickly right">
               <strong>Next</strong>
               <span aria-hidden="true">→</span>
             </button>
