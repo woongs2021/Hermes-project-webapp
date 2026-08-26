@@ -5,7 +5,7 @@ import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type Rese
 import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, MuyeolValidationPanel, ObdGrowthTimelinePanel } from './extendedPanels'
 import './App.css'
 
-type TabId = 'home' | 'team' | 'obd' | 'research' | 'report' | 'about'
+type TabId = 'home' | 'obd' | 'visuals' | 'research' | 'report' | 'about'
 type ThemeMode = 'light' | 'dark'
 type ObdSubTabId = 'growth' | 'graph'
 
@@ -49,13 +49,6 @@ type AgentProfile = {
 const tabs: Tab[] = [
   {
     id: 'home',
-    label: 'Home',
-    eyebrow: 'Today’s visual system',
-    title: 'Home Visual Archive',
-    description: '최종 승인된 Go Youn-jung 홈 비주얼을 오래된 순서로 누적하고, 각 still을 클릭하면 turntable detail을 확인합니다.',
-  },
-  {
-    id: 'team',
     label: 'Team',
     eyebrow: 'Orchestration',
     title: 'Karina Hermes Team',
@@ -67,6 +60,13 @@ const tabs: Tab[] = [
     eyebrow: 'Operating map',
     title: 'OBD Operating Map',
     description: 'Chris의 자료가 신호, 개념, 비즈니스 판단, 검증으로 순환하는 방식을 하나의 운영 지도로 정리합니다.',
+  },
+  {
+    id: 'visuals',
+    label: 'Visual Archive',
+    eyebrow: 'Home visual system',
+    title: 'Go Youn-jung Visual Archive',
+    description: '최종 승인된 Go Youn-jung 홈 비주얼을 오래된 순서로 누적하고, 각 still을 클릭하면 turntable detail을 확인합니다.',
   },
   {
     id: 'research',
@@ -224,24 +224,19 @@ const architectureScreens: ArchitectureScreen[] = [
 
 const productBranches: ArchitectureBranch[] = [
   {
-    title: 'Metaphor Loops',
-    intent: '세계관 진입점',
-    children: ['Command Garden', 'Research Constellation', 'Growth Loom', 'Entry links'],
-  },
-  {
-    title: 'Overview',
-    intent: '오늘의 운영 요약',
-    children: ['Today Summary', 'Loop Status', 'Key Metrics', 'Recent Activity', 'Quick Actions'],
-  },
-  {
     title: 'Team',
-    intent: 'Karina 중심 실행 루프',
+    intent: '기본 진입점 · Karina 중심 실행 루프',
     children: ['Task Completion Loop', 'Agent Role Cards', 'Active Handoffs', 'Blockers'],
   },
   {
-    title: 'OBD',
-    intent: '일간/주간 성장 기록',
-    children: ['Daily Growth', 'Weekly Growth', 'OBD Lens', 'Growth Visualization'],
+    title: 'OBD Map',
+    intent: '신호가 판단으로 돌아오는 운영 지도',
+    children: ['Signal Loop', 'Operating Map', 'Evidence Flow', 'Muyeol Validation'],
+  },
+  {
+    title: 'Visual Archive',
+    intent: '승인된 홈 비주얼 누적 아카이브',
+    children: ['Oldest-first Stills', 'Turntable Detail', 'Visual Manifest', 'Public-safe Assets'],
   },
   {
     title: 'Research',
@@ -257,24 +252,19 @@ const productBranches: ArchitectureBranch[] = [
 
 const dataBranches: ArchitectureBranch[] = [
   {
-    title: '/data/metaphor-loops',
-    intent: '첫 화면 개념 카드 원문',
-    children: ['command-garden.md', 'research-constellation.md', 'growth-loom.md'],
-  },
-  {
-    title: '/data/overview',
-    intent: '운영 요약 소스',
-    children: ['today.md', 'weekly-summary.md', 'recent-activity.json'],
-  },
-  {
     title: '/data/team',
-    intent: '에이전트 역할과 handoff',
+    intent: '기본 홈의 에이전트 역할과 handoff',
     children: ['agents.md', 'orchestration.md', 'handoffs.md'],
   },
   {
     title: '/data/obd',
-    intent: '성장 루프 로컬 기록',
-    children: ['daily/YYYY-MM-DD.md', 'weekly/YYYY-Www.md', 'patterns.json'],
+    intent: '운영 지도와 판단 루프 로컬 기록',
+    children: ['signal-loop.md', 'operating-map.md', 'patterns.json'],
+  },
+  {
+    title: '/public/data/home-visual-set.json',
+    intent: 'Visual Archive 공개 안전 manifest',
+    children: ['items[].still', 'items[].turntable', 'sourcePolicy'],
   },
   {
     title: '/data/research',
@@ -1291,7 +1281,13 @@ function ObdKnowledgeLoopPanel() {
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>(() => {
-    const normalizedHash = window.location.hash === '#intro' ? '#about' : window.location.hash === '#architecture' ? '#obd' : window.location.hash
+    const normalizedHash = window.location.hash === '#intro'
+      ? '#about'
+      : window.location.hash === '#architecture'
+        ? '#obd'
+        : window.location.hash === '#team'
+          ? '#home'
+          : window.location.hash
     const hashTab = tabs.find((tab) => `#${tab.id}` === normalizedHash)
     return hashTab ?? tabs[0]
   })
@@ -1378,11 +1374,11 @@ function App() {
         </div>
 
         {activeTab.id === 'home' ? (
-          <HomeVisualHeroPanel />
+          <TeamPanel />
         ) : activeTab.id === 'about' ? (
           <ChrisIntroPanel />
-        ) : activeTab.id === 'team' ? (
-          <TeamPanel />
+        ) : activeTab.id === 'visuals' ? (
+          <HomeVisualHeroPanel />
         ) : activeTab.id === 'obd' ? (
           <ObdKnowledgeLoopPanel />
         ) : activeTab.id === 'research' ? (

@@ -4732,7 +4732,7 @@
 }
 
 /* Follow-up 19: simplified top separators */
-.home-workspace .content-card {
+.visuals-workspace .content-card {
   border-top: 1px solid var(--stroke);
 }
 
