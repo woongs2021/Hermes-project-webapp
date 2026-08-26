@@ -547,9 +547,9 @@ function HomeVisualHeroPanel() {
       <section className="content-card home-visual-carousel-system" aria-label="Viscose-inspired home visual carousel">
         <div className="home-visual-carousel-copy">
           <p className="card-kicker">Home visual flow</p>
-          <h3>20°로 기울어진 visual cards 60개가 한 줄로 천천히 흐릅니다</h3>
+          <h3>정면 visual cards 60개가 10px 간격으로 천천히 흐릅니다</h3>
           <p>
-            모든 final visual이 좌측으로 천천히 순환하고, 카드를 클릭하거나 화살표로 빠르게 넘기면 아래 turntable detail이 선택 카드에 맞춰 자동재생됩니다.
+            모든 final visual이 회전 없이 정면 상태로 좌측 순환하고, 카드를 클릭하거나 화살표/터치 스크롤로 빠르게 넘기면 아래 turntable detail이 선택 카드에 맞춰 자동재생됩니다.
           </p>
           <div className="archive-stat-grid" aria-label="Home visual archive summary">
             <span><strong>{totalItems}</strong> approved stills</span>

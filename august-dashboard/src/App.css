@@ -4393,9 +4393,10 @@
 
 .visual-marquee-stage .viscose-card {
   --card-w: clamp(118px, 13vw, 176px);
-  --slot-w: calc(var(--card-w) * 2.4);
+  --card-gap: 10px;
+  --slot-w: calc(var(--card-w) + var(--card-gap));
   --travel: calc(var(--slot-w) * var(--marquee-count));
-  --marquee-step-time: 10.8s;
+  --marquee-step-time: 3.6s;
   position: absolute;
   top: 50%;
   left: 0;
@@ -4406,7 +4407,7 @@
   transform:
     translateX(calc(100vw + (var(--slot-w) * var(--marquee-slot))))
     translateY(-50%)
-    rotate(-20deg);
+    rotate(0deg);
   transform-origin: 50% 70%;
   border: 0;
   border-radius: 22px;
@@ -4503,13 +4504,13 @@
     transform:
       translateX(calc(100vw + (var(--slot-w) * var(--marquee-slot))))
       translateY(-50%)
-      rotate(-20deg);
+      rotate(0deg);
   }
   to {
     transform:
       translateX(calc(-1 * var(--travel) + (var(--slot-w) * var(--marquee-slot))))
       translateY(-50%)
-      rotate(-20deg);
+      rotate(0deg);
   }
 }
 
@@ -4521,8 +4522,9 @@
 
   .visual-marquee-stage .viscose-card {
     --card-w: clamp(100px, 24vw, 146px);
-    --slot-w: calc(var(--card-w) * 2.8);
-    --marquee-step-time: 12s;
+    --card-gap: 10px;
+    --slot-w: calc(var(--card-w) + var(--card-gap));
+    --marquee-step-time: 3.6s;
     border-radius: 18px;
   }
 }
@@ -4535,8 +4537,9 @@
 
   .visual-marquee-stage .viscose-card {
     --card-w: clamp(82px, 29vw, 112px);
-    --slot-w: calc(var(--card-w) * 2.8);
-    --marquee-step-time: 12s;
+    --card-gap: 10px;
+    --slot-w: calc(var(--card-w) + var(--card-gap));
+    --marquee-step-time: 3.6s;
     border-radius: 16px;
   }
 
