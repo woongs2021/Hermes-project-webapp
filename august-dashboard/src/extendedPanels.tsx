@@ -185,20 +185,45 @@ const graphMvpContracts = [
 const teamFaceSrc = (fileName: string) => `${import.meta.env.BASE_URL}assets/team/${fileName}`
 
 const operatingMapInfographicNodes = [
-  { number: '01', label: 'Chris', value: '질문과 우선순위', faces: [] },
-  { number: '02', label: 'Karina', value: '실행 루프 설계', faces: [{ name: 'Karina', src: teamFaceSrc('karina_profile.jpg') }] },
+  {
+    number: '01',
+    label: 'Chris',
+    value: 'Chris가 지금 필요한 질문, 우선순위, 최종 판단 기준을 던지면 팀의 실행 루프가 시작됩니다.',
+    faces: [],
+  },
+  {
+    number: '02',
+    label: 'Karina',
+    value: 'Karina가 요청을 작은 실행 단위로 나누고, 담당 에이전트와 검증 순서를 정해 루프를 설계합니다.',
+    faces: [{ name: 'Karina', src: teamFaceSrc('karina_profile.jpg') }],
+  },
   {
     number: '03',
     label: 'Evidence',
-    value: '리서치와 비주얼 근거',
+    value: 'Yuna와 Go Youn-jung이 리서치, 레퍼런스, 비주얼 단서를 모아 판단에 쓸 수 있는 근거로 정리합니다.',
     faces: [
       { name: 'Yuna', src: teamFaceSrc('yuna_profile.jpg') },
       { name: 'Go Youn-jung', src: teamFaceSrc('goyounjung_profile.jpg') },
     ],
   },
-  { number: '04', label: 'OBD Logic', value: '질문·가치·화면 언어', faces: [{ name: 'Karina', src: teamFaceSrc('karina_profile.jpg') }] },
-  { number: '05', label: 'Muyeol', value: '리스크와 공개 범위 검증', faces: [{ name: 'Muyeol', src: teamFaceSrc('muyeol_profile.jpg') }] },
-  { number: '06', label: 'Chris', value: '다음 판단과 실행', faces: [] },
+  {
+    number: '04',
+    label: 'OBD Logic',
+    value: '수집된 근거는 질문·가치·화면 언어로 번역되어, 단순 자료가 아니라 다음 의사결정의 구조가 됩니다.',
+    faces: [{ name: 'Karina', src: teamFaceSrc('karina_profile.jpg') }],
+  },
+  {
+    number: '05',
+    label: 'Muyeol',
+    value: 'Muyeol이 공개 가능 범위, 리스크, 품질 기준을 확인해 Chris에게 전달해도 되는 결과만 남깁니다.',
+    faces: [{ name: 'Muyeol', src: teamFaceSrc('muyeol_profile.jpg') }],
+  },
+  {
+    number: '06',
+    label: 'Chris',
+    value: '검증된 결과는 다시 Chris의 다음 선택으로 돌아가고, 승인·수정·다음 실행 중 하나로 이어집니다.',
+    faces: [],
+  },
 ]
 
 function SignalLoopInfographic() {
@@ -240,7 +265,6 @@ function OperatingMapInfographic() {
           <div className="obd-step-with-arrow" key={`${node.number}-${node.label}`}>
             <article className="obd-step-card operating-loop-node">
               <div className="obd-step-card-head">
-                <span>{node.number}</span>
                 {node.faces.length > 0 ? (
                   <div className="obd-agent-face-row" aria-label={`${node.label} agent faces`}>
                     {node.faces.map((face) => (
@@ -248,6 +272,7 @@ function OperatingMapInfographic() {
                     ))}
                   </div>
                 ) : null}
+                <span>{node.number}</span>
               </div>
               <h4>{node.label}</h4>
               <p>{node.value}</p>
