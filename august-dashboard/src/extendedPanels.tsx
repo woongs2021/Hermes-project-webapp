@@ -201,6 +201,16 @@ function SignalLoopInfographic() {
       </div>
 
       <div className="signal-loop-diagram" aria-label="Five-step signal loop">
+        <svg className="signal-loop-orbit" viewBox="0 0 1000 560" aria-hidden="true" focusable="false">
+          <defs>
+            <marker id="signal-loop-arrow" markerHeight="12" markerWidth="12" orient="auto" refX="9" refY="5.5">
+              <path d="M0,0 L10,5.5 L0,11 Z" />
+            </marker>
+          </defs>
+          <path className="signal-loop-orbit-line" d="M500 42 C760 42 934 172 898 312 C862 456 650 523 500 500 C350 523 138 456 102 312 C66 172 240 42 500 42Z" />
+          <path className="signal-loop-orbit-line signal-loop-orbit-line-inner" d="M500 136 C666 136 782 214 758 306 C734 402 592 434 500 420 C408 434 266 402 242 306 C218 214 334 136 500 136Z" />
+          <path className="signal-loop-motion" d="M500 42 C760 42 934 172 898 312 C862 456 650 523 500 500 C350 523 138 456 102 312 C66 172 240 42 500 42Z" markerEnd="url(#signal-loop-arrow)" />
+        </svg>
         <div className="signal-loop-core">
           <span>OBD</span>
           <strong>Decision Language</strong>

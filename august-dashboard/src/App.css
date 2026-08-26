@@ -4801,45 +4801,78 @@
 
 .signal-loop-diagram {
   position: relative;
-  min-height: 520px;
+  min-height: 560px;
   border-radius: 32px;
   background:
-    radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--focus-stroke) 12%, transparent) 0 24%, transparent 25%),
+    radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--focus-stroke) 16%, transparent) 0 20%, transparent 21%),
+    radial-gradient(circle at 50% 50%, transparent 0 38%, color-mix(in srgb, var(--focus-stroke) 8%, transparent) 39% 43%, transparent 44%),
     linear-gradient(180deg, color-mix(in srgb, var(--chip-surface) 78%, transparent), transparent);
   overflow: hidden;
 }
 
-.signal-loop-diagram::before,
-.signal-loop-diagram::after {
+.signal-loop-orbit {
   position: absolute;
-  inset: 70px 13%;
-  border: 1px solid color-mix(in srgb, var(--stroke) 72%, transparent);
-  border-radius: 50%;
-  content: '';
+  inset: 18px 2%;
+  z-index: 1;
+  width: 96%;
+  height: calc(100% - 36px);
+  overflow: visible;
+  pointer-events: none;
 }
 
-.signal-loop-diagram::after {
-  inset: 128px 24%;
-  border-style: dashed;
-  opacity: 0.62;
+.signal-loop-orbit marker path {
+  fill: color-mix(in srgb, var(--focus-stroke) 82%, var(--ink));
+}
+
+.signal-loop-orbit-line,
+.signal-loop-motion {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+
+.signal-loop-orbit-line {
+  stroke: color-mix(in srgb, var(--stroke) 78%, transparent);
+  stroke-width: 1.2;
+}
+
+.signal-loop-orbit-line-inner {
+  stroke-dasharray: 7 10;
+  opacity: 0.66;
+}
+
+.signal-loop-motion {
+  stroke: color-mix(in srgb, var(--focus-stroke) 76%, var(--ink));
+  stroke-dasharray: 58 22;
+  stroke-linecap: round;
+  stroke-width: 2.4;
+  opacity: 0.78;
 }
 
 .signal-loop-core {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 2;
+  z-index: 4;
   display: grid;
-  width: min(240px, 44vw);
-  min-height: 148px;
+  width: min(252px, 44vw);
+  min-height: 156px;
   place-content: center;
   gap: 6px;
   border: 1px solid var(--stroke);
   border-radius: 28px;
   padding: 22px;
-  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
   text-align: center;
   transform: translate(-50%, -50%);
+}
+
+.signal-loop-core::after {
+  position: absolute;
+  inset: -12px;
+  z-index: -1;
+  border: 1px solid color-mix(in srgb, var(--focus-stroke) 26%, transparent);
+  border-radius: 34px;
+  content: '';
 }
 
 .signal-loop-core span,
@@ -4868,14 +4901,28 @@
 
 .signal-loop-node {
   position: absolute;
-  z-index: 3;
+  z-index: 5;
   display: grid;
-  width: min(250px, 27vw);
+  width: min(250px, 25vw);
   gap: 8px;
   border: 1px solid color-mix(in srgb, var(--stroke) 82%, transparent);
   border-radius: 24px;
   padding: 18px;
-  background: color-mix(in srgb, var(--panel-surface) 94%, transparent);
+  background: color-mix(in srgb, var(--panel-surface) 96%, transparent);
+}
+
+.signal-loop-node::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 14px;
+  height: 14px;
+  border: 1px solid color-mix(in srgb, var(--focus-stroke) 72%, var(--stroke));
+  border-radius: 999px;
+  background: var(--surface);
+  content: '';
+  transform: translate(-50%, -50%);
 }
 
 .signal-loop-node h4,
@@ -4895,69 +4942,122 @@
 }
 
 .signal-loop-node-1 {
-  top: 30px;
+  top: 24px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .signal-loop-node-2 {
-  top: 178px;
-  right: 4%;
+  top: 174px;
+  right: 3%;
 }
 
 .signal-loop-node-3 {
-  right: 16%;
-  bottom: 28px;
+  right: 14%;
+  bottom: 24px;
 }
 
 .signal-loop-node-4 {
-  bottom: 28px;
-  left: 16%;
+  bottom: 24px;
+  left: 14%;
 }
 
 .signal-loop-node-5 {
-  top: 178px;
-  left: 4%;
+  top: 174px;
+  left: 3%;
 }
 
 .operating-loop-diagram {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+    'step1 step2 step3'
+    'step6 step5 step4';
+  gap: 28px 18px;
   align-items: stretch;
   border-radius: 30px;
-  padding: 14px;
+  padding: 30px 22px;
   background:
-    linear-gradient(90deg, transparent, color-mix(in srgb, var(--focus-stroke) 10%, transparent), transparent),
+    radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--focus-stroke) 13%, transparent), transparent 54%),
     color-mix(in srgb, var(--chip-surface) 52%, transparent);
+}
+
+.operating-loop-diagram::before {
+  position: absolute;
+  inset: 54px 7%;
+  border: 2px solid color-mix(in srgb, var(--focus-stroke) 42%, var(--stroke));
+  border-radius: 999px;
+  content: '';
+  opacity: 0.52;
+  pointer-events: none;
 }
 
 .operating-loop-node {
   position: relative;
+  z-index: 2;
   display: grid;
   gap: 8px;
   align-content: start;
-  min-height: 176px;
+  min-height: 148px;
   border: 1px solid color-mix(in srgb, var(--stroke) 78%, transparent);
   border-radius: 22px;
   padding: 18px 16px;
-  background: color-mix(in srgb, var(--panel-surface) 94%, transparent);
+  background: color-mix(in srgb, var(--panel-surface) 96%, transparent);
 }
+
+.operating-loop-node:nth-child(1) { grid-area: step1; }
+.operating-loop-node:nth-child(2) { grid-area: step2; }
+.operating-loop-node:nth-child(3) { grid-area: step3; }
+.operating-loop-node:nth-child(4) { grid-area: step4; }
+.operating-loop-node:nth-child(5) { grid-area: step5; }
+.operating-loop-node:nth-child(6) { grid-area: step6; }
 
 .operating-loop-node small {
   position: absolute;
   top: 50%;
-  right: -18px;
-  z-index: 2;
+  right: -26px;
+  z-index: 3;
   display: inline-grid;
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   place-items: center;
   border: 1px solid var(--stroke);
   border-radius: 999px;
   background: var(--surface);
-  color: var(--mid);
-  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--focus-stroke) 82%, var(--ink));
+  font-size: 1rem;
+  transform: translateY(-50%);
+}
+
+.operating-loop-node:nth-child(3) small {
+  top: auto;
+  right: 50%;
+  bottom: -30px;
+  transform: translateX(50%) rotate(90deg);
+}
+
+.operating-loop-node:nth-child(4) small,
+.operating-loop-node:nth-child(5) small {
+  right: auto;
+  left: -26px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.operating-loop-node:nth-child(6)::after {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  display: inline-grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  background: var(--surface);
+  color: color-mix(in srgb, var(--focus-stroke) 82%, var(--ink));
+  content: '↺';
+  font-size: 1rem;
   transform: translateY(-50%);
 }
 
@@ -4966,40 +5066,97 @@
   background: color-mix(in srgb, var(--chip-surface) 42%, transparent);
 }
 
+:root[data-theme='dark'] .signal-loop-core,
+:root[data-theme='dark'] .signal-loop-node,
+:root[data-theme='dark'] .operating-loop-node {
+  background: color-mix(in srgb, var(--panel-surface) 98%, transparent);
+}
+
 @media (max-width: 1020px) {
   .signal-loop-diagram {
     display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     min-height: 0;
-    gap: 10px;
-    padding: 14px;
+    gap: 12px;
+    padding: 16px;
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--chip-surface) 70%, transparent), transparent),
+      color-mix(in srgb, var(--surface) 88%, transparent);
   }
 
-  .signal-loop-diagram::before,
-  .signal-loop-diagram::after {
+  .signal-loop-orbit {
     display: none;
   }
 
   .signal-loop-core,
   .signal-loop-node {
-    position: static;
+    position: relative;
+    inset: auto;
     width: auto;
     transform: none;
   }
 
+  .signal-loop-node-1,
+  .signal-loop-node-2,
+  .signal-loop-node-3,
+  .signal-loop-node-4,
+  .signal-loop-node-5 {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
   .signal-loop-core {
-    min-height: 120px;
+    grid-column: 1 / -1;
+    min-height: 118px;
   }
 
   .signal-loop-node {
     padding: 16px;
   }
 
-  .operating-loop-diagram {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .signal-loop-node::before {
+    top: -7px;
+    left: 20px;
   }
 
-  .operating-loop-node small {
+  .signal-loop-node::after {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    color: color-mix(in srgb, var(--focus-stroke) 82%, var(--ink));
+    content: '↻';
+    font-size: 1rem;
+  }
+
+  .operating-loop-diagram {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      'step1 step2'
+      'step4 step3'
+      'step5 step6';
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .operating-loop-diagram::before {
+    inset: 28px 12%;
+    border-radius: 28px;
+  }
+
+  .operating-loop-node small,
+  .operating-loop-node:nth-child(6)::after {
     display: none;
+  }
+
+  .operating-loop-node::after {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    color: color-mix(in srgb, var(--focus-stroke) 82%, var(--ink));
+    content: '↻';
+    font-size: 1rem;
   }
 }
 
@@ -5009,12 +5166,56 @@
     padding-top: 20px;
   }
 
+  .signal-loop-diagram,
   .operating-loop-diagram {
     grid-template-columns: 1fr;
+    gap: 10px;
+    border-radius: 24px;
     padding: 10px;
   }
 
+  .signal-loop-core {
+    grid-column: auto;
+  }
+
+  .signal-loop-node,
   .operating-loop-node {
     min-height: 0;
+    padding: 15px;
+  }
+
+  .operating-loop-diagram {
+    grid-template-areas:
+      'step1'
+      'step2'
+      'step3'
+      'step4'
+      'step5'
+      'step6';
+  }
+
+  .operating-loop-diagram::before {
+    inset: 24px auto 24px 24px;
+    width: 2px;
+    border: 0;
+    border-left: 2px solid color-mix(in srgb, var(--focus-stroke) 46%, var(--stroke));
+    border-radius: 0;
+  }
+
+  .operating-loop-node::after,
+  .signal-loop-node::after {
+    content: '↓';
+  }
+
+  .operating-loop-node:nth-child(6)::before {
+    position: absolute;
+    right: 16px;
+    bottom: 14px;
+    color: color-mix(in srgb, var(--focus-stroke) 82%, var(--ink));
+    content: 'returns to 01';
+    font-size: 0.72rem;
+    font-weight: 720;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 }
