@@ -734,6 +734,23 @@ function boardLaneLabel(lane: ResearchBoardItem['lane'] | 'final') {
   return lane === 'final' ? 'Friday final picks · Muyeol validated' : laneLabel(lane)
 }
 
+function researchAgentFace(item: Pick<ResearchBoardItem, 'lane'>) {
+  return item.lane === 'yuna'
+    ? { name: 'Yuna', src: `${import.meta.env.BASE_URL}assets/team/yuna_profile.jpg` }
+    : { name: 'Go Youn-jung', src: `${import.meta.env.BASE_URL}assets/team/goyounjung_profile.jpg` }
+}
+
+function laneAgentFaces(lane: ResearchBoardItem['lane'] | 'final') {
+  if (lane === 'yuna') return [{ name: 'Yuna', src: `${import.meta.env.BASE_URL}assets/team/yuna_profile.jpg` }]
+  if (lane === 'goyounjung') return [{ name: 'Go Youn-jung', src: `${import.meta.env.BASE_URL}assets/team/goyounjung_profile.jpg` }]
+
+  return [
+    { name: 'Yuna', src: `${import.meta.env.BASE_URL}assets/team/yuna_profile.jpg` },
+    { name: 'Go Youn-jung', src: `${import.meta.env.BASE_URL}assets/team/goyounjung_profile.jpg` },
+    { name: 'Muyeol', src: `${import.meta.env.BASE_URL}assets/team/muyeol_profile.jpg` },
+  ]
+}
+
 function primarySourceHref(sourceUrlOrId: string) {
   return sourceUrlOrId.match(/https?:\/\/[^\s;)]+/i)?.[0]
 }
@@ -910,6 +927,7 @@ function ResearchKanbanPanel() {
 
       <section className="research-kanban" aria-label="Yuna, Go Youn-jung, and Friday final pick research lanes">
         {lanes.map((lane) => {
+          const faces = laneAgentFaces(lane)
           const laneItems = lane === 'final'
             ? filteredItems.filter((item) => item.status === 'friday_final_pick')
             : filteredItems.filter((item) => item.lane === lane)
@@ -923,9 +941,16 @@ function ResearchKanbanPanel() {
           return (
             <article className={`research-lane ${lane}`} key={lane}>
               <div className="research-lane-header">
-                <div>
-                  <p className="card-kicker">{boardLaneLabel(lane)}</p>
-                  <strong>{laneCountLabel}</strong>
+                <div className="research-lane-title-row">
+                  <div className="research-agent-face-stack" aria-label={`${boardLaneLabel(lane)} agents`}>
+                    {faces.map((face) => (
+                      <img className="research-agent-face" src={face.src} alt={face.name} key={face.name} />
+                    ))}
+                  </div>
+                  <div>
+                    <p className="card-kicker">{boardLaneLabel(lane)}</p>
+                    <strong>{laneCountLabel}</strong>
+                  </div>
                 </div>
                 {lane === 'yuna' || lane === 'goyounjung' ? (
                   <button type="button" className="research-more-button lane-more" onClick={() => setResearchModalLane(lane)}>
@@ -941,7 +966,10 @@ function ResearchKanbanPanel() {
                     className={item.id === selectedItem?.id ? 'research-card active' : 'research-card'}
                     onClick={() => setSelectedId(item.id)}
                   >
-                    <span className="research-thumb">{item.thumbnailLabel}</span>
+                    <span className="research-thumb research-agent-thumb">
+                      <img src={researchAgentFace(item).src} alt={researchAgentFace(item).name} />
+                      <span>{item.thumbnailLabel}</span>
+                    </span>
                     <span className="research-card-copy">
                       <strong>{item.title}</strong>
                       <small>{item.dateKst} · {item.isoWeek}</small>

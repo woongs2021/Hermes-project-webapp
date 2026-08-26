@@ -182,13 +182,23 @@ const graphMvpContracts = [
   },
 ]
 
+const teamFaceSrc = (fileName: string) => `${import.meta.env.BASE_URL}assets/team/${fileName}`
+
 const operatingMapInfographicNodes = [
-  { number: '01', label: 'Chris', value: '질문과 우선순위' },
-  { number: '02', label: 'Karina', value: '실행 루프 설계' },
-  { number: '03', label: 'Evidence', value: '리서치와 비주얼 근거' },
-  { number: '04', label: 'OBD Logic', value: '질문·가치·화면 언어' },
-  { number: '05', label: 'Muyeol', value: '리스크와 공개 범위 검증' },
-  { number: '06', label: 'Chris', value: '다음 판단과 실행' },
+  { number: '01', label: 'Chris', value: '질문과 우선순위', faces: [] },
+  { number: '02', label: 'Karina', value: '실행 루프 설계', faces: [{ name: 'Karina', src: teamFaceSrc('karina_profile.jpg') }] },
+  {
+    number: '03',
+    label: 'Evidence',
+    value: '리서치와 비주얼 근거',
+    faces: [
+      { name: 'Yuna', src: teamFaceSrc('yuna_profile.jpg') },
+      { name: 'Go Youn-jung', src: teamFaceSrc('goyounjung_profile.jpg') },
+    ],
+  },
+  { number: '04', label: 'OBD Logic', value: '질문·가치·화면 언어', faces: [{ name: 'Karina', src: teamFaceSrc('karina_profile.jpg') }] },
+  { number: '05', label: 'Muyeol', value: '리스크와 공개 범위 검증', faces: [{ name: 'Muyeol', src: teamFaceSrc('muyeol_profile.jpg') }] },
+  { number: '06', label: 'Chris', value: '다음 판단과 실행', faces: [] },
 ]
 
 function SignalLoopInfographic() {
@@ -229,7 +239,16 @@ function OperatingMapInfographic() {
         {operatingMapInfographicNodes.map((node, index) => (
           <div className="obd-step-with-arrow" key={`${node.number}-${node.label}`}>
             <article className="obd-step-card operating-loop-node">
-              <span>{node.number}</span>
+              <div className="obd-step-card-head">
+                <span>{node.number}</span>
+                {node.faces.length > 0 ? (
+                  <div className="obd-agent-face-row" aria-label={`${node.label} agent faces`}>
+                    {node.faces.map((face) => (
+                      <img className="obd-agent-face" src={face.src} alt={face.name} key={face.name} />
+                    ))}
+                  </div>
+                ) : null}
+              </div>
               <h4>{node.label}</h4>
               <p>{node.value}</p>
             </article>
