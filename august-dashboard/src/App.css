@@ -5225,7 +5225,10 @@
 .operating-loop-diagram {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-areas: none;
   gap: 0;
+  align-items: stretch;
+  justify-items: stretch;
   min-height: 0;
   max-width: 960px;
   border-radius: 0;
@@ -5248,13 +5251,14 @@
 
 .obd-step-with-arrow {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: clamp(10px, 2vw, 18px);
-  align-items: center;
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap: clamp(8px, 1.4vw, 12px);
+  justify-items: stretch;
 }
 
 .obd-step-with-arrow:not(:last-child) {
-  margin-bottom: clamp(10px, 1.8vw, 16px);
+  margin-bottom: clamp(12px, 2vw, 20px);
 }
 
 .obd-step-card,
@@ -5263,6 +5267,7 @@
   position: relative;
   inset: auto;
   z-index: auto;
+  grid-area: auto;
   display: grid;
   width: auto;
   min-height: 0;
@@ -5272,6 +5277,15 @@
   padding: clamp(16px, 2.2vw, 22px);
   background: color-mix(in srgb, var(--panel-surface) 94%, transparent);
   transform: none;
+}
+
+.operating-loop-node:nth-child(1),
+.operating-loop-node:nth-child(2),
+.operating-loop-node:nth-child(3),
+.operating-loop-node:nth-child(4),
+.operating-loop-node:nth-child(5),
+.operating-loop-node:nth-child(6) {
+  grid-area: auto;
 }
 
 .obd-step-card span,
@@ -5287,9 +5301,9 @@
 .obd-step-card h4,
 .signal-loop-node h4,
 .operating-loop-node h4 {
-  color: var(--ink);
+  color: var(--primary);
   font-size: clamp(1.05rem, 1.55vw, 1.45rem);
-  font-weight: 520;
+  font-weight: 640;
   letter-spacing: -0.045em;
   line-height: 1.05;
 }
@@ -5304,14 +5318,16 @@
 
 .obd-step-arrow {
   display: inline-grid;
-  width: 38px;
-  height: 38px;
+  justify-self: center;
+  width: 34px;
+  height: 34px;
   place-items: center;
-  border: 1px solid var(--stroke);
+  border: 1px solid color-mix(in srgb, var(--primary) 42%, var(--stroke));
   border-radius: 999px;
-  background: var(--surface);
-  color: var(--ink);
+  background: color-mix(in srgb, var(--primary) 9%, var(--surface));
+  color: var(--primary);
   font-size: 1.05rem;
+  line-height: 1;
 }
 
 :root[data-theme='dark'] .obd-step-card,
@@ -5330,6 +5346,5 @@
     justify-self: center;
     width: 32px;
     height: 32px;
-    transform: rotate(90deg);
   }
 }

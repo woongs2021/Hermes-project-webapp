@@ -208,7 +208,7 @@ function SignalLoopInfographic() {
               <h4>{milestone.title}</h4>
               <p>{milestone.output}</p>
             </article>
-            {index < obdMilestones.length - 1 ? <span className="obd-step-arrow" aria-hidden="true">→</span> : null}
+            {index < obdMilestones.length - 1 ? <span className="obd-step-arrow" aria-hidden="true">↓</span> : null}
           </div>
         ))}
       </div>
@@ -233,7 +233,7 @@ function OperatingMapInfographic() {
               <h4>{node.label}</h4>
               <p>{node.value}</p>
             </article>
-            {index < operatingMapInfographicNodes.length - 1 ? <span className="obd-step-arrow" aria-hidden="true">→</span> : null}
+            {index < operatingMapInfographicNodes.length - 1 ? <span className="obd-step-arrow" aria-hidden="true">↓</span> : null}
           </div>
         ))}
       </div>
