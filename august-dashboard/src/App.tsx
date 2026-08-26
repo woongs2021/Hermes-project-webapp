@@ -5,8 +5,9 @@ import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type Rese
 import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, MuyeolValidationPanel, ObdGrowthTimelinePanel } from './extendedPanels'
 import './App.css'
 
-type TabId = 'home' | 'team' | 'obd' | 'research' | 'report' | 'architecture' | 'about'
+type TabId = 'home' | 'team' | 'obd' | 'research' | 'report' | 'about'
 type ThemeMode = 'light' | 'dark'
+type ObdSubTabId = 'growth' | 'graph'
 
 type Tab = {
   id: TabId
@@ -62,10 +63,10 @@ const tabs: Tab[] = [
   },
   {
     id: 'obd',
-    label: 'OBD',
-    eyebrow: 'Growth timeline',
-    title: 'OBD Growth Loop',
-    description: '수집된 자료가 온톨로지, 비즈니스 판단, 따뜻한 AI UX 언어로 바뀌는 카드형 성장 타임라인입니다.',
+    label: 'OBD Graph',
+    eyebrow: 'Growth loop + relation graph',
+    title: 'OBD Knowledge Loop',
+    description: 'OBD 성장 타임라인과 Dashboard Knowledge Graph를 하나의 탭 안에서 하위 흐름으로 묶어 봅니다.',
   },
   {
     id: 'research',
@@ -82,13 +83,6 @@ const tabs: Tab[] = [
     description: 'Yuna / Go Youn-jung 리서치 후보를 월간 지표와 주제 hook, 상위 후보로 압축해 Chris의 성장 방향을 읽습니다.',
   },
   {
-    id: 'architecture',
-    label: 'Graph',
-    eyebrow: 'OBD relation graph',
-    title: 'Dashboard Knowledge Graph',
-    description: 'Home visual, research, OBD, Muyeol validation을 Chris에게 돌아오는 하나의 관계 루프로 연결합니다.',
-  },
-  {
     id: 'about',
     label: 'About',
     eyebrow: 'Chris profile',
@@ -100,6 +94,20 @@ const tabs: Tab[] = [
 const metricPlaceholders = ['Primary signal', 'Open loops', 'Weekly check-in']
 const listPlaceholders = ['Next handoff note', 'Recent validation slot', 'Reference card surface']
 const researchLaneFilters = ['all', 'yuna', 'goyounjung', 'final'] as const
+const obdSubTabs: { id: ObdSubTabId; label: string; eyebrow: string; description: string }[] = [
+  {
+    id: 'growth',
+    label: 'Growth Loop',
+    eyebrow: 'OBD timeline',
+    description: '신호가 ontology, business translation, validation loop으로 확장되는 성장 흐름입니다.',
+  },
+  {
+    id: 'graph',
+    label: 'Relation Graph',
+    eyebrow: 'Dashboard knowledge map',
+    description: 'Home visual, Research, OBD, Muyeol 검증을 Chris에게 돌아오는 하나의 관계 지도로 연결합니다.',
+  },
+]
 
 function getInitialThemeMode(): ThemeMode {
   if (typeof window === 'undefined') return 'light'
@@ -1242,9 +1250,48 @@ function DevArchitecturePanel() {
   )
 }
 
+function ObdKnowledgeLoopPanel() {
+  const [activeObdSubTab, setActiveObdSubTab] = useState<ObdSubTabId>('growth')
+  const currentSubTab = obdSubTabs.find((subTab) => subTab.id === activeObdSubTab) ?? obdSubTabs[0]
+
+  return (
+    <div className="obd-knowledge-shell">
+      <nav className="obd-subtab-nav" aria-label="OBD knowledge loop sections">
+        {obdSubTabs.map((subTab) => (
+          <button
+            key={subTab.id}
+            type="button"
+            className={subTab.id === activeObdSubTab ? 'obd-subtab-button active' : 'obd-subtab-button'}
+            aria-pressed={subTab.id === activeObdSubTab}
+            onClick={() => setActiveObdSubTab(subTab.id)}
+          >
+            <span>{subTab.label}</span>
+            <small>{subTab.eyebrow}</small>
+          </button>
+        ))}
+      </nav>
+
+      <section className="obd-subtab-intro" aria-live="polite">
+        <p className="card-kicker">{currentSubTab.eyebrow}</p>
+        <h3>{currentSubTab.label}</h3>
+        <p>{currentSubTab.description}</p>
+      </section>
+
+      {activeObdSubTab === 'growth' ? (
+        <ObdGrowthTimelinePanel />
+      ) : (
+        <>
+          <GraphRelationshipPanel />
+          <DevArchitecturePanel />
+        </>
+      )}
+    </div>
+  )
+}
+
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>(() => {
-    const normalizedHash = window.location.hash === '#intro' ? '#about' : window.location.hash
+    const normalizedHash = window.location.hash === '#intro' ? '#about' : window.location.hash === '#architecture' ? '#obd' : window.location.hash
     const hashTab = tabs.find((tab) => `#${tab.id}` === normalizedHash)
     return hashTab ?? tabs[0]
   })
@@ -1337,18 +1384,13 @@ function App() {
         ) : activeTab.id === 'team' ? (
           <TeamPanel />
         ) : activeTab.id === 'obd' ? (
-          <ObdGrowthTimelinePanel />
+          <ObdKnowledgeLoopPanel />
         ) : activeTab.id === 'research' ? (
           <ResearchKanbanPanel />
         ) : activeTab.id === 'report' ? (
           <>
             <MonthlyResearchSynthesisPanel />
             <MuyeolValidationPanel />
-          </>
-        ) : activeTab.id === 'architecture' ? (
-          <>
-            <GraphRelationshipPanel />
-            <DevArchitecturePanel />
           </>
         ) : (
           <PlaceholderPanel tab={activeTab} />

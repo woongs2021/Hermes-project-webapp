@@ -1720,6 +1720,79 @@
   gap: 18px;
 }
 
+.obd-knowledge-shell {
+  display: grid;
+  gap: 18px;
+}
+
+.obd-subtab-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: 1px solid var(--stroke);
+  border-bottom: 1px solid var(--stroke);
+  padding: 14px 0;
+}
+
+.obd-subtab-button {
+  display: grid;
+  gap: 4px;
+  min-width: min(240px, 100%);
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  color: var(--muted-ink);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.obd-subtab-button span {
+  color: inherit;
+  font-size: 0.94rem;
+  font-weight: 760;
+  letter-spacing: -0.02em;
+}
+
+.obd-subtab-button small {
+  color: var(--quiet-ink);
+  font-size: 0.72rem;
+  font-weight: 680;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.obd-subtab-button:hover,
+.obd-subtab-button:focus-visible,
+.obd-subtab-button.active {
+  color: var(--ink);
+  background: var(--chip-surface);
+  transform: translateY(-1px);
+}
+
+.obd-subtab-intro {
+  display: grid;
+  gap: 8px;
+  border-top: 1px solid var(--stroke);
+  padding-top: 18px;
+}
+
+.obd-subtab-intro h3 {
+  font-size: clamp(1.5rem, 2.4vw, 2.55rem);
+  font-weight: 420;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.obd-subtab-intro p:not(.card-kicker) {
+  max-width: 760px;
+  color: var(--muted-ink);
+}
+
 .graph-hero-card,
 .obd-hero-card,
 .monthly-hero-card,
