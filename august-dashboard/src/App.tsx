@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type CSSProperties, type WheelEvent } from 'react'
+import { useEffect, useRef, useState, type WheelEvent } from 'react'
 import { fallbackManifest, loadDashboardManifest, type DashboardManifest } from './dashboardContent'
 import { fallbackHomeVisualSet, loadHomeVisualSet, type HomeVisualItem, type HomeVisualSet } from './homeVisualSet'
 import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type ResearchBoardItem } from './researchBoard'
@@ -433,13 +433,6 @@ function getVisualCarouselOffset(index: number, activeIndex: number, total: numb
   return offset
 }
 
-function getVisualMarqueeStyle(index: number, total: number): CSSProperties {
-  return {
-    '--marquee-slot': index,
-    '--marquee-count': Math.max(total, 1),
-  } as CSSProperties
-}
-
 function HomeVisualHeroPanel() {
   const [visualSet, setVisualSet] = useState<HomeVisualSet>(fallbackHomeVisualSet)
   const [activeIndex, setActiveIndex] = useState(0)
@@ -575,7 +568,7 @@ function HomeVisualHeroPanel() {
           ) : null}
           <div
             className={`viscose-carousel-stage visual-marquee-stage${marqueeBoost ? ` boost-${marqueeBoost}` : ''}`}
-            aria-label="Scrolling tilted visual card flow"
+            aria-label="Scrolling front-facing visual card flow"
             onWheel={handleCarouselWheel}
             onPointerDown={(event) => {
               dragStartRef.current = { x: event.clientX, time: Date.now() }
@@ -590,29 +583,30 @@ function HomeVisualHeroPanel() {
               dragStartRef.current = null
             }}
           >
-            {visualSet.items.map((item, index) => {
-              const offset = getVisualCarouselOffset(index, selectedIndex, totalItems)
-              const distance = Math.abs(offset)
-              const style = getVisualMarqueeStyle(index, totalItems)
+            <div className="visual-marquee-track" aria-label="Duplicated continuous visual card track">
+              {[...visualSet.items, ...visualSet.items].map((item, loopIndex) => {
+                const originalIndex = totalItems > 0 ? loopIndex % totalItems : 0
+                const offset = getVisualCarouselOffset(originalIndex, selectedIndex, totalItems)
+                const distance = Math.abs(offset)
 
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  className={index === selectedIndex ? 'viscose-card active' : 'viscose-card'}
-                  style={style}
-                  aria-pressed={index === selectedIndex}
-                  onClick={() => setActiveIndex(index)}
-                >
-                  <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} public home still`} loading={distance <= 2 ? 'eager' : 'lazy'} />
-                  <span className="visual-index">{String(index + 1).padStart(2, '0')} · {item.dateKst}</span>
-                  <div className="visual-card-copy">
-                    <strong>{item.title}</strong>
-                    <span>{item.theme}</span>
-                  </div>
-                </button>
-              )
-            })}
+                return (
+                  <button
+                    key={`${item.id}-${loopIndex}`}
+                    type="button"
+                    className={originalIndex === selectedIndex ? 'viscose-card active' : 'viscose-card'}
+                    aria-pressed={originalIndex === selectedIndex}
+                    onClick={() => setActiveIndex(originalIndex)}
+                  >
+                    <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} public home still`} loading={distance <= 2 ? 'eager' : 'lazy'} />
+                    <span className="visual-index">{String(originalIndex + 1).padStart(2, '0')} · {item.dateKst}</span>
+                    <div className="visual-card-copy">
+                      <strong>{item.title}</strong>
+                      <span>{item.theme}</span>
+                    </div>
+                  </button>
+                )
+              })}
+            </div>
           </div>
           <div className="viscose-controls" aria-label="Home visual carousel controls">
             <button type="button" className="viscose-arrow-button" onClick={() => handleFastMove(-8)} disabled={totalItems < 2} aria-label="Move visual flow quickly left">

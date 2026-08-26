@@ -4361,10 +4361,12 @@
   }
 }
 
-/* Follow-up 15: simple fast tilted left-flow visual marquee */
+/* Follow-up 16: rebuilt front-facing flex-track marquee to avoid legacy absolute card overlap */
 .visual-marquee-stage,
 :root[data-theme='dark'] .visual-marquee-stage {
   position: relative;
+  display: flex;
+  align-items: center;
   min-height: 360px;
   overflow: hidden;
   perspective: none;
@@ -4391,37 +4393,55 @@
   display: none;
 }
 
-.visual-marquee-stage .viscose-card {
-  --card-w: clamp(118px, 13vw, 176px);
+.visual-marquee-track {
   --card-gap: 10px;
-  --slot-w: calc(var(--card-w) + var(--card-gap));
-  --travel: calc(var(--slot-w) * var(--marquee-count));
-  --marquee-step-time: 3.6s;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: var(--card-w);
-  height: calc(var(--card-w) * 1.32);
-  opacity: 0.82;
-  z-index: calc(2 + var(--marquee-slot));
-  transform:
-    translateX(calc(100vw + (var(--slot-w) * var(--marquee-slot))))
-    translateY(-50%)
-    rotate(0deg);
-  transform-origin: 50% 70%;
+  --marquee-duration: 230s;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--card-gap);
+  width: max-content;
+  min-width: max-content;
+  padding-inline: var(--card-gap);
+  transform: translate3d(0, 0, 0);
+  animation: visualMarqueeTrackFlow var(--marquee-duration) linear infinite;
+  will-change: transform;
+}
+
+.visual-marquee-stage:hover .visual-marquee-track,
+.visual-marquee-stage:focus-within .visual-marquee-track {
+  animation-play-state: paused;
+}
+
+.visual-marquee-stage.boost-left .visual-marquee-track,
+.visual-marquee-stage.boost-right .visual-marquee-track {
+  --marquee-duration: 38s;
+  animation-timing-function: cubic-bezier(0.12, 0.82, 0.22, 1);
+}
+
+.visual-marquee-stage .viscose-card,
+.visual-marquee-stage .viscose-card.active {
+  position: relative;
+  inset: auto;
+  flex: 0 0 auto;
+  width: clamp(118px, 13vw, 176px);
+  height: auto;
+  aspect-ratio: 4 / 5;
+  opacity: 0.86;
+  z-index: 1;
+  transform: none;
   border: 0;
   border-radius: 22px;
   box-shadow: 0 18px 42px rgba(1, 1, 2, 0.16);
-  animation: visualMarqueeFlow calc(max(var(--marquee-count), 12) * var(--marquee-step-time)) linear infinite;
-  animation-delay: calc(var(--marquee-slot) * -1 * var(--marquee-step-time));
-  will-change: transform;
+  animation: none;
+  will-change: auto;
 }
 
 .visual-marquee-stage .viscose-card:hover,
 .visual-marquee-stage .viscose-card:focus-visible,
 .visual-marquee-stage .viscose-card.active {
   opacity: 1;
-  z-index: 8;
+  z-index: 2;
   box-shadow: 0 26px 64px rgba(1, 1, 2, 0.24);
   filter: saturate(1.06);
 }
@@ -4446,17 +4466,6 @@
 
 .visual-marquee-stage .visual-card-copy span {
   display: none;
-}
-
-.visual-marquee-stage:hover .viscose-card,
-.visual-marquee-stage:focus-within .viscose-card {
-  animation-play-state: paused;
-}
-
-.visual-marquee-stage.boost-left .viscose-card,
-.visual-marquee-stage.boost-right .viscose-card {
-  --marquee-step-time: 0.72s;
-  animation-timing-function: cubic-bezier(0.12, 0.82, 0.22, 1);
 }
 
 .visual-marquee-stage.boost-left .viscose-card {
@@ -4499,18 +4508,12 @@
   text-transform: uppercase;
 }
 
-@keyframes visualMarqueeFlow {
+@keyframes visualMarqueeTrackFlow {
   from {
-    transform:
-      translateX(calc(100vw + (var(--slot-w) * var(--marquee-slot))))
-      translateY(-50%)
-      rotate(0deg);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform:
-      translateX(calc(-1 * var(--travel) + (var(--slot-w) * var(--marquee-slot))))
-      translateY(-50%)
-      rotate(0deg);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -4520,11 +4523,14 @@
     min-height: 320px;
   }
 
-  .visual-marquee-stage .viscose-card {
-    --card-w: clamp(100px, 24vw, 146px);
+  .visual-marquee-track {
     --card-gap: 10px;
-    --slot-w: calc(var(--card-w) + var(--card-gap));
-    --marquee-step-time: 3.6s;
+    --marquee-duration: 250s;
+  }
+
+  .visual-marquee-stage .viscose-card,
+  .visual-marquee-stage .viscose-card.active {
+    width: clamp(100px, 24vw, 146px);
     border-radius: 18px;
   }
 }
@@ -4535,11 +4541,14 @@
     min-height: 270px;
   }
 
-  .visual-marquee-stage .viscose-card {
-    --card-w: clamp(82px, 29vw, 112px);
+  .visual-marquee-track {
     --card-gap: 10px;
-    --slot-w: calc(var(--card-w) + var(--card-gap));
-    --marquee-step-time: 3.6s;
+    --marquee-duration: 260s;
+  }
+
+  .visual-marquee-stage .viscose-card,
+  .visual-marquee-stage .viscose-card.active {
+    width: clamp(82px, 29vw, 112px);
     border-radius: 16px;
   }
 
