@@ -357,10 +357,11 @@
   transform: translateX(-50%) translateY(var(--stack-offset)) scale(var(--stack-scale));
   transform-origin: center top;
   transition:
-    border-color 180ms ease,
-    opacity 220ms ease,
-    transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    background 180ms ease;
+    border-color 260ms ease,
+    opacity 520ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 560ms cubic-bezier(0.16, 1, 0.3, 1),
+    background 260ms ease,
+    box-shadow 520ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .validated-paper-card[data-stack-position='1'] {

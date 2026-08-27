@@ -803,6 +803,7 @@ function ResearchKanbanPanel() {
   const validatedPointerMovedRef = useRef(false)
   const validatedDragStartYRef = useRef(0)
   const validatedWheelDeltaRef = useRef(0)
+  const validatedWheelLockedRef = useRef(false)
   const [query, setQuery] = useState(getInitialResearchQuery)
   const [laneFilter, setLaneFilter] = useState<ResearchLaneFilter>(getInitialResearchLaneFilter)
   const [researchModalLane, setResearchModalLane] = useState<ResearchLaneFilter | null>(null)
@@ -959,7 +960,8 @@ function ResearchKanbanPanel() {
     const stackElement = validatedStackRef.current
     if (!stackElement) return undefined
 
-    const wheelThreshold = 82
+    const wheelThreshold = 54
+    const wheelCooldownMs = 520
 
     const handleNativeWheel = (event: globalThis.WheelEvent) => {
       if (Math.abs(event.deltaY) < 8) return
@@ -967,12 +969,18 @@ function ResearchKanbanPanel() {
       event.preventDefault()
       event.stopPropagation()
 
+      if (validatedWheelLockedRef.current) return
+
       validatedWheelDeltaRef.current += event.deltaY
 
       if (Math.abs(validatedWheelDeltaRef.current) >= wheelThreshold) {
-        const direction = validatedWheelDeltaRef.current > 0 ? 1 : -1
+        const direction = validatedWheelDeltaRef.current < 0 ? 1 : -1
         rotateValidatedStack(direction)
         validatedWheelDeltaRef.current = 0
+        validatedWheelLockedRef.current = true
+        window.setTimeout(() => {
+          validatedWheelLockedRef.current = false
+        }, wheelCooldownMs)
       }
     }
 
@@ -1001,7 +1009,7 @@ function ResearchKanbanPanel() {
     if (Math.abs(deltaY) < 46) return
 
     validatedPointerMovedRef.current = true
-    rotateValidatedStack(deltaY > 0 ? 1 : -1)
+    rotateValidatedStack(deltaY < 0 ? 1 : -1)
     validatedDragStartYRef.current = clientY
   }
 
