@@ -1205,7 +1205,7 @@ function buildWeeklyResearchTrend(selectedItem: ResearchBoardItem, weekItems: Re
   return {
     weekLabel,
     isoWeek: selectedItem.isoWeek,
-    body: `${weekLabel}의 핵심 인사이트는 AI 경험을 단순한 기능 목록이 아니라 “기억하고, 맥락을 이해하고, 사람이 판단하기 쉽게 다시 정리해주는 시스템”으로 봐야 한다는 점입니다. 이번 주에 검토된 ${weekItems.length}개 논문 중 ${finalCount}개가 final pick으로 좁혀졌고, Muyeol 기준으로 GO ${goCount}개와 WATCH ${watchCount}개 신호가 남았습니다. 특히 ${topTitles.join(' · ')} 같은 논문들은 agent memory, AI UX, 디자인 의사결정, 한국어/로컬 맥락이 따로 떨어진 주제가 아니라 하나의 운영 루프로 연결된다는 점을 보여줍니다. 그래서 이 주의 결론은 “좋은 AI UX는 더 많은 답을 보여주는 화면이 아니라, 사용자의 과거 맥락과 현재 목표를 묶어 다음 선택을 더 선명하게 만들어주는 구조”라는 쪽에 가깝습니다. Chris에게는 이 흐름이 OBD 루프를 설계할 때 중요한 기준이 됩니다. 논문을 많이 읽었다는 사실보다, 어떤 정보를 기억해야 하고, 어떤 근거를 남겨야 하며, 어떤 순간에 화면이 판단을 도와야 하는지까지 제품 언어로 바꿔볼 수 있는 주간이기 때문입니다.`,
+    body: `${weekLabel}의 핵심 인사이트는 AI 경험을 단순한 기능 목록이 아니라 “기억하고, 맥락을 이해하고, 사람이 판단하기 쉽게 다시 정리해주는 시스템”으로 봐야 한다는 점입니다. 이번 주에 검토된 ${weekItems.length}개 논문 중 ${finalCount}개가 final pick으로 좁혀졌고, Muyeol 기준으로 GO ${goCount}개와 WATCH ${watchCount}개 신호가 남았습니다. 특히 ${topTitles.join(' · ')} 같은 논문들은 agent memory, AI UX, 디자인 의사결정, 한국어/로컬 맥락이 따로 떨어진 주제가 아니라 하나의 운영 루프로 연결된다는 점을 보여줍니다. 그래서 이 주의 결론은 “좋은 AI UX는 더 많은 답을 보여주는 화면이 아니라, 사용자의 과거 맥락과 현재 목표를 묶어 다음 선택을 더 선명하게 만들어주는 구조”라는 쪽에 가깝습니다. 여기서 중요한 것은 AI가 똑똑해 보이는가보다, 사용자가 지금 무엇을 판단해야 하는지 덜 헤매게 만드는가입니다. 기억 관련 논문은 과거 대화와 작업 맥락을 어떻게 보존해야 하는지 알려주고, UX/디자인 의사결정 관련 논문은 그 기억이 화면에서 어떤 우선순위와 설명 구조로 나타나야 하는지 보여줍니다. 한국어/로컬 맥락 논문은 글로벌 AI 패턴을 그대로 가져오는 것이 아니라 Chris의 언어, 한국 사용자, 삼성·LG에서 익힌 제품 현실감에 맞게 다시 번역해야 한다는 신호를 줍니다. Chris에게는 이 흐름이 OBD 루프를 설계할 때 중요한 기준이 됩니다. 논문을 많이 읽었다는 사실보다, 어떤 정보를 기억해야 하고, 어떤 근거를 남겨야 하며, 어떤 순간에 화면이 판단을 도와야 하는지까지 제품 언어로 바꿔볼 수 있는 주간이기 때문입니다. 결국 ${weekLabel}의 논문들은 AI UX를 “답변 생성”이 아니라 “맥락을 축적하고, 의미를 압축하고, 다음 행동을 선택하게 돕는 운영 구조”로 보게 만듭니다. 이 관점은 Research 탭의 논문 카드, OBD Map의 루프, 그리고 앞으로의 One UI 탐구가 서로 따로 노는 것이 아니라 하나의 판단 시스템으로 이어져야 한다는 방향을 강화합니다.`,
   }
 }
 
@@ -1533,7 +1533,7 @@ function App() {
     return hashTab ?? tabs[0]
   })
   const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialThemeMode)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(true)
   const isDarkMode = themeMode === 'dark'
 
   useEffect(() => {
@@ -1549,6 +1549,12 @@ function App() {
 
   function toggleThemeMode() {
     setThemeMode((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'))
+  }
+
+  function toggleMenuOpen() {
+    const currentScrollY = window.scrollY
+    setIsMenuOpen((open) => !open)
+    window.requestAnimationFrame(() => window.scrollTo({ top: currentScrollY, left: 0 }))
   }
 
   return (
@@ -1584,7 +1590,7 @@ function App() {
           className="hamburger-button"
           aria-label={isMenuOpen ? 'Close section menu' : 'Open section menu'}
           aria-expanded={isMenuOpen}
-          onClick={() => setIsMenuOpen((open) => !open)}
+          onClick={toggleMenuOpen}
         >
           <svg className="menu-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
             <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />

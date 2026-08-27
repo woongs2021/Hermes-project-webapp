@@ -766,14 +766,14 @@
 }
 
 .weekly-research-trend-header h3 {
-  color: var(--ink);
+  color: var(--primary);
   font-size: clamp(1.28rem, 2.1vw, 1.9rem);
   font-weight: 400;
   letter-spacing: -0.035em;
 }
 
 .weekly-research-trend-header h3 span {
-  color: var(--ink);
+  color: var(--primary);
   font-weight: 400;
 }
 
@@ -2595,9 +2595,9 @@
 }
 
 .topbar .tab-nav {
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0;
+  position: fixed;
+  top: 96px;
+  left: max(20px, calc((100vw - 1440px) / 2 + 14px));
   display: grid;
   width: min(360px, calc(100vw - 40px));
   gap: 8px;
@@ -2609,13 +2609,15 @@
   opacity: 0;
   pointer-events: none;
   transform: translateY(-8px);
-  transition: opacity 180ms ease, transform 180ms ease;
+  transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+  visibility: hidden;
 }
 
 .topbar .tab-nav.open {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+  visibility: visible;
 }
 
 .topbar .tab-button {
