@@ -313,15 +313,19 @@
 
 .validated-paper-marquee {
   display: grid;
-  gap: 16px;
+  gap: 10px;
   overflow: hidden;
   border-radius: 24px;
+  padding-block: 14px;
+  margin-block: -14px;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
 }
 
 .validated-paper-marquee-row {
   overflow: hidden;
+  padding-block: 16px;
+  margin-block: -16px;
 }
 
 .validated-paper-marquee-track {
@@ -358,7 +362,7 @@
   color: var(--muted-ink);
   text-align: left;
   cursor: pointer;
-  box-shadow: 0 16px 38px color-mix(in srgb, var(--ink) 10%, transparent);
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--ink) 8%, transparent);
   transition: border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
 }
 
@@ -371,7 +375,7 @@
   border-color: color-mix(in srgb, var(--primary) 48%, var(--stroke));
   outline: none;
   transform: translateY(-2px);
-  box-shadow: 0 20px 46px color-mix(in srgb, var(--ink) 14%, transparent);
+  box-shadow: 0 14px 32px color-mix(in srgb, var(--ink) 11%, transparent);
 }
 
 @keyframes validated-marquee-left {
@@ -418,8 +422,10 @@
   color: var(--ink);
   font-size: 0.96rem;
   letter-spacing: -0.03em;
-  text-overflow: ellipsis;
+  text-overflow: clip;
   white-space: nowrap;
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 calc(100% - 42px), transparent 100%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 calc(100% - 42px), transparent 100%);
 }
 
 .validated-paper-copy small,
