@@ -802,6 +802,7 @@ function ResearchKanbanPanel() {
   const draggedValidatedIdRef = useRef<string | null>(null)
   const validatedPointerMovedRef = useRef(false)
   const validatedDragStartYRef = useRef(0)
+  const validatedWheelDeltaRef = useRef(0)
   const [query, setQuery] = useState(getInitialResearchQuery)
   const [laneFilter, setLaneFilter] = useState<ResearchLaneFilter>(getInitialResearchLaneFilter)
   const [researchModalLane, setResearchModalLane] = useState<ResearchLaneFilter | null>(null)
@@ -958,11 +959,21 @@ function ResearchKanbanPanel() {
     const stackElement = validatedStackRef.current
     if (!stackElement) return undefined
 
+    const wheelThreshold = 82
+
     const handleNativeWheel = (event: globalThis.WheelEvent) => {
       if (Math.abs(event.deltaY) < 8) return
 
       event.preventDefault()
-      rotateValidatedStack(event.deltaY > 0 ? 1 : -1)
+      event.stopPropagation()
+
+      validatedWheelDeltaRef.current += event.deltaY
+
+      if (Math.abs(validatedWheelDeltaRef.current) >= wheelThreshold) {
+        const direction = validatedWheelDeltaRef.current > 0 ? 1 : -1
+        rotateValidatedStack(direction)
+        validatedWheelDeltaRef.current = 0
+      }
     }
 
     stackElement.addEventListener('wheel', handleNativeWheel, { passive: false })

@@ -365,9 +365,12 @@
 
 .validated-paper-card[data-stack-position='1'] {
   border-color: color-mix(in srgb, var(--primary) 48%, var(--stroke));
-  background:
-    radial-gradient(circle at 12% 14%, color-mix(in srgb, var(--primary) 18%, transparent), transparent 42%),
-    var(--panel-surface);
+  background: #fcfcff;
+  opacity: 1;
+}
+
+:root[data-theme='dark'] .validated-paper-card[data-stack-position='1'] {
+  background: #111822;
 }
 
 .validated-paper-card[data-stack-position='1']:hover,
