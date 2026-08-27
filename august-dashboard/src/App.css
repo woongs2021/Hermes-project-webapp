@@ -792,6 +792,11 @@
   line-height: 1.86;
 }
 
+.weekly-research-trend > p strong {
+  color: var(--ink);
+  font-weight: 680;
+}
+
 .research-graph-trace {
   display: grid;
   gap: 10px;
@@ -5215,10 +5220,10 @@
   z-index: 5;
   display: grid;
   width: min(250px, 25vw);
-  gap: 8px;
+  gap: 4px;
   border: 1px solid color-mix(in srgb, var(--stroke) 82%, transparent);
   border-radius: 24px;
-  padding: 18px;
+  padding: 14px 15px;
   background: color-mix(in srgb, var(--panel-surface) 96%, transparent);
 }
 
@@ -5239,17 +5244,17 @@
 .signal-loop-node h4,
 .operating-loop-node h4 {
   color: var(--ink);
-  font-size: clamp(1rem, 1.45vw, 1.38rem);
+  font-size: clamp(0.96rem, 1.32vw, 1.24rem);
   font-weight: 520;
   letter-spacing: -0.045em;
-  line-height: 1.05;
+  line-height: 1;
 }
 
 .signal-loop-node p,
 .operating-loop-node p {
   color: var(--muted-ink);
-  font-size: 0.86rem;
-  line-height: 1.45;
+  font-size: 0.82rem;
+  line-height: 1.32;
 }
 
 .signal-loop-node-1 {
@@ -5308,12 +5313,12 @@
   position: relative;
   z-index: 2;
   display: grid;
-  gap: 8px;
+  gap: 4px;
   align-content: start;
-  min-height: 148px;
+  min-height: 126px;
   border: 1px solid color-mix(in srgb, var(--stroke) 78%, transparent);
   border-radius: 22px;
-  padding: 18px 16px;
+  padding: 14px 15px;
   background: color-mix(in srgb, var(--panel-surface) 96%, transparent);
 }
 
@@ -5582,10 +5587,10 @@
   display: grid;
   width: auto;
   min-height: 0;
-  gap: 8px;
+  gap: 4px;
   border: 1px solid var(--stroke);
   border-radius: 20px;
-  padding: clamp(16px, 2.2vw, 22px);
+  padding: clamp(12px, 1.65vw, 16px);
   background: color-mix(in srgb, var(--panel-surface) 94%, transparent);
   transform: none;
 }
@@ -5613,18 +5618,18 @@
 .signal-loop-node h4,
 .operating-loop-node h4 {
   color: var(--primary);
-  font-size: clamp(1.05rem, 1.55vw, 1.45rem);
-  font-weight: 640;
+  font-size: clamp(0.98rem, 1.34vw, 1.24rem);
+  font-weight: 620;
   letter-spacing: -0.045em;
-  line-height: 1.05;
+  line-height: 1;
 }
 
 .obd-step-card p,
 .signal-loop-node p,
 .operating-loop-node p {
   color: var(--muted-ink);
-  font-size: 0.9rem;
-  line-height: 1.45;
+  font-size: 0.82rem;
+  line-height: 1.32;
 }
 
 .obd-step-arrow {
@@ -5645,7 +5650,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 8px;
 }
 
 .operating-loop-node .obd-step-card-head {
