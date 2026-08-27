@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type MouseEvent, type WheelEvent } from 'react'
+import { useEffect, useRef, useState, type CSSProperties, type MouseEvent, type TouchEvent, type WheelEvent } from 'react'
 import { fallbackManifest, loadDashboardManifest, type DashboardManifest } from './dashboardContent'
 import { fallbackHomeVisualSet, loadHomeVisualSet, type HomeVisualItem, type HomeVisualSet } from './homeVisualSet'
 import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type ResearchBoardItem } from './researchBoard'
@@ -798,8 +798,10 @@ function ResearchKanbanPanel() {
   const [selectedId, setSelectedId] = useState('')
   const [validatedStackOrder, setValidatedStackOrder] = useState<string[]>([])
   const [draggedValidatedId, setDraggedValidatedId] = useState<string | null>(null)
+  const validatedStackRef = useRef<HTMLDivElement | null>(null)
   const draggedValidatedIdRef = useRef<string | null>(null)
   const validatedPointerMovedRef = useRef(false)
+  const validatedDragStartYRef = useRef(0)
   const [query, setQuery] = useState(getInitialResearchQuery)
   const [laneFilter, setLaneFilter] = useState<ResearchLaneFilter>(getInitialResearchLaneFilter)
   const [researchModalLane, setResearchModalLane] = useState<ResearchLaneFilter | null>(null)
@@ -937,53 +939,67 @@ function ResearchKanbanPanel() {
     avgScore: board.items.length === 0 ? 0 : board.items.reduce((sum, item) => sum + item.score, 0) / board.items.length,
   }
 
-  const moveValidatedItem = (sourceId: string, targetId: string) => {
-    if (sourceId === targetId) return
-
-    setValidatedStackOrder((currentOrder) => {
-      const sourceIndex = currentOrder.indexOf(sourceId)
-      const targetIndex = currentOrder.indexOf(targetId)
-
-      if (sourceIndex === -1 || targetIndex === -1) return currentOrder
-
-      const nextOrder = currentOrder.filter((id) => id !== sourceId)
-      const adjustedTargetIndex = nextOrder.indexOf(targetId)
-      const insertIndex = sourceIndex < targetIndex ? adjustedTargetIndex + 1 : adjustedTargetIndex
-      nextOrder.splice(insertIndex, 0, sourceId)
-
-      return nextOrder
-    })
-  }
-
   const handleValidatedDragEnd = () => {
     draggedValidatedIdRef.current = null
     setDraggedValidatedId(null)
   }
 
-  const moveValidatedItemFromPoint = (clientX: number, clientY: number) => {
-    const sourceId = draggedValidatedIdRef.current
-    if (!sourceId) return
+  const rotateValidatedStack = (direction: 1 | -1) => {
+    setValidatedStackOrder((currentOrder) => {
+      if (currentOrder.length <= 1) return currentOrder
 
-    const target = document.elementFromPoint(clientX, clientY)?.closest<HTMLElement>('[data-validated-paper-id]')
-    const targetId = target?.dataset.validatedPaperId
-    if (!targetId || targetId === sourceId) return
-
-    validatedPointerMovedRef.current = true
-    moveValidatedItem(sourceId, targetId)
+      return direction === 1
+        ? [...currentOrder.slice(1), currentOrder[0]]
+        : [currentOrder[currentOrder.length - 1], ...currentOrder.slice(0, -1)]
+    })
   }
 
-  const startValidatedStackDrag = (itemId: string) => {
+  useEffect(() => {
+    const stackElement = validatedStackRef.current
+    if (!stackElement) return undefined
+
+    const handleNativeWheel = (event: globalThis.WheelEvent) => {
+      if (Math.abs(event.deltaY) < 8) return
+
+      event.preventDefault()
+      rotateValidatedStack(event.deltaY > 0 ? 1 : -1)
+    }
+
+    stackElement.addEventListener('wheel', handleNativeWheel, { passive: false })
+
+    return () => stackElement.removeEventListener('wheel', handleNativeWheel)
+  }, [validatedStackOrder.length])
+
+  const bringValidatedItemToFront = (itemId: string) => {
+    setValidatedStackOrder((currentOrder) => {
+      if (currentOrder[0] === itemId) return currentOrder
+
+      return [itemId, ...currentOrder.filter((id) => id !== itemId)]
+    })
+  }
+
+  const startValidatedStackDrag = (itemId: string, startY: number) => {
     draggedValidatedIdRef.current = itemId
+    validatedDragStartYRef.current = startY
     validatedPointerMovedRef.current = false
     setDraggedValidatedId(itemId)
   }
 
+  const advanceValidatedStackFromY = (clientY: number) => {
+    const deltaY = clientY - validatedDragStartYRef.current
+    if (Math.abs(deltaY) < 46) return
+
+    validatedPointerMovedRef.current = true
+    rotateValidatedStack(deltaY > 0 ? 1 : -1)
+    validatedDragStartYRef.current = clientY
+  }
+
   const handleValidatedMouseDown = (event: MouseEvent<HTMLButtonElement>, itemId: string) => {
     event.preventDefault()
-    startValidatedStackDrag(itemId)
+    startValidatedStackDrag(itemId, event.clientY)
 
     const handleWindowMouseMove = (moveEvent: globalThis.MouseEvent) => {
-      moveValidatedItemFromPoint(moveEvent.clientX, moveEvent.clientY)
+      advanceValidatedStackFromY(moveEvent.clientY)
     }
 
     const handleWindowMouseUp = () => {
@@ -996,8 +1012,11 @@ function ResearchKanbanPanel() {
     window.addEventListener('mouseup', handleWindowMouseUp)
   }
 
-  const handleValidatedTouchStart = (itemId: string) => {
-    startValidatedStackDrag(itemId)
+  const handleValidatedTouchStart = (event: TouchEvent<HTMLButtonElement>, itemId: string) => {
+    const touch = event.touches[0]
+    if (!touch) return
+
+    startValidatedStackDrag(itemId, touch.clientY)
 
     const handleWindowTouchMove = (moveEvent: globalThis.TouchEvent) => {
       const sourceId = draggedValidatedIdRef.current
@@ -1007,7 +1026,7 @@ function ResearchKanbanPanel() {
       if (!touch) return
 
       moveEvent.preventDefault()
-      moveValidatedItemFromPoint(touch.clientX, touch.clientY)
+      advanceValidatedStackFromY(touch.clientY)
     }
 
     const handleWindowTouchEnd = () => {
@@ -1094,39 +1113,65 @@ function ResearchKanbanPanel() {
             <p className="card-kicker">Muyeol validated · key papers</p>
             <h3>검증이 끝난 주요 논문 {validatedTotal}개</h3>
             <p>
-              Muyeol이 GO로 확인한 Friday final pick을 일반 후보와 분리했습니다. 위아래로 드래그해 Chris가 먼저 보고 싶은 순서로 재정렬할 수 있습니다.
+              Muyeol이 GO로 확인한 Friday final pick을 일반 후보와 분리했습니다. 스크롤하거나 위아래로 드래그하면 뒤의 카드가 앞으로 올라오는 검증 논문 deck입니다.
             </p>
           </div>
           <button type="button" className="research-more-button" onClick={() => setResearchModalLane('final')}>More</button>
         </div>
-        <div className="validated-paper-stack" aria-label="Draggable validated paper stack">
-          {orderedValidatedItems.map((item, index) => (
-            <button
-              key={item.id}
-              type="button"
-              className={draggedValidatedId === item.id ? 'validated-paper-card dragging' : 'validated-paper-card'}
-              data-validated-paper-id={item.id}
-              onClick={() => {
-                if (validatedPointerMovedRef.current) {
-                  validatedPointerMovedRef.current = false
-                  return
-                }
+        <div
+          ref={validatedStackRef}
+          className="validated-paper-stack"
+          aria-label="Scrollable validated paper deck"
+        >
+          {orderedValidatedItems.map((item, index) => {
+            const visibleDepth = Math.min(index, 5)
+            const stackStyle = {
+              '--stack-index': visibleDepth,
+              '--stack-scale': Math.max(0.75, 1 - visibleDepth * 0.05),
+              '--stack-opacity': Math.max(0.75, 1 - visibleDepth * 0.05),
+              '--stack-offset': `${visibleDepth * 18}px`,
+              '--stack-z': orderedValidatedItems.length - index,
+            } as CSSProperties
 
-                setSelectedId(item.id)
-              }}
-              onMouseDown={(event) => handleValidatedMouseDown(event, item.id)}
-              onTouchStart={() => handleValidatedTouchStart(item.id)}
-              onDragEnd={handleValidatedDragEnd}
-            >
-              <span className="validated-paper-rank">{String(index + 1).padStart(2, '0')}</span>
-              <span className="validated-paper-copy">
-                <strong>{item.title}</strong>
-                <small>{laneLabel(item.lane)} · {item.dateKst} · {item.isoWeek}</small>
-                <span>{item.chrisRelevance || item.summary}</span>
-              </span>
-              <span className="validated-paper-badge">Muyeol GO</span>
-            </button>
-          ))}
+            return (
+              <button
+                key={item.id}
+                type="button"
+                className={draggedValidatedId === item.id ? 'validated-paper-card dragging' : 'validated-paper-card'}
+                data-validated-paper-id={item.id}
+                data-stack-position={index + 1}
+                aria-label={`${index + 1}번 검증 논문 카드: ${item.title}`}
+                style={stackStyle}
+                onClick={() => {
+                  if (validatedPointerMovedRef.current) {
+                    validatedPointerMovedRef.current = false
+                    return
+                  }
+
+                  if (index === 0) {
+                    setSelectedId(item.id)
+                    return
+                  }
+
+                  bringValidatedItemToFront(item.id)
+                }}
+                onMouseDown={(event) => handleValidatedMouseDown(event, item.id)}
+                onTouchStart={(event) => handleValidatedTouchStart(event, item.id)}
+                onDragEnd={handleValidatedDragEnd}
+              >
+                <span className="validated-paper-rank">{String(index + 1).padStart(2, '0')}</span>
+                <span className="validated-paper-copy">
+                  <strong>{item.title}</strong>
+                  <small>{laneLabel(item.lane)} · {item.dateKst} · {item.isoWeek}</small>
+                  <span>{item.chrisRelevance || item.summary}</span>
+                </span>
+                <span className="validated-paper-badge">Muyeol GO</span>
+              </button>
+            )
+          })}
+          <div className="validated-paper-stack-hint" aria-hidden="true">
+            Scroll / drag vertically to bring the next verified paper forward
+          </div>
         </div>
       </section>
 

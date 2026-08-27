@@ -312,40 +312,102 @@
 }
 
 .validated-paper-stack {
-  display: grid;
-  gap: 10px;
+  position: relative;
+  min-height: 280px;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 24px;
+  touch-action: none;
+}
+
+.validated-paper-stack::before {
+  position: absolute;
+  inset: auto 14% 0;
+  height: 34px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ink) 12%, transparent);
+  filter: blur(18px);
+  content: '';
 }
 
 .validated-paper-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: var(--stack-z);
   display: grid;
-  grid-template-columns: 48px minmax(0, 1fr) auto;
-  gap: 12px;
+  grid-template-columns: 54px minmax(0, 1fr) auto;
+  gap: 14px;
   align-items: center;
-  width: 100%;
+  width: min(100%, 980px);
+  min-height: 190px;
   border: 1px solid color-mix(in srgb, var(--primary) 18%, var(--stroke));
-  border-radius: 18px;
-  padding: 12px;
-  background: color-mix(in srgb, var(--primary) 7%, var(--panel-surface));
+  border-radius: 24px;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--primary) 10%, var(--panel-surface)), var(--panel-surface)),
+    var(--panel-surface);
   color: var(--muted-ink);
   text-align: left;
   touch-action: none;
   user-select: none;
   cursor: grab;
-  transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+  opacity: var(--stack-opacity);
+  box-shadow: 0 18px 46px color-mix(in srgb, var(--ink) 12%, transparent);
+  transform: translateX(-50%) translateY(var(--stack-offset)) scale(var(--stack-scale));
+  transform-origin: center top;
+  transition:
+    border-color 180ms ease,
+    opacity 220ms ease,
+    transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    background 180ms ease;
 }
 
-.validated-paper-card:hover,
-.validated-paper-card:focus-visible {
-  border-color: color-mix(in srgb, var(--primary) 46%, var(--stroke));
-  background: color-mix(in srgb, var(--primary) 11%, var(--panel-surface));
+.validated-paper-card[data-stack-position='1'] {
+  border-color: color-mix(in srgb, var(--primary) 48%, var(--stroke));
+  background:
+    radial-gradient(circle at 12% 14%, color-mix(in srgb, var(--primary) 18%, transparent), transparent 42%),
+    var(--panel-surface);
+}
+
+.validated-paper-card[data-stack-position='1']:hover,
+.validated-paper-card[data-stack-position='1']:focus-visible {
+  border-color: color-mix(in srgb, var(--primary) 64%, var(--stroke));
   outline: none;
-  transform: translateY(-1px);
+  transform: translateX(-50%) translateY(var(--stack-offset)) scale(var(--stack-scale));
+}
+
+.validated-paper-card:not([data-stack-position='1']) {
+  pointer-events: none;
+}
+
+.validated-paper-card[data-stack-position='7'],
+.validated-paper-card[data-stack-position='8'],
+.validated-paper-card[data-stack-position='9'],
+.validated-paper-card[data-stack-position='10'],
+.validated-paper-card[data-stack-position='11'],
+.validated-paper-card[data-stack-position='12'] {
+  visibility: hidden;
 }
 
 .validated-paper-card.dragging {
   cursor: grabbing;
-  opacity: 0.58;
-  transform: scale(0.99);
+  opacity: 0.9;
+  transform: translateX(-50%) translateY(4px) scale(0.985);
+}
+
+.validated-paper-stack-hint {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  z-index: 30;
+  border: 1px solid color-mix(in srgb, var(--primary) 18%, var(--stroke));
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: color-mix(in srgb, var(--surface) 86%, transparent);
+  color: var(--quiet-ink);
+  font-size: 0.72rem;
+  font-weight: 760;
 }
 
 .validated-paper-rank {
@@ -5579,6 +5641,32 @@
 
   .validated-paper-card {
     grid-template-columns: 42px minmax(0, 1fr);
+    min-height: 210px;
+    padding: 18px;
+  }
+
+  .validated-paper-copy strong {
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .validated-paper-copy span {
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .validated-paper-stack {
+    min-height: 310px;
+  }
+
+  .validated-paper-stack-hint {
+    right: 12px;
+    bottom: 10px;
+    max-width: calc(100% - 24px);
   }
 
   .validated-paper-badge {
