@@ -7,6 +7,7 @@ import './App.css'
 type TabId = 'home' | 'obd' | 'visuals' | 'research' | 'report'
 type ThemeMode = 'light' | 'dark'
 type ObdSubTabId = 'growth' | 'graph' | 'about'
+type TextSegment = { text: string; emphasis?: boolean }
 
 type Tab = {
   id: TabId
@@ -1036,6 +1037,7 @@ function ResearchKanbanPanel() {
             <h3>검증이 끝난 주요 논문 {visibleValidatedTotal}개</h3>
             <p>
               Muyeol이 GO로 확인한 Friday final pick을 일반 후보와 분리했습니다. 현재 검색/필터 조건에 맞는 {visibleValidatedTotal}개를 보여주며, 전체 검증 논문은 {validatedTotal}개입니다.
+              매주 월요일 새 리서치 루프가 시작되면 최신 주차의 1픽과 주간 흐름으로 자동 교체됩니다.
             </p>
           </div>
           <div className="validated-paper-header-actions" aria-label="Validated paper marquee controls">
@@ -1239,20 +1241,42 @@ function buildWeeklyResearchTrend(selectedItem: ResearchBoardItem, weekItems: Re
   }
 }
 
-function buildResearchDetailContent(item: ResearchBoardItem) {
+function renderTextSegments(segments: TextSegment[]) {
+  return segments.map((segment, index) => (
+    segment.emphasis ? <strong key={`${segment.text}-${index}`}>{segment.text}</strong> : <span key={`${segment.text}-${index}`}>{segment.text}</span>
+  ))
+}
+
+function buildResearchDetailContent(item: ResearchBoardItem): TextSegment[] {
   const ownerName = laneLabel(item.lane)
   const validationCopy = item.status === 'friday_final_pick'
     ? `Muyeol이 ${item.validationStatus}로 확인한 Friday final pick이며, ${item.isoWeek} 안에서 score ${item.score.toFixed(1)}로 선별된 핵심 후보입니다.`
     : `${item.isoWeek}의 daily candidate이며, 현재 ${item.validationStatus} 검증 상태로 추적 중인 후보입니다.`
 
-  return `${item.title}은 ${ownerName}가 수집한 리서치 흐름에서 ${item.summary} ${validationCopy} Chris 관점에서는 ${item.chrisRelevance}로 읽힙니다. 출처는 ${item.sourceVenue}이며 접근 조건은 ${item.sourceAccess}입니다. 한국어/로컬 근거 상태는 ${item.koreanSourceStatus}이고, 중복 검토 메모는 ${item.duplicateSignal}입니다. 따라서 이 항목은 단순 카드 요약이 아니라 “핵심 주장 → Chris relevance → 검증 상태 → 출처/접근성 → 중복·로컬 맥락”까지 한 번에 판단하기 위한 상세 내용으로 다룹니다.`
+  return [
+    { text: `${item.title}은 ${ownerName}가 수집한 리서치 흐름에서 ` },
+    { text: item.summary, emphasis: true },
+    { text: ` ${validationCopy} Chris 관점에서는 ` },
+    { text: item.chrisRelevance, emphasis: true },
+    { text: `로 읽힙니다. 출처는 ${item.sourceVenue}이며 접근 조건은 ${item.sourceAccess}입니다. ` },
+    { text: `한국어/로컬 근거 상태는 ${item.koreanSourceStatus}`, emphasis: true },
+    { text: `이고, 중복 검토 메모는 ${item.duplicateSignal}입니다. 따라서 이 항목은 단순 카드 요약이 아니라 ` },
+    { text: '“핵심 주장 → Chris relevance → 검증 상태 → 출처/접근성 → 중복·로컬 맥락”', emphasis: true },
+    { text: '까지 한 번에 판단하기 위한 상세 내용으로 다룹니다.' },
+  ]
 }
 
 function buildValidatedPaperSynthesis(item: ResearchBoardItem) {
-  const summarySentence = `${item.title}은 Muyeol이 GO로 확인한 Friday final pick입니다. 핵심 주장은 ${item.summary}입니다.`
-  const detailSentence = buildResearchDetailContent(item)
+  const summarySegments: TextSegment[] = [
+    { text: `${item.title}은 ` },
+    { text: 'Muyeol이 GO로 확인한 Friday final pick', emphasis: true },
+    { text: '입니다. 핵심 주장은 ' },
+    { text: item.summary, emphasis: true },
+    { text: '입니다.' },
+  ]
+  const detailSegments = buildResearchDetailContent(item)
 
-  return { summarySentence, detailSentence }
+  return { summarySegments, detailSegments }
 }
 
 function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoardItem; generatedAt: string; policy: string }) {
@@ -1279,15 +1303,20 @@ function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoar
             <section className="validated-detail-synthesis" aria-label="Validated paper synthesis">
               <div>
                 <strong>상세 내용</strong>
-                <p>{validatedSynthesis.detailSentence}</p>
+                <p className="research-detail-segments">{renderTextSegments(validatedSynthesis.detailSegments)}</p>
               </div>
               <div>
                 <strong>핵심 요약</strong>
-                <p>{validatedSynthesis.summarySentence}</p>
+                <p className="research-detail-segments">{renderTextSegments(validatedSynthesis.summarySegments)}</p>
               </div>
             </section>
           ) : (
-            <p><strong>상세 내용</strong>{buildResearchDetailContent(item)}</p>
+            <section className="validated-detail-synthesis" aria-label="Research detail synthesis">
+              <div>
+                <strong>상세 내용</strong>
+                <p className="research-detail-segments">{renderTextSegments(buildResearchDetailContent(item))}</p>
+              </div>
+            </section>
           )}
           <p><strong>Chris relevance</strong>{item.chrisRelevance}</p>
           <div className="metadata-grid" aria-label="Research metadata">
@@ -1331,7 +1360,7 @@ function WeeklyResearchTrendPanel({ trend }: { trend: ReturnType<typeof buildWee
       <div className="weekly-research-trend-header">
         <p className="card-kicker">한주 논문 요약 트렌드</p>
         <h3><span>{trend.weekLabel}</span> 리서치 흐름</h3>
-        <small>{trend.isoWeek}</small>
+        <small>{trend.isoWeek} · Monday loop refresh</small>
       </div>
       <p>
         {trend.segments.map((segment, index) => (

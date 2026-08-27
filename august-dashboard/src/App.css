@@ -750,6 +750,17 @@
   line-height: 1.72;
 }
 
+.research-detail-segments strong {
+  display: inline;
+  margin: 0;
+  color: var(--ink);
+  font-size: inherit;
+  font-weight: 760;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-transform: none;
+}
+
 .weekly-research-trend {
   display: grid;
   gap: 18px;
