@@ -753,13 +753,11 @@
 .weekly-research-trend {
   display: grid;
   gap: 18px;
-  border: 1px solid color-mix(in srgb, var(--primary) 18%, var(--stroke));
-  border-radius: 28px;
+  border: 0;
+  border-radius: 0;
   padding: clamp(22px, 3vw, 32px);
-  background:
-    radial-gradient(circle at 6% 0%, color-mix(in srgb, var(--primary) 15%, transparent), transparent 36%),
-    linear-gradient(135deg, color-mix(in srgb, var(--primary) 7%, transparent), transparent 62%),
-    color-mix(in srgb, var(--surface) 96%, transparent);
+  background: transparent;
+  box-shadow: none;
 }
 
 .weekly-research-trend-header {

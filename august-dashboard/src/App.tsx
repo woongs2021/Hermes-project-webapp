@@ -385,10 +385,15 @@ function ChrisIntroPanel() {
 
       <article className="content-card profile-statement-card">
         <p className="card-kicker">Profile statement</p>
-        <h3>기술을 사람의 의미 체계로 번역하는 힘을 키우는 과정</h3>
+        <h3>석사 연구, 삼성·LG 실무, OBD 루프를 연결해 AI 시대의 경험 언어를 만드는 디자이너</h3>
         <p>
-          Samsung MX의 시니어 UX 디자이너이자 전 LG BX 브랜드 디자이너로서 쌓아온 제품 경험과 브랜드 시스템,
-          리서치와 전략 역량을 Karina Hermes Agent Team이 계속 구조화해, AI 시대의 새로운 판단 구조와 비즈니스 언어로 확장할 수 있게 만듭니다.
+          Chris Park은 디자인 석사 과정에서 쌓은 연구 기반의 사고와 LG에서의 브랜드 경험, Samsung MX에서의 제품 UX 경험을 바탕으로
+          기술이 사람에게 어떻게 이해되고 신뢰되는지 탐구하는 UX·브랜드·디자인 전략가입니다.
+        </p>
+        <p>
+          현재 Chris는 Karina Hermes Agent Team과 함께 논문, 작업 기록, 화면 실험, 비즈니스 판단을 OBD 루프로 연결하며,
+          흩어진 자료를 AI UX와 미래 One UI를 위한 판단 언어로 바꾸고 있습니다. 즉 그의 현재 상태는 단순한 경력 요약이 아니라,
+          석사 연구의 깊이와 삼성·LG 실무의 현실감, 그리고 OBD식 운영 루프가 결합되어 다음 세대 AI 경험을 정의해가는 전환점입니다.
         </p>
       </article>
 
