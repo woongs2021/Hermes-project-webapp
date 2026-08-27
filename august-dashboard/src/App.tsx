@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type CSSProperties, type MouseEvent, type TouchEvent, type WheelEvent } from 'react'
+import { useEffect, useRef, useState, type WheelEvent } from 'react'
 import { fallbackManifest, loadDashboardManifest, type DashboardManifest } from './dashboardContent'
 import { fallbackHomeVisualSet, loadHomeVisualSet, type HomeVisualItem, type HomeVisualSet } from './homeVisualSet'
 import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type ResearchBoardItem } from './researchBoard'
@@ -797,13 +797,6 @@ function ResearchKanbanPanel() {
   const [board, setBoard] = useState<ResearchBoard>(fallbackResearchBoard)
   const [selectedId, setSelectedId] = useState('')
   const [validatedStackOrder, setValidatedStackOrder] = useState<string[]>([])
-  const [draggedValidatedId, setDraggedValidatedId] = useState<string | null>(null)
-  const validatedStackRef = useRef<HTMLDivElement | null>(null)
-  const draggedValidatedIdRef = useRef<string | null>(null)
-  const validatedPointerMovedRef = useRef(false)
-  const validatedDragStartXRef = useRef(0)
-  const validatedWheelDeltaRef = useRef(0)
-  const validatedWheelLockedRef = useRef(false)
   const [query, setQuery] = useState(getInitialResearchQuery)
   const [laneFilter, setLaneFilter] = useState<ResearchLaneFilter>(getInitialResearchLaneFilter)
   const [researchModalLane, setResearchModalLane] = useState<ResearchLaneFilter | null>(null)
@@ -940,131 +933,10 @@ function ResearchKanbanPanel() {
     watch: board.items.filter((item) => item.validationStatus === 'WATCH').length,
     avgScore: board.items.length === 0 ? 0 : board.items.reduce((sum, item) => sum + item.score, 0) / board.items.length,
   }
-
-  const handleValidatedDragEnd = () => {
-    draggedValidatedIdRef.current = null
-    setDraggedValidatedId(null)
-  }
-
-  const rotateValidatedStack = (direction: 1 | -1) => {
-    setValidatedStackOrder((currentOrder) => {
-      if (currentOrder.length <= 1) return currentOrder
-
-      return direction === 1
-        ? [...currentOrder.slice(1), currentOrder[0]]
-        : [currentOrder[currentOrder.length - 1], ...currentOrder.slice(0, -1)]
-    })
-  }
-
-  useEffect(() => {
-    const stackElement = validatedStackRef.current
-    if (!stackElement) return undefined
-
-    const wheelThreshold = 54
-    const wheelCooldownMs = 520
-
-    const handleNativeWheel = (event: globalThis.WheelEvent) => {
-      const horizontalDelta = Math.abs(event.deltaX) >= Math.abs(event.deltaY)
-        ? event.deltaX
-        : event.shiftKey
-          ? event.deltaY
-          : 0
-
-      if (Math.abs(horizontalDelta) < 8) return
-
-      event.preventDefault()
-      event.stopPropagation()
-
-      if (validatedWheelLockedRef.current) return
-
-      validatedWheelDeltaRef.current += horizontalDelta
-
-      if (Math.abs(validatedWheelDeltaRef.current) >= wheelThreshold) {
-        const direction = validatedWheelDeltaRef.current > 0 ? 1 : -1
-        rotateValidatedStack(direction)
-        validatedWheelDeltaRef.current = 0
-        validatedWheelLockedRef.current = true
-        window.setTimeout(() => {
-          validatedWheelLockedRef.current = false
-        }, wheelCooldownMs)
-      }
-    }
-
-    stackElement.addEventListener('wheel', handleNativeWheel, { passive: false })
-
-    return () => stackElement.removeEventListener('wheel', handleNativeWheel)
-  }, [validatedStackOrder.length])
-
-  const bringValidatedItemToFront = (itemId: string) => {
-    setValidatedStackOrder((currentOrder) => {
-      if (currentOrder[0] === itemId) return currentOrder
-
-      return [itemId, ...currentOrder.filter((id) => id !== itemId)]
-    })
-  }
-
-  const startValidatedStackDrag = (itemId: string, startX: number) => {
-    draggedValidatedIdRef.current = itemId
-    validatedDragStartXRef.current = startX
-    validatedPointerMovedRef.current = false
-    setDraggedValidatedId(itemId)
-  }
-
-  const advanceValidatedStackFromX = (clientX: number) => {
-    const deltaX = clientX - validatedDragStartXRef.current
-    if (Math.abs(deltaX) < 46) return
-
-    validatedPointerMovedRef.current = true
-    rotateValidatedStack(deltaX < 0 ? 1 : -1)
-    validatedDragStartXRef.current = clientX
-  }
-
-  const handleValidatedMouseDown = (event: MouseEvent<HTMLButtonElement>, itemId: string) => {
-    event.preventDefault()
-    startValidatedStackDrag(itemId, event.clientX)
-
-    const handleWindowMouseMove = (moveEvent: globalThis.MouseEvent) => {
-      advanceValidatedStackFromX(moveEvent.clientX)
-    }
-
-    const handleWindowMouseUp = () => {
-      window.removeEventListener('mousemove', handleWindowMouseMove)
-      window.removeEventListener('mouseup', handleWindowMouseUp)
-      handleValidatedDragEnd()
-    }
-
-    window.addEventListener('mousemove', handleWindowMouseMove)
-    window.addEventListener('mouseup', handleWindowMouseUp)
-  }
-
-  const handleValidatedTouchStart = (event: TouchEvent<HTMLButtonElement>, itemId: string) => {
-    const touch = event.touches[0]
-    if (!touch) return
-
-    startValidatedStackDrag(itemId, touch.clientX)
-
-    const handleWindowTouchMove = (moveEvent: globalThis.TouchEvent) => {
-      const sourceId = draggedValidatedIdRef.current
-      if (!sourceId) return
-
-      const touch = moveEvent.touches[0]
-      if (!touch) return
-
-      moveEvent.preventDefault()
-      advanceValidatedStackFromX(touch.clientX)
-    }
-
-    const handleWindowTouchEnd = () => {
-      window.removeEventListener('touchmove', handleWindowTouchMove)
-      window.removeEventListener('touchend', handleWindowTouchEnd)
-      window.removeEventListener('touchcancel', handleWindowTouchEnd)
-      handleValidatedDragEnd()
-    }
-
-    window.addEventListener('touchmove', handleWindowTouchMove, { passive: false })
-    window.addEventListener('touchend', handleWindowTouchEnd)
-    window.addEventListener('touchcancel', handleWindowTouchEnd)
-  }
+  const validatedMarqueeRows = [
+    orderedValidatedItems.slice(0, 6),
+    orderedValidatedItems.slice(6, 12),
+  ]
 
   return (
     <div className="research-board-grid" aria-label="Chronological research kanban board">
@@ -1138,66 +1010,38 @@ function ResearchKanbanPanel() {
             <p className="card-kicker">Muyeol validated · key papers</p>
             <h3>검증이 끝난 주요 논문 {validatedTotal}개</h3>
             <p>
-              Muyeol이 GO로 확인한 Friday final pick을 일반 후보와 분리했습니다. 가로로 스크롤하거나 좌우로 드래그하면 뒤의 카드가 앞으로 올라오는 검증 논문 deck입니다.
+              Muyeol이 GO로 확인한 Friday final pick을 일반 후보와 분리했습니다. 6개씩 두 줄로 나누어 위 줄은 왼쪽, 아래 줄은 오른쪽으로 흐르는 검증 논문 marquee입니다.
             </p>
           </div>
           <button type="button" className="research-more-button" onClick={() => setResearchModalLane('final')}>More</button>
         </div>
-        <div
-          ref={validatedStackRef}
-          className="validated-paper-stack"
-          aria-label="Scrollable validated paper deck"
-        >
-          {orderedValidatedItems.map((item, index) => {
-            const visibleDepth = Math.min(index, 5)
-            const stackStyle = {
-              '--stack-index': visibleDepth,
-              '--stack-scale': Math.max(0.75, 1 - visibleDepth * 0.05),
-              '--stack-opacity': Math.max(0.75, 1 - visibleDepth * 0.05),
-              '--stack-offset': `${visibleDepth * 22}px`,
-              '--stack-drop': `${visibleDepth * 8}px`,
-              '--stack-z': orderedValidatedItems.length - index,
-            } as CSSProperties
-
-            return (
-              <button
-                key={item.id}
-                type="button"
-                className={draggedValidatedId === item.id ? 'validated-paper-card dragging' : 'validated-paper-card'}
-                data-validated-paper-id={item.id}
-                data-stack-position={index + 1}
-                aria-label={`${index + 1}번 검증 논문 카드: ${item.title}`}
-                style={stackStyle}
-                onClick={() => {
-                  if (validatedPointerMovedRef.current) {
-                    validatedPointerMovedRef.current = false
-                    return
-                  }
-
-                  if (index === 0) {
-                    setSelectedId(item.id)
-                    return
-                  }
-
-                  bringValidatedItemToFront(item.id)
-                }}
-                onMouseDown={(event) => handleValidatedMouseDown(event, item.id)}
-                onTouchStart={(event) => handleValidatedTouchStart(event, item.id)}
-                onDragEnd={handleValidatedDragEnd}
-              >
-                <span className="validated-paper-rank">{String(index + 1).padStart(2, '0')}</span>
-                <span className="validated-paper-copy">
-                  <strong>{item.title}</strong>
-                  <small>{laneLabel(item.lane)} · {item.dateKst} · {item.isoWeek}</small>
-                  <span>{item.chrisRelevance || item.summary}</span>
-                </span>
-                <span className="validated-paper-badge">Muyeol GO</span>
-              </button>
-            )
-          })}
-          <div className="validated-paper-stack-hint" aria-hidden="true">
-            Swipe / scroll horizontally to bring the next verified paper forward
-          </div>
+        <div className="validated-paper-marquee" aria-label="Animated Muyeol validated paper marquee">
+          {validatedMarqueeRows.map((rowItems, rowIndex) => (
+            <div
+              className={rowIndex === 0 ? 'validated-paper-marquee-row left' : 'validated-paper-marquee-row right'}
+              key={rowIndex === 0 ? 'left-row' : 'right-row'}
+            >
+              <div className="validated-paper-marquee-track">
+                {[...rowItems, ...rowItems].map((item, index) => (
+                  <button
+                    key={`${rowIndex}-${item.id}-${index}`}
+                    type="button"
+                    className="validated-paper-card"
+                    aria-label={`${(index % rowItems.length) + 1}번 검증 논문 카드: ${item.title}`}
+                    onClick={() => setSelectedId(item.id)}
+                  >
+                    <span className="validated-paper-rank">{String((index % rowItems.length) + 1 + rowIndex * 6).padStart(2, '0')}</span>
+                    <span className="validated-paper-copy">
+                      <strong>{item.title}</strong>
+                      <small>{laneLabel(item.lane)} · {item.dateKst} · {item.isoWeek}</small>
+                      <span>{item.chrisRelevance || item.summary}</span>
+                    </span>
+                    <span className="validated-paper-badge">Muyeol GO</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
