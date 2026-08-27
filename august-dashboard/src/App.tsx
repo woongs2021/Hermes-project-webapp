@@ -797,6 +797,7 @@ function ResearchKanbanPanel() {
   const [board, setBoard] = useState<ResearchBoard>(fallbackResearchBoard)
   const [selectedId, setSelectedId] = useState('')
   const [validatedStackOrder, setValidatedStackOrder] = useState<string[]>([])
+  const [isValidatedMarqueePaused, setIsValidatedMarqueePaused] = useState(false)
   const [query, setQuery] = useState(getInitialResearchQuery)
   const [laneFilter, setLaneFilter] = useState<ResearchLaneFilter>(getInitialResearchLaneFilter)
   const [researchModalLane, setResearchModalLane] = useState<ResearchLaneFilter | null>(null)
@@ -937,6 +938,8 @@ function ResearchKanbanPanel() {
     orderedValidatedItems.slice(0, 6),
     orderedValidatedItems.slice(6, 12),
   ]
+  const selectedWeekItems = selectedItem ? board.items.filter((item) => item.isoWeek === selectedItem.isoWeek) : []
+  const selectedWeekTrend = selectedItem ? buildWeeklyResearchTrend(selectedItem, selectedWeekItems) : ''
 
   return (
     <div className="research-board-grid" aria-label="Chronological research kanban board">
@@ -1013,9 +1016,24 @@ function ResearchKanbanPanel() {
               Muyeol이 GO로 확인한 Friday final pick을 일반 후보와 분리했습니다. 6개씩 두 줄로 나누어 위 줄은 왼쪽, 아래 줄은 오른쪽으로 흐르는 검증 논문 marquee입니다.
             </p>
           </div>
-          <button type="button" className="research-more-button" onClick={() => setResearchModalLane('final')}>More</button>
+          <div className="validated-paper-header-actions" aria-label="Validated paper marquee controls">
+            <button
+              type="button"
+              className="marquee-toggle-button"
+              aria-label={isValidatedMarqueePaused ? '검증 논문 흐름 재생' : '검증 논문 흐름 정지'}
+              aria-pressed={isValidatedMarqueePaused}
+              title={isValidatedMarqueePaused ? '재생' : '정지'}
+              onClick={() => setIsValidatedMarqueePaused((isPaused) => !isPaused)}
+            >
+              <span aria-hidden="true">{isValidatedMarqueePaused ? '▶' : 'Ⅱ'}</span>
+            </button>
+            <button type="button" className="research-more-button" onClick={() => setResearchModalLane('final')}>More</button>
+          </div>
         </div>
-        <div className="validated-paper-marquee" aria-label="Animated Muyeol validated paper marquee">
+        <div
+          className={isValidatedMarqueePaused ? 'validated-paper-marquee is-marquee-paused' : 'validated-paper-marquee'}
+          aria-label="Animated Muyeol validated paper marquee"
+        >
           {validatedMarqueeRows.map((rowItems, rowIndex) => (
             <div
               className={rowIndex === 0 ? 'validated-paper-marquee-row left' : 'validated-paper-marquee-row right'}
@@ -1045,7 +1063,7 @@ function ResearchKanbanPanel() {
         </div>
       </section>
 
-      {selectedItem ? <ResearchDetailPanel item={selectedItem} generatedAt={board.generatedAt} policy={board.sourcePolicy} /> : (
+      {selectedItem ? <ResearchDetailPanel item={selectedItem} generatedAt={board.generatedAt} policy={board.sourcePolicy} weeklyTrend={selectedWeekTrend} /> : (
         <article className="content-card research-detail-card">
           <p className="card-kicker">{board.items.length > 0 ? 'No matching result' : 'Manifest pending'}</p>
           <h3>{board.items.length > 0 ? '검색 조건에 맞는 카드가 없습니다' : 'research-board.json을 기다리는 중'}</h3>
@@ -1158,7 +1176,25 @@ function ResearchKanbanPanel() {
   )
 }
 
-function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoardItem; generatedAt: string; policy: string }) {
+function buildWeeklyResearchTrend(selectedItem: ResearchBoardItem, weekItems: ResearchBoardItem[]) {
+  const yunaCount = weekItems.filter((item) => item.lane === 'yuna').length
+  const goYounjungCount = weekItems.filter((item) => item.lane === 'goyounjung').length
+  const finalCount = weekItems.filter((item) => item.status === 'friday_final_pick').length
+  const goCount = weekItems.filter((item) => item.validationStatus === 'GO').length
+  const watchCount = weekItems.filter((item) => item.validationStatus === 'WATCH').length
+  const topTitles = [...weekItems]
+    .sort((left, right) => right.score - left.score || left.title.localeCompare(right.title))
+    .slice(0, 3)
+    .map((item) => item.title)
+
+  if (weekItems.length === 0) {
+    return `${selectedItem.isoWeek}에는 이 논문을 중심으로 한 공개 가능한 주간 트렌드 데이터가 아직 충분하지 않습니다.`
+  }
+
+  return `${selectedItem.isoWeek} 주간 리서치는 총 ${weekItems.length}개 후보 중 Yuna ${yunaCount}개, Go Youn-jung ${goYounjungCount}개가 모였고, 그중 ${finalCount}개가 Friday final pick으로 좁혀졌습니다. Muyeol 검증 기준으로는 GO ${goCount}개와 WATCH ${watchCount}개 신호가 함께 보이며, 핵심 흐름은 ${topTitles.join(' · ')} 같은 상위 논문을 중심으로 agent memory, AI UX, 디자인 의사결정, 한국어/로컬 맥락의 적용 가능성을 한 주 단위로 비교하는 방향입니다.`
+}
+
+function ResearchDetailPanel({ item, generatedAt, policy, weeklyTrend }: { item: ResearchBoardItem; generatedAt: string; policy: string; weeklyTrend: string }) {
   const primaryHref = primarySourceHref(item.sourceUrlOrId)
 
   return (
@@ -1210,6 +1246,10 @@ function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoar
 
       <p className="manifest-policy">{policy}</p>
       <p className="visual-generated-at">Generated: {generatedAt}</p>
+      <section className="weekly-research-trend" aria-label="Weekly research trend summary">
+        <strong>한주 논문 요약 트렌드</strong>
+        <p>{weeklyTrend}</p>
+      </section>
     </article>
   )
 }

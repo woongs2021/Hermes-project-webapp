@@ -311,6 +311,43 @@
   color: var(--muted-ink);
 }
 
+.validated-paper-header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.marquee-toggle-button {
+  display: inline-grid;
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--primary) 24%, var(--stroke));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 840;
+  line-height: 1;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.marquee-toggle-button:hover,
+.marquee-toggle-button:focus-visible {
+  border-color: color-mix(in srgb, var(--primary) 54%, var(--stroke));
+  outline: none;
+  background: color-mix(in srgb, var(--primary) 10%, var(--surface));
+  transform: translateY(-1px);
+}
+
+.marquee-toggle-button[aria-pressed='true'] {
+  background: color-mix(in srgb, var(--primary) 14%, var(--surface));
+  color: var(--primary);
+}
+
 .validated-paper-marquee {
   display: grid;
   gap: 10px;
@@ -344,7 +381,8 @@
 }
 
 .validated-paper-marquee:hover .validated-paper-marquee-track,
-.validated-paper-marquee:focus-within .validated-paper-marquee-track {
+.validated-paper-marquee:focus-within .validated-paper-marquee-track,
+.validated-paper-marquee.is-marquee-paused .validated-paper-marquee-track {
   animation-play-state: paused;
 }
 
@@ -683,6 +721,27 @@
   font-size: 0.74rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.weekly-research-trend {
+  display: grid;
+  gap: 8px;
+  border: 1px solid color-mix(in srgb, var(--primary) 18%, var(--stroke));
+  border-radius: 20px;
+  padding: 16px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--primary) 8%, transparent), transparent 58%),
+    color-mix(in srgb, var(--surface) 94%, transparent);
+}
+
+.weekly-research-trend strong {
+  margin-bottom: 0;
+  color: var(--primary);
+}
+
+.weekly-research-trend p {
+  color: var(--muted-ink);
+  line-height: 1.72;
 }
 
 .research-graph-trace {
