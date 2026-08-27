@@ -1045,6 +1045,18 @@ function ResearchKanbanPanel() {
         </div>
       </section>
 
+      {selectedItem ? <ResearchDetailPanel item={selectedItem} generatedAt={board.generatedAt} policy={board.sourcePolicy} /> : (
+        <article className="content-card research-detail-card">
+          <p className="card-kicker">{board.items.length > 0 ? 'No matching result' : 'Manifest pending'}</p>
+          <h3>{board.items.length > 0 ? '검색 조건에 맞는 카드가 없습니다' : 'research-board.json을 기다리는 중'}</h3>
+          <p>
+            {board.items.length > 0
+              ? '검색어를 줄이거나 All lanes로 되돌리면 public-safe 리서치 후보를 다시 볼 수 있습니다.'
+              : '생성된 public-safe research manifest가 없으면 원본 작업 로그를 직접 읽지 않고 fallback 상태로 멈춥니다.'}
+          </p>
+        </article>
+      )}
+
       <section className="research-kanban" aria-label="Yuna and Go Youn-jung research lanes">
         {lanes.map((lane) => {
           const faces = laneAgentFaces(lane)
@@ -1142,17 +1154,6 @@ function ResearchKanbanPanel() {
         </div>
       ) : null}
 
-      {selectedItem ? <ResearchDetailPanel item={selectedItem} generatedAt={board.generatedAt} policy={board.sourcePolicy} /> : (
-        <article className="content-card research-detail-card">
-          <p className="card-kicker">{board.items.length > 0 ? 'No matching result' : 'Manifest pending'}</p>
-          <h3>{board.items.length > 0 ? '검색 조건에 맞는 카드가 없습니다' : 'research-board.json을 기다리는 중'}</h3>
-          <p>
-            {board.items.length > 0
-              ? '검색어를 줄이거나 All lanes로 되돌리면 public-safe 리서치 후보를 다시 볼 수 있습니다.'
-              : '생성된 public-safe research manifest가 없으면 원본 작업 로그를 직접 읽지 않고 fallback 상태로 멈춥니다.'}
-          </p>
-        </article>
-      )}
     </div>
   )
 }
