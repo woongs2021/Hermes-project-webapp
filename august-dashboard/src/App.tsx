@@ -940,7 +940,7 @@ function ResearchKanbanPanel() {
     orderedValidatedItems.slice(6, 12),
   ]
   const selectedWeekItems = selectedItem ? board.items.filter((item) => item.isoWeek === selectedItem.isoWeek) : []
-  const selectedWeekTrend = selectedItem ? buildWeeklyResearchTrend(selectedItem, selectedWeekItems) : ''
+  const selectedWeekTrend = selectedItem ? buildWeeklyResearchTrend(selectedItem, selectedWeekItems) : null
 
   return (
     <div className="research-board-grid" aria-label="Chronological research kanban board">
@@ -1064,7 +1064,7 @@ function ResearchKanbanPanel() {
         </div>
       </section>
 
-      {selectedItem ? <ResearchDetailPanel item={selectedItem} generatedAt={board.generatedAt} policy={board.sourcePolicy} weeklyTrend={selectedWeekTrend} /> : (
+      {selectedItem ? <ResearchDetailPanel item={selectedItem} generatedAt={board.generatedAt} policy={board.sourcePolicy} /> : (
         <article className="content-card research-detail-card">
           <p className="card-kicker">{board.items.length > 0 ? 'No matching result' : 'Manifest pending'}</p>
           <h3>{board.items.length > 0 ? '검색 조건에 맞는 카드가 없습니다' : 'research-board.json을 기다리는 중'}</h3>
@@ -1173,6 +1173,8 @@ function ResearchKanbanPanel() {
         </div>
       ) : null}
 
+      {selectedWeekTrend ? <WeeklyResearchTrendPanel trend={selectedWeekTrend} /> : null}
+
     </div>
   )
 }
@@ -1183,16 +1185,25 @@ function buildWeeklyResearchTrend(selectedItem: ResearchBoardItem, weekItems: Re
   const finalCount = weekItems.filter((item) => item.status === 'friday_final_pick').length
   const goCount = weekItems.filter((item) => item.validationStatus === 'GO').length
   const watchCount = weekItems.filter((item) => item.validationStatus === 'WATCH').length
+  const weekLabel = selectedItem.isoWeek.match(/W\d+$/)?.[0] ?? selectedItem.isoWeek
   const topTitles = [...weekItems]
     .sort((left, right) => right.score - left.score || left.title.localeCompare(right.title))
     .slice(0, 3)
     .map((item) => item.title)
 
   if (weekItems.length === 0) {
-    return `${selectedItem.isoWeek}에는 이 논문을 중심으로 한 공개 가능한 주간 트렌드 데이터가 아직 충분하지 않습니다.`
+    return {
+      weekLabel,
+      isoWeek: selectedItem.isoWeek,
+      body: `${selectedItem.isoWeek}에는 이 논문을 중심으로 한 공개 가능한 주간 트렌드 데이터가 아직 충분하지 않습니다. 현재는 선택한 논문 자체의 요약과 Chris relevance를 먼저 보고, 이후 같은 주차 데이터가 쌓이면 한 주의 흐름을 다시 묶어 볼 수 있습니다.`,
+    }
   }
 
-  return `${selectedItem.isoWeek} 주간 리서치는 총 ${weekItems.length}개 후보 중 Yuna ${yunaCount}개, Go Youn-jung ${goYounjungCount}개가 모였고, 그중 ${finalCount}개가 Friday final pick으로 좁혀졌습니다. Muyeol 검증 기준으로는 GO ${goCount}개와 WATCH ${watchCount}개 신호가 함께 보이며, 핵심 흐름은 ${topTitles.join(' · ')} 같은 상위 논문을 중심으로 agent memory, AI UX, 디자인 의사결정, 한국어/로컬 맥락의 적용 가능성을 한 주 단위로 비교하는 방향입니다.`
+  return {
+    weekLabel,
+    isoWeek: selectedItem.isoWeek,
+    body: `${weekLabel}에는 총 ${weekItems.length}개의 public-safe 논문 후보가 모였습니다. Yuna가 ${yunaCount}개, Go Youn-jung이 ${goYounjungCount}개를 가져왔고, 그중 ${finalCount}개가 Friday final pick으로 좁혀졌습니다. 쉽게 말하면 이 주의 리서치는 “많이 모은 자료 중에서 바로 Chris의 작업 언어로 바꿔볼 만한 논문을 고르는 주간”에 가깝습니다. Muyeol 검증에서는 GO ${goCount}개와 WATCH ${watchCount}개가 함께 보이기 때문에, 전부를 같은 무게로 읽기보다 GO 논문은 바로 대시보드/OBD/AI UX 관점의 기준 문헌으로 보고, WATCH 논문은 다음 비교 후보로 남겨두는 흐름이 좋습니다. 특히 ${topTitles.join(' · ')} 같은 상위 논문들은 agent memory, AI UX, 디자인 의사결정, 한국어/로컬 맥락을 어떻게 실제 화면과 운영 루프에 연결할지 보여주는 신호입니다. 그래서 ${weekLabel} 트렌드는 논문 목록 자체보다 “Chris가 어떤 판단을 더 빨리 할 수 있게 되는가”를 중심으로 읽으면 이해하기 쉽습니다.`,
+  }
 }
 
 function buildValidatedPaperSynthesis(item: ResearchBoardItem) {
@@ -1203,7 +1214,7 @@ function buildValidatedPaperSynthesis(item: ResearchBoardItem) {
   return { summarySentence, detailSentence }
 }
 
-function ResearchDetailPanel({ item, generatedAt, policy, weeklyTrend }: { item: ResearchBoardItem; generatedAt: string; policy: string; weeklyTrend: string }) {
+function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoardItem; generatedAt: string; policy: string }) {
   const primaryHref = primarySourceHref(item.sourceUrlOrId)
   const validatedSynthesis = item.status === 'friday_final_pick' ? buildValidatedPaperSynthesis(item) : null
 
@@ -1268,11 +1279,20 @@ function ResearchDetailPanel({ item, generatedAt, policy, weeklyTrend }: { item:
 
       <p className="manifest-policy">{policy}</p>
       <p className="visual-generated-at">Generated: {generatedAt}</p>
-      <section className="weekly-research-trend" aria-label="Weekly research trend summary">
-        <strong>한주 논문 요약 트렌드</strong>
-        <p>{weeklyTrend}</p>
-      </section>
     </article>
+  )
+}
+
+function WeeklyResearchTrendPanel({ trend }: { trend: ReturnType<typeof buildWeeklyResearchTrend> }) {
+  return (
+    <section className="content-card weekly-research-trend" aria-label="Weekly research trend summary">
+      <div className="weekly-research-trend-header">
+        <p className="card-kicker">한주 논문 요약 트렌드</p>
+        <h3><span>{trend.weekLabel}</span> 리서치 흐름</h3>
+        <small>{trend.isoWeek}</small>
+      </div>
+      <p>{trend.body}</p>
+    </section>
   )
 }
 

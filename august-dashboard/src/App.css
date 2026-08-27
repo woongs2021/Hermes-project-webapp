@@ -752,23 +752,46 @@
 
 .weekly-research-trend {
   display: grid;
-  gap: 8px;
+  gap: 18px;
   border: 1px solid color-mix(in srgb, var(--primary) 18%, var(--stroke));
-  border-radius: 20px;
-  padding: 16px;
+  border-radius: 28px;
+  padding: clamp(22px, 3vw, 32px);
   background:
-    linear-gradient(135deg, color-mix(in srgb, var(--primary) 8%, transparent), transparent 58%),
-    color-mix(in srgb, var(--surface) 94%, transparent);
+    radial-gradient(circle at 6% 0%, color-mix(in srgb, var(--primary) 15%, transparent), transparent 36%),
+    linear-gradient(135deg, color-mix(in srgb, var(--primary) 7%, transparent), transparent 62%),
+    color-mix(in srgb, var(--surface) 96%, transparent);
 }
 
-.weekly-research-trend strong {
-  margin-bottom: 0;
+.weekly-research-trend-header {
+  display: grid;
+  gap: 6px;
+}
+
+.weekly-research-trend-header h3 {
+  color: var(--ink);
+  font-size: clamp(1.8rem, 3.8vw, 3.25rem);
+  font-weight: 520;
+  letter-spacing: -0.06em;
+}
+
+.weekly-research-trend-header h3 span {
   color: var(--primary);
+  font-weight: 760;
 }
 
-.weekly-research-trend p {
+.weekly-research-trend-header small {
+  color: var(--quiet-ink);
+  font-size: 0.82rem;
+  font-weight: 760;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.weekly-research-trend > p {
+  max-width: 980px;
   color: var(--muted-ink);
-  line-height: 1.72;
+  font-size: clamp(0.98rem, 1.2vw, 1.12rem);
+  line-height: 1.86;
 }
 
 .research-graph-trace {
