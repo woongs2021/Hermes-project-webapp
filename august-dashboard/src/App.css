@@ -767,14 +767,14 @@
 
 .weekly-research-trend-header h3 {
   color: var(--ink);
-  font-size: clamp(1.8rem, 3.8vw, 3.25rem);
-  font-weight: 520;
-  letter-spacing: -0.06em;
+  font-size: clamp(1.28rem, 2.1vw, 1.9rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
 }
 
 .weekly-research-trend-header h3 span {
-  color: var(--primary);
-  font-weight: 760;
+  color: var(--ink);
+  font-weight: 400;
 }
 
 .weekly-research-trend-header small {

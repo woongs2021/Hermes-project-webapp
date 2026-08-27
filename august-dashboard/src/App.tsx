@@ -1185,8 +1185,6 @@ function ResearchKanbanPanel() {
 }
 
 function buildWeeklyResearchTrend(selectedItem: ResearchBoardItem, weekItems: ResearchBoardItem[]) {
-  const yunaCount = weekItems.filter((item) => item.lane === 'yuna').length
-  const goYounjungCount = weekItems.filter((item) => item.lane === 'goyounjung').length
   const finalCount = weekItems.filter((item) => item.status === 'friday_final_pick').length
   const goCount = weekItems.filter((item) => item.validationStatus === 'GO').length
   const watchCount = weekItems.filter((item) => item.validationStatus === 'WATCH').length
@@ -1207,7 +1205,7 @@ function buildWeeklyResearchTrend(selectedItem: ResearchBoardItem, weekItems: Re
   return {
     weekLabel,
     isoWeek: selectedItem.isoWeek,
-    body: `${weekLabel}에는 총 ${weekItems.length}개의 public-safe 논문 후보가 모였습니다. Yuna가 ${yunaCount}개, Go Youn-jung이 ${goYounjungCount}개를 가져왔고, 그중 ${finalCount}개가 Friday final pick으로 좁혀졌습니다. 쉽게 말하면 이 주의 리서치는 “많이 모은 자료 중에서 바로 Chris의 작업 언어로 바꿔볼 만한 논문을 고르는 주간”에 가깝습니다. Muyeol 검증에서는 GO ${goCount}개와 WATCH ${watchCount}개가 함께 보이기 때문에, 전부를 같은 무게로 읽기보다 GO 논문은 바로 대시보드/OBD/AI UX 관점의 기준 문헌으로 보고, WATCH 논문은 다음 비교 후보로 남겨두는 흐름이 좋습니다. 특히 ${topTitles.join(' · ')} 같은 상위 논문들은 agent memory, AI UX, 디자인 의사결정, 한국어/로컬 맥락을 어떻게 실제 화면과 운영 루프에 연결할지 보여주는 신호입니다. 그래서 ${weekLabel} 트렌드는 논문 목록 자체보다 “Chris가 어떤 판단을 더 빨리 할 수 있게 되는가”를 중심으로 읽으면 이해하기 쉽습니다.`,
+    body: `${weekLabel}의 핵심 인사이트는 AI 경험을 단순한 기능 목록이 아니라 “기억하고, 맥락을 이해하고, 사람이 판단하기 쉽게 다시 정리해주는 시스템”으로 봐야 한다는 점입니다. 이번 주에 검토된 ${weekItems.length}개 논문 중 ${finalCount}개가 final pick으로 좁혀졌고, Muyeol 기준으로 GO ${goCount}개와 WATCH ${watchCount}개 신호가 남았습니다. 특히 ${topTitles.join(' · ')} 같은 논문들은 agent memory, AI UX, 디자인 의사결정, 한국어/로컬 맥락이 따로 떨어진 주제가 아니라 하나의 운영 루프로 연결된다는 점을 보여줍니다. 그래서 이 주의 결론은 “좋은 AI UX는 더 많은 답을 보여주는 화면이 아니라, 사용자의 과거 맥락과 현재 목표를 묶어 다음 선택을 더 선명하게 만들어주는 구조”라는 쪽에 가깝습니다. Chris에게는 이 흐름이 OBD 루프를 설계할 때 중요한 기준이 됩니다. 논문을 많이 읽었다는 사실보다, 어떤 정보를 기억해야 하고, 어떤 근거를 남겨야 하며, 어떤 순간에 화면이 판단을 도와야 하는지까지 제품 언어로 바꿔볼 수 있는 주간이기 때문입니다.`,
   }
 }
 
