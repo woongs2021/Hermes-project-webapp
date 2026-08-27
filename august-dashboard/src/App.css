@@ -2609,28 +2609,32 @@
 }
 
 .topbar .tab-nav {
-  position: fixed;
-  top: 96px;
-  left: max(20px, calc((100vw - 1440px) / 2 + 14px));
+  grid-column: 1 / -1;
+  position: static;
   display: grid;
-  width: min(360px, calc(100vw - 40px));
+  width: 100%;
+  max-height: 0;
   gap: 8px;
-  border: 1px solid var(--stroke);
-  border-radius: 24px;
-  padding: 10px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 0 10px;
   background: var(--panel-surface-strong);
-  box-shadow: var(--shadow-soft);
+  box-shadow: none;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-8px);
-  transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+  transform: none;
+  transition: max-height 220ms ease, padding 180ms ease, border-color 180ms ease, opacity 180ms ease, visibility 180ms ease;
   visibility: hidden;
 }
 
 .topbar .tab-nav.open {
+  max-height: 560px;
+  border-color: var(--stroke);
+  padding: 10px;
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0);
+  transform: none;
   visibility: visible;
 }
 
@@ -2798,12 +2802,12 @@
   }
 
   .topbar .tab-nav {
-    left: 50%;
-    transform: translate(-50%, -8px);
+    left: auto;
+    transform: none;
   }
 
   .topbar .tab-nav.open {
-    transform: translate(-50%, 0);
+    transform: none;
   }
 
   .visual-detail-layout,
@@ -4700,16 +4704,16 @@
 
 @media (max-width: 900px) {
   .app-shell {
-    padding-top: 82px;
+    padding-top: 0;
   }
 
   .topbar,
   :root[data-theme='dark'] .topbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 100vw;
+    position: sticky;
+    top: 10px;
+    right: auto;
+    left: auto;
+    width: auto;
     margin: 0;
     padding: 0 12px 10px;
     transform: none;
@@ -4723,13 +4727,13 @@
 
   .topbar .tab-nav.open,
   :root[data-theme='dark'] .topbar .tab-nav.open {
-    max-height: 170px;
+    max-height: 560px;
   }
 }
 
 @media (max-width: 560px) {
   .app-shell {
-    padding-top: 78px;
+    padding-top: 0;
   }
 
   .topbar,
@@ -4746,7 +4750,7 @@
 
   .topbar .tab-nav.open,
   :root[data-theme='dark'] .topbar .tab-nav.open {
-    max-height: 210px;
+    max-height: 620px;
   }
 }
 
@@ -5781,4 +5785,26 @@
     grid-column: 2;
     justify-self: start;
   }
+}
+
+/* Follow-up: mobile/tablet menu stays in document flow and monthly dark numbers use primary */
+.topbar .tab-nav,
+.topbar .tab-nav.open {
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  .topbar .tab-nav,
+  .topbar .tab-nav.open {
+    position: static;
+    right: auto;
+    left: auto;
+    width: 100%;
+    transform: none;
+  }
+}
+
+:root[data-theme='dark'] .monthly-metric h3,
+:root[data-theme='dark'] .monthly-shortlist-card .shortlist-row > span {
+  color: var(--primary);
 }

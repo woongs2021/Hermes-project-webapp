@@ -1239,10 +1239,18 @@ function buildWeeklyResearchTrend(selectedItem: ResearchBoardItem, weekItems: Re
   }
 }
 
-function buildValidatedPaperSynthesis(item: ResearchBoardItem) {
+function buildResearchDetailContent(item: ResearchBoardItem) {
   const ownerName = laneLabel(item.lane)
-  const summarySentence = `${item.title}은 ${ownerName}가 수집한 후보 중 Muyeol이 GO로 확인한 Friday final pick입니다. 핵심은 ${item.summary}이며, Chris 관점에서는 ${item.chrisRelevance}로 읽히는 논문입니다.`
-  const detailSentence = `이 논문은 ${item.isoWeek} 리서치 흐름 안에서 score ${item.score.toFixed(1)}로 선별되었고, ${item.sourceVenue} / ${item.sourceAccess} 조건에서 공개 근거를 확인할 수 있습니다. 단순 후보가 아니라 ${item.validationStatus} 검증을 통과한 항목이므로, 이후 OBD식 지식 운영에서는 “왜 지금 중요한가 → Chris의 작업 언어로 어떻게 바뀌는가 → 어떤 화면/루프/의사결정으로 이어지는가”를 설명하는 기준 논문으로 사용할 수 있습니다.`
+  const validationCopy = item.status === 'friday_final_pick'
+    ? `Muyeol이 ${item.validationStatus}로 확인한 Friday final pick이며, ${item.isoWeek} 안에서 score ${item.score.toFixed(1)}로 선별된 핵심 후보입니다.`
+    : `${item.isoWeek}의 daily candidate이며, 현재 ${item.validationStatus} 검증 상태로 추적 중인 후보입니다.`
+
+  return `${item.title}은 ${ownerName}가 수집한 리서치 흐름에서 ${item.summary} ${validationCopy} Chris 관점에서는 ${item.chrisRelevance}로 읽힙니다. 출처는 ${item.sourceVenue}이며 접근 조건은 ${item.sourceAccess}입니다. 한국어/로컬 근거 상태는 ${item.koreanSourceStatus}이고, 중복 검토 메모는 ${item.duplicateSignal}입니다. 따라서 이 항목은 단순 카드 요약이 아니라 “핵심 주장 → Chris relevance → 검증 상태 → 출처/접근성 → 중복·로컬 맥락”까지 한 번에 판단하기 위한 상세 내용으로 다룹니다.`
+}
+
+function buildValidatedPaperSynthesis(item: ResearchBoardItem) {
+  const summarySentence = `${item.title}은 Muyeol이 GO로 확인한 Friday final pick입니다. 핵심 주장은 ${item.summary}입니다.`
+  const detailSentence = buildResearchDetailContent(item)
 
   return { summarySentence, detailSentence }
 }
@@ -1270,16 +1278,17 @@ function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoar
           {validatedSynthesis ? (
             <section className="validated-detail-synthesis" aria-label="Validated paper synthesis">
               <div>
-                <strong>요약문구</strong>
-                <p>{validatedSynthesis.summarySentence}</p>
-              </div>
-              <div>
-                <strong>상세문구</strong>
+                <strong>상세 내용</strong>
                 <p>{validatedSynthesis.detailSentence}</p>
               </div>
+              <div>
+                <strong>핵심 요약</strong>
+                <p>{validatedSynthesis.summarySentence}</p>
+              </div>
             </section>
-          ) : null}
-          <p><strong>간단 설명</strong>{item.summary}</p>
+          ) : (
+            <p><strong>상세 내용</strong>{buildResearchDetailContent(item)}</p>
+          )}
           <p><strong>Chris relevance</strong>{item.chrisRelevance}</p>
           <div className="metadata-grid" aria-label="Research metadata">
             <span>Week: {item.isoWeek}</span>
