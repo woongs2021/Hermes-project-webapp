@@ -1005,6 +1005,15 @@
   align-content: start;
 }
 
+.profile-why-card,
+.profile-chris-card {
+  grid-column: 1 / -1;
+}
+
+.profile-chris-card {
+  max-width: 860px;
+}
+
 .profile-statement-card h3,
 .credential-card h3,
 .profile-lens-card h3 {
@@ -2693,6 +2702,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+  contain: layout paint;
 }
 
 .agent-profile-card {
@@ -2700,6 +2710,7 @@
   grid-template-columns: 92px minmax(0, 1fr);
   gap: 16px;
   align-items: start;
+  min-height: 182px;
 }
 
 .agent-face-frame {
@@ -2712,8 +2723,10 @@
 }
 
 .agent-face-frame img {
+  display: block;
   width: 100%;
   height: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 

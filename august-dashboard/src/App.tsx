@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState, type WheelEvent } from 'react'
-import { fallbackManifest, loadDashboardManifest, type DashboardManifest } from './dashboardContent'
 import { fallbackHomeVisualSet, loadHomeVisualSet, type HomeVisualItem, type HomeVisualSet } from './homeVisualSet'
 import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type ResearchBoardItem } from './researchBoard'
 import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, MuyeolValidationPanel, ObdGrowthTimelinePanel } from './extendedPanels'
@@ -345,7 +344,7 @@ function ChrisIntroPanel() {
         </div>
       </article>
 
-      <article className="content-card profile-statement-card">
+      <article className="content-card profile-statement-card profile-why-card">
         <p className="card-kicker">Why this loop exists</p>
         <h3>OBD는 크리스가 이미 갖고 있는 직함이 아니라, Karina Hermes Agent Team이 함께 만들어가는 역할입니다</h3>
         <p>
@@ -358,7 +357,7 @@ function ChrisIntroPanel() {
         </p>
       </article>
 
-      <article className="content-card profile-statement-card">
+      <article className="content-card profile-statement-card profile-chris-card">
         <p className="card-kicker">Chris profile</p>
         <h3>Karina Hermes Agent Team은 크리스가 OBD로 작동할 수 있는 환경을 만듭니다</h3>
         <p>
@@ -441,7 +440,7 @@ function TeamPanel() {
         {agentProfiles.map((agent) => (
           <article className="content-card agent-profile-card" key={agent.name}>
             <div className="agent-face-frame">
-              <img src={toAppAssetSrc(agent.faceSrc)} alt={`${agent.name} character face`} loading="lazy" />
+              <img src={toAppAssetSrc(agent.faceSrc)} alt={`${agent.name} character face`} width="92" height="92" loading="eager" decoding="async" />
             </div>
             <div className="agent-profile-copy">
               <p className="card-kicker">{agent.title}</p>
@@ -1362,74 +1361,6 @@ function ArchitectureColumn({ title, branches }: { title: string; branches: Arch
   )
 }
 
-function SampleDataPanel() {
-  const [manifest, setManifest] = useState<DashboardManifest>(fallbackManifest)
-  const [selectedPath, setSelectedPath] = useState(fallbackManifest.documents[0]?.path ?? '')
-  const selectedDocument = manifest.documents.find((document) => document.path === selectedPath)
-
-  useEffect(() => {
-    let isMounted = true
-
-    loadDashboardManifest().then((loadedManifest) => {
-      if (!isMounted) return
-
-      setManifest(loadedManifest)
-      setSelectedPath((currentPath) => {
-        const currentStillExists = loadedManifest.documents.some((document) => document.path === currentPath)
-        return currentStillExists ? currentPath : loadedManifest.documents[0]?.path ?? ''
-      })
-    })
-
-    return () => {
-      isMounted = false
-    }
-  }, [])
-
-  return (
-    <article className="content-card sample-data-card">
-      <div className="sample-data-header">
-        <div>
-          <p className="card-kicker">Generated manifest loader</p>
-          <h3>Public-safe Markdown / JSON manifest preview</h3>
-        </div>
-        <span className="status-chip">read-only</span>
-      </div>
-
-      <p className="manifest-policy">{manifest.sourcePolicy}</p>
-
-      <div className="sample-data-layout">
-        <div className="source-list" aria-label="Manifest data sources">
-          {manifest.documents.map((document) => (
-            <button
-              key={document.path}
-              type="button"
-              className={document.path === selectedPath ? 'source-button active' : 'source-button'}
-              onClick={() => setSelectedPath(document.path)}
-            >
-              <strong>{document.title}</strong>
-              <span>{document.path}</span>
-            </button>
-          ))}
-        </div>
-
-        {selectedDocument ? (
-          <section className="source-preview" aria-label="Selected manifest source preview">
-            <div className="preview-meta">
-              <span>{selectedDocument.section}</span>
-              <span>{selectedDocument.format}</span>
-              <span>{selectedDocument.publicSafe ? 'public-safe manifest' : 'private hold'}</span>
-              <span>v{manifest.version}</span>
-            </div>
-            <h4>{selectedDocument.title}</h4>
-            <p>{selectedDocument.summary}</p>
-            <pre>{selectedDocument.bodyPreview}</pre>
-          </section>
-        ) : null}
-      </div>
-    </article>
-  )
-}
-
 function DevArchitecturePanel() {
   return (
     <div className="architecture-grid" aria-label="Development hierarchy architecture">
@@ -1452,22 +1383,6 @@ function DevArchitecturePanel() {
 
       <ArchitectureColumn title="Product IA" branches={productBranches} />
       <ArchitectureColumn title="Local Data Layer" branches={dataBranches} />
-      <SampleDataPanel />
-
-      <article className="content-card boundary-card">
-        <p className="card-kicker">Boundary rule</p>
-        <h3>Public-safe shell 먼저, private source는 나중에 분리</h3>
-        <div className="boundary-lanes" aria-label="Privacy boundary lanes">
-          <div>
-            <strong>Allowed in UI</strong>
-            <p>요약, 상태, 공개 가능한 rationale, 로컬 샘플 데이터, aggregate counts.</p>
-          </div>
-          <div>
-            <strong>Hold / private</strong>
-            <p>원본 DM, credentials, raw private IDs, OAuth/API keys, 내부 판단 전문.</p>
-          </div>
-        </div>
-      </article>
     </div>
   )
 }
@@ -1554,7 +1469,10 @@ function App() {
   function toggleMenuOpen() {
     const currentScrollY = window.scrollY
     setIsMenuOpen((open) => !open)
-    window.requestAnimationFrame(() => window.scrollTo({ top: currentScrollY, left: 0 }))
+    window.requestAnimationFrame(() => {
+      const maxScrollY = Math.max(document.documentElement.scrollHeight - window.innerHeight, 0)
+      window.scrollTo({ top: Math.min(currentScrollY, maxScrollY), left: 0 })
+    })
   }
 
   return (
