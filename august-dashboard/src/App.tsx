@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type WheelEvent } from 'react'
+import { useEffect, useRef, useState, type MouseEvent, type WheelEvent } from 'react'
 import { fallbackManifest, loadDashboardManifest, type DashboardManifest } from './dashboardContent'
 import { fallbackHomeVisualSet, loadHomeVisualSet, type HomeVisualItem, type HomeVisualSet } from './homeVisualSet'
 import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type ResearchBoardItem } from './researchBoard'
@@ -796,6 +796,10 @@ function sourceAccessLabel(item: ResearchBoardItem) {
 function ResearchKanbanPanel() {
   const [board, setBoard] = useState<ResearchBoard>(fallbackResearchBoard)
   const [selectedId, setSelectedId] = useState('')
+  const [validatedStackOrder, setValidatedStackOrder] = useState<string[]>([])
+  const [draggedValidatedId, setDraggedValidatedId] = useState<string | null>(null)
+  const draggedValidatedIdRef = useRef<string | null>(null)
+  const validatedPointerMovedRef = useRef(false)
   const [query, setQuery] = useState(getInitialResearchQuery)
   const [laneFilter, setLaneFilter] = useState<ResearchLaneFilter>(getInitialResearchLaneFilter)
   const [researchModalLane, setResearchModalLane] = useState<ResearchLaneFilter | null>(null)
@@ -862,6 +866,22 @@ function ResearchKanbanPanel() {
     }
   }, [query, laneFilter])
 
+  useEffect(() => {
+    const validatedIds = board.items
+      .filter((item) => item.status === 'friday_final_pick')
+      .map((item) => item.id)
+
+    setValidatedStackOrder((currentOrder) => {
+      const keptIds = currentOrder.filter((id) => validatedIds.includes(id))
+      const missingIds = validatedIds.filter((id) => !keptIds.includes(id))
+      const nextOrder = [...keptIds, ...missingIds]
+
+      return nextOrder.length === currentOrder.length && nextOrder.every((id, index) => id === currentOrder[index])
+        ? currentOrder
+        : nextOrder
+    })
+  }, [board.items])
+
   const normalizedQuery = query.trim().toLowerCase()
   const filteredItems = board.items.filter((item) => {
     const laneMatches = laneFilter === 'all' || item.lane === laneFilter || (laneFilter === 'final' && item.status === 'friday_final_pick')
@@ -886,6 +906,14 @@ function ResearchKanbanPanel() {
     return laneMatches && (!normalizedQuery || searchableText.includes(normalizedQuery))
   })
   const selectedItem = filteredItems.find((item) => item.id === selectedId) ?? filteredItems[0]
+  const validatedItemsById = new Map(filteredItems
+    .filter((item) => item.status === 'friday_final_pick')
+    .map((item) => [item.id, item]))
+  const orderedValidatedItems = [
+    ...validatedStackOrder.map((id) => validatedItemsById.get(id)).filter((item): item is ResearchBoardItem => Boolean(item)),
+    ...filteredItems.filter((item) => item.status === 'friday_final_pick' && !validatedStackOrder.includes(item.id)),
+  ]
+  const validatedTotal = board.items.filter((item) => item.status === 'friday_final_pick').length
   const modalItems = researchModalLane === 'all'
     ? filteredItems
     : researchModalLane === 'final'
@@ -898,7 +926,7 @@ function ResearchKanbanPanel() {
     : researchModalLane === 'goyounjung'
       ? 'Go Youn-jung 리서치 아이템 전체 보기'
       : '현재 조건의 리서치 아이템 전체 보기'
-  const lanes: Array<ResearchBoardItem['lane'] | 'final'> = ['yuna', 'goyounjung', 'final']
+  const lanes: Array<ResearchBoardItem['lane']> = ['yuna', 'goyounjung']
   const researchMetrics = {
     yuna: board.items.filter((item) => item.lane === 'yuna').length,
     goyounjung: board.items.filter((item) => item.lane === 'goyounjung').length,
@@ -907,6 +935,91 @@ function ResearchKanbanPanel() {
     validated: board.items.filter((item) => item.validationStatus === 'GO').length,
     watch: board.items.filter((item) => item.validationStatus === 'WATCH').length,
     avgScore: board.items.length === 0 ? 0 : board.items.reduce((sum, item) => sum + item.score, 0) / board.items.length,
+  }
+
+  const moveValidatedItem = (sourceId: string, targetId: string) => {
+    if (sourceId === targetId) return
+
+    setValidatedStackOrder((currentOrder) => {
+      const sourceIndex = currentOrder.indexOf(sourceId)
+      const targetIndex = currentOrder.indexOf(targetId)
+
+      if (sourceIndex === -1 || targetIndex === -1) return currentOrder
+
+      const nextOrder = currentOrder.filter((id) => id !== sourceId)
+      const adjustedTargetIndex = nextOrder.indexOf(targetId)
+      const insertIndex = sourceIndex < targetIndex ? adjustedTargetIndex + 1 : adjustedTargetIndex
+      nextOrder.splice(insertIndex, 0, sourceId)
+
+      return nextOrder
+    })
+  }
+
+  const handleValidatedDragEnd = () => {
+    draggedValidatedIdRef.current = null
+    setDraggedValidatedId(null)
+  }
+
+  const moveValidatedItemFromPoint = (clientX: number, clientY: number) => {
+    const sourceId = draggedValidatedIdRef.current
+    if (!sourceId) return
+
+    const target = document.elementFromPoint(clientX, clientY)?.closest<HTMLElement>('[data-validated-paper-id]')
+    const targetId = target?.dataset.validatedPaperId
+    if (!targetId || targetId === sourceId) return
+
+    validatedPointerMovedRef.current = true
+    moveValidatedItem(sourceId, targetId)
+  }
+
+  const startValidatedStackDrag = (itemId: string) => {
+    draggedValidatedIdRef.current = itemId
+    validatedPointerMovedRef.current = false
+    setDraggedValidatedId(itemId)
+  }
+
+  const handleValidatedMouseDown = (event: MouseEvent<HTMLButtonElement>, itemId: string) => {
+    event.preventDefault()
+    startValidatedStackDrag(itemId)
+
+    const handleWindowMouseMove = (moveEvent: globalThis.MouseEvent) => {
+      moveValidatedItemFromPoint(moveEvent.clientX, moveEvent.clientY)
+    }
+
+    const handleWindowMouseUp = () => {
+      window.removeEventListener('mousemove', handleWindowMouseMove)
+      window.removeEventListener('mouseup', handleWindowMouseUp)
+      handleValidatedDragEnd()
+    }
+
+    window.addEventListener('mousemove', handleWindowMouseMove)
+    window.addEventListener('mouseup', handleWindowMouseUp)
+  }
+
+  const handleValidatedTouchStart = (itemId: string) => {
+    startValidatedStackDrag(itemId)
+
+    const handleWindowTouchMove = (moveEvent: globalThis.TouchEvent) => {
+      const sourceId = draggedValidatedIdRef.current
+      if (!sourceId) return
+
+      const touch = moveEvent.touches[0]
+      if (!touch) return
+
+      moveEvent.preventDefault()
+      moveValidatedItemFromPoint(touch.clientX, touch.clientY)
+    }
+
+    const handleWindowTouchEnd = () => {
+      window.removeEventListener('touchmove', handleWindowTouchMove)
+      window.removeEventListener('touchend', handleWindowTouchEnd)
+      window.removeEventListener('touchcancel', handleWindowTouchEnd)
+      handleValidatedDragEnd()
+    }
+
+    window.addEventListener('touchmove', handleWindowTouchMove, { passive: false })
+    window.addEventListener('touchend', handleWindowTouchEnd)
+    window.addEventListener('touchcancel', handleWindowTouchEnd)
   }
 
   return (
@@ -975,15 +1088,53 @@ function ResearchKanbanPanel() {
         </div>
       </section>
 
-      <section className="research-kanban" aria-label="Yuna, Go Youn-jung, and Friday final pick research lanes">
+      <section className="content-card validated-paper-stack-card" aria-label="Muyeol validated key papers stack">
+        <div className="validated-paper-stack-header">
+          <div>
+            <p className="card-kicker">Muyeol validated · key papers</p>
+            <h3>검증이 끝난 주요 논문 {validatedTotal}개</h3>
+            <p>
+              Muyeol이 GO로 확인한 Friday final pick을 일반 후보와 분리했습니다. 위아래로 드래그해 Chris가 먼저 보고 싶은 순서로 재정렬할 수 있습니다.
+            </p>
+          </div>
+          <button type="button" className="research-more-button" onClick={() => setResearchModalLane('final')}>More</button>
+        </div>
+        <div className="validated-paper-stack" aria-label="Draggable validated paper stack">
+          {orderedValidatedItems.map((item, index) => (
+            <button
+              key={item.id}
+              type="button"
+              className={draggedValidatedId === item.id ? 'validated-paper-card dragging' : 'validated-paper-card'}
+              data-validated-paper-id={item.id}
+              onClick={() => {
+                if (validatedPointerMovedRef.current) {
+                  validatedPointerMovedRef.current = false
+                  return
+                }
+
+                setSelectedId(item.id)
+              }}
+              onMouseDown={(event) => handleValidatedMouseDown(event, item.id)}
+              onTouchStart={() => handleValidatedTouchStart(item.id)}
+              onDragEnd={handleValidatedDragEnd}
+            >
+              <span className="validated-paper-rank">{String(index + 1).padStart(2, '0')}</span>
+              <span className="validated-paper-copy">
+                <strong>{item.title}</strong>
+                <small>{laneLabel(item.lane)} · {item.dateKst} · {item.isoWeek}</small>
+                <span>{item.chrisRelevance || item.summary}</span>
+              </span>
+              <span className="validated-paper-badge">Muyeol GO</span>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section className="research-kanban" aria-label="Yuna and Go Youn-jung research lanes">
         {lanes.map((lane) => {
           const faces = laneAgentFaces(lane)
-          const laneItems = lane === 'final'
-            ? filteredItems.filter((item) => item.status === 'friday_final_pick')
-            : filteredItems.filter((item) => item.lane === lane)
-          const laneTotal = lane === 'final'
-            ? board.items.filter((item) => item.status === 'friday_final_pick').length
-            : board.items.filter((item) => item.lane === lane).length
+          const laneItems = filteredItems.filter((item) => item.lane === lane)
+          const laneTotal = board.items.filter((item) => item.lane === lane).length
           const laneCountLabel = laneItems.length === laneTotal
             ? `${laneItems.length} items`
             : `${laneItems.length} / ${laneTotal} shown`
