@@ -912,6 +912,7 @@ function ResearchKanbanPanel() {
     ...filteredItems.filter((item) => item.status === 'friday_final_pick' && !validatedStackOrder.includes(item.id)),
   ]
   const validatedTotal = board.items.filter((item) => item.status === 'friday_final_pick').length
+  const visibleValidatedTotal = orderedValidatedItems.length
   const modalItems = researchModalLane === 'all'
     ? filteredItems
     : researchModalLane === 'final'
@@ -1011,9 +1012,9 @@ function ResearchKanbanPanel() {
         <div className="validated-paper-stack-header">
           <div>
             <p className="card-kicker">Muyeol validated · key papers</p>
-            <h3>검증이 끝난 주요 논문 {validatedTotal}개</h3>
+            <h3>검증이 끝난 주요 논문 {visibleValidatedTotal}개</h3>
             <p>
-              Muyeol이 GO로 확인한 Friday final pick을 일반 후보와 분리했습니다. 6개씩 두 줄로 나누어 위 줄은 왼쪽, 아래 줄은 오른쪽으로 흐르는 검증 논문 marquee입니다.
+              Muyeol이 GO로 확인한 Friday final pick을 일반 후보와 분리했습니다. 현재 검색/필터 조건에 맞는 {visibleValidatedTotal}개를 보여주며, 전체 검증 논문은 {validatedTotal}개입니다.
             </p>
           </div>
           <div className="validated-paper-header-actions" aria-label="Validated paper marquee controls">
@@ -1194,8 +1195,17 @@ function buildWeeklyResearchTrend(selectedItem: ResearchBoardItem, weekItems: Re
   return `${selectedItem.isoWeek} 주간 리서치는 총 ${weekItems.length}개 후보 중 Yuna ${yunaCount}개, Go Youn-jung ${goYounjungCount}개가 모였고, 그중 ${finalCount}개가 Friday final pick으로 좁혀졌습니다. Muyeol 검증 기준으로는 GO ${goCount}개와 WATCH ${watchCount}개 신호가 함께 보이며, 핵심 흐름은 ${topTitles.join(' · ')} 같은 상위 논문을 중심으로 agent memory, AI UX, 디자인 의사결정, 한국어/로컬 맥락의 적용 가능성을 한 주 단위로 비교하는 방향입니다.`
 }
 
+function buildValidatedPaperSynthesis(item: ResearchBoardItem) {
+  const ownerName = laneLabel(item.lane)
+  const summarySentence = `${item.title}은 ${ownerName}가 수집한 후보 중 Muyeol이 GO로 확인한 Friday final pick입니다. 핵심은 ${item.summary}이며, Chris 관점에서는 ${item.chrisRelevance}로 읽히는 논문입니다.`
+  const detailSentence = `이 논문은 ${item.isoWeek} 리서치 흐름 안에서 score ${item.score.toFixed(1)}로 선별되었고, ${item.sourceVenue} / ${item.sourceAccess} 조건에서 공개 근거를 확인할 수 있습니다. 단순 후보가 아니라 ${item.validationStatus} 검증을 통과한 항목이므로, 이후 OBD식 지식 운영에서는 “왜 지금 중요한가 → Chris의 작업 언어로 어떻게 바뀌는가 → 어떤 화면/루프/의사결정으로 이어지는가”를 설명하는 기준 논문으로 사용할 수 있습니다.`
+
+  return { summarySentence, detailSentence }
+}
+
 function ResearchDetailPanel({ item, generatedAt, policy, weeklyTrend }: { item: ResearchBoardItem; generatedAt: string; policy: string; weeklyTrend: string }) {
   const primaryHref = primarySourceHref(item.sourceUrlOrId)
+  const validatedSynthesis = item.status === 'friday_final_pick' ? buildValidatedPaperSynthesis(item) : null
 
   return (
     <article className="content-card research-detail-card" aria-label="Selected research item detail">
@@ -1213,6 +1223,18 @@ function ResearchDetailPanel({ item, generatedAt, policy, weeklyTrend }: { item:
           <small>{item.dateKst}</small>
         </div>
         <div className="research-detail-copy">
+          {validatedSynthesis ? (
+            <section className="validated-detail-synthesis" aria-label="Validated paper synthesis">
+              <div>
+                <strong>요약문구</strong>
+                <p>{validatedSynthesis.summarySentence}</p>
+              </div>
+              <div>
+                <strong>상세문구</strong>
+                <p>{validatedSynthesis.detailSentence}</p>
+              </div>
+            </section>
+          ) : null}
           <p><strong>간단 설명</strong>{item.summary}</p>
           <p><strong>Chris relevance</strong>{item.chrisRelevance}</p>
           <div className="metadata-grid" aria-label="Research metadata">

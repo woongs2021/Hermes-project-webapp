@@ -723,6 +723,33 @@
   text-transform: uppercase;
 }
 
+.validated-detail-synthesis {
+  display: grid;
+  gap: 12px;
+  border: 1px solid color-mix(in srgb, var(--primary) 24%, var(--stroke));
+  border-radius: 22px;
+  padding: 18px;
+  background:
+    radial-gradient(circle at 8% 0%, color-mix(in srgb, var(--primary) 13%, transparent), transparent 38%),
+    color-mix(in srgb, var(--surface) 96%, transparent);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--ink) 7%, transparent);
+}
+
+.validated-detail-synthesis div {
+  display: grid;
+  gap: 6px;
+}
+
+.validated-detail-synthesis strong {
+  margin-bottom: 0;
+  color: var(--primary);
+}
+
+.validated-detail-synthesis p {
+  color: var(--ink);
+  line-height: 1.72;
+}
+
 .weekly-research-trend {
   display: grid;
   gap: 8px;
