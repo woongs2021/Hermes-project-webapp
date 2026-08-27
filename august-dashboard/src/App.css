@@ -354,7 +354,7 @@
   cursor: grab;
   opacity: var(--stack-opacity);
   box-shadow: 0 18px 46px color-mix(in srgb, var(--ink) 12%, transparent);
-  transform: translateX(-50%) translateY(var(--stack-offset)) scale(var(--stack-scale));
+  transform: translateX(calc(-50% + var(--stack-offset))) translateY(var(--stack-drop)) scale(var(--stack-scale));
   transform-origin: center top;
   transition:
     border-color 260ms ease,
@@ -378,7 +378,7 @@
 .validated-paper-card[data-stack-position='1']:focus-visible {
   border-color: color-mix(in srgb, var(--primary) 64%, var(--stroke));
   outline: none;
-  transform: translateX(-50%) translateY(var(--stack-offset)) scale(var(--stack-scale));
+  transform: translateX(calc(-50% + var(--stack-offset))) translateY(var(--stack-drop)) scale(var(--stack-scale));
 }
 
 .validated-paper-card:not([data-stack-position='1']) {
@@ -397,7 +397,7 @@
 .validated-paper-card.dragging {
   cursor: grabbing;
   opacity: 0.9;
-  transform: translateX(-50%) translateY(4px) scale(0.985);
+  transform: translateX(calc(-50% + 4px)) translateY(0) scale(0.985);
 }
 
 .validated-paper-stack-hint {

@@ -801,7 +801,7 @@ function ResearchKanbanPanel() {
   const validatedStackRef = useRef<HTMLDivElement | null>(null)
   const draggedValidatedIdRef = useRef<string | null>(null)
   const validatedPointerMovedRef = useRef(false)
-  const validatedDragStartYRef = useRef(0)
+  const validatedDragStartXRef = useRef(0)
   const validatedWheelDeltaRef = useRef(0)
   const validatedWheelLockedRef = useRef(false)
   const [query, setQuery] = useState(getInitialResearchQuery)
@@ -964,17 +964,23 @@ function ResearchKanbanPanel() {
     const wheelCooldownMs = 520
 
     const handleNativeWheel = (event: globalThis.WheelEvent) => {
-      if (Math.abs(event.deltaY) < 8) return
+      const horizontalDelta = Math.abs(event.deltaX) >= Math.abs(event.deltaY)
+        ? event.deltaX
+        : event.shiftKey
+          ? event.deltaY
+          : 0
+
+      if (Math.abs(horizontalDelta) < 8) return
 
       event.preventDefault()
       event.stopPropagation()
 
       if (validatedWheelLockedRef.current) return
 
-      validatedWheelDeltaRef.current += event.deltaY
+      validatedWheelDeltaRef.current += horizontalDelta
 
       if (Math.abs(validatedWheelDeltaRef.current) >= wheelThreshold) {
-        const direction = validatedWheelDeltaRef.current < 0 ? 1 : -1
+        const direction = validatedWheelDeltaRef.current > 0 ? 1 : -1
         rotateValidatedStack(direction)
         validatedWheelDeltaRef.current = 0
         validatedWheelLockedRef.current = true
@@ -997,28 +1003,28 @@ function ResearchKanbanPanel() {
     })
   }
 
-  const startValidatedStackDrag = (itemId: string, startY: number) => {
+  const startValidatedStackDrag = (itemId: string, startX: number) => {
     draggedValidatedIdRef.current = itemId
-    validatedDragStartYRef.current = startY
+    validatedDragStartXRef.current = startX
     validatedPointerMovedRef.current = false
     setDraggedValidatedId(itemId)
   }
 
-  const advanceValidatedStackFromY = (clientY: number) => {
-    const deltaY = clientY - validatedDragStartYRef.current
-    if (Math.abs(deltaY) < 46) return
+  const advanceValidatedStackFromX = (clientX: number) => {
+    const deltaX = clientX - validatedDragStartXRef.current
+    if (Math.abs(deltaX) < 46) return
 
     validatedPointerMovedRef.current = true
-    rotateValidatedStack(deltaY < 0 ? 1 : -1)
-    validatedDragStartYRef.current = clientY
+    rotateValidatedStack(deltaX < 0 ? 1 : -1)
+    validatedDragStartXRef.current = clientX
   }
 
   const handleValidatedMouseDown = (event: MouseEvent<HTMLButtonElement>, itemId: string) => {
     event.preventDefault()
-    startValidatedStackDrag(itemId, event.clientY)
+    startValidatedStackDrag(itemId, event.clientX)
 
     const handleWindowMouseMove = (moveEvent: globalThis.MouseEvent) => {
-      advanceValidatedStackFromY(moveEvent.clientY)
+      advanceValidatedStackFromX(moveEvent.clientX)
     }
 
     const handleWindowMouseUp = () => {
@@ -1035,7 +1041,7 @@ function ResearchKanbanPanel() {
     const touch = event.touches[0]
     if (!touch) return
 
-    startValidatedStackDrag(itemId, touch.clientY)
+    startValidatedStackDrag(itemId, touch.clientX)
 
     const handleWindowTouchMove = (moveEvent: globalThis.TouchEvent) => {
       const sourceId = draggedValidatedIdRef.current
@@ -1045,7 +1051,7 @@ function ResearchKanbanPanel() {
       if (!touch) return
 
       moveEvent.preventDefault()
-      advanceValidatedStackFromY(touch.clientY)
+      advanceValidatedStackFromX(touch.clientX)
     }
 
     const handleWindowTouchEnd = () => {
@@ -1132,7 +1138,7 @@ function ResearchKanbanPanel() {
             <p className="card-kicker">Muyeol validated · key papers</p>
             <h3>검증이 끝난 주요 논문 {validatedTotal}개</h3>
             <p>
-              Muyeol이 GO로 확인한 Friday final pick을 일반 후보와 분리했습니다. 스크롤하거나 위아래로 드래그하면 뒤의 카드가 앞으로 올라오는 검증 논문 deck입니다.
+              Muyeol이 GO로 확인한 Friday final pick을 일반 후보와 분리했습니다. 가로로 스크롤하거나 좌우로 드래그하면 뒤의 카드가 앞으로 올라오는 검증 논문 deck입니다.
             </p>
           </div>
           <button type="button" className="research-more-button" onClick={() => setResearchModalLane('final')}>More</button>
@@ -1148,7 +1154,8 @@ function ResearchKanbanPanel() {
               '--stack-index': visibleDepth,
               '--stack-scale': Math.max(0.75, 1 - visibleDepth * 0.05),
               '--stack-opacity': Math.max(0.75, 1 - visibleDepth * 0.05),
-              '--stack-offset': `${visibleDepth * 18}px`,
+              '--stack-offset': `${visibleDepth * 22}px`,
+              '--stack-drop': `${visibleDepth * 8}px`,
               '--stack-z': orderedValidatedItems.length - index,
             } as CSSProperties
 
@@ -1189,7 +1196,7 @@ function ResearchKanbanPanel() {
             )
           })}
           <div className="validated-paper-stack-hint" aria-hidden="true">
-            Scroll / drag vertically to bring the next verified paper forward
+            Swipe / scroll horizontally to bring the next verified paper forward
           </div>
         </div>
       </section>
