@@ -328,6 +328,119 @@ function ArchitectureSpreadPanel() {
   )
 }
 
+const chrisGrowthGraphPoints = [
+  {
+    id: 'research-depth',
+    time: '석사 연구',
+    growth: 32,
+    x: 10,
+    y: 70,
+    question: '어떤 근거가 Chris의 판단을 더 단단하게 만드나요?',
+    label: 'Research depth',
+    detail: '연구 방법론과 논문 읽기를 통해 감각이 아니라 근거로 디자인 언어를 세우기 시작한 구간입니다.',
+  },
+  {
+    id: 'brand-system',
+    time: 'LG BX',
+    growth: 48,
+    x: 28,
+    y: 58,
+    question: '브랜드 경험은 어떻게 시스템 언어가 되나요?',
+    label: 'Brand system',
+    detail: '브랜드, 시각 언어, 경험 일관성을 다루며 디자인을 비즈니스 맥락으로 번역하는 감각이 쌓였습니다.',
+  },
+  {
+    id: 'product-reality',
+    time: 'Samsung MX',
+    growth: 64,
+    x: 46,
+    y: 45,
+    question: '미래 모바일 경험은 어떤 현실 조건 위에서 작동해야 하나요?',
+    label: 'Product reality',
+    detail: 'One UI와 모바일 제품 현실을 통해 좋은 아이디어를 실제 사용자 경험과 실행 조건으로 연결하는 힘이 커졌습니다.',
+  },
+  {
+    id: 'ai-ux',
+    time: 'AI UX 탐구',
+    growth: 78,
+    x: 66,
+    y: 31,
+    question: 'AI가 똑똑해 보이는 것보다 사용자가 덜 헤매게 만드는 구조는 무엇인가요?',
+    label: 'AI UX lens',
+    detail: '정서적 안정감, 설명 가능성, 기억, 조율권을 중심으로 인간적인 AI 경험의 기준을 만들고 있습니다.',
+  },
+  {
+    id: 'obd-loop',
+    time: 'OBD 루프',
+    growth: 92,
+    x: 88,
+    y: 17,
+    question: '쌓아온 경험을 어떻게 Chris만의 판단 시스템으로 바꿀 수 있나요?',
+    label: 'OBD operating rhythm',
+    detail: 'Son의 질문이 Chris의 성장 단서를 다시 묶고, Karina Hermes Agent Team이 그것을 판단 가능한 루프로 축적합니다.',
+  },
+]
+
+function ChrisGrowthGraphPanel() {
+  const [activePointId, setActivePointId] = useState(chrisGrowthGraphPoints.at(-1)?.id ?? '')
+  const activePoint = chrisGrowthGraphPoints.find((point) => point.id === activePointId) ?? chrisGrowthGraphPoints.at(-1)!
+  const polylinePoints = chrisGrowthGraphPoints.map((point) => `${point.x},${point.y}`).join(' ')
+
+  return (
+    <section className="content-card chris-growth-graph-card" aria-label="Son questions and Chris growth graph">
+      <div className="growth-graph-copy">
+        <p className="card-kicker">Son questions · Chris growth graph</p>
+        <h3>Son이 던진 질문이 쌓아온 성장선을 다시 보이게 합니다</h3>
+        <p>
+          y축은 성장의 깊이, x축은 시간의 흐름입니다. 각 포인트를 클릭하거나 호버하면 Son의 질문과 그 시점의 성장 의미가 크게 열립니다.
+        </p>
+      </div>
+
+      <div className="growth-graph-stage" aria-label="Interactive growth chart with time on x axis and growth on y axis">
+        <svg className="growth-graph-svg" viewBox="0 0 100 86" role="img" aria-label="Chris growth graph: time moves left to right and growth rises upward">
+          <line className="growth-axis growth-axis-y" x1="7" y1="78" x2="7" y2="10" />
+          <line className="growth-axis growth-axis-x" x1="7" y1="78" x2="94" y2="78" />
+          <text className="growth-axis-label y" x="4" y="8">성장</text>
+          <text className="growth-axis-label x" x="78" y="84">시간</text>
+          <polyline className="growth-line-shadow" points={polylinePoints} />
+          <polyline className="growth-line" points={polylinePoints} />
+          {chrisGrowthGraphPoints.map((point) => (
+            <g key={point.id}>
+              <line className="growth-guide" x1={point.x} y1={point.y} x2={point.x} y2="78" />
+              <circle className={point.id === activePoint.id ? 'growth-dot active' : 'growth-dot'} cx={point.x} cy={point.y} r="2.4" />
+            </g>
+          ))}
+        </svg>
+
+        <div className="growth-point-layer" aria-label="Interactive growth milestones">
+          {chrisGrowthGraphPoints.map((point) => (
+            <button
+              key={point.id}
+              type="button"
+              className={point.id === activePoint.id ? 'growth-point active' : 'growth-point'}
+              style={{ left: `${point.x}%`, top: `${point.y}%` }}
+              onClick={() => setActivePointId(point.id)}
+              onMouseEnter={() => setActivePointId(point.id)}
+              onFocus={() => setActivePointId(point.id)}
+              aria-pressed={point.id === activePoint.id}
+            >
+              <span>{point.time}</span>
+              <strong>{point.label}</strong>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <aside className="growth-question-panel" aria-live="polite">
+        <p className="card-kicker">Active question</p>
+        <h4>{activePoint.question}</h4>
+        <p>{activePoint.detail}</p>
+        <span>Growth index {activePoint.growth}</span>
+      </aside>
+    </section>
+  )
+}
+
 function ChrisIntroPanel() {
   return (
     <div className="intro-grid" aria-label="Chris introduction slide">
@@ -367,6 +480,8 @@ function ChrisIntroPanel() {
           크리스가 Ontology Business Designer처럼 판단하고 실행할 수 있는 구조를 만들어줍니다.
         </p>
       </article>
+
+      <ChrisGrowthGraphPanel />
 
       <article className="content-card intro-hero-card">
         <p className="card-kicker">Personal positioning</p>
