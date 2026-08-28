@@ -1040,7 +1040,7 @@
 .chris-growth-graph-card {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: minmax(220px, 0.35fr) minmax(0, 1fr) minmax(220px, 0.34fr);
+  grid-template-columns: minmax(230px, 0.34fr) minmax(0, 1fr) minmax(230px, 0.34fr);
   gap: clamp(16px, 2vw, 26px);
   align-items: stretch;
   overflow: hidden;
@@ -1055,6 +1055,21 @@
   gap: 12px;
   align-content: center;
   min-width: 0;
+}
+
+.growth-title-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.growth-title-row img,
+.son-weekly-question-header img {
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, var(--primary) 22%, var(--stroke));
+  object-fit: cover;
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--ink) 8%, transparent);
 }
 
 .growth-graph-copy h3,
@@ -1137,9 +1152,9 @@
 
 .growth-axis-label {
   fill: var(--quiet-ink);
-  font-size: 4px;
-  font-weight: 760;
-  letter-spacing: 0.04em;
+  font-size: 2.35px;
+  font-weight: 720;
+  letter-spacing: 0.015em;
 }
 
 .growth-line-shadow,
@@ -1174,7 +1189,7 @@
 
 .growth-dot.active {
   fill: var(--primary);
-  r: 3.2;
+  r: 3;
 }
 
 .growth-point-layer {
@@ -1256,6 +1271,118 @@
   background: var(--panel-surface-strong);
 }
 
+
+.son-weekly-question-card {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 14px;
+  border: 1px solid color-mix(in srgb, var(--primary) 14%, var(--stroke));
+  border-radius: 24px;
+  padding: clamp(16px, 2vw, 22px);
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+}
+
+.son-weekly-question-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.son-weekly-question-header h4 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.05rem, 1.8vw, 1.62rem);
+  font-weight: 520;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.son-weekly-question-header p:not(.card-kicker) {
+  margin: 5px 0 0;
+  color: var(--muted-ink);
+  font-size: 0.86rem;
+}
+
+.son-weekly-question-scroll {
+  display: grid;
+  gap: 12px;
+  max-height: 310px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--primary) 36%, var(--stroke)) transparent;
+}
+
+.son-weekly-question-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.son-weekly-question-scroll::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary) 34%, var(--stroke));
+}
+
+.son-weekly-question-group {
+  display: grid;
+  gap: 9px;
+  border: 1px solid color-mix(in srgb, var(--stroke) 82%, transparent);
+  border-radius: 20px;
+  padding: 14px;
+  background: color-mix(in srgb, var(--panel-surface) 82%, transparent);
+}
+
+.son-weekly-question-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.son-weekly-question-meta span,
+.son-weekly-question-meta em {
+  border-radius: 999px;
+  padding: 5px 8px;
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.son-weekly-question-meta span {
+  background: color-mix(in srgb, var(--primary) 10%, var(--surface));
+  color: var(--primary);
+}
+
+.son-weekly-question-meta em {
+  background: color-mix(in srgb, var(--surface) 76%, transparent);
+  color: var(--quiet-ink);
+  border: 1px solid var(--stroke);
+}
+
+.son-weekly-question-group h5 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 760;
+  letter-spacing: -0.025em;
+}
+
+.son-weekly-question-group ol {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted-ink);
+  line-height: 1.48;
+  font-size: 0.9rem;
+}
+
+.son-weekly-question-group li::marker {
+  color: var(--primary);
+  font-weight: 800;
+}
+
 @media (max-width: 900px) {
   .chris-growth-graph-card {
     grid-template-columns: 1fr;
@@ -1311,10 +1438,18 @@
     font-size: 0.88rem;
   }
 
+  .growth-axis-label {
+    font-size: 2px;
+  }
+
   .growth-point:hover em,
   .growth-point:focus-visible em,
   .growth-point.active em {
     font-size: 0.7rem;
+  }
+
+  .son-weekly-question-scroll {
+    max-height: 360px;
   }
 }
 

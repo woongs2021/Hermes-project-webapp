@@ -328,72 +328,98 @@ function ArchitectureSpreadPanel() {
   )
 }
 
+const sonWeeklyQuestionGroups = [
+  {
+    week: '2026-W30 · Jul 20–26',
+    theme: '역할·공개 안전·위임 경계',
+    signal: 'Son 질문 7개',
+    questions: [
+      'Hermes 팀의 역할이 나뉘면서 Chris가 직접 더 잘하게 된 판단은 무엇인가요?',
+      '공개해도 되는 학습과 공개하지 말아야 할 내부 맥락은 각각 무엇인가요?',
+      '작업 상태, 판단 지점, 아티팩트 관계로 다시 그린다면 가장 먼저 보존해야 할 핵심 객체는 무엇인가요?',
+      '사용자가 이 AI가 내 편이라고 느끼려면 어떤 관계가 화면·정책·말투에 보여야 할까요?',
+      '언제 개입하고, 언제 멈추고, 무엇은 절대 하지 않을 것인가를 어떻게 정의하시겠습니까?',
+    ],
+  },
+  {
+    week: '2026-W31 · Jul 27–30',
+    theme: '제어권·조직 승인·검증 유효성',
+    signal: 'Son 질문 4개',
+    questions: [
+      'AI 판단 지점과 사용자의 제어·수정·이의제기/중단 지점을 어떻게 나눌 것인가요?',
+      'AI 역할, 인간 책임, 사용자 통제, 평가 기준, 조직 승인 신호를 어떻게 나눌 것인가요?',
+      'AI가 자동 실행할 단계, 사용자가 개입해야 할 단계, 오류가 났을 때 회복해야 할 단계를 어떻게 나누시겠습니까?',
+      'LLM/AI로 빠르게 시뮬레이션할 것, 반드시 실제 사람에게 검증할 것, 불확실하면 멈춰야 할 것을 어떻게 나누시겠습니까?',
+    ],
+  },
+]
+
 const chrisGrowthGraphPoints = [
   {
     id: 'role-ontology',
     time: 'Jul 20–21',
-    growth: 30,
+    growth: 22,
     x: 9,
-    y: 71,
+    y: 65,
     metric: '2 Son questions',
     question: 'Hermes 팀의 역할이 나뉘면서 Chris가 직접 더 잘하게 된 판단은 무엇인가요?',
     label: 'Role ontology',
-    detail: 'Son의 실제 growth log는 “AI 에이전트 소개”가 아니라 역할 → 맡기는 일 → Chris가 더 잘하게 된 판단으로 시작합니다. 그래서 첫 점은 팀 구조 자체보다, Chris가 책임 있는 OBD 판단자로 남는 역할 온톨로지입니다.',
+    detail: '이 점은 Chris의 체감 성장 점수가 아니라 Son 질문 로그의 구조화 단계입니다. Son은 AI 팀 소개보다 역할 → 맡기는 일 → Chris가 책임지는 판단을 먼저 정리했습니다.',
   },
   {
     id: 'public-decision-log',
     time: 'Jul 22–23',
-    growth: 47,
-    x: 26,
-    y: 58,
+    growth: 27,
+    x: 25,
+    y: 61,
     metric: '2 decision frames',
     question: '공개해도 되는 학습과 공개하지 말아야 할 내부 맥락은 각각 무엇인가요?',
     label: 'Public-safe decision log',
-    detail: 'Son은 실제 로그에서 상황을 추상화하고, 역할 개입·선택지 축소·Chris의 판단 기준·다음 신호만 남기는 공개 안전 decision log를 반복했습니다. 이 구간은 private 원문을 숨기면서도 판단 과정을 제품 데이터로 남기는 단계입니다.',
+    detail: 'Son의 실제 질문은 상황을 추상화하고, 공개 가능한 학습과 숨겨야 할 내부 맥락을 나누는 쪽으로 이동했습니다. 그래서 상승폭은 “성장 체감”이 아니라 공개 안전 구조가 한 단계 선명해진 정도만 표시합니다.',
   },
   {
     id: 'artifact-relationship',
     time: 'Jul 23',
-    growth: 58,
-    x: 42,
-    y: 49,
+    growth: 31,
+    x: 41,
+    y: 58,
     metric: 'work-state map',
     question: '기능명이 아니라 작업 상태, 판단 지점, 아티팩트 관계로 다시 그린다면 무엇을 보존해야 하나요?',
     label: 'Artifact relationship',
-    detail: 'Son의 실제 프레임은 OBD를 기능 목록이 아니라 work state → judgment point → artifact relationship → reason to return으로 봅니다. 그래서 그래프는 경력 이력보다, 다시 돌아와 판단할 수 있게 만드는 객체 관계로 전환됩니다.',
+    detail: 'OBD를 기능 목록이 아니라 work state → judgment point → artifact relationship → reason to return으로 보는 단계입니다. 그래프는 개인 성취 곡선보다 질문 체계가 조금 더 다층화된 흐름으로 낮춰 그렸습니다.',
   },
   {
     id: 'delegation-boundary',
     time: 'Jul 24–26',
-    growth: 72,
-    x: 59,
-    y: 35,
+    growth: 35,
+    x: 57,
+    y: 54,
     metric: '3 trust frames',
     question: '행동, 예상 결과, 위험, 사용자 허락, 되돌리기, 책임 주체 중 무엇을 연결해야 하나요?',
     label: 'Delegation boundary',
-    detail: '7월 24–26일 Son 질문은 delegated action, risk, rollback, accountable owner, agent authority, stop condition, anti-action constraint로 이어졌습니다. 성장선이 올라가는 이유는 자동화가 늘어서가 아니라, 위임의 경계와 회복 경로가 보이기 시작했기 때문입니다.',
+    detail: 'Son 질문은 위임 행동, 위험, 회복 경로, 권한, 멈춤 조건, 금지 행동을 묶었습니다. 이 단계도 “Chris가 크게 성장했다”가 아니라 위임을 안전하게 설명하는 기준이 조금 더 촘촘해진 상태입니다.',
   },
   {
     id: 'control-adoption',
     time: 'Jul 27–29',
-    growth: 84,
-    x: 75,
-    y: 24,
+    growth: 39,
+    x: 74,
+    y: 50,
     metric: '3 control maps',
     question: 'AI 판단 지점과 사용자의 제어·수정·이의제기/중단 지점을 어떻게 나눌 것인가요?',
-    label: 'Control & adoption map',
-    detail: 'Son의 실제 데이터는 사용자 제어, 수정 가능 지점, 중단/이의제기 경로, 인간 책임, 조직 승인 신호를 계속 묶었습니다. 이 점은 Hermes가 “더 자율적인 AI”가 아니라 조직이 안심하고 채택할 수 있는 판단 구조로 성숙하는 구간입니다.',
+    label: 'Control and adoption map',
+    detail: '사용자 제어, 수정 가능 지점, 중단/이의제기 경로, 인간 책임, 조직 승인 신호가 연결됩니다. y축은 체감 성장값이 아니라 Son이 본 OBD 질문의 구조화 밀도입니다.',
   },
   {
     id: 'evaluation-validity',
     time: 'Jul 30',
-    growth: 94,
+    growth: 43,
     x: 91,
-    y: 13,
+    y: 46,
     metric: 'validity boundary',
     question: 'LLM/AI로 빠르게 시뮬레이션할 것, 실제 사람에게 검증할 것, 불확실하면 멈춰야 할 것은 무엇인가요?',
     label: 'Evaluation validity',
-    detail: '마지막 점은 Son의 7월 30일 실제 질문에서 온 빠른 합성 평가 / 실제 인간 검증 / 불확실성 표시 / 멈춤 기준 / 책임 주체입니다. Chris의 OBD 성장은 속도보다 검증 가능성과 멈출 줄 아는 판단 구조로 읽히게 됩니다.',
+    detail: '마지막 점은 빠른 합성 평가 / 실제 인간 검증 / 불확실성 표시 / 멈춤 기준 / 책임 주체입니다. 그래서 숫자는 높게 뛰는 성장 점수가 아니라, 검증 질문까지 도달한 구조화 체크포인트로 낮췄습니다.',
   },
 ]
 
@@ -403,27 +429,32 @@ function ChrisGrowthGraphPanel() {
   const polylinePoints = chrisGrowthGraphPoints.map((point) => `${point.x},${point.y}`).join(' ')
 
   return (
-    <section className="content-card chris-growth-graph-card" aria-label="Son questions and Chris growth graph">
+    <section className="content-card chris-growth-graph-card" aria-label="Son questions and OBD structure graph">
       <div className="growth-graph-copy">
-        <p className="card-kicker">Son growth data · OBD maturity graph</p>
-        <h3>Son의 실제 질문 로그가 Chris의 OBD 성장선을 다시 그립니다</h3>
+        <div className="growth-title-row">
+          <img src="/assets/team/son_profile.jpg" alt="Son profile" loading="eager" decoding="async" width="52" height="52" />
+          <div>
+            <p className="card-kicker">Son question log · OBD structure graph</p>
+            <h3>성장 점수가 아니라, Son 질문이 정리한 OBD 구조화 흐름입니다</h3>
+          </div>
+        </div>
         <p>
-          y축은 Son이 반복해서 본 OBD 운영 성숙도, x축은 2026년 7월 20일부터 30일까지의 실제 Son growth loop 흐름입니다. 각 포인트는 역할 온톨로지, 공개 안전 판단 로그, 아티팩트 관계, 위임 경계, 사용자 제어, 검증 유효성으로 이어진 Son의 실제 질문·insight 데이터에서 가져왔습니다.
+          y축은 Chris의 체감 성장치가 아니라 Son 질문 로그에서 보이는 OBD 질문 구조화 수준입니다. x축은 2026년 7월 20일부터 30일까지의 실제 Son growth loop 흐름이고, 선은 의도적으로 완만하게 조정해 “내가 이렇게 성장했다”가 아니라 “질문 체계가 조금씩 정리됐다”로 읽히게 했습니다.
         </p>
         <div className="growth-data-strip" aria-label="Son growth loop data summary">
           <span>11 Son growth entries</span>
-          <span>11 daily logs</span>
+          <span>2 weekly groups</span>
           <span>8 Son prep files</span>
           <span>10 Muyeol guardrails</span>
         </div>
       </div>
 
-      <div className="growth-graph-stage" aria-label="Interactive growth chart with time on x axis and growth on y axis">
-        <svg className="growth-graph-svg" viewBox="0 0 100 86" role="img" aria-label="Chris growth graph: time moves left to right and growth rises upward">
+      <div className="growth-graph-stage" aria-label="Interactive graph with Son question structure on y axis and actual log flow on x axis">
+        <svg className="growth-graph-svg" viewBox="0 0 100 86" role="img" aria-label="OBD structure graph: actual Son logs move left to right and structure level rises gently">
           <line className="growth-axis growth-axis-y" x1="7" y1="78" x2="7" y2="10" />
           <line className="growth-axis growth-axis-x" x1="7" y1="78" x2="94" y2="78" />
-          <text className="growth-axis-label y" x="4" y="8">성장</text>
-          <text className="growth-axis-label x" x="78" y="84">시간</text>
+          <text className="growth-axis-label y" x="3" y="9">질문 구조화</text>
+          <text className="growth-axis-label x" x="74" y="84">Son 실제 로그 흐름</text>
           <polyline className="growth-line-shadow" points={polylinePoints} />
           <polyline className="growth-line" points={polylinePoints} />
           {chrisGrowthGraphPoints.map((point) => (
@@ -434,7 +465,7 @@ function ChrisGrowthGraphPanel() {
           ))}
         </svg>
 
-        <div className="growth-point-layer" aria-label="Interactive growth milestones">
+        <div className="growth-point-layer" aria-label="Interactive OBD structure milestones">
           {chrisGrowthGraphPoints.map((point) => (
             <button
               key={point.id}
@@ -455,11 +486,38 @@ function ChrisGrowthGraphPanel() {
       </div>
 
       <aside className="growth-question-panel" aria-live="polite">
-        <p className="card-kicker">Active question</p>
+        <p className="card-kicker">Active Son question</p>
         <h4>{activePoint.question}</h4>
         <p>{activePoint.detail}</p>
-        <span>{activePoint.metric} · maturity {activePoint.growth}</span>
+        <span>{activePoint.metric} · structure checkpoint {activePoint.growth}</span>
       </aside>
+
+      <div className="son-weekly-question-card" aria-label="Weekly Son question list">
+        <div className="son-weekly-question-header">
+          <img src="/assets/team/son_profile.jpg" alt="Son profile" loading="lazy" decoding="async" width="44" height="44" />
+          <div>
+            <p className="card-kicker">Son weekly question archive</p>
+            <h4>Son이 실제로 던졌던 주요 질문들</h4>
+            <p>주 단위로 묶어 스크롤하면서 볼 수 있게 정리했습니다.</p>
+          </div>
+        </div>
+        <div className="son-weekly-question-scroll" role="list">
+          {sonWeeklyQuestionGroups.map((group) => (
+            <article className="son-weekly-question-group" key={group.week} role="listitem">
+              <div className="son-weekly-question-meta">
+                <span>{group.week}</span>
+                <em>{group.signal}</em>
+              </div>
+              <h5>{group.theme}</h5>
+              <ol>
+                {group.questions.map((question) => (
+                  <li key={question}>{question}</li>
+                ))}
+              </ol>
+            </article>
+          ))}
+        </div>
+      </div>
     </section>
   )
 }
