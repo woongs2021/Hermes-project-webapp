@@ -656,6 +656,7 @@ function TeamPanel() {
 }
 
 function toAppAssetSrc(path: string) {
+  if (path.startsWith('http') || path.startsWith(import.meta.env.BASE_URL)) return path
   return path.startsWith('/') ? `${import.meta.env.BASE_URL}${path.slice(1)}` : path
 }
 
