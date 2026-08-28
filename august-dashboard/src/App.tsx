@@ -1447,23 +1447,42 @@ function renderTextSegments(segments: TextSegment[]) {
   ))
 }
 
-function buildResearchDetailContent(item: ResearchBoardItem): TextSegment[] {
+function buildResearchDetailParagraphs(item: ResearchBoardItem): TextSegment[][] {
   const ownerName = laneLabel(item.lane)
   const validationCopy = item.status === 'friday_final_pick'
     ? `Muyeol이 ${item.validationStatus}로 확인한 Friday final pick이며, ${item.isoWeek} 안에서 score ${item.score.toFixed(1)}로 선별된 핵심 후보입니다.`
     : `${item.isoWeek}의 daily candidate이며, 현재 ${item.validationStatus} 검증 상태로 추적 중인 후보입니다.`
 
   return [
-    { text: `${item.title}은 ${ownerName}가 수집한 리서치 흐름에서 ` },
-    { text: item.summary, emphasis: true },
-    { text: ` ${validationCopy} Chris 관점에서는 ` },
-    { text: item.chrisRelevance, emphasis: true },
-    { text: `로 읽힙니다. 출처는 ${item.sourceVenue}이며 접근 조건은 ${item.sourceAccess}입니다. ` },
-    { text: `한국어/로컬 근거 상태는 ${item.koreanSourceStatus}`, emphasis: true },
-    { text: `이고, 중복 검토 메모는 ${item.duplicateSignal}입니다. 따라서 이 항목은 단순 카드 요약이 아니라 ` },
-    { text: '“핵심 주장 → Chris relevance → 검증 상태 → 출처/접근성 → 중복·로컬 맥락”', emphasis: true },
-    { text: '까지 한 번에 판단하기 위한 상세 내용으로 다룹니다.' },
+    [
+      { text: `${item.title}은 ${ownerName}가 수집한 리서치 흐름에서 ` },
+      { text: item.summary, emphasis: true },
+      { text: ` ${validationCopy}` },
+    ],
+    [
+      { text: 'Chris 관점에서는 ' },
+      { text: item.chrisRelevance, emphasis: true },
+      { text: '로 읽힙니다.' },
+    ],
+    [
+      { text: `출처는 ${item.sourceVenue}이며 접근 조건은 ${item.sourceAccess}입니다. ` },
+      { text: `한국어/로컬 근거 상태는 ${item.koreanSourceStatus}`, emphasis: true },
+      { text: `이고, 중복 검토 메모는 ${item.duplicateSignal}입니다.` },
+    ],
+    [
+      { text: '따라서 이 항목은 단순 카드 요약이 아니라 ' },
+      { text: '“핵심 주장 → Chris relevance → 검증 상태 → 출처/접근성 → 중복·로컬 맥락”', emphasis: true },
+      { text: '까지 한 번에 판단하기 위한 상세 내용으로 다룹니다.' },
+    ],
   ]
+}
+
+function renderTextSegmentParagraphs(paragraphs: TextSegment[][]) {
+  return paragraphs.map((paragraph, index) => (
+    <p className="research-detail-segments" key={`research-detail-paragraph-${index}`}>
+      {renderTextSegments(paragraph)}
+    </p>
+  ))
 }
 
 function buildValidatedPaperSynthesis(item: ResearchBoardItem) {
@@ -1474,9 +1493,9 @@ function buildValidatedPaperSynthesis(item: ResearchBoardItem) {
     { text: item.summary, emphasis: true },
     { text: '입니다.' },
   ]
-  const detailSegments = buildResearchDetailContent(item)
+  const detailParagraphs = buildResearchDetailParagraphs(item)
 
-  return { summarySegments, detailSegments }
+  return { summarySegments, detailParagraphs }
 }
 
 function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoardItem; generatedAt: string; policy: string }) {
@@ -1503,7 +1522,7 @@ function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoar
             <section className="validated-detail-synthesis" aria-label="Validated paper synthesis">
               <div>
                 <strong>상세 내용</strong>
-                <p className="research-detail-segments">{renderTextSegments(validatedSynthesis.detailSegments)}</p>
+                <div className="research-detail-paragraphs">{renderTextSegmentParagraphs(validatedSynthesis.detailParagraphs)}</div>
               </div>
               <div>
                 <strong>핵심 요약</strong>
@@ -1514,7 +1533,7 @@ function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoar
             <section className="validated-detail-synthesis" aria-label="Research detail synthesis">
               <div>
                 <strong>상세 내용</strong>
-                <p className="research-detail-segments">{renderTextSegments(buildResearchDetailContent(item))}</p>
+                <div className="research-detail-paragraphs">{renderTextSegmentParagraphs(buildResearchDetailParagraphs(item))}</div>
               </div>
             </section>
           )}
