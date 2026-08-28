@@ -1072,6 +1072,23 @@
   line-height: 1.55;
 }
 
+.growth-data-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+}
+
+.growth-data-strip span {
+  border: 1px solid color-mix(in srgb, var(--primary) 16%, var(--stroke));
+  border-radius: 999px;
+  padding: 6px 9px;
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+  color: var(--muted-ink);
+  font-size: 0.72rem;
+  font-weight: 760;
+}
+
 .growth-question-panel {
   border: 1px solid color-mix(in srgb, var(--primary) 18%, var(--stroke));
   border-radius: 22px;
@@ -1113,9 +1130,9 @@
 
 .growth-axis {
   stroke: var(--muted-ink);
-  stroke-width: 0.8;
+  stroke-width: 0.45;
   stroke-linecap: round;
-  opacity: 0.58;
+  opacity: 0.42;
 }
 
 .growth-axis-label {
@@ -1133,25 +1150,25 @@
 }
 
 .growth-line-shadow {
-  stroke: color-mix(in srgb, var(--primary) 14%, transparent);
-  stroke-width: 6;
+  stroke: color-mix(in srgb, var(--primary) 8%, transparent);
+  stroke-width: 2.8;
 }
 
 .growth-line {
   stroke: var(--primary);
-  stroke-width: 1.9;
+  stroke-width: 0.95;
 }
 
 .growth-guide {
-  stroke: color-mix(in srgb, var(--primary) 24%, transparent);
+  stroke: color-mix(in srgb, var(--primary) 16%, transparent);
   stroke-dasharray: 2 3;
-  stroke-width: 0.45;
+  stroke-width: 0.28;
 }
 
 .growth-dot {
   fill: var(--surface);
   stroke: var(--primary);
-  stroke-width: 1.2;
+  stroke-width: 0.8;
   transition: r 180ms ease, fill 180ms ease;
 }
 
@@ -1206,10 +1223,24 @@
   line-height: 1.08;
 }
 
+.growth-point em {
+  color: var(--ink);
+  font-size: 0.68rem;
+  font-style: normal;
+  font-weight: 820;
+  letter-spacing: -0.01em;
+}
+
 .growth-point:hover strong,
 .growth-point:focus-visible strong,
 .growth-point.active strong {
   font-size: 0.98rem;
+}
+
+.growth-point:hover em,
+.growth-point:focus-visible em,
+.growth-point.active em {
+  font-size: 0.78rem;
 }
 
 :root[data-theme='dark'] .chris-growth-graph-card {
@@ -1270,10 +1301,20 @@
     font-size: 0.76rem;
   }
 
+  .growth-point em {
+    font-size: 0.62rem;
+  }
+
   .growth-point:hover strong,
   .growth-point:focus-visible strong,
   .growth-point.active strong {
     font-size: 0.88rem;
+  }
+
+  .growth-point:hover em,
+  .growth-point:focus-visible em,
+  .growth-point.active em {
+    font-size: 0.7rem;
   }
 }
 

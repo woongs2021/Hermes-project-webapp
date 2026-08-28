@@ -330,54 +330,70 @@ function ArchitectureSpreadPanel() {
 
 const chrisGrowthGraphPoints = [
   {
-    id: 'research-depth',
-    time: '석사 연구',
-    growth: 32,
-    x: 10,
-    y: 70,
-    question: '어떤 근거가 Chris의 판단을 더 단단하게 만드나요?',
-    label: 'Research depth',
-    detail: '연구 방법론과 논문 읽기를 통해 감각이 아니라 근거로 디자인 언어를 세우기 시작한 구간입니다.',
+    id: 'role-ontology',
+    time: 'Jul 20–21',
+    growth: 30,
+    x: 9,
+    y: 71,
+    metric: '2 Son questions',
+    question: 'Hermes 팀의 역할이 나뉘면서 Chris가 직접 더 잘하게 된 판단은 무엇인가요?',
+    label: 'Role ontology',
+    detail: 'Son의 실제 growth log는 “AI 에이전트 소개”가 아니라 역할 → 맡기는 일 → Chris가 더 잘하게 된 판단으로 시작합니다. 그래서 첫 점은 팀 구조 자체보다, Chris가 책임 있는 OBD 판단자로 남는 역할 온톨로지입니다.',
   },
   {
-    id: 'brand-system',
-    time: 'LG BX',
-    growth: 48,
-    x: 28,
+    id: 'public-decision-log',
+    time: 'Jul 22–23',
+    growth: 47,
+    x: 26,
     y: 58,
-    question: '브랜드 경험은 어떻게 시스템 언어가 되나요?',
-    label: 'Brand system',
-    detail: '브랜드, 시각 언어, 경험 일관성을 다루며 디자인을 비즈니스 맥락으로 번역하는 감각이 쌓였습니다.',
+    metric: '2 decision frames',
+    question: '공개해도 되는 학습과 공개하지 말아야 할 내부 맥락은 각각 무엇인가요?',
+    label: 'Public-safe decision log',
+    detail: 'Son은 실제 로그에서 상황을 추상화하고, 역할 개입·선택지 축소·Chris의 판단 기준·다음 신호만 남기는 공개 안전 decision log를 반복했습니다. 이 구간은 private 원문을 숨기면서도 판단 과정을 제품 데이터로 남기는 단계입니다.',
   },
   {
-    id: 'product-reality',
-    time: 'Samsung MX',
-    growth: 64,
-    x: 46,
-    y: 45,
-    question: '미래 모바일 경험은 어떤 현실 조건 위에서 작동해야 하나요?',
-    label: 'Product reality',
-    detail: 'One UI와 모바일 제품 현실을 통해 좋은 아이디어를 실제 사용자 경험과 실행 조건으로 연결하는 힘이 커졌습니다.',
+    id: 'artifact-relationship',
+    time: 'Jul 23',
+    growth: 58,
+    x: 42,
+    y: 49,
+    metric: 'work-state map',
+    question: '기능명이 아니라 작업 상태, 판단 지점, 아티팩트 관계로 다시 그린다면 무엇을 보존해야 하나요?',
+    label: 'Artifact relationship',
+    detail: 'Son의 실제 프레임은 OBD를 기능 목록이 아니라 work state → judgment point → artifact relationship → reason to return으로 봅니다. 그래서 그래프는 경력 이력보다, 다시 돌아와 판단할 수 있게 만드는 객체 관계로 전환됩니다.',
   },
   {
-    id: 'ai-ux',
-    time: 'AI UX 탐구',
-    growth: 78,
-    x: 66,
-    y: 31,
-    question: 'AI가 똑똑해 보이는 것보다 사용자가 덜 헤매게 만드는 구조는 무엇인가요?',
-    label: 'AI UX lens',
-    detail: '정서적 안정감, 설명 가능성, 기억, 조율권을 중심으로 인간적인 AI 경험의 기준을 만들고 있습니다.',
+    id: 'delegation-boundary',
+    time: 'Jul 24–26',
+    growth: 72,
+    x: 59,
+    y: 35,
+    metric: '3 trust frames',
+    question: '행동, 예상 결과, 위험, 사용자 허락, 되돌리기, 책임 주체 중 무엇을 연결해야 하나요?',
+    label: 'Delegation boundary',
+    detail: '7월 24–26일 Son 질문은 delegated action, risk, rollback, accountable owner, agent authority, stop condition, anti-action constraint로 이어졌습니다. 성장선이 올라가는 이유는 자동화가 늘어서가 아니라, 위임의 경계와 회복 경로가 보이기 시작했기 때문입니다.',
   },
   {
-    id: 'obd-loop',
-    time: 'OBD 루프',
-    growth: 92,
-    x: 88,
-    y: 17,
-    question: '쌓아온 경험을 어떻게 Chris만의 판단 시스템으로 바꿀 수 있나요?',
-    label: 'OBD operating rhythm',
-    detail: 'Son의 질문이 Chris의 성장 단서를 다시 묶고, Karina Hermes Agent Team이 그것을 판단 가능한 루프로 축적합니다.',
+    id: 'control-adoption',
+    time: 'Jul 27–29',
+    growth: 84,
+    x: 75,
+    y: 24,
+    metric: '3 control maps',
+    question: 'AI 판단 지점과 사용자의 제어·수정·이의제기/중단 지점을 어떻게 나눌 것인가요?',
+    label: 'Control & adoption map',
+    detail: 'Son의 실제 데이터는 사용자 제어, 수정 가능 지점, 중단/이의제기 경로, 인간 책임, 조직 승인 신호를 계속 묶었습니다. 이 점은 Hermes가 “더 자율적인 AI”가 아니라 조직이 안심하고 채택할 수 있는 판단 구조로 성숙하는 구간입니다.',
+  },
+  {
+    id: 'evaluation-validity',
+    time: 'Jul 30',
+    growth: 94,
+    x: 91,
+    y: 13,
+    metric: 'validity boundary',
+    question: 'LLM/AI로 빠르게 시뮬레이션할 것, 실제 사람에게 검증할 것, 불확실하면 멈춰야 할 것은 무엇인가요?',
+    label: 'Evaluation validity',
+    detail: '마지막 점은 Son의 7월 30일 실제 질문에서 온 빠른 합성 평가 / 실제 인간 검증 / 불확실성 표시 / 멈춤 기준 / 책임 주체입니다. Chris의 OBD 성장은 속도보다 검증 가능성과 멈출 줄 아는 판단 구조로 읽히게 됩니다.',
   },
 ]
 
@@ -389,11 +405,17 @@ function ChrisGrowthGraphPanel() {
   return (
     <section className="content-card chris-growth-graph-card" aria-label="Son questions and Chris growth graph">
       <div className="growth-graph-copy">
-        <p className="card-kicker">Son questions · Chris growth graph</p>
-        <h3>Son이 던진 질문이 쌓아온 성장선을 다시 보이게 합니다</h3>
+        <p className="card-kicker">Son growth data · OBD maturity graph</p>
+        <h3>Son의 실제 질문 로그가 Chris의 OBD 성장선을 다시 그립니다</h3>
         <p>
-          y축은 성장의 깊이, x축은 시간의 흐름입니다. 각 포인트를 클릭하거나 호버하면 Son의 질문과 그 시점의 성장 의미가 크게 열립니다.
+          y축은 Son이 반복해서 본 OBD 운영 성숙도, x축은 2026년 7월 20일부터 30일까지의 실제 Son growth loop 흐름입니다. 각 포인트는 역할 온톨로지, 공개 안전 판단 로그, 아티팩트 관계, 위임 경계, 사용자 제어, 검증 유효성으로 이어진 Son의 실제 질문·insight 데이터에서 가져왔습니다.
         </p>
+        <div className="growth-data-strip" aria-label="Son growth loop data summary">
+          <span>11 Son growth entries</span>
+          <span>11 daily logs</span>
+          <span>8 Son prep files</span>
+          <span>10 Muyeol guardrails</span>
+        </div>
       </div>
 
       <div className="growth-graph-stage" aria-label="Interactive growth chart with time on x axis and growth on y axis">
@@ -426,6 +448,7 @@ function ChrisGrowthGraphPanel() {
             >
               <span>{point.time}</span>
               <strong>{point.label}</strong>
+              <em>{point.metric}</em>
             </button>
           ))}
         </div>
@@ -435,7 +458,7 @@ function ChrisGrowthGraphPanel() {
         <p className="card-kicker">Active question</p>
         <h4>{activePoint.question}</h4>
         <p>{activePoint.detail}</p>
-        <span>Growth index {activePoint.growth}</span>
+        <span>{activePoint.metric} · maturity {activePoint.growth}</span>
       </aside>
     </section>
   )
