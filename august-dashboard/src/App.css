@@ -1041,7 +1041,7 @@
 .chris-growth-graph-card {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: minmax(230px, 0.34fr) minmax(0, 1fr) minmax(230px, 0.34fr);
+  grid-template-columns: 1fr;
   gap: clamp(16px, 2vw, 26px);
   align-items: stretch;
   overflow: hidden;
@@ -1146,7 +1146,7 @@
 
 .growth-axis {
   stroke: var(--muted-ink);
-  stroke-width: 0.45;
+  stroke-width: 1.5px;
   stroke-linecap: round;
   opacity: 0.42;
 }
@@ -1167,18 +1167,18 @@
 
 .growth-line-shadow {
   stroke: color-mix(in srgb, var(--primary) 8%, transparent);
-  stroke-width: 2.8;
+  stroke-width: 1.5px;
 }
 
 .growth-line {
   stroke: var(--primary);
-  stroke-width: 0.95;
+  stroke-width: 1.5px;
 }
 
 .growth-guide {
   stroke: color-mix(in srgb, var(--primary) 16%, transparent);
   stroke-dasharray: 2 3;
-  stroke-width: 0.28;
+  stroke-width: 1.5px;
 }
 
 .growth-dot {
@@ -2780,6 +2780,10 @@
     margin: 16px auto;
   }
 
+  .topbar {
+    top: 0;
+  }
+
   .app-sidebar {
     position: static;
     min-height: auto;
@@ -2857,9 +2861,21 @@
 
 @media (max-width: 560px) {
   .app-shell {
-    width: min(100% - 20px, 420px);
-    min-height: calc(100svh - 20px);
-    margin: 10px auto;
+    width: 100%;
+    min-height: 100svh;
+    margin: 0 auto;
+  }
+
+  .topbar {
+    top: 0;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0 0 24px 24px;
+  }
+
+  .workspace {
+    padding-inline: 10px;
   }
 
   .app-sidebar,
@@ -6235,4 +6251,36 @@
 :root[data-theme='dark'] .monthly-metric h3,
 :root[data-theme='dark'] .monthly-shortlist-card .shortlist-row > span {
   color: var(--primary);
+}
+
+/* Follow-up 34: calmer OBD graph and mobile topbar edge alignment */
+.chris-growth-graph-card {
+  grid-template-columns: 1fr;
+}
+
+.growth-axis,
+.growth-line-shadow,
+.growth-line,
+.growth-guide {
+  stroke-width: 1.5px;
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    width: 100%;
+    min-height: 100svh;
+    margin: 0 auto;
+  }
+
+  .topbar {
+    top: 0;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0 0 24px 24px;
+  }
+
+  .workspace {
+    padding-inline: 10px;
+  }
 }
