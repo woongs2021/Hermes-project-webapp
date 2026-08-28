@@ -4,6 +4,9 @@ import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type Rese
 import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, MuyeolValidationPanel, ObdGrowthTimelinePanel } from './extendedPanels'
 import './App.css'
 
+const publicAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
+const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
+
 type TabId = 'home' | 'obd' | 'visuals' | 'research' | 'report'
 type ThemeMode = 'light' | 'dark'
 type ObdSubTabId = 'growth' | 'graph' | 'about'
@@ -161,42 +164,42 @@ const agentProfiles: AgentProfile[] = [
   {
     name: 'Karina',
     title: 'Coordination Lead · CDO Partner',
-    faceSrc: '/assets/team/karina_profile.jpg',
+    faceSrc: publicAssetPath('/assets/team/karina_profile.jpg'),
     summary: 'Chris의 요청을 제품 언어와 실행 순서로 정리하고, Agent Team 전체의 우선순위와 handoff를 조율합니다.',
     handoff: '최종 응답은 Karina가 하나의 명확한 synthesis로 묶어 Chris에게 돌려주는 역할입니다.',
   },
   {
     name: 'Yuna',
     title: 'Research Intelligence',
-    faceSrc: '/assets/team/yuna_profile.jpg',
+    faceSrc: publicAssetPath('/assets/team/yuna_profile.jpg'),
     summary: '논문, 시장, 레퍼런스, 지식 탐색을 맡아 AI UX와 OBD 판단에 필요한 근거를 수집합니다.',
     handoff: 'Faker나 Son이 실행 방향을 잡을 수 있도록 핵심 signal과 source 맥락을 넘깁니다.',
   },
   {
     name: 'Go Youn-jung',
     title: 'Visual / Experience Muse',
-    faceSrc: '/assets/team/goyounjung_profile.jpg',
+    faceSrc: publicAssetPath('/assets/team/goyounjung_profile.jpg'),
     summary: '홈 비주얼, 정서적 톤, 브랜드 감각을 통해 따뜻하고 인간적인 AI UX의 분위기를 구체화합니다.',
     handoff: '승인된 still과 turntable은 public-safe manifest를 통해 Home Visual Archive에 반영됩니다.',
   },
   {
     name: 'Son',
     title: 'Scope / Priority Strategist',
-    faceSrc: '/assets/team/son_profile.jpg',
+    faceSrc: sonProfileImageSrc,
     summary: '범위, 수용 기준, 프로젝트 순서를 정리해 팀이 작은 단위로 끝까지 완료할 수 있게 합니다.',
     handoff: '속도와 품질 사이의 선택지를 분명하게 나누고 다음 실행 단위를 제안합니다.',
   },
   {
     name: 'Faker',
     title: 'Coding / Automation Builder',
-    faceSrc: '/assets/team/faker_profile.jpg',
+    faceSrc: publicAssetPath('/assets/team/faker_profile.jpg'),
     summary: '프로토타입, 스크립트, 웹 대시보드, GitHub Pages 배포처럼 실제 작동하는 산출물을 구현합니다.',
     handoff: '빌드, lint, manifest readback, Pages smoke처럼 실행 근거를 남겨 Karina가 신뢰 있게 종합할 수 있게 합니다.',
   },
   {
     name: 'Muyeol',
     title: 'QA / Risk Validation',
-    faceSrc: '/assets/team/muyeol_profile.jpg',
+    faceSrc: publicAssetPath('/assets/team/muyeol_profile.jpg'),
     summary: '보안, 프라이버시, public-safe 경계, 최종 품질 리스크를 검토하는 validation 담당입니다.',
     handoff: '비밀값 노출, private source leakage, UI/데이터 불일치를 점검한 뒤 final go/no-go를 제공합니다.',
   },
@@ -432,7 +435,7 @@ function ChrisGrowthGraphPanel() {
     <section className="content-card chris-growth-graph-card" aria-label="Son questions and OBD structure graph">
       <div className="growth-graph-copy">
         <div className="growth-title-row">
-          <img src="/assets/team/son_profile.jpg" alt="Son profile" loading="eager" decoding="async" width="52" height="52" />
+          <img src={sonProfileImageSrc} alt="Son profile" loading="eager" decoding="async" width="52" height="52" />
           <div>
             <p className="card-kicker">Son question log · OBD structure graph</p>
             <h3>성장 점수가 아니라, Son 질문이 정리한 OBD 구조화 흐름입니다</h3>
@@ -460,7 +463,7 @@ function ChrisGrowthGraphPanel() {
           {chrisGrowthGraphPoints.map((point) => (
             <g key={point.id}>
               <line className="growth-guide" x1={point.x} y1={point.y} x2={point.x} y2="78" />
-              <circle className={point.id === activePoint.id ? 'growth-dot active' : 'growth-dot'} cx={point.x} cy={point.y} r="2.4" />
+              <circle className={point.id === activePoint.id ? 'growth-dot active' : 'growth-dot'} cx={point.x} cy={point.y} r="1.2" />
             </g>
           ))}
         </svg>
@@ -494,7 +497,7 @@ function ChrisGrowthGraphPanel() {
 
       <div className="son-weekly-question-card" aria-label="Weekly Son question list">
         <div className="son-weekly-question-header">
-          <img src="/assets/team/son_profile.jpg" alt="Son profile" loading="lazy" decoding="async" width="44" height="44" />
+          <img src={sonProfileImageSrc} alt="Son profile" loading="lazy" decoding="async" width="44" height="44" />
           <div>
             <p className="card-kicker">Son weekly question archive</p>
             <h4>Son이 실제로 던졌던 주요 질문들</h4>
