@@ -437,12 +437,12 @@ function ChrisGrowthGraphPanel() {
         <div className="growth-title-row">
           <img src={sonProfileImageSrc} alt="Son profile" loading="eager" decoding="async" width="52" height="52" />
           <div>
-            <p className="card-kicker">Son question log · OBD structure graph</p>
-            <h3>성장 점수가 아니라, Son 질문이 정리한 OBD 구조화 흐름입니다</h3>
+            <p className="card-kicker">Son’s strategic questions · OBD operating map</p>
+            <h3>질문이 쌓일수록, OBD는 더 선명한 운영 언어가 됩니다</h3>
           </div>
         </div>
         <p>
-          y축은 Chris의 체감 성장치가 아니라 Son 질문 로그에서 보이는 OBD 질문 구조화 수준입니다. x축은 2026년 7월 20일부터 30일까지의 실제 Son growth loop 흐름이고, 선은 의도적으로 완만하게 조정해 “내가 이렇게 성장했다”가 아니라 “질문 체계가 조금씩 정리됐다”로 읽히게 했습니다.
+          Son의 질문은 Chris의 변화를 점수로 단정하지 않습니다. 대신 2026년 7월 20일부터 30일까지의 실제 growth loop를 따라, 역할 정의에서 공개 안전 판단, 위임 경계, 제어권, 검증 기준까지 OBD가 어떤 운영 언어로 정리되어 왔는지 보여줍니다. 선은 의도적으로 완만하게 두어 “급격한 성장”보다 “질문 체계가 조금씩 선명해지는 과정”으로 읽히게 했습니다.
         </p>
         <div className="growth-data-strip" aria-label="Son growth loop data summary">
           <span>11 Son growth entries</span>
