@@ -454,10 +454,10 @@ function ChrisGrowthGraphPanel() {
 
       <div className="growth-graph-stage" aria-label="Interactive graph with Son question structure on y axis and actual log flow on x axis">
         <svg className="growth-graph-svg" viewBox="0 0 100 86" role="img" aria-label="OBD structure graph: actual Son logs move left to right and structure level rises gently">
-          <line className="growth-axis growth-axis-y" x1="7" y1="78" x2="7" y2="10" />
-          <line className="growth-axis growth-axis-x" x1="7" y1="78" x2="94" y2="78" />
-          <text className="growth-axis-label y" x="3" y="9">질문 구조화</text>
-          <text className="growth-axis-label x" x="74" y="84">Son 실제 로그 흐름</text>
+          <line className="growth-axis growth-axis-y" x1="5" y1="78" x2="5" y2="10" />
+          <line className="growth-axis growth-axis-x" x1="5" y1="78" x2="97" y2="78" />
+          <text className="growth-axis-label y" x="1" y="9">질문 구조화</text>
+          <text className="growth-axis-label x" x="76" y="84">Son 실제 로그 흐름</text>
           <polyline className="growth-line-shadow" points={polylinePoints} />
           <polyline className="growth-line" points={polylinePoints} />
           {chrisGrowthGraphPoints.map((point) => (
