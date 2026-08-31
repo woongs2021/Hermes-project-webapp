@@ -675,8 +675,10 @@
 
 .research-detail-header h3 {
   margin-top: 8px;
-  font-size: clamp(1.35rem, 2.3vw, 2.2rem);
-  letter-spacing: -0.05em;
+  font-size: clamp(1.06rem, 1.55vw, 1.55rem);
+  font-weight: 460;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
 }
 
 .research-detail-layout {
@@ -725,7 +727,7 @@
 
 .validated-detail-synthesis {
   display: grid;
-  gap: 12px;
+  gap: 16px;
   border: 1px solid color-mix(in srgb, var(--primary) 24%, var(--stroke));
   border-radius: 22px;
   padding: 18px;
@@ -737,7 +739,7 @@
 
 .validated-detail-synthesis div {
   display: grid;
-  gap: 10px;
+  gap: 14px;
 }
 
 .validated-detail-synthesis strong {
@@ -748,12 +750,12 @@
 .validated-detail-synthesis p {
   color: var(--ink);
   font-size: clamp(0.88rem, 0.95vw, 0.98rem);
-  line-height: 1.78;
+  line-height: 1.92;
 }
 
 .validated-detail-synthesis .research-detail-paragraphs {
   display: grid;
-  gap: 14px;
+  gap: 20px;
 }
 
 .research-detail-paragraphs .research-detail-segments {
@@ -765,7 +767,7 @@
   margin: 0;
   color: var(--ink);
   font-size: inherit;
-  font-weight: 760;
+  font-weight: 520;
   letter-spacing: inherit;
   line-height: inherit;
   text-transform: none;
