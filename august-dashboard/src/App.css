@@ -661,6 +661,10 @@
   background: var(--active-surface-soft);
 }
 
+.research-detail-anchor {
+  scroll-margin-top: 24px;
+}
+
 .research-detail-card {
   display: grid;
   gap: 18px;

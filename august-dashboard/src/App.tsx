@@ -1037,6 +1037,8 @@ function ResearchKanbanPanel({ selectedResearchId }: { selectedResearchId?: stri
   const [laneFilter, setLaneFilter] = useState<ResearchLaneFilter>(getInitialResearchLaneFilter)
   const [researchModalLane, setResearchModalLane] = useState<ResearchLaneFilter | null>(null)
   const [scrollingResearchLane, setScrollingResearchLane] = useState<ResearchBoardItem['lane'] | 'final' | null>(null)
+  const researchDetailRef = useRef<HTMLDivElement | null>(null)
+  const lastMonthlyScrollTargetRef = useRef('')
   const researchScrollTimers = useRef<Partial<Record<ResearchBoardItem['lane'] | 'final', number>>>({})
 
   const handleResearchLaneScroll = (lane: ResearchBoardItem['lane'] | 'final') => {
@@ -1149,6 +1151,17 @@ function ResearchKanbanPanel({ selectedResearchId }: { selectedResearchId?: stri
     return laneMatches && (!normalizedQuery || searchableText.includes(normalizedQuery))
   })
   const selectedItem = filteredItems.find((item) => item.id === selectedId) ?? getTopResearchItemForCurrentWeek(filteredItems)
+
+  useEffect(() => {
+    if (!selectedResearchId || selectedItem?.id !== selectedResearchId) return
+    if (lastMonthlyScrollTargetRef.current === selectedResearchId) return
+
+    lastMonthlyScrollTargetRef.current = selectedResearchId
+    window.requestAnimationFrame(() => {
+      researchDetailRef.current?.scrollIntoView({ block: 'start', behavior: 'smooth' })
+    })
+  }, [selectedItem?.id, selectedResearchId])
+
   const validatedItemsById = new Map(filteredItems
     .filter((item) => item.status === 'friday_final_pick')
     .map((item) => [item.id, item]))
@@ -1310,17 +1323,19 @@ function ResearchKanbanPanel({ selectedResearchId }: { selectedResearchId?: stri
         </div>
       </section>
 
-      {selectedItem ? <ResearchDetailPanel item={selectedItem} generatedAt={board.generatedAt} policy={board.sourcePolicy} /> : (
-        <article className="content-card research-detail-card">
-          <p className="card-kicker">{board.items.length > 0 ? 'No matching result' : 'Manifest pending'}</p>
-          <h3>{board.items.length > 0 ? '검색 조건에 맞는 카드가 없습니다' : 'research-board.json을 기다리는 중'}</h3>
-          <p>
-            {board.items.length > 0
-              ? '검색어를 줄이거나 All lanes로 되돌리면 public-safe 리서치 후보를 다시 볼 수 있습니다.'
-              : '생성된 public-safe research manifest가 없으면 원본 작업 로그를 직접 읽지 않고 fallback 상태로 멈춥니다.'}
-          </p>
-        </article>
-      )}
+      <div ref={researchDetailRef} className="research-detail-anchor">
+        {selectedItem ? <ResearchDetailPanel item={selectedItem} generatedAt={board.generatedAt} policy={board.sourcePolicy} /> : (
+          <article className="content-card research-detail-card">
+            <p className="card-kicker">{board.items.length > 0 ? 'No matching result' : 'Manifest pending'}</p>
+            <h3>{board.items.length > 0 ? '검색 조건에 맞는 카드가 없습니다' : 'research-board.json을 기다리는 중'}</h3>
+            <p>
+              {board.items.length > 0
+                ? '검색어를 줄이거나 All lanes로 되돌리면 public-safe 리서치 후보를 다시 볼 수 있습니다.'
+                : '생성된 public-safe research manifest가 없으면 원본 작업 로그를 직접 읽지 않고 fallback 상태로 멈춥니다.'}
+            </p>
+          </article>
+        )}
+      </div>
 
       <section className="research-kanban" aria-label="Yuna and Go Youn-jung research lanes">
         {lanes.map((lane) => {
@@ -1783,9 +1798,6 @@ function App() {
     setSelectedResearchIdFromMonthly(itemId)
     setActiveTab(researchTab)
     window.history.replaceState(null, '', `#${researchTab.id}`)
-    window.requestAnimationFrame(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-    })
   }
 
   function toggleThemeMode() {
