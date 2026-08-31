@@ -555,6 +555,17 @@ function ChrisIntroPanel() {
         </div>
       </article>
 
+      <figure className="content-card obd-definition-image-card">
+        <img
+          src={publicAssetPath('/assets/obd/obd-definition-threshold.jpg')}
+          alt="Dark abstract threshold landscape for OBD definition"
+          width="1280"
+          height="674"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+
       <article className="content-card profile-statement-card profile-why-card">
         <p className="card-kicker">Why this loop exists</p>
         <h3>OBD는 크리스가 이미 갖고 있는 직함이 아니라, Karina Hermes Agent Team이 함께 만들어가는 역할입니다</h3>
