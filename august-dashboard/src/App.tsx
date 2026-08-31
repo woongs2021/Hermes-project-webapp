@@ -453,7 +453,7 @@ function ChrisGrowthGraphPanel() {
       </div>
 
       <div className="growth-graph-stage" aria-label="Interactive graph with Son question structure on y axis and actual log flow on x axis">
-        <svg className="growth-graph-svg" viewBox="0 0 100 86" role="img" aria-label="OBD structure graph: actual Son logs move left to right and structure level rises gently">
+        <svg className="growth-graph-svg" viewBox="0 0 100 86" preserveAspectRatio="none" role="img" aria-label="OBD structure graph: actual Son logs move left to right and structure level rises gently">
           <line className="growth-axis growth-axis-y" x1="5" y1="78" x2="5" y2="10" />
           <line className="growth-axis growth-axis-x" x1="5" y1="78" x2="97" y2="78" />
           <text className="growth-axis-label y" x="1" y="9">질문 구조화</text>

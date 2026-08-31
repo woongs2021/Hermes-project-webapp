@@ -1162,9 +1162,9 @@
 
 .growth-axis {
   stroke: var(--muted-ink);
-  stroke-width: 0.5px;
+  stroke-width: 0.25px;
   stroke-linecap: round;
-  opacity: 0.42;
+  opacity: 0.28;
 }
 
 .growth-axis-label {
@@ -1183,18 +1183,21 @@
 
 .growth-line-shadow {
   stroke: color-mix(in srgb, var(--primary) 8%, transparent);
-  stroke-width: 0.5px;
+  stroke-width: 0.25px;
+  opacity: 0.32;
 }
 
 .growth-line {
   stroke: var(--primary);
-  stroke-width: 0.5px;
+  stroke-width: 0.25px;
+  opacity: 0.72;
 }
 
 .growth-guide {
-  stroke: color-mix(in srgb, var(--primary) 16%, transparent);
+  stroke: color-mix(in srgb, var(--primary) 12%, transparent);
   stroke-dasharray: 2 3;
-  stroke-width: 0.5px;
+  stroke-width: 0.25px;
+  opacity: 0.48;
 }
 
 .growth-dot {
