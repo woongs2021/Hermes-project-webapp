@@ -1250,6 +1250,7 @@
 .growth-point-layer {
   position: absolute;
   inset: var(--growth-graph-inset);
+  --growth-point-card-offset: clamp(60px, 5vw, 76px);
   z-index: 2;
 }
 
@@ -1266,7 +1267,7 @@
   text-align: left;
   box-shadow: 0 8px 20px color-mix(in srgb, var(--ink) 7%, transparent);
   cursor: pointer;
-  transform: translate(-50%, -50%) scale(0.92);
+  transform: translate(-50%, calc(-50% - var(--growth-point-card-offset))) scale(0.92);
   transform-origin: center;
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
 }
@@ -1279,7 +1280,7 @@
   background: var(--surface);
   box-shadow: 0 16px 34px color-mix(in srgb, var(--primary) 18%, transparent);
   outline: none;
-  transform: translate(-50%, -50%) scale(1.14);
+  transform: translate(-50%, calc(-50% - var(--growth-point-card-offset))) scale(1.14);
 }
 
 .growth-point span {
@@ -1465,16 +1466,20 @@
     overflow: visible;
   }
 
+  .growth-point-layer {
+    --growth-point-card-offset: clamp(52px, 12vw, 58px);
+  }
+
   .growth-point {
     max-width: 128px;
     padding: 7px 8px;
-    transform: translate(-50%, -50%) scale(0.86);
+    transform: translate(-50%, calc(-50% - var(--growth-point-card-offset))) scale(0.86);
   }
 
   .growth-point:hover,
   .growth-point:focus-visible,
   .growth-point.active {
-    transform: translate(-50%, -50%) scale(1.06);
+    transform: translate(-50%, calc(-50% - var(--growth-point-card-offset))) scale(1.06);
   }
 
   .growth-point strong {
