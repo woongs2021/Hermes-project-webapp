@@ -434,6 +434,17 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
         </p>
       </article>
 
+      <figure className="content-card monthly-synthesis-image-card">
+        <img
+          src={`${import.meta.env.BASE_URL}assets/monthly/monthly-synthesis-monolith.jpg`}
+          alt="White monolith landscape for monthly synthesis"
+          width="1280"
+          height="549"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+
       <section className="monthly-metric-grid" aria-label="Monthly research metrics">
         <article className="metric-card monthly-metric">
           <p className="card-kicker">Total papers</p>

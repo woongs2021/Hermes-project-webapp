@@ -1043,7 +1043,8 @@
 }
 
 .obd-definition-image-card,
-.research-loop-image-card {
+.research-loop-image-card,
+.monthly-synthesis-image-card {
   grid-column: 1 / -1;
   overflow: hidden;
   padding: 0;
@@ -1052,7 +1053,8 @@
 }
 
 .obd-definition-image-card img,
-.research-loop-image-card img {
+.research-loop-image-card img,
+.monthly-synthesis-image-card img {
   display: block;
   width: 100%;
   height: 100%;
@@ -2872,7 +2874,8 @@
 
 @media (max-width: 900px) {
   .obd-definition-image-card,
-  .research-loop-image-card {
+  .research-loop-image-card,
+  .monthly-synthesis-image-card {
     padding: 0;
   }
 
@@ -2993,7 +2996,8 @@
   }
 
   .obd-definition-image-card,
-  .research-loop-image-card {
+  .research-loop-image-card,
+  .monthly-synthesis-image-card {
     padding: 0;
   }
 
