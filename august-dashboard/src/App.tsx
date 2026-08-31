@@ -112,12 +112,12 @@ const obdSubTabs: { id: ObdSubTabId; label: string; eyebrow: string; description
 ]
 
 function getInitialThemeMode(): ThemeMode {
-  if (typeof window === 'undefined') return 'light'
+  if (typeof window === 'undefined') return 'dark'
 
   const savedTheme = window.localStorage.getItem('august-dashboard-theme')
   if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme
 
-  return 'light'
+  return 'dark'
 }
 
 type ResearchLaneFilter = (typeof researchLaneFilters)[number]
@@ -1158,7 +1158,9 @@ function ResearchKanbanPanel({ selectedResearchId }: { selectedResearchId?: stri
 
     lastMonthlyScrollTargetRef.current = selectedResearchId
     window.requestAnimationFrame(() => {
-      researchDetailRef.current?.scrollIntoView({ block: 'start', behavior: 'smooth' })
+      const detailTop = researchDetailRef.current?.getBoundingClientRect().top ?? 0
+      const targetY = Math.max(window.scrollY + detailTop - 96, 0)
+      window.scrollTo({ top: targetY, left: 0, behavior: 'smooth' })
     })
   }, [selectedItem?.id, selectedResearchId])
 
@@ -1789,6 +1791,7 @@ function App() {
   }, [themeMode])
 
   function selectTab(tab: Tab) {
+    setSelectedResearchIdFromMonthly('')
     setActiveTab(tab)
     window.history.replaceState(null, '', `#${tab.id}`)
   }
