@@ -456,17 +456,29 @@ function ChrisGrowthGraphPanel() {
         <svg className="growth-graph-svg" viewBox="0 0 100 86" preserveAspectRatio="none" role="img" aria-label="OBD structure graph: actual Son logs move left to right and structure level rises gently">
           <line className="growth-axis growth-axis-y" x1="5" y1="78" x2="5" y2="10" />
           <line className="growth-axis growth-axis-x" x1="5" y1="78" x2="97" y2="78" />
-          <text className="growth-axis-label y" x="1" y="9">질문 구조화</text>
-          <text className="growth-axis-label x" x="76" y="84">Son 실제 로그 흐름</text>
           <polyline className="growth-line-shadow" points={polylinePoints} />
           <polyline className="growth-line" points={polylinePoints} />
           {chrisGrowthGraphPoints.map((point) => (
             <g key={point.id}>
               <line className="growth-guide" x1={point.x} y1={point.y} x2={point.x} y2="78" />
-              <circle className={point.id === activePoint.id ? 'growth-dot active' : 'growth-dot'} cx={point.x} cy={point.y} r="1.2" />
             </g>
           ))}
         </svg>
+
+        <div className="growth-axis-label-layer" aria-hidden="true">
+          <span className="growth-axis-label y">질문 구조화</span>
+          <span className="growth-axis-label x">Son 실제 로그 흐름</span>
+        </div>
+
+        <div className="growth-dot-layer" aria-hidden="true">
+          {chrisGrowthGraphPoints.map((point) => (
+            <span
+              className={point.id === activePoint.id ? 'growth-dot active' : 'growth-dot'}
+              key={`growth-dot-${point.id}`}
+              style={{ left: `${point.x}%`, top: `${point.y}%` }}
+            />
+          ))}
+        </div>
 
         <div className="growth-point-layer" aria-label="Interactive OBD structure milestones">
           {chrisGrowthGraphPoints.map((point) => (
