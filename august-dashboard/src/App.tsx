@@ -1231,6 +1231,17 @@ function ResearchKanbanPanel({ selectedResearchId }: { selectedResearchId?: stri
         </div>
       </article>
 
+      <figure className="content-card research-loop-image-card">
+        <img
+          src={publicAssetPath('/assets/research/research-loop-archive-pool.jpg')}
+          alt="Blue night pool landscape for research loop archive"
+          width="1280"
+          height="674"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+
       <section className="content-card research-filter-card" aria-label="Research board search and lane filters">
         <label className="research-search-field">
           <span>Search papers, sources, weeks, relevance notes</span>

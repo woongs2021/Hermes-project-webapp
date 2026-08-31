@@ -1042,7 +1042,8 @@
   grid-column: 1 / -1;
 }
 
-.obd-definition-image-card {
+.obd-definition-image-card,
+.research-loop-image-card {
   grid-column: 1 / -1;
   overflow: hidden;
   padding: 0;
@@ -1050,7 +1051,8 @@
   background: #020507;
 }
 
-.obd-definition-image-card img {
+.obd-definition-image-card img,
+.research-loop-image-card img {
   display: block;
   width: 100%;
   height: 100%;
@@ -2869,7 +2871,8 @@
 }
 
 @media (max-width: 900px) {
-  .obd-definition-image-card {
+  .obd-definition-image-card,
+  .research-loop-image-card {
     padding: 0;
   }
 
@@ -2989,7 +2992,8 @@
     padding: 20px;
   }
 
-  .obd-definition-image-card {
+  .obd-definition-image-card,
+  .research-loop-image-card {
     padding: 0;
   }
 
