@@ -1234,9 +1234,9 @@ function ResearchKanbanPanel({ selectedResearchId }: { selectedResearchId?: stri
       <figure className="content-card research-loop-image-card">
         <img
           src={publicAssetPath('/assets/research/research-loop-archive-pool.jpg')}
-          alt="Blue night pool landscape for research loop archive"
+          alt="Dark threshold corridor landscape for research loop archive"
           width="1280"
-          height="674"
+          height="640"
           loading="eager"
           decoding="async"
         />
