@@ -386,7 +386,7 @@ export function ObdGrowthTimelinePanel() {
   )
 }
 
-export function MonthlyResearchSynthesisPanel() {
+export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSelectResearchItem?: (itemId: string) => void } = {}) {
   const { researchBoard } = useDashboardSources()
 
   const monthly = useMemo(() => {
@@ -472,13 +472,19 @@ export function MonthlyResearchSynthesisPanel() {
         <h3>점수 기준 상위 후보</h3>
         <div className="shortlist-stack" aria-label="Monthly shortlist papers">
           {monthly.topItems.map((item) => (
-            <div className="shortlist-row" key={item.id}>
+            <button
+              className="shortlist-row"
+              key={item.id}
+              type="button"
+              aria-label={`Research 탭에서 ${item.title} 상세 보기`}
+              onClick={() => onSelectResearchItem?.(item.id)}
+            >
               <span>{item.score.toFixed(1)}</span>
               <div>
                 <strong>{item.title}</strong>
                 <p>{laneLabel(item.lane)} · {item.dateKst} · {item.summary}</p>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </article>

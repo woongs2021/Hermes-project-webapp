@@ -1028,7 +1028,7 @@ function sourceAccessLabel(item: ResearchBoardItem) {
   return 'source noted'
 }
 
-function ResearchKanbanPanel() {
+function ResearchKanbanPanel({ selectedResearchId }: { selectedResearchId?: string }) {
   const [board, setBoard] = useState<ResearchBoard>(fallbackResearchBoard)
   const [selectedId, setSelectedId] = useState('')
   const [validatedStackOrder, setValidatedStackOrder] = useState<string[]>([])
@@ -1114,6 +1114,16 @@ function ResearchKanbanPanel() {
         : nextOrder
     })
   }, [board.items])
+
+  useEffect(() => {
+    if (!selectedResearchId) return
+    const targetItem = board.items.find((item) => item.id === selectedResearchId)
+    if (!targetItem) return
+
+    setQuery('')
+    setLaneFilter('all')
+    setSelectedId(targetItem.id)
+  }, [board.items, selectedResearchId])
 
   const normalizedQuery = query.trim().toLowerCase()
   const filteredItems = board.items.filter((item) => {
@@ -1754,6 +1764,7 @@ function App() {
   })
   const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialThemeMode)
   const [isMenuOpen, setIsMenuOpen] = useState(true)
+  const [selectedResearchIdFromMonthly, setSelectedResearchIdFromMonthly] = useState('')
   const isDarkMode = themeMode === 'dark'
 
   useEffect(() => {
@@ -1765,6 +1776,16 @@ function App() {
   function selectTab(tab: Tab) {
     setActiveTab(tab)
     window.history.replaceState(null, '', `#${tab.id}`)
+  }
+
+  function openResearchItemFromMonthly(itemId: string) {
+    const researchTab = tabs.find((tab) => tab.id === 'research') ?? tabs[0]
+    setSelectedResearchIdFromMonthly(itemId)
+    setActiveTab(researchTab)
+    window.history.replaceState(null, '', `#${researchTab.id}`)
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    })
   }
 
   function toggleThemeMode() {
@@ -1850,10 +1871,10 @@ function App() {
         ) : activeTab.id === 'obd' ? (
           <ObdKnowledgeLoopPanel />
         ) : activeTab.id === 'research' ? (
-          <ResearchKanbanPanel />
+          <ResearchKanbanPanel selectedResearchId={selectedResearchIdFromMonthly} />
         ) : activeTab.id === 'report' ? (
           <>
-            <MonthlyResearchSynthesisPanel />
+            <MonthlyResearchSynthesisPanel onSelectResearchItem={openResearchItemFromMonthly} />
             <MuyeolValidationPanel />
           </>
         ) : (

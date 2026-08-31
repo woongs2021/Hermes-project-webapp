@@ -2806,10 +2806,25 @@
   display: grid;
   grid-template-columns: 54px minmax(0, 1fr);
   gap: 12px;
+  width: 100%;
   border: 1px solid var(--stroke);
   border-radius: 16px;
   padding: 13px 14px;
   background: var(--chip-surface);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.shortlist-row:hover,
+.shortlist-row:focus-visible {
+  border-color: color-mix(in srgb, var(--primary) 36%, var(--stroke));
+  background: color-mix(in srgb, var(--primary) 8%, var(--chip-surface));
+  box-shadow: 0 12px 24px color-mix(in srgb, var(--ink) 7%, transparent);
+  outline: none;
+  transform: translateY(-1px);
 }
 
 .shortlist-row strong {
