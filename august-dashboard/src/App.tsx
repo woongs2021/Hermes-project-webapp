@@ -430,6 +430,7 @@ function ChrisGrowthGraphPanel() {
   const [activePointId, setActivePointId] = useState(chrisGrowthGraphPoints.at(-1)?.id ?? '')
   const activePoint = chrisGrowthGraphPoints.find((point) => point.id === activePointId) ?? chrisGrowthGraphPoints.at(-1)!
   const polylinePoints = chrisGrowthGraphPoints.map((point) => `${point.x},${point.y}`).join(' ')
+  const toGraphLayerTop = (y: number) => `${(y / 86) * 100}%`
 
   return (
     <section className="content-card chris-growth-graph-card" aria-label="Son questions and OBD structure graph">
@@ -475,7 +476,7 @@ function ChrisGrowthGraphPanel() {
             <span
               className={point.id === activePoint.id ? 'growth-dot active' : 'growth-dot'}
               key={`growth-dot-${point.id}`}
-              style={{ left: `${point.x}%`, top: `${point.y}%` }}
+              style={{ left: `${point.x}%`, top: toGraphLayerTop(point.y) }}
             />
           ))}
         </div>
@@ -486,7 +487,7 @@ function ChrisGrowthGraphPanel() {
               key={point.id}
               type="button"
               className={point.id === activePoint.id ? 'growth-point active' : 'growth-point'}
-              style={{ left: `${point.x}%`, top: `${point.y}%` }}
+              style={{ left: `${point.x}%`, top: toGraphLayerTop(point.y) }}
               onClick={() => setActivePointId(point.id)}
               onMouseEnter={() => setActivePointId(point.id)}
               onFocus={() => setActivePointId(point.id)}
