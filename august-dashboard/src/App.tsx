@@ -660,6 +660,17 @@ function TeamPanel() {
         </div>
       </article>
 
+      <figure className="content-card team-orchestration-image-card" aria-label="Calm orchestration horizon illustration">
+        <img
+          src={publicAssetPath('/assets/team/team-orchestration-horizon.jpg')}
+          alt="Calm blue horizon with a small sailboat for Karina team orchestration"
+          width="1280"
+          height="640"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+
       <section className="agent-card-grid" aria-label="Agent character profiles">
         {agentProfiles.map((agent) => (
           <article className="content-card agent-profile-card" key={agent.name}>

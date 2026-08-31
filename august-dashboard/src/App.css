@@ -1042,6 +1042,7 @@
   grid-column: 1 / -1;
 }
 
+.team-orchestration-image-card,
 .obd-definition-image-card,
 .research-loop-image-card,
 .monthly-synthesis-image-card {
@@ -1053,6 +1054,7 @@
   background: #020507;
 }
 
+.team-orchestration-image-card img,
 .obd-definition-image-card img,
 .research-loop-image-card img,
 .monthly-synthesis-image-card img {
@@ -2873,6 +2875,7 @@
 }
 
 @media (max-width: 900px) {
+  .team-orchestration-image-card,
   .obd-definition-image-card,
   .research-loop-image-card,
   .monthly-synthesis-image-card {
@@ -2995,6 +2998,7 @@
     padding: 20px;
   }
 
+  .team-orchestration-image-card,
   .obd-definition-image-card,
   .research-loop-image-card,
   .monthly-synthesis-image-card {
