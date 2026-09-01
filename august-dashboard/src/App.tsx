@@ -637,6 +637,32 @@ function ChrisIntroPanel() {
 
       <ChrisGrowthGraphPanel />
 
+      <article className="content-card son-question-formula-card">
+        <p className="card-kicker">Son question analysis · public-safe formula</p>
+        <h3>손의 질문은 Chris의 답변을 6개 판단 신호로 바꿔 그래프에 올립니다</h3>
+        <p>
+          아래 계산식은 실제 답변 원문을 노출하는 수식이 아니라, Son이 답변에서 어떤 신호를 읽고 OBD 그래프 축으로 환산했는지 보여주는
+          공개 가능한 scoring rule입니다. 각 축은 0–5점으로 정규화하고, 최종 그래프에는 축별 평균 신뢰도만 표시합니다.
+        </p>
+        <div className="son-formula-summary" aria-label="Son score normalization formula">
+          <strong>axis score</strong>
+          <span>= Σ(answer signal × weight) ÷ available evidence</span>
+        </div>
+        <div className="son-question-signal-grid" aria-label="Son questions and graph scoring formulas">
+          {sonQuestionSignals.map((signal, index) => (
+            <section className="son-question-signal" key={signal.axis}>
+              <span className="son-question-number">Q{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <p className="son-question-text">{signal.question}</p>
+                <h4>{signal.axis}</h4>
+                <p>{signal.answerSignal}</p>
+                <code>{signal.scoringFormula}</code>
+              </div>
+            </section>
+          ))}
+        </div>
+      </article>
+
       <article className="content-card intro-hero-card">
         <p className="card-kicker">Personal positioning</p>
         <h3>OBD: Becoming an Ontology Business Designer</h3>
@@ -682,32 +708,6 @@ function ChrisIntroPanel() {
         <div className="lens-list" aria-label="Profile keywords">
           {profileLenses.map((lens) => (
             <span key={lens}>{lens}</span>
-          ))}
-        </div>
-      </article>
-
-      <article className="content-card son-question-formula-card">
-        <p className="card-kicker">Son question analysis · public-safe formula</p>
-        <h3>손의 질문은 Chris의 답변을 6개 판단 신호로 바꿔 그래프에 올립니다</h3>
-        <p>
-          아래 계산식은 실제 답변 원문을 노출하는 수식이 아니라, Son이 답변에서 어떤 신호를 읽고 OBD 그래프 축으로 환산했는지 보여주는
-          공개 가능한 scoring rule입니다. 각 축은 0–5점으로 정규화하고, 최종 그래프에는 축별 평균 신뢰도만 표시합니다.
-        </p>
-        <div className="son-formula-summary" aria-label="Son score normalization formula">
-          <strong>axis score</strong>
-          <span>= Σ(answer signal × weight) ÷ available evidence</span>
-        </div>
-        <div className="son-question-signal-grid" aria-label="Son questions and graph scoring formulas">
-          {sonQuestionSignals.map((signal, index) => (
-            <section className="son-question-signal" key={signal.axis}>
-              <span className="son-question-number">Q{String(index + 1).padStart(2, '0')}</span>
-              <div>
-                <p className="son-question-text">{signal.question}</p>
-                <h4>{signal.axis}</h4>
-                <p>{signal.answerSignal}</p>
-                <code>{signal.scoringFormula}</code>
-              </div>
-            </section>
           ))}
         </div>
       </article>
