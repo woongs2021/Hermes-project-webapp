@@ -6533,6 +6533,15 @@
     max-width: none;
   }
 
+  .obd-subtab-intro {
+    box-sizing: border-box;
+    padding-inline: 20px;
+  }
+
+  .obd-subtab-intro p:not(.card-kicker) {
+    max-width: none;
+  }
+
   .topbar .tab-nav:not(.open) {
     display: none;
   }
