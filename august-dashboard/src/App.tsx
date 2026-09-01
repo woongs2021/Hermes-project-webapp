@@ -41,6 +41,13 @@ type ProfileCredential = {
   detail: string
 }
 
+type SonQuestionSignal = {
+  question: string
+  axis: string
+  answerSignal: string
+  scoringFormula: string
+}
+
 type AgentProfile = {
   name: string
   title: string
@@ -158,6 +165,45 @@ const profileLenses = [
   'AI UX · 정서적 안정감 · 인간적인 인터랙션',
   'Research · Awards · IP · Mentoring',
   'Karina Hermes Agent Team이 만들어가는 OBD operating rhythm',
+]
+
+const sonQuestionSignals: SonQuestionSignal[] = [
+  {
+    question: 'Chris가 지금 어떤 역할로 판단하고 싶은가?',
+    axis: 'Role ontology',
+    answerSignal: '답변 안에서 UX, BX, AI UX, 전략, 교육, 리더십이 서로 어떤 관계로 묶이는지 봅니다.',
+    scoringFormula: '역할 명료도 40% + 영역 연결성 35% + 다음 판단 언어 25%',
+  },
+  {
+    question: '이 판단은 어디까지 공개 가능한가?',
+    axis: 'Public-safe decision log',
+    answerSignal: 'private 원문을 드러내지 않고도 남길 수 있는 결정, 근거 수준, 공개 가능한 표현을 분리합니다.',
+    scoringFormula: '공개 가능성 35% + 근거 표시 35% + 민감정보 제거 30%',
+  },
+  {
+    question: '답변이 어떤 산출물과 연결되는가?',
+    axis: 'Artifact relationship',
+    answerSignal: '말로 끝나는 답인지, 카드·그래프·리서치 보드·디자인 프롬프트 같은 화면 산출물로 이어지는지 확인합니다.',
+    scoringFormula: '산출물 연결 40% + 재사용 가능성 30% + 화면화 난이도 역점수 30%',
+  },
+  {
+    question: 'Karina와 팀에게 어디까지 맡길 수 있는가?',
+    axis: 'Delegation boundary',
+    answerSignal: 'Chris가 직접 결정해야 하는 부분과 에이전트가 실행해도 되는 부분이 얼마나 분명한지 읽습니다.',
+    scoringFormula: '결정권 분리 40% + 담당자 명확성 35% + 블로커 가시성 25%',
+  },
+  {
+    question: '이 방향을 누가 받아들이고 어떻게 통제하는가?',
+    axis: 'Control & adoption map',
+    answerSignal: '사용자, 팀, 조직, 외부 공개 맥락에서 누가 이해하고 승인해야 하는지의 흐름을 잡습니다.',
+    scoringFormula: '통제 지점 35% + 채택 대상 35% + 설명 가능성 30%',
+  },
+  {
+    question: '이 판단은 검증 가능한가?',
+    axis: 'Evaluation validity',
+    answerSignal: '좋아 보이는 해석인지, 실제 근거·QA·다음 실험으로 확인 가능한 판단인지 구분합니다.',
+    scoringFormula: '검증 가능성 40% + 반증 가능성 30% + 다음 액션 선명도 30%',
+  },
 ]
 
 const agentProfiles: AgentProfile[] = [
@@ -636,6 +682,32 @@ function ChrisIntroPanel() {
         <div className="lens-list" aria-label="Profile keywords">
           {profileLenses.map((lens) => (
             <span key={lens}>{lens}</span>
+          ))}
+        </div>
+      </article>
+
+      <article className="content-card son-question-formula-card">
+        <p className="card-kicker">Son question analysis · public-safe formula</p>
+        <h3>손의 질문은 Chris의 답변을 6개 판단 신호로 바꿔 그래프에 올립니다</h3>
+        <p>
+          아래 계산식은 실제 답변 원문을 노출하는 수식이 아니라, Son이 답변에서 어떤 신호를 읽고 OBD 그래프 축으로 환산했는지 보여주는
+          공개 가능한 scoring rule입니다. 각 축은 0–5점으로 정규화하고, 최종 그래프에는 축별 평균 신뢰도만 표시합니다.
+        </p>
+        <div className="son-formula-summary" aria-label="Son score normalization formula">
+          <strong>axis score</strong>
+          <span>= Σ(answer signal × weight) ÷ available evidence</span>
+        </div>
+        <div className="son-question-signal-grid" aria-label="Son questions and graph scoring formulas">
+          {sonQuestionSignals.map((signal, index) => (
+            <section className="son-question-signal" key={signal.axis}>
+              <span className="son-question-number">Q{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <p className="son-question-text">{signal.question}</p>
+                <h4>{signal.axis}</h4>
+                <p>{signal.answerSignal}</p>
+                <code>{signal.scoringFormula}</code>
+              </div>
+            </section>
           ))}
         </div>
       </article>
