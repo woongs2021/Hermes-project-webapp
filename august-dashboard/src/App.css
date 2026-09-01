@@ -5281,7 +5281,7 @@
   .theme-icon-button,
   .topbar .brand-block,
   .hamburger-button {
-    margin-top: 0;
+    margin-top: 10px;
   }
 
   .topbar .tab-nav.open,
@@ -5304,7 +5304,7 @@
   .theme-icon-button,
   .topbar .brand-block,
   .hamburger-button {
-    margin-top: 0;
+    margin-top: 10px;
   }
 
   .topbar .tab-nav.open,
