@@ -305,6 +305,17 @@ export function GraphRelationshipPanel() {
         </div>
       </article>
 
+      <figure className="content-card operating-map-image-card">
+        <img
+          src={`${import.meta.env.BASE_URL}assets/obd/operating-map-concrete-frame.jpg`}
+          alt="Concrete interior frame for OBD Operating Map"
+          width="1280"
+          height="640"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+
       <OperatingMapInfographic />
 
       <section className="graph-node-board" aria-label="OBD operating map nodes">
