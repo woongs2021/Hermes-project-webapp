@@ -112,12 +112,12 @@ const obdSubTabs: { id: ObdSubTabId; label: string; eyebrow: string; description
 ]
 
 function getInitialThemeMode(): ThemeMode {
-  if (typeof window === 'undefined') return 'dark'
+  if (typeof window === 'undefined') return 'light'
 
   const savedTheme = window.localStorage.getItem('august-dashboard-theme')
   if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme
 
-  return 'dark'
+  return 'light'
 }
 
 type ResearchLaneFilter = (typeof researchLaneFilters)[number]
