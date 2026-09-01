@@ -1046,6 +1046,7 @@
 
 .team-orchestration-image-card,
 .obd-definition-image-card,
+.signal-loop-image-card,
 .research-loop-image-card,
 .monthly-synthesis-image-card {
   grid-column: 1 / -1;
@@ -1058,6 +1059,7 @@
 
 .team-orchestration-image-card img,
 .obd-definition-image-card img,
+.signal-loop-image-card img,
 .research-loop-image-card img,
 .monthly-synthesis-image-card img {
   display: block;

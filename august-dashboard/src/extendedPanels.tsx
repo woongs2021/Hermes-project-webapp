@@ -367,6 +367,17 @@ export function ObdGrowthTimelinePanel() {
         </div>
       </article>
 
+      <figure className="content-card signal-loop-image-card">
+        <img
+          src={`${import.meta.env.BASE_URL}assets/obd/signal-loop-threshold-line.jpg`}
+          alt="Small dark tree crossing a luminous signal line for OBD Signal Loop"
+          width="1280"
+          height="640"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+
       <SignalLoopInfographic />
 
       <section className="timeline-rail" aria-label="OBD timeline cards">
