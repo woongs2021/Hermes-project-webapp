@@ -5269,7 +5269,7 @@
   .topbar,
   :root[data-theme='dark'] .topbar {
     position: sticky;
-    top: 10px;
+    top: 0;
     right: auto;
     left: auto;
     width: auto;
@@ -5281,7 +5281,7 @@
   .theme-icon-button,
   .topbar .brand-block,
   .hamburger-button {
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   .topbar .tab-nav.open,
@@ -5304,7 +5304,7 @@
   .theme-icon-button,
   .topbar .brand-block,
   .hamburger-button {
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   .topbar .tab-nav.open,
