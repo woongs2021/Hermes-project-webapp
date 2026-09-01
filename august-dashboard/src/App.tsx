@@ -142,6 +142,11 @@ function getInitialResearchLaneFilter(): ResearchLaneFilter {
   return researchLaneFilters.includes(lane as ResearchLaneFilter) ? (lane as ResearchLaneFilter) : 'all'
 }
 
+function getInitialMenuOpen() {
+  if (typeof window === 'undefined') return true
+  return window.matchMedia('(min-width: 561px)').matches
+}
+
 const profileCredentials: ProfileCredential[] = [
   {
     label: 'Current role',
@@ -1885,7 +1890,7 @@ function App() {
     return hashTab ?? tabs[0]
   })
   const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialThemeMode)
-  const [isMenuOpen, setIsMenuOpen] = useState(true)
+  const [isMenuOpen, setIsMenuOpen] = useState(getInitialMenuOpen)
   const [selectedResearchIdFromMonthly, setSelectedResearchIdFromMonthly] = useState('')
   const isDarkMode = themeMode === 'dark'
 
@@ -1898,6 +1903,9 @@ function App() {
   function selectTab(tab: Tab) {
     setSelectedResearchIdFromMonthly('')
     setActiveTab(tab)
+    if (window.matchMedia('(max-width: 560px)').matches) {
+      setIsMenuOpen(false)
+    }
     window.history.replaceState(null, '', `#${tab.id}`)
   }
 

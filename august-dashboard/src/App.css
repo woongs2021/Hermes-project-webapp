@@ -6519,3 +6519,44 @@
     padding-inline: 10px;
   }
 }
+
+/* Mobile-only refinement: align page titles with card body margin and keep tabs inside hamburger */
+@media (max-width: 560px) {
+  .workspace-header {
+    box-sizing: border-box;
+    max-width: none;
+    width: 100%;
+    padding-inline: 20px;
+  }
+
+  .workspace-header p:not(.eyebrow) {
+    max-width: none;
+  }
+
+  .topbar .tab-nav:not(.open) {
+    display: none;
+  }
+
+  .topbar .tab-nav {
+    grid-template-columns: 1fr;
+    max-height: 0;
+    margin-top: 0;
+    border-width: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .topbar .tab-nav.open {
+    display: grid;
+    max-height: 560px;
+    margin-top: 2px;
+    border-width: 1px;
+    padding: 10px;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+}
