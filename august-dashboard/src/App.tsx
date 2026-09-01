@@ -981,6 +981,17 @@ function HomeVisualHeroPanel() {
         </div>
       </section>
 
+      <figure className="content-card visual-archive-image-card">
+        <img
+          src={publicAssetPath('/assets/visuals/visual-archive-camera-object.jpg')}
+          alt="Yellow retro camera object for Visual Archive"
+          width="1280"
+          height="640"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+
       <section className="visual-filmstrip" aria-label="Chronological visual archive quick jump">
         {visualSet.items.map((item, index) => (
           <button
