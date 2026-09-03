@@ -6369,8 +6369,137 @@
 }
 
 :root[data-theme='dark'] .obd-step-card,
-:root[data-theme='dark'] .signal-loop-node {
+:root[data-theme='dark'] .signal-loop-node,
+:root[data-theme='dark'] .signal-loop-detail-card {
   background: color-mix(in srgb, var(--panel-surface) 98%, transparent);
+}
+
+/* Follow-up 32: OBD Signal Loop merged detail cards */
+.signal-loop-card-grid {
+  display: grid;
+  max-width: 920px;
+  gap: 0;
+  align-items: stretch;
+}
+
+.signal-loop-card-step {
+  display: grid;
+  justify-items: stretch;
+}
+
+.signal-loop-detail-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 16px;
+  align-content: start;
+  min-height: 0;
+  border: 1px solid var(--stroke);
+  border-radius: 24px;
+  padding: clamp(16px, 1.8vw, 22px);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--surface) 78%, transparent), transparent 58%),
+    color-mix(in srgb, var(--panel-surface) 96%, transparent);
+  box-shadow: var(--shadow-card);
+}
+
+.signal-loop-card-index {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 10px;
+}
+
+.signal-loop-card-index span {
+  display: inline-grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--primary) 34%, var(--stroke));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary) 9%, var(--surface));
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.signal-loop-card-arrow {
+  display: inline-grid;
+  justify-self: start;
+  width: 54px;
+  height: 42px;
+  place-items: center;
+  color: color-mix(in srgb, var(--primary) 72%, var(--ink));
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.signal-loop-card-copy {
+  display: grid;
+  min-width: 0;
+  gap: 9px;
+}
+
+.signal-loop-card-copy h4 {
+  color: var(--ink);
+  font-size: clamp(1.08rem, 1.6vw, 1.45rem);
+  font-weight: 540;
+  letter-spacing: -0.055em;
+  line-height: 1.05;
+}
+
+.signal-loop-card-copy strong {
+  color: var(--mid);
+  font-size: 0.92rem;
+  line-height: 1.42;
+}
+
+.signal-loop-card-copy p:not(.card-kicker) {
+  color: var(--muted-ink);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.signal-loop-detail-card:nth-child(1) {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--primary) 8%, var(--panel-surface)), var(--panel-surface));
+}
+
+.signal-loop-detail-card:nth-child(2) {
+  background: linear-gradient(180deg, color-mix(in srgb, #8f7aff 10%, var(--panel-surface)), var(--panel-surface));
+}
+
+.signal-loop-detail-card:nth-child(3) {
+  background: linear-gradient(180deg, color-mix(in srgb, #3ea6ff 10%, var(--panel-surface)), var(--panel-surface));
+}
+
+.signal-loop-detail-card:nth-child(4) {
+  background: linear-gradient(180deg, color-mix(in srgb, #48b98f 10%, var(--panel-surface)), var(--panel-surface));
+}
+
+.signal-loop-detail-card:nth-child(5) {
+  background: linear-gradient(180deg, color-mix(in srgb, #f0a73a 10%, var(--panel-surface)), var(--panel-surface));
+}
+
+@media (max-width: 640px) {
+  .signal-loop-card-grid {
+    max-width: none;
+  }
+
+  .signal-loop-detail-card {
+    grid-template-columns: 38px minmax(0, 1fr);
+    border-radius: 22px;
+    padding: 18px;
+  }
+
+  .signal-loop-card-index span,
+  .signal-loop-card-arrow {
+    width: 38px;
+  }
+
+  .signal-loop-card-index span {
+    height: 38px;
+  }
 }
 
 @media (max-width: 640px) {

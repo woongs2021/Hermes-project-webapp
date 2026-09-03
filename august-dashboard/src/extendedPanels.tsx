@@ -228,22 +228,28 @@ const operatingMapInfographicNodes = [
 
 function SignalLoopInfographic() {
   return (
-    <section className="obd-infographic signal-loop-infographic" aria-label="Signal Loop transformation infographic">
+    <section className="obd-infographic signal-loop-infographic" aria-label="Signal Loop five detailed cards">
       <div className="obd-infographic-header">
-        <p className="card-kicker">Signal loop · easy version</p>
+        <p className="card-kicker">Signal loop · source to judgment</p>
         <h3>자료가 Chris의 다음 선택으로 바뀌는 5단계</h3>
-        <p>Signal Loop는 어려운 분석표가 아니라, 흩어진 자료를 모아 “무엇을 결정하면 되는지”까지 정리해 돌려주는 과정입니다.</p>
+        <p>화살표 요약과 상세 설명을 나누지 않고, 각 단계가 무엇을 보고 무엇을 남기는지 한 장의 카드 흐름으로 정리합니다.</p>
       </div>
 
-      <div className="signal-loop-diagram" aria-label="Five-step signal loop">
+      <div className="signal-loop-card-grid" aria-label="Five detailed signal-loop cards">
         {obdMilestones.map((milestone, index) => (
-          <div className="obd-step-with-arrow" key={milestone.number}>
-            <article className="obd-step-card signal-loop-node">
-              <span>{milestone.number}</span>
-              <h4>{milestone.title}</h4>
-              <p>{milestone.output}</p>
+          <div className="signal-loop-card-step" key={milestone.number}>
+            <article className="signal-loop-detail-card">
+              <div className="signal-loop-card-index" aria-hidden="true">
+                <span>{milestone.number}</span>
+              </div>
+              <div className="signal-loop-card-copy">
+                <p className="card-kicker">{milestone.lens}</p>
+                <h4>{milestone.title}</h4>
+                <strong>{milestone.output}</strong>
+                <p>{milestone.detail}</p>
+              </div>
             </article>
-            {index < obdMilestones.length - 1 ? <span className="obd-step-arrow" aria-hidden="true">↓</span> : null}
+            {index < obdMilestones.length - 1 ? <span className="signal-loop-card-arrow" aria-hidden="true">↓</span> : null}
           </div>
         ))}
       </div>
@@ -390,20 +396,6 @@ export function ObdGrowthTimelinePanel() {
       </figure>
 
       <SignalLoopInfographic />
-
-      <section className="timeline-rail" aria-label="OBD timeline cards">
-        {obdMilestones.map((milestone) => (
-          <article className="timeline-card" key={milestone.number}>
-            <span className="timeline-number">{milestone.number}</span>
-            <div>
-              <p className="card-kicker">{milestone.lens}</p>
-              <h3>{milestone.title}</h3>
-              <strong>{milestone.output}</strong>
-              <p>{milestone.detail}</p>
-            </div>
-          </article>
-        ))}
-      </section>
     </div>
   )
 }
