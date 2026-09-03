@@ -6394,11 +6394,12 @@
   gap: 16px;
   align-content: start;
   min-height: 0;
-  border: 1px solid var(--stroke);
+  border: 1px solid color-mix(in srgb, var(--signal-accent, var(--primary)) 38%, var(--stroke));
   border-radius: 24px;
   padding: clamp(16px, 1.8vw, 22px);
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--surface) 78%, transparent), transparent 58%),
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, var(--signal-accent, var(--primary)) 24%, transparent), transparent 34%),
+    linear-gradient(180deg, color-mix(in srgb, var(--signal-accent, var(--primary)) 13%, var(--surface)), transparent 68%),
     color-mix(in srgb, var(--panel-surface) 96%, transparent);
   box-shadow: var(--shadow-card);
 }
@@ -6415,13 +6416,18 @@
   width: 54px;
   height: 54px;
   place-items: center;
-  border: 1px solid color-mix(in srgb, var(--primary) 34%, var(--stroke));
+  border: 1px solid color-mix(in srgb, var(--signal-accent, var(--primary)) 78%, var(--stroke));
   border-radius: 999px;
-  background: color-mix(in srgb, var(--primary) 9%, var(--surface));
-  color: var(--primary);
+  background:
+    radial-gradient(circle at 34% 22%, rgba(255, 255, 255, 0.54), transparent 32%),
+    linear-gradient(135deg, color-mix(in srgb, var(--signal-accent, var(--primary)) 94%, #ffffff), color-mix(in srgb, var(--signal-accent, var(--primary)) 66%, var(--ink)));
+  color: #ffffff;
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.08em;
+  box-shadow:
+    0 14px 28px color-mix(in srgb, var(--signal-accent, var(--primary)) 22%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
 }
 
 .signal-loop-card-arrow {
@@ -6430,8 +6436,9 @@
   width: 54px;
   height: 42px;
   place-items: center;
-  color: color-mix(in srgb, var(--primary) 72%, var(--ink));
+  color: color-mix(in srgb, var(--signal-accent, var(--primary)) 82%, var(--ink));
   font-size: 1.05rem;
+  font-weight: 780;
   line-height: 1;
 }
 
@@ -6461,24 +6468,54 @@
   line-height: 1.55;
 }
 
-.signal-loop-detail-card:nth-child(1) {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--primary) 8%, var(--panel-surface)), var(--panel-surface));
+.signal-loop-card-step:nth-child(1) {
+  --signal-accent: #4065f8;
 }
 
-.signal-loop-detail-card:nth-child(2) {
-  background: linear-gradient(180deg, color-mix(in srgb, #8f7aff 10%, var(--panel-surface)), var(--panel-surface));
+.signal-loop-card-step:nth-child(2) {
+  --signal-accent: #8f63ff;
 }
 
-.signal-loop-detail-card:nth-child(3) {
-  background: linear-gradient(180deg, color-mix(in srgb, #3ea6ff 10%, var(--panel-surface)), var(--panel-surface));
+.signal-loop-card-step:nth-child(3) {
+  --signal-accent: #008fd3;
 }
 
-.signal-loop-detail-card:nth-child(4) {
-  background: linear-gradient(180deg, color-mix(in srgb, #48b98f 10%, var(--panel-surface)), var(--panel-surface));
+.signal-loop-card-step:nth-child(4) {
+  --signal-accent: #22a06b;
 }
 
-.signal-loop-detail-card:nth-child(5) {
-  background: linear-gradient(180deg, color-mix(in srgb, #f0a73a 10%, var(--panel-surface)), var(--panel-surface));
+.signal-loop-card-step:nth-child(5) {
+  --signal-accent: #d98314;
+}
+
+.signal-loop-card-step:nth-child(1) .signal-loop-detail-card {
+  background:
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #4065f8 28%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #4065f8 16%, var(--surface)), var(--panel-surface) 72%);
+}
+
+.signal-loop-card-step:nth-child(2) .signal-loop-detail-card {
+  background:
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #8f63ff 28%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #8f63ff 16%, var(--surface)), var(--panel-surface) 72%);
+}
+
+.signal-loop-card-step:nth-child(3) .signal-loop-detail-card {
+  background:
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #008fd3 28%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #008fd3 16%, var(--surface)), var(--panel-surface) 72%);
+}
+
+.signal-loop-card-step:nth-child(4) .signal-loop-detail-card {
+  background:
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #22a06b 28%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #22a06b 16%, var(--surface)), var(--panel-surface) 72%);
+}
+
+.signal-loop-card-step:nth-child(5) .signal-loop-detail-card {
+  background:
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #d98314 30%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #d98314 17%, var(--surface)), var(--panel-surface) 72%);
 }
 
 @media (max-width: 640px) {
