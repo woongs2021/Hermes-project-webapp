@@ -6368,6 +6368,29 @@
   background: color-mix(in srgb, #f0a73a 10%, var(--panel-surface));
 }
 
+.operating-loop-diagram .operating-loop-step {
+  grid-area: auto;
+}
+
+.operating-loop-diagram .operating-loop-node.is-chris {
+  --operating-chris-accent: #4065f8;
+  border-color: color-mix(in srgb, var(--operating-chris-accent) 36%, var(--stroke));
+  background:
+    radial-gradient(circle at 8% 12%, color-mix(in srgb, var(--operating-chris-accent) 18%, transparent), transparent 38%),
+    linear-gradient(135deg, color-mix(in srgb, var(--operating-chris-accent) 10%, var(--surface)), color-mix(in srgb, var(--panel-surface) 96%, transparent) 74%);
+}
+
+.operating-loop-diagram .operating-loop-node.is-chris h4 {
+  color: var(--operating-chris-accent);
+  font-size: clamp(1.12rem, 1.55vw, 1.42rem);
+  font-weight: 640;
+}
+
+.operating-loop-diagram .operating-loop-node.is-chris .obd-step-card-head span {
+  color: var(--operating-chris-accent);
+  font-weight: 820;
+}
+
 .obd-agent-face-row {
   display: flex;
   flex-direction: row-reverse;
