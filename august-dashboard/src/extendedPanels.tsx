@@ -268,8 +268,8 @@ function OperatingMapInfographic() {
 
       <div className="operating-loop-diagram" aria-label="Chris Karina evidence OBD Muyeol operating loop">
         {operatingMapInfographicNodes.map((node, index) => (
-          <div className="obd-step-with-arrow" key={`${node.number}-${node.label}`}>
-            <article className="obd-step-card operating-loop-node">
+          <div className={`obd-step-with-arrow operating-loop-step operating-loop-step-${node.number}`} key={`${node.number}-${node.label}`}>
+            <article className={`obd-step-card operating-loop-node${node.label === 'Chris' ? ' is-chris' : ''}`}>
               <div className="obd-step-card-head">
                 {node.faces.length > 0 ? (
                   <div className="obd-agent-face-row" aria-label={`${node.label} agent faces`}>

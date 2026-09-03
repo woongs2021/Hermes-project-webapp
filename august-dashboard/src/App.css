@@ -5985,12 +5985,32 @@
   background: color-mix(in srgb, var(--panel-surface) 96%, transparent);
 }
 
-.operating-loop-node:nth-child(1) { grid-area: step1; }
-.operating-loop-node:nth-child(2) { grid-area: step2; }
-.operating-loop-node:nth-child(3) { grid-area: step3; }
-.operating-loop-node:nth-child(4) { grid-area: step4; }
-.operating-loop-node:nth-child(5) { grid-area: step5; }
-.operating-loop-node:nth-child(6) { grid-area: step6; }
+.operating-loop-node.is-chris {
+  --operating-chris-accent: #4065f8;
+  border-color: color-mix(in srgb, var(--operating-chris-accent) 36%, var(--stroke));
+  background:
+    radial-gradient(circle at 8% 12%, color-mix(in srgb, var(--operating-chris-accent) 18%, transparent), transparent 38%),
+    linear-gradient(135deg, color-mix(in srgb, var(--operating-chris-accent) 10%, var(--surface)), color-mix(in srgb, var(--panel-surface) 96%, transparent) 74%);
+}
+
+.operating-loop-node.is-chris h4 {
+  color: var(--operating-chris-accent);
+  font-size: clamp(1.12rem, 1.55vw, 1.42rem);
+  font-weight: 640;
+  letter-spacing: -0.045em;
+}
+
+.operating-loop-node.is-chris .obd-step-card-head span {
+  color: var(--operating-chris-accent);
+  font-weight: 820;
+}
+
+.operating-loop-step-01 { grid-area: step1; }
+.operating-loop-step-02 { grid-area: step2; }
+.operating-loop-step-03 { grid-area: step3; }
+.operating-loop-step-04 { grid-area: step4; }
+.operating-loop-step-05 { grid-area: step5; }
+.operating-loop-step-06 { grid-area: step6; }
 
 .operating-loop-node small {
   position: absolute;
@@ -6009,21 +6029,21 @@
   transform: translateY(-50%);
 }
 
-.operating-loop-node:nth-child(3) small {
+.operating-loop-step-03 .operating-loop-node small {
   top: auto;
   right: 50%;
   bottom: -30px;
   transform: translateX(50%) rotate(90deg);
 }
 
-.operating-loop-node:nth-child(4) small,
-.operating-loop-node:nth-child(5) small {
+.operating-loop-step-04 .operating-loop-node small,
+.operating-loop-step-05 .operating-loop-node small {
   right: auto;
   left: -26px;
   transform: translateY(-50%) rotate(180deg);
 }
 
-.operating-loop-node:nth-child(6)::after {
+.operating-loop-step-06 .operating-loop-node::after {
   position: absolute;
   top: 50%;
   left: -30px;
@@ -6125,7 +6145,7 @@
   }
 
   .operating-loop-node small,
-  .operating-loop-node:nth-child(6)::after {
+  .operating-loop-step-06 .operating-loop-node::after {
     display: none;
   }
 
