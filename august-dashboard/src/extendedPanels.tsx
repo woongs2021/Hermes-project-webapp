@@ -189,7 +189,7 @@ const operatingMapInfographicNodes = [
     number: '01',
     label: 'Chris',
     value: 'Chris가 지금 필요한 질문, 우선순위, 최종 판단 기준을 던지면 팀의 실행 루프가 시작됩니다.',
-    faces: [],
+    faces: [{ name: 'Chris', src: teamFaceSrc('chris_profile.png') }],
   },
   {
     number: '02',
@@ -222,7 +222,7 @@ const operatingMapInfographicNodes = [
     number: '06',
     label: 'Chris',
     value: '검증된 결과는 다시 Chris의 다음 선택으로 돌아가고, 승인·수정·다음 실행 중 하나로 이어집니다.',
-    faces: [],
+    faces: [{ name: 'Chris', src: teamFaceSrc('chris_profile.png') }],
   },
 ]
 
@@ -274,7 +274,16 @@ function OperatingMapInfographic() {
                 {node.faces.length > 0 ? (
                   <div className="obd-agent-face-row" aria-label={`${node.label} agent faces`}>
                     {node.faces.map((face) => (
-                      <img className="obd-agent-face" src={face.src} alt={face.name} key={face.name} />
+                      <img
+                        className="obd-agent-face"
+                        src={face.src}
+                        alt={face.name}
+                        width="50"
+                        height="50"
+                        loading="eager"
+                        decoding="async"
+                        key={face.name}
+                      />
                     ))}
                   </div>
                 ) : null}
