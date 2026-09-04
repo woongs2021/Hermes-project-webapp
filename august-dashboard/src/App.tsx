@@ -631,13 +631,26 @@ function ChrisIntroPanel() {
       </article>
 
       <article className="content-card profile-statement-card profile-chris-card">
-        <p className="card-kicker">Chris profile</p>
-        <h3>Karina Hermes Agent Team은 크리스가 OBD로 작동할 수 있는 환경을 만듭니다</h3>
-        <p>
-          크리스(Chris)는 UX, 브랜드, 디자인 전략을 연결해 사람이 이해하고 신뢰할 수 있는 AI 경험을 탐구합니다.
-          Karina Hermes Agent Team은 그 탐구가 흩어지지 않도록 자료를 정리하고, 질문을 세우고, 근거를 검증해
-          크리스가 Ontology Business Designer처럼 판단하고 실행할 수 있는 구조를 만들어줍니다.
-        </p>
+        <div className="profile-chris-layout">
+          <img
+            className="profile-chris-image"
+            src={publicAssetPath('/assets/team/chris_profile.png')}
+            alt="AI portrait of Chris Park"
+            width="512"
+            height="512"
+            loading="eager"
+            decoding="async"
+          />
+          <div className="profile-chris-copy">
+            <p className="card-kicker">Chris profile</p>
+            <h3>Karina Hermes Agent Team은 크리스가 OBD로 작동할 수 있는 환경을 만듭니다</h3>
+            <p>
+              크리스(Chris)는 UX, 브랜드, 디자인 전략을 연결해 사람이 이해하고 신뢰할 수 있는 AI 경험을 탐구합니다.
+              Karina Hermes Agent Team은 그 탐구가 흩어지지 않도록 자료를 정리하고, 질문을 세우고, 근거를 검증해
+              크리스가 Ontology Business Designer처럼 판단하고 실행할 수 있는 구조를 만들어줍니다.
+            </p>
+          </div>
+        </div>
       </article>
 
       <ChrisGrowthGraphPanel />

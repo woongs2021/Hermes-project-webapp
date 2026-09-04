@@ -1089,7 +1089,43 @@
 }
 
 .profile-chris-card {
-  max-width: 860px;
+  max-width: 920px;
+}
+
+.profile-chris-layout {
+  display: grid;
+  grid-template-columns: minmax(128px, 180px) minmax(0, 1fr);
+  gap: clamp(18px, 3vw, 28px);
+  align-items: center;
+}
+
+.profile-chris-image {
+  display: block;
+  width: min(180px, 34vw);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 28px;
+  object-fit: cover;
+  object-position: center 42%;
+  border: 1px solid color-mix(in srgb, var(--primary) 24%, var(--stroke));
+  box-shadow: 0 20px 48px color-mix(in srgb, var(--primary) 16%, transparent);
+  background: color-mix(in srgb, var(--surface) 90%, var(--primary) 10%);
+}
+
+.profile-chris-copy {
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .profile-chris-layout {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .profile-chris-image {
+    width: min(164px, 48vw);
+    border-radius: 24px;
+  }
 }
 
 .profile-statement-card h3,
