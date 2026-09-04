@@ -1094,14 +1094,14 @@
 
 .profile-chris-layout {
   display: grid;
-  grid-template-columns: minmax(128px, 180px) minmax(0, 1fr);
+  grid-template-columns: minmax(92px, 126px) minmax(0, 1fr);
   gap: clamp(18px, 3vw, 28px);
   align-items: center;
 }
 
 .profile-chris-image {
   display: block;
-  width: min(180px, 34vw);
+  width: min(126px, 24vw);
   height: auto;
   aspect-ratio: 1;
   border-radius: 28px;
@@ -1123,7 +1123,7 @@
   }
 
   .profile-chris-image {
-    width: min(164px, 48vw);
+    width: min(115px, 34vw);
     border-radius: 24px;
   }
 }
