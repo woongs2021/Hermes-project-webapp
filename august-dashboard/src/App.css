@@ -6575,32 +6575,32 @@
 
 .signal-loop-card-step:nth-child(1) .signal-loop-detail-card {
   background:
-    radial-gradient(circle at 6% 14%, color-mix(in srgb, #4065f8 12%, transparent), transparent 34%),
-    linear-gradient(135deg, color-mix(in srgb, #4065f8 7%, var(--surface)), var(--panel-surface) 72%);
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #4065f8 9%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #4065f8 5%, var(--surface)), var(--panel-surface) 72%);
 }
 
 .signal-loop-card-step:nth-child(2) .signal-loop-detail-card {
   background:
-    radial-gradient(circle at 6% 14%, color-mix(in srgb, #8f63ff 12%, transparent), transparent 34%),
-    linear-gradient(135deg, color-mix(in srgb, #8f63ff 7%, var(--surface)), var(--panel-surface) 72%);
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #8f63ff 9%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #8f63ff 5%, var(--surface)), var(--panel-surface) 72%);
 }
 
 .signal-loop-card-step:nth-child(3) .signal-loop-detail-card {
   background:
-    radial-gradient(circle at 6% 14%, color-mix(in srgb, #008fd3 12%, transparent), transparent 34%),
-    linear-gradient(135deg, color-mix(in srgb, #008fd3 7%, var(--surface)), var(--panel-surface) 72%);
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #008fd3 9%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #008fd3 5%, var(--surface)), var(--panel-surface) 72%);
 }
 
 .signal-loop-card-step:nth-child(4) .signal-loop-detail-card {
   background:
-    radial-gradient(circle at 6% 14%, color-mix(in srgb, #22a06b 12%, transparent), transparent 34%),
-    linear-gradient(135deg, color-mix(in srgb, #22a06b 7%, var(--surface)), var(--panel-surface) 72%);
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #22a06b 9%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #22a06b 5%, var(--surface)), var(--panel-surface) 72%);
 }
 
 .signal-loop-card-step:nth-child(5) .signal-loop-detail-card {
   background:
-    radial-gradient(circle at 6% 14%, color-mix(in srgb, #d98314 13%, transparent), transparent 34%),
-    linear-gradient(135deg, color-mix(in srgb, #d98314 7%, var(--surface)), var(--panel-surface) 72%);
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #d98314 10%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #d98314 5%, var(--surface)), var(--panel-surface) 72%);
 }
 
 @media (max-width: 640px) {
