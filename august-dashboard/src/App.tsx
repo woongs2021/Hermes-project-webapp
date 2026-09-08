@@ -184,6 +184,63 @@ const agenticPackageStages = [
   { title: 'Critic loop', value: 'DNA Match + Brand Fit', detail: '점수는 객관 진실이 아니라 판단 보조입니다. 결과보다 수정 액션과 Chris 승인 여부가 중요합니다.' },
 ]
 
+const designDnaHierarchy = [
+  {
+    layer: 'Input Layer',
+    title: 'Reference Images',
+    copy: 'Chris가 좋아하는 graphic, editorial, package, poster, typography, illustration, photography, architecture, fashion 이미지를 모읍니다.',
+    items: ['5 minimum', '20–50 ideal', 'source / note / privacy status'],
+  },
+  {
+    layer: 'Analysis Layer',
+    title: 'Visual Pattern Recognition',
+    copy: '이미지를 caption으로 끝내지 않고 색, 타입, 구도, 질감, 밀도, 무드가 반복되는 방식을 분리합니다.',
+    items: ['observation', 'preference inference', 'evidence ids'],
+  },
+  {
+    layer: 'Principle Layer',
+    title: 'Design Principles',
+    copy: '개별 이미지의 표면 스타일을 넘어 “왜 Chris가 좋아하는가”에 가까운 판단 원칙을 문장과 데이터로 정리합니다.',
+    items: ['strong signal', 'weak signal', 'contradiction'],
+  },
+  {
+    layer: 'System Layer',
+    title: 'Design DNA',
+    copy: '모든 agent가 공유하는 취향 기준입니다. 단정하지 않고 confidence와 uncertainty를 함께 남깁니다.',
+    items: ['LOW / MEDIUM / HIGH confidence', 'MD + JSON', 'human approval'],
+  },
+  {
+    layer: 'Output Layer',
+    title: 'Reusable Design System',
+    copy: 'Design DNA를 brand strategy, product constraints, market context와 결합해 package direction, prompt package, critic loop로 확장합니다.',
+    items: ['art direction', 'generation', 'evaluation / refinement'],
+  },
+]
+
+const designDnaValueCards = [
+  {
+    title: 'Not image imitation',
+    copy: '레퍼런스 이미지를 비슷하게 베끼는 것이 아니라, 그 안에서 반복되는 visual decision pattern을 추출합니다.',
+  },
+  {
+    title: 'Shared judgment standard',
+    copy: 'Design DNA는 Karina, Go Youn-jung, Yuna, Son, Faker, Muyeol이 같은 기준으로 다음 산출물을 판단하게 만드는 공통 언어입니다.',
+  },
+  {
+    title: 'Brand-aware taste',
+    copy: '좋은 결과는 “내 스타일”만 강한 것이 아니라 브랜드와 제품에 맞아야 합니다. 그래서 공식은 DNA × Brand × Product × Market입니다.',
+  },
+]
+
+const designDnaAgentRows = [
+  { agent: 'Karina', role: 'orchestrate', copy: '문제를 분해하고, 어떤 agent가 어느 단계에서 판단해야 하는지 정리한 뒤 최종 synthesis를 만듭니다.' },
+  { agent: 'Go Youn-jung', role: 'visual DNA / critique', copy: 'reference의 색·타입·구도·질감·무드 패턴을 분석하고 art direction 품질을 봅니다.' },
+  { agent: 'Yuna', role: 'market / context', copy: '카테고리 관습, 경쟁 브랜드, special edition 흐름, image model/provider 가능성을 조사합니다.' },
+  { agent: 'Son', role: 'scope / phase', copy: 'MVP 범위, 승인 gate, 단계별 산출물과 우선순위를 관리합니다.' },
+  { agent: 'Faker', role: 'implementation', copy: 'JSON schema, webapp tab, prompt package adapter, generation/evaluation pipeline을 구현합니다.' },
+  { agent: 'Muyeol', role: 'validation / risk', copy: '저작권, privacy, public-safe, score overclaiming, go/no-go 리스크를 검증합니다.' },
+]
+
 function getInitialThemeMode(): ThemeMode {
   if (typeof window === 'undefined') return 'light'
 
@@ -1960,8 +2017,12 @@ function AboutDesignDnaPanel() {
         <p className="card-kicker">Project constitution</p>
         <h3>Design thinking becomes a reusable system.</h3>
         <p>
-          Design DNA Studio는 “AI에게 패키지를 그려달라”가 아니라 Chris의 선호 레퍼런스에서 반복되는 판단 논리를 추출해,
-          브랜드와 제품 제약 안에서 다시 사용할 수 있는 Agentic Design System으로 바꾸는 실험입니다.
+          Design DNA Studio는 단순히 “AI에게 패키지를 그려달라”고 요청하는 화면이 아닙니다. Chris가 좋아하는 시각 레퍼런스를 분석해
+          반복되는 취향의 구조를 찾고, 그 구조를 브랜드 전략과 제품 제약 안에서 다시 사용할 수 있는 Agentic Design System으로 바꾸는 프로젝트입니다.
+        </p>
+        <p>
+          그래서 최종 산출물은 이미지 한 장이 아니라, reference evidence, design principle, prompt package, critic score, refinement action까지 남기는
+          디자인 프로세스입니다. 이 흐름이 쌓이면 Chris의 디자인 판단은 한 번의 취향이 아니라 반복 가능한 design intelligence가 됩니다.
         </p>
         <blockquote>
           Generative AI creates outputs. Agentic AI executes processes. AX transforms the way design is done.
@@ -1972,6 +2033,42 @@ function AboutDesignDnaPanel() {
           <span className="status-chip muted">Human judgment final</span>
         </div>
       </article>
+
+      <section className="content-card design-dna-hierarchy-card" aria-label="Design DNA hierarchy from references to system">
+        <div className="design-dna-hierarchy-header">
+          <p className="card-kicker">Hierarchy</p>
+          <h3>Reference Images에서 Reusable Design System까지</h3>
+          <p>
+            핵심은 이미지의 표면을 따라가는 것이 아니라, 중간 계층을 반드시 통과하는 것입니다. 레퍼런스는 pattern이 되고,
+            pattern은 principle이 되고, principle은 Design DNA가 된 뒤에야 brand/package system으로 확장됩니다.
+          </p>
+        </div>
+        <div className="design-dna-hierarchy-flow">
+          {designDnaHierarchy.map((node, index) => (
+            <div className="design-dna-hierarchy-step" key={node.title}>
+              <article className="design-dna-hierarchy-node">
+                <span>{node.layer}</span>
+                <h4>{node.title}</h4>
+                <p>{node.copy}</p>
+                <ul>
+                  {node.items.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </article>
+              {index < designDnaHierarchy.length - 1 ? <strong className="design-dna-hierarchy-arrow" aria-hidden="true">↓</strong> : null}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="design-dna-value-grid" aria-label="Design DNA project principles">
+        {designDnaValueCards.map((item) => (
+          <article className="content-card design-dna-value-card" key={item.title}>
+            <p className="card-kicker">Principle</p>
+            <h4>{item.title}</h4>
+            <p>{item.copy}</p>
+          </article>
+        ))}
+      </section>
 
       <section className="design-dna-process" aria-label="Design DNA process">
         {designDnaProcessSteps.map((item) => (
@@ -1986,8 +2083,26 @@ function AboutDesignDnaPanel() {
       <article className="content-card design-dna-dimension-card">
         <p className="card-kicker">Analysis dimensions</p>
         <h3>이미지 캡션이 아니라 취향의 반복 구조를 봅니다.</h3>
+        <p>
+          각 reference는 아래 9개 dimension으로 읽습니다. 그리고 observation과 preference inference를 분리해, “보이는 것”과 “Chris가 좋아할 가능성이 있는 이유”를
+          섞지 않도록 합니다. confidence가 낮거나 reference가 서로 충돌하면 그대로 표시합니다.
+        </p>
         <div className="design-dna-dimension-cloud" aria-label="Design DNA analysis dimensions">
           {designDnaDimensions.map((dimension) => <span key={dimension}>{dimension}</span>)}
+        </div>
+      </article>
+
+      <article className="content-card design-dna-agent-card">
+        <p className="card-kicker">Agent responsibility</p>
+        <h3>Design DNA는 한 agent의 감상이 아니라 팀 전체의 판단 계약입니다.</h3>
+        <div className="design-dna-agent-list">
+          {designDnaAgentRows.map((row) => (
+            <section className="design-dna-agent-row" key={row.agent}>
+              <strong>{row.agent}</strong>
+              <span>{row.role}</span>
+              <p>{row.copy}</p>
+            </section>
+          ))}
         </div>
       </article>
     </div>
