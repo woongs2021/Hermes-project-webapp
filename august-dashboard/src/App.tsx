@@ -91,7 +91,7 @@ const tabs: Tab[] = [
     label: 'Design DNA',
     eyebrow: 'Agentic brand system',
     title: 'Design DNA Studio',
-    description: 'Chris가 좋아하는 시각 레퍼런스를 디자인 판단 구조로 바꾸고, 코카콜라 스페셜 에디션 병 패키지 같은 브랜드/패키지 작업에 재사용하는 Agentic Design System입니다.',
+    description: 'Chris가 좋아하는 시각 레퍼런스를 디자인 판단 구조로 바꾸고, 다양한 브랜드와 패키지 작업에 재사용하는 Agentic Brand & Package System입니다.',
   },
   {
     id: 'report',
@@ -142,8 +142,8 @@ const designDnaSubTabs: { id: DesignDnaSubTabId; label: string; eyebrow: string;
   {
     id: 'system',
     label: 'Agentic Brand & Package System',
-    eyebrow: 'coca-cola edition MVP',
-    description: 'Design DNA와 브랜드 전략, 제품 제약, 시장 맥락을 곱해서 코카콜라 스페셜 에디션 병 패키지의 방향·프롬프트·평가까지 이어갑니다.',
+    eyebrow: 'brand & package system',
+    description: 'Design DNA와 브랜드 전략, 제품 제약, 시장 맥락을 곱해서 다양한 브랜드/패키지의 방향·프롬프트·목업·평가까지 이어갑니다.',
   },
 ]
 
@@ -178,9 +178,10 @@ const chrisDesignArchiveTiles = [
 ]
 
 const agenticPackageStages = [
-  { title: 'Brand case', value: 'Coca-Cola special edition bottle', detail: '강한 red/white/script equity를 유지하면서 스페셜 에디션의 문화적·시각적 변주를 실험합니다.' },
+  { title: 'System scope', value: 'Brand & Package System', detail: '병, 박스, 파우치, 캔, 라벨 등 다양한 패키지 타입으로 확장 가능한 agentic design workflow입니다.' },
   { title: 'Canonical equation', value: 'DNA × Brand × Product × Market', detail: '개인 취향이 브랜드를 덮지 않도록 네 가지 축을 함께 봅니다.' },
-  { title: 'Prompt package', value: 'provider-independent spec', detail: 'OpenAI, Kling, Midjourney 등으로 옮길 수 있도록 raw prompt가 아니라 구조화된 방향 패키지를 만듭니다.' },
+  { title: 'Prompt package', value: 'provider-independent spec', detail: 'Higgsfield, OpenAI, Kling, Midjourney 등으로 옮길 수 있도록 raw prompt가 아니라 구조화된 방향 패키지를 만듭니다.' },
+  { title: 'Starter case', value: 'Coca-Cola special edition bottle', detail: '코카콜라 병 패키지는 첫 실험 케이스일 뿐이며, 이후 다른 브랜드와 패키지 타입으로 계속 업데이트합니다.' },
   { title: 'Critic loop', value: 'DNA Match + Brand Fit', detail: '점수는 객관 진실이 아니라 판단 보조입니다. 결과보다 수정 액션과 Chris 승인 여부가 중요합니다.' },
 ]
 
@@ -2029,7 +2030,7 @@ function AboutDesignDnaPanel() {
         </blockquote>
         <div className="status-row">
           <span className="status-chip">Private root: /opt/data/design-dna-studio</span>
-          <span className="status-chip muted">MVP case: Coca-Cola bottle</span>
+          <span className="status-chip muted">Starter case: Coca-Cola bottle</span>
           <span className="status-chip muted">Human judgment final</span>
         </div>
       </article>
@@ -2148,10 +2149,14 @@ function AgenticBrandPackagePanel() {
     <div className="design-dna-grid">
       <article className="content-card design-dna-hero-card package-system-card">
         <p className="card-kicker">Agentic Brand & Package System</p>
-        <h3>Coca-Cola special edition bottle package MVP</h3>
+        <h3>Brand & Package System MVP</h3>
         <p>
-          첫 케이스는 코카콜라 스페셜 에디션 병 패키지입니다. 목표는 기존 에디션을 복제하는 것이 아니라,
-          강한 브랜드 자산을 유지하면서 Chris의 Design DNA가 어떤 art direction과 package prompt로 변환되는지 보여주는 것입니다.
+          이 탭의 중심은 코카콜라 병 하나가 아니라 다양한 브랜드와 패키지 타입으로 확장되는 시스템입니다. 코카콜라 스페셜 에디션 병 패키지는
+          첫 시작점으로만 사용하고, 이후 다른 브랜드, 제품군, 패키지 구조로 계속 업데이트합니다.
+        </p>
+        <p>
+          목업 제작 단계에서는 Higgsfield를 연결해 presentation-quality package concept을 만들 수 있습니다. 다만 source of truth는 이미지 모델이 아니라
+          Design DNA, Brand Strategy, Product Constraints, Market Context가 합쳐진 Prompt Package입니다.
         </p>
         <div className="design-dna-equation" aria-label="Design output equation">
           <span>Design DNA</span>
@@ -2180,9 +2185,9 @@ function AgenticBrandPackagePanel() {
         <ol>
           <li>Reference intake와 Chris Design Archive 구성</li>
           <li>Design DNA extraction / confidence / contradiction 정리</li>
-          <li>Coca-Cola brand brief와 package constraints 정리</li>
+          <li>Brand brief와 package constraints 정리</li>
           <li>Art Direction과 provider-independent Prompt Package 생성</li>
-          <li>1차 bottle/package concept 생성</li>
+          <li>Higgsfield 등 승인된 provider로 1차 brand/package mockup 생성</li>
           <li>DNA Match, Brand Fit, Critique, Refinement Action 평가</li>
         </ol>
       </article>
