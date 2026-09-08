@@ -7,9 +7,10 @@ import './App.css'
 const publicAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
 const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
 
-type TabId = 'home' | 'obd' | 'visuals' | 'research' | 'report'
+type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'design-dna' | 'report'
 type ThemeMode = 'light' | 'dark'
 type ObdSubTabId = 'growth' | 'graph' | 'about'
+type DesignDnaSubTabId = 'about' | 'archive' | 'system'
 type TextSegment = { text: string; emphasis?: boolean }
 
 type Tab = {
@@ -72,6 +73,13 @@ const tabs: Tab[] = [
     description: 'Chris의 자료가 신호, 개념, 비즈니스 판단, 검증으로 순환하는 방식을 하나의 운영 지도로 정리합니다.',
   },
   {
+    id: 'research',
+    label: 'Research',
+    eyebrow: 'Chronological research board',
+    title: 'Yuna / Go Youn-jung Research Kanban',
+    description: 'Yuna와 Go Youn-jung의 논문 리서치 루프를 초창기 기록부터 시간순으로 긁어와 썸네일 카드와 클릭 상세 정보로 보여줍니다.',
+  },
+  {
     id: 'visuals',
     label: 'Visual Archive',
     eyebrow: 'Home visual system',
@@ -79,11 +87,11 @@ const tabs: Tab[] = [
     description: '최종 승인된 Go Youn-jung 홈 비주얼을 오래된 순서로 누적하고, 각 still을 클릭하면 turntable detail을 확인합니다.',
   },
   {
-    id: 'research',
-    label: 'Research',
-    eyebrow: 'Chronological research board',
-    title: 'Yuna / Go Youn-jung Research Kanban',
-    description: 'Yuna와 Go Youn-jung의 논문 리서치 루프를 초창기 기록부터 시간순으로 긁어와 썸네일 카드와 클릭 상세 정보로 보여줍니다.',
+    id: 'design-dna',
+    label: 'Design DNA',
+    eyebrow: 'Agentic brand system',
+    title: 'Design DNA Studio',
+    description: 'Chris가 좋아하는 시각 레퍼런스를 디자인 판단 구조로 바꾸고, 코카콜라 스페셜 에디션 병 패키지 같은 브랜드/패키지 작업에 재사용하는 Agentic Design System입니다.',
   },
   {
     id: 'report',
@@ -116,6 +124,64 @@ const obdSubTabs: { id: ObdSubTabId; label: string; eyebrow: string; description
     eyebrow: 'team loop and evidence flow',
     description: 'Karina의 조율, 에이전트 실행, Muyeol 검증, Chris의 최종 판단이 어떻게 이어지는지 보여줍니다.',
   },
+]
+
+const designDnaSubTabs: { id: DesignDnaSubTabId; label: string; eyebrow: string; description: string }[] = [
+  {
+    id: 'about',
+    label: 'About Design DNA',
+    eyebrow: 'from references to reusable judgment',
+    description: '좋아하는 이미지를 그대로 복제하지 않고, 반복되는 색·타입·구도·질감·밀도·무드의 판단 논리로 바꾸는 설계 원칙입니다.',
+  },
+  {
+    id: 'archive',
+    label: 'Chris Design Archive',
+    eyebrow: 'reference dashboard',
+    description: 'Chris가 좋아하는 이미지들을 대시보드처럼 모아두고, 이후 각 이미지를 Design DNA의 근거 카드로 연결하는 공간입니다.',
+  },
+  {
+    id: 'system',
+    label: 'Agentic Brand & Package System',
+    eyebrow: 'coca-cola edition MVP',
+    description: 'Design DNA와 브랜드 전략, 제품 제약, 시장 맥락을 곱해서 코카콜라 스페셜 에디션 병 패키지의 방향·프롬프트·평가까지 이어갑니다.',
+  },
+]
+
+const designDnaProcessSteps = [
+  { step: '01', title: 'Upload References', copy: 'Chris가 좋아하는 이미지 5–50장을 모읍니다. 원본은 private workspace에 두고 웹앱에는 public-safe summary만 올립니다.' },
+  { step: '02', title: 'Discover DNA', copy: 'Go Youn-jung이 색, 타입, 구도, 질감, 밀도, 무드의 반복 패턴을 찾아 개인 Design DNA로 구조화합니다.' },
+  { step: '03', title: 'Define Brand', copy: 'Yuna와 Son이 브랜드 맥락, 카테고리 관습, 패키지 제약, MVP 범위를 정리합니다.' },
+  { step: '04', title: 'Create Direction', copy: 'Karina가 Design DNA × Brand Strategy × Product Constraints × Market Context를 하나의 art direction으로 묶습니다.' },
+  { step: '05', title: 'Generate Package', copy: 'Faker가 provider-independent Prompt Package를 만들고, 승인된 provider에서 bottle/package concept을 생성합니다.' },
+  { step: '06', title: 'Evaluate & Refine', copy: 'Muyeol과 Go Youn-jung이 DNA Match, Brand Fit, 리스크를 보고 다음 수정 액션을 남깁니다. Chris 판단이 최종 기준입니다.' },
+]
+
+const designDnaDimensions = [
+  'Color',
+  'Typography',
+  'Composition',
+  'Shape & Geometry',
+  'Graphic Motif',
+  'Texture',
+  'Photography',
+  'Visual Density',
+  'Mood',
+]
+
+const chrisDesignArchiveTiles = [
+  { title: 'Premium minimal object', note: 'solid background, tactile material, quiet confidence' },
+  { title: 'Editorial contrast', note: 'large negative space, asymmetric focus, strong hierarchy' },
+  { title: 'Soft 3D metaphor', note: 'rounded object, calm lighting, non-generic AI mood' },
+  { title: 'Brand heritage twist', note: 'recognizable equity reinterpreted as limited edition' },
+  { title: 'Packaging surface rhythm', note: 'label geometry, material finish, shelf presence' },
+  { title: 'Human approval signal', note: 'like/dislike/select feedback becomes preference weight' },
+]
+
+const agenticPackageStages = [
+  { title: 'Brand case', value: 'Coca-Cola special edition bottle', detail: '강한 red/white/script equity를 유지하면서 스페셜 에디션의 문화적·시각적 변주를 실험합니다.' },
+  { title: 'Canonical equation', value: 'DNA × Brand × Product × Market', detail: '개인 취향이 브랜드를 덮지 않도록 네 가지 축을 함께 봅니다.' },
+  { title: 'Prompt package', value: 'provider-independent spec', detail: 'OpenAI, Kling, Midjourney 등으로 옮길 수 있도록 raw prompt가 아니라 구조화된 방향 패키지를 만듭니다.' },
+  { title: 'Critic loop', value: 'DNA Match + Brand Fit', detail: '점수는 객관 진실이 아니라 판단 보조입니다. 결과보다 수정 액션과 Chris 승인 여부가 중요합니다.' },
 ]
 
 function getInitialThemeMode(): ThemeMode {
@@ -287,14 +353,19 @@ const productBranches: ArchitectureBranch[] = [
     children: ['Signal Loop', 'Operating Map', 'Evidence Flow', 'Muyeol Validation'],
   },
   {
+    title: 'Research',
+    intent: '논문/자료/인사이트 루프',
+    children: ['Search', 'Paper Library', 'Insight Notes', 'Karina Synthesis'],
+  },
+  {
     title: 'Visual Archive',
     intent: '승인된 홈 비주얼 누적 아카이브',
     children: ['Oldest-first Stills', 'Turntable Detail', 'Visual Manifest', 'Public-safe Assets'],
   },
   {
-    title: 'Research',
-    intent: '논문/자료/인사이트 루프',
-    children: ['Search', 'Paper Library', 'Insight Notes', 'Karina Synthesis'],
+    title: 'Design DNA',
+    intent: '개인 취향을 agentic brand/package system으로 변환',
+    children: ['About Design DNA', 'Chris Design Archive', 'Agentic Brand & Package System', 'Human Approval Gates'],
   },
   {
     title: 'Muyeol Report',
@@ -318,6 +389,11 @@ const dataBranches: ArchitectureBranch[] = [
     title: '/public/data/home-visual-set.json',
     intent: 'Visual Archive 공개 안전 manifest',
     children: ['items[].still', 'items[].turntable', 'sourcePolicy'],
+  },
+  {
+    title: '/opt/data/design-dna-studio',
+    intent: 'Design DNA private workspace',
+    children: ['PROJECT_DESIGN_DNA.md', 'projects/<id>/design_dna', 'brand', 'prompts', 'evaluation'],
   },
   {
     title: '/data/research',
@@ -1842,6 +1918,163 @@ function DevArchitecturePanel() {
   )
 }
 
+
+function DesignDnaPanel() {
+  const [activeDesignDnaSubTab, setActiveDesignDnaSubTab] = useState<DesignDnaSubTabId>('about')
+  const currentSubTab = designDnaSubTabs.find((subTab) => subTab.id === activeDesignDnaSubTab) ?? designDnaSubTabs[0]
+
+  return (
+    <div className="design-dna-shell">
+      <nav className="obd-subtab-nav design-dna-subtab-nav" aria-label="Design DNA sections">
+        {designDnaSubTabs.map((subTab) => (
+          <button
+            key={subTab.id}
+            type="button"
+            className={subTab.id === activeDesignDnaSubTab ? 'obd-subtab-button active' : 'obd-subtab-button'}
+            aria-pressed={subTab.id === activeDesignDnaSubTab}
+            onClick={() => setActiveDesignDnaSubTab(subTab.id)}
+          >
+            <span>{subTab.label}</span>
+            <small>{subTab.eyebrow}</small>
+          </button>
+        ))}
+      </nav>
+
+      <section className="obd-subtab-intro design-dna-intro" aria-live="polite">
+        <p className="card-kicker">{currentSubTab.eyebrow}</p>
+        <h3>{currentSubTab.label}</h3>
+        <p>{currentSubTab.description}</p>
+      </section>
+
+      {activeDesignDnaSubTab === 'about' ? <AboutDesignDnaPanel /> : null}
+      {activeDesignDnaSubTab === 'archive' ? <ChrisDesignArchivePanel /> : null}
+      {activeDesignDnaSubTab === 'system' ? <AgenticBrandPackagePanel /> : null}
+    </div>
+  )
+}
+
+function AboutDesignDnaPanel() {
+  return (
+    <div className="design-dna-grid">
+      <article className="content-card design-dna-hero-card">
+        <p className="card-kicker">Project constitution</p>
+        <h3>Design thinking becomes a reusable system.</h3>
+        <p>
+          Design DNA Studio는 “AI에게 패키지를 그려달라”가 아니라 Chris의 선호 레퍼런스에서 반복되는 판단 논리를 추출해,
+          브랜드와 제품 제약 안에서 다시 사용할 수 있는 Agentic Design System으로 바꾸는 실험입니다.
+        </p>
+        <blockquote>
+          Generative AI creates outputs. Agentic AI executes processes. AX transforms the way design is done.
+        </blockquote>
+        <div className="status-row">
+          <span className="status-chip">Private root: /opt/data/design-dna-studio</span>
+          <span className="status-chip muted">MVP case: Coca-Cola bottle</span>
+          <span className="status-chip muted">Human judgment final</span>
+        </div>
+      </article>
+
+      <section className="design-dna-process" aria-label="Design DNA process">
+        {designDnaProcessSteps.map((item) => (
+          <article className="content-card design-dna-process-card" key={item.step}>
+            <span>{item.step}</span>
+            <h4>{item.title}</h4>
+            <p>{item.copy}</p>
+          </article>
+        ))}
+      </section>
+
+      <article className="content-card design-dna-dimension-card">
+        <p className="card-kicker">Analysis dimensions</p>
+        <h3>이미지 캡션이 아니라 취향의 반복 구조를 봅니다.</h3>
+        <div className="design-dna-dimension-cloud" aria-label="Design DNA analysis dimensions">
+          {designDnaDimensions.map((dimension) => <span key={dimension}>{dimension}</span>)}
+        </div>
+      </article>
+    </div>
+  )
+}
+
+function ChrisDesignArchivePanel() {
+  return (
+    <div className="design-dna-grid">
+      <article className="content-card design-dna-archive-brief">
+        <p className="card-kicker">Chris design archive</p>
+        <h3>좋아하는 이미지를 모으는 곳에서, 판단 기준을 꺼내는 곳으로.</h3>
+        <p>
+          이 영역은 Chris가 좋아하는 이미지를 대시보드처럼 나열하는 future archive입니다. 지금은 실제 reference image intake 전 단계라,
+          어떤 종류의 선호 신호가 카드화될지 보여주는 placeholder 상태로 둡니다.
+        </p>
+        <div className="status-row">
+          <span className="status-chip">5 images minimum</span>
+          <span className="status-chip muted">20–50 recommended</span>
+          <span className="status-chip muted">public-safe only</span>
+        </div>
+      </article>
+
+      <section className="chris-design-archive-board" aria-label="Chris preferred visual reference dashboard">
+        {chrisDesignArchiveTiles.map((tile, index) => (
+          <article className="chris-design-tile" key={tile.title}>
+            <div className="chris-design-tile-visual" aria-hidden="true">
+              <span>{String(index + 1).padStart(2, '0')}</span>
+            </div>
+            <div>
+              <strong>{tile.title}</strong>
+              <p>{tile.note}</p>
+            </div>
+          </article>
+        ))}
+      </section>
+    </div>
+  )
+}
+
+function AgenticBrandPackagePanel() {
+  return (
+    <div className="design-dna-grid">
+      <article className="content-card design-dna-hero-card package-system-card">
+        <p className="card-kicker">Agentic Brand & Package System</p>
+        <h3>Coca-Cola special edition bottle package MVP</h3>
+        <p>
+          첫 케이스는 코카콜라 스페셜 에디션 병 패키지입니다. 목표는 기존 에디션을 복제하는 것이 아니라,
+          강한 브랜드 자산을 유지하면서 Chris의 Design DNA가 어떤 art direction과 package prompt로 변환되는지 보여주는 것입니다.
+        </p>
+        <div className="design-dna-equation" aria-label="Design output equation">
+          <span>Design DNA</span>
+          <strong>×</strong>
+          <span>Brand Strategy</span>
+          <strong>×</strong>
+          <span>Product Constraints</span>
+          <strong>×</strong>
+          <span>Market Context</span>
+        </div>
+      </article>
+
+      <section className="agentic-package-stage-grid" aria-label="Agentic brand and package system stages">
+        {agenticPackageStages.map((stage) => (
+          <article className="content-card agentic-package-stage" key={stage.title}>
+            <p className="card-kicker">{stage.title}</p>
+            <h4>{stage.value}</h4>
+            <p>{stage.detail}</p>
+          </article>
+        ))}
+      </section>
+
+      <article className="content-card design-dna-roadmap-card">
+        <p className="card-kicker">Execution roadmap</p>
+        <h3>모든 단계로 가되, 토큰과 승인 gate를 보면서 나눠 실행합니다.</h3>
+        <ol>
+          <li>Reference intake와 Chris Design Archive 구성</li>
+          <li>Design DNA extraction / confidence / contradiction 정리</li>
+          <li>Coca-Cola brand brief와 package constraints 정리</li>
+          <li>Art Direction과 provider-independent Prompt Package 생성</li>
+          <li>1차 bottle/package concept 생성</li>
+          <li>DNA Match, Brand Fit, Critique, Refinement Action 평가</li>
+        </ol>
+      </article>
+    </div>
+  )
+}
+
 function ObdKnowledgeLoopPanel() {
   const [activeObdSubTab, setActiveObdSubTab] = useState<ObdSubTabId>(() => (
     window.location.hash === '#architecture' ? 'graph' : 'about'
@@ -2023,6 +2256,8 @@ function App() {
           </>
         ) : activeTab.id === 'obd' ? (
           <ObdKnowledgeLoopPanel />
+        ) : activeTab.id === 'design-dna' ? (
+          <DesignDnaPanel />
         ) : activeTab.id === 'research' ? (
           <ResearchKanbanPanel selectedResearchId={selectedResearchIdFromMonthly} />
         ) : activeTab.id === 'report' ? (
