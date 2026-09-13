@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-13T20:16:37+09:00",
+  "generatedAt": "2026-09-13T21:43:54+09:00",
   "sourcePolicy": "Public webapp includes copied reference images and Karina first-pass summaries only; raw private chats/logs are not exposed.",
   "items": [
     {
@@ -975,27 +975,6 @@
       ]
     },
     {
-      "id": "2026-09-12_glowal-future-faces-vinyl-package-system",
-      "title": "GLOWAL Future Faces vinyl package system",
-      "created": "2026-09-12",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-12_glowal-future-faces-vinyl-package-system_d3d8d24f2219.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-12_glowal-future-faces-vinyl-package-system.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-12_glowal-future-faces-vinyl-package-system_d3d8d24f2219.jpg",
-      "summary": "회색 스튜디오 배경 위에 여러 장의 검은 바이닐 레코드와 흰 패키지 슬리브가 공중에 떠 있는 듯 배치된 물리적 브랜드/패키지 시스템 레퍼런스. 검은 디스크와 붉은 halo/일식 그래픽, 작은 GLOWAL/FUTURE FACES 문구가 결합되어 analog archive object 감각을 만든다.",
-      "interpretation": "이 이미지는 Chris Archive에서 `Analog Archive Object / Vinyl Package Identity` 후보로 저장한다. 핵심은 원본 문구나 특정 매체를 따라 하는 것이 아니라, archive memory가 물리적 표면·원형 오브젝트·metadata label·edition 체계로 변환되는 방식이다.",
-      "tags": [],
-      "candidates": [
-        "- Vinyl Package Identity System",
-        "black disc as archive object",
-        "red eclipse glow label",
-        "floating product specimen layout",
-        "gray catalog field with physical shadows",
-        "package label, archive index mark, edition sticker, physical brand kit, poster/chapter opener, motion loop identity에 적합하다.",
-        "원형 object와 metadata label을 통해 `replayable design DNA`, `archive as physical memory`, `editioned system`을 표현할 수 있다."
-      ]
-    },
-    {
       "id": "2026-09-12_hey-annie-handheld-ambient-ai-companion-ui",
       "title": "Hey Annie handheld ambient AI companion UI",
       "created": "2026-09-12",
@@ -1059,33 +1038,6 @@
         "Quiet manifesto paragraph",
         "Large but not overly bold principle headline",
         "Small studio/system signature"
-      ]
-    },
-    {
-      "id": "2026-09-12_iconyc-florilegia-cyan-magenta-organic-void",
-      "title": "ICONYC Florilegia cyan-magenta organic void",
-      "created": "2026-09-12",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-12_iconyc-florilegia-cyan-magenta-organic-void_be91dae10a2e.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-12_iconyc-florilegia-cyan-magenta-organic-void.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-12_iconyc-florilegia-cyan-magenta-organic-void_be91dae10a2e.jpg",
-      "summary": "검은 배경 위에 시안, 퍼플, 마젠타가 섞인 꽃잎/유기체 같은 링형 오브젝트가 있고 중앙에 짙은 void가 있는 추상 이미지. 작은 ICONYC/Florilegia 텍스트가 포함되어 있어 third-party text는 제외하고, organic luminous ring, protected center, bio-digital bloom 원리만 추출한다.",
-      "interpretation": "이 이미지는 최종 `DESIGN_SYSTEM.md`에서 원칙 페이지, 패키지 표면, archive object, chapter opener, 또는 campaign/support motif로 검토할 가치가 있다. 핵심은 literal visual copy가 아니라, 색면·void·레이어·metadata의 관계를 Chris/Hermes/OBD 언어로 재구성하는 것이다.",
-      "tags": [
-        "Bio-digital Bloom",
-        "Organic Luminous Void",
-        "Cyan-magenta petal field",
-        "Protected central aperture",
-        "Soft fuzzy material edge"
-      ],
-      "candidates": [
-        "Bio-digital Bloom",
-        "Organic Luminous Void",
-        "Cyan-magenta petal field",
-        "Protected central aperture",
-        "Soft fuzzy material edge",
-        "package surface, poster, archive label, chapter opener, design-system specimen, campaign graphic 후보.",
-        "Literal wording/brand/project labels are excluded from future asset generation."
       ]
     },
     {
@@ -1419,39 +1371,6 @@
       ]
     },
     {
-      "id": "2026-09-12_thumb-friendly-circular-explore-ui-detail",
-      "title": "Thumb-friendly circular Explore UI detail",
-      "created": "2026-09-12",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-12_thumb-friendly-circular-explore-ui-detail_a3a9b86ed97a.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-12_thumb-friendly-circular-explore-ui-detail.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-12_thumb-friendly-circular-explore-ui-detail_a3a9b86ed97a.jpg",
-      "summary": "화이트 배경 위에 원형 콘텐츠 카드 세 개가 가로로 배치되고, 중앙의 파란 개구리 이미지 위에 `Explore` pill 버튼이 떠 있는 모바일 내비게이션 UI 디테일. 하단에는 세 개의 원형 thumb control 노드와 큰 `Right thumb-friendly area` guide circle이 보여, 한 손 조작과 원형 콘텐츠 탐색을 직접적으로 실험하는 레퍼런스다.",
-      "interpretation": "이 이미지는 이전 `Circular navigation biomorphic thumb UI`의 더 가까운 crop/detail reference다. 새 미감 축을 크게 만들기보다는, `Human-scale Circular Navigation` 후보의 근거를 강화한다. 특히 thumb-friendly area, active control node, Explore pill overlay가 명확해서 future One UI의 한 손 AI 탐색 구조를 검토할 때 유용하다.",
-      "tags": [
-        "thumb-friendly navigation",
-        "circular carousel detail",
-        "explore pill overlay",
-        "biomorphic content node",
-        "frog image card",
-        "right thumb area",
-        "active ring control",
-        "white OS canvas",
-        "one-hand interaction",
-        "calm navigation prototype"
-      ],
-      "candidates": [
-        "White canvas: calm exploration surface / product clarity",
-        "Soft gray pill: low-noise action affordance / gentle overlay",
-        "Dark gray active node: current focus / thumb control state",
-        "Pale blue biological image: calm curiosity / nature-tech content",
-        "Charcoal peripheral card: inactive/secondary content contrast",
-        "Tiny experiment label",
-        "Clear single-word action label",
-        "Low-contrast ergonomic guide text"
-      ]
-    },
-    {
       "id": "2026-09-12_traffik-027-red-black-geometric-folded-poster",
       "title": "TRAFFIK 027 red-black geometric folded poster",
       "created": "2026-09-12",
@@ -1573,34 +1492,6 @@
       ]
     },
     {
-      "id": "2026-09-12_uvita-twins-green-black-geometric-type-poster",
-      "title": "Uvita Twins green-black geometric type poster",
-      "created": "2026-09-12",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-12_uvita-twins-green-black-geometric-type-poster_7c0610069edc.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-12_uvita-twins-green-black-geometric-type-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-12_uvita-twins-green-black-geometric-type-poster_7c0610069edc.jpg",
-      "summary": "회색 배경 위에 연두색과 흰색의 폴더/종이 같은 기하학 면들이 겹치고, 상단에는 거대한 검은 추상 타이포/글리프가 놓인 포스터형 레퍼런스. 작은 세로 metadata label과 넓은 여백, 강한 블랙 매스가 결합되어 `geometric folder field`, `abstract type as object`, `archive-poster layer` 계열로 읽힌다.",
-      "interpretation": "이 이미지는 Chris Archive의 `Analog Geometric / Orbital Poster Field` 축을 강화한다. 지금까지 모은 luminous AI presence를 직접 제품 UI로 쓰기 전, 더 성숙한 브랜드/패키지/문서 표면으로 변환하는 데 도움이 된다.",
-      "tags": [
-        "geometric folder field",
-        "oversized black glyph",
-        "pale green plane",
-        "metadata labels",
-        "poster object",
-        "archive layers"
-      ],
-      "candidates": [
-        "Abstract Type as Object",
-        "Folder Geometry",
-        "Metadata Spine",
-        "Pale Green Archive Plane",
-        "Package/poster/editorial surface에 적합하다.",
-        "Archive index, edition label, metadata spine, chapter opener, visual-system board로 확장 가능하다.",
-        "Literal text/logo/project naming은 사용하지 않는다."
-      ]
-    },
-    {
       "id": "2026-09-12_uvita-twins-monochrome-crescent-void-poster",
       "title": "Uvita Twins monochrome crescent void poster",
       "created": "2026-09-12",
@@ -1632,44 +1523,6 @@
         "Tiny metadata labels",
         "Ghost outline letterforms as spatial layer"
       ]
-    },
-    {
-      "id": "2026-09-12_uvita-twins-monochrome-orbital-type-poster",
-      "title": "Uvita Twins monochrome orbital type poster",
-      "created": "2026-09-12",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-12_uvita-twins-monochrome-orbital-type-poster_a429cabae0b6.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-12_uvita-twins-monochrome-orbital-type-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-12_uvita-twins-monochrome-orbital-type-poster_a429cabae0b6.jpg",
-      "summary": "라이트 그레이 배경 위에 거대한 흐릿한 검은 원호/링과 Uvita Twins/Traffik 계열의 얇은 타이포가 겹쳐진 흑백 포스터 레퍼런스. 색을 거의 쓰지 않고 scale, blur, grain, micro-label만으로 archive/poster identity를 만든다.",
-      "interpretation": "이 이미지는 Chris Archive에서 `Monochrome Orbital Poster Field` 후보로 저장한다. 핵심은 원본 문구나 특정 매체를 따라 하는 것이 아니라, archive memory가 물리적 표면·원형 오브젝트·metadata label·edition 체계로 변환되는 방식이다.",
-      "tags": [],
-      "candidates": [
-        "- Monochrome Orbital Poster Field",
-        "giant blurred ring as spatial anchor",
-        "micro metadata typography",
-        "grainy analog print texture",
-        "type over atmospheric void",
-        "package label, archive index mark, edition sticker, physical brand kit, poster/chapter opener, motion loop identity에 적합하다.",
-        "원형 object와 metadata label을 통해 `replayable design DNA`, `archive as physical memory`, `editioned system`을 표현할 수 있다."
-      ]
-    },
-    {
-      "id": "2026-09-12_uvita-twins-monochrome-orbital-void-poster",
-      "title": "Uvita Twins monochrome orbital void poster",
-      "created": "2026-09-12",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-12_uvita-twins-monochrome-orbital-void-poster_a429cabae0b6.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-12_uvita-twins-monochrome-orbital-void-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-12_uvita-twins-monochrome-orbital-void-poster_a429cabae0b6.jpg",
-      "summary": "라이트 그레이 배경 위에 거대한 흰 원/void와 검은 흐릿한 링이 겹치고, 좌상단에 UVITA TWINS / TRAFFIK / 026 같은 얇은 타이포가 배치된 흑백 포스터 레퍼런스. 거대한 원형 여백과 흐릿한 검은 궤도가 spatial/cosmic한 긴장감을 만든다.",
-      "interpretation": "라이트 그레이 배경 위에 거대한 흰 원/void와 검은 흐릿한 링이 겹치고, 좌상단에 UVITA TWINS / TRAFFIK / 026 같은 얇은 타이포가 배치된 흑백 포스터 레퍼런스. 거대한 원형 여백과 흐릿한 검은 궤도가 spatial/cosmic한 긴장감을 만든다.",
-      "tags": [
-        "Color: black/white/gray 기반에 필요한 경우 red halo를 high-signal layer로 사용한다.",
-        "Material: 인쇄 grain, blur, vinyl groove, paper/package surface, optical shadow가 핵심이다.",
-        "Composition: 큰 원형 mass/void 또는 floating object를 중심으로 micro typography와 여백이 긴장감을 만든다."
-      ],
-      "candidates": []
     },
     {
       "id": "2026-09-12_uvita-twins-red-shadow-orbital-void-poster",
@@ -1781,19 +1634,6 @@
       "candidates": []
     },
     {
-      "id": "2026-09-13_blue-architectural-show-me-poster",
-      "title": "Blue architectural Show Me poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_blue-architectural-show-me-poster_e20cb3805b5d.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_blue-architectural-show-me-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_blue-architectural-show-me-poster_e20cb3805b5d.jpg",
-      "summary": "",
-      "interpretation": "",
-      "tags": [],
-      "candidates": []
-    },
-    {
       "id": "2026-09-13_blue-orange-squircle-abstract-app-icon",
       "title": "Blue-orange squircle abstract app icon",
       "created": "2026-09-13",
@@ -1820,33 +1660,6 @@
         "Biomorphic white connector as agent/node system",
         "Blue intelligence top + orange warmth bottom",
         "AI hub / companion launcher / package badge identity"
-      ]
-    },
-    {
-      "id": "2026-09-13_blue-orange-squircle-app-icon-abstract-glyph",
-      "title": "Blue-orange squircle app icon abstract glyph",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_blue-orange-squircle-app-icon-abstract-glyph_1ba998abfd96.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_blue-orange-squircle-app-icon-abstract-glyph.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_blue-orange-squircle-app-icon-abstract-glyph_1ba998abfd96.jpg",
-      "summary": "검은 배경 위에 깊은 블루와 오렌지 glow를 가진 squircle 앱 아이콘이 떠 있고, 중앙에는 흰 유기적 glyph와 어두운 사각형이 겹쳐진 추상 아이콘 레퍼런스. AI presence, protected center, warm-cool app-object의 성격이 강하다.",
-      "interpretation": "검은 배경 위에 깊은 블루와 오렌지 glow를 가진 squircle 앱 아이콘이 떠 있고, 중앙에는 흰 유기적 glyph와 어두운 사각형이 겹쳐진 추상 아이콘 레퍼런스. AI presence, protected center, warm-cool app-object의 성격이 강하다. Chris Archive 안에서는 이미 쌓인 squircle, luminous boundary, product-component, physical brand system 후보와 연결된다.",
-      "tags": [
-        "app icon",
-        "squircle",
-        "warm-cool glow",
-        "abstract glyph",
-        "protected center",
-        "blue orange icon",
-        "AI presence token"
-      ],
-      "candidates": [
-        "Warm-cool App Presence",
-        "Abstract Glyph Container",
-        "Protected Center Icon",
-        "Soft Squircle Object",
-        "원본 직접 복제 금지; principle, token, material, layout logic만 사용."
       ]
     },
     {
@@ -1880,33 +1693,6 @@
       ]
     },
     {
-      "id": "2026-09-13_control-f-soft-logo-icon-system",
-      "title": "Control-F soft logo icon system",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_control-f-soft-logo-icon-system_0270125b2003.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_control-f-soft-logo-icon-system.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_control-f-soft-logo-icon-system_0270125b2003.jpg",
-      "summary": "라이트 그레이 배경 위에 Control-F 워드마크와 세 가지 앱 아이콘 변주가 배치된 브랜드/아이콘 시스템 레퍼런스. 형광 라임-시안 그라데이션, 검정 기하학 로고, squircle 앱 아이콘이 핵심이다.",
-      "interpretation": "라이트 그레이 배경 위에 Control-F 워드마크와 세 가지 앱 아이콘 변주가 배치된 브랜드/아이콘 시스템 레퍼런스. 형광 라임-시안 그라데이션, 검정 기하학 로고, squircle 앱 아이콘이 핵심이다. Chris Archive 안에서는 이미 쌓인 squircle, luminous boundary, product-component, physical brand system 후보와 연결된다.",
-      "tags": [
-        "logo system",
-        "app icon",
-        "squircle",
-        "lime cyan gradient",
-        "control-f",
-        "brand specimen",
-        "soft icon set"
-      ],
-      "candidates": [
-        "Soft Logo System",
-        "Squircle Icon Variants",
-        "Lime-cyan Focus Accent",
-        "Brand mark as product affordance",
-        "원본 직접 복제 금지; principle, token, material, layout logic만 사용."
-      ]
-    },
-    {
       "id": "2026-09-13_fahlberg-circular-orbit-show-me-poster",
       "title": "Fahlberg circular orbit Show Me poster",
       "created": "2026-09-13",
@@ -1920,81 +1706,6 @@
       "candidates": []
     },
     {
-      "id": "2026-09-13_floating-vinyl-red-glow-package-system",
-      "title": "Floating vinyl red glow package system",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_floating-vinyl-red-glow-package-system_d3d8d24f2219.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_floating-vinyl-red-glow-package-system.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_floating-vinyl-red-glow-package-system_d3d8d24f2219.jpg",
-      "summary": "",
-      "interpretation": "",
-      "tags": [],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_glowal-future-faces-vinyl-package-system",
-      "title": "Glowal Future Faces vinyl package system",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_glowal-future-faces-vinyl-package-system_d3d8d24f2219.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_glowal-future-faces-vinyl-package-system.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_glowal-future-faces-vinyl-package-system_d3d8d24f2219.jpg",
-      "summary": "회색 스튜디오 배경 위에 여러 장의 검은 바이닐 레코드와 흰 패키지 슬리브가 공중에 떠 있는 브랜드/패키지 시스템 이미지. 검은 원형 레코드, 붉은 halo, 흰 종이 슬리브, 작은 editorial label이 결합되어 물리적 아카이브와 사운드/루프/에디션 감각을 만든다.",
-      "interpretation": "회색 스튜디오 배경 위에 여러 장의 검은 바이닐 레코드와 흰 패키지 슬리브가 공중에 떠 있는 브랜드/패키지 시스템 이미지. 검은 원형 레코드, 붉은 halo, 흰 종이 슬리브, 작은 editorial label이 결합되어 물리적 아카이브와 사운드/루프/에디션 감각을 만든다.",
-      "tags": [
-        "핵심 팔레트는 black, white, gray를 중심으로 하며, 이미지에 따라 red halo 또는 paper/physical object tone이 보조한다.",
-        "glow보다 print grain, blur, vinyl/종이/스튜디오 오브젝트, 혹은 거대한 black void가 미감의 중심이다.",
-        "지금까지의 luminous AI reference와 달리, 더 아날로그적이고 editorial/archive identity에 가깝다."
-      ],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_glowal-future-faces-vinyl-product-system",
-      "title": "Glowal future faces vinyl product system",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_glowal-future-faces-vinyl-product-system_d3d8d24f2219.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_glowal-future-faces-vinyl-product-system.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_glowal-future-faces-vinyl-product-system_d3d8d24f2219.jpg",
-      "summary": "",
-      "interpretation": "",
-      "tags": [],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_glowal-red-shadow-vinyl-package-system",
-      "title": "Glowal red shadow vinyl package system",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_glowal-red-shadow-vinyl-package-system_d3d8d24f2219.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_glowal-red-shadow-vinyl-package-system.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_glowal-red-shadow-vinyl-package-system_d3d8d24f2219.jpg",
-      "summary": "회색 스튜디오 바닥 위에 검은 바이닐 레코드와 흰 슬리브/커버가 공중에 떠 있는 패키지 시스템. 검은 원반 주변의 붉은 halo가 강한 physical archive와 음악적 loop memory를 만든다.",
-      "interpretation": "회색 스튜디오 바닥 위에 검은 바이닐 레코드와 흰 슬리브/커버가 공중에 떠 있는 패키지 시스템. 검은 원반 주변의 붉은 halo가 강한 physical archive와 음악적 loop memory를 만든다.",
-      "tags": [
-        "floating vinyl records",
-        "white sleeves as physical carriers",
-        "red shadow halo",
-        "gray studio product field",
-        "track/version/package identity"
-      ],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_glowal-vinyl-packaging-red-eclipse-system",
-      "title": "Glowal vinyl packaging red eclipse system",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_glowal-vinyl-packaging-red-eclipse-system_d3d8d24f2219.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_glowal-vinyl-packaging-red-eclipse-system.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_glowal-vinyl-packaging-red-eclipse-system_d3d8d24f2219.jpg",
-      "summary": "",
-      "interpretation": "",
-      "tags": [],
-      "candidates": []
-    },
-    {
       "id": "2026-09-13_gray-mountain-numeral-show-me-poster",
       "title": "Gray mountain numeral Show Me poster",
       "created": "2026-09-13",
@@ -2002,68 +1713,6 @@
       "imageSrc": "assets/chris-archive/2026-09-13_gray-mountain-numeral-show-me-poster_2363a0327803.jpg",
       "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_gray-mountain-numeral-show-me-poster.md",
       "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_gray-mountain-numeral-show-me-poster_2363a0327803.jpg",
-      "summary": "",
-      "interpretation": "",
-      "tags": [],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_monochrome-uvita-soft-orb-typographic-poster",
-      "title": "Monochrome Uvita soft orb typographic poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_monochrome-uvita-soft-orb-typographic-poster_a429cabae0b6.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_monochrome-uvita-soft-orb-typographic-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_monochrome-uvita-soft-orb-typographic-poster_a429cabae0b6.jpg",
-      "summary": "라이트 그레이 배경 위에 거대한 흐릿한 흑백 오브/링이 화면을 지배하고, 좌측에는 얇은 대형 타이포 `UVITA TWINS`, `TRAFFIK`, `026` 등이 겹쳐진 모노크롬 포스터. 부드러운 입자감, 검은 crescent shadow, 얇은 metadata typography가 조용한 아카이브/전시 포스터 분위기를 만든다.",
-      "interpretation": "라이트 그레이 배경 위에 거대한 흐릿한 흑백 오브/링이 화면을 지배하고, 좌측에는 얇은 대형 타이포 `UVITA TWINS`, `TRAFFIK`, `026` 등이 겹쳐진 모노크롬 포스터. 부드러운 입자감, 검은 crescent shadow, 얇은 metadata typography가 조용한 아카이브/전시 포스터 분위기를 만든다.",
-      "tags": [
-        "핵심 팔레트는 black, white, gray를 중심으로 하며, 이미지에 따라 red halo 또는 paper/physical object tone이 보조한다.",
-        "glow보다 print grain, blur, vinyl/종이/스튜디오 오브젝트, 혹은 거대한 black void가 미감의 중심이다.",
-        "지금까지의 luminous AI reference와 달리, 더 아날로그적이고 editorial/archive identity에 가깝다."
-      ],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_mountain-giant-028-editorial-poster",
-      "title": "Mountain giant 028 editorial poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_mountain-giant-028-editorial-poster_2363a0327803.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_mountain-giant-028-editorial-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_mountain-giant-028-editorial-poster_2363a0327803.jpg",
-      "summary": "",
-      "interpretation": "",
-      "tags": [],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_show-me-blue-architectural-stair-poster",
-      "title": "Show Me blue architectural stair poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_show-me-blue-architectural-stair-poster_e20cb3805b5d.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_show-me-blue-architectural-stair-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_show-me-blue-architectural-stair-poster_e20cb3805b5d.jpg",
-      "summary": "회색 배경 위에 블루 인쇄 질감의 계단/건축 구조가 크게 놓이고, SHOW ME 및 아티스트 텍스트가 반복되는 포스터. 음악 포스터와 건축/공간 다이어그램, risograph texture가 결합된다.",
-      "interpretation": "회색 배경 위에 블루 인쇄 질감의 계단/건축 구조가 크게 놓이고, SHOW ME 및 아티스트 텍스트가 반복되는 포스터. 음악 포스터와 건축/공간 다이어그램, risograph texture가 결합된다.",
-      "tags": [
-        "blue architectural stair mass",
-        "risograph/blueprint texture",
-        "repeated thin music metadata",
-        "gray exhibition field",
-        "structure as narrative stage"
-      ],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_show-me-blue-architectural-typographic-poster",
-      "title": "Show Me blue architectural typographic poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_show-me-blue-architectural-typographic-poster_e20cb3805b5d.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_show-me-blue-architectural-typographic-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_show-me-blue-architectural-typographic-poster_e20cb3805b5d.jpg",
       "summary": "",
       "interpretation": "",
       "tags": [],
@@ -2085,239 +1734,6 @@
         "thin repeated music typography",
         "rainbow refraction",
         "soft folded material object"
-      ],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_show-me-mountain-sculptural-type-poster",
-      "title": "Show Me mountain sculptural type poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_show-me-mountain-sculptural-type-poster_2363a0327803.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_show-me-mountain-sculptural-type-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_show-me-mountain-sculptural-type-poster_2363a0327803.jpg",
-      "summary": "거대한 흑백 산악 지형 오브젝트가 회색 배경 위에 떠 있고, 뒤에는 큰 028 숫자와 SHOW ME 타이포가 겹치는 포스터. 자연 지형을 조각/브랜드 오브젝트처럼 다루는 identity reference.",
-      "interpretation": "거대한 흑백 산악 지형 오브젝트가 회색 배경 위에 떠 있고, 뒤에는 큰 028 숫자와 SHOW ME 타이포가 겹치는 포스터. 자연 지형을 조각/브랜드 오브젝트처럼 다루는 identity reference.",
-      "tags": [
-        "monochrome mountain object",
-        "giant cropped numerals",
-        "thin editorial music type",
-        "terrain as sculptural system",
-        "gray neutral poster field"
-      ],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_show-me-orange-orbital-ring-dark-poster",
-      "title": "Show Me orange orbital ring dark poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_show-me-orange-orbital-ring-dark-poster_02eba2f01a9a.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_show-me-orange-orbital-ring-dark-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_show-me-orange-orbital-ring-dark-poster_02eba2f01a9a.jpg",
-      "summary": "짙은 네이비 배경 위에 거대한 오렌지/회색 원형 궤도가 화면을 감싸고, 얇은 세로 타이포와 작은 metadata가 흩어진 포스터. 한 장의 음악 포스터지만 loop/orbit/feedback identity와 강하게 연결된다.",
-      "interpretation": "짙은 네이비 배경 위에 거대한 오렌지/회색 원형 궤도가 화면을 감싸고, 얇은 세로 타이포와 작은 metadata가 흩어진 포스터. 한 장의 음악 포스터지만 loop/orbit/feedback identity와 강하게 연결된다.",
-      "tags": [
-        "giant orange orbital ring",
-        "dark navy field",
-        "vertical thin typography",
-        "small metadata stars",
-        "loop as poster architecture"
-      ],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_uvita-black-field-oversized-type-poster",
-      "title": "Uvita black field oversized type poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_uvita-black-field-oversized-type-poster_9312fe0728a5.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_uvita-black-field-oversized-type-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_uvita-black-field-oversized-type-poster_9312fe0728a5.jpg",
-      "summary": "",
-      "interpretation": "",
-      "tags": [],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_uvita-red-eclipse-black-orb-poster",
-      "title": "Uvita red eclipse black orb poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_uvita-red-eclipse-black-orb-poster_60d96329805c.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_uvita-red-eclipse-black-orb-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_uvita-red-eclipse-black-orb-poster_60d96329805c.jpg",
-      "summary": "",
-      "interpretation": "",
-      "tags": [],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_uvita-red-eclipse-orb-typographic-poster",
-      "title": "Uvita red eclipse orb typographic poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_uvita-red-eclipse-orb-typographic-poster_60d96329805c.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_uvita-red-eclipse-orb-typographic-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_uvita-red-eclipse-orb-typographic-poster_60d96329805c.jpg",
-      "summary": "라이트 그레이 배경 위에 거대한 검은 원형 오브가 중앙을 덮고, 외곽에 붉은 glow가 강하게 번지는 eclipse형 포스터. 좌측 상단에는 흐린 얇은 타이포와 `026` metadata가 배치되어, 타이포보다 black mass와 red halo가 주인공이 되는 긴장감 있는 아카이브 포스터다.",
-      "interpretation": "라이트 그레이 배경 위에 거대한 검은 원형 오브가 중앙을 덮고, 외곽에 붉은 glow가 강하게 번지는 eclipse형 포스터. 좌측 상단에는 흐린 얇은 타이포와 `026` metadata가 배치되어, 타이포보다 black mass와 red halo가 주인공이 되는 긴장감 있는 아카이브 포스터다.",
-      "tags": [
-        "핵심 팔레트는 black, white, gray를 중심으로 하며, 이미지에 따라 red halo 또는 paper/physical object tone이 보조한다.",
-        "glow보다 print grain, blur, vinyl/종이/스튜디오 오브젝트, 혹은 거대한 black void가 미감의 중심이다.",
-        "지금까지의 luminous AI reference와 달리, 더 아날로그적이고 editorial/archive identity에 가깝다."
-      ],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_uvita-red-halo-black-eclipse-typographic-poster",
-      "title": "Uvita red halo black eclipse typographic poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_uvita-red-halo-black-eclipse-typographic-poster_60d96329805c.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_uvita-red-halo-black-eclipse-typographic-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_uvita-red-halo-black-eclipse-typographic-poster_60d96329805c.jpg",
-      "summary": "",
-      "interpretation": "",
-      "tags": [],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_uvita-twins-black-negative-space-type-grid",
-      "title": "Uvita Twins black negative-space type grid",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_uvita-twins-black-negative-space-type-grid_9312fe0728a5.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_uvita-twins-black-negative-space-type-grid.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_uvita-twins-black-negative-space-type-grid_9312fe0728a5.jpg",
-      "summary": "큰 검은 직사각형이 화면 대부분을 차지하고, 좌상단에 흰 얇은 대형 타이포와 026, 하단에 크롭된 숫자/기호가 배치된 포스터. 정보보다 블랙 매스와 여백이 주인공인 editorial discipline 레퍼런스.",
-      "interpretation": "큰 검은 직사각형이 화면 대부분을 차지하고, 좌상단에 흰 얇은 대형 타이포와 026, 하단에 크롭된 숫자/기호가 배치된 포스터. 정보보다 블랙 매스와 여백이 주인공인 editorial discipline 레퍼런스.",
-      "tags": [
-        "massive black field",
-        "thin white oversized typography",
-        "cropped numerals",
-        "micro metadata",
-        "brutal editorial negative space"
-      ],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_uvita-twins-black-negative-space-type-poster",
-      "title": "Uvita Twins black negative space type poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_uvita-twins-black-negative-space-type-poster_9312fe0728a5.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_uvita-twins-black-negative-space-type-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_uvita-twins-black-negative-space-type-poster_9312fe0728a5.jpg",
-      "summary": "",
-      "interpretation": "",
-      "tags": [],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_uvita-twins-black-orb-red-halo-poster",
-      "title": "Uvita Twins black orb red halo poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_uvita-twins-black-orb-red-halo-poster_60d96329805c.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_uvita-twins-black-orb-red-halo-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_uvita-twins-black-orb-red-halo-poster_60d96329805c.jpg",
-      "summary": "라이트 그레이 배경 위에 거대한 검은 원형 오브가 화면을 지배하고, 주변에 붉은 glow가 번지는 강한 포스터. 좌측 얇은 타이포와 거대한 shadow object가 eclipse/void/signal tension을 만든다.",
-      "interpretation": "라이트 그레이 배경 위에 거대한 검은 원형 오브가 화면을 지배하고, 주변에 붉은 glow가 번지는 강한 포스터. 좌측 얇은 타이포와 거대한 shadow object가 eclipse/void/signal tension을 만든다.",
-      "tags": [
-        "dominant black orb",
-        "red halo shadow",
-        "thin gray typography",
-        "huge cropped circular mass",
-        "eclipse-like poster tension"
-      ],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_uvita-twins-gray-smoke-orb-typographic-poster",
-      "title": "Uvita Twins gray smoke orb typographic poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_uvita-twins-gray-smoke-orb-typographic-poster_a429cabae0b6.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_uvita-twins-gray-smoke-orb-typographic-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_uvita-twins-gray-smoke-orb-typographic-poster_a429cabae0b6.jpg",
-      "summary": "라이트 그레이 필드 위에 거대한 흐릿한 검은 원호/오브가 있고, 좌측에 Uvita Twins / Traffik / 026 타이포가 얇게 겹친 포스터. 큰 비어 있는 원형 중심과 smoky black rim, micro metadata가 조용한 아카이브/음반 포스터 감각을 만든다.",
-      "interpretation": "라이트 그레이 필드 위에 거대한 흐릿한 검은 원호/오브가 있고, 좌측에 Uvita Twins / Traffik / 026 타이포가 얇게 겹친 포스터. 큰 비어 있는 원형 중심과 smoky black rim, micro metadata가 조용한 아카이브/음반 포스터 감각을 만든다.",
-      "tags": [
-        "large pale central void",
-        "smoky black orbital rim",
-        "thin oversized typography",
-        "micro metadata labels",
-        "monochrome gray print texture"
-      ],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_uvita-twins-gray-smoke-orbital-typographic-poster",
-      "title": "Uvita Twins gray smoke orbital typographic poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_uvita-twins-gray-smoke-orbital-typographic-poster_a429cabae0b6.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_uvita-twins-gray-smoke-orbital-typographic-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_uvita-twins-gray-smoke-orbital-typographic-poster_a429cabae0b6.jpg",
-      "summary": "",
-      "interpretation": "",
-      "tags": [],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_uvita-twins-mono-crescent-void-poster",
-      "title": "Uvita Twins mono crescent void poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_uvita-twins-mono-crescent-void-poster_a429cabae0b6.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_uvita-twins-mono-crescent-void-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_uvita-twins-mono-crescent-void-poster_a429cabae0b6.jpg",
-      "summary": "",
-      "interpretation": "",
-      "tags": [],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_uvita-twins-monochrome-orbital-mist-poster",
-      "title": "Uvita Twins monochrome orbital mist poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_uvita-twins-monochrome-orbital-mist-poster_a429cabae0b6.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_uvita-twins-monochrome-orbital-mist-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_uvita-twins-monochrome-orbital-mist-poster_a429cabae0b6.jpg",
-      "summary": "",
-      "interpretation": "",
-      "tags": [],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_uvita-twins-red-eclipse-black-orb-poster",
-      "title": "Uvita Twins red eclipse black orb poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_uvita-twins-red-eclipse-black-orb-poster_60d96329805c.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_uvita-twins-red-eclipse-black-orb-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_uvita-twins-red-eclipse-black-orb-poster_60d96329805c.jpg",
-      "summary": "",
-      "interpretation": "",
-      "tags": [],
-      "candidates": []
-    },
-    {
-      "id": "2026-09-13_uvita-twins-traffik-black-typographic-void-poster",
-      "title": "Uvita Twins Traffik black typographic void poster",
-      "created": "2026-09-13",
-      "status": "goyj_review_needed",
-      "imageSrc": "assets/chris-archive/2026-09-13_uvita-twins-traffik-black-typographic-void-poster_9312fe0728a5.jpg",
-      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-13_uvita-twins-traffik-black-typographic-void-poster.md",
-      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-13_uvita-twins-traffik-black-typographic-void-poster_9312fe0728a5.jpg",
-      "summary": "거대한 검은 사각 void가 대부분의 화면을 차지하고, 좌상단에 얇은 대형 흰 타이포 `UVITA TWINS TRAFFIK`, `026`, 작은 metadata가 겹쳐 있으며, 하단에는 큰 곡선 글리프 일부가 보이는 흑백/그레이 editorial poster. 극단적인 여백과 타이포 레이어로 아카이브 spine, typographic void, poster-as-container 느낌을 만든다.",
-      "interpretation": "거대한 검은 사각 void가 대부분의 화면을 차지하고, 좌상단에 얇은 대형 흰 타이포 `UVITA TWINS TRAFFIK`, `026`, 작은 metadata가 겹쳐 있으며, 하단에는 큰 곡선 글리프 일부가 보이는 흑백/그레이 editorial poster. 극단적인 여백과 타이포 레이어로 아카이브 spine, typographic void, poster-as-container 느낌을 만든다.",
-      "tags": [
-        "핵심 팔레트는 black, white, gray를 중심으로 하며, 이미지에 따라 red halo 또는 paper/physical object tone이 보조한다.",
-        "glow보다 print grain, blur, vinyl/종이/스튜디오 오브젝트, 혹은 거대한 black void가 미감의 중심이다.",
-        "지금까지의 luminous AI reference와 달리, 더 아날로그적이고 editorial/archive identity에 가깝다."
       ],
       "candidates": []
     }

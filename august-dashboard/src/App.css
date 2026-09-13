@@ -6827,8 +6827,14 @@
 
 .chris-archive-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(176px, 1fr));
-  gap: clamp(0.75rem, 1.4vw, 1.05rem);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+@media (max-width: 1024px) and (min-width: 761px) {
+  .chris-archive-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .chris-archive-tile {
