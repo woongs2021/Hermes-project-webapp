@@ -2,12 +2,13 @@ import { useEffect, useRef, useState, type WheelEvent } from 'react'
 import { fallbackHomeVisualSet, loadHomeVisualSet, type HomeVisualItem, type HomeVisualSet } from './homeVisualSet'
 import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type ResearchBoardItem } from './researchBoard'
 import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, MuyeolValidationPanel, ObdGrowthTimelinePanel } from './extendedPanels'
+import { fallbackChrisArchive, loadChrisArchive, type ChrisArchiveItem, type ChrisArchiveManifest } from './chrisArchive'
 import './App.css'
 
 const publicAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
 const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
 
-type TabId = 'home' | 'obd' | 'visuals' | 'research' | 'report'
+type TabId = 'home' | 'obd' | 'visuals' | 'chrisArchive' | 'research' | 'report'
 type ThemeMode = 'light' | 'dark'
 type ObdSubTabId = 'growth' | 'graph' | 'about'
 type TextSegment = { text: string; emphasis?: boolean }
@@ -70,6 +71,13 @@ const tabs: Tab[] = [
     eyebrow: 'Home visual system',
     title: 'Go Youn-jung Visual Archive',
     description: '최종 승인된 Go Youn-jung 홈 비주얼을 오래된 순서로 누적하고, 각 still을 클릭하면 turntable detail을 확인합니다.',
+  },
+  {
+    id: 'chrisArchive',
+    label: 'Chris Archive',
+    eyebrow: 'Design DNA archive',
+    title: 'Chris Archive',
+    description: 'Chris가 수집한 시각 레퍼런스를 썸네일 대시보드로 보고, 클릭하면 Karina의 1차 분석과 디자인시스템 후보를 팝업으로 확인합니다.',
   },
   {
     id: 'research',
@@ -1012,6 +1020,97 @@ function HomeVisualDetail({
   )
 }
 
+function ChrisArchivePanel() {
+  const [archive, setArchive] = useState<ChrisArchiveManifest>(fallbackChrisArchive)
+  const [selectedItem, setSelectedItem] = useState<ChrisArchiveItem | null>(null)
+
+  useEffect(() => {
+    let isMounted = true
+    loadChrisArchive().then((loadedArchive) => {
+      if (!isMounted) return
+      setArchive(loadedArchive)
+    })
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  const totalItems = archive.items.length
+  const latestDate = archive.items.at(-1)?.created ?? 'pending'
+  const goyjPending = archive.items.filter((item) => item.status === 'goyj_review_needed').length
+
+  return (
+    <div className="chris-archive-shell" aria-label="Chris Archive thumbnail dashboard">
+      <section className="content-card chris-archive-overview">
+        <div>
+          <p className="card-kicker">Chris Archive · design-system source material</p>
+          <h3>수집한 이미지가 디자인 DNA 후보로 쌓이는 썸네일 대시보드</h3>
+          <p>
+            각 이미지는 원본과 Karina 1차 분석을 public-safe manifest로 복사해 보여줍니다. 썸네일을 클릭하면 컬러, 메타포, 디자인시스템 후보를 팝업으로 확인할 수 있습니다.
+          </p>
+        </div>
+        <div className="chris-archive-stats" aria-label="Chris Archive stats">
+          <span><strong>{totalItems}</strong> references</span>
+          <span><strong>{goyjPending}</strong> GoYJ review queue</span>
+          <span><strong>{latestDate}</strong> latest</span>
+        </div>
+      </section>
+
+      <section className="chris-archive-grid" aria-label="Chris Archive reference thumbnails">
+        {archive.items.map((item, index) => (
+          <button
+            type="button"
+            className="chris-archive-tile"
+            key={item.id}
+            onClick={() => setSelectedItem(item)}
+            aria-label={`${item.title} 상세 분석 열기`}
+          >
+            <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} thumbnail`} loading={index < 8 ? 'eager' : 'lazy'} decoding="async" />
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <strong>{item.title}</strong>
+            <small>{item.created}</small>
+          </button>
+        ))}
+      </section>
+
+      {selectedItem ? (
+        <div className="chris-archive-modal-backdrop" role="presentation" onClick={() => setSelectedItem(null)}>
+          <article
+            className="chris-archive-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="chris-archive-modal-title"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button type="button" className="chris-archive-modal-close" onClick={() => setSelectedItem(null)} aria-label="Chris Archive 상세 팝업 닫기">
+              ×
+            </button>
+            <div className="chris-archive-modal-media">
+              <img src={toAppAssetSrc(selectedItem.imageSrc)} alt={`${selectedItem.title} full reference`} />
+            </div>
+            <div className="chris-archive-modal-copy">
+              <p className="card-kicker">{selectedItem.created} · {selectedItem.status}</p>
+              <h3 id="chris-archive-modal-title">{selectedItem.title}</h3>
+              <p>{selectedItem.summary}</p>
+              <p>{selectedItem.interpretation}</p>
+              <div className="chris-archive-chip-row" aria-label="Visual tags">
+                {selectedItem.tags.slice(0, 8).map((tag) => <span key={tag}>{tag}</span>)}
+              </div>
+              <div className="chris-archive-candidate-list">
+                <p className="card-kicker">Design-system extraction candidates</p>
+                <ul>
+                  {selectedItem.candidates.slice(0, 8).map((candidate) => <li key={candidate}>{candidate}</li>)}
+                </ul>
+              </div>
+              <p className="manifest-policy">{archive.sourcePolicy}</p>
+            </div>
+          </article>
+        </div>
+      ) : null}
+    </div>
+  )
+}
+
 function laneLabel(lane: ResearchBoardItem['lane']) {
   return lane === 'yuna' ? 'Yuna · AI / agent UX' : 'Go Youn-jung · UX / brand / design'
 }
@@ -1916,6 +2015,8 @@ function App() {
           <TeamPanel />
         ) : activeTab.id === 'visuals' ? (
           <HomeVisualHeroPanel />
+        ) : activeTab.id === 'chrisArchive' ? (
+          <ChrisArchivePanel />
         ) : activeTab.id === 'obd' ? (
           <ObdKnowledgeLoopPanel />
         ) : activeTab.id === 'research' ? (

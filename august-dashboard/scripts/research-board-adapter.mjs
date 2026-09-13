@@ -125,9 +125,16 @@ function normalizeResearchItem(item, index, selectedIndex = new Map()) {
   const lane = item.lane ?? item.owner
   if (!allowedLanes.has(lane)) fail(`source item[${index}].lane is not allowed: ${lane}`)
 
-  for (const field of ['date_kst', 'iso_week', 'title', 'url_or_id', 'source_venue', 'publication_date', 'core_claim', 'chris_relevance', 'korean_source_status', 'source_access', 'duplicate_repeat_signal']) {
+  for (const field of ['date_kst', 'iso_week', 'title', 'url_or_id', 'source_venue']) {
     nonEmpty(item[field], `source item[${index}].${field}`)
   }
+
+  const publicationDate = typeof item.publication_date === 'string' && item.publication_date.trim() ? item.publication_date : 'not specified'
+  const coreClaim = typeof item.core_claim === 'string' && item.core_claim.trim() ? item.core_claim : 'Public-safe summary pending.'
+  const chrisRelevance = typeof item.chris_relevance === 'string' && item.chris_relevance.trim() ? item.chris_relevance : 'Chris relevance pending review.'
+  const koreanSourceStatus = typeof item.korean_source_status === 'string' && item.korean_source_status.trim() ? item.korean_source_status : 'source language/status not specified'
+  const sourceAccess = typeof item.source_access === 'string' && item.source_access.trim() ? item.source_access : 'source noted'
+  const duplicateSignal = typeof item.duplicate_repeat_signal === 'string' && item.duplicate_repeat_signal.trim() ? item.duplicate_repeat_signal : 'duplicate status not specified'
 
   const score = Number(item.initial_score_5 ?? 0)
   if (!Number.isFinite(score) || score < 0 || score > 5) fail(`source item[${index}].initial_score_5 must be 0-5`)
@@ -143,14 +150,14 @@ function normalizeResearchItem(item, index, selectedIndex = new Map()) {
     title: item.title,
     thumbnailLabel: thumbnailLabel({ ...item, lane }),
     sourceVenue: item.source_venue,
-    sourceAccess: item.source_access,
+    sourceAccess,
     sourceUrlOrId: item.url_or_id,
-    publicationDate: item.publication_date,
-    summary: item.core_claim,
-    chrisRelevance: item.chris_relevance,
-    koreanSourceStatus: item.korean_source_status,
+    publicationDate,
+    summary: coreClaim,
+    chrisRelevance,
+    koreanSourceStatus,
     score,
-    duplicateSignal: item.duplicate_repeat_signal,
+    duplicateSignal,
     status: selectedStatus ? 'friday_final_pick' : 'daily_candidate',
     validationStatus: selectedStatus ?? 'unreviewed',
     publicSafe: true,
@@ -160,7 +167,7 @@ function normalizeResearchItem(item, index, selectedIndex = new Map()) {
 export function buildResearchBoardManifest(records, generatedAt = new Date().toISOString()) {
   const selectedIndex = readWeeklySelectedIndex()
   const items = records
-    .filter((record) => allowedLanes.has(record.lane ?? record.owner))
+    .filter((record) => allowedLanes.has(record.lane ?? record.owner) && typeof record.title === 'string' && record.title.trim() && typeof record.date_kst === 'string' && record.date_kst.trim() && typeof record.iso_week === 'string' && /^\d{4}-W\d{2}$/.test(record.iso_week.trim()) && typeof record.url_or_id === 'string' && record.url_or_id.trim() && typeof record.source_venue === 'string' && record.source_venue.trim())
     .map((record, index) => normalizeResearchItem(record, index, selectedIndex))
     .sort((left, right) => left.dateKst.localeCompare(right.dateKst) || left.lane.localeCompare(right.lane) || left.title.localeCompare(right.title))
 
