@@ -189,7 +189,7 @@ const operatingMapInfographicNodes = [
     number: '01',
     label: 'Chris',
     value: 'Chris가 지금 필요한 질문, 우선순위, 최종 판단 기준을 던지면 팀의 실행 루프가 시작됩니다.',
-    faces: [],
+    faces: [{ name: 'Chris', src: teamFaceSrc('chris_profile.png') }],
   },
   {
     number: '02',
@@ -222,28 +222,34 @@ const operatingMapInfographicNodes = [
     number: '06',
     label: 'Chris',
     value: '검증된 결과는 다시 Chris의 다음 선택으로 돌아가고, 승인·수정·다음 실행 중 하나로 이어집니다.',
-    faces: [],
+    faces: [{ name: 'Chris', src: teamFaceSrc('chris_profile.png') }],
   },
 ]
 
 function SignalLoopInfographic() {
   return (
-    <section className="obd-infographic signal-loop-infographic" aria-label="Signal Loop transformation infographic">
+    <section className="obd-infographic signal-loop-infographic" aria-label="Signal Loop five detailed cards">
       <div className="obd-infographic-header">
-        <p className="card-kicker">Signal loop · easy version</p>
+        <p className="card-kicker">Signal loop · source to judgment</p>
         <h3>자료가 Chris의 다음 선택으로 바뀌는 5단계</h3>
-        <p>Signal Loop는 어려운 분석표가 아니라, 흩어진 자료를 모아 “무엇을 결정하면 되는지”까지 정리해 돌려주는 과정입니다.</p>
+        <p>화살표 요약과 상세 설명을 나누지 않고, 각 단계가 무엇을 보고 무엇을 남기는지 한 장의 카드 흐름으로 정리합니다.</p>
       </div>
 
-      <div className="signal-loop-diagram" aria-label="Five-step signal loop">
+      <div className="signal-loop-card-grid" aria-label="Five detailed signal-loop cards">
         {obdMilestones.map((milestone, index) => (
-          <div className="obd-step-with-arrow" key={milestone.number}>
-            <article className="obd-step-card signal-loop-node">
-              <span>{milestone.number}</span>
-              <h4>{milestone.title}</h4>
-              <p>{milestone.output}</p>
+          <div className="signal-loop-card-step" key={milestone.number}>
+            <article className="signal-loop-detail-card">
+              <div className="signal-loop-card-index" aria-hidden="true">
+                <span>{milestone.number}</span>
+              </div>
+              <div className="signal-loop-card-copy">
+                <p className="card-kicker">{milestone.lens}</p>
+                <h4>{milestone.title}</h4>
+                <strong>{milestone.output}</strong>
+                <p>{milestone.detail}</p>
+              </div>
             </article>
-            {index < obdMilestones.length - 1 ? <span className="obd-step-arrow" aria-hidden="true">↓</span> : null}
+            {index < obdMilestones.length - 1 ? <span className="signal-loop-card-arrow" aria-hidden="true">↓</span> : null}
           </div>
         ))}
       </div>
@@ -262,13 +268,22 @@ function OperatingMapInfographic() {
 
       <div className="operating-loop-diagram" aria-label="Chris Karina evidence OBD Muyeol operating loop">
         {operatingMapInfographicNodes.map((node, index) => (
-          <div className="obd-step-with-arrow" key={`${node.number}-${node.label}`}>
-            <article className="obd-step-card operating-loop-node">
+          <div className={`obd-step-with-arrow operating-loop-step operating-loop-step-${node.number}`} key={`${node.number}-${node.label}`}>
+            <article className={`obd-step-card operating-loop-node${node.label === 'Chris' ? ' is-chris' : ''}`}>
               <div className="obd-step-card-head">
                 {node.faces.length > 0 ? (
                   <div className="obd-agent-face-row" aria-label={`${node.label} agent faces`}>
                     {node.faces.map((face) => (
-                      <img className="obd-agent-face" src={face.src} alt={face.name} key={face.name} />
+                      <img
+                        className="obd-agent-face"
+                        src={face.src}
+                        alt={face.name}
+                        width="50"
+                        height="50"
+                        loading="eager"
+                        decoding="async"
+                        key={face.name}
+                      />
                     ))}
                   </div>
                 ) : null}
@@ -304,6 +319,17 @@ export function GraphRelationshipPanel() {
           <span className="status-chip muted">oldest-first public manifests</span>
         </div>
       </article>
+
+      <figure className="content-card operating-map-image-card">
+        <img
+          src={`${import.meta.env.BASE_URL}assets/obd/operating-map-concrete-frame.jpg`}
+          alt="Concrete interior frame for OBD Operating Map"
+          width="1280"
+          height="640"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
 
       <OperatingMapInfographic />
 
@@ -367,21 +393,18 @@ export function ObdGrowthTimelinePanel() {
         </div>
       </article>
 
-      <SignalLoopInfographic />
+      <figure className="content-card signal-loop-image-card">
+        <img
+          src={`${import.meta.env.BASE_URL}assets/obd/signal-loop-threshold-line.jpg`}
+          alt="Small dark tree crossing a luminous signal line for OBD Signal Loop"
+          width="1280"
+          height="640"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
 
-      <section className="timeline-rail" aria-label="OBD timeline cards">
-        {obdMilestones.map((milestone) => (
-          <article className="timeline-card" key={milestone.number}>
-            <span className="timeline-number">{milestone.number}</span>
-            <div>
-              <p className="card-kicker">{milestone.lens}</p>
-              <h3>{milestone.title}</h3>
-              <strong>{milestone.output}</strong>
-              <p>{milestone.detail}</p>
-            </div>
-          </article>
-        ))}
-      </section>
+      <SignalLoopInfographic />
     </div>
   )
 }

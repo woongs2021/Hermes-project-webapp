@@ -69,8 +69,12 @@ function slugify(text) {
 
 function thumbnailLabel(item) {
   const lanePrefix = item.lane === 'yuna' ? 'YU' : 'GJ'
-  const week = item.iso_week?.replace(/^\d{4}-W/, 'W') ?? 'W??'
+  const week = normalizeIsoWeek(item.iso_week)?.replace(/^\d{4}-W/, 'W') ?? 'W??'
   return `${lanePrefix}-${week}`
+}
+
+function normalizeIsoWeek(value = '') {
+  return value.replace(/^(\d{4})-(\d{2})$/, '$1-W$2')
 }
 
 function normalizeComparableTitle(text = '') {
@@ -90,7 +94,7 @@ function readWeeklySelectedIndex(path = weeklySelectedPath) {
   const selected = new Map()
 
   for (const [index, line] of lines.entries()) {
-    const titleMatch = line.match(/^####\s+\d+\)\s+(.+)$/) ?? line.match(/^[🧠✨🇰🇷🎨🧭🔬]+\s+\*\*(.+)\*\*$/u)
+    const titleMatch = line.match(/^####\s+\d+\)\s+(.+)$/) ?? line.match(/^####\s+(.+)$/) ?? line.match(/^(?:🧠|✨|🇰🇷|🎨|🧭|🔬)+\s+\*\*(.+)\*\*$/u)
     if (!titleMatch) continue
 
     const title = titleMatch[1].trim()
@@ -144,7 +148,7 @@ function normalizeResearchItem(item, index, selectedIndex = new Map()) {
   return {
     id: `${item.date_kst}-${lane}-${slugify(item.title) || index}`,
     dateKst: item.date_kst,
-    isoWeek: item.iso_week,
+    isoWeek: normalizeIsoWeek(item.iso_week),
     lane,
     owner: lane,
     title: item.title,

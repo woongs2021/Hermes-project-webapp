@@ -999,7 +999,8 @@
 }
 
 .intro-hero-card,
-.profile-lens-card {
+.profile-lens-card,
+.son-question-formula-card {
   grid-column: 1 / -1;
 }
 
@@ -1031,7 +1032,8 @@
 
 .profile-statement-card,
 .credential-card,
-.profile-lens-card {
+.profile-lens-card,
+.son-question-formula-card {
   display: grid;
   gap: 14px;
   align-content: start;
@@ -1044,6 +1046,9 @@
 
 .team-orchestration-image-card,
 .obd-definition-image-card,
+.signal-loop-image-card,
+.operating-map-image-card,
+.visual-archive-image-card,
 .research-loop-image-card,
 .monthly-synthesis-image-card {
   grid-column: 1 / -1;
@@ -1054,8 +1059,15 @@
   background: #020507;
 }
 
+.content-card.visual-archive-image-card {
+  padding: 0;
+}
+
 .team-orchestration-image-card img,
 .obd-definition-image-card img,
+.signal-loop-image-card img,
+.operating-map-image-card img,
+.visual-archive-image-card img,
 .research-loop-image-card img,
 .monthly-synthesis-image-card img {
   display: block;
@@ -1065,13 +1077,61 @@
   object-position: center;
 }
 
+.content-card.visual-archive-image-card > img {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.16);
+  transform-origin: center;
+}
+
 .profile-chris-card {
-  max-width: 860px;
+  max-width: 920px;
+}
+
+.profile-chris-layout {
+  display: grid;
+  grid-template-columns: minmax(74px, 101px) minmax(0, 1fr);
+  gap: clamp(18px, 3vw, 28px);
+  align-items: center;
+}
+
+.profile-chris-image {
+  display: block;
+  width: min(101px, 19vw);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 28px;
+  object-fit: cover;
+  object-position: center 42%;
+  border: 1px solid color-mix(in srgb, var(--primary) 24%, var(--stroke));
+  box-shadow: 0 20px 48px color-mix(in srgb, var(--primary) 16%, transparent);
+  background: color-mix(in srgb, var(--surface) 90%, var(--primary) 10%);
+}
+
+.profile-chris-copy {
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .profile-chris-layout {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .profile-chris-image {
+    width: min(92px, 27vw);
+    border-radius: 24px;
+  }
 }
 
 .profile-statement-card h3,
 .credential-card h3,
-.profile-lens-card h3 {
+.profile-lens-card h3,
+.son-question-formula-card h3 {
   font-size: clamp(1.25rem, 2vw, 2rem);
   letter-spacing: -0.04em;
 }
@@ -1561,6 +1621,96 @@
   color: var(--mid);
   font-size: 0.86rem;
   font-weight: 750;
+}
+
+.son-question-formula-card {
+  background:
+    radial-gradient(circle at 10% 8%, rgba(202, 247, 255, 0.58), transparent 30%),
+    linear-gradient(135deg, rgba(252, 252, 255, 0.96), rgba(244, 248, 251, 0.88));
+}
+
+.son-question-formula-card > p:not(.card-kicker) {
+  max-width: 880px;
+  color: var(--muted-ink);
+  font-size: 1rem;
+}
+
+.son-formula-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid rgba(64, 101, 248, 0.16);
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--mid);
+  font-size: 0.9rem;
+}
+
+.son-formula-summary strong {
+  color: var(--ink);
+}
+
+.son-question-signal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.son-question-signal {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  border: 1px solid rgba(64, 101, 248, 0.12);
+  border-radius: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.son-question-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 30px;
+  border-radius: 999px;
+  background: rgba(22, 66, 124, 0.08);
+  color: var(--mid);
+  font-size: 0.75rem;
+  font-weight: 820;
+}
+
+.son-question-text {
+  color: var(--ink);
+  font-weight: 780;
+}
+
+.son-question-signal h4 {
+  margin-top: 4px;
+  color: var(--mid);
+  font-size: 1rem;
+}
+
+.son-question-signal p:not(.son-question-text) {
+  margin-top: 6px;
+  color: var(--muted-ink);
+  font-size: 0.92rem;
+}
+
+.son-question-signal code {
+  display: block;
+  margin-top: 10px;
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: rgba(22, 66, 124, 0.06);
+  color: var(--ink);
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  white-space: normal;
 }
 
 .home-visual-grid {
@@ -2933,7 +3083,8 @@
   .validation-check-grid,
   .screen-spread,
   .sample-data-layout,
-  .boundary-lanes {
+  .boundary-lanes,
+  .son-question-signal-grid {
     grid-template-columns: 1fr;
   }
 
@@ -5885,12 +6036,32 @@
   background: color-mix(in srgb, var(--panel-surface) 96%, transparent);
 }
 
-.operating-loop-node:nth-child(1) { grid-area: step1; }
-.operating-loop-node:nth-child(2) { grid-area: step2; }
-.operating-loop-node:nth-child(3) { grid-area: step3; }
-.operating-loop-node:nth-child(4) { grid-area: step4; }
-.operating-loop-node:nth-child(5) { grid-area: step5; }
-.operating-loop-node:nth-child(6) { grid-area: step6; }
+.operating-loop-node.is-chris {
+  --operating-chris-accent: #4065f8;
+  border-color: color-mix(in srgb, var(--operating-chris-accent) 36%, var(--stroke));
+  background:
+    radial-gradient(circle at 8% 12%, color-mix(in srgb, var(--operating-chris-accent) 18%, transparent), transparent 38%),
+    linear-gradient(135deg, color-mix(in srgb, var(--operating-chris-accent) 10%, var(--surface)), color-mix(in srgb, var(--panel-surface) 96%, transparent) 74%);
+}
+
+.operating-loop-node.is-chris h4 {
+  color: var(--operating-chris-accent);
+  font-size: clamp(1.12rem, 1.55vw, 1.42rem);
+  font-weight: 640;
+  letter-spacing: -0.045em;
+}
+
+.operating-loop-node.is-chris .obd-step-card-head span {
+  color: var(--operating-chris-accent);
+  font-weight: 820;
+}
+
+.operating-loop-step-01 { grid-area: step1; }
+.operating-loop-step-02 { grid-area: step2; }
+.operating-loop-step-03 { grid-area: step3; }
+.operating-loop-step-04 { grid-area: step4; }
+.operating-loop-step-05 { grid-area: step5; }
+.operating-loop-step-06 { grid-area: step6; }
 
 .operating-loop-node small {
   position: absolute;
@@ -5909,21 +6080,21 @@
   transform: translateY(-50%);
 }
 
-.operating-loop-node:nth-child(3) small {
+.operating-loop-step-03 .operating-loop-node small {
   top: auto;
   right: 50%;
   bottom: -30px;
   transform: translateX(50%) rotate(90deg);
 }
 
-.operating-loop-node:nth-child(4) small,
-.operating-loop-node:nth-child(5) small {
+.operating-loop-step-04 .operating-loop-node small,
+.operating-loop-step-05 .operating-loop-node small {
   right: auto;
   left: -26px;
   transform: translateY(-50%) rotate(180deg);
 }
 
-.operating-loop-node:nth-child(6)::after {
+.operating-loop-step-06 .operating-loop-node::after {
   position: absolute;
   top: 50%;
   left: -30px;
@@ -6025,7 +6196,7 @@
   }
 
   .operating-loop-node small,
-  .operating-loop-node:nth-child(6)::after {
+  .operating-loop-step-06 .operating-loop-node::after {
     display: none;
   }
 
@@ -6248,6 +6419,29 @@
   background: color-mix(in srgb, #f0a73a 10%, var(--panel-surface));
 }
 
+.operating-loop-diagram .operating-loop-step {
+  grid-area: auto;
+}
+
+.operating-loop-diagram .operating-loop-node.is-chris {
+  --operating-chris-accent: #4065f8;
+  border-color: color-mix(in srgb, var(--operating-chris-accent) 36%, var(--stroke));
+  background:
+    radial-gradient(circle at 8% 12%, color-mix(in srgb, var(--operating-chris-accent) 18%, transparent), transparent 38%),
+    linear-gradient(135deg, color-mix(in srgb, var(--operating-chris-accent) 10%, var(--surface)), color-mix(in srgb, var(--panel-surface) 96%, transparent) 74%);
+}
+
+.operating-loop-diagram .operating-loop-node.is-chris h4 {
+  color: var(--operating-chris-accent);
+  font-size: clamp(1.12rem, 1.55vw, 1.42rem);
+  font-weight: 640;
+}
+
+.operating-loop-diagram .operating-loop-node.is-chris .obd-step-card-head span {
+  color: var(--operating-chris-accent);
+  font-weight: 820;
+}
+
 .obd-agent-face-row {
   display: flex;
   flex-direction: row-reverse;
@@ -6269,8 +6463,161 @@
 }
 
 :root[data-theme='dark'] .obd-step-card,
-:root[data-theme='dark'] .signal-loop-node {
+:root[data-theme='dark'] .signal-loop-node,
+:root[data-theme='dark'] .signal-loop-detail-card {
   background: color-mix(in srgb, var(--panel-surface) 98%, transparent);
+}
+
+/* Follow-up 32: OBD Signal Loop merged detail cards */
+.signal-loop-card-grid {
+  display: grid;
+  max-width: 920px;
+  gap: 0;
+  align-items: stretch;
+}
+
+.signal-loop-card-step {
+  display: grid;
+  justify-items: stretch;
+}
+
+.signal-loop-detail-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 16px;
+  align-content: start;
+  min-height: 0;
+  border: 1px solid color-mix(in srgb, var(--signal-accent, var(--primary)) 38%, var(--stroke));
+  border-radius: 24px;
+  padding: clamp(16px, 1.8vw, 22px);
+  background:
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, var(--signal-accent, var(--primary)) 24%, transparent), transparent 34%),
+    linear-gradient(180deg, color-mix(in srgb, var(--signal-accent, var(--primary)) 13%, var(--surface)), transparent 68%),
+    color-mix(in srgb, var(--panel-surface) 96%, transparent);
+  box-shadow: var(--shadow-card);
+}
+
+.signal-loop-card-index {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 10px;
+}
+
+.signal-loop-card-index span {
+  display: block;
+  width: 54px;
+  color: color-mix(in srgb, var(--signal-accent, var(--primary)) 88%, var(--ink));
+  font-size: clamp(1.35rem, 2.3vw, 2rem);
+  font-weight: 560;
+  letter-spacing: 0.08em;
+  line-height: 0.9;
+}
+
+.signal-loop-card-arrow {
+  display: inline-grid;
+  justify-self: start;
+  width: 54px;
+  height: 42px;
+  place-items: center;
+  color: color-mix(in srgb, var(--signal-accent, var(--primary)) 82%, var(--ink));
+  font-size: 1.05rem;
+  font-weight: 780;
+  line-height: 1;
+}
+
+.signal-loop-card-copy {
+  display: grid;
+  min-width: 0;
+  gap: 9px;
+}
+
+.signal-loop-card-copy h4 {
+  color: var(--ink);
+  font-size: clamp(1.08rem, 1.6vw, 1.45rem);
+  font-weight: 540;
+  letter-spacing: -0.055em;
+  line-height: 1.05;
+}
+
+.signal-loop-card-copy strong {
+  color: var(--mid);
+  font-size: 0.92rem;
+  line-height: 1.42;
+}
+
+.signal-loop-card-copy p:not(.card-kicker) {
+  color: var(--muted-ink);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.signal-loop-card-step:nth-child(1) {
+  --signal-accent: #4065f8;
+}
+
+.signal-loop-card-step:nth-child(2) {
+  --signal-accent: #8f63ff;
+}
+
+.signal-loop-card-step:nth-child(3) {
+  --signal-accent: #008fd3;
+}
+
+.signal-loop-card-step:nth-child(4) {
+  --signal-accent: #22a06b;
+}
+
+.signal-loop-card-step:nth-child(5) {
+  --signal-accent: #d98314;
+}
+
+.signal-loop-card-step:nth-child(1) .signal-loop-detail-card {
+  background:
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #4065f8 9%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #4065f8 5%, var(--surface)), var(--panel-surface) 72%);
+}
+
+.signal-loop-card-step:nth-child(2) .signal-loop-detail-card {
+  background:
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #8f63ff 9%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #8f63ff 5%, var(--surface)), var(--panel-surface) 72%);
+}
+
+.signal-loop-card-step:nth-child(3) .signal-loop-detail-card {
+  background:
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #008fd3 9%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #008fd3 5%, var(--surface)), var(--panel-surface) 72%);
+}
+
+.signal-loop-card-step:nth-child(4) .signal-loop-detail-card {
+  background:
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #22a06b 9%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #22a06b 5%, var(--surface)), var(--panel-surface) 72%);
+}
+
+.signal-loop-card-step:nth-child(5) .signal-loop-detail-card {
+  background:
+    radial-gradient(circle at 6% 14%, color-mix(in srgb, #d98314 10%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, #d98314 5%, var(--surface)), var(--panel-surface) 72%);
+}
+
+@media (max-width: 640px) {
+  .signal-loop-card-grid {
+    max-width: none;
+  }
+
+  .signal-loop-detail-card {
+    grid-template-columns: 38px minmax(0, 1fr);
+    border-radius: 22px;
+    padding: 18px;
+  }
+
+  .signal-loop-card-index span,
+  .signal-loop-card-arrow {
+    width: 38px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -6419,7 +6766,6 @@
     padding-inline: 10px;
   }
 }
-
 
 .chrisArchive-workspace {
   gap: clamp(1.3rem, 2vw, 2rem);
@@ -6672,5 +7018,409 @@
   .chris-archive-modal {
     max-height: 92vh;
     border-radius: 26px;
+  }
+}
+
+/* Mobile-only refinement: align page titles with card body margin and keep tabs inside hamburger */
+@media (max-width: 560px) {
+  .workspace-header {
+    box-sizing: border-box;
+    max-width: none;
+    width: 100%;
+    padding-inline: 20px;
+  }
+
+  .workspace-header p:not(.eyebrow) {
+    max-width: none;
+  }
+
+  .obd-subtab-intro {
+    box-sizing: border-box;
+    padding-inline: 20px;
+  }
+
+  .obd-subtab-intro p:not(.card-kicker) {
+    max-width: none;
+  }
+
+  .topbar .tab-nav:not(.open) {
+    display: none;
+  }
+
+  .topbar .tab-nav {
+    grid-template-columns: 1fr;
+    max-height: 0;
+    margin-top: 0;
+    border-width: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .topbar .tab-nav.open {
+    display: grid;
+    max-height: 560px;
+    margin-top: 2px;
+    border-width: 1px;
+    padding: 10px;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+}
+
+/* Design DNA Studio */
+.design-dna-shell {
+  display: grid;
+  gap: 20px;
+}
+
+.design-dna-subtab-nav {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.design-dna-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.design-dna-hero-card,
+.design-dna-archive-brief,
+.design-dna-dimension-card,
+.design-dna-roadmap-card,
+.package-system-card {
+  display: grid;
+  gap: 16px;
+}
+
+.design-dna-hero-card h3,
+.design-dna-archive-brief h3,
+.design-dna-dimension-card h3,
+.design-dna-roadmap-card h3 {
+  max-width: 860px;
+  font-size: clamp(1.9rem, 3.25vw, 3.55rem);
+  font-weight: 420;
+  letter-spacing: -0.075em;
+  line-height: 0.98;
+}
+
+.design-dna-hero-card p,
+.design-dna-archive-brief p,
+.design-dna-dimension-card p,
+.design-dna-roadmap-card p,
+.design-dna-process-card p,
+.agentic-package-stage p,
+.chris-design-tile p {
+  color: var(--muted-ink);
+}
+
+.design-dna-hero-card blockquote {
+  margin: 0;
+  border-left: 3px solid var(--primary);
+  padding: 12px 0 12px 18px;
+  color: var(--ink);
+  font-size: clamp(1rem, 1.65vw, 1.24rem);
+  font-weight: 520;
+  letter-spacing: -0.035em;
+}
+
+.design-dna-process {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.design-dna-process-card {
+  display: grid;
+  min-height: 190px;
+  gap: 10px;
+  align-content: start;
+  background:
+    radial-gradient(circle at 12% 8%, color-mix(in srgb, var(--primary) 12%, transparent), transparent 36%),
+    var(--surface);
+}
+
+.design-dna-process-card span {
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 820;
+  letter-spacing: 0.12em;
+}
+
+.design-dna-process-card h4,
+.agentic-package-stage h4 {
+  color: var(--ink);
+  font-size: 1.08rem;
+  font-weight: 660;
+  letter-spacing: -0.04em;
+}
+
+.design-dna-dimension-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.design-dna-dimension-cloud span,
+.design-dna-equation span {
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  padding: 9px 12px;
+  background: var(--chip-surface);
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 680;
+}
+
+.chris-design-archive-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.chris-design-tile {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--stroke);
+  border-radius: 24px;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.chris-design-tile-visual {
+  display: grid;
+  min-height: 160px;
+  place-items: start;
+  padding: 18px;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(224, 28, 40, 0.18), transparent 32%),
+    radial-gradient(circle at 82% 28%, color-mix(in srgb, var(--primary) 18%, transparent), transparent 30%),
+    linear-gradient(135deg, color-mix(in srgb, var(--panel-surface) 88%, white), color-mix(in srgb, #e01c28 8%, var(--canvas)));
+}
+
+.chris-design-tile:nth-child(2n) .chris-design-tile-visual {
+  background:
+    radial-gradient(circle at 82% 20%, color-mix(in srgb, var(--primary) 16%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, var(--ink) 6%, var(--canvas)), color-mix(in srgb, #e01c28 11%, var(--panel-surface)));
+}
+
+.chris-design-tile-visual span {
+  display: inline-grid;
+  min-width: 38px;
+  min-height: 28px;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(252, 252, 255, 0.76);
+  color: rgba(1, 1, 2, 0.72);
+  font-size: 0.68rem;
+  font-weight: 820;
+  backdrop-filter: blur(10px);
+}
+
+.chris-design-tile > div:last-child {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+}
+
+.chris-design-tile strong {
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.design-dna-equation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.design-dna-equation strong {
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.agentic-package-stage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.agentic-package-stage {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.design-dna-roadmap-card ol {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted-ink);
+}
+
+@media (max-width: 900px) {
+  .design-dna-subtab-nav,
+  .design-dna-process,
+  .chris-design-archive-board,
+  .agentic-package-stage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .design-dna-process-card {
+    min-height: 0;
+  }
+}
+
+.design-dna-hierarchy-card,
+.design-dna-agent-card,
+.design-dna-value-card {
+  display: grid;
+  gap: 16px;
+}
+
+.design-dna-hierarchy-header {
+  display: grid;
+  gap: 12px;
+  max-width: 880px;
+}
+
+.design-dna-hierarchy-header h3,
+.design-dna-agent-card h3 {
+  font-size: clamp(1.65rem, 2.7vw, 3rem);
+  font-weight: 420;
+  letter-spacing: -0.07em;
+  line-height: 1;
+}
+
+.design-dna-hierarchy-header p,
+.design-dna-value-card p,
+.design-dna-agent-card p,
+.design-dna-hierarchy-node p,
+.design-dna-hierarchy-node li {
+  color: var(--muted-ink);
+}
+
+.design-dna-hierarchy-flow {
+  display: grid;
+  gap: 12px;
+}
+
+.design-dna-hierarchy-step {
+  display: grid;
+  gap: 10px;
+}
+
+.design-dna-hierarchy-node {
+  display: grid;
+  gap: 10px;
+  border: 1px solid color-mix(in srgb, var(--primary) 20%, var(--stroke));
+  border-radius: 22px;
+  padding: clamp(16px, 2vw, 22px);
+  background:
+    radial-gradient(circle at 10% 10%, color-mix(in srgb, var(--primary) 10%, transparent), transparent 34%),
+    color-mix(in srgb, var(--panel-surface) 94%, transparent);
+}
+
+.design-dna-hierarchy-node span {
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 820;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.design-dna-hierarchy-node h4,
+.design-dna-value-card h4 {
+  color: var(--ink);
+  font-size: clamp(1.08rem, 1.6vw, 1.36rem);
+  font-weight: 650;
+  letter-spacing: -0.05em;
+}
+
+.design-dna-hierarchy-node ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.design-dna-hierarchy-node li {
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: var(--chip-surface);
+  font-size: 0.76rem;
+  font-weight: 640;
+}
+
+.design-dna-hierarchy-arrow {
+  display: inline-grid;
+  justify-self: center;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--primary) 42%, var(--stroke));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary) 9%, var(--surface));
+  color: var(--primary);
+  font-size: 1.05rem;
+}
+
+.design-dna-value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.design-dna-value-card {
+  align-content: start;
+  min-height: 170px;
+}
+
+.design-dna-agent-list {
+  display: grid;
+  gap: 10px;
+}
+
+.design-dna-agent-row {
+  display: grid;
+  grid-template-columns: 120px 160px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 14px;
+  background: var(--panel-surface);
+}
+
+.design-dna-agent-row strong {
+  color: var(--ink);
+}
+
+.design-dna-agent-row span {
+  color: var(--primary);
+  font-size: 0.76rem;
+  font-weight: 780;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.design-dna-agent-row p {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .design-dna-value-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .design-dna-agent-row {
+    grid-template-columns: 1fr;
   }
 }

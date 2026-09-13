@@ -8,9 +8,10 @@ import './App.css'
 const publicAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
 const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
 
-type TabId = 'home' | 'obd' | 'visuals' | 'chrisArchive' | 'research' | 'report'
+type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report'
 type ThemeMode = 'light' | 'dark'
 type ObdSubTabId = 'growth' | 'graph' | 'about'
+type DesignDnaSubTabId = 'about' | 'archive' | 'system'
 type TextSegment = { text: string; emphasis?: boolean }
 
 type Tab = {
@@ -42,6 +43,13 @@ type ProfileCredential = {
   detail: string
 }
 
+type SonQuestionSignal = {
+  question: string
+  axis: string
+  answerSignal: string
+  scoringFormula: string
+}
+
 type AgentProfile = {
   name: string
   title: string
@@ -66,6 +74,13 @@ const tabs: Tab[] = [
     description: 'Chris의 자료가 신호, 개념, 비즈니스 판단, 검증으로 순환하는 방식을 하나의 운영 지도로 정리합니다.',
   },
   {
+    id: 'research',
+    label: 'Research',
+    eyebrow: 'Chronological research board',
+    title: 'Yuna / Go Youn-jung Research Kanban',
+    description: 'Yuna와 Go Youn-jung의 논문 리서치 루프를 초창기 기록부터 시간순으로 긁어와 썸네일 카드와 클릭 상세 정보로 보여줍니다.',
+  },
+  {
     id: 'visuals',
     label: 'Visual Archive',
     eyebrow: 'Home visual system',
@@ -80,11 +95,11 @@ const tabs: Tab[] = [
     description: 'Chris가 수집한 시각 레퍼런스를 썸네일 대시보드로 보고, 클릭하면 Karina의 1차 분석과 디자인시스템 후보를 팝업으로 확인합니다.',
   },
   {
-    id: 'research',
-    label: 'Research',
-    eyebrow: 'Chronological research board',
-    title: 'Yuna / Go Youn-jung Research Kanban',
-    description: 'Yuna와 Go Youn-jung의 논문 리서치 루프를 초창기 기록부터 시간순으로 긁어와 썸네일 카드와 클릭 상세 정보로 보여줍니다.',
+    id: 'design-dna',
+    label: 'Design DNA',
+    eyebrow: 'Agentic brand system',
+    title: 'Design DNA Studio',
+    description: 'Chris가 좋아하는 시각 레퍼런스를 디자인 판단 구조로 바꾸고, 다양한 브랜드와 패키지 작업에 재사용하는 Agentic Brand & Package System입니다.',
   },
   {
     id: 'report',
@@ -119,6 +134,122 @@ const obdSubTabs: { id: ObdSubTabId; label: string; eyebrow: string; description
   },
 ]
 
+const designDnaSubTabs: { id: DesignDnaSubTabId; label: string; eyebrow: string; description: string }[] = [
+  {
+    id: 'about',
+    label: 'About Design DNA',
+    eyebrow: 'from references to reusable judgment',
+    description: '좋아하는 이미지를 그대로 복제하지 않고, 반복되는 색·타입·구도·질감·밀도·무드의 판단 논리로 바꾸는 설계 원칙입니다.',
+  },
+  {
+    id: 'archive',
+    label: 'Chris Design Archive',
+    eyebrow: 'reference dashboard',
+    description: 'Chris가 좋아하는 이미지들을 대시보드처럼 모아두고, 이후 각 이미지를 Design DNA의 근거 카드로 연결하는 공간입니다.',
+  },
+  {
+    id: 'system',
+    label: 'Agentic Brand & Package System',
+    eyebrow: 'brand & package system',
+    description: 'Design DNA와 브랜드 전략, 제품 제약, 시장 맥락을 곱해서 다양한 브랜드/패키지의 방향·프롬프트·목업·평가까지 이어갑니다.',
+  },
+]
+
+const designDnaProcessSteps = [
+  { step: '01', title: 'Upload References', copy: 'Chris가 좋아하는 이미지 5–50장을 모읍니다. 원본은 private workspace에 두고 웹앱에는 public-safe summary만 올립니다.' },
+  { step: '02', title: 'Discover DNA', copy: 'Go Youn-jung이 색, 타입, 구도, 질감, 밀도, 무드의 반복 패턴을 찾아 개인 Design DNA로 구조화합니다.' },
+  { step: '03', title: 'Define Brand', copy: 'Yuna와 Son이 브랜드 맥락, 카테고리 관습, 패키지 제약, MVP 범위를 정리합니다.' },
+  { step: '04', title: 'Create Direction', copy: 'Karina가 Design DNA × Brand Strategy × Product Constraints × Market Context를 하나의 art direction으로 묶습니다.' },
+  { step: '05', title: 'Generate Package', copy: 'Faker가 provider-independent Prompt Package를 만들고, 승인된 provider에서 bottle/package concept을 생성합니다.' },
+  { step: '06', title: 'Evaluate & Refine', copy: 'Muyeol과 Go Youn-jung이 DNA Match, Brand Fit, 리스크를 보고 다음 수정 액션을 남깁니다. Chris 판단이 최종 기준입니다.' },
+]
+
+const designDnaDimensions = [
+  'Color',
+  'Typography',
+  'Composition',
+  'Shape & Geometry',
+  'Graphic Motif',
+  'Texture',
+  'Photography',
+  'Visual Density',
+  'Mood',
+]
+
+const chrisDesignArchiveTiles = [
+  { title: 'Premium minimal object', note: 'solid background, tactile material, quiet confidence' },
+  { title: 'Editorial contrast', note: 'large negative space, asymmetric focus, strong hierarchy' },
+  { title: 'Soft 3D metaphor', note: 'rounded object, calm lighting, non-generic AI mood' },
+  { title: 'Brand heritage twist', note: 'recognizable equity reinterpreted as limited edition' },
+  { title: 'Packaging surface rhythm', note: 'label geometry, material finish, shelf presence' },
+  { title: 'Human approval signal', note: 'like/dislike/select feedback becomes preference weight' },
+]
+
+const agenticPackageStages = [
+  { title: 'System scope', value: 'Brand & Package System', detail: '병, 박스, 파우치, 캔, 라벨 등 다양한 패키지 타입으로 확장 가능한 agentic design workflow입니다.' },
+  { title: 'Canonical equation', value: 'DNA × Brand × Product × Market', detail: '개인 취향이 브랜드를 덮지 않도록 네 가지 축을 함께 봅니다.' },
+  { title: 'Prompt package', value: 'provider-independent spec', detail: 'Higgsfield, OpenAI, Kling, Midjourney 등으로 옮길 수 있도록 raw prompt가 아니라 구조화된 방향 패키지를 만듭니다.' },
+  { title: 'Starter case', value: 'Coca-Cola special edition bottle', detail: '코카콜라 병 패키지는 첫 실험 케이스일 뿐이며, 이후 다른 브랜드와 패키지 타입으로 계속 업데이트합니다.' },
+  { title: 'Critic loop', value: 'DNA Match + Brand Fit', detail: '점수는 객관 진실이 아니라 판단 보조입니다. 결과보다 수정 액션과 Chris 승인 여부가 중요합니다.' },
+]
+
+const designDnaHierarchy = [
+  {
+    layer: 'Input Layer',
+    title: 'Reference Images',
+    copy: 'Chris가 좋아하는 graphic, editorial, package, poster, typography, illustration, photography, architecture, fashion 이미지를 모읍니다.',
+    items: ['5 minimum', '20–50 ideal', 'source / note / privacy status'],
+  },
+  {
+    layer: 'Analysis Layer',
+    title: 'Visual Pattern Recognition',
+    copy: '이미지를 caption으로 끝내지 않고 색, 타입, 구도, 질감, 밀도, 무드가 반복되는 방식을 분리합니다.',
+    items: ['observation', 'preference inference', 'evidence ids'],
+  },
+  {
+    layer: 'Principle Layer',
+    title: 'Design Principles',
+    copy: '개별 이미지의 표면 스타일을 넘어 “왜 Chris가 좋아하는가”에 가까운 판단 원칙을 문장과 데이터로 정리합니다.',
+    items: ['strong signal', 'weak signal', 'contradiction'],
+  },
+  {
+    layer: 'System Layer',
+    title: 'Design DNA',
+    copy: '모든 agent가 공유하는 취향 기준입니다. 단정하지 않고 confidence와 uncertainty를 함께 남깁니다.',
+    items: ['LOW / MEDIUM / HIGH confidence', 'MD + JSON', 'human approval'],
+  },
+  {
+    layer: 'Output Layer',
+    title: 'Reusable Design System',
+    copy: 'Design DNA를 brand strategy, product constraints, market context와 결합해 package direction, prompt package, critic loop로 확장합니다.',
+    items: ['art direction', 'generation', 'evaluation / refinement'],
+  },
+]
+
+const designDnaValueCards = [
+  {
+    title: 'Not image imitation',
+    copy: '레퍼런스 이미지를 비슷하게 베끼는 것이 아니라, 그 안에서 반복되는 visual decision pattern을 추출합니다.',
+  },
+  {
+    title: 'Shared judgment standard',
+    copy: 'Design DNA는 Karina, Go Youn-jung, Yuna, Son, Faker, Muyeol이 같은 기준으로 다음 산출물을 판단하게 만드는 공통 언어입니다.',
+  },
+  {
+    title: 'Brand-aware taste',
+    copy: '좋은 결과는 “내 스타일”만 강한 것이 아니라 브랜드와 제품에 맞아야 합니다. 그래서 공식은 DNA × Brand × Product × Market입니다.',
+  },
+]
+
+const designDnaAgentRows = [
+  { agent: 'Karina', role: 'orchestrate', copy: '문제를 분해하고, 어떤 agent가 어느 단계에서 판단해야 하는지 정리한 뒤 최종 synthesis를 만듭니다.' },
+  { agent: 'Go Youn-jung', role: 'visual DNA / critique', copy: 'reference의 색·타입·구도·질감·무드 패턴을 분석하고 art direction 품질을 봅니다.' },
+  { agent: 'Yuna', role: 'market / context', copy: '카테고리 관습, 경쟁 브랜드, special edition 흐름, image model/provider 가능성을 조사합니다.' },
+  { agent: 'Son', role: 'scope / phase', copy: 'MVP 범위, 승인 gate, 단계별 산출물과 우선순위를 관리합니다.' },
+  { agent: 'Faker', role: 'implementation', copy: 'JSON schema, webapp tab, prompt package adapter, generation/evaluation pipeline을 구현합니다.' },
+  { agent: 'Muyeol', role: 'validation / risk', copy: '저작권, privacy, public-safe, score overclaiming, go/no-go 리스크를 검증합니다.' },
+]
+
 function getInitialThemeMode(): ThemeMode {
   if (typeof window === 'undefined') return 'light'
 
@@ -141,6 +272,11 @@ function getInitialResearchLaneFilter(): ResearchLaneFilter {
 
   const lane = new URLSearchParams(window.location.search).get('lane')
   return researchLaneFilters.includes(lane as ResearchLaneFilter) ? (lane as ResearchLaneFilter) : 'all'
+}
+
+function getInitialMenuOpen() {
+  if (typeof window === 'undefined') return true
+  return window.matchMedia('(min-width: 561px)').matches
 }
 
 const profileCredentials: ProfileCredential[] = [
@@ -166,6 +302,45 @@ const profileLenses = [
   'AI UX · 정서적 안정감 · 인간적인 인터랙션',
   'Research · Awards · IP · Mentoring',
   'Karina Hermes Agent Team이 만들어가는 OBD operating rhythm',
+]
+
+const sonQuestionSignals: SonQuestionSignal[] = [
+  {
+    question: 'Chris가 지금 어떤 역할로 판단하고 싶은가?',
+    axis: 'Role ontology',
+    answerSignal: '답변 안에서 UX, BX, AI UX, 전략, 교육, 리더십이 서로 어떤 관계로 묶이는지 봅니다.',
+    scoringFormula: '역할 명료도 40% + 영역 연결성 35% + 다음 판단 언어 25%',
+  },
+  {
+    question: '이 판단은 어디까지 공개 가능한가?',
+    axis: 'Public-safe decision log',
+    answerSignal: 'private 원문을 드러내지 않고도 남길 수 있는 결정, 근거 수준, 공개 가능한 표현을 분리합니다.',
+    scoringFormula: '공개 가능성 35% + 근거 표시 35% + 민감정보 제거 30%',
+  },
+  {
+    question: '답변이 어떤 산출물과 연결되는가?',
+    axis: 'Artifact relationship',
+    answerSignal: '말로 끝나는 답인지, 카드·그래프·리서치 보드·디자인 프롬프트 같은 화면 산출물로 이어지는지 확인합니다.',
+    scoringFormula: '산출물 연결 40% + 재사용 가능성 30% + 화면화 난이도 역점수 30%',
+  },
+  {
+    question: 'Karina와 팀에게 어디까지 맡길 수 있는가?',
+    axis: 'Delegation boundary',
+    answerSignal: 'Chris가 직접 결정해야 하는 부분과 에이전트가 실행해도 되는 부분이 얼마나 분명한지 읽습니다.',
+    scoringFormula: '결정권 분리 40% + 담당자 명확성 35% + 블로커 가시성 25%',
+  },
+  {
+    question: '이 방향을 누가 받아들이고 어떻게 통제하는가?',
+    axis: 'Control & adoption map',
+    answerSignal: '사용자, 팀, 조직, 외부 공개 맥락에서 누가 이해하고 승인해야 하는지의 흐름을 잡습니다.',
+    scoringFormula: '통제 지점 35% + 채택 대상 35% + 설명 가능성 30%',
+  },
+  {
+    question: '이 판단은 검증 가능한가?',
+    axis: 'Evaluation validity',
+    answerSignal: '좋아 보이는 해석인지, 실제 근거·QA·다음 실험으로 확인 가능한 판단인지 구분합니다.',
+    scoringFormula: '검증 가능성 40% + 반증 가능성 30% + 다음 액션 선명도 30%',
+  },
 ]
 
 const agentProfiles: AgentProfile[] = [
@@ -244,14 +419,19 @@ const productBranches: ArchitectureBranch[] = [
     children: ['Signal Loop', 'Operating Map', 'Evidence Flow', 'Muyeol Validation'],
   },
   {
+    title: 'Research',
+    intent: '논문/자료/인사이트 루프',
+    children: ['Search', 'Paper Library', 'Insight Notes', 'Karina Synthesis'],
+  },
+  {
     title: 'Visual Archive',
     intent: '승인된 홈 비주얼 누적 아카이브',
     children: ['Oldest-first Stills', 'Turntable Detail', 'Visual Manifest', 'Public-safe Assets'],
   },
   {
-    title: 'Research',
-    intent: '논문/자료/인사이트 루프',
-    children: ['Search', 'Paper Library', 'Insight Notes', 'Karina Synthesis'],
+    title: 'Design DNA',
+    intent: '개인 취향을 agentic brand/package system으로 변환',
+    children: ['About Design DNA', 'Chris Design Archive', 'Agentic Brand & Package System', 'Human Approval Gates'],
   },
   {
     title: 'Muyeol Report',
@@ -275,6 +455,11 @@ const dataBranches: ArchitectureBranch[] = [
     title: '/public/data/home-visual-set.json',
     intent: 'Visual Archive 공개 안전 manifest',
     children: ['items[].still', 'items[].turntable', 'sourcePolicy'],
+  },
+  {
+    title: '/opt/data/design-dna-studio',
+    intent: 'Design DNA private workspace',
+    children: ['PROJECT_DESIGN_DNA.md', 'projects/<id>/design_dna', 'brand', 'prompts', 'evaluation'],
   },
   {
     title: '/data/research',
@@ -588,16 +773,55 @@ function ChrisIntroPanel() {
       </article>
 
       <article className="content-card profile-statement-card profile-chris-card">
-        <p className="card-kicker">Chris profile</p>
-        <h3>Karina Hermes Agent Team은 크리스가 OBD로 작동할 수 있는 환경을 만듭니다</h3>
-        <p>
-          크리스(Chris)는 UX, 브랜드, 디자인 전략을 연결해 사람이 이해하고 신뢰할 수 있는 AI 경험을 탐구합니다.
-          Karina Hermes Agent Team은 그 탐구가 흩어지지 않도록 자료를 정리하고, 질문을 세우고, 근거를 검증해
-          크리스가 Ontology Business Designer처럼 판단하고 실행할 수 있는 구조를 만들어줍니다.
-        </p>
+        <div className="profile-chris-layout">
+          <img
+            className="profile-chris-image"
+            src={publicAssetPath('/assets/team/chris_profile.png')}
+            alt="AI portrait of Chris Park"
+            width="512"
+            height="512"
+            loading="eager"
+            decoding="async"
+          />
+          <div className="profile-chris-copy">
+            <p className="card-kicker">Chris profile</p>
+            <h3>Karina Hermes Agent Team은 크리스가 OBD로 작동할 수 있는 환경을 만듭니다</h3>
+            <p>
+              크리스(Chris)는 UX, 브랜드, 디자인 전략을 연결해 사람이 이해하고 신뢰할 수 있는 AI 경험을 탐구합니다.
+              Karina Hermes Agent Team은 그 탐구가 흩어지지 않도록 자료를 정리하고, 질문을 세우고, 근거를 검증해
+              크리스가 Ontology Business Designer처럼 판단하고 실행할 수 있는 구조를 만들어줍니다.
+            </p>
+          </div>
+        </div>
       </article>
 
       <ChrisGrowthGraphPanel />
+
+      <article className="content-card son-question-formula-card">
+        <p className="card-kicker">Son question analysis · public-safe formula</p>
+        <h3>손의 질문은 Chris의 답변을 6개 판단 신호로 바꿔 그래프에 올립니다</h3>
+        <p>
+          아래 계산식은 실제 답변 원문을 노출하는 수식이 아니라, Son이 답변에서 어떤 신호를 읽고 OBD 그래프 축으로 환산했는지 보여주는
+          공개 가능한 scoring rule입니다. 각 축은 0–5점으로 정규화하고, 최종 그래프에는 축별 평균 신뢰도만 표시합니다.
+        </p>
+        <div className="son-formula-summary" aria-label="Son score normalization formula">
+          <strong>axis score</strong>
+          <span>= Σ(answer signal × weight) ÷ available evidence</span>
+        </div>
+        <div className="son-question-signal-grid" aria-label="Son questions and graph scoring formulas">
+          {sonQuestionSignals.map((signal, index) => (
+            <section className="son-question-signal" key={signal.axis}>
+              <span className="son-question-number">Q{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <p className="son-question-text">{signal.question}</p>
+                <h4>{signal.axis}</h4>
+                <p>{signal.answerSignal}</p>
+                <code>{signal.scoringFormula}</code>
+              </div>
+            </section>
+          ))}
+        </div>
+      </article>
 
       <article className="content-card intro-hero-card">
         <p className="card-kicker">Personal positioning</p>
@@ -1851,6 +2075,225 @@ function DevArchitecturePanel() {
   )
 }
 
+
+function DesignDnaPanel() {
+  const [activeDesignDnaSubTab, setActiveDesignDnaSubTab] = useState<DesignDnaSubTabId>('about')
+  const currentSubTab = designDnaSubTabs.find((subTab) => subTab.id === activeDesignDnaSubTab) ?? designDnaSubTabs[0]
+
+  return (
+    <div className="design-dna-shell">
+      <nav className="obd-subtab-nav design-dna-subtab-nav" aria-label="Design DNA sections">
+        {designDnaSubTabs.map((subTab) => (
+          <button
+            key={subTab.id}
+            type="button"
+            className={subTab.id === activeDesignDnaSubTab ? 'obd-subtab-button active' : 'obd-subtab-button'}
+            aria-pressed={subTab.id === activeDesignDnaSubTab}
+            onClick={() => setActiveDesignDnaSubTab(subTab.id)}
+          >
+            <span>{subTab.label}</span>
+            <small>{subTab.eyebrow}</small>
+          </button>
+        ))}
+      </nav>
+
+      <section className="obd-subtab-intro design-dna-intro" aria-live="polite">
+        <p className="card-kicker">{currentSubTab.eyebrow}</p>
+        <h3>{currentSubTab.label}</h3>
+        <p>{currentSubTab.description}</p>
+      </section>
+
+      {activeDesignDnaSubTab === 'about' ? <AboutDesignDnaPanel /> : null}
+      {activeDesignDnaSubTab === 'archive' ? <ChrisDesignArchivePanel /> : null}
+      {activeDesignDnaSubTab === 'system' ? <AgenticBrandPackagePanel /> : null}
+    </div>
+  )
+}
+
+function AboutDesignDnaPanel() {
+  return (
+    <div className="design-dna-grid">
+      <article className="content-card design-dna-hero-card">
+        <p className="card-kicker">Project constitution</p>
+        <h3>Design thinking becomes a reusable system.</h3>
+        <p>
+          Design DNA Studio는 단순히 “AI에게 패키지를 그려달라”고 요청하는 화면이 아닙니다. Chris가 좋아하는 시각 레퍼런스를 분석해
+          반복되는 취향의 구조를 찾고, 그 구조를 브랜드 전략과 제품 제약 안에서 다시 사용할 수 있는 Agentic Design System으로 바꾸는 프로젝트입니다.
+        </p>
+        <p>
+          그래서 최종 산출물은 이미지 한 장이 아니라, reference evidence, design principle, prompt package, critic score, refinement action까지 남기는
+          디자인 프로세스입니다. 이 흐름이 쌓이면 Chris의 디자인 판단은 한 번의 취향이 아니라 반복 가능한 design intelligence가 됩니다.
+        </p>
+        <blockquote>
+          Generative AI creates outputs. Agentic AI executes processes. AX transforms the way design is done.
+        </blockquote>
+        <div className="status-row">
+          <span className="status-chip">Private root: /opt/data/design-dna-studio</span>
+          <span className="status-chip muted">Starter case: Coca-Cola bottle</span>
+          <span className="status-chip muted">Human judgment final</span>
+        </div>
+      </article>
+
+      <section className="content-card design-dna-hierarchy-card" aria-label="Design DNA hierarchy from references to system">
+        <div className="design-dna-hierarchy-header">
+          <p className="card-kicker">Hierarchy</p>
+          <h3>Reference Images에서 Reusable Design System까지</h3>
+          <p>
+            핵심은 이미지의 표면을 따라가는 것이 아니라, 중간 계층을 반드시 통과하는 것입니다. 레퍼런스는 pattern이 되고,
+            pattern은 principle이 되고, principle은 Design DNA가 된 뒤에야 brand/package system으로 확장됩니다.
+          </p>
+        </div>
+        <div className="design-dna-hierarchy-flow">
+          {designDnaHierarchy.map((node, index) => (
+            <div className="design-dna-hierarchy-step" key={node.title}>
+              <article className="design-dna-hierarchy-node">
+                <span>{node.layer}</span>
+                <h4>{node.title}</h4>
+                <p>{node.copy}</p>
+                <ul>
+                  {node.items.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </article>
+              {index < designDnaHierarchy.length - 1 ? <strong className="design-dna-hierarchy-arrow" aria-hidden="true">↓</strong> : null}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="design-dna-value-grid" aria-label="Design DNA project principles">
+        {designDnaValueCards.map((item) => (
+          <article className="content-card design-dna-value-card" key={item.title}>
+            <p className="card-kicker">Principle</p>
+            <h4>{item.title}</h4>
+            <p>{item.copy}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="design-dna-process" aria-label="Design DNA process">
+        {designDnaProcessSteps.map((item) => (
+          <article className="content-card design-dna-process-card" key={item.step}>
+            <span>{item.step}</span>
+            <h4>{item.title}</h4>
+            <p>{item.copy}</p>
+          </article>
+        ))}
+      </section>
+
+      <article className="content-card design-dna-dimension-card">
+        <p className="card-kicker">Analysis dimensions</p>
+        <h3>이미지 캡션이 아니라 취향의 반복 구조를 봅니다.</h3>
+        <p>
+          각 reference는 아래 9개 dimension으로 읽습니다. 그리고 observation과 preference inference를 분리해, “보이는 것”과 “Chris가 좋아할 가능성이 있는 이유”를
+          섞지 않도록 합니다. confidence가 낮거나 reference가 서로 충돌하면 그대로 표시합니다.
+        </p>
+        <div className="design-dna-dimension-cloud" aria-label="Design DNA analysis dimensions">
+          {designDnaDimensions.map((dimension) => <span key={dimension}>{dimension}</span>)}
+        </div>
+      </article>
+
+      <article className="content-card design-dna-agent-card">
+        <p className="card-kicker">Agent responsibility</p>
+        <h3>Design DNA는 한 agent의 감상이 아니라 팀 전체의 판단 계약입니다.</h3>
+        <div className="design-dna-agent-list">
+          {designDnaAgentRows.map((row) => (
+            <section className="design-dna-agent-row" key={row.agent}>
+              <strong>{row.agent}</strong>
+              <span>{row.role}</span>
+              <p>{row.copy}</p>
+            </section>
+          ))}
+        </div>
+      </article>
+    </div>
+  )
+}
+
+function ChrisDesignArchivePanel() {
+  return (
+    <div className="design-dna-grid">
+      <article className="content-card design-dna-archive-brief">
+        <p className="card-kicker">Chris design archive</p>
+        <h3>좋아하는 이미지를 모으는 곳에서, 판단 기준을 꺼내는 곳으로.</h3>
+        <p>
+          이 영역은 Chris가 좋아하는 이미지를 대시보드처럼 나열하는 future archive입니다. 지금은 실제 reference image intake 전 단계라,
+          어떤 종류의 선호 신호가 카드화될지 보여주는 placeholder 상태로 둡니다.
+        </p>
+        <div className="status-row">
+          <span className="status-chip">5 images minimum</span>
+          <span className="status-chip muted">20–50 recommended</span>
+          <span className="status-chip muted">public-safe only</span>
+        </div>
+      </article>
+
+      <section className="chris-design-archive-board" aria-label="Chris preferred visual reference dashboard">
+        {chrisDesignArchiveTiles.map((tile, index) => (
+          <article className="chris-design-tile" key={tile.title}>
+            <div className="chris-design-tile-visual" aria-hidden="true">
+              <span>{String(index + 1).padStart(2, '0')}</span>
+            </div>
+            <div>
+              <strong>{tile.title}</strong>
+              <p>{tile.note}</p>
+            </div>
+          </article>
+        ))}
+      </section>
+    </div>
+  )
+}
+
+function AgenticBrandPackagePanel() {
+  return (
+    <div className="design-dna-grid">
+      <article className="content-card design-dna-hero-card package-system-card">
+        <p className="card-kicker">Agentic Brand & Package System</p>
+        <h3>Brand & Package System MVP</h3>
+        <p>
+          이 탭의 중심은 코카콜라 병 하나가 아니라 다양한 브랜드와 패키지 타입으로 확장되는 시스템입니다. 코카콜라 스페셜 에디션 병 패키지는
+          첫 시작점으로만 사용하고, 이후 다른 브랜드, 제품군, 패키지 구조로 계속 업데이트합니다.
+        </p>
+        <p>
+          목업 제작 단계에서는 Higgsfield를 연결해 presentation-quality package concept을 만들 수 있습니다. 다만 source of truth는 이미지 모델이 아니라
+          Design DNA, Brand Strategy, Product Constraints, Market Context가 합쳐진 Prompt Package입니다.
+        </p>
+        <div className="design-dna-equation" aria-label="Design output equation">
+          <span>Design DNA</span>
+          <strong>×</strong>
+          <span>Brand Strategy</span>
+          <strong>×</strong>
+          <span>Product Constraints</span>
+          <strong>×</strong>
+          <span>Market Context</span>
+        </div>
+      </article>
+
+      <section className="agentic-package-stage-grid" aria-label="Agentic brand and package system stages">
+        {agenticPackageStages.map((stage) => (
+          <article className="content-card agentic-package-stage" key={stage.title}>
+            <p className="card-kicker">{stage.title}</p>
+            <h4>{stage.value}</h4>
+            <p>{stage.detail}</p>
+          </article>
+        ))}
+      </section>
+
+      <article className="content-card design-dna-roadmap-card">
+        <p className="card-kicker">Execution roadmap</p>
+        <h3>모든 단계로 가되, 토큰과 승인 gate를 보면서 나눠 실행합니다.</h3>
+        <ol>
+          <li>Reference intake와 Chris Design Archive 구성</li>
+          <li>Design DNA extraction / confidence / contradiction 정리</li>
+          <li>Brand brief와 package constraints 정리</li>
+          <li>Art Direction과 provider-independent Prompt Package 생성</li>
+          <li>Higgsfield 등 승인된 provider로 1차 brand/package mockup 생성</li>
+          <li>DNA Match, Brand Fit, Critique, Refinement Action 평가</li>
+        </ol>
+      </article>
+    </div>
+  )
+}
+
 function ObdKnowledgeLoopPanel() {
   const [activeObdSubTab, setActiveObdSubTab] = useState<ObdSubTabId>(() => (
     window.location.hash === '#architecture' ? 'graph' : 'about'
@@ -1912,7 +2355,7 @@ function App() {
     return hashTab ?? tabs[0]
   })
   const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialThemeMode)
-  const [isMenuOpen, setIsMenuOpen] = useState(true)
+  const [isMenuOpen, setIsMenuOpen] = useState(getInitialMenuOpen)
   const [selectedResearchIdFromMonthly, setSelectedResearchIdFromMonthly] = useState('')
   const isDarkMode = themeMode === 'dark'
 
@@ -1925,6 +2368,9 @@ function App() {
   function selectTab(tab: Tab) {
     setSelectedResearchIdFromMonthly('')
     setActiveTab(tab)
+    if (window.matchMedia('(max-width: 560px)').matches) {
+      setIsMenuOpen(false)
+    }
     window.history.replaceState(null, '', `#${tab.id}`)
   }
 
@@ -2014,11 +2460,25 @@ function App() {
         {activeTab.id === 'home' ? (
           <TeamPanel />
         ) : activeTab.id === 'visuals' ? (
-          <HomeVisualHeroPanel />
+          <>
+            <figure className="content-card visual-archive-image-card">
+              <img
+                src={publicAssetPath('/assets/visuals/visual-archive-camera-object.jpg')}
+                alt="Pink beach umbrella on soft sand dunes for Visual Archive"
+                width="1280"
+                height="640"
+                loading="eager"
+                decoding="async"
+              />
+            </figure>
+            <HomeVisualHeroPanel />
+          </>
         ) : activeTab.id === 'chrisArchive' ? (
           <ChrisArchivePanel />
         ) : activeTab.id === 'obd' ? (
           <ObdKnowledgeLoopPanel />
+        ) : activeTab.id === 'design-dna' ? (
+          <DesignDnaPanel />
         ) : activeTab.id === 'research' ? (
           <ResearchKanbanPanel selectedResearchId={selectedResearchIdFromMonthly} />
         ) : activeTab.id === 'report' ? (

@@ -15,7 +15,6 @@ const { chromium } = require('/opt/data/tmp/playwright-qa/node_modules/playwrigh
   page.on('console', msg => { if (msg.type() === 'error') errors.push(msg.text()); });
   page.on('pageerror', err => errors.push(err.message));
   await page.goto(`${base}#chrisArchive`, { waitUntil: 'networkidle' });
-  await page.getByRole('button', { name: /Chris Archive/ }).click();
   await page.waitForSelector('.chris-archive-tile img');
   const tileCount = await page.locator('.chris-archive-tile').count();
   const firstImageLoaded = await page.locator('.chris-archive-tile img').first().evaluate(img => img.complete && img.naturalWidth > 0 && img.naturalHeight > 0);
@@ -29,7 +28,6 @@ const { chromium } = require('/opt/data/tmp/playwright-qa/node_modules/playwrigh
   const modalClosed = await page.locator('.chris-archive-modal').count() === 0;
   const mobile = await browser.newPage({ viewport: { width: 390, height: 844 }, isMobile: true });
   await mobile.goto(`${base}#chrisArchive`, { waitUntil: 'networkidle' });
-  await mobile.getByRole('button', { name: /Chris Archive/ }).click();
   await mobile.waitForSelector('.chris-archive-tile');
   const mobileColumns = await mobile.locator('.chris-archive-grid').evaluate(el => getComputedStyle(el).gridTemplateColumns);
   await browser.close();
