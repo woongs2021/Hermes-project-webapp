@@ -6907,7 +6907,9 @@
   max-height: min(820px, 70vh);
   overflow-x: hidden;
   overflow-y: auto;
-  scrollbar-width: none;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
   padding: clamp(0.85rem, 2vw, 1.2rem);
   border: 1px solid rgba(255, 255, 255, 0.78);
   border-radius: 34px;
@@ -6916,18 +6918,20 @@
 }
 
 .chris-archive-modal::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+  width: 8px;
+  height: 8px;
+}
+
+.chris-archive-modal::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  background-clip: content-box;
 }
 
 .chris-archive-modal.is-scrolling {
   scrollbar-width: thin;
   scrollbar-color: rgba(1, 1, 2, 0.26) transparent;
-}
-
-.chris-archive-modal.is-scrolling::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
 }
 
 .chris-archive-modal.is-scrolling::-webkit-scrollbar-thumb {
