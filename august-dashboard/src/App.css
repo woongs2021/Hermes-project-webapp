@@ -6900,17 +6900,41 @@
 .chris-archive-modal {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(280px, 0.95fr) minmax(280px, 1.05fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   gap: clamp(1rem, 2vw, 1.6rem);
   width: clamp(360px, 70vw, 1080px);
   max-width: calc(100vw - clamp(2rem, 6vw, 5rem));
   max-height: min(820px, 70vh);
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
   padding: clamp(0.85rem, 2vw, 1.2rem);
   border: 1px solid rgba(255, 255, 255, 0.78);
   border-radius: 34px;
   background: var(--panel-surface-strong);
   box-shadow: 0 34px 120px rgba(0, 0, 0, 0.28);
+}
+
+.chris-archive-modal::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.chris-archive-modal.is-scrolling {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(1, 1, 2, 0.26) transparent;
+}
+
+.chris-archive-modal.is-scrolling::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.chris-archive-modal.is-scrolling::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: rgba(1, 1, 2, 0.26);
+  background-clip: content-box;
 }
 
 .chris-archive-modal-close {
@@ -7011,8 +7035,29 @@
   box-shadow: 0 34px 120px rgba(0, 0, 0, 0.56);
 }
 
+:root[data-theme='dark'] .chris-archive-modal.is-scrolling {
+  scrollbar-color: rgba(244, 248, 255, 0.32) transparent;
+}
+
+:root[data-theme='dark'] .chris-archive-modal.is-scrolling::-webkit-scrollbar-thumb {
+  background: rgba(244, 248, 255, 0.32);
+  background-clip: content-box;
+}
+
 :root[data-theme='dark'] .chris-archive-modal-close {
   background: rgba(20, 24, 34, 0.92);
+}
+
+@media (max-width: 1024px) and (min-width: 761px) {
+  .chris-archive-modal-backdrop {
+    padding: 1rem;
+  }
+
+  .chris-archive-modal {
+    width: min(92vw, 820px);
+    max-width: calc(100vw - 2rem);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 760px) {

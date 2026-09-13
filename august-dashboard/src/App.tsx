@@ -1247,6 +1247,21 @@ function HomeVisualDetail({
 function ChrisArchivePanel() {
   const [archive, setArchive] = useState<ChrisArchiveManifest>(fallbackChrisArchive)
   const [selectedItem, setSelectedItem] = useState<ChrisArchiveItem | null>(null)
+  const [isModalScrolling, setIsModalScrolling] = useState(false)
+  const modalScrollTimerRef = useRef<number | null>(null)
+
+  const handleModalScroll = () => {
+    setIsModalScrolling(true)
+
+    if (modalScrollTimerRef.current) {
+      window.clearTimeout(modalScrollTimerRef.current)
+    }
+
+    modalScrollTimerRef.current = window.setTimeout(() => {
+      setIsModalScrolling(false)
+      modalScrollTimerRef.current = null
+    }, 850)
+  }
 
   useEffect(() => {
     let isMounted = true
@@ -1256,6 +1271,9 @@ function ChrisArchivePanel() {
     })
     return () => {
       isMounted = false
+      if (modalScrollTimerRef.current) {
+        window.clearTimeout(modalScrollTimerRef.current)
+      }
     }
   }, [])
 
@@ -1300,11 +1318,12 @@ function ChrisArchivePanel() {
       {selectedItem ? (
         <div className="chris-archive-modal-backdrop" role="presentation" onClick={() => setSelectedItem(null)}>
           <article
-            className="chris-archive-modal"
+            className={`chris-archive-modal${isModalScrolling ? ' is-scrolling' : ''}`}
             role="dialog"
             aria-modal="true"
             aria-labelledby="chris-archive-modal-title"
             onClick={(event) => event.stopPropagation()}
+            onScroll={handleModalScroll}
           >
             <button type="button" className="chris-archive-modal-close" onClick={() => setSelectedItem(null)} aria-label="Chris Archive 상세 팝업 닫기">
               ×
