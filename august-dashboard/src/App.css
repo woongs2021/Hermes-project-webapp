@@ -6885,8 +6885,10 @@
   display: grid;
   place-items: center;
   padding: clamp(1rem, 3vw, 2.5rem);
-  background: rgba(11, 13, 20, 0.62);
-  backdrop-filter: blur(18px);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(246, 242, 234, 0.84)),
+    rgba(248, 246, 240, 0.88);
+  backdrop-filter: blur(12px) saturate(112%);
 }
 
 .chris-archive-modal {
@@ -6894,14 +6896,15 @@
   display: grid;
   grid-template-columns: minmax(280px, 0.95fr) minmax(280px, 1.05fr);
   gap: clamp(1rem, 2vw, 1.6rem);
-  width: min(1080px, 100%);
-  max-height: min(820px, 92vh);
+  width: clamp(360px, 70vw, 1080px);
+  max-width: calc(100vw - clamp(2rem, 6vw, 5rem));
+  max-height: min(820px, 70vh);
   overflow: auto;
   padding: clamp(0.85rem, 2vw, 1.2rem);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.78);
   border-radius: 34px;
-  background: color-mix(in srgb, var(--card-bg) 94%, white 6%);
-  box-shadow: 0 34px 120px rgba(0, 0, 0, 0.38);
+  background: var(--panel-surface-strong);
+  box-shadow: 0 34px 120px rgba(0, 0, 0, 0.28);
 }
 
 .chris-archive-modal-close {
@@ -6981,13 +6984,29 @@
   color: var(--muted-ink);
 }
 
+:root[data-theme='dark'] .chris-archive-modal-backdrop {
+  background:
+    linear-gradient(135deg, rgba(5, 7, 13, 0.9), rgba(16, 19, 28, 0.84)),
+    rgba(4, 6, 12, 0.88);
+  backdrop-filter: blur(12px) saturate(105%);
+}
+
 :root[data-theme='dark'] .chris-archive-overview,
 :root[data-theme='dark'] .chris-archive-tile,
-:root[data-theme='dark'] .chris-archive-modal,
 :root[data-theme='dark'] .chris-archive-candidate-list,
 :root[data-theme='dark'] .chris-archive-chip-row span,
 :root[data-theme='dark'] .chris-archive-stats span {
   background-color: rgba(16, 19, 28, 0.88);
+}
+
+:root[data-theme='dark'] .chris-archive-modal {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(16, 19, 28, 0.98);
+  box-shadow: 0 34px 120px rgba(0, 0, 0, 0.56);
+}
+
+:root[data-theme='dark'] .chris-archive-modal-close {
+  background: rgba(20, 24, 34, 0.92);
 }
 
 @media (max-width: 760px) {
@@ -7016,6 +7035,8 @@
   }
 
   .chris-archive-modal {
+    width: min(100%, 420px);
+    max-width: calc(100vw - 1.5rem);
     max-height: 92vh;
     border-radius: 26px;
   }
