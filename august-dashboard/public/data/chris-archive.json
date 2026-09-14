@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-13T21:43:54+09:00",
+  "generatedAt": "2026-09-14T16:26:10+09:00",
   "sourcePolicy": "Public webapp includes copied reference images and Karina first-pass summaries only; raw private chats/logs are not exposed.",
   "items": [
     {
@@ -1736,6 +1736,37 @@
         "soft folded material object"
       ],
       "candidates": []
+    },
+    {
+      "id": "2026-09-14_digital-360-media-landscape-dual-poster",
+      "title": "Digital 360 media landscape dual poster",
+      "created": "2026-09-14",
+      "status": "goyj_review_needed",
+      "imageSrc": "assets/chris-archive/2026-09-14_digital-360-media-landscape-dual-poster_b9652f82ef8f.jpg",
+      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-14_digital-360-media-landscape-dual-poster.md",
+      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-14_digital-360-media-landscape-dual-poster_b9652f82ef8f.jpg",
+      "summary": "검은 배경 위에 두 개의 둥근 포스터가 나란히 놓인 레퍼런스. 왼쪽은 수중/유리 너머로 손을 뻗는 인물 사진과 연두색 `Digital 360` 타이포가 겹쳐 있고, 오른쪽은 흰 여백 위에 `Change in the media landscape`라는 대형 산세리프 타이포와 작은 유리 캡슐 오브젝트가 중앙에 배치되어 있다.",
+      "interpretation": "이 이미지는 Chris Archive에서 `editorial duality`와 `media/technology transition`을 보여주는 레퍼런스다. 한쪽은 몰입적이고 촉각적인 인간 이미지, 다른 한쪽은 극도로 비운 white-space poster와 capsule object로 구성되어, 인간 경험과 추상 시스템 오브젝트를 한 화면에서 대비시킨다. 향후 Design DNA 분석에서는 “인간적 몰입감 + 시스템적 명료함”을 함께 다루는 브랜드/패키지/OS 커뮤니케이션 언어 후보로 볼 수 있다.",
+      "tags": [
+        "dual poster system",
+        "media landscape",
+        "human immersion",
+        "underwater photography",
+        "white-space editorial",
+        "rounded poster cards",
+        "capsule object",
+        "lime green signal",
+        "bold grotesk typography",
+        "technology agency"
+      ],
+      "candidates": [
+        "Two-panel contrast: human sensory scene vs abstract system object",
+        "Rounded poster/card frame as archive dashboard tile grammar",
+        "High-contrast black/white editorial base with lime signal type",
+        "Capsule object as media/AI transition token",
+        "Large left-aligned grotesk headline with generous white space",
+        "Use cinematic human imagery carefully as emotional context, not as generic stock hero"
+      ]
     }
   ]
 }
