@@ -100,7 +100,7 @@ const tabs: Tab[] = [
     label: 'Design DNA',
     eyebrow: 'Agentic brand system',
     title: 'Design DNA Studio',
-    description: 'Chris가 좋아하는 시각 레퍼런스를 디자인 판단 구조로 바꾸고, 다양한 브랜드와 패키지 작업에 재사용하는 Agentic Brand & Package System입니다.',
+    description: 'Chris Archive 60개 레퍼런스에서 압축한 핵심 클러스터와 브랜드 에셋 생성용 프롬프트 패키지를 정리한 Design DNA 운영 탭입니다.',
   },
   {
     id: 'report',
@@ -146,109 +146,123 @@ const designDnaSubTabs: { id: DesignDnaSubTabId; label: string; eyebrow: string;
     id: 'archive',
     label: 'Chris Design Archive',
     eyebrow: 'reference dashboard',
-    description: 'Chris가 좋아하는 이미지들을 대시보드처럼 모아두고, 이후 각 이미지를 Design DNA의 근거 카드로 연결하는 공간입니다.',
+    description: 'Chris Archive 60개에서 무엇을 얻어 헤르메스디자인시스템이 만들어졌는지, evidence → pattern → system 변환을 설명합니다.'
   },
   {
     id: 'system',
     label: 'Agentic Brand & Package System',
     eyebrow: 'brand & package system',
-    description: 'Design DNA와 브랜드 전략, 제품 제약, 시장 맥락을 곱해서 다양한 브랜드/패키지의 방향·프롬프트·목업·평가까지 이어갑니다.',
+    description: '압축된 Design DNA를 실제 브랜드 에셋 생성용 프롬프트 패키지와 평가 기준으로 바꾸는 실행 레이어입니다.'
   },
 ]
 
 const designDnaProcessSteps = [
-  { step: '01', title: 'Upload References', copy: 'Chris가 좋아하는 이미지 5–50장을 모읍니다. 원본은 private workspace에 두고 웹앱에는 public-safe summary만 올립니다.' },
-  { step: '02', title: 'Discover DNA', copy: 'Go Youn-jung이 색, 타입, 구도, 질감, 밀도, 무드의 반복 패턴을 찾아 개인 Design DNA로 구조화합니다.' },
-  { step: '03', title: 'Define Brand', copy: 'Yuna와 Son이 브랜드 맥락, 카테고리 관습, 패키지 제약, MVP 범위를 정리합니다.' },
-  { step: '04', title: 'Create Direction', copy: 'Karina가 Design DNA × Brand Strategy × Product Constraints × Market Context를 하나의 art direction으로 묶습니다.' },
-  { step: '05', title: 'Generate Package', copy: 'Faker가 provider-independent Prompt Package를 만들고, 승인된 provider에서 bottle/package concept을 생성합니다.' },
-  { step: '06', title: 'Evaluate & Refine', copy: 'Muyeol과 Go Youn-jung이 DNA Match, Brand Fit, 리스크를 보고 다음 수정 액션을 남깁니다. Chris 판단이 최종 기준입니다.' },
+  { step: '01', title: 'Archive 60 references', copy: 'Chris가 선택한 60개 이미지를 public-safe manifest와 원본 archive로 나누어 저장했습니다.' },
+  { step: '02', title: 'Extract repeated signals', copy: '색, 타입, 물성, 구도, 모션 은유, 인간 맥락, archive object를 이미지별 감상이 아니라 반복 신호로 분리했습니다.' },
+  { step: '03', title: 'Compress clusters', copy: '10개 초기 클러스터를 실제 에셋 생성에 쓰기 좋은 6개 핵심 클러스터로 압축했습니다.' },
+  { step: '04', title: 'Build prompt package', copy: 'Higgsfield/Kling/OpenAI/Midjourney로 옮길 수 있는 provider-independent prompt package 구조로 바꿨습니다.' },
+  { step: '05', title: 'Generate assets', copy: '앱 아이콘, 브랜드 키비주얼, AI dashboard card, archive cover, package label system으로 실험합니다.' },
+  { step: '06', title: 'Critique and refine', copy: 'GoYJ는 미감/DNA match를, Muyeol은 브랜드 안전/복제 리스크를 보고 Chris 승인 기준으로 조정합니다.' },
+]
+
+const designDnaCompressedClusters = [
+  {
+    title: '01. Soft Ambient Intelligence',
+    summary: 'AI는 말하는 캐릭터가 아니라 사람의 업무·감정·이동 맥락을 조용히 완충하는 OS 레이어다.',
+    signals: ['ambient dashboard', 'context card', 'low-noise metric', 'gentle suggestion'],
+    assetUse: 'AI status card, companion widget, OBD signal card, calm productivity surface',
+  },
+  {
+    title: '02. Protected Luminous Container',
+    summary: 'soft squircle, capsule, orb, luminous rim이 privacy와 focus를 담는 안전한 컨테이너가 된다.',
+    signals: ['protected void', 'glowing boundary', 'frosted shell', 'inner depth'],
+    assetUse: 'Hermes icon, secure context window, loading/listening state, protected memory object',
+  },
+  {
+    title: '03. Warm-Cool Human System Balance',
+    summary: 'blue/cyan의 시스템 지성과 coral/orange/yellow의 인간적 온도를 한 화면에서 균형화한다.',
+    signals: ['charcoal/soft-white base', 'cobalt/cyan intelligence', 'coral warmth', 'muted yellow agency'],
+    assetUse: 'color tokens, action signal, state indicator, premium dark/light mode palette',
+  },
+  {
+    title: '04. Tactile Optical Material',
+    summary: 'AI를 추상적인 빛이 아니라 손에 닿을 듯한 glass/gel/cushion/lens 물성으로 만든다.',
+    signals: ['frosted glass', 'soft gel', 'halftone grain', 'optical blur', 'membrane surface'],
+    assetUse: 'hero object, package surface, soft-3D brand object, dashboard card material',
+  },
+  {
+    title: '05. Orbital Signal Rhythm',
+    summary: 'AI processing과 관계성을 dot, orbit, pulse, circular node의 리듬으로 표현한다.',
+    signals: ['dot matrix', 'orbit line', 'radial node', 'breathing glow', 'signal density'],
+    assetUse: 'voice state, confidence indicator, progress, agent loop, context graph motion',
+  },
+  {
+    title: '06. Quiet Editorial Archive',
+    summary: '큰 여백, micro metadata, archive label, two-panel contrast로 디자인 시스템을 연구 기록물처럼 보이게 한다.',
+    signals: ['large negative space', 'micro label', 'specimen card', 'vinyl/archive object', 'human-system contrast'],
+    assetUse: 'design-system chapter, archive cover, brand guideline spread, package label system',
+  },
+]
+
+const chrisArchiveExtractionCards = [
+  {
+    title: 'What Chris Archive gave us',
+    copy: '60개 이미지는 예쁜 스타일 모음이 아니라 Chris가 반복적으로 끌린 판단 신호의 표본입니다. 여기서 부드러운 컨테이너, 조용한 지능, warm-cool balance, tactile material, orbit/dot rhythm, editorial archive language를 추출했습니다.',
+  },
+  {
+    title: 'What we did not copy',
+    copy: '레퍼런스의 브랜드명, 슬로건, 로고, 포스터 레이아웃, 특정 UI 문구는 시스템에 넣지 않았습니다. 시스템에 남긴 것은 색의 역할, 정보 밀도, 물성, 구도, 메타포 같은 추상 원칙입니다.',
+  },
+  {
+    title: 'How it becomes a system',
+    copy: 'Reference는 evidence가 되고, evidence는 repeated pattern이 되고, pattern은 compressed cluster가 됩니다. 이 클러스터가 헤르메스디자인시스템의 token, component, prompt package, critique checklist로 변환됩니다.',
+  },
 ]
 
 const designDnaDimensions = [
-  'Color',
-  'Typography',
-  'Composition',
-  'Shape & Geometry',
-  'Graphic Motif',
-  'Texture',
-  'Photography',
-  'Visual Density',
-  'Mood',
+  'Soft Ambient Intelligence',
+  'Protected Luminous Container',
+  'Warm-Cool Balance',
+  'Tactile Optical Material',
+  'Orbital Signal Rhythm',
+  'Quiet Editorial Archive',
 ]
 
 const chrisDesignArchiveTiles = [
-  { title: 'Premium minimal object', note: 'solid background, tactile material, quiet confidence' },
-  { title: 'Editorial contrast', note: 'large negative space, asymmetric focus, strong hierarchy' },
-  { title: 'Soft 3D metaphor', note: 'rounded object, calm lighting, non-generic AI mood' },
-  { title: 'Brand heritage twist', note: 'recognizable equity reinterpreted as limited edition' },
-  { title: 'Packaging surface rhythm', note: 'label geometry, material finish, shelf presence' },
-  { title: 'Human approval signal', note: 'like/dislike/select feedback becomes preference weight' },
+  { title: 'Soft container evidence', note: 'squircle, capsule, orb, protected void가 privacy/focus 은유로 반복됨' },
+  { title: 'Human context evidence', note: '손, 얼굴, 업무, 운전, health signal이 AI를 인간 스케일로 낮춤' },
+  { title: 'Material evidence', note: 'frosted glass, gel, cushion, grain이 차가운 기술감을 완충함' },
+  { title: 'Color evidence', note: 'charcoal/soft white base 위 warm-cool accent pair가 반복됨' },
+  { title: 'Signal evidence', note: 'dot matrix, orbit, pulse, line rhythm이 processing을 조용하게 보여줌' },
+  { title: 'Editorial evidence', note: 'large negative space, micro metadata, archive label이 premium research object로 작동함' },
 ]
 
-const agenticPackageStages = [
-  { title: 'System scope', value: 'Brand & Package System', detail: '병, 박스, 파우치, 캔, 라벨 등 다양한 패키지 타입으로 확장 가능한 agentic design workflow입니다.' },
-  { title: 'Canonical equation', value: 'DNA × Brand × Product × Market', detail: '개인 취향이 브랜드를 덮지 않도록 네 가지 축을 함께 봅니다.' },
-  { title: 'Prompt package', value: 'provider-independent spec', detail: 'Higgsfield, OpenAI, Kling, Midjourney 등으로 옮길 수 있도록 raw prompt가 아니라 구조화된 방향 패키지를 만듭니다.' },
-  { title: 'Starter case', value: 'Coca-Cola special edition bottle', detail: '코카콜라 병 패키지는 첫 실험 케이스일 뿐이며, 이후 다른 브랜드와 패키지 타입으로 계속 업데이트합니다.' },
-  { title: 'Critic loop', value: 'DNA Match + Brand Fit', detail: '점수는 객관 진실이 아니라 판단 보조입니다. 결과보다 수정 액션과 Chris 승인 여부가 중요합니다.' },
-]
-
-const designDnaHierarchy = [
+const designDnaPromptPackage = [
   {
-    layer: 'Input Layer',
-    title: 'Reference Images',
-    copy: 'Chris가 좋아하는 graphic, editorial, package, poster, typography, illustration, photography, architecture, fashion 이미지를 모읍니다.',
-    items: ['5 minimum', '20–50 ideal', 'source / note / privacy status'],
+    name: 'Hermes App Icon / Presence Mark',
+    prompt: 'Original Hermes design-system app icon, protected luminous squircle container, soft inner void, tactile gel-glass rim, warm-cool cobalt and coral signal balance, premium OS-native calm intelligence, no text, no logo imitation, no robot, no brain, no magic sparkle, no existing brand layout.',
+    negative: 'readable text, third-party logo, exact app icon copy, neon cyberpunk, sharp chrome, aggressive glow, robot face, brain symbol',
   },
   {
-    layer: 'Analysis Layer',
-    title: 'Visual Pattern Recognition',
-    copy: '이미지를 caption으로 끝내지 않고 색, 타입, 구도, 질감, 밀도, 무드가 반복되는 방식을 분리합니다.',
-    items: ['observation', 'preference inference', 'evidence ids'],
+    name: 'Ambient AI Dashboard Card',
+    prompt: 'Original calm AI dashboard card for human context intelligence, frosted bento panels, dot-matrix soft metrics, low-noise micro charts, coral action signal inside mist-gray and cobalt system palette, spacious One UI-like hierarchy, user agency controls visible, no surveillance feeling, no KPI pressure.',
+    negative: 'sales pressure dashboard, fake precision, intrusive monitoring, dense SaaS table, stock AI gradient, copied UI text, brand names',
   },
   {
-    layer: 'Principle Layer',
-    title: 'Design Principles',
-    copy: '개별 이미지의 표면 스타일을 넘어 “왜 Chris가 좋아하는가”에 가까운 판단 원칙을 문장과 데이터로 정리합니다.',
-    items: ['strong signal', 'weak signal', 'contradiction'],
+    name: 'OBD Context Signal Field',
+    prompt: 'Original onboard AI context field visual, orbital signal rhythm around a protected driver context zone, subtle cyan sensing lines, warm yellow agency cue, low amplitude motion-ready composition, calm safety-first interface object, premium automotive OS mood, no distraction, no speed/racing metaphor.',
+    negative: 'busy HUD, aggressive racing UI, flashing alerts, surveillance camera, sci-fi cockpit cliché, excessive data density',
   },
   {
-    layer: 'System Layer',
-    title: 'Design DNA',
-    copy: '모든 agent가 공유하는 취향 기준입니다. 단정하지 않고 confidence와 uncertainty를 함께 남깁니다.',
-    items: ['LOW / MEDIUM / HIGH confidence', 'MD + JSON', 'human approval'],
+    name: 'Hermes Archive Cover',
+    prompt: 'Original editorial archive cover for Hermes Design DNA, large negative space, tactile archive label, micro metadata, soft glass specimen object, charcoal and warm white base, quiet premium research document mood, Korean filename only as separate overlay if needed, no copied poster layout.',
+    negative: 'third-party slogan, exact poster imitation, artist names, fake readable microcopy, magazine cover copy, noisy collage',
   },
   {
-    layer: 'Output Layer',
-    title: 'Reusable Design System',
-    copy: 'Design DNA를 brand strategy, product constraints, market context와 결합해 package direction, prompt package, critic loop로 확장합니다.',
-    items: ['art direction', 'generation', 'evaluation / refinement'],
+    name: 'Brand Package Label System',
+    prompt: 'Original brand and package label system derived from Hermes Design DNA, rounded label geometry, protected central void, tactile paper-grain and soft glass accent, warm-cool signal stripe, micro version markers, premium shelf presence, adaptable to bottle box pouch can without copying any existing brand.',
+    negative: 'Coca-Cola logo, known brand marks, exact bottle label copy, campaign slogan, literal reference replication, overdecorated gradients',
   },
-]
-
-const designDnaValueCards = [
-  {
-    title: 'Not image imitation',
-    copy: '레퍼런스 이미지를 비슷하게 베끼는 것이 아니라, 그 안에서 반복되는 visual decision pattern을 추출합니다.',
-  },
-  {
-    title: 'Shared judgment standard',
-    copy: 'Design DNA는 Karina, Go Youn-jung, Yuna, Son, Faker, Muyeol이 같은 기준으로 다음 산출물을 판단하게 만드는 공통 언어입니다.',
-  },
-  {
-    title: 'Brand-aware taste',
-    copy: '좋은 결과는 “내 스타일”만 강한 것이 아니라 브랜드와 제품에 맞아야 합니다. 그래서 공식은 DNA × Brand × Product × Market입니다.',
-  },
-]
-
-const designDnaAgentRows = [
-  { agent: 'Karina', role: 'orchestrate', copy: '문제를 분해하고, 어떤 agent가 어느 단계에서 판단해야 하는지 정리한 뒤 최종 synthesis를 만듭니다.' },
-  { agent: 'Go Youn-jung', role: 'visual DNA / critique', copy: 'reference의 색·타입·구도·질감·무드 패턴을 분석하고 art direction 품질을 봅니다.' },
-  { agent: 'Yuna', role: 'market / context', copy: '카테고리 관습, 경쟁 브랜드, special edition 흐름, image model/provider 가능성을 조사합니다.' },
-  { agent: 'Son', role: 'scope / phase', copy: 'MVP 범위, 승인 gate, 단계별 산출물과 우선순위를 관리합니다.' },
-  { agent: 'Faker', role: 'implementation', copy: 'JSON schema, webapp tab, prompt package adapter, generation/evaluation pipeline을 구현합니다.' },
-  { agent: 'Muyeol', role: 'validation / risk', copy: '저작권, privacy, public-safe, score overclaiming, go/no-go 리스크를 검증합니다.' },
 ]
 
 function getInitialThemeMode(): ThemeMode {
@@ -2187,58 +2201,33 @@ function AboutDesignDnaPanel() {
   return (
     <div className="design-dna-grid">
       <article className="content-card design-dna-hero-card">
-        <p className="card-kicker">Project constitution</p>
-        <h3>Design thinking becomes a reusable system.</h3>
+        <p className="card-kicker">Compressed Design DNA</p>
+        <h3>60개 레퍼런스를 6개의 실행 가능한 디자인 DNA로 압축했습니다.</h3>
         <p>
-          Design DNA Studio는 단순히 “AI에게 패키지를 그려달라”고 요청하는 화면이 아닙니다. Chris가 좋아하는 시각 레퍼런스를 분석해
-          반복되는 취향의 구조를 찾고, 그 구조를 브랜드 전략과 제품 제약 안에서 다시 사용할 수 있는 Agentic Design System으로 바꾸는 프로젝트입니다.
-        </p>
-        <p>
-          그래서 최종 산출물은 이미지 한 장이 아니라, reference evidence, design principle, prompt package, critic score, refinement action까지 남기는
-          디자인 프로세스입니다. 이 흐름이 쌓이면 Chris의 디자인 판단은 한 번의 취향이 아니라 반복 가능한 design intelligence가 됩니다.
+          이번 단계의 목적은 이미지를 더 많이 모으는 것이 아니라, Chris Archive가 반복해서 보여준 판단 신호를
+          실제 브랜드 에셋 생성에 쓸 수 있는 언어로 줄이는 것입니다. 핵심은 “AI를 차갑게 과시하지 않고,
+          따뜻한 인간 맥락을 보호하는 OS-native visual language”입니다.
         </p>
         <blockquote>
-          Generative AI creates outputs. Agentic AI executes processes. AX transforms the way design is done.
+          Cold AI capability, held inside warm human context.
         </blockquote>
         <div className="status-row">
-          <span className="status-chip">Private root: /opt/data/design-dna-studio</span>
-          <span className="status-chip muted">Starter case: Coca-Cola bottle</span>
-          <span className="status-chip muted">Human judgment final</span>
+          <span className="status-chip">60 reference evidence</span>
+          <span className="status-chip muted">6 compressed clusters</span>
+          <span className="status-chip muted">Prompt package ready</span>
         </div>
       </article>
 
-      <section className="content-card design-dna-hierarchy-card" aria-label="Design DNA hierarchy from references to system">
-        <div className="design-dna-hierarchy-header">
-          <p className="card-kicker">Hierarchy</p>
-          <h3>Reference Images에서 Reusable Design System까지</h3>
-          <p>
-            핵심은 이미지의 표면을 따라가는 것이 아니라, 중간 계층을 반드시 통과하는 것입니다. 레퍼런스는 pattern이 되고,
-            pattern은 principle이 되고, principle은 Design DNA가 된 뒤에야 brand/package system으로 확장됩니다.
-          </p>
-        </div>
-        <div className="design-dna-hierarchy-flow">
-          {designDnaHierarchy.map((node, index) => (
-            <div className="design-dna-hierarchy-step" key={node.title}>
-              <article className="design-dna-hierarchy-node">
-                <span>{node.layer}</span>
-                <h4>{node.title}</h4>
-                <p>{node.copy}</p>
-                <ul>
-                  {node.items.map((item) => <li key={item}>{item}</li>)}
-                </ul>
-              </article>
-              {index < designDnaHierarchy.length - 1 ? <strong className="design-dna-hierarchy-arrow" aria-hidden="true">↓</strong> : null}
+      <section className="design-dna-cluster-grid" aria-label="Compressed Hermes Design DNA clusters">
+        {designDnaCompressedClusters.map((cluster) => (
+          <article className="content-card design-dna-cluster-card" key={cluster.title}>
+            <p className="card-kicker">Core cluster</p>
+            <h4>{cluster.title}</h4>
+            <p>{cluster.summary}</p>
+            <div className="design-dna-dimension-cloud compact" aria-label={`${cluster.title} signals`}>
+              {cluster.signals.map((signal) => <span key={signal}>{signal}</span>)}
             </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="design-dna-value-grid" aria-label="Design DNA project principles">
-        {designDnaValueCards.map((item) => (
-          <article className="content-card design-dna-value-card" key={item.title}>
-            <p className="card-kicker">Principle</p>
-            <h4>{item.title}</h4>
-            <p>{item.copy}</p>
+            <p className="cluster-use"><strong>Asset use:</strong> {cluster.assetUse}</p>
           </article>
         ))}
       </section>
@@ -2254,28 +2243,14 @@ function AboutDesignDnaPanel() {
       </section>
 
       <article className="content-card design-dna-dimension-card">
-        <p className="card-kicker">Analysis dimensions</p>
-        <h3>이미지 캡션이 아니라 취향의 반복 구조를 봅니다.</h3>
+        <p className="card-kicker">Final dimensions</p>
+        <h3>이제 분석 dimension도 9개에서 6개 핵심 축으로 압축합니다.</h3>
         <p>
-          각 reference는 아래 9개 dimension으로 읽습니다. 그리고 observation과 preference inference를 분리해, “보이는 것”과 “Chris가 좋아할 가능성이 있는 이유”를
-          섞지 않도록 합니다. confidence가 낮거나 reference가 서로 충돌하면 그대로 표시합니다.
+          컬러, 타입, 물성, 메타포를 따로 흩어두지 않고 실제 생성/평가에서 바로 쓰이는 6개 cluster로 관리합니다.
+          이 축들은 헤르메스디자인시스템의 token, component, prompt, critique checklist로 직접 연결됩니다.
         </p>
-        <div className="design-dna-dimension-cloud" aria-label="Design DNA analysis dimensions">
+        <div className="design-dna-dimension-cloud" aria-label="Compressed Design DNA dimensions">
           {designDnaDimensions.map((dimension) => <span key={dimension}>{dimension}</span>)}
-        </div>
-      </article>
-
-      <article className="content-card design-dna-agent-card">
-        <p className="card-kicker">Agent responsibility</p>
-        <h3>Design DNA는 한 agent의 감상이 아니라 팀 전체의 판단 계약입니다.</h3>
-        <div className="design-dna-agent-list">
-          {designDnaAgentRows.map((row) => (
-            <section className="design-dna-agent-row" key={row.agent}>
-              <strong>{row.agent}</strong>
-              <span>{row.role}</span>
-              <p>{row.copy}</p>
-            </section>
-          ))}
         </div>
       </article>
     </div>
@@ -2286,20 +2261,31 @@ function ChrisDesignArchivePanel() {
   return (
     <div className="design-dna-grid">
       <article className="content-card design-dna-archive-brief">
-        <p className="card-kicker">Chris design archive</p>
-        <h3>좋아하는 이미지를 모으는 곳에서, 판단 기준을 꺼내는 곳으로.</h3>
+        <p className="card-kicker">Chris Design Archive → Hermes Design System</p>
+        <h3>Chris Archive에서 얻은 것은 이미지 스타일이 아니라 판단의 반복 구조입니다.</h3>
         <p>
-          이 영역은 Chris가 좋아하는 이미지를 대시보드처럼 나열하는 future archive입니다. 지금은 실제 reference image intake 전 단계라,
-          어떤 종류의 선호 신호가 카드화될지 보여주는 placeholder 상태로 둡니다.
+          Chris Archive의 60개 reference는 그대로 베끼기 위한 moodboard가 아닙니다. 각 이미지는 “왜 이 이미지가 좋게 느껴지는가”를
+          추적하기 위한 evidence입니다. Karina와 GoYJ는 여기서 반복되는 색의 역할, 물성, 구도, 정보 밀도, 메타포, 인간적 온도를 뽑아
+          헤르메스디자인시스템으로 압축했습니다.
         </p>
         <div className="status-row">
-          <span className="status-chip">5 images minimum</span>
-          <span className="status-chip muted">20–50 recommended</span>
-          <span className="status-chip muted">public-safe only</span>
+          <span className="status-chip">60 unique references</span>
+          <span className="status-chip muted">evidence → pattern → system</span>
+          <span className="status-chip muted">no direct copying</span>
         </div>
       </article>
 
-      <section className="chris-design-archive-board" aria-label="Chris preferred visual reference dashboard">
+      <section className="design-dna-value-grid" aria-label="What Hermes Design System learned from Chris Archive">
+        {chrisArchiveExtractionCards.map((item) => (
+          <article className="content-card design-dna-value-card" key={item.title}>
+            <p className="card-kicker">Archive learning</p>
+            <h4>{item.title}</h4>
+            <p>{item.copy}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="chris-design-archive-board" aria-label="Chris Archive evidence transformed into Hermes system principles">
         {chrisDesignArchiveTiles.map((tile, index) => (
           <article className="chris-design-tile" key={tile.title}>
             <div className="chris-design-tile-visual" aria-hidden="true">
@@ -2320,47 +2306,45 @@ function AgenticBrandPackagePanel() {
   return (
     <div className="design-dna-grid">
       <article className="content-card design-dna-hero-card package-system-card">
-        <p className="card-kicker">Agentic Brand & Package System</p>
-        <h3>Brand & Package System MVP</h3>
+        <p className="card-kicker">Prompt Package for Brand Asset Generation</p>
+        <h3>압축된 Design DNA를 실제 브랜드 에셋 생성용 프롬프트 패키지로 바꿨습니다.</h3>
         <p>
-          이 탭의 중심은 코카콜라 병 하나가 아니라 다양한 브랜드와 패키지 타입으로 확장되는 시스템입니다. 코카콜라 스페셜 에디션 병 패키지는
-          첫 시작점으로만 사용하고, 이후 다른 브랜드, 제품군, 패키지 구조로 계속 업데이트합니다.
-        </p>
-        <p>
-          목업 제작 단계에서는 Higgsfield를 연결해 presentation-quality package concept을 만들 수 있습니다. 다만 source of truth는 이미지 모델이 아니라
-          Design DNA, Brand Strategy, Product Constraints, Market Context가 합쳐진 Prompt Package입니다.
+          이제 source of truth는 단일 reference 이미지가 아니라 6개 핵심 클러스터입니다. 각 prompt는 provider-independent하게 작성되어
+          Higgsfield, Kling, OpenAI, Midjourney 등으로 옮길 수 있고, 모든 prompt는 제3자 브랜드·문구·로고·레이아웃 복제를 금지합니다.
         </p>
         <div className="design-dna-equation" aria-label="Design output equation">
-          <span>Design DNA</span>
+          <span>6 Core DNA</span>
           <strong>×</strong>
-          <span>Brand Strategy</span>
+          <span>Brand Brief</span>
           <strong>×</strong>
-          <span>Product Constraints</span>
+          <span>Asset Type</span>
           <strong>×</strong>
-          <span>Market Context</span>
+          <span>Safety Critique</span>
         </div>
       </article>
 
-      <section className="agentic-package-stage-grid" aria-label="Agentic brand and package system stages">
-        {agenticPackageStages.map((stage) => (
-          <article className="content-card agentic-package-stage" key={stage.title}>
-            <p className="card-kicker">{stage.title}</p>
-            <h4>{stage.value}</h4>
-            <p>{stage.detail}</p>
+      <section className="design-dna-prompt-grid" aria-label="Hermes brand asset prompt package">
+        {designDnaPromptPackage.map((item) => (
+          <article className="content-card design-dna-prompt-card" key={item.name}>
+            <p className="card-kicker">Prompt package</p>
+            <h4>{item.name}</h4>
+            <p>{item.prompt}</p>
+            <div className="prompt-negative">
+              <strong>Negative / guardrail</strong>
+              <span>{item.negative}</span>
+            </div>
           </article>
         ))}
       </section>
 
       <article className="content-card design-dna-roadmap-card">
-        <p className="card-kicker">Execution roadmap</p>
-        <h3>모든 단계로 가되, 토큰과 승인 gate를 보면서 나눠 실행합니다.</h3>
+        <p className="card-kicker">Next production order</p>
+        <h3>생성은 바로 할 수 있지만, 먼저 GoYJ 리뷰로 cluster weight를 고정하는 것이 안전합니다.</h3>
         <ol>
-          <li>Reference intake와 Chris Design Archive 구성</li>
-          <li>Design DNA extraction / confidence / contradiction 정리</li>
-          <li>Brand brief와 package constraints 정리</li>
-          <li>Art Direction과 provider-independent Prompt Package 생성</li>
-          <li>Higgsfield 등 승인된 provider로 1차 brand/package mockup 생성</li>
-          <li>DNA Match, Brand Fit, Critique, Refinement Action 평가</li>
+          <li>GoYJ가 6개 cluster의 미감 우선순위와 버릴 요소를 리뷰합니다.</li>
+          <li>Chris가 첫 생성 asset type을 고릅니다: app icon, archive cover, dashboard card, package label.</li>
+          <li>Karina가 선택한 asset type에 맞춰 prompt를 1개 final brief로 줄입니다.</li>
+          <li>승인된 provider에서 1차 생성 후 DNA Match / Brand Safety / One UI Fit 기준으로 평가합니다.</li>
         </ol>
       </article>
     </div>
