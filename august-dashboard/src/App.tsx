@@ -6,7 +6,7 @@ import { fallbackChrisArchive, loadChrisArchive, type ChrisArchiveItem, type Chr
 import './App.css'
 
 const publicAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
-const hermesDesignSystemDocHref = publicAssetPath('/docs/헤르메스디자인시스템.md')
+const hermesDesignSystemDocHref = publicAssetPath('/docs/hermes-design-system.md')
 const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
 
 type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report'
