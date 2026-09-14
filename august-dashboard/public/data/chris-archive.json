@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-14T16:26:10+09:00",
+  "generatedAt": "2026-09-14T16:31:31+09:00",
   "sourcePolicy": "Public webapp includes copied reference images and Karina first-pass summaries only; raw private chats/logs are not exposed.",
   "items": [
     {
@@ -1766,6 +1766,38 @@
         "Capsule object as media/AI transition token",
         "Large left-aligned grotesk headline with generous white space",
         "Use cinematic human imagery carefully as emotional context, not as generic stock hero"
+      ]
+    },
+    {
+      "id": "2026-09-14_ai-sales-dashboard-soft-glass-metrics",
+      "title": "AI sales dashboard soft glass metrics",
+      "created": "2026-09-14",
+      "status": "goyj_review_needed",
+      "imageSrc": "assets/chris-archive/2026-09-14_ai-sales-dashboard-soft-glass-metrics_d2d5d4fbad3f.jpg",
+      "entryPath": "/opt/data/chris-archive/entries/2026/2026-09-14_ai-sales-dashboard-soft-glass-metrics.md",
+      "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-14_ai-sales-dashboard-soft-glass-metrics_d2d5d4fbad3f.jpg",
+      "summary": "밝은 유리/화이트 인터페이스 안에 영업·분석 대시보드 카드들이 배치된 UI 레퍼런스. `Lead Number 32%`, `AI Efficiency 94%`, `Sales Activity 169`, `Deal Forecast`, `$426K Pipeline Value` 같은 지표가 둥근 카드와 dot-matrix 숫자, 얇은 라인 차트, 막대 리듬으로 표현되어 있다.",
+      "interpretation": "이 이미지는 Chris Archive의 60번째 기준점으로 적합한 `soft enterprise intelligence dashboard` 레퍼런스다. B2B/업무 데이터가 차갑고 복잡하게 보이지 않도록, 유리 같은 라이트 캔버스와 파스텔 그라디언트 카드, dot-matrix 숫자, 낮은 대비의 그래프를 사용해 “조용히 상태를 읽어주는 AI 업무 OS”처럼 보이게 만든다. 향후 Design DNA에서는 생산성/분석/자동화 데이터를 인간적으로 부드럽게 보여주는 One UI형 metric grammar 후보로 다룰 수 있다.",
+      "tags": [
+        "soft enterprise dashboard",
+        "AI efficiency metric",
+        "glassmorphism",
+        "pastel gradient cards",
+        "dot matrix numerals",
+        "sales analytics",
+        "deal forecast",
+        "rounded bento UI",
+        "low-noise charts",
+        "collaborative workspace"
+      ],
+      "candidates": [
+        "Rounded bento metric cards with soft glass container",
+        "Dot-matrix numerals as calm AI/data readout language",
+        "Pastel gradient status cards: violet, coral, blue",
+        "Low-contrast micro charts that show rhythm without visual anxiety",
+        "AI Efficiency / Lead Number cards as ambient business intelligence tokens",
+        "Floating share/avatar controls as collaborative context layer",
+        "Use enterprise metrics as sample structure only; avoid copying literal product UI or brand-specific data"
       ]
     }
   ]
