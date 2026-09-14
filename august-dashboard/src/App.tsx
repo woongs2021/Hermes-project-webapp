@@ -3,6 +3,7 @@ import { fallbackHomeVisualSet, loadHomeVisualSet, type HomeVisualItem, type Hom
 import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type ResearchBoardItem } from './researchBoard'
 import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, MuyeolValidationPanel, ObdGrowthTimelinePanel } from './extendedPanels'
 import { fallbackChrisArchive, loadChrisArchive, type ChrisArchiveItem, type ChrisArchiveManifest } from './chrisArchive'
+import { fallbackDnaArchive, loadDnaArchive, type DnaArchiveItem, type DnaArchiveManifest } from './dnaArchive'
 import './App.css'
 
 const publicAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
@@ -2123,6 +2124,19 @@ function DevArchitecturePanel() {
 function DesignDnaPanel() {
   const coreClusters = designDnaCompressedClusters.filter((cluster) => cluster.group === 'Core DNA')
   const expressionClusters = designDnaCompressedClusters.filter((cluster) => cluster.group === 'Expression Layer')
+  const [dnaArchive, setDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
+  const [selectedDnaAsset, setSelectedDnaAsset] = useState<DnaArchiveItem | null>(null)
+
+  useEffect(() => {
+    let isMounted = true
+    loadDnaArchive().then((loadedArchive) => {
+      if (!isMounted) return
+      setDnaArchive(loadedArchive)
+    })
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   return (
     <div className="design-dna-shell design-dna-single-page">
@@ -2229,6 +2243,34 @@ function DesignDnaPanel() {
         ))}
       </section>
 
+      <section className="content-card dna-generated-archive-card" aria-label="Selected GoYJ generated DNA archive">
+        <div>
+          <p className="card-kicker">DNA Archive · Selected outputs only</p>
+          <h3>GoYJ가 월수금마다 보여주는 5장 중 Chris가 “저장해줘”라고 고른 결과만 남깁니다.</h3>
+          <p>
+            이 보드는 Chris Archive와 같은 방식으로 작동하지만, source가 다릅니다. Chris Archive는 영감의 근거이고,
+            DNA Archive는 그 근거로 생성한 결과 중 Chris가 선택한 실제 브랜드/UX 그래픽 에셋만 저장하는 공간입니다.
+          </p>
+        </div>
+        {dnaArchive.items.length ? (
+          <div className="dna-generated-grid" aria-label="Saved DNA generated assets">
+            {dnaArchive.items.map((item, index) => (
+              <button type="button" className="dna-generated-tile" key={item.id} onClick={() => setSelectedDnaAsset(item)}>
+                <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} generated asset`} loading="lazy" />
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <strong>{item.title}</strong>
+                <small>{item.created}</small>
+              </button>
+            ))}
+          </div>
+        ) : (
+          <div className="dna-generated-empty">
+            <strong>아직 저장된 DNA generated asset은 없습니다.</strong>
+            <p>월수금 GoYJ가 5장 후보를 DM으로 보여주고, Chris가 “저장해줘”라고 선택한 이미지만 이곳에 공개됩니다.</p>
+          </div>
+        )}
+      </section>
+
       <section className="content-card design-dna-never-card" aria-label="What Hermes should never become">
         <p className="card-kicker">What Hermes should never become</p>
         <h3>기술 설명보다 감각적 존재감이 먼저 와야 합니다.</h3>
@@ -2241,6 +2283,32 @@ function DesignDnaPanel() {
           <li>과한 chrome, liquid metal, rainbow gradient를 핵심 문법으로 쓰는 것</li>
         </ul>
       </section>
+
+      {selectedDnaAsset ? (
+        <div className="dna-generated-modal-backdrop" role="presentation" onClick={() => setSelectedDnaAsset(null)}>
+          <article className="dna-generated-modal" role="dialog" aria-modal="true" aria-labelledby="dna-generated-modal-title" onClick={(event) => event.stopPropagation()}>
+            <button type="button" className="chris-archive-modal-close" onClick={() => setSelectedDnaAsset(null)} aria-label="DNA Archive 상세 팝업 닫기">
+              ×
+            </button>
+            <div className="dna-generated-modal-media">
+              <img src={toAppAssetSrc(selectedDnaAsset.imageSrc)} alt={`${selectedDnaAsset.title} generated full asset`} />
+            </div>
+            <div className="dna-generated-modal-copy">
+              <p className="card-kicker">{selectedDnaAsset.created} · {selectedDnaAsset.status}</p>
+              <h3 id="dna-generated-modal-title">{selectedDnaAsset.title}</h3>
+              <p>{selectedDnaAsset.analysis}</p>
+              <div className="chris-archive-chip-row" aria-label="DNA clusters">
+                {selectedDnaAsset.dnaClusters.map((cluster) => <span key={cluster}>{cluster}</span>)}
+              </div>
+              <div className="prompt-negative">
+                <strong>Generation prompt</strong>
+                <span>{selectedDnaAsset.prompt}</span>
+              </div>
+              <p className="manifest-policy">{dnaArchive.sourcePolicy}</p>
+            </div>
+          </article>
+        </div>
+      ) : null}
     </div>
   )
 }
