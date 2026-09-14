@@ -6,6 +6,7 @@ import { fallbackChrisArchive, loadChrisArchive, type ChrisArchiveItem, type Chr
 import './App.css'
 
 const publicAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
+const hermesDesignSystemDocHref = publicAssetPath('/docs/헤르메스디자인시스템.md')
 const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
 
 type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report'
@@ -1247,6 +1248,9 @@ function HomeVisualDetail({
 function ChrisArchivePanel() {
   const [archive, setArchive] = useState<ChrisArchiveManifest>(fallbackChrisArchive)
   const [selectedItem, setSelectedItem] = useState<ChrisArchiveItem | null>(null)
+  const [isDesignSystemOpen, setIsDesignSystemOpen] = useState(false)
+  const [designSystemText, setDesignSystemText] = useState('')
+  const [designSystemError, setDesignSystemError] = useState('')
   const [isModalScrolling, setIsModalScrolling] = useState(false)
   const modalScrollTimerRef = useRef<number | null>(null)
 
@@ -1261,6 +1265,20 @@ function ChrisArchivePanel() {
       setIsModalScrolling(false)
       modalScrollTimerRef.current = null
     }, 850)
+  }
+
+  const handleOpenDesignSystem = async () => {
+    setIsDesignSystemOpen(true)
+
+    if (designSystemText || designSystemError) return
+
+    try {
+      const response = await fetch(hermesDesignSystemDocHref, { cache: 'no-store' })
+      if (!response.ok) throw new Error(`헤르메스디자인시스템 문서 로드 실패: ${response.status}`)
+      setDesignSystemText(await response.text())
+    } catch (error) {
+      setDesignSystemError(error instanceof Error ? error.message : '헤르메스디자인시스템 문서를 불러오지 못했습니다.')
+    }
   }
 
   useEffect(() => {
@@ -1295,6 +1313,14 @@ function ChrisArchivePanel() {
           <span><strong>{totalItems}</strong> references</span>
           <span><strong>{goyjPending}</strong> GoYJ review queue</span>
           <span><strong>{latestDate}</strong> latest</span>
+        </div>
+        <div className="chris-design-system-actions" aria-label="Hermes design system actions">
+          <button type="button" className="chris-design-system-button" onClick={handleOpenDesignSystem}>
+            헤르메스디자인시스템 보기
+          </button>
+          <a className="chris-design-system-download" href={hermesDesignSystemDocHref} download="헤르메스디자인시스템.md">
+            MD 다운로드
+          </a>
         </div>
       </section>
 
@@ -1347,6 +1373,34 @@ function ChrisArchivePanel() {
               </div>
               <p className="manifest-policy">{archive.sourcePolicy}</p>
             </div>
+          </article>
+        </div>
+      ) : null}
+
+      {isDesignSystemOpen ? (
+        <div className="chris-design-system-modal-backdrop" role="presentation" onClick={() => setIsDesignSystemOpen(false)}>
+          <article
+            className="chris-design-system-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="hermes-design-system-title"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="chris-design-system-modal-header">
+              <div>
+                <p className="card-kicker">Chris Archive 60 references · Design DNA synthesis</p>
+                <h3 id="hermes-design-system-title">헤르메스디자인시스템</h3>
+              </div>
+              <div className="chris-design-system-modal-controls">
+                <a className="chris-design-system-download" href={hermesDesignSystemDocHref} download="헤르메스디자인시스템.md">
+                  MD 다운로드
+                </a>
+                <button type="button" className="chris-archive-modal-close" onClick={() => setIsDesignSystemOpen(false)} aria-label="헤르메스디자인시스템 팝업 닫기">
+                  ×
+                </button>
+              </div>
+            </div>
+            <pre className="chris-design-system-document">{designSystemError || designSystemText || '헤르메스디자인시스템.md를 불러오는 중입니다.'}</pre>
           </article>
         </div>
       ) : null}
