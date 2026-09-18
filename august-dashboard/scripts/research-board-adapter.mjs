@@ -77,6 +77,17 @@ function normalizeIsoWeek(value = '') {
   return value.replace(/^(\d{4})-(\d{2})$/, '$1-W$2')
 }
 
+function isoWeekFromDate(dateString = '') {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(dateString)) return undefined
+
+  const date = new Date(`${dateString}T00:00:00Z`)
+  const day = date.getUTCDay() || 7
+  date.setUTCDate(date.getUTCDate() + 4 - day)
+  const yearStart = new Date(Date.UTC(date.getUTCFullYear(), 0, 1))
+  const week = Math.ceil((((date.getTime() - yearStart.getTime()) / 86400000) + 1) / 7)
+  return `${date.getUTCFullYear()}-W${String(week).padStart(2, '0')}`
+}
+
 function normalizeComparableTitle(text = '') {
   return text
     .toLowerCase()
@@ -84,6 +95,41 @@ function normalizeComparableTitle(text = '') {
     .replace(/[^a-z0-9가-힣]+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
+}
+
+function firstNonEmpty(...values) {
+  return values.find((value) => typeof value === 'string' && value.trim().length > 0)?.trim()
+}
+
+function normalizedSourceTitle(item) {
+  const directTitle = firstNonEmpty(item.title)
+  if (directTitle) return directTitle
+
+  const koreanTitle = firstNonEmpty(item.korean_title, item.title_ko)
+  const originalTitle = firstNonEmpty(item.original_title)
+
+  if (koreanTitle && originalTitle && koreanTitle !== originalTitle) return `${koreanTitle} / ${originalTitle}`
+  return koreanTitle ?? originalTitle
+}
+
+function publicationDateFromSource(item) {
+  const directDate = firstNonEmpty(item.publication_date)
+  if (directDate) return directDate
+
+  const sourceVenueDate = firstNonEmpty(item.source_venue_date)
+  const dateMatch = sourceVenueDate?.match(/\b\d{4}-\d{2}-\d{2}\b/)
+  if (dateMatch) return dateMatch[0]
+
+  return firstNonEmpty(item.date_kst, item.date)
+}
+
+function koreanSourceStatusFromSource(item) {
+  const directStatus = firstNonEmpty(item.korean_source_status)
+  if (directStatus) return directStatus
+
+  const category = firstNonEmpty(item.category)
+  if (/korea|korean|한국/i.test(category ?? '')) return `yes; ${category} source signal`
+  return `no; ${category ?? 'global/non-Korean'} source signal`
 }
 
 function readWeeklySelectedIndex(path = weeklySelectedPath) {
@@ -126,35 +172,49 @@ export function readResearchSource(path = researchInputPath) {
 function normalizeResearchItem(item, index, selectedIndex = new Map()) {
   if (!item || typeof item !== 'object' || Array.isArray(item)) fail(`source item[${index}] must be an object`)
 
-  const lane = item.lane ?? item.owner
+  const lane = item.lane ?? item.owner ?? item.agent
   if (!allowedLanes.has(lane)) fail(`source item[${index}].lane is not allowed: ${lane}`)
 
-  for (const field of ['date_kst', 'iso_week', 'title', 'url_or_id', 'source_venue', 'publication_date', 'core_claim', 'chris_relevance', 'korean_source_status', 'source_access', 'duplicate_repeat_signal']) {
-    nonEmpty(item[field], `source item[${index}].${field}`)
+  const normalized = {
+    dateKst: firstNonEmpty(item.date_kst, item.date),
+    isoWeek: firstNonEmpty(item.iso_week) ?? isoWeekFromDate(firstNonEmpty(item.date_kst, item.date)),
+    title: normalizedSourceTitle(item),
+    urlOrId: firstNonEmpty(item.url_or_id, item.url_or_stable_id),
+    sourceVenue: firstNonEmpty(item.source_venue, item.source_venue_date),
+    publicationDate: publicationDateFromSource(item),
+    summary: firstNonEmpty(item.core_claim, item.one_line_core_claim),
+    chrisRelevance: firstNonEmpty(item.chris_relevance, item.one_line_chris_relevance),
+    koreanSourceStatus: koreanSourceStatusFromSource(item),
+    sourceAccess: firstNonEmpty(item.source_access, item.source_access_confidence),
+    duplicateSignal: firstNonEmpty(item.duplicate_repeat_signal, item.duplicate_key, item.muyeol_validation_note) ?? 'new; no duplicate signal specified in normalized source',
+  }
+
+  for (const [field, value] of Object.entries(normalized)) {
+    nonEmpty(value, `source item[${index}].${field}`)
   }
 
   const score = Number(item.initial_score_5 ?? 0)
   if (!Number.isFinite(score) || score < 0 || score > 5) fail(`source item[${index}].initial_score_5 must be 0-5`)
 
-  const selectedStatus = selectedIndex.get(normalizeComparableTitle(item.title))
+  const selectedStatus = selectedIndex.get(normalizeComparableTitle(normalized.title))
 
   return {
-    id: `${item.date_kst}-${lane}-${slugify(item.title) || index}`,
-    dateKst: item.date_kst,
-    isoWeek: normalizeIsoWeek(item.iso_week),
+    id: `${normalized.dateKst}-${lane}-${slugify(normalized.title) || index}`,
+    dateKst: normalized.dateKst,
+    isoWeek: normalizeIsoWeek(normalized.isoWeek),
     lane,
     owner: lane,
-    title: item.title,
+    title: normalized.title,
     thumbnailLabel: thumbnailLabel({ ...item, lane }),
-    sourceVenue: item.source_venue,
-    sourceAccess: item.source_access,
-    sourceUrlOrId: item.url_or_id,
-    publicationDate: item.publication_date,
-    summary: item.core_claim,
-    chrisRelevance: item.chris_relevance,
-    koreanSourceStatus: item.korean_source_status,
+    sourceVenue: normalized.sourceVenue,
+    sourceAccess: normalized.sourceAccess,
+    sourceUrlOrId: normalized.urlOrId,
+    publicationDate: normalized.publicationDate,
+    summary: normalized.summary,
+    chrisRelevance: normalized.chrisRelevance,
+    koreanSourceStatus: normalized.koreanSourceStatus,
     score,
-    duplicateSignal: item.duplicate_repeat_signal,
+    duplicateSignal: normalized.duplicateSignal,
     status: selectedStatus ? 'friday_final_pick' : 'daily_candidate',
     validationStatus: selectedStatus ?? 'unreviewed',
     publicSafe: true,
