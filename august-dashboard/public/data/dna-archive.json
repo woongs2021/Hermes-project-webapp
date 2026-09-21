@@ -1,6 +1,226 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-14T00:00:00+09:00",
+  "generatedAt": "2026-09-21T11:38:13+09:00",
   "sourcePolicy": "Only Chris-selected GoYJ generated assets are saved here. Unselected review candidates are temporary and are not published.",
-  "items": []
+  "items": [
+    {
+      "id": "2026-09-16-goyj-modular-capsule-pattern-simplified",
+      "title": "Capsule Pattern — No Dots / No Lines",
+      "created": "2026-09-16",
+      "status": "chris_selected_replaced",
+      "imageSrc": "/assets/dna-archive/2026-09-16/01_modular_capsule_pattern_simplified.png",
+      "prompt": "GPT Image 2.5 replacement revision from Chris-selected 2026-09-16 pair; pure graphic only, no text/logos/photos/icons, explicitly no dots/dotted lines/thin lines/connector lines/grid lines/route lines; use filled shapes, broad planes, negative space, and soft editorial product-graphic surfaces.",
+      "analysis": "2026-09-17 Chris 요청으로 전날 저장본을 점선/점/선 없이 교체한 저장본입니다. 큰 filled capsule/shape와 여백 중심으로 재구성해 그래픽 패턴/배경 활용성을 유지했습니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-09-16/chris-archive-gpt-image-2-5-pattern-refine",
+      "dnaClusters": [
+        "Protected Human Context",
+        "Quiet Signal Rhythm",
+        "Rounded Capsule UI",
+        "Editorial Evidence System",
+        "Pattern Surface"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "2k",
+        "variant": "flare",
+        "background": "opaque"
+      },
+      "width": 2048,
+      "height": 2048,
+      "selectedReason": "Chris approved the no-dots/no-lines revision as replacement for the 2026-09-16 saved pair.",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260917_004055_71e788c6-aca2-4d34-bcd1-0786be02e380.png",
+      "replacementOf": "/opt/data/dna-archive/selected/2026-09-16/images/01_modular_capsule_pattern_simplified.png",
+      "replacedAt": "2026-09-17T09:48:00+09:00"
+    },
+    {
+      "id": "2026-09-16-goyj-directional-flow-map-simplified",
+      "title": "Directional Flow — No Dots / No Lines",
+      "created": "2026-09-16",
+      "status": "chris_selected_replaced",
+      "imageSrc": "/assets/dna-archive/2026-09-16/02_directional_flow_map_simplified.png",
+      "prompt": "GPT Image 2.5 replacement revision from Chris-selected 2026-09-16 pair; pure graphic only, no text/logos/photos/icons, explicitly no dots/dotted lines/thin lines/connector lines/grid lines/route lines; use filled shapes, broad planes, negative space, and soft editorial product-graphic surfaces.",
+      "analysis": "2026-09-17 Chris 요청으로 전날 저장본을 점선/점/선 없이 교체한 저장본입니다. 선형 route나 signal dots 대신 큰 color field와 negative-space channel로 방향성을 유지했습니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-09-16/chris-archive-gpt-image-2-5-pattern-refine",
+      "dnaClusters": [
+        "Protected Human Context",
+        "Responsible Direction",
+        "Quiet Signal Rhythm",
+        "Warm-Cool Intelligence",
+        "Editorial Product Graphic"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "2k",
+        "variant": "flare",
+        "background": "opaque"
+      },
+      "width": 2048,
+      "height": 2048,
+      "selectedReason": "Chris approved the no-dots/no-lines revision as replacement for the 2026-09-16 saved pair.",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260917_004126_5844d246-c678-4c0c-a444-7376674baada.png",
+      "replacementOf": "/opt/data/dna-archive/selected/2026-09-16/images/02_directional_flow_map_simplified.png",
+      "replacedAt": "2026-09-17T09:48:00+09:00"
+    },
+    {
+      "id": "2026-09-18-goyj-graphic-motif-selected-01",
+      "title": "Geometric Arch Grid — Ochre / Gray / Black",
+      "created": "2026-09-18",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-09-18/selected_01_geometric_arch_grid.jpg",
+      "analysis": "생성 의도: 오브젝트 메타포를 배제하고, Chris Archive의 조용한 OS-native polish와 warm gray/ochre/black 팔레트를 “모듈형 기하 패턴”으로 재해석한 이미지입니다. 원, 반원, 아치, 직사각형 블록을 격자 리듬 안에 배치해 디자인 시스템 specimen 같은 질서를 만들었습니다. 왜 만들었는가: 이전 결과들이 아카이빙된 스타일이나 물체처럼 보이는 경향이 있어, “그래픽 디자이너가 만든 모티프”라는 방향을 명확히 하기 위한 첫 번째 기준점으로 생성했습니다. 활용 관점: 반복 패턴, 섹션 배경, DNA Archive 썸네일, 브랜드 표면 그래픽에 적합합니다.",
+      "sourceRun": "/opt/data/goyounjung_outputs/chris_archive_graphic_motif_20260918/motif_01.png",
+      "sourceCandidateRun": "/opt/data/goyounjung_outputs/graphic_motif_ref_variations_20260918 and Chris-selected Telegram attachments",
+      "dnaClusters": [
+        "Modular Geometry",
+        "Archive Pattern Surface",
+        "Warm Gray Ochre System",
+        "Editorial Product Graphic"
+      ],
+      "model": "gpt_image_2_5 / user-approved graphic motif selection",
+      "options": {
+        "aspect_ratio": "1:1",
+        "style": "pure 2D abstract graphic motif",
+        "text": "none"
+      },
+      "width": 1280,
+      "height": 1280,
+      "selectedReason": "Chris explicitly asked to save these three graphic motif images.",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-18/images/selected_01_geometric_arch_grid.jpg",
+      "savedAt": "2026-09-18T11:56:00+09:00",
+      "matchedGeneratedFile": "/opt/data/goyounjung_outputs/chris_archive_graphic_motif_20260918/motif_01.png",
+      "matchConfidence": "SSIM 0.995518; visual exact match after Telegram resize/compression",
+      "generationReason": "Chris가 “오브젝트가 아니라 그래픽 디자이너처럼 그래픽 모티프를 그려달라”고 요청한 뒤, 기존 archive/DNA의 UI적 리듬을 물체가 아닌 평면 그래픽 언어로 번역하기 위해 생성했습니다. 원·반원·아치 모듈을 반복 가능한 구조로 잡아, 제품 배경/브랜드 패턴/카드 표면에 적용 가능한 시스템형 모티프를 의도했습니다.",
+      "detailedDescription": "생성 의도: 오브젝트 메타포를 배제하고, Chris Archive의 조용한 OS-native polish와 warm gray/ochre/black 팔레트를 “모듈형 기하 패턴”으로 재해석한 이미지입니다. 원, 반원, 아치, 직사각형 블록을 격자 리듬 안에 배치해 디자인 시스템 specimen 같은 질서를 만들었습니다. 왜 만들었는가: 이전 결과들이 아카이빙된 스타일이나 물체처럼 보이는 경향이 있어, “그래픽 디자이너가 만든 모티프”라는 방향을 명확히 하기 위한 첫 번째 기준점으로 생성했습니다. 활용 관점: 반복 패턴, 섹션 배경, DNA Archive 썸네일, 브랜드 표면 그래픽에 적합합니다."
+    },
+    {
+      "id": "2026-09-18-goyj-graphic-motif-selected-02",
+      "title": "Matte Circle Fields — Terracotta / Sage / Umber",
+      "created": "2026-09-18",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-09-18/selected_02_matte_circle_fields.jpg",
+      "analysis": "생성 의도: 큰 원형 필드와 부드러운 겹침, matte paper/plaster 질감을 중심으로 만든 조용한 추상 포스터형 그래픽입니다. 왜 만들었는가: Chris가 좋다고 한 “큰 곡면 덩어리 + 부드러운 질감” 방향을 유지하되, 기존 blue/ochre 계열과 다르게 더 따뜻하고 흙빛에 가까운 재질 실험을 하기 위해 생성했습니다. clay terracotta, faded sage, deep umber 조합은 디지털 UI보다 편집/인쇄물 같은 안정감을 주며, 오브젝트가 아니라 색면과 질감 자체가 모티프가 되도록 의도했습니다. 활용 관점: 감정적으로 차분한 브랜드 배경, 에디토리얼 커버, One UI식 warm human AI moodboard의 색/재질 레퍼런스로 적합합니다.",
+      "sourceRun": "/opt/data/goyounjung_outputs/graphic_motif_ref_variations_20260918/variation_04.png",
+      "sourceCandidateRun": "/opt/data/goyounjung_outputs/graphic_motif_ref_variations_20260918 and Chris-selected Telegram attachments",
+      "dnaClusters": [
+        "Ambient Circle Field",
+        "Matte Paper Texture",
+        "Warm Earth Palette",
+        "Quiet Abstract Motif"
+      ],
+      "model": "gpt_image_2_5 / user-approved graphic motif selection",
+      "options": {
+        "aspect_ratio": "1:1",
+        "style": "pure 2D abstract graphic motif",
+        "text": "none"
+      },
+      "width": 1280,
+      "height": 1280,
+      "selectedReason": "Chris explicitly asked to save these three graphic motif images.",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-18/images/selected_02_matte_circle_fields.jpg",
+      "savedAt": "2026-09-18T11:56:00+09:00",
+      "matchedGeneratedFile": "/opt/data/goyounjung_outputs/graphic_motif_ref_variations_20260918/variation_04.png",
+      "matchConfidence": "SSIM 0.991231; visual exact match after Telegram resize/compression",
+      "generationReason": "Chris가 3번 방향의 부드러운 곡면/재질감을 긍정하고 “컬러나 재질은 좀 다르게” 요청해, 같은 곡면 motif logic을 terracotta/sage/umber 계열과 matte plaster 질감으로 변주하기 위해 생성했습니다.",
+      "detailedDescription": "생성 의도: 큰 원형 필드와 부드러운 겹침, matte paper/plaster 질감을 중심으로 만든 조용한 추상 포스터형 그래픽입니다. 왜 만들었는가: Chris가 좋다고 한 “큰 곡면 덩어리 + 부드러운 질감” 방향을 유지하되, 기존 blue/ochre 계열과 다르게 더 따뜻하고 흙빛에 가까운 재질 실험을 하기 위해 생성했습니다. clay terracotta, faded sage, deep umber 조합은 디지털 UI보다 편집/인쇄물 같은 안정감을 주며, 오브젝트가 아니라 색면과 질감 자체가 모티프가 되도록 의도했습니다. 활용 관점: 감정적으로 차분한 브랜드 배경, 에디토리얼 커버, One UI식 warm human AI moodboard의 색/재질 레퍼런스로 적합합니다."
+    },
+    {
+      "id": "2026-09-18-goyj-graphic-motif-selected-03",
+      "title": "Ambient Gradient Curves — Blue / Ochre / Charcoal",
+      "created": "2026-09-18",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-09-18/selected_03_soft_gradient_curves.jpg",
+      "analysis": "생성 의도: blue-gray, muted ochre, charcoal을 중심으로 한 부드러운 곡면 그래디언트 모티프입니다. 왜 만들었는가: Chris Archive/DNA 그래픽이 capsule/flow-map 반복으로 좁아지지 않도록, 더 회화적이고 atmospheric한 그래픽 언어를 추가하기 위해 생성했습니다. 곡면이 겹치지만 특정 사물이나 심볼로 읽히지 않게 하고, 종이 위에 번진 색면처럼 보이도록 유도했습니다. 이 방향은 “AI OS”를 직접 설명하지 않으면서도 따뜻한 지능, 조용한 깊이, 정서적 안정감을 암시합니다. 활용 관점: hero 배경, 감성적 연구 카드, 브랜드 mood surface, future One UI tone exploration의 추상 비주얼 레퍼런스로 적합합니다.",
+      "sourceRun": "/opt/data/goyounjung_outputs/chris_archive_graphic_motif_20260918/motif_02.png",
+      "sourceCandidateRun": "/opt/data/goyounjung_outputs/graphic_motif_ref_variations_20260918 and Chris-selected Telegram attachments",
+      "dnaClusters": [
+        "Soft Gradient Field",
+        "Atmospheric Curves",
+        "Warm-Cool Equilibrium",
+        "Editorial Abstract Poster"
+      ],
+      "model": "gpt_image_2_5 / user-approved graphic motif selection",
+      "options": {
+        "aspect_ratio": "1:1",
+        "style": "pure 2D abstract graphic motif",
+        "text": "none"
+      },
+      "width": 1280,
+      "height": 1280,
+      "selectedReason": "Chris explicitly asked to save these three graphic motif images.",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-18/images/selected_03_soft_gradient_curves.jpg",
+      "savedAt": "2026-09-18T11:56:00+09:00",
+      "matchedGeneratedFile": "/opt/data/goyounjung_outputs/chris_archive_graphic_motif_20260918/motif_02.png",
+      "matchConfidence": "SSIM 0.988655; visual exact match after Telegram resize/compression",
+      "generationReason": "Chris가 좋아한 3번 후보의 atmospheric한 곡면 그래디언트 감각을 더 명확히 보존하기 위해 생성한 방향입니다. 큰 곡면, 흐릿한 경계, 종이 질감을 통해 “정보 구조”보다 “정서적 그래픽 무드”를 테스트했습니다.",
+      "detailedDescription": "생성 의도: blue-gray, muted ochre, charcoal을 중심으로 한 부드러운 곡면 그래디언트 모티프입니다. 왜 만들었는가: Chris Archive/DNA 그래픽이 capsule/flow-map 반복으로 좁아지지 않도록, 더 회화적이고 atmospheric한 그래픽 언어를 추가하기 위해 생성했습니다. 곡면이 겹치지만 특정 사물이나 심볼로 읽히지 않게 하고, 종이 위에 번진 색면처럼 보이도록 유도했습니다. 이 방향은 “AI OS”를 직접 설명하지 않으면서도 따뜻한 지능, 조용한 깊이, 정서적 안정감을 암시합니다. 활용 관점: hero 배경, 감성적 연구 카드, 브랜드 mood surface, future One UI tone exploration의 추상 비주얼 레퍼런스로 적합합니다."
+    },
+    {
+      "id": "2026-09-21-goyj-complete-circle-outer-stroke",
+      "title": "Complete Circle — Outer Stroke Light",
+      "created": "2026-09-21",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-09-21/01_complete_circle_outer_stroke.png",
+      "prompt": "GPT Image 2.5 revision: remove central sky-blue fill and central glow; keep one perfect circle; make only the outer stroke/rim subtly luminous; pure flat 2D graphic, no text/logos/photos/icons.",
+      "analysis": "Chris 피드백에 따라 중앙 하늘색 면적과 중심 glow를 제거하고, 완전한 원의 외곽 stroke/rim에만 은은한 빛이 남도록 조정한 flat 2D 그래픽입니다. 이전 원형 스타일의 warm off-white 기반과 조용한 One UI/Hermes polish를 유지하면서, 빛의 역할을 중앙 오브젝트가 아니라 경계/윤곽의 미세한 신호로 낮췄습니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-09-21/revisions-gptimage-outerstroke",
+      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-21",
+      "dnaClusters": [
+        "Complete Circle",
+        "Boundary Light",
+        "Warm-Cool Intelligence",
+        "Quiet Signal Rhythm",
+        "Editorial Product Graphic"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "2k",
+        "variant": "flare",
+        "background": "opaque"
+      },
+      "width": 2048,
+      "height": 2048,
+      "selectedReason": "Chris approved the outer-stroke circle revision and asked to save both final images.",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260921_023338_a48dc4a3-d7a5-4831-a774-5318b760743d.png",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-21/images/01_complete_circle_outer_stroke.png",
+      "savedAt": "2026-09-21T11:38:13+09:00"
+    },
+    {
+      "id": "2026-09-21-goyj-woven-bar-closeup",
+      "title": "Woven Bar Close-up — Cobalt / Cyan",
+      "created": "2026-09-21",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-09-21/02_woven_bar_closeup.png",
+      "prompt": "GPT Image 2.5 revision based on Chris attached reference: close-up expanded rounded interwoven cobalt/cyan bars, halftone fade at ends, coral accents, paper texture; one motif only; pure flat 2D graphic, no text/logos/photos/icons.",
+      "analysis": "Chris가 첨부한 reference를 기준으로, 파란/시안 rounded bar가 교차하는 woven lattice motif를 확대샷처럼 다시 그린 flat 2D 그래픽입니다. 여러 패턴을 섞지 않고 하나의 motif를 크게 적용했으며, cobalt/cyan 막대, coral accent, halftone fade, paper texture를 중심으로 패턴 표면 활용성을 높였습니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-09-21/revisions-gptimage-light-pattern-ref",
+      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-21",
+      "dnaClusters": [
+        "Woven Capsule Pattern",
+        "Warm-Cool Intelligence",
+        "Pattern Surface",
+        "Quiet Signal Rhythm",
+        "Editorial Product Graphic"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "2k",
+        "variant": "flare",
+        "background": "opaque"
+      },
+      "width": 2048,
+      "height": 2048,
+      "selectedReason": "Chris said the second/05 close-up image looked good and asked to save both final images.",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260921_020448_76487077-1e24-4f44-b2bb-670d0e7278ff.png",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-21/images/02_woven_bar_closeup.png",
+      "savedAt": "2026-09-21T11:38:13+09:00"
+    }
+  ]
 }
