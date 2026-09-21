@@ -2204,42 +2204,60 @@ function DesignDnaPanel() {
         </div>
       </section>
 
-      <section className="design-dna-cluster-section" aria-label="Compressed Design DNA clusters">
+      <section className="design-dna-infographic-section core-map" aria-label="Compressed Design DNA core axes infographic">
         <div className="section-heading compact">
           <p className="card-kicker">Core DNA</p>
           <h3>먼저 느껴져야 하는 3개의 중심축</h3>
         </div>
-        <div className="design-dna-cluster-grid core">
-          {coreClusters.map((cluster) => (
-            <article className="content-card design-dna-cluster-card core" key={cluster.title}>
-              <p className="card-kicker">{cluster.group}</p>
-              <h4>{cluster.title}</h4>
-              <p>{cluster.summary}</p>
-              <div className="design-dna-dimension-cloud compact" aria-label={`${cluster.title} signals`}>
-                {cluster.signals.map((signal) => <span key={signal}>{signal}</span>)}
-              </div>
-              <p className="cluster-use"><strong>Asset use:</strong> {cluster.assetUse}</p>
-            </article>
-          ))}
+        <div className="content-card design-dna-axis-map">
+          <div className="axis-map-orbit" aria-hidden="true">
+            <span className="axis-map-ring outer" />
+            <span className="axis-map-ring inner" />
+            <strong>Hermes<br />Experience</strong>
+          </div>
+          <div className="axis-map-cards">
+            {coreClusters.map((cluster, index) => (
+              <article className={`axis-map-card axis-${index + 1}`} key={cluster.title}>
+                <span className="axis-map-number">0{index + 1}</span>
+                <div>
+                  <h4>{cluster.title.replace(/^\d+\.\s*/, '')}</h4>
+                  <p>{cluster.summary}</p>
+                </div>
+                <div className="design-dna-dimension-cloud compact" aria-label={`${cluster.title} signals`}>
+                  {cluster.signals.map((signal) => <span key={signal}>{signal}</span>)}
+                </div>
+                <p className="cluster-use"><strong>Asset use:</strong> {cluster.assetUse}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="design-dna-cluster-section" aria-label="Expression layer clusters">
+      <section className="design-dna-infographic-section expression-map" aria-label="Expression layer infographic">
         <div className="section-heading compact">
           <p className="card-kicker">Expression Layer</p>
           <h3>브랜드 표면을 만드는 3개의 표현축</h3>
         </div>
-        <div className="design-dna-cluster-grid expression">
-          {expressionClusters.map((cluster) => (
-            <article className="content-card design-dna-cluster-card" key={cluster.title}>
-              <p className="card-kicker">{cluster.group}</p>
-              <h4>{cluster.title}</h4>
-              <p>{cluster.summary}</p>
-              <div className="design-dna-dimension-cloud compact" aria-label={`${cluster.title} signals`}>
-                {cluster.signals.map((signal) => <span key={signal}>{signal}</span>)}
-              </div>
-            </article>
-          ))}
+        <div className="content-card expression-layer-map">
+          <div className="expression-layer-canvas" aria-hidden="true">
+            <span className="surface-plate plate-1">material</span>
+            <span className="surface-plate plate-2">evidence</span>
+            <span className="surface-plate plate-3">presence</span>
+          </div>
+          <div className="expression-layer-list">
+            {expressionClusters.map((cluster, index) => (
+              <article className={`expression-layer-card layer-${index + 1}`} key={cluster.title}>
+                <span className="expression-layer-index">0{index + 4}</span>
+                <div>
+                  <h4>{cluster.title.replace(/^\d+\.\s*/, '')}</h4>
+                  <p>{cluster.summary}</p>
+                </div>
+                <div className="design-dna-dimension-cloud compact" aria-label={`${cluster.title} signals`}>
+                  {cluster.signals.map((signal) => <span key={signal}>{signal}</span>)}
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

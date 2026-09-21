@@ -7686,6 +7686,191 @@
     var(--surface);
 }
 
+.design-dna-infographic-section {
+  display: grid;
+  gap: clamp(1rem, 2vw, 1.4rem);
+}
+
+.design-dna-axis-map,
+.expression-layer-map {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 185, 96, 0.12), transparent 30%),
+    radial-gradient(circle at 88% 16%, color-mix(in srgb, var(--primary) 11%, transparent), transparent 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(248, 246, 240, 0.5)),
+    var(--surface);
+}
+
+.design-dna-axis-map {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(1rem, 2.5vw, 2rem);
+  align-items: center;
+}
+
+.axis-map-orbit {
+  position: relative;
+  display: grid;
+  min-height: clamp(260px, 30vw, 380px);
+  place-items: center;
+  isolation: isolate;
+}
+
+.axis-map-orbit::before,
+.axis-map-orbit::after {
+  position: absolute;
+  width: 46%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--primary) 40%, transparent), transparent);
+  content: '';
+  transform-origin: center;
+}
+
+.axis-map-orbit::before { transform: rotate(25deg); }
+.axis-map-orbit::after { transform: rotate(-42deg); }
+
+.axis-map-ring {
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.axis-map-ring.outer {
+  width: min(310px, 70vw);
+  height: min(310px, 70vw);
+  border: 1px solid color-mix(in srgb, var(--primary) 26%, transparent);
+}
+
+.axis-map-ring.inner {
+  width: min(190px, 48vw);
+  height: min(190px, 48vw);
+  border: 1px dashed rgba(35, 46, 74, 0.2);
+  background: radial-gradient(circle, rgba(255,255,255,0.58), transparent 72%);
+}
+
+.axis-map-orbit strong {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(150px, 42vw);
+  height: min(150px, 42vw);
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 72% 28%, rgba(255, 194, 115, 0.36), transparent 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(234, 236, 231, 0.62));
+  color: var(--ink);
+  font-size: clamp(0.82rem, 1vw, 1rem);
+  line-height: 1.08;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.axis-map-cards,
+.expression-layer-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.axis-map-card,
+.expression-layer-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.8rem 1rem;
+  align-items: start;
+  min-width: 0;
+  padding: clamp(1rem, 1.6vw, 1.2rem);
+  border: 1px solid var(--stroke);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.axis-map-card .design-dna-dimension-cloud,
+.axis-map-card .cluster-use,
+.expression-layer-card .design-dna-dimension-cloud {
+  grid-column: 2;
+}
+
+.axis-map-number,
+.expression-layer-index {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.78rem;
+  font-weight: 820;
+  letter-spacing: 0.08em;
+}
+
+.axis-map-card h4,
+.expression-layer-card h4 {
+  margin: 0 0 0.32rem;
+  color: var(--ink);
+  font-size: clamp(1rem, 1.5vw, 1.38rem);
+  letter-spacing: -0.045em;
+}
+
+.axis-map-card p,
+.expression-layer-card p {
+  margin: 0;
+  color: var(--muted-ink);
+}
+
+.expression-layer-map {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.92fr);
+  gap: clamp(1rem, 2.5vw, 2rem);
+  align-items: center;
+}
+
+.expression-layer-canvas {
+  position: relative;
+  min-height: clamp(270px, 31vw, 390px);
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.78), transparent 26%),
+    linear-gradient(180deg, rgba(255,255,255,0.52), rgba(237, 232, 223, 0.24));
+}
+
+.surface-plate {
+  position: absolute;
+  left: 50%;
+  display: grid;
+  width: min(72%, 460px);
+  height: clamp(74px, 9vw, 112px);
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  color: rgba(28, 31, 37, 0.54);
+  font-size: 0.72rem;
+  font-weight: 760;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transform: translateX(-50%) rotate(-3deg);
+  box-shadow: 0 18px 60px rgba(35, 46, 74, 0.08);
+}
+
+.surface-plate.plate-1 {
+  top: 16%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(231, 236, 230, 0.42));
+}
+
+.surface-plate.plate-2 {
+  top: 38%;
+  background: linear-gradient(135deg, rgba(255, 246, 228, 0.8), rgba(231, 226, 218, 0.42));
+  transform: translateX(-50%) rotate(2deg);
+}
+
+.surface-plate.plate-3 {
+  top: 60%;
+  background: linear-gradient(135deg, rgba(238, 245, 255, 0.74), rgba(255, 255, 255, 0.48));
+}
+
 .design-dna-value-card.inline {
   border: 1px solid var(--stroke);
   border-radius: 22px;
@@ -7868,6 +8053,8 @@
   .design-dna-process,
   .chris-design-archive-board,
   .dna-generated-modal,
+  .design-dna-axis-map,
+  .expression-layer-map,
   .design-dna-cluster-grid,
   .design-dna-cluster-grid.core,
   .design-dna-prompt-grid,
@@ -7879,6 +8066,34 @@
 
   .design-dna-process-card {
     min-height: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .axis-map-card,
+  .expression-layer-card {
+    grid-template-columns: 1fr;
+  }
+
+  .axis-map-card .design-dna-dimension-cloud,
+  .axis-map-card .cluster-use,
+  .expression-layer-card .design-dna-dimension-cloud {
+    grid-column: 1;
+  }
+
+  .axis-map-number,
+  .expression-layer-index {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+  }
+
+  .axis-map-orbit {
+    min-height: 230px;
+  }
+
+  .expression-layer-canvas {
+    min-height: 250px;
   }
 }
 
