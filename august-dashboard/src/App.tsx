@@ -1220,6 +1220,9 @@ function HomeVisualDetail({
 function ChrisArchivePanel() {
   const [archive, setArchive] = useState<ChrisArchiveManifest>(fallbackChrisArchive)
   const [selectedItem, setSelectedItem] = useState<ChrisArchiveItem | null>(null)
+  const [dnaArchive, setDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
+  const [selectedDnaAsset, setSelectedDnaAsset] = useState<DnaArchiveItem | null>(null)
+  const [activeArchiveDashboard, setActiveArchiveDashboard] = useState<'references' | 'dna'>('references')
   const [isDesignSystemOpen, setIsDesignSystemOpen] = useState(false)
   const [designSystemText, setDesignSystemText] = useState('')
   const [designSystemError, setDesignSystemError] = useState('')
@@ -1259,6 +1262,10 @@ function ChrisArchivePanel() {
       if (!isMounted) return
       setArchive(loadedArchive)
     })
+    loadDnaArchive().then((loadedArchive) => {
+      if (!isMounted) return
+      setDnaArchive(loadedArchive)
+    })
     return () => {
       isMounted = false
       if (modalScrollTimerRef.current) {
@@ -1270,6 +1277,8 @@ function ChrisArchivePanel() {
   const totalItems = archive.items.length
   const latestDate = archive.items.at(-1)?.created ?? 'pending'
   const goyjPending = archive.items.filter((item) => item.status === 'goyj_review_needed').length
+  const dnaTotalItems = dnaArchive.items.length
+  const latestDnaDate = dnaArchive.items.at(-1)?.created ?? 'pending'
 
   return (
     <div className="chris-archive-shell" aria-label="Chris Archive thumbnail dashboard">
@@ -1296,22 +1305,73 @@ function ChrisArchivePanel() {
         </div>
       </section>
 
-      <section className="chris-archive-grid" aria-label="Chris Archive reference thumbnails">
-        {archive.items.map((item, index) => (
-          <button
-            type="button"
-            className="chris-archive-tile"
-            key={item.id}
-            onClick={() => setSelectedItem(item)}
-            aria-label={`${item.title} 상세 분석 열기`}
-          >
-            <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} thumbnail`} loading={index < 8 ? 'eager' : 'lazy'} decoding="async" />
-            <span>{String(index + 1).padStart(2, '0')}</span>
-            <strong>{item.title}</strong>
-            <small>{item.created}</small>
-          </button>
-        ))}
-      </section>
+      <nav className="archive-dashboard-tabs" aria-label="Design Archive dashboard tabs">
+        <button
+          type="button"
+          className={activeArchiveDashboard === 'references' ? 'archive-dashboard-tab active' : 'archive-dashboard-tab'}
+          aria-pressed={activeArchiveDashboard === 'references'}
+          onClick={() => setActiveArchiveDashboard('references')}
+        >
+          <span>Chris Archive</span>
+          <small>{totalItems} references</small>
+        </button>
+        <button
+          type="button"
+          className={activeArchiveDashboard === 'dna' ? 'archive-dashboard-tab active' : 'archive-dashboard-tab'}
+          aria-pressed={activeArchiveDashboard === 'dna'}
+          onClick={() => setActiveArchiveDashboard('dna')}
+        >
+          <span>DNA Dashboard</span>
+          <small>{dnaTotalItems} selected GoYJ assets</small>
+        </button>
+      </nav>
+
+      {activeArchiveDashboard === 'references' ? (
+        <section className="chris-archive-grid" aria-label="Chris Archive reference thumbnails">
+          {archive.items.map((item, index) => (
+            <button
+              type="button"
+              className="chris-archive-tile"
+              key={item.id}
+              onClick={() => setSelectedItem(item)}
+              aria-label={`${item.title} 상세 분석 열기`}
+            >
+              <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} thumbnail`} loading={index < 8 ? 'eager' : 'lazy'} decoding="async" />
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <strong>{item.title}</strong>
+              <small>{item.created}</small>
+            </button>
+          ))}
+        </section>
+      ) : (
+        <section className="dna-dashboard-panel" aria-label="GoYJ selected DNA dashboard">
+          <div className="content-card dna-dashboard-overview">
+            <div>
+              <p className="card-kicker">DNA Dashboard · GoYJ selected outputs</p>
+              <h3>Chris가 “저장해줘”라고 고른 GoYJ 생성 에셋만 남기는 대시보드</h3>
+              <p>
+                Chris Archive가 영감의 근거라면, DNA Dashboard는 그 근거로 생성하고 GoYJ가 분석한 뒤 Chris가 선택한 실제 그래픽 에셋입니다.
+                썸네일을 클릭하면 생성 프롬프트와 분석 결과를 확인할 수 있습니다.
+              </p>
+            </div>
+            <div className="chris-archive-stats" aria-label="DNA Dashboard stats">
+              <span><strong>{dnaTotalItems}</strong> saved assets</span>
+              <span><strong>{latestDnaDate}</strong> latest</span>
+            </div>
+          </div>
+
+          <div className="dna-generated-grid" aria-label="Saved GoYJ DNA generated assets">
+            {dnaArchive.items.map((item, index) => (
+              <button type="button" className="dna-generated-tile" key={item.id} onClick={() => setSelectedDnaAsset(item)}>
+                <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} generated asset`} loading={index < 8 ? 'eager' : 'lazy'} decoding="async" />
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <strong>{item.title}</strong>
+                <small>{item.created}</small>
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
 
       {selectedItem ? (
         <div className="chris-archive-modal-backdrop" role="presentation" onClick={() => setSelectedItem(null)}>
@@ -1344,6 +1404,32 @@ function ChrisArchivePanel() {
                 </ul>
               </div>
               <p className="manifest-policy">{archive.sourcePolicy}</p>
+            </div>
+          </article>
+        </div>
+      ) : null}
+
+      {selectedDnaAsset ? (
+        <div className="dna-generated-modal-backdrop" role="presentation" onClick={() => setSelectedDnaAsset(null)}>
+          <article className="dna-generated-modal" role="dialog" aria-modal="true" aria-labelledby="dna-generated-modal-title" onClick={(event) => event.stopPropagation()}>
+            <button type="button" className="chris-archive-modal-close" onClick={() => setSelectedDnaAsset(null)} aria-label="DNA Dashboard 상세 팝업 닫기">
+              ×
+            </button>
+            <div className="dna-generated-modal-media">
+              <img src={toAppAssetSrc(selectedDnaAsset.imageSrc)} alt={`${selectedDnaAsset.title} generated full asset`} />
+            </div>
+            <div className="dna-generated-modal-copy">
+              <p className="card-kicker">{selectedDnaAsset.created} · {selectedDnaAsset.status}</p>
+              <h3 id="dna-generated-modal-title">{selectedDnaAsset.title}</h3>
+              <p>{selectedDnaAsset.analysis}</p>
+              <div className="chris-archive-chip-row" aria-label="DNA clusters">
+                {selectedDnaAsset.dnaClusters.map((cluster) => <span key={cluster}>{cluster}</span>)}
+              </div>
+              <div className="prompt-negative">
+                <strong>Generation prompt</strong>
+                <span>{selectedDnaAsset.prompt}</span>
+              </div>
+              <p className="manifest-policy">{dnaArchive.sourcePolicy}</p>
             </div>
           </article>
         </div>
@@ -2124,20 +2210,6 @@ function DevArchitecturePanel() {
 function DesignDnaPanel() {
   const coreClusters = designDnaCompressedClusters.filter((cluster) => cluster.group === 'Core DNA')
   const expressionClusters = designDnaCompressedClusters.filter((cluster) => cluster.group === 'Expression Layer')
-  const [dnaArchive, setDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
-  const [selectedDnaAsset, setSelectedDnaAsset] = useState<DnaArchiveItem | null>(null)
-
-  useEffect(() => {
-    let isMounted = true
-    loadDnaArchive().then((loadedArchive) => {
-      if (!isMounted) return
-      setDnaArchive(loadedArchive)
-    })
-    return () => {
-      isMounted = false
-    }
-  }, [])
-
   return (
     <div className="design-dna-shell design-dna-single-page">
       <section className="content-card design-dna-unified-hero" aria-label="Hermes Design DNA declaration">
@@ -2243,34 +2315,6 @@ function DesignDnaPanel() {
         ))}
       </section>
 
-      <section className="content-card dna-generated-archive-card" aria-label="Selected GoYJ generated DNA archive">
-        <div>
-          <p className="card-kicker">DNA Archive · Selected outputs only</p>
-          <h3>GoYJ가 월수금마다 보여주는 5장 중 Chris가 “저장해줘”라고 고른 결과만 남깁니다.</h3>
-          <p>
-            이 보드는 Chris Archive와 같은 방식으로 작동하지만, source가 다릅니다. Chris Archive는 영감의 근거이고,
-            DNA Archive는 그 근거로 생성한 결과 중 Chris가 선택한 실제 브랜드/UX 그래픽 에셋만 저장하는 공간입니다.
-          </p>
-        </div>
-        {dnaArchive.items.length ? (
-          <div className="dna-generated-grid" aria-label="Saved DNA generated assets">
-            {dnaArchive.items.map((item, index) => (
-              <button type="button" className="dna-generated-tile" key={item.id} onClick={() => setSelectedDnaAsset(item)}>
-                <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} generated asset`} loading="lazy" />
-                <span>{String(index + 1).padStart(2, '0')}</span>
-                <strong>{item.title}</strong>
-                <small>{item.created}</small>
-              </button>
-            ))}
-          </div>
-        ) : (
-          <div className="dna-generated-empty">
-            <strong>아직 저장된 DNA generated asset은 없습니다.</strong>
-            <p>월수금 GoYJ가 5장 후보를 DM으로 보여주고, Chris가 “저장해줘”라고 선택한 이미지만 이곳에 공개됩니다.</p>
-          </div>
-        )}
-      </section>
-
       <section className="content-card design-dna-never-card" aria-label="What Hermes should never become">
         <p className="card-kicker">What Hermes should never become</p>
         <h3>기술 설명보다 감각적 존재감이 먼저 와야 합니다.</h3>
@@ -2284,31 +2328,7 @@ function DesignDnaPanel() {
         </ul>
       </section>
 
-      {selectedDnaAsset ? (
-        <div className="dna-generated-modal-backdrop" role="presentation" onClick={() => setSelectedDnaAsset(null)}>
-          <article className="dna-generated-modal" role="dialog" aria-modal="true" aria-labelledby="dna-generated-modal-title" onClick={(event) => event.stopPropagation()}>
-            <button type="button" className="chris-archive-modal-close" onClick={() => setSelectedDnaAsset(null)} aria-label="DNA Archive 상세 팝업 닫기">
-              ×
-            </button>
-            <div className="dna-generated-modal-media">
-              <img src={toAppAssetSrc(selectedDnaAsset.imageSrc)} alt={`${selectedDnaAsset.title} generated full asset`} />
-            </div>
-            <div className="dna-generated-modal-copy">
-              <p className="card-kicker">{selectedDnaAsset.created} · {selectedDnaAsset.status}</p>
-              <h3 id="dna-generated-modal-title">{selectedDnaAsset.title}</h3>
-              <p>{selectedDnaAsset.analysis}</p>
-              <div className="chris-archive-chip-row" aria-label="DNA clusters">
-                {selectedDnaAsset.dnaClusters.map((cluster) => <span key={cluster}>{cluster}</span>)}
-              </div>
-              <div className="prompt-negative">
-                <strong>Generation prompt</strong>
-                <span>{selectedDnaAsset.prompt}</span>
-              </div>
-              <p className="manifest-policy">{dnaArchive.sourcePolicy}</p>
-            </div>
-          </article>
-        </div>
-      ) : null}
+
     </div>
   )
 }
