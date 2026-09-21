@@ -2176,9 +2176,14 @@ function DesignDnaPanel() {
             GoYJ 리뷰를 반영해 Design DNA를 하나의 서사로 통합했습니다: 감각적 선언 → archive evidence → core DNA → first asset direction → never become.
           </p>
         </div>
-        <div className="design-dna-presence-orb" aria-hidden="true">
-          <span />
-        </div>
+        <figure className="design-dna-hero-image">
+          <img
+            src={publicAssetPath('/assets/design-dna/hero/complete-circle-outer-stroke-19x10.png')}
+            alt="Complete Circle — Outer Stroke Light wide hero graphic"
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
       </section>
 
       <section className="content-card design-dna-archive-brief">

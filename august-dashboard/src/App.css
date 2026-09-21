@@ -7569,14 +7569,14 @@
 
 .design-dna-unified-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr);
-  gap: clamp(1.4rem, 3vw, 3rem);
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: clamp(1.4rem, 3vw, 2.2rem);
+  align-items: start;
   min-height: 360px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 84% 28%, color-mix(in srgb, var(--primary) 18%, transparent), transparent 34%),
-    radial-gradient(circle at 16% 82%, rgba(224, 28, 40, 0.13), transparent 34%),
+    radial-gradient(circle at 84% 28%, color-mix(in srgb, var(--primary) 10%, transparent), transparent 34%),
+    radial-gradient(circle at 16% 82%, rgba(224, 28, 40, 0.08), transparent 34%),
     var(--card-bg);
 }
 
@@ -7591,6 +7591,23 @@
 .design-dna-unified-hero p:not(.card-kicker) {
   max-width: 760px;
   color: var(--muted-ink);
+}
+
+.design-dna-hero-image {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: clamp(24px, 3vw, 40px);
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 24px 80px rgba(35, 46, 74, 0.14);
+}
+
+.design-dna-hero-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 19 / 10;
+  object-fit: cover;
 }
 
 .design-dna-presence-orb {
