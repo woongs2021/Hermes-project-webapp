@@ -7899,8 +7899,8 @@
 }
 
 .axis-1 {
-  --badge-bg: #f2eadf;
-  --badge-ink: #594c42;
+  --badge-bg: #faf4ec;
+  --badge-ink: #6d6258;
   --thumb-bg:
     radial-gradient(circle at 42% 48%, rgba(255, 255, 255, 0.72), transparent 24%),
     radial-gradient(circle at 70% 22%, rgba(120, 153, 255, 0.22), transparent 34%),
@@ -7911,8 +7911,8 @@
 }
 
 .axis-2 {
-  --badge-bg: #dfe8ff;
-  --badge-ink: #33436f;
+  --badge-bg: #f0f5ff;
+  --badge-ink: #596682;
   --thumb-bg:
     radial-gradient(circle at 74% 28%, rgba(239, 94, 70, 0.36), transparent 30%),
     radial-gradient(circle at 26% 74%, rgba(58, 115, 255, 0.38), transparent 34%),
@@ -7923,8 +7923,8 @@
 }
 
 .axis-3 {
-  --badge-bg: #e9efd9;
-  --badge-ink: #526042;
+  --badge-bg: #f4f8e9;
+  --badge-ink: #66705a;
   --thumb-bg:
     radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.44), transparent 18%),
     repeating-radial-gradient(circle at 50% 50%, rgba(57, 89, 160, 0.22) 0 1px, transparent 1px 13px),
@@ -7935,8 +7935,8 @@
 }
 
 .layer-1 {
-  --badge-bg: #e3eef2;
-  --badge-ink: #455c64;
+  --badge-bg: #f0f7f8;
+  --badge-ink: #5d6f74;
   --thumb-bg:
     radial-gradient(circle at 24% 30%, rgba(255, 255, 255, 0.82), transparent 28%),
     radial-gradient(circle at 76% 70%, rgba(75, 199, 225, 0.2), transparent 36%),
@@ -7947,8 +7947,8 @@
 }
 
 .layer-2 {
-  --badge-bg: #f3e8d8;
-  --badge-ink: #6a5541;
+  --badge-bg: #fbf3e8;
+  --badge-ink: #736759;
   --thumb-bg:
     linear-gradient(90deg, rgba(35, 46, 74, 0.12) 1px, transparent 1px),
     linear-gradient(0deg, rgba(35, 46, 74, 0.08) 1px, transparent 1px),
@@ -7964,8 +7964,8 @@
 }
 
 .layer-3 {
-  --badge-bg: #f5dfe2;
-  --badge-ink: #6f4750;
+  --badge-bg: #fbf0f2;
+  --badge-ink: #765f65;
   --thumb-bg:
     radial-gradient(circle at 50% 52%, rgba(255, 255, 255, 0.78), transparent 25%),
     radial-gradient(circle at 68% 28%, rgba(255, 120, 86, 0.28), transparent 32%),
