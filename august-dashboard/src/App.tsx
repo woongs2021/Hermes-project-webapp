@@ -2216,18 +2216,18 @@ function DesignDnaPanel() {
           <h3>먼저 느껴져야 하는 3개의 중심축</h3>
         </div>
         <div className="content-card design-dna-axis-map">
-          <div className="axis-map-orbit" aria-hidden="true">
-            <span className="axis-map-ring outer" />
-            <span className="axis-map-ring inner" />
-            <strong>Hermes<br />Experience</strong>
-          </div>
+          <figure className="design-dna-section-hero-image">
+            <img
+              src={publicAssetPath('/assets/design-dna/section-heroes/core-dna-hero-19x10.png')}
+              alt="Core DNA GoYJ generated hero graphic"
+              loading="eager"
+              decoding="async"
+            />
+          </figure>
           <div className="axis-map-cards">
             {coreClusters.map((cluster, index) => (
               <article className={`axis-map-card axis-${index + 1}`} key={cluster.title}>
                 <span className="axis-map-number">0{index + 1}</span>
-                <figure className="dna-gradient-thumb" aria-label={`${cluster.title} representative thumbnail`}>
-                  <img src={publicAssetPath(cluster.thumbnailSrc)} alt={`${cluster.title} GoYJ generated thumbnail`} loading="eager" decoding="async" />
-                </figure>
                 <div className="axis-map-copy">
                   <h4>{cluster.title.replace(/^\d+\.\s*/, '')}</h4>
                   <p>{cluster.summary}</p>
@@ -2248,18 +2248,18 @@ function DesignDnaPanel() {
           <h3>브랜드 표면을 만드는 3개의 표현축</h3>
         </div>
         <div className="content-card expression-layer-map">
-          <div className="expression-layer-canvas" aria-hidden="true">
-            <span className="surface-plate plate-1">material</span>
-            <span className="surface-plate plate-2">evidence</span>
-            <span className="surface-plate plate-3">presence</span>
-          </div>
+          <figure className="design-dna-section-hero-image">
+            <img
+              src={publicAssetPath('/assets/design-dna/section-heroes/expression-layer-hero-19x10.png')}
+              alt="Expression Layer GoYJ generated hero graphic"
+              loading="eager"
+              decoding="async"
+            />
+          </figure>
           <div className="expression-layer-list">
             {expressionClusters.map((cluster, index) => (
               <article className={`expression-layer-card layer-${index + 1}`} key={cluster.title}>
                 <span className="expression-layer-index">0{index + 4}</span>
-                <figure className="dna-gradient-thumb" aria-label={`${cluster.title} representative thumbnail`}>
-                  <img src={publicAssetPath(cluster.thumbnailSrc)} alt={`${cluster.title} GoYJ generated thumbnail`} loading="eager" decoding="async" />
-                </figure>
                 <div className="expression-layer-copy">
                   <h4>{cluster.title.replace(/^\d+\.\s*/, '')}</h4>
                   <p>{cluster.summary}</p>

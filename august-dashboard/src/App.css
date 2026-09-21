@@ -7704,9 +7704,26 @@
 
 .design-dna-axis-map {
   display: grid;
-  grid-template-columns: minmax(240px, 0.82fr) minmax(0, 1.18fr);
-  gap: clamp(1rem, 2.5vw, 2rem);
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+  align-items: start;
+}
+
+.design-dna-section-hero-image {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.74);
+  border-radius: clamp(24px, 3vw, 36px);
+  background: rgba(255, 255, 255, 0.54);
+  box-shadow: none;
+}
+
+.design-dna-section-hero-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 19 / 10;
+  object-fit: cover;
 }
 
 .axis-map-orbit {
@@ -7777,7 +7794,7 @@
 .axis-map-card,
 .expression-layer-card {
   display: grid;
-  grid-template-columns: auto minmax(140px, 0.72fr) minmax(0, 1fr);
+  grid-template-columns: auto minmax(0, 1fr);
   gap: 0.8rem 1rem;
   align-items: start;
   min-width: 0;
@@ -7790,7 +7807,7 @@
 .axis-map-card .design-dna-dimension-cloud,
 .axis-map-card .cluster-use,
 .expression-layer-card .design-dna-dimension-cloud {
-  grid-column: 3;
+  grid-column: 2;
 }
 
 .axis-map-number,
@@ -7962,9 +7979,9 @@
 
 .expression-layer-map {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.92fr);
-  gap: clamp(1rem, 2.5vw, 2rem);
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+  align-items: start;
 }
 
 .expression-layer-canvas {
