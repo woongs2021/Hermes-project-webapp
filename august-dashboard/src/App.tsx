@@ -2219,7 +2219,11 @@ function DesignDnaPanel() {
             {coreClusters.map((cluster, index) => (
               <article className={`axis-map-card axis-${index + 1}`} key={cluster.title}>
                 <span className="axis-map-number">0{index + 1}</span>
-                <div>
+                <figure className="dna-gradient-thumb" aria-label={`${cluster.title} representative gradient thumbnail`}>
+                  <span className="thumb-shape primary" />
+                  <span className="thumb-shape secondary" />
+                </figure>
+                <div className="axis-map-copy">
                   <h4>{cluster.title.replace(/^\d+\.\s*/, '')}</h4>
                   <p>{cluster.summary}</p>
                 </div>
@@ -2248,7 +2252,11 @@ function DesignDnaPanel() {
             {expressionClusters.map((cluster, index) => (
               <article className={`expression-layer-card layer-${index + 1}`} key={cluster.title}>
                 <span className="expression-layer-index">0{index + 4}</span>
-                <div>
+                <figure className="dna-gradient-thumb" aria-label={`${cluster.title} representative gradient thumbnail`}>
+                  <span className="thumb-shape primary" />
+                  <span className="thumb-shape secondary" />
+                </figure>
+                <div className="expression-layer-copy">
                   <h4>{cluster.title.replace(/^\d+\.\s*/, '')}</h4>
                   <p>{cluster.summary}</p>
                 </div>
