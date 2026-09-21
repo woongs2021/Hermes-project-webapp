@@ -142,6 +142,7 @@ const designDnaCompressedClusters = [
     summary: 'Hermes는 사용자를 분석하거나 과시하지 않고, 사용자의 맥락을 보호하는 조용한 AI 레이어다.',
     signals: ['privacy', 'protected void', 'soft container', 'calm AI presence', 'user agency'],
     assetUse: 'Hermes Presence Mark, secure context window, memory object, AI mode surface',
+    thumbnailSrc: '/assets/design-dna/thumbnails/protected-human-context-19x10.png',
   },
   {
     group: 'Core DNA',
@@ -149,6 +150,7 @@ const designDnaCompressedClusters = [
     summary: '차가운 시스템 지성과 따뜻한 인간 온도가 한 화면 안에서 균형을 이룬다.',
     signals: ['cobalt intelligence', 'cyan sensing', 'coral warmth', 'muted yellow agency', 'charcoal base'],
     assetUse: 'core palette, state indicator, action signal, premium OS mode',
+    thumbnailSrc: '/assets/design-dna/thumbnails/warm-cool-intelligence-19x10.png',
   },
   {
     group: 'Core DNA',
@@ -156,6 +158,7 @@ const designDnaCompressedClusters = [
     summary: 'AI의 작동은 번쩍이는 효과가 아니라 점, 궤도, 숨쉬는 경계, 낮은 밀도의 리듬으로 표현된다.',
     signals: ['orbit', 'dot matrix', 'soft pulse', 'low-noise progress', 'pause/correct/hide'],
     assetUse: 'agent loop, voice state, processing motion, confidence indicator',
+    thumbnailSrc: '/assets/design-dna/thumbnails/quiet-signal-rhythm-19x10.png',
   },
   {
     group: 'Expression Layer',
@@ -163,6 +166,7 @@ const designDnaCompressedClusters = [
     summary: 'glass, gel, cushion, lens는 AI를 차가운 기술이 아니라 손에 닿는 듯한 물성으로 낮춘다.',
     signals: ['frosted glass', 'soft gel', 'cushion surface', 'optical blur', 'halftone grain'],
     assetUse: 'hero object, dashboard card material, package surface, tactile brand object',
+    thumbnailSrc: '/assets/design-dna/thumbnails/tactile-optical-material-19x10.png',
   },
   {
     group: 'Expression Layer',
@@ -170,6 +174,7 @@ const designDnaCompressedClusters = [
     summary: 'archive label, micro metadata, 큰 여백은 Chris의 디자인 판단을 신뢰 가능한 연구 기록물로 만든다.',
     signals: ['large negative space', 'micro metadata', 'specimen card', 'version marker', 'archive object'],
     assetUse: 'design-system cover, evidence card, brand guideline spread, archive chapter',
+    thumbnailSrc: '/assets/design-dna/thumbnails/editorial-evidence-system-19x10.png',
   },
   {
     group: 'Expression Layer',
@@ -177,6 +182,7 @@ const designDnaCompressedClusters = [
     summary: '아이콘보다 넓은 개념의 presence mark로 Hermes의 조용한 존재감을 먼저 고정한다.',
     signals: ['soft orb', 'open squircle', 'chromatic rim', 'inner void', 'gentle glow'],
     assetUse: 'first-generation asset, app icon family, package seal, loading/listening mark',
+    thumbnailSrc: '/assets/design-dna/thumbnails/soft-object-presence-mark-19x10.png',
   },
 ]
 
@@ -2219,9 +2225,8 @@ function DesignDnaPanel() {
             {coreClusters.map((cluster, index) => (
               <article className={`axis-map-card axis-${index + 1}`} key={cluster.title}>
                 <span className="axis-map-number">0{index + 1}</span>
-                <figure className="dna-gradient-thumb" aria-label={`${cluster.title} representative gradient thumbnail`}>
-                  <span className="thumb-shape primary" />
-                  <span className="thumb-shape secondary" />
+                <figure className="dna-gradient-thumb" aria-label={`${cluster.title} representative thumbnail`}>
+                  <img src={publicAssetPath(cluster.thumbnailSrc)} alt={`${cluster.title} GoYJ generated thumbnail`} loading="eager" decoding="async" />
                 </figure>
                 <div className="axis-map-copy">
                   <h4>{cluster.title.replace(/^\d+\.\s*/, '')}</h4>
@@ -2252,9 +2257,8 @@ function DesignDnaPanel() {
             {expressionClusters.map((cluster, index) => (
               <article className={`expression-layer-card layer-${index + 1}`} key={cluster.title}>
                 <span className="expression-layer-index">0{index + 4}</span>
-                <figure className="dna-gradient-thumb" aria-label={`${cluster.title} representative gradient thumbnail`}>
-                  <span className="thumb-shape primary" />
-                  <span className="thumb-shape secondary" />
+                <figure className="dna-gradient-thumb" aria-label={`${cluster.title} representative thumbnail`}>
+                  <img src={publicAssetPath(cluster.thumbnailSrc)} alt={`${cluster.title} GoYJ generated thumbnail`} loading="eager" decoding="async" />
                 </figure>
                 <div className="expression-layer-copy">
                   <h4>{cluster.title.replace(/^\d+\.\s*/, '')}</h4>

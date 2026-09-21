@@ -7822,6 +7822,19 @@
   isolation: isolate;
 }
 
+.dna-gradient-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 19 / 10;
+  object-fit: cover;
+}
+
+.dna-gradient-thumb:has(img)::before,
+.dna-gradient-thumb:has(img)::after {
+  display: none;
+}
+
 .dna-gradient-thumb::before {
   position: absolute;
   inset: 9%;
