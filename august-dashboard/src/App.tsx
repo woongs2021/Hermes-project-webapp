@@ -2250,7 +2250,7 @@ function DesignDnaPanel() {
         <div className="content-card expression-layer-map">
           <figure className="design-dna-section-hero-image">
             <img
-              src={publicAssetPath('/assets/design-dna/section-heroes/expression-layer-hero-circle-pastel-19x10.png')}
+              src={publicAssetPath('/assets/design-dna/section-heroes/expression-layer-hero-circle-blue-pink-19x10.png')}
               alt="Expression Layer GoYJ generated hero graphic"
               loading="eager"
               decoding="async"
