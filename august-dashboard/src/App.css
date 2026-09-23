@@ -7435,9 +7435,9 @@
 .design-dna-dimension-card h3,
 .design-dna-roadmap-card h3 {
   max-width: 860px;
-  font-size: clamp(1.9rem, 3.25vw, 3.55rem);
+  font-size: clamp(1.8rem, 3vw, 3.2rem);
   font-weight: 420;
-  letter-spacing: -0.075em;
+  letter-spacing: -0.07em;
   line-height: 0.98;
 }
 
@@ -7588,31 +7588,34 @@
 .design-dna-unified-hero h3 {
   max-width: 860px;
   margin: 0;
-  font-size: clamp(2.5rem, 5vw, 5.6rem);
-  line-height: 0.9;
-  letter-spacing: -0.09em;
+  font-size: clamp(1.8rem, 3vw, 3.2rem);
+  font-weight: 420;
+  line-height: 0.98;
+  letter-spacing: -0.07em;
 }
 
 .design-dna-unified-hero p:not(.card-kicker) {
-  max-width: 760px;
+  max-width: 860px;
   color: var(--muted-ink);
 }
 
 .design-dna-hero-image {
-  width: min(100%, 860px);
+  width: 100%;
+  height: clamp(220px, 34vw, 420px);
   margin: 0;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: clamp(24px, 3vw, 40px);
-  background: rgba(255, 255, 255, 0.6);
+  border-radius: clamp(24px, 3vw, 32px);
+  background: #020507;
   box-shadow: none;
 }
 
 .design-dna-hero-image img {
   display: block;
   width: 100%;
-  aspect-ratio: 19 / 10;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .design-dna-presence-orb {
@@ -7657,8 +7660,10 @@
 .section-heading.compact h3 {
   margin: 0;
   color: var(--ink);
-  font-size: clamp(1.5rem, 2.4vw, 2.4rem);
-  letter-spacing: -0.06em;
+  font-size: clamp(1.8rem, 3vw, 3.2rem);
+  font-weight: 420;
+  line-height: 0.98;
+  letter-spacing: -0.07em;
 }
 
 .design-dna-cluster-grid,
@@ -7716,19 +7721,21 @@
 
 .design-dna-section-hero-image {
   width: 100%;
+  height: clamp(220px, 34vw, 420px);
   margin: 0;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.74);
-  border-radius: clamp(24px, 3vw, 36px);
-  background: rgba(255, 255, 255, 0.54);
+  border-radius: clamp(24px, 3vw, 32px);
+  background: #020507;
   box-shadow: none;
 }
 
 .design-dna-section-hero-image img {
   display: block;
   width: 100%;
-  aspect-ratio: 19 / 10;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .axis-map-orbit {
