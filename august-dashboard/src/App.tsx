@@ -178,7 +178,7 @@ const designDnaCompressedClusters = [
     thumbnailSrc: '/assets/design-dna/thumbnails/editorial-evidence-system-19x10.png',
   },
   {
-    group: 'Expression Layer',
+    group: 'Asset Direction',
     title: '06. Soft Object / Presence Mark',
     summary: '아이콘보다 넓은 개념의 presence mark로 Hermes의 조용한 존재감을 먼저 고정한다.',
     signals: ['soft orb', 'open squircle', 'chromatic rim', 'inner void', 'gentle glow'],
@@ -2271,7 +2271,7 @@ function DesignDnaPanel() {
       <section className="design-dna-infographic-section expression-map" aria-label="Expression layer infographic">
         <div className="section-heading compact">
           <p className="card-kicker">Expression Layer</p>
-          <h3>브랜드 표면을 만드는 3개의 표현축</h3>
+          <h3>브랜드 표면을 만드는 2개의 표현축</h3>
         </div>
         <div className="content-card expression-layer-map">
           <figure className="design-dna-section-hero-image">
