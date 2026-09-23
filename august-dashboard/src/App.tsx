@@ -190,7 +190,7 @@ const designDnaCompressedClusters = [
 const chrisArchiveExtractionCards = [
   {
     title: 'What Chris Archive gave us',
-    copy: '60개 이미지는 예쁜 스타일 모음이 아니라 Chris가 반복적으로 끌린 판단 신호의 표본입니다. 여기서 부드러운 컨테이너, 조용한 지능, warm-cool balance, tactile material, orbit/dot rhythm, editorial archive language를 추출했습니다.',
+    copy: '60개 이미지는 예쁜 스타일 모음이 아니라 Chris가 반복적으로 끌린 판단 신호의 표본입니다. 여기서 부드러운 컨테이너, 상황을 배려하는 AI 태도, warm-cool balance, tactile material, orbit/dot rhythm, editorial archive language를 추출했습니다.',
   },
   {
     title: 'What we did not copy',
@@ -2194,10 +2194,10 @@ function DesignDnaPanel() {
       <section className="content-card design-dna-unified-hero" aria-label="Hermes Design DNA declaration">
         <div>
           <p className="card-kicker">Hermes Design DNA · GoYJ Review Applied</p>
-          <h3>헤르메스는 사람의 맥락을 보호하는 조용한 지능입니다.</h3>
+          <h3>헤르메스는 사람의 상황과 의도를 읽고, 더 나은 디자인 판단으로 이어지게 돕습니다.</h3>
           <p>
-            Chris Archive 60개는 스타일을 베끼기 위한 moodboard가 아니라, Chris가 AI 시대의 UX에서 중요하게 느끼는 감각의 반복입니다.
-            GoYJ 리뷰를 반영해 Design DNA를 하나의 서사로 통합했습니다: 감각적 선언 → archive evidence → core DNA → first asset direction → never become.
+            Chris Archive의 60개 이미지는 마음에 든 스타일을 모아둔 자료가 아니라, Chris가 좋은 경험과 좋은 브랜드에서 반복해서 감지한 기준입니다.
+            GoYJ 리뷰를 거쳐 그 기준을 디자인 언어로 정리하고, 앞으로 만들 브랜드 에셋이 어떤 태도와 질감을 가져야 하는지 한 흐름으로 묶었습니다.
           </p>
           <div className="chris-design-system-actions design-dna-principles-actions" aria-label="Design DNA system principles actions">
             <button type="button" className="chris-design-system-button" onClick={handleOpenDnaPrinciples}>
@@ -2349,10 +2349,10 @@ function DesignDnaPanel() {
           <div className="content-card dna-dashboard-overview">
             <div>
               <p className="card-kicker">DNA Dashboard · GoYJ selected outputs</p>
-              <h3>Chris가 “저장해줘”라고 고른 GoYJ 생성 에셋만 남기는 대시보드</h3>
+              <h3>Chris가 고른 그래픽 재료를 한곳에 모아, 다음 디자인으로 이어지게 하는 공간</h3>
               <p>
-                Chris Archive에서 추출한 Design DNA를 기반으로 GoYJ가 생성하고, Chris가 선택한 실제 그래픽 에셋입니다.
-                썸네일을 클릭하면 생성 프롬프트와 분석 결과를 확인할 수 있습니다.
+                GoYJ가 만든 후보 중 Chris가 직접 남기기로 한 것만 모았습니다.
+                각 이미지는 나중에 브랜드 표면, 패키지, UI 배경, 시그널 그래픽으로 다시 꺼내 쓸 수 있도록 선택 이유와 활용 방향을 함께 기록합니다.
               </p>
               <div className="chris-design-system-actions design-dna-principles-actions" aria-label="Design DNA system principles actions">
                 <button type="button" className="chris-design-system-button" onClick={handleOpenDnaPrinciples}>
