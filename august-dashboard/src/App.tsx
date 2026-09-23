@@ -8,6 +8,7 @@ import './App.css'
 
 const publicAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
 const hermesDesignSystemDocHref = publicAssetPath('/docs/hermes-design-system.md')
+const designDnaSystemPrinciplesDocHref = publicAssetPath('/docs/design-dna-system-principles.md')
 const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
 
 type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report'
@@ -2133,6 +2134,23 @@ function DesignDnaPanel() {
   const [dnaArchive, setDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
   const [selectedDnaAsset, setSelectedDnaAsset] = useState<DnaArchiveItem | null>(null)
   const [activeDesignDnaSection, setActiveDesignDnaSection] = useState<'system' | 'dashboard'>('system')
+  const [isDnaPrinciplesOpen, setIsDnaPrinciplesOpen] = useState(false)
+  const [dnaPrinciplesText, setDnaPrinciplesText] = useState('')
+  const [dnaPrinciplesError, setDnaPrinciplesError] = useState('')
+
+  const handleOpenDnaPrinciples = async () => {
+    setIsDnaPrinciplesOpen(true)
+
+    if (dnaPrinciplesText || dnaPrinciplesError) return
+
+    try {
+      const response = await fetch(designDnaSystemPrinciplesDocHref, { cache: 'no-store' })
+      if (!response.ok) throw new Error(`Design DNA 원칙 문서 로드 실패: ${response.status}`)
+      setDnaPrinciplesText(await response.text())
+    } catch (error) {
+      setDnaPrinciplesError(error instanceof Error ? error.message : 'Design DNA 원칙 문서를 불러오지 못했습니다.')
+    }
+  }
 
   useEffect(() => {
     let isMounted = true
@@ -2181,6 +2199,14 @@ function DesignDnaPanel() {
             Chris Archive 60개는 스타일을 베끼기 위한 moodboard가 아니라, Chris가 AI 시대의 UX에서 중요하게 느끼는 감각의 반복입니다.
             GoYJ 리뷰를 반영해 Design DNA를 하나의 서사로 통합했습니다: 감각적 선언 → archive evidence → core DNA → first asset direction → never become.
           </p>
+          <div className="chris-design-system-actions design-dna-principles-actions" aria-label="Design DNA system principles actions">
+            <button type="button" className="chris-design-system-button" onClick={handleOpenDnaPrinciples}>
+              Design DNA 시스템 원칙 보기
+            </button>
+            <a className="chris-design-system-download" href={designDnaSystemPrinciplesDocHref} download="design-dna-system-principles.md">
+              MD 다운로드
+            </a>
+          </div>
         </div>
         <figure className="design-dna-hero-image">
           <img
@@ -2328,6 +2354,14 @@ function DesignDnaPanel() {
                 Chris Archive에서 추출한 Design DNA를 기반으로 GoYJ가 생성하고, Chris가 선택한 실제 그래픽 에셋입니다.
                 썸네일을 클릭하면 생성 프롬프트와 분석 결과를 확인할 수 있습니다.
               </p>
+              <div className="chris-design-system-actions design-dna-principles-actions" aria-label="Design DNA system principles actions">
+                <button type="button" className="chris-design-system-button" onClick={handleOpenDnaPrinciples}>
+                  Design DNA 시스템 원칙 보기
+                </button>
+                <a className="chris-design-system-download" href={designDnaSystemPrinciplesDocHref} download="design-dna-system-principles.md">
+                  MD 다운로드
+                </a>
+              </div>
             </div>
             <div className="chris-archive-stats" aria-label="DNA Dashboard stats">
               <span><strong>{dnaTotalItems}</strong> saved assets</span>
@@ -2370,6 +2404,34 @@ function DesignDnaPanel() {
               </div>
               <p className="manifest-policy">{dnaArchive.sourcePolicy}</p>
             </div>
+          </article>
+        </div>
+      ) : null}
+
+      {isDnaPrinciplesOpen ? (
+        <div className="chris-design-system-modal-backdrop" role="presentation" onClick={() => setIsDnaPrinciplesOpen(false)}>
+          <article
+            className="chris-design-system-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="design-dna-principles-title"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="chris-design-system-modal-header">
+              <div>
+                <p className="card-kicker">Design DNA · graphic motif system principles</p>
+                <h3 id="design-dna-principles-title">Design DNA 시스템 원칙</h3>
+              </div>
+              <div className="chris-design-system-modal-controls">
+                <a className="chris-design-system-download" href={designDnaSystemPrinciplesDocHref} download="design-dna-system-principles.md">
+                  MD 다운로드
+                </a>
+                <button type="button" className="chris-archive-modal-close" onClick={() => setIsDnaPrinciplesOpen(false)} aria-label="Design DNA 시스템 원칙 팝업 닫기">
+                  ×
+                </button>
+              </div>
+            </div>
+            <pre className="chris-design-system-document">{dnaPrinciplesError || dnaPrinciplesText || 'Design DNA 시스템 원칙 문서를 불러오는 중입니다.'}</pre>
           </article>
         </div>
       ) : null}
