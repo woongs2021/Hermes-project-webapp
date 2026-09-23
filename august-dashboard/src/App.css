@@ -6930,10 +6930,10 @@
 }
 
 .dna-dashboard-overview h3 {
-  margin: 0 0 0.7rem;
+  margin: 0 0 0.75rem;
   max-width: 760px;
   color: var(--ink);
-  font-size: clamp(1.7rem, 2.5vw, 2.9rem);
+  font-size: clamp(1.7rem, 2.6vw, 3rem);
   line-height: 0.98;
   letter-spacing: -0.07em;
 }
@@ -7586,16 +7586,16 @@
 }
 
 .design-dna-unified-hero h3 {
-  max-width: 860px;
-  margin: 0;
-  font-size: clamp(1.8rem, 3vw, 3.2rem);
+  max-width: 760px;
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.7rem, 2.6vw, 3rem);
   font-weight: 420;
   line-height: 0.98;
   letter-spacing: -0.07em;
 }
 
 .design-dna-unified-hero p:not(.card-kicker) {
-  max-width: 860px;
+  max-width: 760px;
   color: var(--muted-ink);
 }
 
