@@ -8224,6 +8224,20 @@
   color: var(--muted-ink);
 }
 
+@media (min-width: 901px) {
+  .design-dna-hero-image,
+  .design-dna-section-hero-image {
+    height: auto;
+  }
+
+  .design-dna-hero-image img,
+  .design-dna-section-hero-image img {
+    height: auto;
+    aspect-ratio: 19 / 10;
+    object-fit: contain;
+  }
+}
+
 @media (max-width: 900px) {
   .design-dna-subtab-nav,
   .design-dna-process,
