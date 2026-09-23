@@ -7604,7 +7604,7 @@
   height: clamp(220px, 34vw, 420px);
   margin: 0;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.72);
+  border: 0;
   border-radius: clamp(24px, 3vw, 32px);
   background: #020507;
   box-shadow: none;
@@ -7705,11 +7705,7 @@
 .expression-layer-map {
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 18% 18%, rgba(255, 185, 96, 0.12), transparent 30%),
-    radial-gradient(circle at 88% 16%, color-mix(in srgb, var(--primary) 11%, transparent), transparent 34%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(248, 246, 240, 0.5)),
-    var(--surface);
+  background: var(--surface);
 }
 
 .design-dna-axis-map {
@@ -7724,7 +7720,7 @@
   height: clamp(220px, 34vw, 420px);
   margin: 0;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.74);
+  border: 0;
   border-radius: clamp(24px, 3vw, 32px);
   background: #020507;
   box-shadow: none;
