@@ -2191,6 +2191,7 @@ function DesignDnaPanel() {
     ? 'GoYJ 루프에서 GPT Image 2.5로 만든 후보 중 Chris가 저장한 그래픽 재료입니다. 앞으로도 월/수/금 루프는 이 레일에 계속 쌓입니다.'
     : 'Chris가 Midjourney에 수동 입력해 만든 결과만 따로 저장하는 레일입니다. 같은 프롬프트 계열의 Midjourney 해석을 GPT 레일과 분리해서 비교할 수 있습니다.'
   const coffeeMockupCollection = brandMockupAssets.collections.find((collection) => collection.id === 'coffee-mockup-assets')
+  const coffeeAssetExample = brandMockupAssets.examples?.find((collection) => collection.id === 'coffee-asset-example-01')
 
   return (
     <div className="design-dna-shell design-dna-single-page">
@@ -2475,6 +2476,28 @@ function DesignDnaPanel() {
               </div>
               <div className="dna-brand-mockup-grid" aria-label="Coffee mockup assets moodboard">
                 {coffeeMockupCollection.items.map((item) => (
+                  <figure className="dna-brand-mockup-tile" key={item.id}>
+                    <img src={toAppAssetSrc(item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
+                    <figcaption>
+                      <strong>{item.title}</strong>
+                      <span>{item.description}</span>
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </section>
+          ) : activeBrandAssetSource === 'midjourneyMockup' && coffeeAssetExample ? (
+            <section className="content-card dna-brand-mockup-collection" aria-label="Coffee asset example 01">
+              <div className="dna-brand-mockup-header">
+                <div>
+                  <p className="card-kicker">Midjourney + Mockup</p>
+                  <h4>{coffeeAssetExample.title}</h4>
+                  <p>{coffeeAssetExample.description}</p>
+                </div>
+                <span>{coffeeAssetExample.items.length} assets · ONBOARD</span>
+              </div>
+              <div className="dna-brand-mockup-grid" aria-label="Coffee asset example 01 moodboard">
+                {coffeeAssetExample.items.map((item) => (
                   <figure className="dna-brand-mockup-tile" key={item.id}>
                     <img src={toAppAssetSrc(item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
                     <figcaption>

@@ -66,5 +66,72 @@
         }
       ]
     }
+  ],
+  "examples": [
+    {
+      "id": "coffee-asset-example-01",
+      "title": "Coffee Asset Example 01",
+      "created": "2026-09-26",
+      "status": "midjourney_mockup_example_saved",
+      "sourceGraphic": "Midjourney 01 — Capsule Pattern Translation",
+      "logoText": "ONBOARD",
+      "description": "Midjourney 01 graphic applied to the blank white areas of Coffee Mockup Assets with ONBOARD logo lettering.",
+      "items": [
+        {
+          "id": "coffee-asset-example-01-01",
+          "title": "Onboard Cup Sleeve",
+          "description": "Onboard cup sleeve application",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/01_onboard_cup_mockup.jpg",
+          "assetHash": "f8e3125798ddd1848aa080b17033b9d5d65656c476f0c76c6b67bf582b2fc457",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "coffee-asset-example-01-02",
+          "title": "Onboard Coffee Bag And Cup Counter",
+          "description": "Onboard coffee bag and cup counter application",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/02_onboard_packaging_counter_mockup.jpg",
+          "assetHash": "47140b3e27e7aecf939f67c707d99446e67a65b995c180dc856f9952847ba8c7",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "coffee-asset-example-01-03",
+          "title": "Onboard Stacked Cup Set",
+          "description": "Onboard stacked cup set application",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/03_onboard_cup_set_mockup.jpg",
+          "assetHash": "5a94b5b064917b5b75f5d57a9d14b301fe9d299a28bd6c3abf3e70df06bfd8d1",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "coffee-asset-example-01-04",
+          "title": "Onboard Tote Bag Mockup",
+          "description": "Onboard tote bag mockup application",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/04_onboard_tote_mockup.jpg",
+          "assetHash": "24e648a2636062cf12f67e8f8b80535453864d8b98f67abb441f8a2ca00fb7e5",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "coffee-asset-example-01-05",
+          "title": "Onboard Close-Up Cup Body",
+          "description": "Onboard close-up cup body application",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/05_onboard_closeup_cup_mockup.jpg",
+          "assetHash": "9cd868feeee896f322d837f86c82e172cc5b18727cb495817960dbb21569e8b3",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "coffee-asset-example-01-06",
+          "title": "Onboard Hanging Cafe Sign",
+          "description": "Onboard hanging cafe sign application",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/06_onboard_hanging_sign_mockup.jpg",
+          "assetHash": "1781fa3ec5b776d415e7d8f4f7735734022a52fdab253961c0f4956374189df7",
+          "width": 1280,
+          "height": 853
+        }
+      ]
+    }
   ]
 }

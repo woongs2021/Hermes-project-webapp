@@ -22,6 +22,7 @@ export type BrandMockupManifest = {
   generatedAt: string
   sourcePolicy: string
   collections: BrandMockupCollection[]
+  examples?: BrandMockupCollection[]
 }
 
 export const fallbackBrandMockupAssets: BrandMockupManifest = {
