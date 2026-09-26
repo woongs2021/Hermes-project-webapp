@@ -162,6 +162,26 @@
         "Warm-Cool Intelligence",
         "Tactile Optical Material"
       ]
+    },
+    {
+      "id": "2026-09-26-midjourney-09-orbit-circle-signal-translation",
+      "title": "Midjourney 09 — Orbit Circle Signal Translation",
+      "created": "2026-09-26",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-09-26/09_orbit_circle_signal_midjourney_translation.jpg",
+      "prompt": "circular agency signal accent, perfect round ring accent material, warm off-white base, subtle cobalt, coral, charcoal and muted warm fill cues, no yellow line decoration, no outer yellow stroke, calm signal balance, flat 2D editorial product graphic, small badge-like accent but not a logo, useful for package corner, UI state signal, brand system mark fragment --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient, yellow line, yellow stroke",
+      "midjourneyPrompt": "circular agency signal accent, perfect round ring accent material, warm off-white base, subtle cobalt, coral, charcoal and muted warm fill cues, no yellow line decoration, no outer yellow stroke, calm signal balance, flat 2D editorial product graphic, small badge-like accent but not a logo, useful for package corner, UI state signal, brand system mark fragment --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient, yellow line, yellow stroke",
+      "analysis": "아홉 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. warm off-white paper ground 위에 큰 orbit ring, deep teal disc, coral/neutral split circle, 얇은 red/ochre arc가 균형을 만드는 circular signal motif입니다. 로고 완성형보다는 패키지 코너, 카드 edge, UI state signal에 crop해 쓰기 좋은 원형 accent material입니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_26_09",
+      "assetHash": "a999be453b245c61a5a4d0a0e4541ee96ab2db8093f197b8e0785ad6e26a786f",
+      "dnaClusters": [
+        "Midjourney Translation",
+        "Circular Signal Accent",
+        "Quiet Signal Rhythm",
+        "Warm-Cool Intelligence",
+        "Editorial Product Graphic"
+      ]
     }
   ]
 }
