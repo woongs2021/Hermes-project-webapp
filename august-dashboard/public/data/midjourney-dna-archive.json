@@ -82,6 +82,26 @@
         "Warm Gray Ochre System",
         "Editorial Product Graphic"
       ]
+    },
+    {
+      "id": "2026-09-26-midjourney-05-matte-circle-fields-translation",
+      "title": "Midjourney 05 — Matte Circle Fields Translation",
+      "created": "2026-09-26",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-09-26/05_matte_circle_fields_midjourney_translation.jpg",
+      "prompt": "large matte circular fields, soft overlapping round color planes, terracotta, faded sage, deep umber, warm off-white, paper and plaster texture, calm abstract brand surface, gentle emotional design language, quiet composition with generous negative space, flat 2D editorial graphic, crop-friendly, useful as package surface or brand mood background --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "large matte circular fields, soft overlapping round color planes, terracotta, faded sage, deep umber, warm off-white, paper and plaster texture, calm abstract brand surface, gentle emotional design language, quiet composition with generous negative space, flat 2D editorial graphic, crop-friendly, useful as package surface or brand mood background --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "다섯 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. terracotta, faded sage, deep umber, warm off-white의 큰 원형 필드가 겹치는 matte paper/plaster surface로, 브랜드 배경·패키지 면·카드 표면에 안정적으로 crop해 쓰기 좋은 조용한 추상 그래픽 재료입니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_26_05",
+      "assetHash": "3d2634a5526103916dbb0feaf6999f96d14c7fc2e6bae01c01c851e76ec6618c",
+      "dnaClusters": [
+        "Midjourney Translation",
+        "Ambient Circle Field",
+        "Matte Paper Texture",
+        "Warm Earth Palette",
+        "Quiet Abstract Motif"
+      ]
     }
   ]
 }
