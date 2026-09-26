@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-25T14:35:20+09:00",
+  "generatedAt": "2026-09-26T00:00:00+09:00",
   "sourcePolicy": "Only Chris-selected GoYJ generated assets are saved here. Unselected review candidates are temporary and are not published.",
   "items": [
     {
@@ -195,39 +195,6 @@
       "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-21/images/01_complete_circle_outer_stroke.png",
       "savedAt": "2026-09-21T11:38:13+09:00",
       "midjourneyPrompt": "single perfect circle motif, warm off-white background, only the outer rim softly luminous, subtle cobalt and pale cyan boundary light, no central fill, no central glow, minimal flat 2D graphic, protected void feeling, calm premium OS-native presence mark material, quiet circular boundary, editorial restraint, useful as brand signal, package seal fragment, loading or listening state graphic --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
-    },
-    {
-      "id": "2026-09-21-goyj-woven-bar-closeup",
-      "title": "Woven Bar Close-up — Cobalt / Cyan",
-      "created": "2026-09-21",
-      "status": "chris_selected",
-      "imageSrc": "/assets/dna-archive/2026-09-21/02_woven_bar_closeup.png",
-      "prompt": "GPT Image 2.5 revision based on Chris attached reference: close-up expanded rounded interwoven cobalt/cyan bars, halftone fade at ends, coral accents, paper texture; one motif only; pure flat 2D graphic, no text/logos/photos/icons.",
-      "analysis": "Chris가 첨부한 reference를 기준으로, 파란/시안 rounded bar가 교차하는 woven lattice motif를 확대샷처럼 다시 그린 flat 2D 그래픽입니다. 여러 패턴을 섞지 않고 하나의 motif를 크게 적용했으며, cobalt/cyan 막대, coral accent, halftone fade, paper texture를 중심으로 패턴 표면 활용성을 높였습니다.",
-      "sourceRun": "/opt/data/dna-archive/candidates/2026-09-21/revisions-gptimage-light-pattern-ref",
-      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-21",
-      "dnaClusters": [
-        "Woven Capsule Pattern",
-        "Warm-Cool Intelligence",
-        "Pattern Surface",
-        "Quiet Signal Rhythm",
-        "Editorial Product Graphic"
-      ],
-      "model": "gpt_image_2_5",
-      "options": {
-        "aspect_ratio": "1:1",
-        "quality": "high",
-        "resolution": "2k",
-        "variant": "flare",
-        "background": "opaque"
-      },
-      "width": 2048,
-      "height": 2048,
-      "selectedReason": "Chris said the second/05 close-up image looked good and asked to save both final images.",
-      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260921_020448_76487077-1e24-4f44-b2bb-670d0e7278ff.png",
-      "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-21/images/02_woven_bar_closeup.png",
-      "savedAt": "2026-09-21T11:38:13+09:00",
-      "midjourneyPrompt": "close-up abstract woven rounded bars, interlaced cobalt and cyan capsule-like strips, subtle coral accent, halftone fade at the ends, tactile paper texture, one motif only, no extra patterns, flat 2D editorial product graphic, cropped macro composition, useful for brand surface, package texture, mobile UI background, premium warm-cool intelligence mood --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     },
     {
       "id": "2026-09-23-goyj-01-quiet-warm-cool-surface-field",
