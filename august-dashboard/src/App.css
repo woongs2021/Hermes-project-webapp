@@ -6943,6 +6943,44 @@
   color: var(--muted-ink);
 }
 
+.dna-dashboard-source-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 1.15rem 0 0;
+  max-width: 760px;
+}
+
+.dna-dashboard-source-tab {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.82rem 0.95rem;
+  border: 1px solid color-mix(in srgb, var(--stroke) 78%, transparent);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.42);
+  color: var(--quiet-ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.dna-dashboard-source-tab span {
+  color: inherit;
+  font-size: 0.96rem;
+  font-weight: 820;
+  letter-spacing: -0.035em;
+}
+
+.dna-dashboard-source-tab small {
+  color: var(--muted-ink);
+  font-size: 0.74rem;
+}
+
+.dna-dashboard-source-tab.active {
+  border-color: color-mix(in srgb, var(--primary) 28%, var(--stroke));
+  background: var(--surface);
+  color: var(--ink);
+}
+
 .chris-design-system-modal-backdrop {
   position: fixed;
   inset: 0;
@@ -8281,6 +8319,7 @@
   .design-dna-cluster-grid.core,
   .design-dna-prompt-grid,
   .design-dna-unified-hero,
+  .dna-dashboard-source-tabs,
   .design-dna-never-card ul,
   .agentic-package-stage-grid {
     grid-template-columns: 1fr;

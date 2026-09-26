@@ -7,6 +7,7 @@ export type DnaArchiveItem = {
   prompt: string
   midjourneyPrompt?: string
   analysis: string
+  sourceTool?: string
   sourceRun?: string
   dnaClusters: string[]
 }
@@ -26,8 +27,16 @@ export const fallbackDnaArchive: DnaArchiveManifest = {
 }
 
 export async function loadDnaArchive(): Promise<DnaArchiveManifest> {
+  return loadDnaArchiveFrom('data/dna-archive.json')
+}
+
+export async function loadMidjourneyDnaArchive(): Promise<DnaArchiveManifest> {
+  return loadDnaArchiveFrom('data/midjourney-dna-archive.json')
+}
+
+async function loadDnaArchiveFrom(path: string): Promise<DnaArchiveManifest> {
   try {
-    const response = await fetch(`${import.meta.env.BASE_URL}data/dna-archive.json`, { cache: 'no-store' })
+    const response = await fetch(`${import.meta.env.BASE_URL}${path}`, { cache: 'no-store' })
     if (!response.ok) throw new Error(`dna archive request failed: ${response.status}`)
     const archive = (await response.json()) as DnaArchiveManifest
     return {

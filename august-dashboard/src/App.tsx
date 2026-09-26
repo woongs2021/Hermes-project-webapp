@@ -3,7 +3,7 @@ import { fallbackHomeVisualSet, loadHomeVisualSet, type HomeVisualItem, type Hom
 import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type ResearchBoardItem } from './researchBoard'
 import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, MuyeolValidationPanel, ObdGrowthTimelinePanel } from './extendedPanels'
 import { fallbackChrisArchive, loadChrisArchive, type ChrisArchiveItem, type ChrisArchiveManifest } from './chrisArchive'
-import { fallbackDnaArchive, loadDnaArchive, type DnaArchiveItem, type DnaArchiveManifest } from './dnaArchive'
+import { fallbackDnaArchive, loadDnaArchive, loadMidjourneyDnaArchive, type DnaArchiveItem, type DnaArchiveManifest } from './dnaArchive'
 import './App.css'
 
 const publicAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
@@ -2132,8 +2132,10 @@ function DesignDnaPanel() {
   const coreClusters = designDnaCompressedClusters.filter((cluster) => cluster.group === 'Core DNA')
   const expressionClusters = designDnaCompressedClusters.filter((cluster) => cluster.group === 'Expression Layer')
   const [dnaArchive, setDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
+  const [midjourneyDnaArchive, setMidjourneyDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
   const [selectedDnaAsset, setSelectedDnaAsset] = useState<DnaArchiveItem | null>(null)
   const [activeDesignDnaSection, setActiveDesignDnaSection] = useState<'system' | 'dashboard'>('system')
+  const [activeDnaDashboardSource, setActiveDnaDashboardSource] = useState<'gpt' | 'midjourney'>('gpt')
   const [isDnaPrinciplesOpen, setIsDnaPrinciplesOpen] = useState(false)
   const [dnaPrinciplesText, setDnaPrinciplesText] = useState('')
   const [dnaPrinciplesError, setDnaPrinciplesError] = useState('')
@@ -2165,9 +2167,10 @@ function DesignDnaPanel() {
 
   useEffect(() => {
     let isMounted = true
-    loadDnaArchive().then((loadedArchive) => {
+    Promise.all([loadDnaArchive(), loadMidjourneyDnaArchive()]).then(([loadedArchive, loadedMidjourneyArchive]) => {
       if (!isMounted) return
       setDnaArchive(loadedArchive)
+      setMidjourneyDnaArchive(loadedMidjourneyArchive)
     })
     return () => {
       isMounted = false
@@ -2175,7 +2178,14 @@ function DesignDnaPanel() {
   }, [])
 
   const dnaTotalItems = dnaArchive.items.length
-  const latestDnaDate = dnaArchive.items.at(-1)?.created ?? 'pending'
+  const midjourneyDnaTotalItems = midjourneyDnaArchive.items.length
+  const activeDnaDashboardArchive = activeDnaDashboardSource === 'gpt' ? dnaArchive : midjourneyDnaArchive
+  const activeDnaDashboardItems = activeDnaDashboardArchive.items
+  const latestDnaDate = activeDnaDashboardItems.at(-1)?.created ?? 'pending'
+  const activeDnaDashboardLabel = activeDnaDashboardSource === 'gpt' ? 'GPT Image 2.5 loop' : 'Midjourney manual'
+  const activeDnaDashboardCopy = activeDnaDashboardSource === 'gpt'
+    ? 'GoYJ 루프에서 GPT Image 2.5로 만든 후보 중 Chris가 저장한 그래픽 재료입니다. 앞으로도 월/수/금 루프는 이 레일에 계속 쌓입니다.'
+    : 'Chris가 Midjourney에 수동 입력해 만든 결과만 따로 저장하는 레일입니다. 같은 프롬프트 계열의 Midjourney 해석을 GPT 레일과 분리해서 비교할 수 있습니다.'
 
   return (
     <div className="design-dna-shell design-dna-single-page">
@@ -2196,7 +2206,7 @@ function DesignDnaPanel() {
           onClick={() => setActiveDesignDnaSection('dashboard')}
         >
           <span>DNA Dashboard</span>
-          <small>{dnaTotalItems} selected GoYJ assets</small>
+          <small>{dnaTotalItems} GPT · {midjourneyDnaTotalItems} Midjourney</small>
         </button>
       </nav>
 
@@ -2359,12 +2369,29 @@ function DesignDnaPanel() {
         <section className="dna-dashboard-panel" aria-label="GoYJ selected DNA dashboard">
           <div className="content-card dna-dashboard-overview">
             <div>
-              <p className="card-kicker">DNA Dashboard · GoYJ selected outputs</p>
-              <h3>Chris가 고른 그래픽 재료를 한곳에 모아, 다음 디자인으로 이어지게 하는 공간</h3>
-              <p>
-                GoYJ가 만든 후보 중 Chris가 직접 남기기로 한 것만 모았습니다.
-                각 이미지는 나중에 브랜드 표면, 패키지, UI 배경, 시그널 그래픽으로 다시 꺼내 쓸 수 있도록 선택 이유와 활용 방향을 함께 기록합니다.
-              </p>
+              <p className="card-kicker">DNA Dashboard · {activeDnaDashboardLabel}</p>
+              <h3>GPT Image 2.5 루프와 Midjourney 수동 결과를 분리해서 쌓습니다.</h3>
+              <p>{activeDnaDashboardCopy}</p>
+              <div className="dna-dashboard-source-tabs" aria-label="DNA Dashboard source split">
+                <button
+                  type="button"
+                  className={activeDnaDashboardSource === 'gpt' ? 'dna-dashboard-source-tab active' : 'dna-dashboard-source-tab'}
+                  aria-pressed={activeDnaDashboardSource === 'gpt'}
+                  onClick={() => setActiveDnaDashboardSource('gpt')}
+                >
+                  <span>GPT Image 2.5</span>
+                  <small>{dnaTotalItems} loop assets</small>
+                </button>
+                <button
+                  type="button"
+                  className={activeDnaDashboardSource === 'midjourney' ? 'dna-dashboard-source-tab active' : 'dna-dashboard-source-tab'}
+                  aria-pressed={activeDnaDashboardSource === 'midjourney'}
+                  onClick={() => setActiveDnaDashboardSource('midjourney')}
+                >
+                  <span>Midjourney</span>
+                  <small>{midjourneyDnaTotalItems} manual assets</small>
+                </button>
+              </div>
               <div className="chris-design-system-actions design-dna-principles-actions" aria-label="Design DNA system principles actions">
                 <button type="button" className="chris-design-system-button" onClick={handleOpenDnaPrinciples}>
                   Design DNA 시스템 원칙 보기
@@ -2375,13 +2402,13 @@ function DesignDnaPanel() {
               </div>
             </div>
             <div className="chris-archive-stats" aria-label="DNA Dashboard stats">
-              <span><strong>{dnaTotalItems}</strong> saved assets</span>
+              <span><strong>{activeDnaDashboardItems.length}</strong> saved assets</span>
               <span><strong>{latestDnaDate}</strong> latest</span>
             </div>
           </div>
 
-          <div className="dna-generated-grid" aria-label="Saved GoYJ DNA generated assets">
-            {dnaArchive.items.map((item, index) => (
+          <div className="dna-generated-grid" aria-label={`Saved ${activeDnaDashboardLabel} DNA assets`}>
+            {activeDnaDashboardItems.map((item, index) => (
               <button type="button" className="dna-generated-tile" key={item.id} onClick={() => setSelectedDnaAsset(item)}>
                 <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} generated asset`} loading={index < 8 ? 'eager' : 'lazy'} decoding="async" />
                 <span>{String(index + 1).padStart(2, '0')}</span>
@@ -2403,7 +2430,7 @@ function DesignDnaPanel() {
               <img src={toAppAssetSrc(selectedDnaAsset.imageSrc)} alt={`${selectedDnaAsset.title} generated full asset`} />
             </div>
             <div className="dna-generated-modal-copy">
-              <p className="card-kicker">{selectedDnaAsset.created} · {selectedDnaAsset.status}</p>
+              <p className="card-kicker">{selectedDnaAsset.created} · {selectedDnaAsset.sourceTool ?? activeDnaDashboardLabel} · {selectedDnaAsset.status}</p>
               <h3 id="dna-generated-modal-title">{selectedDnaAsset.title}</h3>
               <p>{selectedDnaAsset.analysis}</p>
               <div className="chris-archive-chip-row" aria-label="DNA clusters">
@@ -2428,7 +2455,7 @@ function DesignDnaPanel() {
                 <strong>Generation prompt</strong>
                 <span>{selectedDnaAsset.prompt}</span>
               </div>
-              <p className="manifest-policy">{dnaArchive.sourcePolicy}</p>
+              <p className="manifest-policy">{selectedDnaAsset.sourceTool === 'Midjourney' ? midjourneyDnaArchive.sourcePolicy : dnaArchive.sourcePolicy}</p>
             </div>
           </article>
         </div>
