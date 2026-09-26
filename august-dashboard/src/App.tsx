@@ -4,6 +4,7 @@ import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type Rese
 import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, MuyeolValidationPanel, ObdGrowthTimelinePanel } from './extendedPanels'
 import { fallbackChrisArchive, loadChrisArchive, type ChrisArchiveItem, type ChrisArchiveManifest } from './chrisArchive'
 import { fallbackDnaArchive, loadDnaArchive, loadMidjourneyDnaArchive, type DnaArchiveItem, type DnaArchiveManifest } from './dnaArchive'
+import { fallbackBrandMockupAssets, loadBrandMockupAssets, type BrandMockupManifest } from './brandAssets'
 import './App.css'
 
 const publicAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
@@ -2133,6 +2134,7 @@ function DesignDnaPanel() {
   const expressionClusters = designDnaCompressedClusters.filter((cluster) => cluster.group === 'Expression Layer')
   const [dnaArchive, setDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
   const [midjourneyDnaArchive, setMidjourneyDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
+  const [brandMockupAssets, setBrandMockupAssets] = useState<BrandMockupManifest>(fallbackBrandMockupAssets)
   const [selectedDnaAsset, setSelectedDnaAsset] = useState<DnaArchiveItem | null>(null)
   const [activeDesignDnaSection, setActiveDesignDnaSection] = useState<'system' | 'dashboard' | 'brandAsset'>('system')
   const [activeDnaDashboardSource, setActiveDnaDashboardSource] = useState<'gpt' | 'midjourney'>('gpt')
@@ -2168,10 +2170,11 @@ function DesignDnaPanel() {
 
   useEffect(() => {
     let isMounted = true
-    Promise.all([loadDnaArchive(), loadMidjourneyDnaArchive()]).then(([loadedArchive, loadedMidjourneyArchive]) => {
+    Promise.all([loadDnaArchive(), loadMidjourneyDnaArchive(), loadBrandMockupAssets()]).then(([loadedArchive, loadedMidjourneyArchive, loadedBrandMockupAssets]) => {
       if (!isMounted) return
       setDnaArchive(loadedArchive)
       setMidjourneyDnaArchive(loadedMidjourneyArchive)
+      setBrandMockupAssets(loadedBrandMockupAssets)
     })
     return () => {
       isMounted = false
@@ -2187,6 +2190,7 @@ function DesignDnaPanel() {
   const activeDnaDashboardCopy = activeDnaDashboardSource === 'gpt'
     ? 'GoYJ 루프에서 GPT Image 2.5로 만든 후보 중 Chris가 저장한 그래픽 재료입니다. 앞으로도 월/수/금 루프는 이 레일에 계속 쌓입니다.'
     : 'Chris가 Midjourney에 수동 입력해 만든 결과만 따로 저장하는 레일입니다. 같은 프롬프트 계열의 Midjourney 해석을 GPT 레일과 분리해서 비교할 수 있습니다.'
+  const coffeeMockupCollection = brandMockupAssets.collections.find((collection) => collection.id === 'coffee-mockup-assets')
 
   return (
     <div className="design-dna-shell design-dna-single-page">
@@ -2459,9 +2463,33 @@ function DesignDnaPanel() {
               </div>
             </div>
           </div>
-          <div className="content-card dna-brand-asset-empty-state" aria-label={`${activeBrandAssetSource === 'mockup' ? 'Mockup' : 'Midjourney plus mockup'} 준비 상태`}>
-            <p>준비중입니다</p>
-          </div>
+          {activeBrandAssetSource === 'mockup' && coffeeMockupCollection ? (
+            <section className="content-card dna-brand-mockup-collection" aria-label="Coffee mockup assets">
+              <div className="dna-brand-mockup-header">
+                <div>
+                  <p className="card-kicker">Mockup Collection</p>
+                  <h4>{coffeeMockupCollection.title}</h4>
+                  <p>{coffeeMockupCollection.description}</p>
+                </div>
+                <span>{coffeeMockupCollection.items.length} assets</span>
+              </div>
+              <div className="dna-brand-mockup-grid" aria-label="Coffee mockup assets moodboard">
+                {coffeeMockupCollection.items.map((item) => (
+                  <figure className="dna-brand-mockup-tile" key={item.id}>
+                    <img src={toAppAssetSrc(item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
+                    <figcaption>
+                      <strong>{item.title}</strong>
+                      <span>{item.description}</span>
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </section>
+          ) : (
+            <div className="content-card dna-brand-asset-empty-state" aria-label={`${activeBrandAssetSource === 'mockup' ? 'Mockup' : 'Midjourney plus mockup'} 준비 상태`}>
+              <p>준비중입니다</p>
+            </div>
+          )}
         </section>
       )}
 

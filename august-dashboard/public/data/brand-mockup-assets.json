@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-26T00:00:00+09:00",
+  "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Contains only user-supplied mockup reference images selected by Chris; excludes private chats, credentials, and provider account data.",
+  "collections": [
+    {
+      "id": "coffee-mockup-assets",
+      "title": "Coffee Mockup Assets",
+      "created": "2026-09-26",
+      "status": "mockup_moodboard_saved",
+      "description": "Coffee cup, packaging, and cafe-sign mockup references for applying Design DNA motifs to brand surfaces.",
+      "items": [
+        {
+          "id": "coffee-mockup-assets-01",
+          "title": "White Paper Cup Mockup",
+          "description": "Close-up coffee cup mockup with blank branding area.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/01_white_paper_cup_mockup.jpg",
+          "assetHash": "cce8d85fcaf5eb79eccf9c0afacb6510a0680e9a0386d82fa047f31c05dae94e",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "coffee-mockup-assets-02",
+          "title": "Coffee Packaging Counter Mockup",
+          "description": "Coffee package/cup brand mockup for counter or tabletop composition.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/02_coffee_packaging_counter_mockup.jpg",
+          "assetHash": "58ce1aed503348ed409ce329dec93008dfc1c638c4b942be0e4f5e310fdf4c6c",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "coffee-mockup-assets-03",
+          "title": "Coffee Bag Front Mockup",
+          "description": "Blank coffee bag or pouch front-facing mockup for brand surface testing.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/03_coffee_bag_front_mockup.jpg",
+          "assetHash": "64dd628b9821db0ca5b2c0e0f484b91221afc552ee436714572567c8a6f3d7f9",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "coffee-mockup-assets-04",
+          "title": "Takeaway Cup Hand Mockup",
+          "description": "Takeaway coffee cup mockup with blank label surface for brand application.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/04_takeaway_cup_hand_mockup.jpg",
+          "assetHash": "3c4bf682cf79ca4300029ccdf2659823131484488d9dc1a79b4b72fdeb57c3e1",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "coffee-mockup-assets-05",
+          "title": "Plain Takeaway Cup Close-up",
+          "description": "Minimal white takeaway cup close-up with large blank printable surface.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/05_plain_takeaway_cup_closeup.jpg",
+          "assetHash": "1143daee42991e60d9fb63f298835d8d4f04e88de29940a0b37850129e00f338",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "coffee-mockup-assets-06",
+          "title": "Hanging Cafe Sign Mockup",
+          "description": "Outdoor hanging cafe sign mockup on warm stone facade.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/06_hanging_cafe_sign_mockup.jpg",
+          "assetHash": "e5cd542813f6e29800f0552e71aa556b296b7958cb40179ad1a5a5e16e30f4f9",
+          "width": 1280,
+          "height": 853
+        }
+      ]
+    }
+  ]
+}

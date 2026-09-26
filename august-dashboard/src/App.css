@@ -7022,6 +7022,87 @@
   letter-spacing: -0.04em;
 }
 
+.dna-brand-mockup-collection {
+  display: grid;
+  gap: 1rem;
+}
+
+.dna-brand-mockup-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dna-brand-mockup-header h4 {
+  margin: 0 0 0.45rem;
+  color: var(--ink);
+  font-size: clamp(1.35rem, 2vw, 2.2rem);
+  line-height: 1.12;
+  letter-spacing: -0.06em;
+}
+
+.dna-brand-mockup-header p:not(.card-kicker) {
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted-ink);
+}
+
+.dna-brand-mockup-header > span {
+  flex: 0 0 auto;
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  padding: 0.48rem 0.78rem;
+  background: rgba(255, 255, 255, 0.52);
+  color: var(--quiet-ink);
+  font-size: 0.78rem;
+  font-weight: 760;
+}
+
+.dna-brand-mockup-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.dna-brand-mockup-tile {
+  display: grid;
+  gap: 0.65rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0.65rem;
+  border: 1px solid var(--stroke);
+  border-radius: 26px;
+  background: var(--card-bg);
+}
+
+.dna-brand-mockup-tile img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--panel-surface) 82%, white);
+}
+
+.dna-brand-mockup-tile figcaption {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0 0.1rem 0.15rem;
+}
+
+.dna-brand-mockup-tile strong {
+  color: var(--ink);
+  font-size: 0.94rem;
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+.dna-brand-mockup-tile span {
+  color: var(--muted-ink);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
 .chris-design-system-modal-backdrop {
   position: fixed;
   inset: 0;
@@ -7382,8 +7463,14 @@
   }
 
   .chris-archive-grid,
-  .dna-generated-grid {
+  .dna-generated-grid,
+  .dna-brand-mockup-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dna-brand-mockup-header {
+    display: grid;
+    align-items: start;
   }
 
   .chris-archive-tile,
