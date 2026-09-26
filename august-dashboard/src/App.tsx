@@ -2134,8 +2134,9 @@ function DesignDnaPanel() {
   const [dnaArchive, setDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
   const [midjourneyDnaArchive, setMidjourneyDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
   const [selectedDnaAsset, setSelectedDnaAsset] = useState<DnaArchiveItem | null>(null)
-  const [activeDesignDnaSection, setActiveDesignDnaSection] = useState<'system' | 'dashboard'>('system')
+  const [activeDesignDnaSection, setActiveDesignDnaSection] = useState<'system' | 'dashboard' | 'brandAsset'>('system')
   const [activeDnaDashboardSource, setActiveDnaDashboardSource] = useState<'gpt' | 'midjourney'>('gpt')
+  const [activeBrandAssetSource, setActiveBrandAssetSource] = useState<'mockup' | 'midjourneyMockup'>('mockup')
   const [isDnaPrinciplesOpen, setIsDnaPrinciplesOpen] = useState(false)
   const [dnaPrinciplesText, setDnaPrinciplesText] = useState('')
   const [dnaPrinciplesError, setDnaPrinciplesError] = useState('')
@@ -2207,6 +2208,15 @@ function DesignDnaPanel() {
         >
           <span>DNA Dashboard</span>
           <small>{dnaTotalItems} GPT · {midjourneyDnaTotalItems} Midjourney</small>
+        </button>
+        <button
+          type="button"
+          className={activeDesignDnaSection === 'brandAsset' ? 'design-dna-section-tab active' : 'design-dna-section-tab'}
+          aria-pressed={activeDesignDnaSection === 'brandAsset'}
+          onClick={() => setActiveDesignDnaSection('brandAsset')}
+        >
+          <span>DNA Brand Asset</span>
+          <small>moodboard / mockup</small>
         </button>
       </nav>
 
@@ -2365,7 +2375,7 @@ function DesignDnaPanel() {
         </ul>
       </section>
         </>
-      ) : (
+      ) : activeDesignDnaSection === 'dashboard' ? (
         <section className="dna-dashboard-panel" aria-label="GoYJ selected DNA dashboard">
           <div className="content-card dna-dashboard-overview">
             <div>
@@ -2416,6 +2426,41 @@ function DesignDnaPanel() {
                 <small>{item.created}</small>
               </button>
             ))}
+          </div>
+        </section>
+      ) : (
+        <section className="dna-brand-asset-panel" aria-label="DNA Brand Asset moodboard">
+          <div className="content-card dna-brand-asset-overview">
+            <div>
+              <p className="card-kicker">DNA Brand Asset · Moodboard</p>
+              <h3>Design DNA를 실제 브랜드 에셋과 목업으로 확장하는 공간입니다.</h3>
+              <p>
+                Midjourney와 목업 결과를 분리해서 쌓아두고, 나중에 Chris Archive와 DNA Dashboard에서 고른 모티프를 실제 브랜드 표면으로 검증합니다.
+              </p>
+              <div className="dna-dashboard-source-tabs" aria-label="DNA Brand Asset source split">
+                <button
+                  type="button"
+                  className={activeBrandAssetSource === 'mockup' ? 'dna-dashboard-source-tab active' : 'dna-dashboard-source-tab'}
+                  aria-pressed={activeBrandAssetSource === 'mockup'}
+                  onClick={() => setActiveBrandAssetSource('mockup')}
+                >
+                  <span>Mockup</span>
+                  <small>brand asset moodboard</small>
+                </button>
+                <button
+                  type="button"
+                  className={activeBrandAssetSource === 'midjourneyMockup' ? 'dna-dashboard-source-tab active' : 'dna-dashboard-source-tab'}
+                  aria-pressed={activeBrandAssetSource === 'midjourneyMockup'}
+                  onClick={() => setActiveBrandAssetSource('midjourneyMockup')}
+                >
+                  <span>Midjourney + Mockup</span>
+                  <small>manual synthesis</small>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="content-card dna-brand-asset-empty-state" aria-label={`${activeBrandAssetSource === 'mockup' ? 'Mockup' : 'Midjourney plus mockup'} 준비 상태`}>
+            <p>준비중입니다</p>
           </div>
         </section>
       )}

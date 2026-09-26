@@ -6870,7 +6870,7 @@
 
 .design-dna-section-tabs {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.8rem;
   padding: 0.45rem;
   border: 1px solid color-mix(in srgb, var(--stroke) 72%, transparent);
@@ -6979,6 +6979,47 @@
   border-color: color-mix(in srgb, var(--primary) 28%, var(--stroke));
   background: var(--surface);
   color: var(--ink);
+}
+
+.dna-brand-asset-panel {
+  display: grid;
+  gap: clamp(1rem, 2vw, 1.4rem);
+}
+
+.dna-brand-asset-overview {
+  background:
+    radial-gradient(circle at 12% 20%, rgba(31, 86, 189, 0.12), transparent 32%),
+    radial-gradient(circle at 86% 70%, rgba(255, 139, 99, 0.12), transparent 34%),
+    var(--card-bg);
+}
+
+.dna-brand-asset-overview h3 {
+  margin: 0 0 0.75rem;
+  max-width: 760px;
+  color: var(--ink);
+  font-size: clamp(1.7rem, 2.6vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -0.07em;
+}
+
+.dna-brand-asset-overview p:not(.card-kicker) {
+  max-width: 760px;
+  color: var(--muted-ink);
+}
+
+.dna-brand-asset-empty-state {
+  min-height: clamp(360px, 52vh, 640px);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.dna-brand-asset-empty-state p {
+  margin: 0;
+  color: var(--muted-ink);
+  font-size: clamp(1.25rem, 2vw, 1.85rem);
+  font-weight: 760;
+  letter-spacing: -0.04em;
 }
 
 .chris-design-system-modal-backdrop {
@@ -7325,6 +7366,7 @@
 @media (max-width: 760px) {
   .chris-archive-overview,
   .dna-dashboard-overview,
+  .dna-brand-asset-overview,
   .chris-archive-modal {
     grid-template-columns: 1fr;
   }
