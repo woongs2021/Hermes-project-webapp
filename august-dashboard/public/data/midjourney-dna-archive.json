@@ -222,6 +222,66 @@
         "Tactile Optical Material",
         "Editorial Abstract Surface"
       ]
+    },
+    {
+      "id": "2026-09-26-midjourney-12-deep-blue-halo-disc-translation",
+      "title": "Midjourney 12 — Deep Blue Halo Disc Translation",
+      "created": "2026-09-26",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-09-26/12_deep_blue_halo_disc_midjourney_translation.jpg",
+      "prompt": "single soft luminous circular disc, deep navy blue background, warm off-white matte center, subtle peach rim glow and cobalt outer halo, tactile grain texture, calm protected presence mark material, quiet premium abstract surface, crop-friendly circular signal graphic for packaging seals, UI states, and brand backgrounds --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "single soft luminous circular disc, deep navy blue background, warm off-white matte center, subtle peach rim glow and cobalt outer halo, tactile grain texture, calm protected presence mark material, quiet premium abstract surface, crop-friendly circular signal graphic for packaging seals, UI states, and brand backgrounds --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "열두 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. deep navy 배경 위에 warm off-white 원반과 peach/cobalt halo가 둘러진 presence disc 계열입니다. 패키지 seal, UI 상태 그래픽, 브랜드 배경의 중심 모티프로 쓰기 좋은 조용한 원형 재료입니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_26_12",
+      "assetHash": "a87609e36375a05470e2933b9e379339b7e04d35f5cb6bd4ee40384c39bd54ac",
+      "dnaClusters": [
+        "Midjourney Translation",
+        "Complete Circle",
+        "Boundary Light",
+        "Warm-Cool Intelligence",
+        "Presence Mark"
+      ]
+    },
+    {
+      "id": "2026-09-26-midjourney-13-warm-offwhite-eclipse-disc-translation",
+      "title": "Midjourney 13 — Warm Off-White Eclipse Disc Translation",
+      "created": "2026-09-26",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-09-26/13_warm_offwhite_eclipse_disc_midjourney_translation.jpg",
+      "prompt": "large warm off-white eclipse disc, soft circular shadow, muted coral highlight on upper rim, deep blue-gray shadow on lower-left rim, matte paper grain, quiet protected void, minimal abstract 2D presence material, generous neutral background, useful for package seal, calm UI state, and editorial brand surface --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "large warm off-white eclipse disc, soft circular shadow, muted coral highlight on upper rim, deep blue-gray shadow on lower-left rim, matte paper grain, quiet protected void, minimal abstract 2D presence material, generous neutral background, useful for package seal, calm UI state, and editorial brand surface --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "열세 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. warm off-white 배경과 원반, coral 상단 rim, blue-gray 하단 그림자가 만드는 조용한 eclipse disc입니다. 중심을 비운 protected presence 느낌이 강해 패키지 seal이나 차분한 UI state 모티프로 활용하기 좋습니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_26_13",
+      "assetHash": "89c2dbbed25511b1865a716c1e5a8e0e000313766ef471091a76b7e29e51f32a",
+      "dnaClusters": [
+        "Midjourney Translation",
+        "Soft Presence Circle",
+        "Protected Human Context",
+        "Matte Paper Texture",
+        "Quiet Abstract Motif"
+      ]
+    },
+    {
+      "id": "2026-09-26-midjourney-14-coral-blue-luminous-ring-translation",
+      "title": "Midjourney 14 — Coral-Blue Luminous Ring Translation",
+      "created": "2026-09-26",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-09-26/14_coral_blue_luminous_ring_midjourney_translation.jpg",
+      "prompt": "soft luminous circular ring, dark teal-blue background, warm coral glow on left and lower rim, cool cyan-blue glow on right rim, muted beige inner disc with tactile grain, calm warm-cool intelligence signal, abstract presence mark material, crop-friendly circular brand graphic for UI states, package seals, and editorial surfaces --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "soft luminous circular ring, dark teal-blue background, warm coral glow on left and lower rim, cool cyan-blue glow on right rim, muted beige inner disc with tactile grain, calm warm-cool intelligence signal, abstract presence mark material, crop-friendly circular brand graphic for UI states, package seals, and editorial surfaces --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "열네 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. dark teal-blue 배경 위에 coral과 cyan-blue glow가 원형 rim을 따라 나뉘는 luminous ring입니다. 따뜻함과 차가움이 균형 잡힌 signal/presence 모티프로, UI state와 패키지 seal에 모두 적용하기 좋습니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_26_14",
+      "assetHash": "20dc1e479788dcc9bb8ff28b1187688963c4aab7ac58341f2a13e072293be327",
+      "dnaClusters": [
+        "Midjourney Translation",
+        "Circular Signal Accent",
+        "Warm-Cool Intelligence",
+        "Boundary Light",
+        "Presence Mark"
+      ]
     }
   ]
 }
