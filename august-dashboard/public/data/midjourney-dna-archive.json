@@ -32,9 +32,9 @@
       "imageSrc": "/assets/dna-archive/midjourney/2026-09-26/02_directional_flow_midjourney_translation.jpg",
       "prompt": "abstract directional flow graphic material, large color fields forming a subtle negative-space channel, broad filled shapes only, no route lines, no dots, no arrows, no dashed marks, warm gray base with cobalt blue, muted cyan, soft coral and off-white, calm human-centered AI design language, editorial product surface, flat 2D composition, crop-friendly, useful for brand system background and packaging panels --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "midjourneyPrompt": "abstract directional flow graphic material, large color fields forming a subtle negative-space channel, broad filled shapes only, no route lines, no dots, no arrows, no dashed marks, warm gray base with cobalt blue, muted cyan, soft coral and off-white, calm human-centered AI design language, editorial product surface, flat 2D composition, crop-friendly, useful for brand system background and packaging panels --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
-      "analysis": "GPT Image 2.5 DNA asset 02의 Midjourney 수동 입력 결과를 두 번째 Midjourney 레일 에셋으로 저장했습니다. 큰 cobalt flow, warm off-white negative-space channel, muted cyan field, soft coral plane이 방향성을 만들며, 선·점·화살표 없이도 브랜드 표면과 패키지 패널에 적용 가능한 flow material입니다.",
-      "sourceRun": "manual_midjourney_upload_2026_09_26_02",
-      "assetHash": "20132eee3ffb83a18b62b3dcb931ca9f0bd473f37d4c9c78f7d62add56dc40fc",
+      "analysis": "Chris가 교체 요청한 새 Midjourney 02 결과로 업데이트했습니다. 더 넓은 곡선형 color field, deep cobalt와 pale cyan의 흐름, coral side plane, warm paper texture가 선·점·화살표 없이 방향성을 만듭니다. 패키지 패널, 카드 배경, 브랜드 표면에 바로 crop해 쓰기 좋은 flow material입니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_26_02_replacement",
+      "assetHash": "d2bcb1be9d2dfdff86614d8890e5e317ad2e4fd2e1deee22a73960fe86a98f73",
       "dnaClusters": [
         "Midjourney Translation",
         "Responsible Direction",
