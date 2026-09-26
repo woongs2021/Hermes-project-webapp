@@ -282,6 +282,46 @@
         "Boundary Light",
         "Presence Mark"
       ]
+    },
+    {
+      "id": "2026-09-26-midjourney-15-cyan-luminous-arc-edge-translation",
+      "title": "Midjourney 15 — Cyan Luminous Arc Edge Translation",
+      "created": "2026-09-26",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-09-26/15_cyan_luminous_arc_edge_midjourney_translation.jpg",
+      "prompt": "cropped cyan luminous circular arc edge, deep black-teal background, large off-frame ring curve, thin layered glass-like rim lines, soft turquoise halo glow, minimal abstract signal surface, premium quiet presence material, crop-friendly edge accent for UI states, package corners, and editorial hero backgrounds --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "cropped cyan luminous circular arc edge, deep black-teal background, large off-frame ring curve, thin layered glass-like rim lines, soft turquoise halo glow, minimal abstract signal surface, premium quiet presence material, crop-friendly edge accent for UI states, package corners, and editorial hero backgrounds --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "열다섯 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. dark teal/black 배경 위에 cyan luminous arc가 크게 잘려 들어오는 edge/ring 계열입니다. 얇은 rim line과 halo가 있어 UI state, 패키지 모서리, hero crop에 쓰기 좋은 조용한 signal edge material입니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_26_15",
+      "assetHash": "a103f7844ab42819451ab6debe33a8b30a9de1fb13eaacdcf5ec6fc2e893edf1",
+      "dnaClusters": [
+        "Midjourney Translation",
+        "Edge Accent System",
+        "Boundary Light",
+        "Cyan Luminous Arc",
+        "Quiet Signal Rhythm"
+      ]
+    },
+    {
+      "id": "2026-09-26-midjourney-16-frosted-blue-glass-disc-translation",
+      "title": "Midjourney 16 — Frosted Blue Glass Disc Translation",
+      "created": "2026-09-26",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-09-26/16_frosted_blue_glass_disc_midjourney_translation.jpg",
+      "prompt": "frosted blue glass circular disc, centered translucent bowl-like circle on warm textured off-white paper, subtle granular speckled surface, soft teal center shadow, muted olive rim, tactile optical material, calm protected presence mark, minimal abstract 2D object-surface hybrid, useful for package seal, UI state, and brand material study --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "frosted blue glass circular disc, centered translucent bowl-like circle on warm textured off-white paper, subtle granular speckled surface, soft teal center shadow, muted olive rim, tactile optical material, calm protected presence mark, minimal abstract 2D object-surface hybrid, useful for package seal, UI state, and brand material study --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "열여섯 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. warm paper texture 위에 frosted blue glass disc가 중심에 놓인 이미지로, granular surface와 teal center shadow가 촉각적인 material cue를 만듭니다. 원형 presence mark, 패키지 seal, UI state 재료로 활용하기 좋습니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_26_16",
+      "assetHash": "acbabc8044c693ffbc0cb71e34f576c12760f613a8e15e75cfe4bf146c0bc643",
+      "dnaClusters": [
+        "Midjourney Translation",
+        "Frosted Glass Disc",
+        "Tactile Optical Material",
+        "Soft Presence Circle",
+        "Protected Human Context"
+      ]
     }
   ]
 }
