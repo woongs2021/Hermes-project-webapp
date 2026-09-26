@@ -142,6 +142,26 @@
         "Warm Earth Palette",
         "Quiet Abstract Motif"
       ]
+    },
+    {
+      "id": "2026-09-26-midjourney-08-soft-circular-ring-translation",
+      "title": "Midjourney 08 — Soft Circular Ring Translation",
+      "created": "2026-09-26",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-09-26/08_soft_circular_ring_midjourney_translation.jpg",
+      "prompt": "soft circular presence ring, complete round form with open warm off-white center, subtle cobalt blue and coral warmth on the lower rim, translucent paper-plaster texture, quiet boundary glow, calm premium design-system material, protected void feeling, flat 2D editorial graphic, crop-friendly, useful as presence mark seed, package seal material, or AI listening state visual --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "soft circular presence ring, complete round form with open warm off-white center, subtle cobalt blue and coral warmth on the lower rim, translucent paper-plaster texture, quiet boundary glow, calm premium design-system material, protected void feeling, flat 2D editorial graphic, crop-friendly, useful as presence mark seed, package seal material, or AI listening state visual --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "여덟 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. 열린 중심부를 가진 soft circular ring 형태이며, warm off-white 표면 위에 cobalt blue와 coral warmth가 하단 rim에 조용히 쌓입니다. Presence mark seed, 패키지 seal, AI listening state 같은 원형 시그널 재료로 쓰기 좋습니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_26_08",
+      "assetHash": "855b0498051b25416d8d3b91ebeb66a213c185b3ef1967525e74a38ea5ff6740",
+      "dnaClusters": [
+        "Midjourney Translation",
+        "Soft Object / Presence Mark",
+        "Complete Circle",
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material"
+      ]
     }
   ]
 }
