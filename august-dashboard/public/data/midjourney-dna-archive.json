@@ -122,6 +122,26 @@
         "Soft Object / Presence Mark",
         "Quiet Signal Rhythm"
       ]
+    },
+    {
+      "id": "2026-09-26-midjourney-07-warm-earth-oval-surface-translation",
+      "title": "Midjourney 07 — Warm Earth Oval Surface Translation",
+      "created": "2026-09-26",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-09-26/07_warm_earth_oval_surface_midjourney_translation.jpg",
+      "prompt": "large matte organic oval fields, soft overlapping warm earth color planes, faded sage green, terracotta, sand beige, deep umber, warm off-white, watercolor paper and plaster texture, calm abstract brand surface, quiet composition with cropped edges, generous negative space, flat 2D editorial graphic, crop-friendly, useful as package surface, card background, or brand mood layer --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "large matte organic oval fields, soft overlapping warm earth color planes, faded sage green, terracotta, sand beige, deep umber, warm off-white, watercolor paper and plaster texture, calm abstract brand surface, quiet composition with cropped edges, generous negative space, flat 2D editorial graphic, crop-friendly, useful as package surface, card background, or brand mood layer --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "일곱 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. sage green, terracotta, sand beige, deep umber의 큰 organic oval field가 watercolor/paper texture로 겹쳐진 표면입니다. 이전 05의 matte circle field보다 더 자연스러운 타원형 crop과 회화적 물성이 강해 패키지 표면, 카드 배경, 브랜드 mood layer로 쓰기 좋습니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_26_07",
+      "assetHash": "d571a44093944c1486ec6e8800aa5b16f5cced2a55e681f2dee31de544b3cb55",
+      "dnaClusters": [
+        "Midjourney Translation",
+        "Ambient Oval Field",
+        "Matte Paper Texture",
+        "Warm Earth Palette",
+        "Quiet Abstract Motif"
+      ]
     }
   ]
 }
