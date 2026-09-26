@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-23T11:12:07+09:00",
+  "generatedAt": "2026-09-25T14:35:20+09:00",
   "sourcePolicy": "Only Chris-selected GoYJ generated assets are saved here. Unselected review candidates are temporary and are not published.",
   "items": [
     {
@@ -385,6 +385,171 @@
       "savedAt": "2026-09-23T11:12:07+09:00",
       "motifType": "Signal / Accent Motif revision",
       "revisionInstruction": "03과 05를 원형으로 바꿔달라는 Chris 피드백 반영; then removed only the yellow outer line graphic locally while preserving the circular ring motif."
+    },
+    {
+      "id": "2026-09-25-goyj-01-warm_gray_protected_surface_field",
+      "title": "Warm Gray Protected Surface Field",
+      "created": "2026-09-25",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-09-25/01_warm_gray_protected_surface_field.png",
+      "prompt": "Original Hermes design-system graphic motif material for future brand, package, UI, and mockup composition, based on repeated visual principles from an internal design archive. It is not a finished poster, not a product mockup, not a logo, not an app icon, and not a standalone artwork. 1:1 square composition, composable visual layer, useful for cropping, masking, overlaying, repeating, or placing on packaging/UI surfaces.\nCore DNA: Protected Human Context, Warm-Cool Intelligence, Quiet Signal Rhythm, Tactile Optical Material, Editorial Evidence System, Soft Object / Presence Mark. Include: clear negative space, usable edge-to-edge or crop-friendly composition, graphic motif layer not finished layout, subtle grid/label/symbol zones without readable text, restrained Hermes palette and material feeling, high design utility for later mockup synthesis, Chris Archive-derived color, spacing, quiet editorial structure, surface feeling, and motif rhythm, clean primary motif only.\nMotif 01 Surface Field Motif: a soft warm-gray and charcoal editorial surface field with misty cobalt/cyan depth and one restrained coral warmth cue as subtle material tone, suitable as package or UI background. Prioritize spacious negative field, tactile paper-plaster plus frosted optical softness, broad calm color planes, faint non-readable label zones and symbol zones as empty structure, edge-to-edge crop utility. No central object, no decorative lines, no scratches, no orbit marks, no dots. Flat 2D graphic material with gentle surface depth only, senior editorial product-design restraint.",
+      "analysis": "Chris Archive DNA를 완성물 복제가 아니라 합성 가능한 그래픽 재료로 번역한 후보입니다. QA 후 텍스트/로고 없이 임시 리뷰용으로만 보관합니다. Chris가 2026-09-25 후보 중 이 번호를 저장 대상으로 직접 선택했습니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-09-25/images/01.png",
+      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-25",
+      "dnaClusters": [
+        "Protected Human Context",
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "variant": "flare",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "selectedReason": "Chris selected candidates 1 and 3 from the 2026-09-25 DNA/Chris Archive graphic motif set and asked to save them.",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260925_011718_ebcf4d75-7a55-4b7c-a6cb-b42b09197900.png",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-25/images/01_warm_gray_protected_surface_field.png",
+      "savedAt": "2026-09-25T10:33:32+09:00",
+      "motifType": "Surface Field Motif",
+      "intendedLaterUse": "패키지/모바일 UI/브랜드 목업의 베이스 배경, 카드 표면, 마스킹 필드"
+    },
+    {
+      "id": "2026-09-25-goyj-03-soft_circular_presence_seed",
+      "title": "Soft Circular Presence Seed",
+      "created": "2026-09-25",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-09-25/03_soft_circular_presence_seed.png",
+      "prompt": "Original Hermes design-system graphic motif material for future brand, package, UI, and mockup composition, based on repeated visual principles from an internal design archive. It is not a finished poster, not a product mockup, not a logo, not an app icon, and not a standalone artwork. 1:1 square composition, composable visual layer, useful for cropping, masking, overlaying, repeating, or placing on packaging/UI surfaces.\nCore DNA: Protected Human Context, Warm-Cool Intelligence, Quiet Signal Rhythm, Tactile Optical Material, Editorial Evidence System, Soft Object / Presence Mark. Include: clear negative space, usable edge-to-edge or crop-friendly composition, graphic motif layer not finished layout, subtle grid/label/symbol zones without readable text, restrained Hermes palette and material feeling, high design utility for later mockup synthesis, Chris Archive-derived color, spacing, quiet editorial structure, surface feeling, and motif rhythm, clean primary motif only.\nMotif 03 Soft Object Motif: one clean soft circular / rounded geometry presence seed, not a logo, not an app icon. A calm circular form with protected inner void, matte gel-paper material, warm gray base, muted cobalt outer temperature, very quiet coral inner warmth as material cue. Strong negative space around it, crop-friendly mark seed, no surrounding decorative lines, no orbit, no dots, no fake UI. More formal and circular geometry, but intentionally incomplete as a composable motif material rather than finished identity.",
+      "analysis": "Chris Archive DNA를 완성물 복제가 아니라 합성 가능한 그래픽 재료로 번역한 후보입니다. QA 후 텍스트/로고 없이 임시 리뷰용으로만 보관합니다. Chris가 2026-09-25 후보 중 이 번호를 저장 대상으로 직접 선택했습니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-09-25/images/03.png",
+      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-25",
+      "dnaClusters": [
+        "Soft Object / Presence Mark",
+        "Protected Human Context",
+        "Tactile Optical Material",
+        "Warm-Cool Intelligence"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "variant": "flare",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "selectedReason": "Chris selected candidates 1 and 3 from the 2026-09-25 DNA/Chris Archive graphic motif set and asked to save them.",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260925_011823_70a0bf2a-482e-4fcd-8db2-7db09f4c59a6.png",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-25/images/03_soft_circular_presence_seed.png",
+      "savedAt": "2026-09-25T10:33:32+09:00",
+      "motifType": "Soft Object Motif",
+      "intendedLaterUse": "브랜드 씰 seed, 패키지 모서리 crop, UI 상태 마크, 커버 이미지 구성 요소"
+    },
+    {
+      "id": "2026-09-25-goyj-02-mint-cyan-compact-glow-line-overlay",
+      "title": "Mint-Cyan Compact Glow Line Overlay",
+      "created": "2026-09-25",
+      "status": "chris_selected_replaced",
+      "imageSrc": "/assets/dna-archive/2026-09-25/02_mint_cyan_compact_glow_line_overlay.png",
+      "prompt": "PURE GRAPHIC MOTIF MATERIAL ONLY. No readable text, no letters, no numbers, no logos, no watermark, no UI screenshot, no app icon, no product mockup, no finished poster, no photography, no people.\n\nRefinement target: keep the current approved two-line shape and stroke thickness, but remove the light-trail feeling. Replace the over-bright cyan trail with a calmer cyan-mint mixed luminous line treatment. The result should feel like refined graphic linework, not long-exposure photography or motion trails.\n\n1:1 square, flat 2D editorial graphic material. Background: deep charcoal / near-black warm graphite with subtle paper-plaster grain, refined and tactile, not pure digital black.\n\nLinework: exactly two dominant curved lines, preserving the same broad shallow arc composition, same smooth controlled curvature, same medium-thick stroke weight, and same calm diagonal flow as the current candidate. Color treatment: cyan mixed with soft mint green, with a restrained luminous edge. Use a cleaner solid glowing stroke core rather than a trailing blur. The glow should be present but compact and controlled: small soft halo close to the line, no long streaks, no motion blur, no light painting, no photographic light trail. Subtle warm amber/clay edge may remain very faint, but mint-cyan should be the main feeling.\n\nImportant correction: SAME LINE SHAPE, SAME LINE THICKNESS, LESS LIGHT-TRAIL FEELING, CYAN + MINT MIX. Do not add extra lines. Do not make the lines wavy. Do not make the lines thinner or thicker. Do not make worm-like, snake-like, caterpillar-like, biological, lumpy, segmented, rubbery, or overly organic curves.\n\nGeneral constraints: ONLY TWO MAIN LINES. No complete circles, no centered badge/seal, no icon, no object, no UI, no map/route diagram, no orbit clutter, no dots/dashes/arrows, no fake labels. Keep it line-only: no filled shapes, no blobs, no color blocks, no surface patches, no 3D object, no glass lens. No extra secondary line clusters. No decorative scratches.\n\nSuccess criteria: dark background, same two-line shape and thickness as previous approved candidate, calmer cyan-mint luminous line, compact glow without light-trail/motion-blur feeling, text-free, flat 2D, refined, usable as a brand/package/UI overlay material.",
+      "analysis": "Chris가 승인한 02 최종 교체본입니다. 이전 강한 cyan 라이트 트레일 느낌을 줄이고, 같은 2-line arc/굵기 방향을 유지하면서 mint-cyan compact glow로 정리했습니다. 텍스트/로고/점선/장식 없이 flat 2D line overlay 소재로 저장했습니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-09-25/revisions-different-style/images/02_mint_no_light_trail.png",
+      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-25/revisions-different-style",
+      "dnaClusters": [
+        "Mint-Cyan Compact Glow",
+        "Quiet Signal Rhythm",
+        "Stroke / Line Motif",
+        "Editorial Product Graphic"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "variant": "flare",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "selectedReason": "Chris approved the mint-cyan no-light-trail revision and asked to save it as-is.",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260925_053122_9a1efe8e-8bc8-435f-bdd9-bba02fea12c0.png",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-25/images/02_mint_cyan_compact_glow_line_overlay.png",
+      "savedAt": "2026-09-25T14:35:20+09:00",
+      "motifType": "Stroke / Line Motif final replacement",
+      "intendedLaterUse": "브랜드/패키지/UI 위에 얹는 mint-cyan 발광 라인 overlay, 어두운 그래픽 표면의 signal layer, crop-friendly line material",
+      "replacementOf": "/assets/dna-archive/2026-09-25/02_curved_editorial_line_overlay.png",
+      "revisionInstruction": "현재 라인 형태/굵기는 유지하되 라이트 트레일 느낌을 줄이고 민트색을 섞은 최종 승인본으로 교체"
+    },
+    {
+      "id": "2026-09-25-goyj-04-torn-vellum-tile-surface",
+      "title": "Torn Vellum Tile Surface",
+      "created": "2026-09-25",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-09-25/04_torn_vellum_tile_surface.png",
+      "prompt": "PURE GRAPHIC MOTIF MATERIAL ONLY. No text, no letters, no numbers, no logos, no watermark, no app icon, no UI screenshot, no product mockup, no finished poster, no photography, no people.\n\nContext: This is candidate 04 revised because the previous repeat pattern felt too similar to earlier capsule/module archive outputs. Create a different pattern language, not capsules, not rounded-rectangle modules, not flow-map.\n\n1:1 square, flat 2D composable surface/pattern material for future brand/package/UI mockup synthesis. Build one low-density repeat logic from broad torn-paper / vellum tile fields: irregular rectangular and trapezoid paper planes, large negative gaps, soft offset seams, subtle risograph overprint texture. The pattern should feel like an editorial material swatch, not a symbol or object. Avoid circles, capsules, rounded pills, route lines, dots, dashes, grids, icons, and UI components.\n\nPalette: muted plum-gray, bone parchment, smoky olive, desaturated ochre, one quiet charcoal anchor. Keep contrast refined and calm, with matte print texture and slight overprint misregistration. No neon, no cobalt/cyan dominance, no yellow line decoration.\n\nSuccess criteria: visibly different from saved capsule/flow/circle archive assets; useful as a crop/mask/repeat surface; lower density, refined, tactile, graphic-design motif material.",
+      "analysis": "Chris가 나머지는 괜찮다고 승인한 04 수정본입니다. 기존 capsule/module 반복과 다르게 torn-paper/vellum tile field로 전환했고, 낮은 밀도와 matte riso 질감으로 패키지/카드 배경 crop 재료에 적합합니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-09-25/revisions-different-style/images/04_revised_different_style.png",
+      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-25/revisions-different-style",
+      "dnaClusters": [
+        "Tactile Optical Material",
+        "Editorial Surface Pattern",
+        "Warm Earth Palette"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "variant": "flare",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "selectedReason": "Chris asked to change the line graphic to curves and said the rest looked okay, then asked to save them.",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260925_013505_d46ca580-fdfc-462e-8df7-9a1507b338b9.png",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-25/images/04_torn_vellum_tile_surface.png",
+      "savedAt": "2026-09-25T10:53:30+09:00",
+      "motifType": "Pattern / Surface Motif revision",
+      "intendedLaterUse": "패키지/카드/브랜드 표면에 쓰는 low-density tile surface, crop/mask/repeat 배경"
+    },
+    {
+      "id": "2026-09-25-goyj-05-cropped-edge-hinge-accent",
+      "title": "Cropped Edge Hinge Accent",
+      "created": "2026-09-25",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-09-25/05_cropped_edge_hinge_accent.png",
+      "prompt": "PURE GRAPHIC MOTIF MATERIAL ONLY. No text, no letters, no numbers, no logos, no watermark, no app icon, no UI screenshot, no product mockup, no finished poster, no photography, no people.\n\nContext: This is candidate 05 revised because the previous signal/accent mark felt too similar to earlier circular seal/circle archive outputs. Create a different accent motif family, not a circle badge, not a logo, not an icon.\n\n1:1 square, flat 2D graphic accent material. Use a cropped corner/edge accent system: one large L-shaped color-field hinge, a broad soft diagonal cut, and a small quiet counter-shape near the edge. It should feel like a reusable visual accent for package corners, card edges, section dividers, or UI state highlights. No circles, no rings, no badge/seal, no centered emblem, no orbit lines, no dots, no fake UI labels.\n\nPalette: warm ivory base, deep ink graphite, muted brick/clay, dusty lavender-gray, tiny moss-green accent. Matte paper/plaster texture, crisp but gentle edges, senior editorial restraint. Keep it 2D and composable, with strong negative space and crop-friendly edges.\n\nSuccess criteria: clearly different from the prior circular signal marks; not an object; useful as an edge/corner accent motif for future Chris-led mockup composition.",
+      "analysis": "Chris가 나머지는 괜찮다고 승인한 05 수정본입니다. 기존 circular seal/badge와 달리 corner/edge hinge accent로 바꿨고, 큰 대각 color field와 충분한 여백이 있어 패키지 모서리, 카드 edge, UI 섹션 accent로 쓰기 좋습니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-09-25/revisions-different-style/images/05_revised_different_style.png",
+      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-25/revisions-different-style",
+      "dnaClusters": [
+        "Edge Accent System",
+        "Editorial Product Graphic",
+        "Protected Negative Space"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "variant": "flare",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "selectedReason": "Chris asked to change the line graphic to curves and said the rest looked okay, then asked to save them.",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260925_013533_a95123cb-bf21-41e7-8dfe-5a62214ca855.png",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-25/images/05_cropped_edge_hinge_accent.png",
+      "savedAt": "2026-09-25T10:53:30+09:00",
+      "motifType": "Signal / Edge Accent Motif revision",
+      "intendedLaterUse": "패키지 corner accent, 카드 edge 그래픽, UI section divider/state highlight"
     }
   ]
 }
