@@ -2439,7 +2439,7 @@ function DesignDnaPanel() {
               <p className="card-kicker">DNA Brand Asset · Moodboard</p>
               <h3>Design DNA를 실제 브랜드 에셋과 목업으로 확장하는 공간입니다.</h3>
               <p>
-                Midjourney와 목업 결과를 분리해서 쌓아두고, 나중에 Chris Archive와 DNA Dashboard에서 고른 모티프를 실제 브랜드 표면으로 검증합니다.
+                Coffee mockup asset을 한 탭에 모아두고, Midjourney+Mockup 결과는 별도 탭에서 관리합니다. 나중에 Chris Archive와 DNA Dashboard에서 고른 모티프를 실제 브랜드 표면으로 검증합니다.
               </p>
               <div className="dna-dashboard-source-tabs" aria-label="DNA Brand Asset source split">
                 <button
@@ -2448,8 +2448,8 @@ function DesignDnaPanel() {
                   aria-pressed={activeBrandAssetSource === 'mockup'}
                   onClick={() => setActiveBrandAssetSource('mockup')}
                 >
-                  <span>Mockup</span>
-                  <small>brand asset moodboard</small>
+                  <span>Coffee Mockup Assets</span>
+                  <small>coffee brand mockup set</small>
                 </button>
                 <button
                   type="button"
