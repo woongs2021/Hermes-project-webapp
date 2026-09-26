@@ -5,6 +5,7 @@ export type DnaArchiveItem = {
   status: string
   imageSrc: string
   prompt: string
+  midjourneyPrompt?: string
   analysis: string
   sourceRun?: string
   dnaClusters: string[]

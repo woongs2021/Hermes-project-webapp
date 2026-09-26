@@ -32,7 +32,8 @@
       "selectedReason": "Chris approved the no-dots/no-lines revision as replacement for the 2026-09-16 saved pair.",
       "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260917_004055_71e788c6-aca2-4d34-bcd1-0786be02e380.png",
       "replacementOf": "/opt/data/dna-archive/selected/2026-09-16/images/01_modular_capsule_pattern_simplified.png",
-      "replacedAt": "2026-09-17T09:48:00+09:00"
+      "replacedAt": "2026-09-17T09:48:00+09:00",
+      "midjourneyPrompt": "abstract graphic motif material, large filled capsule shapes and soft rounded blocks, broad planes of warm gray, muted cobalt, parchment white and low coral, spacious negative space, editorial product-graphic surface, calm premium system design, no dots, no dotted lines, no thin connector lines, no grid lines, no route lines, flat 2D vector-like composition, tactile paper texture, useful as packaging surface pattern or UI background layer --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     },
     {
       "id": "2026-09-16-goyj-directional-flow-map-simplified",
@@ -63,7 +64,8 @@
       "selectedReason": "Chris approved the no-dots/no-lines revision as replacement for the 2026-09-16 saved pair.",
       "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260917_004126_5844d246-c678-4c0c-a444-7376674baada.png",
       "replacementOf": "/opt/data/dna-archive/selected/2026-09-16/images/02_directional_flow_map_simplified.png",
-      "replacedAt": "2026-09-17T09:48:00+09:00"
+      "replacedAt": "2026-09-17T09:48:00+09:00",
+      "midjourneyPrompt": "abstract directional flow graphic material, large color fields forming a subtle negative-space channel, broad filled shapes only, no route lines, no dots, no arrows, no dashed marks, warm gray base with cobalt blue, muted cyan, soft coral and off-white, calm human-centered AI design language, editorial product surface, flat 2D composition, crop-friendly, useful for brand system background and packaging panels --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     },
     {
       "id": "2026-09-18-goyj-graphic-motif-selected-01",
@@ -94,7 +96,8 @@
       "matchedGeneratedFile": "/opt/data/goyounjung_outputs/chris_archive_graphic_motif_20260918/motif_01.png",
       "matchConfidence": "SSIM 0.995518; visual exact match after Telegram resize/compression",
       "generationReason": "Chris가 “오브젝트가 아니라 그래픽 디자이너처럼 그래픽 모티프를 그려달라”고 요청한 뒤, 기존 archive/DNA의 UI적 리듬을 물체가 아닌 평면 그래픽 언어로 번역하기 위해 생성했습니다. 원·반원·아치 모듈을 반복 가능한 구조로 잡아, 제품 배경/브랜드 패턴/카드 표면에 적용 가능한 시스템형 모티프를 의도했습니다.",
-      "detailedDescription": "생성 의도: 오브젝트 메타포를 배제하고, Chris Archive의 조용한 OS-native polish와 warm gray/ochre/black 팔레트를 “모듈형 기하 패턴”으로 재해석한 이미지입니다. 원, 반원, 아치, 직사각형 블록을 격자 리듬 안에 배치해 디자인 시스템 specimen 같은 질서를 만들었습니다. 왜 만들었는가: 이전 결과들이 아카이빙된 스타일이나 물체처럼 보이는 경향이 있어, “그래픽 디자이너가 만든 모티프”라는 방향을 명확히 하기 위한 첫 번째 기준점으로 생성했습니다. 활용 관점: 반복 패턴, 섹션 배경, DNA Archive 썸네일, 브랜드 표면 그래픽에 적합합니다."
+      "detailedDescription": "생성 의도: 오브젝트 메타포를 배제하고, Chris Archive의 조용한 OS-native polish와 warm gray/ochre/black 팔레트를 “모듈형 기하 패턴”으로 재해석한 이미지입니다. 원, 반원, 아치, 직사각형 블록을 격자 리듬 안에 배치해 디자인 시스템 specimen 같은 질서를 만들었습니다. 왜 만들었는가: 이전 결과들이 아카이빙된 스타일이나 물체처럼 보이는 경향이 있어, “그래픽 디자이너가 만든 모티프”라는 방향을 명확히 하기 위한 첫 번째 기준점으로 생성했습니다. 활용 관점: 반복 패턴, 섹션 배경, DNA Archive 썸네일, 브랜드 표면 그래픽에 적합합니다.",
+      "midjourneyPrompt": "modular geometric arch grid, abstract 2D graphic motif, circles, half-circles, arches and rectangular blocks arranged in a quiet specimen-like grid, warm gray, muted ochre, charcoal black, off-white paper texture, editorial archive system mood, premium design-system pattern surface, balanced spacing, not decorative wallpaper, useful for packaging, card background, brand surface graphic --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     },
     {
       "id": "2026-09-18-goyj-graphic-motif-selected-02",
@@ -125,7 +128,8 @@
       "matchedGeneratedFile": "/opt/data/goyounjung_outputs/graphic_motif_ref_variations_20260918/variation_04.png",
       "matchConfidence": "SSIM 0.991231; visual exact match after Telegram resize/compression",
       "generationReason": "Chris가 3번 방향의 부드러운 곡면/재질감을 긍정하고 “컬러나 재질은 좀 다르게” 요청해, 같은 곡면 motif logic을 terracotta/sage/umber 계열과 matte plaster 질감으로 변주하기 위해 생성했습니다.",
-      "detailedDescription": "생성 의도: 큰 원형 필드와 부드러운 겹침, matte paper/plaster 질감을 중심으로 만든 조용한 추상 포스터형 그래픽입니다. 왜 만들었는가: Chris가 좋다고 한 “큰 곡면 덩어리 + 부드러운 질감” 방향을 유지하되, 기존 blue/ochre 계열과 다르게 더 따뜻하고 흙빛에 가까운 재질 실험을 하기 위해 생성했습니다. clay terracotta, faded sage, deep umber 조합은 디지털 UI보다 편집/인쇄물 같은 안정감을 주며, 오브젝트가 아니라 색면과 질감 자체가 모티프가 되도록 의도했습니다. 활용 관점: 감정적으로 차분한 브랜드 배경, 에디토리얼 커버, One UI식 warm human AI moodboard의 색/재질 레퍼런스로 적합합니다."
+      "detailedDescription": "생성 의도: 큰 원형 필드와 부드러운 겹침, matte paper/plaster 질감을 중심으로 만든 조용한 추상 포스터형 그래픽입니다. 왜 만들었는가: Chris가 좋다고 한 “큰 곡면 덩어리 + 부드러운 질감” 방향을 유지하되, 기존 blue/ochre 계열과 다르게 더 따뜻하고 흙빛에 가까운 재질 실험을 하기 위해 생성했습니다. clay terracotta, faded sage, deep umber 조합은 디지털 UI보다 편집/인쇄물 같은 안정감을 주며, 오브젝트가 아니라 색면과 질감 자체가 모티프가 되도록 의도했습니다. 활용 관점: 감정적으로 차분한 브랜드 배경, 에디토리얼 커버, One UI식 warm human AI moodboard의 색/재질 레퍼런스로 적합합니다.",
+      "midjourneyPrompt": "large matte circular fields, soft overlapping round color planes, terracotta, faded sage, deep umber, warm off-white, paper and plaster texture, calm abstract brand surface, gentle emotional design language, quiet composition with generous negative space, flat 2D editorial graphic, crop-friendly, useful as package surface or brand mood background --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     },
     {
       "id": "2026-09-18-goyj-graphic-motif-selected-03",
@@ -156,7 +160,8 @@
       "matchedGeneratedFile": "/opt/data/goyounjung_outputs/chris_archive_graphic_motif_20260918/motif_02.png",
       "matchConfidence": "SSIM 0.988655; visual exact match after Telegram resize/compression",
       "generationReason": "Chris가 좋아한 3번 후보의 atmospheric한 곡면 그래디언트 감각을 더 명확히 보존하기 위해 생성한 방향입니다. 큰 곡면, 흐릿한 경계, 종이 질감을 통해 “정보 구조”보다 “정서적 그래픽 무드”를 테스트했습니다.",
-      "detailedDescription": "생성 의도: blue-gray, muted ochre, charcoal을 중심으로 한 부드러운 곡면 그래디언트 모티프입니다. 왜 만들었는가: Chris Archive/DNA 그래픽이 capsule/flow-map 반복으로 좁아지지 않도록, 더 회화적이고 atmospheric한 그래픽 언어를 추가하기 위해 생성했습니다. 곡면이 겹치지만 특정 사물이나 심볼로 읽히지 않게 하고, 종이 위에 번진 색면처럼 보이도록 유도했습니다. 이 방향은 “AI OS”를 직접 설명하지 않으면서도 따뜻한 지능, 조용한 깊이, 정서적 안정감을 암시합니다. 활용 관점: hero 배경, 감성적 연구 카드, 브랜드 mood surface, future One UI tone exploration의 추상 비주얼 레퍼런스로 적합합니다."
+      "detailedDescription": "생성 의도: blue-gray, muted ochre, charcoal을 중심으로 한 부드러운 곡면 그래디언트 모티프입니다. 왜 만들었는가: Chris Archive/DNA 그래픽이 capsule/flow-map 반복으로 좁아지지 않도록, 더 회화적이고 atmospheric한 그래픽 언어를 추가하기 위해 생성했습니다. 곡면이 겹치지만 특정 사물이나 심볼로 읽히지 않게 하고, 종이 위에 번진 색면처럼 보이도록 유도했습니다. 이 방향은 “AI OS”를 직접 설명하지 않으면서도 따뜻한 지능, 조용한 깊이, 정서적 안정감을 암시합니다. 활용 관점: hero 배경, 감성적 연구 카드, 브랜드 mood surface, future One UI tone exploration의 추상 비주얼 레퍼런스로 적합합니다.",
+      "midjourneyPrompt": "soft atmospheric gradient curves, abstract 2D graphic field, blue-gray, muted ochre, charcoal and warm off-white, gentle overlapping curved planes, paper-grain texture, quiet depth, calm human AI mood, no object, no symbol, no interface, editorial abstract brand surface, useful for hero background, card surface, package mood layer --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     },
     {
       "id": "2026-09-21-goyj-complete-circle-outer-stroke",
@@ -188,7 +193,8 @@
       "selectedReason": "Chris approved the outer-stroke circle revision and asked to save both final images.",
       "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260921_023338_a48dc4a3-d7a5-4831-a774-5318b760743d.png",
       "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-21/images/01_complete_circle_outer_stroke.png",
-      "savedAt": "2026-09-21T11:38:13+09:00"
+      "savedAt": "2026-09-21T11:38:13+09:00",
+      "midjourneyPrompt": "single perfect circle motif, warm off-white background, only the outer rim softly luminous, subtle cobalt and pale cyan boundary light, no central fill, no central glow, minimal flat 2D graphic, protected void feeling, calm premium OS-native presence mark material, quiet circular boundary, editorial restraint, useful as brand signal, package seal fragment, loading or listening state graphic --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     },
     {
       "id": "2026-09-21-goyj-woven-bar-closeup",
@@ -220,7 +226,8 @@
       "selectedReason": "Chris said the second/05 close-up image looked good and asked to save both final images.",
       "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260921_020448_76487077-1e24-4f44-b2bb-670d0e7278ff.png",
       "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-21/images/02_woven_bar_closeup.png",
-      "savedAt": "2026-09-21T11:38:13+09:00"
+      "savedAt": "2026-09-21T11:38:13+09:00",
+      "midjourneyPrompt": "close-up abstract woven rounded bars, interlaced cobalt and cyan capsule-like strips, subtle coral accent, halftone fade at the ends, tactile paper texture, one motif only, no extra patterns, flat 2D editorial product graphic, cropped macro composition, useful for brand surface, package texture, mobile UI background, premium warm-cool intelligence mood --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     },
     {
       "id": "2026-09-23-goyj-01-quiet-warm-cool-surface-field",
@@ -253,7 +260,8 @@
       "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-23/images/quiet_warm_cool_surface_field.png",
       "savedAt": "2026-09-23T11:01:48+09:00",
       "motifType": "Surface Field Motif",
-      "intendedLaterUse": "브랜드/패키지/UI 배경 field, 카드·표지·상세 목업의 surface overlay, crop/mask용 톤 레이어"
+      "intendedLaterUse": "브랜드/패키지/UI 배경 field, 카드·표지·상세 목업의 surface overlay, crop/mask용 톤 레이어",
+      "midjourneyPrompt": "quiet warm-cool surface field, soft edge-to-edge abstract graphic material, warm gray paper base, restrained cobalt-to-cyan mist, subtle muted coral warmth, tactile optical material feeling, broad negative space, crop-friendly corners, calm editorial structure, no lines, no dots, no scratches, premium human-centered AI design surface, useful for packaging and UI card backgrounds --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     },
     {
       "id": "2026-09-23-goyj-02-neutral-orbit-contour-line-grammar",
@@ -285,7 +293,8 @@
       "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-23/images/neutral_orbit_contour_line_grammar.png",
       "savedAt": "2026-09-23T11:01:48+09:00",
       "motifType": "Stroke / Line Motif",
-      "intendedLaterUse": "제품 그래픽 위에 얹는 contour/route line layer, 패키지 보조 패턴, UI 상태 리듬 overlay"
+      "intendedLaterUse": "제품 그래픽 위에 얹는 contour/route line layer, 패키지 보조 패턴, UI 상태 리듬 overlay",
+      "midjourneyPrompt": "line-only abstract graphic overlay, neutral warm off-white base, thin calm orbit-contour lines, low-density circular path rhythm, subtle cobalt-gray and muted charcoal strokes, no filled shapes, no color blocks, no blobs, no surface patches, pure stroke motif material, minimal editorial restraint, useful as overlay layer for packaging, UI surfaces, archive cards --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient, filled planes, filled blobs, color blocks"
     },
     {
       "id": "2026-09-23-goyj-03-soft-presence-circle-seed",
@@ -318,7 +327,8 @@
       "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-23/images/soft_presence_circle_seed.png",
       "savedAt": "2026-09-23T11:12:07+09:00",
       "motifType": "Soft Object Motif revision",
-      "revisionInstruction": "03과 05를 원형으로 바꿔달라는 Chris 피드백 반영"
+      "revisionInstruction": "03과 05를 원형으로 바꿔달라는 Chris 피드백 반영",
+      "midjourneyPrompt": "soft circular presence seed, complete circular form with warm off-white inner void, gentle boundary glow, muted cobalt and soft coral edge tension, protected human context feeling, flat 2D graphic motif, calm premium design-system material, not a logo, not an app icon, crop-friendly, useful as presence mark seed, package seal material, AI listening state visual --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     },
     {
       "id": "2026-09-23-goyj-04-calm-clay-sage-module-repeat",
@@ -351,7 +361,8 @@
       "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-23/images/calm_clay_sage_module_repeat.png",
       "savedAt": "2026-09-23T11:12:07+09:00",
       "motifType": "Pattern / Repeat Motif revision",
-      "revisionInstruction": "04는 복잡함을 줄이고 다른 톤으로 바꿔달라는 Chris 피드백 반영"
+      "revisionInstruction": "04는 복잡함을 줄이고 다른 톤으로 바꿔달라는 Chris 피드백 반영",
+      "midjourneyPrompt": "calm clay-sage modular repeat fragment, fewer large rounded shapes, soft clay, sage, parchment and umber tones, low complexity, generous negative space, matte paper texture, quiet repeatable pattern logic, no dense decoration, no random marks, no capsule overload, abstract 2D brand surface material, suitable for packaging, cards, textile-like UI background --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     },
     {
       "id": "2026-09-23-goyj-05-circular-agency-signal-accent-no-yellow-line",
@@ -384,7 +395,8 @@
       "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-23/images/circular_agency_signal_accent_no_yellow_line.png",
       "savedAt": "2026-09-23T11:12:07+09:00",
       "motifType": "Signal / Accent Motif revision",
-      "revisionInstruction": "03과 05를 원형으로 바꿔달라는 Chris 피드백 반영; then removed only the yellow outer line graphic locally while preserving the circular ring motif."
+      "revisionInstruction": "03과 05를 원형으로 바꿔달라는 Chris 피드백 반영; then removed only the yellow outer line graphic locally while preserving the circular ring motif.",
+      "midjourneyPrompt": "circular agency signal accent, perfect round ring accent material, warm off-white base, subtle cobalt, coral, charcoal and muted warm fill cues, no yellow line decoration, no outer yellow stroke, calm signal balance, flat 2D editorial product graphic, small badge-like accent but not a logo, useful for package corner, UI state signal, brand system mark fragment --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient, yellow line, yellow stroke"
     },
     {
       "id": "2026-09-25-goyj-01-warm_gray_protected_surface_field",
@@ -417,7 +429,8 @@
       "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-25/images/01_warm_gray_protected_surface_field.png",
       "savedAt": "2026-09-25T10:33:32+09:00",
       "motifType": "Surface Field Motif",
-      "intendedLaterUse": "패키지/모바일 UI/브랜드 목업의 베이스 배경, 카드 표면, 마스킹 필드"
+      "intendedLaterUse": "패키지/모바일 UI/브랜드 목업의 베이스 배경, 카드 표면, 마스킹 필드",
+      "midjourneyPrompt": "warm gray protected surface field, composable abstract graphic material, soft warm-gray paper and plaster base, protected central breathing space, subtle warm-cool intelligence haze, quiet cobalt and muted cyan undertones, very restrained coral warmth, tactile optical surface, editorial calm, no secondary decoration, crop-friendly brand surface for package and UI background --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     },
     {
       "id": "2026-09-25-goyj-03-soft_circular_presence_seed",
@@ -450,7 +463,8 @@
       "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-25/images/03_soft_circular_presence_seed.png",
       "savedAt": "2026-09-25T10:33:32+09:00",
       "motifType": "Soft Object Motif",
-      "intendedLaterUse": "브랜드 씰 seed, 패키지 모서리 crop, UI 상태 마크, 커버 이미지 구성 요소"
+      "intendedLaterUse": "브랜드 씰 seed, 패키지 모서리 crop, UI 상태 마크, 커버 이미지 구성 요소",
+      "midjourneyPrompt": "soft circular presence seed, minimal round protected object on warm neutral ground, gentle tactile gel-paper material, subtle optical rim, quiet inner void, soft cobalt-cyan and warm gray balance, calm human-centered design mood, not logo-like, not app-icon framed, crop-friendly abstract 2D motif material, usable as future presence mark or package seal seed --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     },
     {
       "id": "2026-09-25-goyj-02-mint-cyan-compact-glow-line-overlay",
@@ -485,7 +499,8 @@
       "motifType": "Stroke / Line Motif final replacement",
       "intendedLaterUse": "브랜드/패키지/UI 위에 얹는 mint-cyan 발광 라인 overlay, 어두운 그래픽 표면의 signal layer, crop-friendly line material",
       "replacementOf": "/assets/dna-archive/2026-09-25/02_curved_editorial_line_overlay.png",
-      "revisionInstruction": "현재 라인 형태/굵기는 유지하되 라이트 트레일 느낌을 줄이고 민트색을 섞은 최종 승인본으로 교체"
+      "revisionInstruction": "현재 라인 형태/굵기는 유지하되 라이트 트레일 느낌을 줄이고 민트색을 섞은 최종 승인본으로 교체",
+      "midjourneyPrompt": "mint-cyan compact glow line overlay, pure 2D line motif material, two calm curved line arcs with consistent stroke thickness, soft cyan-mint luminous edge, no light-trail effect, no motion blur, no extra decoration, dark-neutral or warm off-white quiet base, minimal editorial restraint, useful as overlay layer for packaging, UI state, brand surface signal --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient, light trail, motion blur, dots, dashed lines, filled shapes"
     },
     {
       "id": "2026-09-25-goyj-04-torn-vellum-tile-surface",
@@ -517,7 +532,8 @@
       "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-25/images/04_torn_vellum_tile_surface.png",
       "savedAt": "2026-09-25T10:53:30+09:00",
       "motifType": "Pattern / Surface Motif revision",
-      "intendedLaterUse": "패키지/카드/브랜드 표면에 쓰는 low-density tile surface, crop/mask/repeat 배경"
+      "intendedLaterUse": "패키지/카드/브랜드 표면에 쓰는 low-density tile surface, crop/mask/repeat 배경",
+      "midjourneyPrompt": "torn vellum tile surface, abstract low-density pattern field, matte translucent paper fragments, soft torn edges, warm parchment, vellum white, muted beige, clay and faint gray shadows, tactile editorial material, not capsules, not rounded-rectangle modules, no repeated UI shapes, quiet crop-friendly package surface, refined riso print texture, 2D graphic motif material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient, capsule pattern, rounded rectangle modules"
     },
     {
       "id": "2026-09-25-goyj-05-cropped-edge-hinge-accent",
@@ -549,7 +565,8 @@
       "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-25/images/05_cropped_edge_hinge_accent.png",
       "savedAt": "2026-09-25T10:53:30+09:00",
       "motifType": "Signal / Edge Accent Motif revision",
-      "intendedLaterUse": "패키지 corner accent, 카드 edge 그래픽, UI section divider/state highlight"
+      "intendedLaterUse": "패키지 corner accent, 카드 edge 그래픽, UI section divider/state highlight",
+      "midjourneyPrompt": "cropped edge hinge accent motif, abstract corner and edge graphic material, large diagonal color field entering from one edge, quiet hinge-like accent structure, warm gray, parchment, muted cobalt, soft coral and charcoal balance, generous negative space, not a circle badge, not a seal, not a logo, useful for package corner, card edge, UI section accent, flat 2D editorial product graphic --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient, circle badge, seal mark"
     }
   ]
 }

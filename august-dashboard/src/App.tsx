@@ -2137,6 +2137,17 @@ function DesignDnaPanel() {
   const [isDnaPrinciplesOpen, setIsDnaPrinciplesOpen] = useState(false)
   const [dnaPrinciplesText, setDnaPrinciplesText] = useState('')
   const [dnaPrinciplesError, setDnaPrinciplesError] = useState('')
+  const [copiedDnaPromptId, setCopiedDnaPromptId] = useState<string | null>(null)
+
+  const handleCopyDnaPrompt = async (assetId: string, promptText: string) => {
+    try {
+      await navigator.clipboard.writeText(promptText)
+      setCopiedDnaPromptId(assetId)
+      window.setTimeout(() => setCopiedDnaPromptId((current) => (current === assetId ? null : current)), 1600)
+    } catch {
+      setCopiedDnaPromptId(null)
+    }
+  }
 
   const handleOpenDnaPrinciples = async () => {
     setIsDnaPrinciplesOpen(true)
@@ -2398,6 +2409,21 @@ function DesignDnaPanel() {
               <div className="chris-archive-chip-row" aria-label="DNA clusters">
                 {selectedDnaAsset.dnaClusters.map((cluster) => <span key={cluster}>{cluster}</span>)}
               </div>
+              {selectedDnaAsset.midjourneyPrompt ? (
+                <div className="prompt-negative midjourney-prompt-block">
+                  <div className="dna-prompt-heading-row">
+                    <strong>Midjourney prompt</strong>
+                    <button
+                      type="button"
+                      className="dna-copy-prompt-button"
+                      onClick={() => handleCopyDnaPrompt(selectedDnaAsset.id, selectedDnaAsset.midjourneyPrompt ?? '')}
+                    >
+                      {copiedDnaPromptId === selectedDnaAsset.id ? 'Copied' : 'Copy'}
+                    </button>
+                  </div>
+                  <code>{selectedDnaAsset.midjourneyPrompt}</code>
+                </div>
+              ) : null}
               <div className="prompt-negative">
                 <strong>Generation prompt</strong>
                 <span>{selectedDnaAsset.prompt}</span>
