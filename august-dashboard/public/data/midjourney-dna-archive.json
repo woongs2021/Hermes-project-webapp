@@ -32,9 +32,9 @@
       "imageSrc": "/assets/dna-archive/midjourney/2026-09-26/02_directional_flow_midjourney_translation.jpg",
       "prompt": "abstract directional flow graphic material, large color fields forming a subtle negative-space channel, broad filled shapes only, no route lines, no dots, no arrows, no dashed marks, warm gray base with cobalt blue, muted cyan, soft coral and off-white, calm human-centered AI design language, editorial product surface, flat 2D composition, crop-friendly, useful for brand system background and packaging panels --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "midjourneyPrompt": "abstract directional flow graphic material, large color fields forming a subtle negative-space channel, broad filled shapes only, no route lines, no dots, no arrows, no dashed marks, warm gray base with cobalt blue, muted cyan, soft coral and off-white, calm human-centered AI design language, editorial product surface, flat 2D composition, crop-friendly, useful for brand system background and packaging panels --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
-      "analysis": "Chris가 교체 요청한 새 Midjourney 02 결과로 업데이트했습니다. 더 넓은 곡선형 color field, deep cobalt와 pale cyan의 흐름, coral side plane, warm paper texture가 선·점·화살표 없이 방향성을 만듭니다. 패키지 패널, 카드 배경, 브랜드 표면에 바로 crop해 쓰기 좋은 flow material입니다.",
-      "sourceRun": "manual_midjourney_upload_2026_09_26_02_replacement",
-      "assetHash": "d2bcb1be9d2dfdff86614d8890e5e317ad2e4fd2e1deee22a73960fe86a98f73",
+      "analysis": "Chris가 다시 교체 요청한 새 Midjourney 02 결과로 업데이트했습니다. Warm off-white paper texture, vertical deep navy bar, black angular base, coral diagonal plane이 만드는 절제된 geometric surface입니다. 기존 flow 개념을 더 그래픽디자인적이고 모듈형 패키지/카드 표면으로 쓰기 좋게 정리한 버전입니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_26_02_replacement_2",
+      "assetHash": "e0312f4dc17b190be0c89aaea0821bc8f94038e7f248f598470c094d3bcf9c13",
       "dnaClusters": [
         "Midjourney Translation",
         "Responsible Direction",
