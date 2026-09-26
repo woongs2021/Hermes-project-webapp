@@ -62,6 +62,26 @@
         "Warm Gray Ochre System",
         "Tactile Optical Material"
       ]
+    },
+    {
+      "id": "2026-09-26-midjourney-04-modular-arch-surface-translation",
+      "title": "Midjourney 04 — Modular Arch Surface Translation",
+      "created": "2026-09-26",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-09-26/04_modular_arch_surface_midjourney_translation.jpg",
+      "prompt": "modular geometric arch grid, abstract 2D graphic motif, circles, half-circles, arches and rectangular blocks arranged in a quiet specimen-like grid, warm gray, muted ochre, charcoal black, off-white paper texture, editorial archive system mood, premium design-system pattern surface, balanced spacing, not decorative wallpaper, useful for packaging, card background, brand surface graphic --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "modular geometric arch grid, abstract 2D graphic motif, circles, half-circles, arches and rectangular blocks arranged in a quiet specimen-like grid, warm gray, muted ochre, charcoal black, off-white paper texture, editorial archive system mood, premium design-system pattern surface, balanced spacing, not decorative wallpaper, useful for packaging, card background, brand surface graphic --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "네 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. 반복되는 arch, half-circle, rectangle 구조가 ochre/charcoal/warm gray paper texture와 결합된 modular pattern surface입니다. 패키지 래핑, 카드 배경, 브랜드 표면 패턴처럼 반복·크롭해 쓰기 좋은 그래픽 재료입니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_26_04",
+      "assetHash": "445adb8c6aa7594ade475433fac925942faab69a74eb67256cd8e8bf59ae17cc",
+      "dnaClusters": [
+        "Midjourney Translation",
+        "Modular Geometry",
+        "Archive Pattern Surface",
+        "Warm Gray Ochre System",
+        "Editorial Product Graphic"
+      ]
     }
   ]
 }
