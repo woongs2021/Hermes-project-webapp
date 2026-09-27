@@ -2781,7 +2781,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(getInitialMenuOpen)
   const [selectedResearchIdFromMonthly, setSelectedResearchIdFromMonthly] = useState('')
   const activeTabGroup = getTabGroupForTab(activeTab.id)
-  const visibleTabs = getTabsForGroup(activeTabGroup)
+  const visibleTabs = tabs
   const isDarkMode = themeMode === 'dark'
 
   useEffect(() => {
