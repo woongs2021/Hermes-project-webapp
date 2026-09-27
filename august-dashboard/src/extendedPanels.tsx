@@ -66,10 +66,6 @@ function laneLabel(lane: ResearchBoardItem['lane']) {
   return lane === 'yuna' ? 'Yuna · AI / agent UX' : 'Go Youn-jung · UX / brand / design'
 }
 
-function shortMonth(dateKst: string) {
-  return dateKst.slice(0, 7)
-}
-
 function compactRatio(value: number, total: number) {
   if (total === 0) return '0%'
   return `${Math.round((value / total) * 100)}%`
@@ -412,24 +408,23 @@ export function ObdGrowthTimelinePanel() {
 export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSelectResearchItem?: (itemId: string) => void } = {}) {
   const { researchBoard } = useDashboardSources()
 
-  const monthly = useMemo(() => {
+  const weekly = useMemo(() => {
     const items = researchBoard.items
-    const months = new Map<string, ResearchBoardItem[]>()
+    const weeks = new Map<string, ResearchBoardItem[]>()
     for (const item of items) {
-      const month = shortMonth(item.dateKst)
-      months.set(month, [...(months.get(month) ?? []), item])
+      weeks.set(item.isoWeek, [...(weeks.get(item.isoWeek) ?? []), item])
     }
 
-    const selectedMonth = [...months.keys()].sort()[0] ?? 'pending'
-    const monthItems = months.get(selectedMonth) ?? []
-    const yuna = monthItems.filter((item) => item.lane === 'yuna')
-    const go = monthItems.filter((item) => item.lane === 'goyounjung')
-    const korean = monthItems.filter((item) => /yes|korean|한국|KCI|Korea/i.test(item.koreanSourceStatus))
-    const avgScore = monthItems.length === 0 ? 0 : monthItems.reduce((sum, item) => sum + item.score, 0) / monthItems.length
-    const weeks = [...new Set(monthItems.map((item) => item.isoWeek))].sort()
-    const topItems = [...monthItems].sort((left, right) => right.score - left.score).slice(0, 6)
+    const selectedWeek = [...weeks.keys()].sort().at(-1) ?? 'pending'
+    const weekItems = weeks.get(selectedWeek) ?? []
+    const yuna = weekItems.filter((item) => item.lane === 'yuna')
+    const go = weekItems.filter((item) => item.lane === 'goyounjung')
+    const korean = weekItems.filter((item) => /yes|korean|한국|KCI|Korea/i.test(item.koreanSourceStatus))
+    const avgScore = weekItems.length === 0 ? 0 : weekItems.reduce((sum, item) => sum + item.score, 0) / weekItems.length
+    const weekDates = [...new Set(weekItems.map((item) => item.dateKst))].sort()
+    const topItems = [...weekItems].sort((left, right) => right.score - left.score).slice(0, 6)
 
-    return { selectedMonth, monthItems, yuna, go, korean, avgScore, weeks, topItems }
+    return { selectedWeek, weekItems, yuna, go, korean, avgScore, weekDates, topItems }
   }, [researchBoard])
 
   const themes = [
@@ -448,19 +443,19 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
   ]
 
   return (
-    <div className="monthly-panel-grid" aria-label="Monthly research synthesis">
+    <div className="monthly-panel-grid" aria-label="Weekly research synthesis">
       <article className="content-card monthly-hero-card">
-        <p className="card-kicker">Monthly synthesis · {monthly.selectedMonth}</p>
-        <h3>144개 리서치 후보를 Chris 성장 언어로 압축하는 결산 화면</h3>
+        <p className="card-kicker">Weekly synthesis · {weekly.selectedWeek}</p>
+        <h3>매주 리서치 후보 수와 신호를 업데이트하는 결산 화면</h3>
         <p>
-          매일 쌓인 논문 카드를 월간 단위로 다시 읽어, Yuna의 AI UX 축과 Go Youn-jung의 UX/BX/design management 축이 어디에서 만나는지 보여줍니다.
+          매일 쌓인 논문 카드를 주간 단위로 다시 읽어, Yuna의 AI UX 축과 Go Youn-jung의 UX/BX/design management 축이 어디에서 만나는지 보여줍니다.
         </p>
       </article>
 
       <figure className="content-card monthly-synthesis-image-card">
         <img
           src={`${import.meta.env.BASE_URL}assets/monthly/monthly-synthesis-monolith.jpg`}
-          alt="White monolith landscape for monthly synthesis"
+          alt="White monolith landscape for weekly synthesis"
           width="1280"
           height="549"
           loading="eager"
@@ -468,30 +463,30 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
         />
       </figure>
 
-      <section className="monthly-metric-grid" aria-label="Monthly research metrics">
+      <section className="monthly-metric-grid" aria-label="Weekly research metrics">
         <article className="metric-card monthly-metric">
-          <p className="card-kicker">Total papers</p>
-          <h3>{monthly.monthItems.length}</h3>
-          <p>{monthly.weeks.join(' · ')}</p>
+          <p className="card-kicker">Weekly papers</p>
+          <h3>{weekly.weekItems.length}</h3>
+          <p>{weekly.weekDates.join(' · ')}</p>
         </article>
         <article className="metric-card monthly-metric">
           <p className="card-kicker">Lane balance</p>
-          <h3>{monthly.yuna.length} / {monthly.go.length}</h3>
+          <h3>{weekly.yuna.length} / {weekly.go.length}</h3>
           <p>Yuna / Go Youn-jung</p>
         </article>
         <article className="metric-card monthly-metric">
           <p className="card-kicker">Korean signal</p>
-          <h3>{monthly.korean.length}</h3>
-          <p>{compactRatio(monthly.korean.length, monthly.monthItems.length)} of monthly items</p>
+          <h3>{weekly.korean.length}</h3>
+          <p>{compactRatio(weekly.korean.length, weekly.weekItems.length)} of weekly items</p>
         </article>
         <article className="metric-card monthly-metric">
           <p className="card-kicker">Avg relevance</p>
-          <h3>{monthly.avgScore.toFixed(1)}</h3>
+          <h3>{weekly.avgScore.toFixed(1)}</h3>
           <p>initial_score_5 aggregate</p>
         </article>
       </section>
 
-      <section className="monthly-theme-grid" aria-label="Monthly synthesis themes">
+      <section className="monthly-theme-grid" aria-label="Weekly synthesis themes">
         {themes.map((theme) => (
           <article className="content-card theme-card" key={theme.title}>
             <p className="card-kicker">Synthesis hook</p>
@@ -504,8 +499,8 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
       <article className="content-card monthly-shortlist-card">
         <p className="card-kicker">High-signal shortlist</p>
         <h3>점수 기준 상위 후보</h3>
-        <div className="shortlist-stack" aria-label="Monthly shortlist papers">
-          {monthly.topItems.map((item) => (
+        <div className="shortlist-stack" aria-label="Weekly shortlist papers">
+          {weekly.topItems.map((item) => (
             <button
               className="shortlist-row"
               key={item.id}

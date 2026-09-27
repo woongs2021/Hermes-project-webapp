@@ -31,6 +31,15 @@ type Tab = {
   description: string
 }
 
+type TabGroupId = 'team' | 'personal-ax' | 'corporate-ax' | 'weekly'
+
+type TabGroup = {
+  id: TabGroupId
+  label: string
+  eyebrow: string
+  tabIds: TabId[]
+}
+
 type ArchitectureBranch = {
   title: string
   intent: string
@@ -112,12 +121,49 @@ const tabs: Tab[] = [
   },
   {
     id: 'report',
-    label: 'Monthly',
-    eyebrow: 'Monthly research synthesis',
-    title: 'Research Month Review',
-    description: 'Yuna / Go Youn-jung 리서치 후보를 월간 지표와 주제 hook, 상위 후보로 압축해 Chris의 성장 방향을 읽습니다.',
+    label: 'Weekly',
+    eyebrow: 'Weekly research synthesis',
+    title: 'Research Week Review',
+    description: 'Yuna / Go Youn-jung 리서치 후보를 주간 지표와 주제 hook, 상위 후보로 압축해 Chris의 성장 방향을 읽습니다.',
   },
 ]
+
+const tabGroups: TabGroup[] = [
+  {
+    id: 'team',
+    label: 'Team',
+    eyebrow: 'Orchestration',
+    tabIds: ['home'],
+  },
+  {
+    id: 'personal-ax',
+    label: 'Personal AX',
+    eyebrow: 'OBD / Research / Visual',
+    tabIds: ['obd', 'research', 'visuals'],
+  },
+  {
+    id: 'corporate-ax',
+    label: 'Corporate AX',
+    eyebrow: 'Archive / Design DNA',
+    tabIds: ['chrisArchive', 'design-dna'],
+  },
+  {
+    id: 'weekly',
+    label: 'Weekly',
+    eyebrow: 'Research loop',
+    tabIds: ['report'],
+  },
+]
+
+function getTabGroupForTab(tabId: TabId) {
+  return tabGroups.find((group) => group.tabIds.includes(tabId)) ?? tabGroups[0]
+}
+
+function getTabsForGroup(group: TabGroup) {
+  return group.tabIds
+    .map((tabId) => tabs.find((tab) => tab.id === tabId))
+    .filter((tab): tab is Tab => Boolean(tab))
+}
 
 const metricPlaceholders = ['Primary signal', 'Open loops', 'Weekly check-in']
 const listPlaceholders = ['Next handoff note', 'Recent validation slot', 'Reference card surface']
@@ -2734,6 +2780,8 @@ function App() {
   const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialThemeMode)
   const [isMenuOpen, setIsMenuOpen] = useState(getInitialMenuOpen)
   const [selectedResearchIdFromMonthly, setSelectedResearchIdFromMonthly] = useState('')
+  const activeTabGroup = getTabGroupForTab(activeTab.id)
+  const visibleTabs = getTabsForGroup(activeTabGroup)
   const isDarkMode = themeMode === 'dark'
 
   useEffect(() => {
@@ -2742,13 +2790,20 @@ function App() {
     window.localStorage.setItem('august-dashboard-theme', themeMode)
   }, [themeMode])
 
-  function selectTab(tab: Tab) {
+  function selectTab(tab: Tab, options: { closeMobileMenu?: boolean } = {}) {
+    const { closeMobileMenu = true } = options
     setSelectedResearchIdFromMonthly('')
     setActiveTab(tab)
-    if (window.matchMedia('(max-width: 560px)').matches) {
+    if (closeMobileMenu && window.matchMedia('(max-width: 560px)').matches) {
       setIsMenuOpen(false)
     }
     window.history.replaceState(null, '', `#${tab.id}`)
+  }
+
+  function selectTabGroup(group: TabGroup) {
+    const preferredTab = group.tabIds.includes(activeTab.id) ? activeTab : getTabsForGroup(group)[0]
+    if (!preferredTab) return
+    selectTab(preferredTab, { closeMobileMenu: group.tabIds.length === 1 })
   }
 
   function openResearchItemFromMonthly(itemId: string) {
@@ -2811,19 +2866,36 @@ function App() {
           </svg>
         </button>
 
-        <nav className={isMenuOpen ? 'tab-nav open' : 'tab-nav'} aria-label="Sections">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              type="button"
-              className={tab.id === activeTab.id ? 'tab-button active' : 'tab-button'}
-              aria-pressed={tab.id === activeTab.id}
-              onClick={() => selectTab(tab)}
-            >
-              <span>{tab.label}</span>
-              <small>{tab.eyebrow}</small>
-            </button>
-          ))}
+        <nav className={isMenuOpen ? 'tab-menu open' : 'tab-menu'} aria-label="Sections">
+          <div className="tab-group-nav" aria-label="Section groups">
+            {tabGroups.map((group) => (
+              <button
+                key={group.id}
+                type="button"
+                className={group.id === activeTabGroup.id ? 'tab-group-button active' : 'tab-group-button'}
+                aria-pressed={group.id === activeTabGroup.id}
+                onClick={() => selectTabGroup(group)}
+              >
+                <span>{group.label}</span>
+                <small>{group.eyebrow}</small>
+              </button>
+            ))}
+          </div>
+
+          <div className="tab-nav" aria-label={`${activeTabGroup.label} tabs`}>
+            {visibleTabs.map((tab) => (
+              <button
+                key={tab.id}
+                type="button"
+                className={tab.id === activeTab.id ? 'tab-button active' : 'tab-button'}
+                aria-pressed={tab.id === activeTab.id}
+                onClick={() => selectTab(tab)}
+              >
+                <span>{tab.label}</span>
+                <small>{tab.eyebrow}</small>
+              </button>
+            ))}
+          </div>
         </nav>
       </header>
 

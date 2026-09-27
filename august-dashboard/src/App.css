@@ -3058,6 +3058,15 @@
     text-align: center;
   }
 
+  .topbar .tab-menu.open {
+    max-height: 680px;
+  }
+
+  .topbar .tab-group-nav {
+    grid-template-columns: repeat(4, minmax(max-content, 1fr));
+    overflow-x: auto;
+  }
+
   .dashboard-grid,
   .intro-grid,
   .profile-credential-grid,
@@ -3156,12 +3165,18 @@
     padding: 0;
   }
 
-  .tab-nav {
+  .tab-nav,
+  .topbar .tab-group-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .tab-button {
+  .tab-button,
+  .topbar .tab-group-button {
     white-space: normal;
+  }
+
+  .topbar .tab-menu.open {
+    max-height: 720px;
   }
 
   .visual-card:nth-child(2) {
@@ -3318,13 +3333,13 @@
     -6px -6px 0 -6px currentColor;
 }
 
-.topbar .tab-nav {
+.topbar .tab-menu {
   grid-column: 1 / -1;
   position: static;
   display: grid;
   width: 100%;
   max-height: 0;
-  gap: 8px;
+  gap: 10px;
   overflow: hidden;
   border: 1px solid transparent;
   border-radius: 20px;
@@ -3338,7 +3353,7 @@
   visibility: hidden;
 }
 
-.topbar .tab-nav.open {
+.topbar .tab-menu.open {
   max-height: 560px;
   border-color: var(--stroke);
   padding: 10px;
@@ -3348,20 +3363,70 @@
   visibility: visible;
 }
 
+.topbar .tab-group-nav,
+.topbar .tab-nav {
+  display: grid;
+  gap: 8px;
+}
+
+.topbar .tab-group-nav {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.topbar .tab-nav {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  border-top: 1px solid var(--stroke);
+  padding-top: 10px;
+}
+
+.topbar .tab-group-button,
 .topbar .tab-button {
   display: grid;
   gap: 4px;
-  min-height: 58px;
+  width: 100%;
+  border: 1px solid transparent;
   border-radius: 16px;
+  background: transparent;
+  color: var(--muted-ink);
+  cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.topbar .tab-group-button {
+  min-height: 64px;
+  padding: 12px 13px;
+  text-align: center;
+}
+
+.topbar .tab-button {
+  min-height: 58px;
   padding: 11px 13px;
   text-align: left;
 }
 
+.topbar .tab-group-button:hover,
+.topbar .tab-group-button:focus-visible,
+.topbar .tab-button:hover,
+.topbar .tab-button:focus-visible {
+  border-color: var(--stroke);
+  color: var(--ink);
+  outline: none;
+}
+
+.topbar .tab-group-button.active,
+.topbar .tab-button.active {
+  border-color: var(--focus-stroke);
+  background: var(--active-surface);
+  color: var(--mid);
+}
+
+.topbar .tab-group-button span,
 .topbar .tab-button span {
   color: inherit;
   font-weight: 760;
 }
 
+.topbar .tab-group-button small,
 .topbar .tab-button small {
   color: var(--quiet-ink);
   font-size: 0.72rem;
