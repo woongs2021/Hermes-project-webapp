@@ -2765,82 +2765,6 @@ function ObdKnowledgeLoopPanel() {
   )
 }
 
-function WeeklyCountingPanel() {
-  const [researchBoard, setResearchBoard] = useState<ResearchBoard>(fallbackResearchBoard)
-  const [chrisArchive, setChrisArchive] = useState<ChrisArchiveManifest>(fallbackChrisArchive)
-  const [dnaArchive, setDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
-  const [midjourneyDnaArchive, setMidjourneyDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
-  const [brandMockupAssets, setBrandMockupAssets] = useState<BrandMockupManifest>(fallbackBrandMockupAssets)
-
-  useEffect(() => {
-    let isMounted = true
-    Promise.all([
-      loadResearchBoard(),
-      loadChrisArchive(),
-      loadDnaArchive(),
-      loadMidjourneyDnaArchive(),
-      loadBrandMockupAssets(),
-    ]).then(([loadedResearchBoard, loadedChrisArchive, loadedDnaArchive, loadedMidjourneyDnaArchive, loadedBrandMockupAssets]) => {
-      if (!isMounted) return
-      setResearchBoard(loadedResearchBoard)
-      setChrisArchive(loadedChrisArchive)
-      setDnaArchive(loadedDnaArchive)
-      setMidjourneyDnaArchive(loadedMidjourneyDnaArchive)
-      setBrandMockupAssets(loadedBrandMockupAssets)
-    })
-    return () => {
-      isMounted = false
-    }
-  }, [])
-
-  const researchTotal = researchBoard.items.length
-  const researchFinalPicks = researchBoard.items.filter((item) => item.status === 'friday_final_pick').length
-  const researchGoSignals = researchBoard.items.filter((item) => item.validationStatus === 'GO').length
-  const chrisArchiveTotal = chrisArchive.items.length
-  const gptDnaTotal = dnaArchive.items.length
-  const midjourneyDnaTotal = midjourneyDnaArchive.items.length
-  const brandMockupTotal = brandMockupAssets.collections.reduce((sum, collection) => sum + collection.items.length, 0)
-  const brandExampleTotal = brandMockupAssets.examples?.reduce((sum, collection) => sum + collection.items.length, 0) ?? 0
-  const designDnaOutputTotal = gptDnaTotal + midjourneyDnaTotal + brandMockupTotal + brandExampleTotal
-
-  const countCards = [
-    {
-      label: 'Research items',
-      value: researchTotal,
-      detail: `${researchFinalPicks} final picks · ${researchGoSignals} GO signals`,
-    },
-    {
-      label: 'Chris Archive references',
-      value: chrisArchiveTotal,
-      detail: 'Design DNA extraction source',
-    },
-    {
-      label: 'Design DNA outputs',
-      value: designDnaOutputTotal,
-      detail: `${gptDnaTotal} GPT · ${midjourneyDnaTotal} MJ · ${brandMockupTotal + brandExampleTotal} mockup`,
-    },
-  ]
-
-  return (
-    <section className="content-card weekly-counting-card" aria-label="Weekly dashboard content counts">
-      <p className="card-kicker">Weekly count · Research / Archive / Design DNA</p>
-      <h3>리서치와 디자인 자산이 얼마나 쌓였는지 한 번에 확인합니다.</h3>
-      <p>
-        Weekly 탭은 이제 단순 업데이트 로그보다, Chris의 리서치 축적량과 브랜드/디자인 DNA 산출물의 현재 규모를 보여주는 상태판 역할을 합니다.
-      </p>
-      <div className="weekly-counting-grid" aria-label="Current webapp data counts">
-        {countCards.map((card) => (
-          <article className="weekly-counting-metric" key={card.label}>
-            <span>{card.label}</span>
-            <strong>{card.value}</strong>
-            <small>{card.detail}</small>
-          </article>
-        ))}
-      </div>
-    </section>
-  )
-}
-
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>(() => {
     const normalizedHash = window.location.hash === '#intro' || window.location.hash === '#about'
@@ -3033,7 +2957,6 @@ function App() {
           <ResearchKanbanPanel selectedResearchId={selectedResearchIdFromMonthly} />
         ) : activeTab.id === 'report' ? (
           <>
-            <WeeklyCountingPanel />
             <MonthlyResearchSynthesisPanel onSelectResearchItem={openResearchItemFromMonthly} />
             <MuyeolValidationPanel />
           </>

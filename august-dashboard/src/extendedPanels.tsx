@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
 import { fallbackHomeVisualSet, loadHomeVisualSet, type HomeVisualSet } from './homeVisualSet'
 import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type ResearchBoardItem } from './researchBoard'
+import { fallbackChrisArchive, loadChrisArchive, type ChrisArchiveManifest } from './chrisArchive'
+import { fallbackDnaArchive, loadDnaArchive, loadMidjourneyDnaArchive, type DnaArchiveManifest } from './dnaArchive'
+import { fallbackBrandMockupAssets, loadBrandMockupAssets, type BrandMockupManifest } from './brandAssets'
 
 type GraphNode = {
   id: string
@@ -66,22 +69,32 @@ function laneLabel(lane: ResearchBoardItem['lane']) {
   return lane === 'yuna' ? 'Yuna · AI / agent UX' : 'Go Youn-jung · UX / brand / design'
 }
 
-function compactRatio(value: number, total: number) {
-  if (total === 0) return '0%'
-  return `${Math.round((value / total) * 100)}%`
-}
-
 function useDashboardSources() {
   const [visualSet, setVisualSet] = useState<HomeVisualSet>(fallbackHomeVisualSet)
   const [researchBoard, setResearchBoard] = useState<ResearchBoard>(fallbackResearchBoard)
+  const [chrisArchive, setChrisArchive] = useState<ChrisArchiveManifest>(fallbackChrisArchive)
+  const [dnaArchive, setDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
+  const [midjourneyDnaArchive, setMidjourneyDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
+  const [brandMockupAssets, setBrandMockupAssets] = useState<BrandMockupManifest>(fallbackBrandMockupAssets)
 
   useEffect(() => {
     let isMounted = true
 
-    Promise.all([loadHomeVisualSet(), loadResearchBoard()]).then(([loadedVisualSet, loadedResearchBoard]) => {
+    Promise.all([
+      loadHomeVisualSet(),
+      loadResearchBoard(),
+      loadChrisArchive(),
+      loadDnaArchive(),
+      loadMidjourneyDnaArchive(),
+      loadBrandMockupAssets(),
+    ]).then(([loadedVisualSet, loadedResearchBoard, loadedChrisArchive, loadedDnaArchive, loadedMidjourneyDnaArchive, loadedBrandMockupAssets]) => {
       if (!isMounted) return
       setVisualSet(loadedVisualSet)
       setResearchBoard(loadedResearchBoard)
+      setChrisArchive(loadedChrisArchive)
+      setDnaArchive(loadedDnaArchive)
+      setMidjourneyDnaArchive(loadedMidjourneyDnaArchive)
+      setBrandMockupAssets(loadedBrandMockupAssets)
     })
 
     return () => {
@@ -89,7 +102,7 @@ function useDashboardSources() {
     }
   }, [])
 
-  return { visualSet, researchBoard }
+  return { visualSet, researchBoard, chrisArchive, dnaArchive, midjourneyDnaArchive, brandMockupAssets }
 }
 
 function buildGraphNodes(visualSet: HomeVisualSet, researchBoard: ResearchBoard): GraphNode[] {
@@ -406,7 +419,7 @@ export function ObdGrowthTimelinePanel() {
 }
 
 export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSelectResearchItem?: (itemId: string) => void } = {}) {
-  const { researchBoard } = useDashboardSources()
+  const { visualSet, researchBoard, chrisArchive, dnaArchive, midjourneyDnaArchive, brandMockupAssets } = useDashboardSources()
 
   const weekly = useMemo(() => {
     const items = researchBoard.items
@@ -419,13 +432,20 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
     const weekItems = weeks.get(selectedWeek) ?? []
     const yuna = weekItems.filter((item) => item.lane === 'yuna')
     const go = weekItems.filter((item) => item.lane === 'goyounjung')
-    const korean = weekItems.filter((item) => /yes|korean|한국|KCI|Korea/i.test(item.koreanSourceStatus))
     const avgScore = weekItems.length === 0 ? 0 : weekItems.reduce((sum, item) => sum + item.score, 0) / weekItems.length
     const weekDates = [...new Set(weekItems.map((item) => item.dateKst))].sort()
     const topItems = [...weekItems].sort((left, right) => right.score - left.score).slice(0, 6)
 
-    return { selectedWeek, weekItems, yuna, go, korean, avgScore, weekDates, topItems }
+    return { selectedWeek, weekItems, yuna, go, avgScore, weekDates, topItems }
   }, [researchBoard])
+
+  const gptDnaTotal = dnaArchive.items.length
+  const midjourneyDnaTotal = midjourneyDnaArchive.items.length
+  const brandMockupTotal = brandMockupAssets.collections.reduce((sum, collection) => sum + collection.items.length, 0)
+  const brandExampleTotal = brandMockupAssets.examples?.reduce((sum, collection) => sum + collection.items.length, 0) ?? 0
+  const designDnaTotal = gptDnaTotal + midjourneyDnaTotal + brandMockupTotal + brandExampleTotal
+  const researchGoSignals = researchBoard.items.filter((item) => item.validationStatus === 'GO').length
+  const indexedDataTotal = researchBoard.items.length + chrisArchive.items.length + designDnaTotal + visualSet.items.length
 
   const themes = [
     {
@@ -463,21 +483,41 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
         />
       </figure>
 
-      <section className="monthly-metric-grid" aria-label="Weekly research metrics">
+      <section className="monthly-metric-grid" aria-label="Latest weekly and archive data metrics">
         <article className="metric-card monthly-metric">
           <p className="card-kicker">Weekly papers</p>
           <h3>{weekly.weekItems.length}</h3>
           <p>{weekly.weekDates.join(' · ')}</p>
         </article>
         <article className="metric-card monthly-metric">
+          <p className="card-kicker">Total papers</p>
+          <h3>{researchBoard.items.length}</h3>
+          <p>{researchGoSignals} GO signals · {weekly.yuna.length + weekly.go.length} latest candidates</p>
+        </article>
+        <article className="metric-card monthly-metric">
+          <p className="card-kicker">Chris Archive</p>
+          <h3>{chrisArchive.items.length}</h3>
+          <p>Design DNA extraction references</p>
+        </article>
+        <article className="metric-card monthly-metric">
+          <p className="card-kicker">Design DNA</p>
+          <h3>{designDnaTotal}</h3>
+          <p>{gptDnaTotal} GPT · {midjourneyDnaTotal} MJ · {brandMockupTotal + brandExampleTotal} mockup</p>
+        </article>
+        <article className="metric-card monthly-metric">
+          <p className="card-kicker">Visual Archive</p>
+          <h3>{visualSet.items.length}</h3>
+          <p>approved home visual stills</p>
+        </article>
+        <article className="metric-card monthly-metric">
+          <p className="card-kicker">Indexed total</p>
+          <h3>{indexedDataTotal}</h3>
+          <p>papers + archive + DNA + visual assets</p>
+        </article>
+        <article className="metric-card monthly-metric">
           <p className="card-kicker">Lane balance</p>
           <h3>{weekly.yuna.length} / {weekly.go.length}</h3>
           <p>Yuna / Go Youn-jung</p>
-        </article>
-        <article className="metric-card monthly-metric">
-          <p className="card-kicker">Korean signal</p>
-          <h3>{weekly.korean.length}</h3>
-          <p>{compactRatio(weekly.korean.length, weekly.weekItems.length)} of weekly items</p>
         </article>
         <article className="metric-card monthly-metric">
           <p className="card-kicker">Avg relevance</p>
