@@ -7128,7 +7128,7 @@
 }
 
 .chris-design-system-modal {
-  width: min(1040px, calc(100vw - clamp(2rem, 6vw, 5rem)));
+  width: min(90vw, 1280px);
   max-height: min(860px, 84vh);
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.78);
@@ -7256,9 +7256,9 @@
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   gap: clamp(1rem, 2vw, 1.6rem);
-  width: clamp(360px, 70vw, 1080px);
-  max-width: calc(100vw - clamp(2rem, 6vw, 5rem));
-  max-height: min(820px, 70vh);
+  width: min(90vw, 1280px);
+  max-width: 90vw;
+  max-height: min(820px, 84vh);
   overflow-x: hidden;
   overflow-y: auto;
   scrollbar-gutter: stable;
@@ -7296,11 +7296,10 @@
 }
 
 .chris-archive-modal-close {
-  position: sticky;
-  top: 0.4rem;
-  z-index: 2;
-  justify-self: end;
-  grid-column: 1 / -1;
+  position: absolute;
+  top: clamp(0.8rem, 1.6vw, 1.15rem);
+  right: clamp(0.8rem, 1.6vw, 1.15rem);
+  z-index: 4;
   width: 42px;
   height: 42px;
   border: 1px solid var(--stroke);
@@ -8302,7 +8301,7 @@
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 1rem;
-  width: min(1040px, calc(100vw - clamp(2rem, 6vw, 5rem)));
+  width: min(90vw, 1280px);
   max-height: min(860px, 84vh);
   overflow: auto;
   border: 1px solid rgba(255, 255, 255, 0.78);

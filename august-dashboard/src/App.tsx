@@ -2506,7 +2506,7 @@ function DesignDnaPanel() {
                   <h4>{coffeeAssetExample.title}</h4>
                   <p>{coffeeAssetExample.description}</p>
                 </div>
-                <span>{coffeeAssetExample.items.length} assets · ONBOARD</span>
+                <span>{coffeeAssetExample.items.length} assets{coffeeAssetExample.logoText ? ` · ${coffeeAssetExample.logoText}` : ''}</span>
               </div>
               <div className="dna-brand-mockup-grid" aria-label="Coffee asset example 01 moodboard">
                 {coffeeAssetExample.items.map((item) => (
