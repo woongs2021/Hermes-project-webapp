@@ -2779,6 +2779,7 @@ function App() {
   })
   const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialThemeMode)
   const [isMenuOpen, setIsMenuOpen] = useState(getInitialMenuOpen)
+  const [areSubTabsVisible, setAreSubTabsVisible] = useState(true)
   const [selectedResearchIdFromMonthly, setSelectedResearchIdFromMonthly] = useState('')
   const activeTabGroup = getTabGroupForTab(activeTab.id)
   const visibleTabs = tabs
@@ -2801,9 +2802,12 @@ function App() {
   }
 
   function selectTabGroup(group: TabGroup) {
+    setAreSubTabsVisible((visible) => !visible)
     const preferredTab = group.tabIds.includes(activeTab.id) ? activeTab : getTabsForGroup(group)[0]
     if (!preferredTab) return
-    selectTab(preferredTab, { closeMobileMenu: group.tabIds.length === 1 })
+    setSelectedResearchIdFromMonthly('')
+    setActiveTab(preferredTab)
+    window.history.replaceState(null, '', `#${preferredTab.id}`)
   }
 
   function openResearchItemFromMonthly(itemId: string) {
@@ -2874,15 +2878,15 @@ function App() {
                 type="button"
                 className={group.id === activeTabGroup.id ? 'tab-group-button active' : 'tab-group-button'}
                 aria-pressed={group.id === activeTabGroup.id}
+                aria-expanded={areSubTabsVisible}
                 onClick={() => selectTabGroup(group)}
               >
                 <span>{group.label}</span>
-                <small>{group.eyebrow}</small>
               </button>
             ))}
           </div>
 
-          <div className="tab-nav" aria-label={`${activeTabGroup.label} tabs`}>
+          <div className={areSubTabsVisible ? 'tab-nav' : 'tab-nav collapsed'} aria-label={`${activeTabGroup.label} tabs`} aria-hidden={!areSubTabsVisible}>
             {visibleTabs.map((tab) => (
               <button
                 key={tab.id}
