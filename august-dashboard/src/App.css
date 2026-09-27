@@ -8908,7 +8908,7 @@
 .topbar .tab-menu.open,
 :root[data-theme='dark'] .topbar .tab-menu.open {
   display: grid;
-  margin: 0 0 11px;
+  margin: 0 0 10px;
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
@@ -9047,4 +9047,19 @@
 .workspace-tab-nav + .workspace-header,
 :root[data-theme='dark'] .workspace-tab-nav + .workspace-header {
   margin-top: 0;
+}
+
+.weekly-webapp-update-card,
+:root[data-theme='dark'] .weekly-webapp-update-card {
+  grid-column: 1 / -1;
+}
+
+.weekly-webapp-update-card ul,
+:root[data-theme='dark'] .weekly-webapp-update-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding-left: 1.1rem;
+  color: var(--muted-ink);
+  line-height: 1.7;
 }

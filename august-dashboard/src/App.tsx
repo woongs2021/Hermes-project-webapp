@@ -2765,6 +2765,26 @@ function ObdKnowledgeLoopPanel() {
   )
 }
 
+function RecentWebappUpdatePanel() {
+  return (
+    <section className="content-card weekly-webapp-update-card" aria-label="Recent webapp update summary">
+      <p className="card-kicker">Webapp update · Navigation IA</p>
+      <h3>상단은 4개 그룹만, 세부 탭은 본문 맥락 안으로 정리</h3>
+      <p>
+        최근 업데이트에서는 상단 탭을 Team, Personal AX, Corporate AX, Weekly 네 그룹으로 단순화하고,
+        Personal AX와 Corporate AX의 하위 탭을 각각의 본문 안으로 이동했습니다.
+      </p>
+      <ul>
+        <li>Personal AX 본문: OBD Map / Research / Visual Archive</li>
+        <li>Corporate AX 본문: Chris Archive / Design DNA</li>
+        <li>Team / Weekly는 별도 본문 하위 탭 없이 단일 화면으로 유지</li>
+        <li>상단 햄버거 버튼은 상위 탭 4개 전체를 접고 펼치는 토글로 동작</li>
+        <li>상단 탭 하단 margin은 최신 기준 10px로 조정</li>
+      </ul>
+    </section>
+  )
+}
+
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>(() => {
     const normalizedHash = window.location.hash === '#intro' || window.location.hash === '#about'
@@ -2957,6 +2977,7 @@ function App() {
           <ResearchKanbanPanel selectedResearchId={selectedResearchIdFromMonthly} />
         ) : activeTab.id === 'report' ? (
           <>
+            <RecentWebappUpdatePanel />
             <MonthlyResearchSynthesisPanel onSelectResearchItem={openResearchItemFromMonthly} />
             <MuyeolValidationPanel />
           </>
