@@ -8766,6 +8766,7 @@
 :root[data-theme='dark'] .topbar .tab-menu.open {
   max-height: none;
   margin-top: 0;
+  margin-bottom: 20px;
   border: 0;
   padding: 0;
   background: transparent;
@@ -8810,6 +8811,16 @@
   column-gap: clamp(30px, 4.4vw, 72px);
 }
 
+.topbar .tab-nav,
+.topbar .tab-nav:not(.open),
+.topbar .tab-nav.open,
+:root[data-theme='dark'] .topbar .tab-nav,
+:root[data-theme='dark'] .topbar .tab-nav:not(.open),
+:root[data-theme='dark'] .topbar .tab-nav.open {
+  column-gap: clamp(28px, 3.8vw, 64px);
+  row-gap: 10px;
+}
+
 .topbar .tab-group-button,
 .topbar .tab-button,
 :root[data-theme='dark'] .topbar .tab-group-button,
@@ -8849,6 +8860,14 @@
 .topbar .tab-group-button small,
 .topbar .tab-button small {
   color: color-mix(in srgb, currentColor 58%, transparent);
+}
+
+.topbar .tab-group-button span,
+.topbar .tab-button span,
+:root[data-theme='dark'] .topbar .tab-group-button span,
+:root[data-theme='dark'] .topbar .tab-button span {
+  font-size: 0.94rem;
+  line-height: 1.1;
 }
 
 .topbar .tab-group-button span,

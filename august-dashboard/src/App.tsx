@@ -2779,7 +2779,7 @@ function App() {
   })
   const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialThemeMode)
   const [isMenuOpen, setIsMenuOpen] = useState(getInitialMenuOpen)
-  const [areSubTabsVisible, setAreSubTabsVisible] = useState(true)
+  const [areSubTabsVisible, setAreSubTabsVisible] = useState(false)
   const [selectedResearchIdFromMonthly, setSelectedResearchIdFromMonthly] = useState('')
   const activeTabGroup = getTabGroupForTab(activeTab.id)
   const visibleTabs = tabs
