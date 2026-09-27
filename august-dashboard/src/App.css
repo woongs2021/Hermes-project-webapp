@@ -8954,7 +8954,7 @@
 
 .workspace-tab-button span,
 :root[data-theme='dark'] .workspace-tab-button span {
-  font-size: 1.222rem;
+  font-size: 17px;
 }
 
 .topbar .tab-group-button span,
@@ -8988,7 +8988,7 @@
   column-gap: clamp(28px, 3.8vw, 64px);
   row-gap: 10px;
   width: 100%;
-  margin: 16px 0 28px;
+  margin: 6px 0 18px;
   border: 0;
   padding: 0 0 10px;
   background: transparent;
