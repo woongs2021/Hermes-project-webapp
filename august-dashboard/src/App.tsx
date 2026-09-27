@@ -2765,22 +2765,78 @@ function ObdKnowledgeLoopPanel() {
   )
 }
 
-function RecentWebappUpdatePanel() {
+function WeeklyCountingPanel() {
+  const [researchBoard, setResearchBoard] = useState<ResearchBoard>(fallbackResearchBoard)
+  const [chrisArchive, setChrisArchive] = useState<ChrisArchiveManifest>(fallbackChrisArchive)
+  const [dnaArchive, setDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
+  const [midjourneyDnaArchive, setMidjourneyDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
+  const [brandMockupAssets, setBrandMockupAssets] = useState<BrandMockupManifest>(fallbackBrandMockupAssets)
+
+  useEffect(() => {
+    let isMounted = true
+    Promise.all([
+      loadResearchBoard(),
+      loadChrisArchive(),
+      loadDnaArchive(),
+      loadMidjourneyDnaArchive(),
+      loadBrandMockupAssets(),
+    ]).then(([loadedResearchBoard, loadedChrisArchive, loadedDnaArchive, loadedMidjourneyDnaArchive, loadedBrandMockupAssets]) => {
+      if (!isMounted) return
+      setResearchBoard(loadedResearchBoard)
+      setChrisArchive(loadedChrisArchive)
+      setDnaArchive(loadedDnaArchive)
+      setMidjourneyDnaArchive(loadedMidjourneyDnaArchive)
+      setBrandMockupAssets(loadedBrandMockupAssets)
+    })
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  const researchTotal = researchBoard.items.length
+  const researchFinalPicks = researchBoard.items.filter((item) => item.status === 'friday_final_pick').length
+  const researchGoSignals = researchBoard.items.filter((item) => item.validationStatus === 'GO').length
+  const chrisArchiveTotal = chrisArchive.items.length
+  const gptDnaTotal = dnaArchive.items.length
+  const midjourneyDnaTotal = midjourneyDnaArchive.items.length
+  const brandMockupTotal = brandMockupAssets.collections.reduce((sum, collection) => sum + collection.items.length, 0)
+  const brandExampleTotal = brandMockupAssets.examples?.reduce((sum, collection) => sum + collection.items.length, 0) ?? 0
+  const designDnaOutputTotal = gptDnaTotal + midjourneyDnaTotal + brandMockupTotal + brandExampleTotal
+
+  const countCards = [
+    {
+      label: 'Research items',
+      value: researchTotal,
+      detail: `${researchFinalPicks} final picks · ${researchGoSignals} GO signals`,
+    },
+    {
+      label: 'Chris Archive references',
+      value: chrisArchiveTotal,
+      detail: 'Design DNA extraction source',
+    },
+    {
+      label: 'Design DNA outputs',
+      value: designDnaOutputTotal,
+      detail: `${gptDnaTotal} GPT · ${midjourneyDnaTotal} MJ · ${brandMockupTotal + brandExampleTotal} mockup`,
+    },
+  ]
+
   return (
-    <section className="content-card weekly-webapp-update-card" aria-label="Recent webapp update summary">
-      <p className="card-kicker">Webapp update · Navigation IA</p>
-      <h3>상단은 4개 그룹만, 세부 탭은 본문 맥락 안으로 정리</h3>
+    <section className="content-card weekly-counting-card" aria-label="Weekly dashboard content counts">
+      <p className="card-kicker">Weekly count · Research / Archive / Design DNA</p>
+      <h3>리서치와 디자인 자산이 얼마나 쌓였는지 한 번에 확인합니다.</h3>
       <p>
-        최근 업데이트에서는 상단 탭을 Team, Personal AX, Corporate AX, Weekly 네 그룹으로 단순화하고,
-        Personal AX와 Corporate AX의 하위 탭을 각각의 본문 안으로 이동했습니다.
+        Weekly 탭은 이제 단순 업데이트 로그보다, Chris의 리서치 축적량과 브랜드/디자인 DNA 산출물의 현재 규모를 보여주는 상태판 역할을 합니다.
       </p>
-      <ul>
-        <li>Personal AX 본문: OBD Map / Research / Visual Archive</li>
-        <li>Corporate AX 본문: Chris Archive / Design DNA</li>
-        <li>Team / Weekly는 별도 본문 하위 탭 없이 단일 화면으로 유지</li>
-        <li>상단 햄버거 버튼은 상위 탭 4개 전체를 접고 펼치는 토글로 동작</li>
-        <li>상단 탭 하단 margin은 최신 기준 10px로 조정</li>
-      </ul>
+      <div className="weekly-counting-grid" aria-label="Current webapp data counts">
+        {countCards.map((card) => (
+          <article className="weekly-counting-metric" key={card.label}>
+            <span>{card.label}</span>
+            <strong>{card.value}</strong>
+            <small>{card.detail}</small>
+          </article>
+        ))}
+      </div>
     </section>
   )
 }
@@ -2977,7 +3033,7 @@ function App() {
           <ResearchKanbanPanel selectedResearchId={selectedResearchIdFromMonthly} />
         ) : activeTab.id === 'report' ? (
           <>
-            <RecentWebappUpdatePanel />
+            <WeeklyCountingPanel />
             <MonthlyResearchSynthesisPanel onSelectResearchItem={openResearchItemFromMonthly} />
             <MuyeolValidationPanel />
           </>

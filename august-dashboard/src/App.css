@@ -8979,7 +8979,7 @@
   column-gap: clamp(28px, 3.8vw, 64px);
   row-gap: 10px;
   width: 100%;
-  margin: -4px 0 28px;
+  margin: 16px 0 28px;
   border: 0;
   padding: 0;
   background: transparent;
@@ -9049,17 +9049,118 @@
   margin-top: 0;
 }
 
-.weekly-webapp-update-card,
-:root[data-theme='dark'] .weekly-webapp-update-card {
+.weekly-counting-card,
+:root[data-theme='dark'] .weekly-counting-card {
   grid-column: 1 / -1;
 }
 
-.weekly-webapp-update-card ul,
-:root[data-theme='dark'] .weekly-webapp-update-card ul {
+.weekly-counting-grid,
+:root[data-theme='dark'] .weekly-counting-grid {
   display: grid;
-  gap: 8px;
-  margin: 18px 0 0;
-  padding-left: 1.1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.weekly-counting-metric,
+:root[data-theme='dark'] .weekly-counting-metric {
+  display: grid;
+  gap: 6px;
+  min-height: 132px;
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 18px;
+  background: var(--panel-surface);
+}
+
+.weekly-counting-metric span,
+:root[data-theme='dark'] .weekly-counting-metric span {
+  color: var(--quiet-ink);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.weekly-counting-metric strong,
+:root[data-theme='dark'] .weekly-counting-metric strong {
+  color: var(--ink);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 0.95;
+}
+
+.weekly-counting-metric small,
+:root[data-theme='dark'] .weekly-counting-metric small {
   color: var(--muted-ink);
-  line-height: 1.7;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .weekly-counting-grid,
+  :root[data-theme='dark'] .weekly-counting-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Stabilize Corporate AX child-tab switches so the content below does not jump. */
+.chrisArchive-workspace,
+.design-dna-workspace,
+:root[data-theme='dark'] .chrisArchive-workspace,
+:root[data-theme='dark'] .design-dna-workspace {
+  gap: 28px;
+}
+
+.chrisArchive-workspace .workspace-header,
+.design-dna-workspace .workspace-header,
+:root[data-theme='dark'] .chrisArchive-workspace .workspace-header,
+:root[data-theme='dark'] .design-dna-workspace .workspace-header {
+  min-height: clamp(138px, 12vw, 168px);
+  align-content: start;
+}
+
+.chrisArchive-workspace .workspace-tab-nav,
+.design-dna-workspace .workspace-tab-nav,
+:root[data-theme='dark'] .chrisArchive-workspace .workspace-tab-nav,
+:root[data-theme='dark'] .design-dna-workspace .workspace-tab-nav {
+  min-height: 25px;
+}
+
+.chris-archive-shell,
+.design-dna-shell,
+:root[data-theme='dark'] .chris-archive-shell,
+:root[data-theme='dark'] .design-dna-shell {
+  min-height: 720px;
+}
+
+@media (max-width: 560px) {
+  .chrisArchive-workspace .workspace-header,
+  .design-dna-workspace .workspace-header,
+  :root[data-theme='dark'] .chrisArchive-workspace .workspace-header,
+  :root[data-theme='dark'] .design-dna-workspace .workspace-header {
+    min-height: 172px;
+  }
+
+  .chris-archive-shell,
+  .design-dna-shell,
+  :root[data-theme='dark'] .chris-archive-shell,
+  :root[data-theme='dark'] .design-dna-shell {
+    min-height: 680px;
+  }
+}
+
+/* Prevent browser scroll anchoring from nudging Corporate AX content during child-tab swaps. */
+.chrisArchive-workspace,
+.design-dna-workspace,
+.chrisArchive-workspace .workspace-header,
+.design-dna-workspace .workspace-header,
+.chris-archive-shell,
+.design-dna-shell,
+:root[data-theme='dark'] .chrisArchive-workspace,
+:root[data-theme='dark'] .design-dna-workspace,
+:root[data-theme='dark'] .chrisArchive-workspace .workspace-header,
+:root[data-theme='dark'] .design-dna-workspace .workspace-header,
+:root[data-theme='dark'] .chris-archive-shell,
+:root[data-theme='dark'] .design-dna-shell {
+  overflow-anchor: none;
 }
