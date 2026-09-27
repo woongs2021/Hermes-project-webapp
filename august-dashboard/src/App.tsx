@@ -2779,10 +2779,11 @@ function App() {
   })
   const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialThemeMode)
   const [isMenuOpen, setIsMenuOpen] = useState(getInitialMenuOpen)
-  const [areSubTabsVisible, setAreSubTabsVisible] = useState(false)
   const [selectedResearchIdFromMonthly, setSelectedResearchIdFromMonthly] = useState('')
   const activeTabGroup = getTabGroupForTab(activeTab.id)
-  const visibleTabs = tabs
+  const bodyTabs = activeTabGroup.id === 'personal-ax' || activeTabGroup.id === 'corporate-ax'
+    ? getTabsForGroup(activeTabGroup)
+    : []
   const isDarkMode = themeMode === 'dark'
 
   useEffect(() => {
@@ -2802,7 +2803,6 @@ function App() {
   }
 
   function selectTabGroup(group: TabGroup) {
-    setAreSubTabsVisible((visible) => !visible)
     const preferredTab = group.tabIds.includes(activeTab.id) ? activeTab : getTabsForGroup(group)[0]
     if (!preferredTab) return
     setSelectedResearchIdFromMonthly('')
@@ -2878,25 +2878,9 @@ function App() {
                 type="button"
                 className={group.id === activeTabGroup.id ? 'tab-group-button active' : 'tab-group-button'}
                 aria-pressed={group.id === activeTabGroup.id}
-                aria-expanded={areSubTabsVisible}
                 onClick={() => selectTabGroup(group)}
               >
                 <span>{group.label}</span>
-              </button>
-            ))}
-          </div>
-
-          <div className={areSubTabsVisible ? 'tab-nav' : 'tab-nav collapsed'} aria-label={`${activeTabGroup.label} tabs`} aria-hidden={!areSubTabsVisible}>
-            {visibleTabs.map((tab) => (
-              <button
-                key={tab.id}
-                type="button"
-                className={tab.id === activeTab.id ? 'tab-button active' : 'tab-button'}
-                aria-pressed={tab.id === activeTab.id}
-                onClick={() => selectTab(tab)}
-              >
-                <span>{tab.label}</span>
-                <small>{tab.eyebrow}</small>
               </button>
             ))}
           </div>
@@ -2909,6 +2893,22 @@ function App() {
           <h2>{activeTab.title}</h2>
           <p>{activeTab.description}</p>
         </div>
+
+        {bodyTabs.length > 0 ? (
+          <nav className="workspace-tab-nav" aria-label={`${activeTabGroup.label} section tabs`}>
+            {bodyTabs.map((tab) => (
+              <button
+                key={tab.id}
+                type="button"
+                className={tab.id === activeTab.id ? 'workspace-tab-button active' : 'workspace-tab-button'}
+                aria-pressed={tab.id === activeTab.id}
+                onClick={() => selectTab(tab, { closeMobileMenu: false })}
+              >
+                <span>{tab.label}</span>
+              </button>
+            ))}
+          </nav>
+        ) : null}
 
         {activeTab.id === 'home' ? (
           <TeamPanel />
