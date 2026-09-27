@@ -4,7 +4,7 @@ import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type Rese
 import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, MuyeolValidationPanel, ObdGrowthTimelinePanel } from './extendedPanels'
 import { fallbackChrisArchive, loadChrisArchive, type ChrisArchiveItem, type ChrisArchiveManifest } from './chrisArchive'
 import { fallbackDnaArchive, loadDnaArchive, loadMidjourneyDnaArchive, type DnaArchiveItem, type DnaArchiveManifest } from './dnaArchive'
-import { fallbackBrandMockupAssets, loadBrandMockupAssets, type BrandMockupManifest } from './brandAssets'
+import { fallbackBrandMockupAssets, loadBrandMockupAssets, type BrandMockupAsset, type BrandMockupCollection, type BrandMockupManifest } from './brandAssets'
 import './App.css'
 
 const publicAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
@@ -16,6 +16,12 @@ type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-
 type ThemeMode = 'light' | 'dark'
 type ObdSubTabId = 'growth' | 'graph' | 'about'
 type TextSegment = { text: string; emphasis?: boolean }
+
+type BrandAssetSelection = {
+  item: BrandMockupAsset
+  collection: BrandMockupCollection
+  lane: 'Mockup' | 'Midjourney + Mockup'
+}
 
 type Tab = {
   id: TabId
@@ -2136,6 +2142,7 @@ function DesignDnaPanel() {
   const [midjourneyDnaArchive, setMidjourneyDnaArchive] = useState<DnaArchiveManifest>(fallbackDnaArchive)
   const [brandMockupAssets, setBrandMockupAssets] = useState<BrandMockupManifest>(fallbackBrandMockupAssets)
   const [selectedDnaAsset, setSelectedDnaAsset] = useState<DnaArchiveItem | null>(null)
+  const [selectedBrandAsset, setSelectedBrandAsset] = useState<BrandAssetSelection | null>(null)
   const [activeDesignDnaSection, setActiveDesignDnaSection] = useState<'system' | 'dashboard' | 'brandAsset'>('system')
   const [activeDnaDashboardSource, setActiveDnaDashboardSource] = useState<'gpt' | 'midjourney'>('gpt')
   const [activeBrandAssetSource, setActiveBrandAssetSource] = useState<'mockup' | 'midjourneyMockup'>('mockup')
@@ -2476,13 +2483,18 @@ function DesignDnaPanel() {
               </div>
               <div className="dna-brand-mockup-grid" aria-label="Coffee mockup assets moodboard">
                 {coffeeMockupCollection.items.map((item) => (
-                  <figure className="dna-brand-mockup-tile" key={item.id}>
+                  <button
+                    type="button"
+                    className="dna-brand-mockup-tile"
+                    key={item.id}
+                    onClick={() => setSelectedBrandAsset({ item, collection: coffeeMockupCollection, lane: 'Mockup' })}
+                  >
                     <img src={toAppAssetSrc(item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
-                    <figcaption>
+                    <span className="dna-brand-mockup-caption">
                       <strong>{item.title}</strong>
                       <span>{item.description}</span>
-                    </figcaption>
-                  </figure>
+                    </span>
+                  </button>
                 ))}
               </div>
             </section>
@@ -2498,13 +2510,18 @@ function DesignDnaPanel() {
               </div>
               <div className="dna-brand-mockup-grid" aria-label="Coffee asset example 01 moodboard">
                 {coffeeAssetExample.items.map((item) => (
-                  <figure className="dna-brand-mockup-tile" key={item.id}>
+                  <button
+                    type="button"
+                    className="dna-brand-mockup-tile"
+                    key={item.id}
+                    onClick={() => setSelectedBrandAsset({ item, collection: coffeeAssetExample, lane: 'Midjourney + Mockup' })}
+                  >
                     <img src={toAppAssetSrc(item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
-                    <figcaption>
+                    <span className="dna-brand-mockup-caption">
                       <strong>{item.title}</strong>
                       <span>{item.description}</span>
-                    </figcaption>
-                  </figure>
+                    </span>
+                  </button>
                 ))}
               </div>
             </section>
@@ -2552,6 +2569,72 @@ function DesignDnaPanel() {
                 <span>{selectedDnaAsset.prompt}</span>
               </div>
               <p className="manifest-policy">{selectedDnaAsset.sourceTool === 'Midjourney' ? midjourneyDnaArchive.sourcePolicy : dnaArchive.sourcePolicy}</p>
+            </div>
+          </article>
+        </div>
+      ) : null}
+
+      {selectedBrandAsset ? (
+        <div className="dna-generated-modal-backdrop" role="presentation" onClick={() => setSelectedBrandAsset(null)}>
+          <article className="dna-generated-modal dna-brand-asset-modal" role="dialog" aria-modal="true" aria-labelledby="dna-brand-asset-modal-title" onClick={(event) => event.stopPropagation()}>
+            <button type="button" className="chris-archive-modal-close" onClick={() => setSelectedBrandAsset(null)} aria-label="DNA Brand Asset 상세 팝업 닫기">
+              ×
+            </button>
+            <div className="dna-generated-modal-media dna-brand-asset-modal-media">
+              <img src={toAppAssetSrc(selectedBrandAsset.item.imageSrc)} alt={`${selectedBrandAsset.item.title} enlarged brand asset`} />
+            </div>
+            <div className="dna-generated-modal-copy dna-brand-asset-modal-copy">
+              <p className="card-kicker">{selectedBrandAsset.lane} · {selectedBrandAsset.collection.created} · {selectedBrandAsset.collection.status}</p>
+              <h3 id="dna-brand-asset-modal-title">{selectedBrandAsset.item.title}</h3>
+              <p>{selectedBrandAsset.item.description}</p>
+              <div className="chris-archive-chip-row" aria-label="Brand asset metadata">
+                <span>{selectedBrandAsset.collection.title}</span>
+                <span>{selectedBrandAsset.item.width} × {selectedBrandAsset.item.height}</span>
+                <span>{selectedBrandAsset.collection.items.length} assets</span>
+                {selectedBrandAsset.collection.logoText ? <span>{selectedBrandAsset.collection.logoText}</span> : null}
+              </div>
+              <div className="prompt-negative brand-asset-detail-block">
+                <strong>Collection note</strong>
+                <span>{selectedBrandAsset.collection.description}</span>
+              </div>
+              {selectedBrandAsset.collection.synthesisTool || selectedBrandAsset.collection.sourceGraphic || selectedBrandAsset.collection.logoFont ? (
+                <div className="brand-asset-detail-grid" aria-label="Synthesis details">
+                  {selectedBrandAsset.collection.synthesisTool ? (
+                    <div>
+                      <strong>Synthesis tool</strong>
+                      <span>{selectedBrandAsset.collection.synthesisTool}</span>
+                    </div>
+                  ) : null}
+                  {selectedBrandAsset.collection.sourceGraphic ? (
+                    <div>
+                      <strong>Source graphic</strong>
+                      <span>{selectedBrandAsset.collection.sourceGraphic}</span>
+                    </div>
+                  ) : null}
+                  {selectedBrandAsset.collection.logoFont ? (
+                    <div>
+                      <strong>Logo treatment</strong>
+                      <span>{selectedBrandAsset.collection.logoFont}</span>
+                    </div>
+                  ) : null}
+                  <div>
+                    <strong>Asset ID</strong>
+                    <span>{selectedBrandAsset.item.id}</span>
+                  </div>
+                </div>
+              ) : (
+                <div className="brand-asset-detail-grid" aria-label="Mockup details">
+                  <div>
+                    <strong>Asset ID</strong>
+                    <span>{selectedBrandAsset.item.id}</span>
+                  </div>
+                  <div>
+                    <strong>Asset role</strong>
+                    <span>Brand surface reference for applying Design DNA motifs.</span>
+                  </div>
+                </div>
+              )}
+              <p className="manifest-policy">{brandMockupAssets.sourcePolicy}</p>
             </div>
           </article>
         </div>

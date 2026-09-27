@@ -15,6 +15,10 @@ export type BrandMockupCollection = {
   status: string
   description: string
   items: BrandMockupAsset[]
+  sourceGraphic?: string
+  logoText?: string
+  logoFont?: string
+  synthesisTool?: string
 }
 
 export type BrandMockupManifest = {

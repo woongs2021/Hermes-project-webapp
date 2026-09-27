@@ -7074,6 +7074,17 @@
   border: 1px solid var(--stroke);
   border-radius: 26px;
   background: var(--card-bg);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dna-brand-mockup-tile:hover,
+.dna-brand-mockup-tile:focus-visible {
+  border-color: color-mix(in srgb, var(--primary) 34%, var(--stroke));
+  outline: none;
+  transform: translateY(-1px);
 }
 
 .dna-brand-mockup-tile img {
@@ -7084,7 +7095,7 @@
   background: color-mix(in srgb, var(--panel-surface) 82%, white);
 }
 
-.dna-brand-mockup-tile figcaption {
+.dna-brand-mockup-caption {
   display: grid;
   gap: 0.25rem;
   padding: 0 0.1rem 0.15rem;
@@ -7097,7 +7108,7 @@
   letter-spacing: -0.035em;
 }
 
-.dna-brand-mockup-tile span {
+.dna-brand-mockup-tile span:not(.dna-brand-mockup-caption) {
   color: var(--muted-ink);
   font-size: 0.78rem;
   line-height: 1.45;
@@ -8327,6 +8338,43 @@
   letter-spacing: -0.06em;
 }
 
+.dna-brand-asset-modal-media img {
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  background: color-mix(in srgb, var(--panel-surface) 82%, white);
+}
+
+.brand-asset-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.brand-asset-detail-grid > div {
+  display: grid;
+  gap: 0.3rem;
+  min-width: 0;
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 0.75rem;
+  background: color-mix(in srgb, var(--panel-surface) 82%, white);
+}
+
+.brand-asset-detail-grid strong,
+.brand-asset-detail-block strong {
+  color: var(--ink);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-asset-detail-grid span {
+  color: var(--muted-ink);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
 .design-dna-cluster-card p,
 .design-dna-prompt-card p,
 .cluster-use,
@@ -8442,6 +8490,7 @@
   .design-dna-process,
   .chris-design-archive-board,
   .dna-generated-modal,
+  .brand-asset-detail-grid,
   .design-dna-axis-map,
   .expression-layer-map,
   .design-dna-cluster-grid,
