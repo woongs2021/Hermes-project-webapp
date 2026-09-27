@@ -7173,7 +7173,7 @@
 .chris-archive-grid,
 .dna-generated-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.9rem;
 }
 
@@ -7444,8 +7444,8 @@
   }
 
   .chris-archive-modal {
-    width: min(92vw, 820px);
-    max-width: calc(100vw - 2rem);
+    width: min(90vw, 1280px);
+    max-width: 90vw;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 
@@ -7501,8 +7501,8 @@
   }
 
   .chris-archive-modal {
-    width: min(100%, 420px);
-    max-width: calc(100vw - 1.5rem);
+    width: min(90vw, 1280px);
+    max-width: 90vw;
     max-height: 92vh;
     border-radius: 26px;
   }
