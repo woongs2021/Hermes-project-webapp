@@ -2784,6 +2784,19 @@ function App() {
   const bodyTabs = activeTabGroup.id === 'personal-ax' || activeTabGroup.id === 'corporate-ax'
     ? getTabsForGroup(activeTabGroup)
     : []
+  const bodyGroupIntro = activeTabGroup.id === 'personal-ax'
+    ? {
+        eyebrow: 'Personal AX',
+        title: 'Chris의 개인 지식과 감각을 정리하는 AX 공간',
+        description: 'OBD Map, Research, Visual Archive를 통해 Chris가 모은 신호와 질문, 시각적 레퍼런스를 개인 운영체계처럼 연결해 보는 영역입니다.',
+      }
+    : activeTabGroup.id === 'corporate-ax'
+      ? {
+          eyebrow: 'Corporate AX',
+          title: '브랜드 자산과 디자인 DNA를 구축하는 AX 공간',
+          description: 'Chris Archive와 Design DNA를 중심으로 수집된 이미지, 미감, 언어, 구조를 장기적인 브랜드 시스템과 에셋 제작 기준으로 정리합니다.',
+        }
+      : null
   const isDarkMode = themeMode === 'dark'
 
   useEffect(() => {
@@ -2888,11 +2901,13 @@ function App() {
       </header>
 
       <section className={`workspace ${activeTab.id}-workspace`} aria-live="polite">
-        <div className="workspace-header">
-          <p className="eyebrow">{activeTab.eyebrow}</p>
-          <h2>{activeTab.title}</h2>
-          <p>{activeTab.description}</p>
-        </div>
+        {bodyGroupIntro ? (
+          <div className="workspace-group-intro">
+            <p className="eyebrow">{bodyGroupIntro.eyebrow}</p>
+            <h2>{bodyGroupIntro.title}</h2>
+            <p>{bodyGroupIntro.description}</p>
+          </div>
+        ) : null}
 
         {bodyTabs.length > 0 ? (
           <nav className="workspace-tab-nav" aria-label={`${activeTabGroup.label} section tabs`}>
@@ -2909,6 +2924,12 @@ function App() {
             ))}
           </nav>
         ) : null}
+
+        <div className="workspace-header">
+          <p className="eyebrow">{activeTab.eyebrow}</p>
+          <h2>{activeTab.title}</h2>
+          <p>{activeTab.description}</p>
+        </div>
 
         {activeTab.id === 'home' ? (
           <TeamPanel />
