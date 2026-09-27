@@ -8749,7 +8749,7 @@
   display: grid;
   width: 100%;
   max-height: none;
-  gap: 8px;
+  gap: 6px;
   overflow: visible;
   border: 0;
   border-radius: 0;
@@ -8766,7 +8766,7 @@
 :root[data-theme='dark'] .topbar .tab-menu.open {
   max-height: none;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border: 0;
   padding: 0;
   background: transparent;
