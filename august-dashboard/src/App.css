@@ -7177,7 +7177,14 @@
   gap: 0.9rem;
 }
 
-@media (max-width: 1024px) and (min-width: 761px) {
+@media (min-width: 1024px) {
+  .chris-archive-grid,
+  .dna-generated-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 761px) {
   .chris-archive-grid,
   .dna-generated-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -7438,7 +7445,7 @@
   background: rgba(16, 19, 28, 0.9);
 }
 
-@media (max-width: 1024px) and (min-width: 761px) {
+@media (max-width: 1023px) and (min-width: 761px) {
   .chris-archive-modal-backdrop {
     padding: 1rem;
   }
