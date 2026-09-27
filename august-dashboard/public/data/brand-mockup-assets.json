@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-27T12:45:00+09:00",
+  "generatedAt": "2026-09-27T13:00:00+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Contains only user-supplied mockup reference images selected by Chris; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -72,17 +72,17 @@
       "id": "coffee-asset-example-01",
       "title": "Coffee Asset Example 01",
       "created": "2026-09-26",
-      "status": "nano_banana_pro_logo_image_fusion_70",
+      "status": "nano_banana_pro_logo_image_fusion_30_navy_corner",
       "sourceGraphic": "Midjourney 01 — Capsule Pattern Translation",
       "logoText": "ONBOARD",
-      "description": "Nano Banana Pro logo-image fusion: Midjourney 01 graphic and a 70% scale ONBOARD Open Sans logo image integrated as subtle printed branding on Coffee Mockup Assets.",
+      "description": "Nano Banana Pro logo-image fusion: Midjourney 01 graphic and a 30% scale navy ONBOARD Open Sans logo image integrated as subtle corner branding on bright areas of Coffee Mockup Assets.",
       "items": [
         {
           "id": "coffee-asset-example-01-01",
           "title": "Onboard Cup Sleeve",
           "description": "Onboard cup sleeve application",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/01_onboard_cup_mockup.jpg",
-          "assetHash": "7e5876ae2785ff63510ac68b5a5c4f0f400111e3b5ffb090575abde6515ec553",
+          "assetHash": "190dd98ec957b1943d1756885369bfc224b9269d42b065e9772103adb8256589",
           "width": 2528,
           "height": 1696
         },
@@ -91,7 +91,7 @@
           "title": "Onboard Coffee Bag And Cup Counter",
           "description": "Onboard coffee bag and cup counter application",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/02_onboard_packaging_counter_mockup.jpg",
-          "assetHash": "6cc4211e6ff804bc6ab887daec54768313ef8d9408c92e9a4e43058e7e7c2b1d",
+          "assetHash": "b26d25e99b00935edfd7f08f50983ca893c10eee3c86b477630376c476c644f6",
           "width": 2528,
           "height": 1696
         },
@@ -100,7 +100,7 @@
           "title": "Onboard Stacked Cup Set",
           "description": "Onboard stacked cup set application",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/03_onboard_cup_set_mockup.jpg",
-          "assetHash": "98df3ac04ee1f52a72cd8e009ddf902bf3f0337281b9af621c0445c779265a6c",
+          "assetHash": "a49baa03dd3a613ae3eed8ee645089bf0697e8e7c99698b6bb256eaf7535d163",
           "width": 2528,
           "height": 1696
         },
@@ -109,7 +109,7 @@
           "title": "Onboard Tote Bag Mockup",
           "description": "Onboard tote bag mockup application",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/04_onboard_tote_mockup.jpg",
-          "assetHash": "e2244bae4fa8083024cb6cb0f303a92fefc5d91ddf07b9244f68bb2ffd4d012d",
+          "assetHash": "b44837921bd812805b7433eb9e11888fa1a8c821c5e69e20ba80332378adbb29",
           "width": 2528,
           "height": 1696
         },
@@ -118,7 +118,7 @@
           "title": "Onboard Close-Up Cup Body",
           "description": "Onboard close-up cup body application",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/05_onboard_closeup_cup_mockup.jpg",
-          "assetHash": "76762008f162845cb9497991758f6cf36a68e1c249351206c40579bed70633af",
+          "assetHash": "8f8085b44846b890f679f5d5c0cec839d10f7d2ea64e17a905c266e8e86f647b",
           "width": 2528,
           "height": 1696
         },
@@ -127,12 +127,12 @@
           "title": "Onboard Hanging Cafe Sign",
           "description": "Onboard hanging cafe sign application",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/06_onboard_hanging_sign_mockup.jpg",
-          "assetHash": "e2e79ff71cb7680785c5e450a557b18b6ad23335be2f15e78a2fd30d1c5aed56",
+          "assetHash": "092867c6c19f2e22987ef0670b68eb2bfd684a9ed3b2a94e3e43b2086bcc6cbd",
           "width": 2528,
           "height": 1696
         }
       ],
-      "logoFont": "Open Sans 700 logo image reference at 70% scale, no shadow, no stroke",
+      "logoFont": "Open Sans 700 navy logo image reference at 30% scale, corner placement, no shadow, no stroke",
       "synthesisTool": "Higgsfield Nano Banana Pro"
     }
   ]
