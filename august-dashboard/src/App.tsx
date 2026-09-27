@@ -2780,6 +2780,7 @@ function App() {
   const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialThemeMode)
   const [isMenuOpen, setIsMenuOpen] = useState(getInitialMenuOpen)
   const [selectedResearchIdFromMonthly, setSelectedResearchIdFromMonthly] = useState('')
+  const workspaceTabNavRef = useRef<HTMLElement | null>(null)
   const activeTabGroup = getTabGroupForTab(activeTab.id)
   const bodyTabs = activeTabGroup.id === 'personal-ax' || activeTabGroup.id === 'corporate-ax'
     ? getTabsForGroup(activeTabGroup)
@@ -2804,6 +2805,34 @@ function App() {
     document.documentElement.style.colorScheme = themeMode
     window.localStorage.setItem('august-dashboard-theme', themeMode)
   }, [themeMode])
+
+  useEffect(() => {
+    const nav = workspaceTabNavRef.current
+    if (!nav) return
+
+    const updateWorkspaceIndicator = () => {
+      const activeButton = nav.querySelector<HTMLButtonElement>('.workspace-tab-button.active')
+      if (!activeButton) {
+        nav.style.setProperty('--workspace-tab-indicator-opacity', '0')
+        return
+      }
+
+      const navBox = nav.getBoundingClientRect()
+      const buttonBox = activeButton.getBoundingClientRect()
+      nav.style.setProperty('--workspace-tab-indicator-left', `${buttonBox.left - navBox.left}px`)
+      nav.style.setProperty('--workspace-tab-indicator-width', `${buttonBox.width}px`)
+      nav.style.setProperty('--workspace-tab-indicator-opacity', '1')
+    }
+
+    updateWorkspaceIndicator()
+    const animationFrame = window.requestAnimationFrame(updateWorkspaceIndicator)
+    window.addEventListener('resize', updateWorkspaceIndicator)
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame)
+      window.removeEventListener('resize', updateWorkspaceIndicator)
+    }
+  }, [activeTab.id, bodyTabs.length])
 
   function selectTab(tab: Tab, options: { closeMobileMenu?: boolean } = {}) {
     const { closeMobileMenu = true } = options
@@ -2910,7 +2939,7 @@ function App() {
         ) : null}
 
         {bodyTabs.length > 0 ? (
-          <nav className="workspace-tab-nav" aria-label={`${activeTabGroup.label} section tabs`}>
+          <nav ref={workspaceTabNavRef} className="workspace-tab-nav" aria-label={`${activeTabGroup.label} section tabs`}>
             {bodyTabs.map((tab) => (
               <button
                 key={tab.id}
@@ -2922,6 +2951,7 @@ function App() {
                 <span>{tab.label}</span>
               </button>
             ))}
+            <span className="workspace-tab-indicator" aria-hidden="true" />
           </nav>
         ) : null}
 
