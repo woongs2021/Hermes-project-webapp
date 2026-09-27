@@ -6921,10 +6921,10 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.8rem;
-  padding: 0.45rem;
-  border: 1px solid color-mix(in srgb, var(--stroke) 72%, transparent);
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.34);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   box-shadow: none;
 }
 
@@ -6933,8 +6933,8 @@
   gap: 0.24rem;
   min-height: 74px;
   padding: 0.95rem 1rem;
-  border: 1px solid transparent;
-  border-radius: 20px;
+  border: 0;
+  border-radius: 0;
   background: transparent;
   color: var(--quiet-ink);
   text-align: left;
@@ -6945,7 +6945,7 @@
 .design-dna-section-tab span {
   color: inherit;
   font-size: clamp(1rem, 1.5vw, 1.35rem);
-  font-weight: 820;
+  font-weight: 650;
   letter-spacing: -0.04em;
 }
 
@@ -6956,8 +6956,8 @@
 }
 
 .design-dna-section-tab.active {
-  border-color: color-mix(in srgb, var(--stroke) 84%, transparent);
-  background: var(--surface);
+  border-color: transparent;
+  background: transparent;
   color: var(--ink);
   box-shadow: none;
 }
@@ -7436,13 +7436,16 @@
 
 :root[data-theme='dark'] .chris-archive-overview,
 :root[data-theme='dark'] .dna-dashboard-overview,
-:root[data-theme='dark'] .design-dna-section-tabs,
-:root[data-theme='dark'] .design-dna-section-tab.active,
 :root[data-theme='dark'] .chris-archive-tile,
 :root[data-theme='dark'] .chris-archive-candidate-list,
 :root[data-theme='dark'] .chris-archive-chip-row span,
 :root[data-theme='dark'] .chris-archive-stats span {
   background-color: rgba(16, 19, 28, 0.88);
+}
+
+:root[data-theme='dark'] .design-dna-section-tabs,
+:root[data-theme='dark'] .design-dna-section-tab.active {
+  background: transparent;
 }
 
 :root[data-theme='dark'] .chris-archive-modal {
@@ -7520,8 +7523,8 @@
 
   .design-dna-section-tabs {
     grid-template-columns: 1fr;
-    padding: 0.45rem;
-    border-radius: 24px;
+    padding: 0;
+    border-radius: 0;
   }
 
   .design-dna-section-tab {
