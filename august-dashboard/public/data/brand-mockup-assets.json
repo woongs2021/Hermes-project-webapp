@@ -134,63 +134,63 @@
       "synthesisTool": "Higgsfield Nano Banana Pro"
     },
     {
-      "id": "coffee-asset-example-04",
-      "title": "Coffee Pattern Example 04",
+      "id": "coffee-asset-example-02",
+      "title": "Coffee Pattern Example 02",
       "created": "2026-09-28",
       "status": "nano_banana_pro_pattern_only",
       "sourceGraphic": "Midjourney 20 — Monochrome Architectural Block Surface",
       "description": "Nano Banana Pro pattern-only synthesis: Midjourney 20 monochrome architectural block surface motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
       "items": [
         {
-          "id": "coffee-asset-example-04-01",
+          "id": "coffee-asset-example-02-01",
           "title": "Monochrome Block Cup Sleeve",
           "description": "Pattern-only cup sleeve application using Midjourney 20 monochrome architectural block surface motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/01_monochrome_block_cup_sleeve_mockup.jpg",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/01_monochrome_block_cup_sleeve_mockup.jpg",
           "assetHash": "b7fa72e3708063d2aa1dd32f971b000b812dbb594006ff03c86ada2a1fdc4420",
           "width": 2528,
           "height": 1696
         },
         {
-          "id": "coffee-asset-example-04-02",
+          "id": "coffee-asset-example-02-02",
           "title": "Monochrome Block Coffee Bag And Cup Counter",
           "description": "Pattern-only coffee bag and cup counter application using Midjourney 20 monochrome architectural block surface motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/02_monochrome_block_packaging_counter_mockup.jpg",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/02_monochrome_block_packaging_counter_mockup.jpg",
           "assetHash": "02b674372850030d16c620e5e4a7478eb461f8162043caadfd7bbdcde0291c49",
           "width": 2528,
           "height": 1696
         },
         {
-          "id": "coffee-asset-example-04-03",
+          "id": "coffee-asset-example-02-03",
           "title": "Monochrome Block Stacked Cup Set",
           "description": "Pattern-only stacked cup set application using Midjourney 20 monochrome architectural block surface motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/03_monochrome_block_stacked_cup_set_mockup.jpg",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/03_monochrome_block_stacked_cup_set_mockup.jpg",
           "assetHash": "e1179f9fca7ee17ca26b58d2f3632fc3224cdde80dda1e9e4a3fd808ce014e07",
           "width": 2528,
           "height": 1696
         },
         {
-          "id": "coffee-asset-example-04-04",
+          "id": "coffee-asset-example-02-04",
           "title": "Monochrome Block Tote And Takeaway Cup",
           "description": "Pattern-only tote and takeaway cup application using Midjourney 20 monochrome architectural block surface motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/04_monochrome_block_tote_and_takeaway_mockup.jpg",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/04_monochrome_block_tote_and_takeaway_mockup.jpg",
           "assetHash": "99153ed26e5c5b496e350dd6bf26cc366c5815964343cf967bb24aa41800e2f1",
           "width": 2528,
           "height": 1696
         },
         {
-          "id": "coffee-asset-example-04-05",
+          "id": "coffee-asset-example-02-05",
           "title": "Monochrome Block Close-Up Cup Body",
           "description": "Pattern-only close-up cup body application using Midjourney 20 monochrome architectural block surface motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/05_monochrome_block_closeup_cup_body_mockup.jpg",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/05_monochrome_block_closeup_cup_body_mockup.jpg",
           "assetHash": "e847452d314defcb47e50eff2b550213f02f10748d19a0c6d8cd67df5aac8ef4",
           "width": 2528,
           "height": 1696
         },
         {
-          "id": "coffee-asset-example-04-06",
+          "id": "coffee-asset-example-02-06",
           "title": "Monochrome Block Hanging Cafe Sign",
           "description": "Pattern-only hanging cafe sign application using Midjourney 20 monochrome architectural block surface motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/06_monochrome_block_hanging_cafe_sign_mockup.jpg",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/06_monochrome_block_hanging_cafe_sign_mockup.jpg",
           "assetHash": "6c31a0a9b73f38d274a621c66285875c6ed3906a5fc2489b0d173640fe0a3f85",
           "width": 2528,
           "height": 1696
@@ -199,64 +199,129 @@
       "synthesisTool": "Higgsfield Nano Banana Pro"
     },
     {
-      "id": "coffee-asset-example-05",
-      "title": "Coffee Pattern Example 05",
+      "id": "coffee-asset-example-03",
+      "title": "Coffee Pattern Example 03",
       "created": "2026-09-28",
       "status": "nano_banana_pro_pattern_only",
       "sourceGraphic": "Midjourney 08 — Soft Circular Ring Translation",
       "description": "Nano Banana Pro pattern-only synthesis: Midjourney 08 soft circular ring translation motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
       "items": [
         {
-          "id": "coffee-asset-example-05-01",
+          "id": "coffee-asset-example-03-01",
           "title": "Soft Ring Cup Sleeve",
           "description": "Pattern-only cup sleeve application using Midjourney 08 soft circular ring translation motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/01_soft_ring_cup_sleeve_mockup.jpg",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-03/2026-09-28/01_soft_ring_cup_sleeve_mockup.jpg",
           "assetHash": "fe4d9c3e6bb39e072bd3761f8a6a46f24d29d31dd37c9477c92ddb66521ad7a1",
           "width": 2528,
           "height": 1696
         },
         {
-          "id": "coffee-asset-example-05-02",
+          "id": "coffee-asset-example-03-02",
           "title": "Soft Ring Coffee Bag And Cup Counter",
           "description": "Pattern-only coffee bag and cup counter application using Midjourney 08 soft circular ring translation motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/02_soft_ring_packaging_counter_mockup.jpg",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-03/2026-09-28/02_soft_ring_packaging_counter_mockup.jpg",
           "assetHash": "d028b14d5b5eb221177e872cab1eaec2d8791b7dfa78e7d6f015bba9821f27b3",
           "width": 2528,
           "height": 1696
         },
         {
-          "id": "coffee-asset-example-05-03",
+          "id": "coffee-asset-example-03-03",
           "title": "Soft Ring Stacked Cup Set",
           "description": "Pattern-only stacked cup set application using Midjourney 08 soft circular ring translation motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/03_soft_ring_stacked_cup_set_mockup.jpg",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-03/2026-09-28/03_soft_ring_stacked_cup_set_mockup.jpg",
           "assetHash": "e36ff76d40223aac7bb5b3db92e1d5ebfccb1d3c1ea395869be35d34e82af79c",
           "width": 2528,
           "height": 1696
         },
         {
-          "id": "coffee-asset-example-05-04",
+          "id": "coffee-asset-example-03-04",
           "title": "Soft Ring Tote And Takeaway Cup",
           "description": "Pattern-only tote and takeaway cup application using Midjourney 08 soft circular ring translation motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/04_soft_ring_tote_and_takeaway_mockup.jpg",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-03/2026-09-28/04_soft_ring_tote_and_takeaway_mockup.jpg",
           "assetHash": "f4636448a49edd972cda4b858a5da2fe4e778428ce777d55c7bd504f3983f50d",
           "width": 2528,
           "height": 1696
         },
         {
-          "id": "coffee-asset-example-05-05",
+          "id": "coffee-asset-example-03-05",
           "title": "Soft Ring Close-Up Cup Body",
           "description": "Pattern-only close-up cup body application using Midjourney 08 soft circular ring translation motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/05_soft_ring_closeup_cup_body_mockup.jpg",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-03/2026-09-28/05_soft_ring_closeup_cup_body_mockup.jpg",
           "assetHash": "b60f5c9a4c96c4c67e6edb0da7ec3b97a9eb5bf0fbd2b68095593d2c28b69bc8",
           "width": 2528,
           "height": 1696
         },
         {
-          "id": "coffee-asset-example-05-06",
+          "id": "coffee-asset-example-03-06",
           "title": "Soft Ring Hanging Cafe Sign",
           "description": "Pattern-only hanging cafe sign application using Midjourney 08 soft circular ring translation motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/06_soft_ring_hanging_cafe_sign_mockup.jpg",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-03/2026-09-28/06_soft_ring_hanging_cafe_sign_mockup.jpg",
           "assetHash": "69bc32e2f5d8ec3a376c80ff36baecbafc578bd7935617f524cecde9d62ae9a9",
+          "width": 2528,
+          "height": 1696
+        }
+      ],
+      "synthesisTool": "Higgsfield Nano Banana Pro"
+    },
+    {
+      "id": "coffee-asset-example-04",
+      "title": "Coffee Pattern Example 04",
+      "created": "2026-09-28",
+      "status": "nano_banana_pro_pattern_only",
+      "sourceGraphic": "Midjourney 07 — Warm Earth Oval Surface Translation",
+      "description": "Nano Banana Pro pattern-only synthesis: Midjourney 07 warm earth oval surface translation motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
+      "items": [
+        {
+          "id": "coffee-asset-example-04-01",
+          "title": "Warm Earth Cup Sleeve",
+          "description": "Pattern-only cup sleeve application using Midjourney 07 warm earth oval surface translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/01_warm_earth_cup_sleeve_mockup.jpg",
+          "assetHash": "2a803d19d9acb64f3bf93d027dcb53ae36c9971bc48e0975205b443fb0c93424",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-04-02",
+          "title": "Warm Earth Coffee Bag And Cup Counter",
+          "description": "Pattern-only coffee bag and cup counter application using Midjourney 07 warm earth oval surface translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/02_warm_earth_packaging_counter_mockup.jpg",
+          "assetHash": "0ac3989617c7f43bbbc715009de99cd94f309f3a079cd9af426465bf5e52c346",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-04-03",
+          "title": "Warm Earth Stacked Cup Set",
+          "description": "Pattern-only stacked cup set application using Midjourney 07 warm earth oval surface translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/03_warm_earth_stacked_cup_set_mockup.jpg",
+          "assetHash": "f461a43cc1f28b0a0041f084bbebf91f0d37a6ea9cee37c26eb81f48b74a9709",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-04-04",
+          "title": "Warm Earth Tote And Takeaway Cup",
+          "description": "Pattern-only tote and takeaway cup application using Midjourney 07 warm earth oval surface translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/04_warm_earth_tote_and_takeaway_mockup.jpg",
+          "assetHash": "0bc690d0f605e6bcf98b9c7c6e316cbc917dbc5c90c814c0183902d91aa9ec1f",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-04-05",
+          "title": "Warm Earth Close-Up Cup Body",
+          "description": "Pattern-only close-up cup body application using Midjourney 07 warm earth oval surface translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/05_warm_earth_closeup_cup_body_mockup.jpg",
+          "assetHash": "cd22e2c81d5c93e5ae2616c94bb5e64a5a9a4bb799286228a34dc25235efc9e7",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-04-06",
+          "title": "Warm Earth Hanging Cafe Sign",
+          "description": "Pattern-only hanging cafe sign application using Midjourney 07 warm earth oval surface translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/06_warm_earth_hanging_cafe_sign_mockup.jpg",
+          "assetHash": "e8ff59c801b7964dfd7e49bfb6e986b341430c074809bddfb740452e41581067",
           "width": 2528,
           "height": 1696
         }
