@@ -198,6 +198,71 @@
       ],
       "synthesisTool": "Higgsfield Nano Banana Pro",
       "updatedAt": "2026-09-28T00:00:00+09:00"
+    },
+    {
+      "id": "coffee-asset-example-03",
+      "title": "Coffee Pattern Example 03",
+      "created": "2026-09-28",
+      "status": "nano_banana_pro_pattern_only",
+      "sourceGraphic": "Midjourney 18 — Floral Radial Signal Bloom",
+      "description": "Nano Banana Pro pattern-only synthesis: Midjourney 18 floral radial signal bloom motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
+      "items": [
+        {
+          "id": "coffee-asset-example-03-01",
+          "title": "Floral Bloom Cup Sleeve",
+          "description": "Pattern-only cup sleeve application using Midjourney 18 floral radial signal bloom motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-03/2026-09-28/01_floral_bloom_cup_sleeve_mockup.jpg",
+          "assetHash": "8a450dd64803ff0801edcf9b6f241e74431f7095b9efabe86aaac0439d4db5e2",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-03-02",
+          "title": "Floral Bloom Coffee Bag And Cup Counter",
+          "description": "Pattern-only coffee bag and cup counter application using Midjourney 18 floral radial signal bloom motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-03/2026-09-28/02_floral_bloom_packaging_counter_mockup.jpg",
+          "assetHash": "25034227f052c34afaf78a7c189f52613f270299a7ff76dbd40d0dfe953a565e",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-03-03",
+          "title": "Floral Bloom Stacked Cup Set",
+          "description": "Pattern-only stacked cup set application using Midjourney 18 floral radial signal bloom motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-03/2026-09-28/03_floral_bloom_stacked_cup_set_mockup.jpg",
+          "assetHash": "6e17edd8c87cc5072e351f17024bbb299afb9cbf61dae136a4f94d185b292f1c",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-03-04",
+          "title": "Floral Bloom Tote And Takeaway Cup",
+          "description": "Pattern-only tote and takeaway cup application using Midjourney 18 floral radial signal bloom motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-03/2026-09-28/04_floral_bloom_tote_and_takeaway_mockup.jpg",
+          "assetHash": "20dc584984d7ba3e8720048bedb135586d5080945bc1db10be507f9a41d0785b",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-03-05",
+          "title": "Floral Bloom Close-Up Cup Body",
+          "description": "Pattern-only close-up cup body application using Midjourney 18 floral radial signal bloom motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-03/2026-09-28/05_floral_bloom_closeup_cup_body_mockup.jpg",
+          "assetHash": "1c345d8f9afd7695ef251fd6f9a4b3270fcb06f5ae302fe828fd18285a541e10",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-03-06",
+          "title": "Floral Bloom Hanging Cafe Sign",
+          "description": "Pattern-only hanging cafe sign application using Midjourney 18 floral radial signal bloom motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-03/2026-09-28/06_floral_bloom_hanging_cafe_sign_mockup.jpg",
+          "assetHash": "6893ff916d33767cf8317d1fc7800de4347a06acb401861dfb01c669486aeea0",
+          "width": 2528,
+          "height": 1696
+        }
+      ],
+      "synthesisTool": "Higgsfield Nano Banana Pro"
     }
   ]
 }
