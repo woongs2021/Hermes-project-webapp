@@ -27,27 +27,25 @@ Chris Archive의 한두 가지 익숙한 조형(capsule, circle, contour line)�
    - readable text, letter, number, logo, watermark, UI chrome, product mockup, people을 금지합니다.
    - 참고 레퍼런스에 텍스트가 있더라도 텍스트를 복제하지 않고 구조·리듬·색장만 추출합니다.
 
-## 2026-09-28에 확정된 5개 axis
-1. Warm Gray Context Surface Field
-   - 역할: 조용한 background surface / label zone
-   - 강점: 여백, warm gray, 낮은 밀도, 카드/패키지 배경 활용성
-
-2. Monochrome Editorial Block System
+## 2026-09-28에 웹앱에 남긴 4개 axis
+1. Monochrome Editorial Block System
    - 역할: 강한 editorial crop / geometric poster surface
    - 강점: black/warm-white/lime-gray, 비대칭 block tension, capsule/line 반복 탈출
 
-3. Iridescent Chrome Surface Field
+2. Iridescent Chrome Surface Field
    - 역할: hero background / material mood surface
    - 강점: pearl, graphite, smoky lavender, oily cyan 계열의 tactile optical material
    - 주의: chrome 물성이 과해지면 object-like해질 수 있어 필요 시 더 flat하게 조정합니다.
 
-4. Bitmap Stripe Rhythm Surface
+3. Bitmap Stripe Rhythm Surface
    - 역할: repeat pattern / energetic card or package texture
    - 강점: pixel block, horizontal stripe, riso/screenprint texture, 가장 뚜렷한 style divergence
 
-5. Floral Signal Void Field
+4. Floral Signal Void Field
    - 역할: bold accent/background surface
    - 강점: bloom-like radial color field, red void, magenta-cyan tension, 감성적 signal field
+
+삭제 기록: `Warm Gray Context Surface Field`는 2026-09-28에 Chris 판단으로 웹앱/DNA Dashboard와 selected archive에서 제거했습니다. 다음 생성 방식에서는 warm-gray/capsule/circle/line 기본값으로 수렴하지 않기 위한 반례로만 참고합니다.
 
 ## 다음 생성 시 운영 규칙
 - 5개 후보를 만들 때 최소 4개는 서로 다른 archive axis에서 출발합니다.

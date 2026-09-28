@@ -259,26 +259,21 @@ const chrisArchiveExtractionCards = [
 const designDnaVisualStyleAxes = [
   {
     label: '01',
-    title: 'Warm Gray Context Surface',
-    role: 'background surface / label zone',
-  },
-  {
-    label: '02',
     title: 'Monochrome Editorial Block',
     role: 'editorial crop / geometric poster surface',
   },
   {
-    label: '03',
+    label: '02',
     title: 'Iridescent Chrome Surface',
     role: 'hero background / material mood surface',
   },
   {
-    label: '04',
+    label: '03',
     title: 'Bitmap Stripe Rhythm',
     role: 'repeat pattern / energetic package texture',
   },
   {
-    label: '05',
+    label: '04',
     title: 'Floral Signal Void',
     role: 'bold accent / emotional signal field',
   },

@@ -536,40 +536,6 @@
       "midjourneyPrompt": "cropped edge hinge accent motif, abstract corner and edge graphic material, large diagonal color field entering from one edge, quiet hinge-like accent structure, warm gray, parchment, muted cobalt, soft coral and charcoal balance, generous negative space, not a circle badge, not a seal, not a logo, useful for package corner, card edge, UI section accent, flat 2D editorial product graphic --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient, circle badge, seal mark"
     },
     {
-      "id": "2026-09-28-goyj-01-warm-gray-context-surface-field",
-      "title": "Warm Gray Context Surface Field",
-      "created": "2026-09-28",
-      "status": "chris_selected",
-      "imageSrc": "/assets/dna-archive/2026-09-28/01_warm_gray_context_surface_field.png",
-      "prompt": "Original Hermes design-system graphic motif material for future brand, package, UI, and mockup composition, based on repeated visual principles from an internal design archive. It is not a finished poster, not a product mockup, not a logo, not an app icon, and not a standalone artwork. 1:1 square composition, composable visual layer, useful for cropping, masking, overlaying, repeating, or placing on packaging/UI surfaces. Core DNA: Protected Human Context, Warm-Cool Intelligence, Quiet Signal Rhythm, Tactile Optical Material, Editorial Evidence System, Soft Object / Presence Mark. Include clear negative space, usable edge-to-edge or crop-friendly composition, graphic motif layer not finished layout, subtle grid/label/symbol zones without readable text, restrained Hermes palette and material feeling, high design utility for later mockup synthesis, Chris Archive-derived color, spacing, quiet editorial structure, surface feeling, and motif rhythm, clean primary motif only. Create 01 Surface Field Motif: a calm warm-gray editorial surface field with very soft frosted-paper and gel-lens material feeling, broad negative space, faint non-readable label zones and subtle blank specimen rectangles, quiet cobalt shadow wash and tiny muted coral material cue only as filled soft accent. Edge-to-edge usable background layer, low density, no central hero object, no lines, no scratches, no dots, no orbit, no decorative marks. Palette: warm gray, chalk white, charcoal haze, restrained cobalt-cyan undertone, tiny muted coral fill. Senior product-design report mood, One UI-level calm polish, flat enough for later overlay. No readable text, no third-party text, no brand names, no logos, no finished poster, no completed package label, no app icon, no exact reference layout, no product mockup, no UI screenshot, no robot, no brain symbol, no magic sparkle, no generic AI startup neon gradient, no cinematic object render, no decorative wallpaper-only image, no surveillance dashboard, no fake UI copy, no copyrighted character, no known package imitation, no sharp aggressive objects, no cluttered interface, no incidental decorative lines, no random scratches, no unnecessary orbit marks, no mixed visual systems, no yellow line graphic decoration.",
-      "analysis": "여백과 표면 유틸리티를 최우선으로 둔 후보입니다. 완성 포스터가 아니라 조용한 배경 재료로 쓰기 좋고, 라인 장식 없이 warm gray·cobalt·soft coral의 낮은 밀도를 유지하도록 설계했습니다. Chris가 2026-09-28 후보 중 1번만 저장 대상으로 직접 선택했습니다.",
-      "sourceRun": "/opt/data/dna-archive/candidates/2026-09-28/images/01.png",
-      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-28",
-      "dnaClusters": [
-        "Protected Human Context",
-        "Editorial Evidence System",
-        "Tactile Optical Material",
-        "Warm-Cool Intelligence"
-      ],
-      "model": "gpt_image_2_5",
-      "options": {
-        "aspect_ratio": "1:1",
-        "quality": "high",
-        "resolution": "1k",
-        "variant": "flare",
-        "background": "opaque"
-      },
-      "width": 1024,
-      "height": 1024,
-      "selectedReason": "Chris selected only candidate 1 from the 2026-09-28 DNA/Chris Archive graphic motif set and asked to save it.",
-      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20260928_011711_1027dbc1-cc87-419a-b1cb-7ae667dd9c09.png",
-      "localSelectedPath": "/opt/data/dna-archive/selected/2026-09-28/images/01_warm_gray_context_surface_field.png",
-      "savedAt": "2026-09-28T00:00:00+09:00",
-      "motifType": "Surface Field Motif",
-      "intendedLaterUse": "브랜드/패키지/모바일 UI 배경에 낮게 깔 수 있는 edge-to-edge surface, label zone 또는 카드 배경으로 합성하기 좋음",
-      "midjourneyPrompt": "warm gray editorial context surface field, abstract composable graphic material, broad negative space, frosted paper and soft gel-lens surface, warm gray, chalk white, charcoal haze, restrained cobalt-cyan undertone, tiny muted coral filled accent, quiet evidence-system specimen zones without text, low-density premium product-design surface, useful as brand package or UI background layer --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
-    },
-    {
       "id": "2026-09-28-goyj-02-02-monochrome-editorial-block-system",
       "title": "Monochrome Editorial Block System",
       "created": "2026-09-28",
