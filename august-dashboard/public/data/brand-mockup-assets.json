@@ -328,6 +328,71 @@
         }
       ],
       "synthesisTool": "Higgsfield Nano Banana Pro"
+    },
+    {
+      "id": "coffee-asset-example-05",
+      "title": "Coffee Pattern Example 05",
+      "created": "2026-09-28",
+      "status": "nano_banana_pro_pattern_only",
+      "sourceGraphic": "Midjourney 08 — Soft Circular Ring Translation",
+      "description": "Nano Banana Pro pattern-only synthesis: Midjourney 08 soft circular ring translation motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
+      "items": [
+        {
+          "id": "coffee-asset-example-05-01",
+          "title": "Soft Ring Cup Sleeve",
+          "description": "Pattern-only cup sleeve application using Midjourney 08 soft circular ring translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/01_soft_ring_cup_sleeve_mockup.jpg",
+          "assetHash": "fe4d9c3e6bb39e072bd3761f8a6a46f24d29d31dd37c9477c92ddb66521ad7a1",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-05-02",
+          "title": "Soft Ring Coffee Bag And Cup Counter",
+          "description": "Pattern-only coffee bag and cup counter application using Midjourney 08 soft circular ring translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/02_soft_ring_packaging_counter_mockup.jpg",
+          "assetHash": "d028b14d5b5eb221177e872cab1eaec2d8791b7dfa78e7d6f015bba9821f27b3",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-05-03",
+          "title": "Soft Ring Stacked Cup Set",
+          "description": "Pattern-only stacked cup set application using Midjourney 08 soft circular ring translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/03_soft_ring_stacked_cup_set_mockup.jpg",
+          "assetHash": "e36ff76d40223aac7bb5b3db92e1d5ebfccb1d3c1ea395869be35d34e82af79c",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-05-04",
+          "title": "Soft Ring Tote And Takeaway Cup",
+          "description": "Pattern-only tote and takeaway cup application using Midjourney 08 soft circular ring translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/04_soft_ring_tote_and_takeaway_mockup.jpg",
+          "assetHash": "f4636448a49edd972cda4b858a5da2fe4e778428ce777d55c7bd504f3983f50d",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-05-05",
+          "title": "Soft Ring Close-Up Cup Body",
+          "description": "Pattern-only close-up cup body application using Midjourney 08 soft circular ring translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/05_soft_ring_closeup_cup_body_mockup.jpg",
+          "assetHash": "b60f5c9a4c96c4c67e6edb0da7ec3b97a9eb5bf0fbd2b68095593d2c28b69bc8",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-05-06",
+          "title": "Soft Ring Hanging Cafe Sign",
+          "description": "Pattern-only hanging cafe sign application using Midjourney 08 soft circular ring translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/06_soft_ring_hanging_cafe_sign_mockup.jpg",
+          "assetHash": "69bc32e2f5d8ec3a376c80ff36baecbafc578bd7935617f524cecde9d62ae9a9",
+          "width": 2528,
+          "height": 1696
+        }
+      ],
+      "synthesisTool": "Higgsfield Nano Banana Pro"
     }
   ]
 }
