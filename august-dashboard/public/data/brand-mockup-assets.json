@@ -171,9 +171,9 @@
         {
           "id": "coffee-asset-example-02-04",
           "title": "Cyan Arc Tote And Takeaway Cup",
-          "description": "Pattern-only tote and takeaway cup application using Midjourney 15 cyan luminous arc motif",
+          "description": "Revised pattern-only tote and takeaway cup application using Midjourney 15 cyan luminous arc motif with darker integrated surface fields",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/04_cyan_arc_tote_and_takeaway_mockup.jpg",
-          "assetHash": "3c194ebd530b3729fe6eb07b3b39b0243ba0e48510643f8b9f5f947b2b3a3d01",
+          "assetHash": "cfa78740b428e061b57bc06115e77f1cfa097fe3200143079e52116d87f9cfad",
           "width": 2528,
           "height": 1696
         },
@@ -196,7 +196,8 @@
           "height": 1696
         }
       ],
-      "synthesisTool": "Higgsfield Nano Banana Pro"
+      "synthesisTool": "Higgsfield Nano Banana Pro",
+      "updatedAt": "2026-09-28T00:00:00+09:00"
     }
   ]
 }
