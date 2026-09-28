@@ -263,6 +263,71 @@
         }
       ],
       "synthesisTool": "Higgsfield Nano Banana Pro"
+    },
+    {
+      "id": "coffee-asset-example-04",
+      "title": "Coffee Pattern Example 04",
+      "created": "2026-09-28",
+      "status": "nano_banana_pro_pattern_only",
+      "sourceGraphic": "Midjourney 20 — Monochrome Architectural Block Surface",
+      "description": "Nano Banana Pro pattern-only synthesis: Midjourney 20 monochrome architectural block surface motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
+      "items": [
+        {
+          "id": "coffee-asset-example-04-01",
+          "title": "Monochrome Block Cup Sleeve",
+          "description": "Pattern-only cup sleeve application using Midjourney 20 monochrome architectural block surface motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/01_monochrome_block_cup_sleeve_mockup.jpg",
+          "assetHash": "b7fa72e3708063d2aa1dd32f971b000b812dbb594006ff03c86ada2a1fdc4420",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-04-02",
+          "title": "Monochrome Block Coffee Bag And Cup Counter",
+          "description": "Pattern-only coffee bag and cup counter application using Midjourney 20 monochrome architectural block surface motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/02_monochrome_block_packaging_counter_mockup.jpg",
+          "assetHash": "02b674372850030d16c620e5e4a7478eb461f8162043caadfd7bbdcde0291c49",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-04-03",
+          "title": "Monochrome Block Stacked Cup Set",
+          "description": "Pattern-only stacked cup set application using Midjourney 20 monochrome architectural block surface motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/03_monochrome_block_stacked_cup_set_mockup.jpg",
+          "assetHash": "e1179f9fca7ee17ca26b58d2f3632fc3224cdde80dda1e9e4a3fd808ce014e07",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-04-04",
+          "title": "Monochrome Block Tote And Takeaway Cup",
+          "description": "Pattern-only tote and takeaway cup application using Midjourney 20 monochrome architectural block surface motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/04_monochrome_block_tote_and_takeaway_mockup.jpg",
+          "assetHash": "99153ed26e5c5b496e350dd6bf26cc366c5815964343cf967bb24aa41800e2f1",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-04-05",
+          "title": "Monochrome Block Close-Up Cup Body",
+          "description": "Pattern-only close-up cup body application using Midjourney 20 monochrome architectural block surface motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/05_monochrome_block_closeup_cup_body_mockup.jpg",
+          "assetHash": "e847452d314defcb47e50eff2b550213f02f10748d19a0c6d8cd67df5aac8ef4",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-04-06",
+          "title": "Monochrome Block Hanging Cafe Sign",
+          "description": "Pattern-only hanging cafe sign application using Midjourney 20 monochrome architectural block surface motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-04/2026-09-28/06_monochrome_block_hanging_cafe_sign_mockup.jpg",
+          "assetHash": "6c31a0a9b73f38d274a621c66285875c6ed3906a5fc2489b0d173640fe0a3f85",
+          "width": 2528,
+          "height": 1696
+        }
+      ],
+      "synthesisTool": "Higgsfield Nano Banana Pro"
     }
   ]
 }
