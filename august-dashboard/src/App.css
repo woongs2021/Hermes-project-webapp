@@ -6967,6 +6967,74 @@
   gap: clamp(1rem, 2vw, 1.4rem);
 }
 
+.design-dna-generation-method {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
+  gap: clamp(1rem, 2.2vw, 1.8rem);
+  align-items: stretch;
+}
+
+.design-dna-method-copy {
+  display: grid;
+  align-content: start;
+  gap: 0.78rem;
+}
+
+.design-dna-method-copy h3 {
+  max-width: 680px;
+  margin: 0;
+  font-size: clamp(1.45rem, 2.6vw, 2.08rem);
+  line-height: 1.14;
+  letter-spacing: -0.045em;
+}
+
+.design-dna-method-copy p:not(.card-kicker) {
+  margin: 0;
+  max-width: 740px;
+  color: var(--muted-ink);
+  line-height: 1.72;
+}
+
+.design-dna-method-axis-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.72rem;
+}
+
+.design-dna-method-axis {
+  display: grid;
+  align-content: start;
+  gap: 0.44rem;
+  min-height: 148px;
+  padding: 0.95rem;
+  border: 1px solid color-mix(in srgb, var(--stroke) 72%, transparent);
+  border-radius: 22px;
+  background: color-mix(in srgb, var(--surface) 74%, transparent);
+  box-shadow: none;
+}
+
+.design-dna-method-axis span {
+  color: var(--quiet-ink);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.design-dna-method-axis strong {
+  color: var(--ink);
+  font-size: 0.98rem;
+  font-weight: 650;
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+}
+
+.design-dna-method-axis small {
+  color: var(--muted-ink);
+  font-size: 0.74rem;
+  line-height: 1.42;
+}
+
 .dna-dashboard-overview {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
@@ -7513,6 +7581,16 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .design-dna-generation-method {
+    grid-template-columns: 1fr;
+  }
+
+  .design-dna-method-axis-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 760px) {
   .chris-archive-overview,
   .dna-dashboard-overview,
@@ -7529,6 +7607,14 @@
 
   .design-dna-section-tab {
     min-height: 64px;
+  }
+
+  .design-dna-method-axis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .design-dna-method-axis {
+    min-height: 0;
   }
 
   .chris-archive-grid,

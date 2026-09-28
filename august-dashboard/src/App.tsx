@@ -10,6 +10,7 @@ import './App.css'
 const publicAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
 const hermesDesignSystemDocHref = publicAssetPath('/docs/hermes-design-system.md')
 const designDnaSystemPrinciplesDocHref = publicAssetPath('/docs/design-dna-system-principles.md')
+const designDnaVisualStyleMethodDocHref = publicAssetPath('/docs/design-dna-visual-style-generation-method-2026-09-28.md')
 const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
 
 type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report'
@@ -252,6 +253,34 @@ const chrisArchiveExtractionCards = [
   {
     title: 'How it becomes a system',
     copy: 'Reference는 evidence가 되고, evidence는 repeated pattern이 되고, pattern은 compressed cluster가 됩니다. 이 클러스터가 헤르메스디자인시스템의 token, component, prompt package, critique checklist로 변환됩니다.',
+  },
+]
+
+const designDnaVisualStyleAxes = [
+  {
+    label: '01',
+    title: 'Warm Gray Context Surface',
+    role: 'background surface / label zone',
+  },
+  {
+    label: '02',
+    title: 'Monochrome Editorial Block',
+    role: 'editorial crop / geometric poster surface',
+  },
+  {
+    label: '03',
+    title: 'Iridescent Chrome Surface',
+    role: 'hero background / material mood surface',
+  },
+  {
+    label: '04',
+    title: 'Bitmap Stripe Rhythm',
+    role: 'repeat pattern / energetic package texture',
+  },
+  {
+    label: '05',
+    title: 'Floral Signal Void',
+    role: 'bold accent / emotional signal field',
   },
 ]
 
@@ -2320,6 +2349,36 @@ function DesignDnaPanel() {
               <p className="card-kicker">Archive learning</p>
               <h4>{item.title}</h4>
               <p>{item.copy}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="content-card design-dna-generation-method" aria-label="GoYJ visual style generation method">
+        <div className="design-dna-method-copy">
+          <p className="card-kicker">GoYJ Visual Style Method · 2026-09-28</p>
+          <h3>후보를 만들기 전에 서로 다른 archive axis를 먼저 배치합니다.</h3>
+          <p>
+            오늘 확정한 생성 방식은 하나의 예쁜 스타일을 반복하는 것이 아니라, Chris Archive 안의 서로 다른 미감 축을 먼저 고르고
+            각 후보가 다른 조형 문법을 갖도록 만드는 방식입니다. capsule, circle, contour line 같은 익숙한 기본값에 수렴하지 않도록
+            후보 간 거리를 먼저 설계합니다.
+          </p>
+          <div className="chris-design-system-actions design-dna-principles-actions" aria-label="Visual style generation method actions">
+            <a
+              className="chris-design-system-download"
+              href={designDnaVisualStyleMethodDocHref}
+              download="design-dna-visual-style-generation-method-2026-09-28.md"
+            >
+              생성방식 MD 다운로드
+            </a>
+          </div>
+        </div>
+        <div className="design-dna-method-axis-grid" aria-label="2026-09-28 visual style axes">
+          {designDnaVisualStyleAxes.map((axis) => (
+            <article className="design-dna-method-axis" key={axis.label}>
+              <span>{axis.label}</span>
+              <strong>{axis.title}</strong>
+              <small>{axis.role}</small>
             </article>
           ))}
         </div>
