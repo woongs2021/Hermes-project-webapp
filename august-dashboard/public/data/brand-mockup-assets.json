@@ -327,6 +327,71 @@
         }
       ],
       "synthesisTool": "Higgsfield Nano Banana Pro"
+    },
+    {
+      "id": "coffee-asset-example-05",
+      "title": "Coffee Pattern Example 05",
+      "created": "2026-09-28",
+      "status": "nano_banana_pro_pattern_only",
+      "sourceGraphic": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation",
+      "description": "Nano Banana Pro pattern-only synthesis: Midjourney 11 ambient blue-peach gradient surface translation motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
+      "items": [
+        {
+          "id": "coffee-asset-example-05-01",
+          "title": "Ambient Gradient Cup Sleeve",
+          "description": "Pattern-only cup sleeve application using Midjourney 11 ambient blue-peach gradient surface translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/01_ambient_gradient_cup_sleeve_mockup.jpg",
+          "assetHash": "919f2063942ae1ebf1b94c75e9ad7edb0c939ca3e6d4922187ca058863c7abda",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-05-02",
+          "title": "Ambient Gradient Coffee Bag And Cup Counter",
+          "description": "Pattern-only coffee bag and cup counter application using Midjourney 11 ambient blue-peach gradient surface translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/02_ambient_gradient_packaging_counter_mockup.jpg",
+          "assetHash": "8480405fbfe2c32604d45e925909e5a282832483650e189123b21e76bd7313af",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-05-03",
+          "title": "Ambient Gradient Stacked Cup Set",
+          "description": "Pattern-only stacked cup set application using Midjourney 11 ambient blue-peach gradient surface translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/03_ambient_gradient_stacked_cup_set_mockup.jpg",
+          "assetHash": "7da100cb2b4227286fd95efed8de528e3fda955b015d2c6d0da5a69d6bf54e59",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-05-04",
+          "title": "Ambient Gradient Tote And Takeaway Cup",
+          "description": "Pattern-only tote and takeaway cup application using Midjourney 11 ambient blue-peach gradient surface translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/04_ambient_gradient_tote_and_takeaway_mockup.jpg",
+          "assetHash": "13fa8dc7602e9a686c5a2e28aa834a484aea84df070c732fdfa8ab094b04b952",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-05-05",
+          "title": "Ambient Gradient Close-Up Cup Body",
+          "description": "Pattern-only close-up cup body application using Midjourney 11 ambient blue-peach gradient surface translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/05_ambient_gradient_closeup_cup_body_mockup.jpg",
+          "assetHash": "155bfc03b73e8f03d92b0ce0fac69991f5604ced074311d998db2c33a7bfb384",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-05-06",
+          "title": "Ambient Gradient Hanging Cafe Sign",
+          "description": "Pattern-only hanging cafe sign application using Midjourney 11 ambient blue-peach gradient surface translation motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/06_ambient_gradient_hanging_cafe_sign_mockup.jpg",
+          "assetHash": "89fe3fb8ed45d6276115ccee9943c0b60b765480165746a1e43062aa93637b85",
+          "width": 2528,
+          "height": 1696
+        }
+      ],
+      "synthesisTool": "Higgsfield Nano Banana Pro"
     }
   ]
 }
