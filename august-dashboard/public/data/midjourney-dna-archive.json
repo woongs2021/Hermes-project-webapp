@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-26T00:00:00+09:00",
+  "generatedAt": "2026-09-28T00:00:00+09:00",
   "sourcePolicy": "Public-safe manually supplied Midjourney outputs selected by Chris for Design DNA. Excludes raw private chats, credentials, and provider account details.",
   "items": [
     {
@@ -321,6 +321,98 @@
         "Tactile Optical Material",
         "Soft Presence Circle",
         "Protected Human Context"
+      ]
+    },
+    {
+      "id": "2026-09-28-midjourney-17-bitmap-stripe-rhythm-surface",
+      "title": "Midjourney 17 — Bitmap Stripe Rhythm Surface",
+      "created": "2026-09-28",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-09-28/17_bitmap_stripe_rhythm_manual_midjourney.jpg",
+      "prompt": "bitmap stripe rhythm surface, pure 2D abstract pattern, staggered horizontal bars, off-white paper base, deep black/navy blocks, muted yellow, dusty sky blue, small brick red accents, riso screenprint texture, tactile grain, crop-friendly packaging and card surface --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "bitmap stripe rhythm surface, pure 2D abstract pattern, staggered horizontal bars, off-white paper base, deep black/navy blocks, muted yellow, dusty sky blue, small brick red accents, riso screenprint texture, tactile grain, crop-friendly packaging and card surface --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "열일곱 번째 Midjourney 수동 입력 결과입니다. off-white 종이 질감 위에 black/navy, dusty blue, muted yellow, brick red의 수평 막대가 비동기적으로 쌓인 bitmap/stripe rhythm surface입니다. 반복 패턴, 패키지 표면, editorial card background로 crop하거나 이어 붙여 쓰기 좋습니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_28_17",
+      "assetHash": "cf307d590e1f262325c542f0006404b0808f22bb5eb2d388b6e8e7461d8d8e30",
+      "width": 1024,
+      "height": 1024,
+      "localArchivePath": "/opt/data/dna-archive/midjourney/2026-09-28/images/17_bitmap_stripe_rhythm_manual_midjourney.jpg",
+      "dnaClusters": [
+        "Midjourney Manual Upload",
+        "Bitmap Stripe Rhythm",
+        "Screenprint Pattern",
+        "Editorial Product Graphic",
+        "Tactile Paper Texture"
+      ]
+    },
+    {
+      "id": "2026-09-28-midjourney-18-floral-radial-signal-bloom",
+      "title": "Midjourney 18 — Floral Radial Signal Bloom",
+      "created": "2026-09-28",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-09-28/18_floral_radial_signal_bloom.jpg",
+      "prompt": "floral radial signal bloom, abstract non-literal petal fan motif, broad rounded color wedges radiating from a shared center, coral, deep red, black, peach beige, muted teal blue, warm cream paper texture, matte vintage print grain, bold emotional accent surface, crop-friendly brand signal material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "floral radial signal bloom, abstract non-literal petal fan motif, broad rounded color wedges radiating from a shared center, coral, deep red, black, peach beige, muted teal blue, warm cream paper texture, matte vintage print grain, bold emotional accent surface, crop-friendly brand signal material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "열여덟 번째 Midjourney 수동 입력 결과입니다. 중심점에서 둥근 petal wedge들이 방사형으로 펼쳐지는 floral/signal bloom 계열입니다. coral, deep red, black, peach, muted teal이 matte paper texture와 결합해 감성적 accent, package hero crop, 브랜드 signal field로 활용하기 좋습니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_28_18",
+      "assetHash": "eb06b3c9dab00c313fcdeb43b81b55b9d65d0d5542b35c326d33e8e30a4a27ce",
+      "width": 1024,
+      "height": 1024,
+      "localArchivePath": "/opt/data/dna-archive/midjourney/2026-09-28/images/18_floral_radial_signal_bloom.jpg",
+      "dnaClusters": [
+        "Midjourney Manual Upload",
+        "Floral Signal Bloom",
+        "Radial Color Plane",
+        "Warm-Cool Intelligence",
+        "Emotional Accent Surface"
+      ]
+    },
+    {
+      "id": "2026-09-28-midjourney-19-iridescent-chrome-material-field",
+      "title": "Midjourney 19 — Iridescent Chrome Material Field",
+      "created": "2026-09-28",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-09-28/19_iridescent_chrome_material_field.jpg",
+      "prompt": "iridescent chrome material field, close cropped liquid metal surface, broad pearlescent ribbons, graphite, smoky teal, oily cyan, muted orange, warm highlights, tactile optical material, airbrushed granular texture, abstract crop-friendly brand surface, useful for hero background and package accent --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "iridescent chrome material field, close cropped liquid metal surface, broad pearlescent ribbons, graphite, smoky teal, oily cyan, muted orange, warm highlights, tactile optical material, airbrushed granular texture, abstract crop-friendly brand surface, useful for hero background and package accent --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "열아홉 번째 Midjourney 수동 입력 결과입니다. liquid chrome처럼 접힌 표면과 cyan/orange iridescent highlight가 강한 tactile optical material입니다. 오브젝트보다는 close-crop material field로 읽히며, hero background, package accent, 고급 물성 mood surface로 쓰기 좋습니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_28_19",
+      "assetHash": "ebdbc5630c0ffd67298c94c8fbe9a253770058fe2347446e2655a7c820cfe780",
+      "width": 1024,
+      "height": 1024,
+      "localArchivePath": "/opt/data/dna-archive/midjourney/2026-09-28/images/19_iridescent_chrome_material_field.jpg",
+      "dnaClusters": [
+        "Midjourney Manual Upload",
+        "Iridescent Surface Field",
+        "Tactile Optical Material",
+        "Chrome Material Study",
+        "Hero Background Surface"
+      ]
+    },
+    {
+      "id": "2026-09-28-midjourney-20-monochrome-architectural-block-surface",
+      "title": "Midjourney 20 — Monochrome Architectural Block Surface",
+      "created": "2026-09-28",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-09-28/20_monochrome_architectural_block_surface.jpg",
+      "prompt": "monochrome architectural block surface, pure 2D abstract geometric composition, large black fields, warm white vertical slab, gray diagonal plane, hard-edged crop, tactile print grain, brutal refined editorial geometry, high contrast negative space, crop-friendly package/card surface --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "monochrome architectural block surface, pure 2D abstract geometric composition, large black fields, warm white vertical slab, gray diagonal plane, hard-edged crop, tactile print grain, brutal refined editorial geometry, high contrast negative space, crop-friendly package/card surface --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "스무 번째 Midjourney 수동 입력 결과입니다. 거대한 black field, warm white vertical slab, gray diagonal plane이 만드는 고대비 architectural block surface입니다. brutal하지만 정제된 editorial geometry와 tactile grain이 강해 패키지 패널, 카드 배경, section divider용 그래픽 재료로 좋습니다.",
+      "sourceRun": "manual_midjourney_upload_2026_09_28_20",
+      "assetHash": "617f4d0b58180e7fc19a818dcae639d4693bbd710ff81a108f063d6fd87b6234",
+      "width": 1024,
+      "height": 1024,
+      "localArchivePath": "/opt/data/dna-archive/midjourney/2026-09-28/images/20_monochrome_architectural_block_surface.jpg",
+      "dnaClusters": [
+        "Midjourney Manual Upload",
+        "Monochrome Editorial System",
+        "Architectural Block Geometry",
+        "Protected Negative Space",
+        "Tactile Print Grain"
       ]
     }
   ]
