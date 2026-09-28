@@ -2268,7 +2268,7 @@ function DesignDnaPanel() {
     ? 'GoYJ 루프에서 GPT Image 2.5로 만든 후보 중 Chris가 저장한 그래픽 재료입니다. 앞으로도 월/수/금 루프는 이 레일에 계속 쌓입니다.'
     : 'Chris가 Midjourney에 수동 입력해 만든 결과만 따로 저장하는 레일입니다. 같은 프롬프트 계열의 Midjourney 해석을 GPT 레일과 분리해서 비교할 수 있습니다.'
   const coffeeMockupCollection = brandMockupAssets.collections.find((collection) => collection.id === 'coffee-mockup-assets')
-  const coffeeAssetExample = brandMockupAssets.examples?.find((collection) => collection.id === 'coffee-asset-example-01')
+  const coffeeAssetExamples = brandMockupAssets.examples ?? []
 
   return (
     <div className="design-dna-shell design-dna-single-page">
@@ -2598,33 +2598,37 @@ function DesignDnaPanel() {
                 ))}
               </div>
             </section>
-          ) : activeBrandAssetSource === 'midjourneyMockup' && coffeeAssetExample ? (
-            <section className="content-card dna-brand-mockup-collection" aria-label="Coffee asset example 01">
-              <div className="dna-brand-mockup-header">
-                <div>
-                  <p className="card-kicker">Midjourney + Mockup</p>
-                  <h4>{coffeeAssetExample.title}</h4>
-                  <p>{coffeeAssetExample.description}</p>
-                </div>
-                <span>{coffeeAssetExample.items.length} assets{coffeeAssetExample.logoText ? ` · ${coffeeAssetExample.logoText}` : ''}</span>
-              </div>
-              <div className="dna-brand-mockup-grid" aria-label="Coffee asset example 01 moodboard">
-                {coffeeAssetExample.items.map((item) => (
-                  <button
-                    type="button"
-                    className="dna-brand-mockup-tile"
-                    key={item.id}
-                    onClick={() => setSelectedBrandAsset({ item, collection: coffeeAssetExample, lane: 'Midjourney + Mockup' })}
-                  >
-                    <img src={toAppAssetSrc(item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
-                    <span className="dna-brand-mockup-caption">
-                      <strong>{item.title}</strong>
-                      <span>{item.description}</span>
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </section>
+          ) : activeBrandAssetSource === 'midjourneyMockup' && coffeeAssetExamples.length > 0 ? (
+            <div className="dna-brand-example-stack" aria-label="Coffee asset examples">
+              {coffeeAssetExamples.map((coffeeAssetExample) => (
+                <section className="content-card dna-brand-mockup-collection" aria-label={`${coffeeAssetExample.title} moodboard`} key={coffeeAssetExample.id}>
+                  <div className="dna-brand-mockup-header">
+                    <div>
+                      <p className="card-kicker">Midjourney + Mockup</p>
+                      <h4>{coffeeAssetExample.title}</h4>
+                      <p>{coffeeAssetExample.description}</p>
+                    </div>
+                    <span>{coffeeAssetExample.items.length} assets{coffeeAssetExample.logoText ? ` · ${coffeeAssetExample.logoText}` : ''}</span>
+                  </div>
+                  <div className="dna-brand-mockup-grid" aria-label={`${coffeeAssetExample.title} moodboard`}>
+                    {coffeeAssetExample.items.map((item) => (
+                      <button
+                        type="button"
+                        className="dna-brand-mockup-tile"
+                        key={item.id}
+                        onClick={() => setSelectedBrandAsset({ item, collection: coffeeAssetExample, lane: 'Midjourney + Mockup' })}
+                      >
+                        <img src={toAppAssetSrc(item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
+                        <span className="dna-brand-mockup-caption">
+                          <strong>{item.title}</strong>
+                          <span>{item.description}</span>
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </div>
           ) : (
             <div className="content-card dna-brand-asset-empty-state" aria-label={`${activeBrandAssetSource === 'mockup' ? 'Mockup' : 'Midjourney plus mockup'} 준비 상태`}>
               <p>준비중입니다</p>

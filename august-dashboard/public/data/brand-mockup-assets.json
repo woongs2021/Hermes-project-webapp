@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-27T13:20:00+09:00",
+  "generatedAt": "2026-09-28T00:00:00+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Contains only user-supplied mockup reference images selected by Chris; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -127,6 +127,71 @@
           "description": "Pattern-only hanging cafe sign application",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/06_onboard_hanging_sign_mockup.jpg",
           "assetHash": "a117ab5bca44d2383f79173b3645dab102de61fae34ec8aa76563ef94bad4b10",
+          "width": 2528,
+          "height": 1696
+        }
+      ],
+      "synthesisTool": "Higgsfield Nano Banana Pro"
+    },
+    {
+      "id": "coffee-asset-example-02",
+      "title": "Coffee Pattern Example 02",
+      "created": "2026-09-28",
+      "status": "nano_banana_pro_pattern_only",
+      "sourceGraphic": "Midjourney 15 — Cyan Luminous Arc Edge Translation",
+      "description": "Nano Banana Pro pattern-only synthesis: Midjourney 15 cyan luminous arc edge motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
+      "items": [
+        {
+          "id": "coffee-asset-example-02-01",
+          "title": "Cyan Arc Cup Sleeve",
+          "description": "Pattern-only cup sleeve application using Midjourney 15 cyan luminous arc motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/01_cyan_arc_cup_sleeve_mockup.jpg",
+          "assetHash": "1df1898ee1ce3a7c690ba176bcaaaf0427bb6a723142d81990d68bf3fe53c1fc",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-02-02",
+          "title": "Cyan Arc Coffee Bag And Cup Counter",
+          "description": "Pattern-only coffee bag and cup counter application using Midjourney 15 cyan luminous arc motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/02_cyan_arc_packaging_counter_mockup.jpg",
+          "assetHash": "25c2cfea00621fbaa0d1dd327bda72b56ef8b27a6b96d922e8b50348be59f454",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-02-03",
+          "title": "Cyan Arc Stacked Cup Set",
+          "description": "Pattern-only stacked cup set application using Midjourney 15 cyan luminous arc motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/03_cyan_arc_stacked_cup_set_mockup.jpg",
+          "assetHash": "2c2facd3a381e4d9403ded0b39a0a55605924ec24ddc0656805e20ec34369ca8",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-02-04",
+          "title": "Cyan Arc Tote And Takeaway Cup",
+          "description": "Pattern-only tote and takeaway cup application using Midjourney 15 cyan luminous arc motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/04_cyan_arc_tote_and_takeaway_mockup.jpg",
+          "assetHash": "3c194ebd530b3729fe6eb07b3b39b0243ba0e48510643f8b9f5f947b2b3a3d01",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-02-05",
+          "title": "Cyan Arc Close-Up Cup Body",
+          "description": "Pattern-only close-up cup body application using Midjourney 15 cyan luminous arc motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/05_cyan_arc_closeup_cup_body_mockup.jpg",
+          "assetHash": "824b4cc9fd2b1375dedd162219b9ef0ee9f08adccd3892e16c51b6e2ac458ae4",
+          "width": 2528,
+          "height": 1696
+        },
+        {
+          "id": "coffee-asset-example-02-06",
+          "title": "Cyan Arc Hanging Cafe Sign",
+          "description": "Pattern-only hanging cafe sign application using Midjourney 15 cyan luminous arc motif",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/06_cyan_arc_hanging_cafe_sign_mockup.jpg",
+          "assetHash": "651f301d68204505d9c72d813ec45ffb91b49a2b76cc8e384342d20d14410a08",
           "width": 2528,
           "height": 1696
         }

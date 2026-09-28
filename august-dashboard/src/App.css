@@ -7139,6 +7139,11 @@
   letter-spacing: -0.04em;
 }
 
+.dna-brand-example-stack {
+  display: grid;
+  gap: clamp(1rem, 2vw, 1.4rem);
+}
+
 .dna-brand-mockup-collection {
   display: grid;
   gap: 1rem;
