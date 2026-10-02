@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-28T00:00:00+09:00",
+  "generatedAt": "2026-10-02T18:20:00+09:00",
   "sourcePolicy": "Public-safe manually supplied Midjourney outputs selected by Chris for Design DNA. Excludes raw private chats, credentials, and provider account details.",
   "items": [
     {
@@ -413,6 +413,75 @@
         "Architectural Block Geometry",
         "Protected Negative Space",
         "Tactile Print Grain"
+      ]
+    },
+    {
+      "id": "2026-10-02-midjourney-21-textile-horizontal-band-system",
+      "title": "Midjourney 21 — Textile Horizontal Band System",
+      "created": "2026-10-02",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-10-02/21_textile_horizontal_band_system_manual_midjourney.jpg",
+      "prompt": "tactile textile horizontal band system, broad hand-cut horizontal stripes, warm cream woven ground, ochre mustard bands, deep ink blue band, charcoal black bands, irregular fabric edges, visible fiber grain, restrained editorial stripe surface, crop-friendly brand and packaging material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "tactile textile horizontal band system, broad hand-cut horizontal stripes, warm cream woven ground, ochre mustard bands, deep ink blue band, charcoal black bands, irregular fabric edges, visible fiber grain, restrained editorial stripe surface, crop-friendly brand and packaging material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "스물한 번째 Midjourney 수동 입력 결과입니다. 크림색 직물 바탕 위에 ochre mustard, deep ink blue, charcoal black 수평 밴드가 넓게 지나가는 tactile stripe surface입니다. 선이 완전히 기계적이지 않고 천의 결·손맛이 살아 있어 패키지 래핑, 카드 배경, 브랜드 surface pattern으로 쓰기 좋습니다.",
+      "sourceRun": "manual_midjourney_upload_2026_10_02_21",
+      "assetHash": "cffbe5244cf76a5cbab660b5159312867d71d9c338024bdaabb42e9fafba186c",
+      "width": 1024,
+      "height": 1024,
+      "localArchivePath": "/opt/data/dna-archive/midjourney/2026-10-02/images/21_textile_horizontal_band_system_manual_midjourney.jpg",
+      "dnaClusters": [
+        "Midjourney Manual Upload",
+        "Textile Stripe System",
+        "Warm Ochre Blue Palette",
+        "Tactile Fabric Grain",
+        "Editorial Product Graphic"
+      ]
+    },
+    {
+      "id": "2026-10-02-midjourney-22-woven-modular-block-grid",
+      "title": "Midjourney 22 — Woven Modular Block Grid",
+      "created": "2026-10-02",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-10-02/22_woven_modular_block_grid_manual_midjourney.jpg",
+      "prompt": "woven modular block grid, abstract textile patchwork composition, irregular rectangular blocks, warm ivory, black, muted mauve, plum, dusty sage, taupe gray, tactile woven fabric texture, quiet architectural rhythm, crop-friendly brand surface material, editorial geometric textile --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "woven modular block grid, abstract textile patchwork composition, irregular rectangular blocks, warm ivory, black, muted mauve, plum, dusty sage, taupe gray, tactile woven fabric texture, quiet architectural rhythm, crop-friendly brand surface material, editorial geometric textile --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "스물두 번째 Midjourney 수동 입력 결과입니다. black/ivory를 중심으로 mauve, plum, dusty sage, taupe gray 직사각 블록들이 불규칙한 grid를 만드는 woven modular surface입니다. 기하학적이지만 차갑지 않고 러그/직물 같은 촉각성이 있어 브랜드 패턴, 섹션 배경, 패키지 texture로 활용하기 좋습니다.",
+      "sourceRun": "manual_midjourney_upload_2026_10_02_22",
+      "assetHash": "68fa8c8554d8db53e68e82a955f1588e0fb4155aeed2ea8989fbe59e544b31ad",
+      "width": 1024,
+      "height": 1024,
+      "localArchivePath": "/opt/data/dna-archive/midjourney/2026-10-02/images/22_woven_modular_block_grid_manual_midjourney.jpg",
+      "dnaClusters": [
+        "Midjourney Manual Upload",
+        "Modular Block Grid",
+        "Tactile Fabric Grain",
+        "Muted Plum Sage Palette",
+        "Archive Pattern Surface"
+      ]
+    },
+    {
+      "id": "2026-10-02-midjourney-23-coral-black-stripe-block-surface",
+      "title": "Midjourney 23 — Coral Black Stripe Block Surface",
+      "created": "2026-10-02",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-10-02/23_coral_black_stripe_block_surface_manual_midjourney.jpg",
+      "prompt": "coral black stripe block surface, tactile abstract textile composition, bold vertical black stripe rhythm, coral red-orange blocks, warm cream ground, small gray patch, speckled screenprint grain, rough fabric edges, energetic editorial package surface, crop-friendly graphic material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "coral black stripe block surface, tactile abstract textile composition, bold vertical black stripe rhythm, coral red-orange blocks, warm cream ground, small gray patch, speckled screenprint grain, rough fabric edges, energetic editorial package surface, crop-friendly graphic material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "스물세 번째 Midjourney 수동 입력 결과입니다. coral red-orange 블록과 굵은 black vertical stripe가 warm cream 바탕 위에서 강하게 충돌하는 textile/screenprint 계열입니다. 이전보다 에너지가 높고 graphic tension이 강해 accent surface, package crop, hero card material로 쓰기 좋습니다.",
+      "sourceRun": "manual_midjourney_upload_2026_10_02_23",
+      "assetHash": "9fe4673f5ef7f55cfeb6d935621d4609fbc6258e5bca5c79b4beecfc889ac475",
+      "width": 1024,
+      "height": 1024,
+      "localArchivePath": "/opt/data/dna-archive/midjourney/2026-10-02/images/23_coral_black_stripe_block_surface_manual_midjourney.jpg",
+      "dnaClusters": [
+        "Midjourney Manual Upload",
+        "Coral Black Stripe Rhythm",
+        "Screenprint Pattern",
+        "Tactile Fabric Grain",
+        "Energetic Accent Surface"
       ]
     }
   ]
