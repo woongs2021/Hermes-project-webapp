@@ -2601,7 +2601,9 @@ function DesignDnaPanel() {
           <div className="dna-generated-grid" aria-label={`Saved ${activeDnaDashboardLabel} DNA assets`}>
             {activeDnaDashboardItems.map((item, index) => (
               <button type="button" className="dna-generated-tile" key={item.id} onClick={() => setSelectedDnaAsset(item)}>
-                <img src={toAppAssetSrc(item.imageSrc)} alt={`${item.title} generated asset`} loading={index < 8 ? 'eager' : 'lazy'} decoding="async" />
+                <span className="dna-generated-tile-media" aria-hidden="true">
+                  <img src={toAppAssetSrc(item.imageSrc)} alt="" loading={index < 8 ? 'eager' : 'lazy'} decoding="async" />
+                </span>
                 <span>{String(index + 1).padStart(2, '0')}</span>
                 <strong>{item.title}</strong>
                 <small>{item.created}</small>

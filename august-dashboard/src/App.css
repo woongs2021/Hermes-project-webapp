@@ -7340,14 +7340,13 @@
   outline: none;
 }
 
-.chris-archive-tile img,
-.dna-generated-tile img {
+.chris-archive-tile img {
   display: block;
   width: 100%;
   aspect-ratio: 1 / 1;
   height: auto;
   min-height: 150px;
-  border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 8%, transparent);
   border-radius: 24px;
   box-sizing: border-box;
   object-fit: cover;
@@ -7355,6 +7354,32 @@
   clip-path: inset(0 round 24px);
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   background: rgba(0, 0, 0, 0.04);
+}
+
+.dna-generated-tile-media {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  min-height: 150px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 8%, transparent);
+  border-radius: 24px;
+  box-sizing: border-box;
+  clip-path: inset(0 round 24px);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.dna-generated-tile-media img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
 }
 
 .chris-archive-tile span,
@@ -7647,7 +7672,7 @@
   }
 
   .chris-archive-tile img,
-  .dna-generated-tile img {
+  .dna-generated-tile-media {
     aspect-ratio: 1 / 1;
     height: auto;
     min-height: 120px;
@@ -8480,7 +8505,7 @@
   display: block;
   width: 100%;
   aspect-ratio: 1;
-  border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 8%, transparent);
   border-radius: 30px;
   box-sizing: border-box;
   object-fit: cover;
