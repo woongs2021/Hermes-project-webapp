@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-03T00:00:00+09:00",
+  "generatedAt": "2026-10-03T00:55:00+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -137,14 +137,15 @@
           "title": "Pattern Close-Up Cup Body",
           "description": "Pattern-only close-up cup body application",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/05_pattern-close-up-cup-body_kling4k_mockup.png",
-          "assetHash": "231197bdc48da54365787ac0307300de1be85e081b30113e9e6cfeaa5e219a71",
+          "assetHash": "a87dca8b3085f5841b888ceba427f517bfe2b2412b6f50093f13210985d70efd",
           "width": 4992,
           "height": 3328,
           "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/05_onboard_closeup_cup_mockup.jpg",
           "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/05_pattern-close-up-cup-body_kling4k_mockup.png",
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
-          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/05_onboard_closeup_cup_mockup.jpg"
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/05_onboard_closeup_cup_mockup.jpg",
+          "fixNote": "2026-10-03 geometry-preserving upscale from original close-up mockup; avoids generative lid/crop distortion."
         },
         {
           "id": "coffee-asset-example-01-06",

@@ -2658,7 +2658,7 @@ function DesignDnaPanel() {
                     key={item.id}
                     onClick={() => setSelectedBrandAsset({ item, collection: coffeeMockupCollection, lane: 'Mockup' })}
                   >
-                    <img src={toAppAssetSrc(item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
+                    <img src={toAppAssetSrc(item.originalImageSrc ?? item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
                     <span className="dna-brand-mockup-caption">
                       <strong>{item.title}</strong>
                       <span>{item.description}</span>
@@ -2687,7 +2687,7 @@ function DesignDnaPanel() {
                         key={item.id}
                         onClick={() => setSelectedBrandAsset({ item, collection: coffeeAssetExample, lane: 'Midjourney + Mockup' })}
                       >
-                        <img src={toAppAssetSrc(item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
+                        <img src={toAppAssetSrc(item.originalImageSrc ?? item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
                         <span className="dna-brand-mockup-caption">
                           <strong>{item.title}</strong>
                           <span>{item.description}</span>
