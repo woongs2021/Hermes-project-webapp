@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-28T00:00:00+09:00",
-  "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Contains only user-supplied mockup reference images selected by Chris; excludes private chats, credentials, and provider account data.",
+  "generatedAt": "2026-10-03T00:00:00+09:00",
+  "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
       "id": "coffee-mockup-assets",
@@ -74,64 +74,96 @@
       "created": "2026-09-26",
       "status": "nano_banana_pro_pattern_only",
       "sourceGraphic": "Midjourney 01 — Capsule Pattern Translation",
-      "description": "Nano Banana Pro pattern-only synthesis: Midjourney 01 graphic integrated onto Coffee Mockup Assets without logo lettering.",
+      "description": "Kling 4K pattern-only resynthesis: Midjourney 01 graphic integrated onto Coffee Mockup Assets without logo lettering.",
       "items": [
         {
           "id": "coffee-asset-example-01-01",
           "title": "Pattern Cup Sleeve",
           "description": "Pattern-only cup sleeve application",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/01_onboard_cup_mockup.jpg",
-          "assetHash": "13a3a05e3e0edcb346e2a628cbe8fd1da1a3374d637cf4cfb16986bc74a0c56c",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/01_pattern-cup-sleeve_kling4k_mockup.png",
+          "assetHash": "f0e5e1b19e0e8dd4190501c02fe5745ddbf2724851d221096cd40e8dd5f106f8",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/01_onboard_cup_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/01_pattern-cup-sleeve_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/01_onboard_cup_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-01-02",
           "title": "Pattern Coffee Bag And Cup Counter",
           "description": "Pattern-only coffee bag and cup counter application",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/02_onboard_packaging_counter_mockup.jpg",
-          "assetHash": "a0f20d4486689fbbde4cbd55a986198dfec0f5df51e27a102b5e7461b2537286",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/02_pattern-coffee-bag-and-cup-counter_kling4k_mockup.png",
+          "assetHash": "e90bd700c1628c35f47e0f60c949e9ef8cb866bb49cf9cdd3643b65596727b00",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/02_onboard_packaging_counter_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/02_pattern-coffee-bag-and-cup-counter_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/02_onboard_packaging_counter_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-01-03",
           "title": "Pattern Stacked Cup Set",
           "description": "Pattern-only stacked cup set application",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/03_onboard_cup_set_mockup.jpg",
-          "assetHash": "7728680b5e9e31a227949f290197be27556052ebd1bc0e206cf47633e94bf6c0",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/03_pattern-stacked-cup-set_kling4k_mockup.png",
+          "assetHash": "9da25d7a968d8714a507b09bcd1303243b494465be2d590d2dbbeb5907cf595d",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/03_onboard_cup_set_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/03_pattern-stacked-cup-set_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/03_onboard_cup_set_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-01-04",
           "title": "Pattern Tote Bag Mockup",
           "description": "Pattern-only tote bag mockup application",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/04_onboard_tote_mockup.jpg",
-          "assetHash": "fba053c2437ad98ac1478809ca96242693b1243a07ffcce056777e43cb39c4e5",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/04_pattern-tote-bag-mockup_kling4k_mockup.png",
+          "assetHash": "2dd6ea686b5a5d6ffbd311f3d07e5ebf7c712dc68f16eda45a4a5c5bd0bc31d1",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/04_onboard_tote_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/04_pattern-tote-bag-mockup_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/04_onboard_tote_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-01-05",
           "title": "Pattern Close-Up Cup Body",
           "description": "Pattern-only close-up cup body application",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/05_onboard_closeup_cup_mockup.jpg",
-          "assetHash": "c81405a73d2f2248f37cb53710a02bd7abf2ded9ef1df714145b5139ea5b3523",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/05_pattern-close-up-cup-body_kling4k_mockup.png",
+          "assetHash": "231197bdc48da54365787ac0307300de1be85e081b30113e9e6cfeaa5e219a71",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/05_onboard_closeup_cup_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/05_pattern-close-up-cup-body_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/05_onboard_closeup_cup_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-01-06",
           "title": "Pattern Hanging Cafe Sign",
           "description": "Pattern-only hanging cafe sign application",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/06_onboard_hanging_sign_mockup.jpg",
-          "assetHash": "a117ab5bca44d2383f79173b3645dab102de61fae34ec8aa76563ef94bad4b10",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/06_pattern-hanging-cafe-sign_kling4k_mockup.png",
+          "assetHash": "7d9059c81e0b49a35bf5309450bbec517012505fd9509058ff401f83f2310663",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/06_onboard_hanging_sign_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/06_pattern-hanging-cafe-sign_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/06_onboard_hanging_sign_mockup.jpg"
         }
       ],
-      "synthesisTool": "Higgsfield Nano Banana Pro"
+      "synthesisTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
+      "resynthesizedAt": "2026-10-03T00:00:00+09:00"
     },
     {
       "id": "coffee-asset-example-02",
@@ -139,64 +171,96 @@
       "created": "2026-09-28",
       "status": "nano_banana_pro_pattern_only",
       "sourceGraphic": "Midjourney 20 — Monochrome Architectural Block Surface",
-      "description": "Nano Banana Pro pattern-only synthesis: Midjourney 20 monochrome architectural block surface motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
+      "description": "Kling 4K pattern-only resynthesis: Midjourney 20 monochrome architectural block surface motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
       "items": [
         {
           "id": "coffee-asset-example-02-01",
           "title": "Monochrome Block Cup Sleeve",
           "description": "Pattern-only cup sleeve application using Midjourney 20 monochrome architectural block surface motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/01_monochrome_block_cup_sleeve_mockup.jpg",
-          "assetHash": "b7fa72e3708063d2aa1dd32f971b000b812dbb594006ff03c86ada2a1fdc4420",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/01_monochrome-block-cup-sleeve_kling4k_mockup.png",
+          "assetHash": "4e5d9105aded6dba9e35eae1c3d7085e8913dae412bd50cb02d3cdae6f0426a4",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/01_monochrome_block_cup_sleeve_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/01_monochrome-block-cup-sleeve_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/01_monochrome_block_cup_sleeve_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-02-02",
           "title": "Monochrome Block Coffee Bag And Cup Counter",
           "description": "Pattern-only coffee bag and cup counter application using Midjourney 20 monochrome architectural block surface motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/02_monochrome_block_packaging_counter_mockup.jpg",
-          "assetHash": "02b674372850030d16c620e5e4a7478eb461f8162043caadfd7bbdcde0291c49",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/02_monochrome-block-coffee-bag-and-cup-counter_kling4k_mockup.png",
+          "assetHash": "0b5feda4db00c6a9e4a2d3238cd3d60fda6c73a01d258f1c0790c956d39e918a",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/02_monochrome_block_packaging_counter_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/02_monochrome-block-coffee-bag-and-cup-counter_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/02_monochrome_block_packaging_counter_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-02-03",
           "title": "Monochrome Block Stacked Cup Set",
           "description": "Pattern-only stacked cup set application using Midjourney 20 monochrome architectural block surface motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/03_monochrome_block_stacked_cup_set_mockup.jpg",
-          "assetHash": "e1179f9fca7ee17ca26b58d2f3632fc3224cdde80dda1e9e4a3fd808ce014e07",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/03_monochrome-block-stacked-cup-set_kling4k_mockup.png",
+          "assetHash": "4946afa7d85ce4226b115c80936766949325eb0917d24c1036bcbe6c9ea664d2",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/03_monochrome_block_stacked_cup_set_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/03_monochrome-block-stacked-cup-set_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/03_monochrome_block_stacked_cup_set_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-02-04",
           "title": "Monochrome Block Tote And Takeaway Cup",
           "description": "Pattern-only tote and takeaway cup application using Midjourney 20 monochrome architectural block surface motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/04_monochrome_block_tote_and_takeaway_mockup.jpg",
-          "assetHash": "99153ed26e5c5b496e350dd6bf26cc366c5815964343cf967bb24aa41800e2f1",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/04_monochrome-block-tote-and-takeaway-cup_kling4k_mockup.png",
+          "assetHash": "2420f2fd92a3f8722e4bfdd77a6a32e699c06e9736c1b375254093abdf585979",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/04_monochrome_block_tote_and_takeaway_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/04_monochrome-block-tote-and-takeaway-cup_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/04_monochrome_block_tote_and_takeaway_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-02-05",
           "title": "Monochrome Block Close-Up Cup Body",
           "description": "Pattern-only close-up cup body application using Midjourney 20 monochrome architectural block surface motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/05_monochrome_block_closeup_cup_body_mockup.jpg",
-          "assetHash": "e847452d314defcb47e50eff2b550213f02f10748d19a0c6d8cd67df5aac8ef4",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/05_monochrome-block-close-up-cup-body_kling4k_mockup.png",
+          "assetHash": "cf57837cbad4194307b499a9db3ef7e07e263f74fafacd1cf33df120af44ec1f",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/05_monochrome_block_closeup_cup_body_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/05_monochrome-block-close-up-cup-body_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/05_monochrome_block_closeup_cup_body_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-02-06",
           "title": "Monochrome Block Hanging Cafe Sign",
           "description": "Pattern-only hanging cafe sign application using Midjourney 20 monochrome architectural block surface motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/06_monochrome_block_hanging_cafe_sign_mockup.jpg",
-          "assetHash": "6c31a0a9b73f38d274a621c66285875c6ed3906a5fc2489b0d173640fe0a3f85",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/06_monochrome-block-hanging-cafe-sign_kling4k_mockup.png",
+          "assetHash": "a9c75dcfcd70fd084629bded3b1b3f7f00cf7682de627937c4d8cf87f956e5ef",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/06_monochrome_block_hanging_cafe_sign_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/06_monochrome-block-hanging-cafe-sign_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/06_monochrome_block_hanging_cafe_sign_mockup.jpg"
         }
       ],
-      "synthesisTool": "Higgsfield Nano Banana Pro"
+      "synthesisTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
+      "resynthesizedAt": "2026-10-03T00:00:00+09:00"
     },
     {
       "id": "coffee-asset-example-05",
@@ -204,64 +268,96 @@
       "created": "2026-09-28",
       "status": "nano_banana_pro_pattern_only",
       "sourceGraphic": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation",
-      "description": "Nano Banana Pro pattern-only synthesis: Midjourney 11 ambient blue-peach gradient surface translation motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
+      "description": "Kling 4K pattern-only resynthesis: Midjourney 11 ambient blue-peach gradient surface translation motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
       "items": [
         {
           "id": "coffee-asset-example-05-01",
           "title": "Ambient Gradient Cup Sleeve",
           "description": "Pattern-only cup sleeve application using Midjourney 11 ambient blue-peach gradient surface translation motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/01_ambient_gradient_cup_sleeve_mockup.jpg",
-          "assetHash": "919f2063942ae1ebf1b94c75e9ad7edb0c939ca3e6d4922187ca058863c7abda",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/01_ambient-gradient-cup-sleeve_kling4k_mockup.png",
+          "assetHash": "4734e1e411fbabafc96be290af5d465e8011169d08b605908c1fe9653b9896dc",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/01_ambient_gradient_cup_sleeve_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/01_ambient-gradient-cup-sleeve_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/01_ambient_gradient_cup_sleeve_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-05-02",
           "title": "Ambient Gradient Coffee Bag And Cup Counter",
           "description": "Pattern-only coffee bag and cup counter application using Midjourney 11 ambient blue-peach gradient surface translation motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/02_ambient_gradient_packaging_counter_mockup.jpg",
-          "assetHash": "8480405fbfe2c32604d45e925909e5a282832483650e189123b21e76bd7313af",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/02_ambient-gradient-coffee-bag-and-cup-counter_kling4k_mockup.png",
+          "assetHash": "cf94d983d322085c2ffaf7922f409efd8c7067d40b3159213db4f17de284a8e5",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/02_ambient_gradient_packaging_counter_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/02_ambient-gradient-coffee-bag-and-cup-counter_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/02_ambient_gradient_packaging_counter_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-05-03",
           "title": "Ambient Gradient Stacked Cup Set",
           "description": "Pattern-only stacked cup set application using Midjourney 11 ambient blue-peach gradient surface translation motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/03_ambient_gradient_stacked_cup_set_mockup.jpg",
-          "assetHash": "7da100cb2b4227286fd95efed8de528e3fda955b015d2c6d0da5a69d6bf54e59",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/03_ambient-gradient-stacked-cup-set_kling4k_mockup.png",
+          "assetHash": "996f48b6df62a73086f0b1fcb403ded5e2e9a7c019a245b5b3009020a628c7b7",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/03_ambient_gradient_stacked_cup_set_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/03_ambient-gradient-stacked-cup-set_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/03_ambient_gradient_stacked_cup_set_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-05-04",
           "title": "Ambient Gradient Tote And Takeaway Cup",
           "description": "Pattern-only tote and takeaway cup application using Midjourney 11 ambient blue-peach gradient surface translation motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/04_ambient_gradient_tote_and_takeaway_mockup.jpg",
-          "assetHash": "13fa8dc7602e9a686c5a2e28aa834a484aea84df070c732fdfa8ab094b04b952",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/04_ambient-gradient-tote-and-takeaway-cup_kling4k_mockup.png",
+          "assetHash": "21679efe104e2a39c80c9e2e4c9ac082991dde2ac7716e85273e82fa98f30141",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/04_ambient_gradient_tote_and_takeaway_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/04_ambient-gradient-tote-and-takeaway-cup_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/04_ambient_gradient_tote_and_takeaway_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-05-05",
           "title": "Ambient Gradient Close-Up Cup Body",
           "description": "Pattern-only close-up cup body application using Midjourney 11 ambient blue-peach gradient surface translation motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/05_ambient_gradient_closeup_cup_body_mockup.jpg",
-          "assetHash": "155bfc03b73e8f03d92b0ce0fac69991f5604ced074311d998db2c33a7bfb384",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/05_ambient-gradient-close-up-cup-body_kling4k_mockup.png",
+          "assetHash": "53b7c5030850ed08cb15f9b12933de9ab86f7ff5351766eeef128e69fc35b475",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/05_ambient_gradient_closeup_cup_body_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/05_ambient-gradient-close-up-cup-body_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/05_ambient_gradient_closeup_cup_body_mockup.jpg"
         },
         {
           "id": "coffee-asset-example-05-06",
           "title": "Ambient Gradient Hanging Cafe Sign",
           "description": "Pattern-only hanging cafe sign application using Midjourney 11 ambient blue-peach gradient surface translation motif",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/06_ambient_gradient_hanging_cafe_sign_mockup.jpg",
-          "assetHash": "89fe3fb8ed45d6276115ccee9943c0b60b765480165746a1e43062aa93637b85",
-          "width": 2528,
-          "height": 1696
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/06_ambient-gradient-hanging-cafe-sign_kling4k_mockup.png",
+          "assetHash": "933bb1ebe78cb5fb9b7f97e12b28bc69e20fb416f523ee5d816bc98b9d39ac99",
+          "width": 4992,
+          "height": 3328,
+          "originalImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/06_ambient_gradient_hanging_cafe_sign_mockup.jpg",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/06_ambient-gradient-hanging-cafe-sign_kling4k_mockup.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/06_ambient_gradient_hanging_cafe_sign_mockup.jpg"
         }
       ],
-      "synthesisTool": "Higgsfield Nano Banana Pro"
+      "synthesisTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
+      "resynthesizedAt": "2026-10-03T00:00:00+09:00"
     }
   ]
 }

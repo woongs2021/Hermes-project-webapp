@@ -2772,6 +2772,18 @@ function DesignDnaPanel() {
               <p className="card-kicker">{selectedBrandAsset.lane} · {selectedBrandAsset.collection.created} · {selectedBrandAsset.collection.status}</p>
               <h3 id="dna-brand-asset-modal-title">{selectedBrandAsset.item.title}</h3>
               <p>{selectedBrandAsset.item.description}</p>
+              {selectedBrandAsset.item.downloadSrc ? (
+                <div className="dna-high-res-download-row" aria-label="Brand mockup download">
+                  <a
+                    className="chris-design-system-download dna-high-res-download"
+                    href={toAppAssetSrc(selectedBrandAsset.item.downloadSrc)}
+                    download={`${selectedBrandAsset.item.title.replace(/[^a-zA-Z0-9가-힣_-]+/g, '-').replace(/^-|-$/g, '') || 'brand-mockup'}-final.png`}
+                  >
+                    {selectedBrandAsset.item.downloadLabel ?? '목업 완성본 다운로드'}
+                  </a>
+                  <span>{selectedBrandAsset.item.width} × {selectedBrandAsset.item.height}</span>
+                </div>
+              ) : null}
               <div className="chris-archive-chip-row" aria-label="Brand asset metadata">
                 <span>{selectedBrandAsset.collection.title}</span>
                 <span>{selectedBrandAsset.item.width} × {selectedBrandAsset.item.height}</span>
