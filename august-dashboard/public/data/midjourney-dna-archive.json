@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-02T16:20:00+09:00",
+  "generatedAt": "2026-10-03T00:00:00+09:00",
   "sourcePolicy": "Public-safe manually supplied Midjourney outputs selected by Chris for Design DNA. Midjourney items include Kling 4K remaster PNG downloads when highResImageSrc is present. Excludes raw private chats, credentials, and provider account details.",
   "items": [
     {
@@ -14,7 +14,7 @@
       "midjourneyPrompt": "abstract graphic motif material, large filled capsule shapes and soft rounded blocks, broad planes of warm gray, muted cobalt, parchment white and low coral, spacious negative space, editorial product-graphic surface, calm premium system design, no dots, no dotted lines, no thin connector lines, no grid lines, no route lines, flat 2D vector-like composition, tactile paper texture, useful as packaging surface pattern or UI background layer --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "GPT Image 2.5 DNA asset 01의 Midjourney 수동 입력 결과를 첫 번째 Midjourney 레일 에셋으로 저장했습니다. 큰 rounded capsule, warm neutral field, deep cobalt center, rust/coral side planes, tactile paper texture가 유지되어 패키지 표면·카드 배경·브랜드 pattern material로 쓰기 좋습니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_01",
-      "assetHash": "06a29c5d3ff3e509c3207445138980d7127d8c2ece25fc61f345e8c514c68a10",
+      "assetHash": "1cda8d7aa43392c7b4aacf77eaa8d6fa8478640208a3b128d1e7892fe06179c2",
       "dnaClusters": [
         "Midjourney Translation",
         "Protected Human Context",
@@ -27,7 +27,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "b610b872007c855ffca5147a04494c8ce662e40457b72f18654b3c98a366c965",
+      "highResAssetHash": "d8903ae8c7bb2d3cded0c15b9d59bdc0a3ee6faa03d7542700f469c233568476",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -42,7 +42,7 @@
       "midjourneyPrompt": "abstract directional flow graphic material, large color fields forming a subtle negative-space channel, broad filled shapes only, no route lines, no dots, no arrows, no dashed marks, warm gray base with cobalt blue, muted cyan, soft coral and off-white, calm human-centered AI design language, editorial product surface, flat 2D composition, crop-friendly, useful for brand system background and packaging panels --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "Chris가 다시 교체 요청한 새 Midjourney 02 결과로 업데이트했습니다. Warm off-white paper texture, vertical deep navy bar, black angular base, coral diagonal plane이 만드는 절제된 geometric surface입니다. 기존 flow 개념을 더 그래픽디자인적이고 모듈형 패키지/카드 표면으로 쓰기 좋게 정리한 버전입니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_02_replacement_2",
-      "assetHash": "e0312f4dc17b190be0c89aaea0821bc8f94038e7f248f598470c094d3bcf9c13",
+      "assetHash": "a9235ee4c59915a72ea0181623cf6cef1bc64de08839da7eae4d16baf17cbccf",
       "dnaClusters": [
         "Midjourney Translation",
         "Responsible Direction",
@@ -55,7 +55,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "a28674a3b45f77583cd9f551adacb9e5a2215d96c255a8eb6659bb5ec9834078",
+      "highResAssetHash": "91a430381d4f1c2f996188fa8af0bcbf43bf159a974f304fa852135983e5bec7",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -70,7 +70,7 @@
       "midjourneyPrompt": "modular geometric arch grid, abstract 2D graphic motif, circles, half-circles, arches and rectangular blocks arranged in a quiet specimen-like grid, warm gray, muted ochre, charcoal black, off-white paper texture, editorial archive system mood, premium design-system pattern surface, balanced spacing, not decorative wallpaper, useful for packaging, card background, brand surface graphic --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "세 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. 원래의 modular arch/grid 방향이 Midjourney에서 더 크게 크롭된 arch curve와 warm gray/charcoal/off-white paper surface로 번역되었습니다. 작은 모듈 반복보다는 패키지 배경, 카드 표면, hero crop에 쓰기 좋은 대형 곡면 그래픽 재료입니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_03",
-      "assetHash": "915fc59c2aeabda1294767319604b24e3241774647e234f842412499be9e0dd6",
+      "assetHash": "823bc1d30cb8fed971fddcabf024d6d2368b4ca2301df6944f8adb69c11887c4",
       "dnaClusters": [
         "Midjourney Translation",
         "Modular Geometry",
@@ -83,7 +83,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "dbe829a7d9936aeeb5fcee9c6a1b5e6b6612731adefefd5f9782e54d62aa035c",
+      "highResAssetHash": "f135a81ab804e7ab3db81e084c6896f2656c35dcc0b7c778d0697590e01b1c9a",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -98,7 +98,7 @@
       "midjourneyPrompt": "modular geometric arch grid, abstract 2D graphic motif, circles, half-circles, arches and rectangular blocks arranged in a quiet specimen-like grid, warm gray, muted ochre, charcoal black, off-white paper texture, editorial archive system mood, premium design-system pattern surface, balanced spacing, not decorative wallpaper, useful for packaging, card background, brand surface graphic --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "네 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. 반복되는 arch, half-circle, rectangle 구조가 ochre/charcoal/warm gray paper texture와 결합된 modular pattern surface입니다. 패키지 래핑, 카드 배경, 브랜드 표면 패턴처럼 반복·크롭해 쓰기 좋은 그래픽 재료입니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_04",
-      "assetHash": "445adb8c6aa7594ade475433fac925942faab69a74eb67256cd8e8bf59ae17cc",
+      "assetHash": "7254ef7ce87e9f5457fe4a9394ae3451010627893b642623bd5d5eb33d982a00",
       "dnaClusters": [
         "Midjourney Translation",
         "Modular Geometry",
@@ -111,7 +111,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "4f96955e1a0a126d9949dba836d85d0830c9afdae313a3b283b117885b8e7d44",
+      "highResAssetHash": "aa69038a96ab877380b3c8746761ad870ab0f26d8d5b6e1cebf80bb40c0cc1a9",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -126,7 +126,7 @@
       "midjourneyPrompt": "large matte circular fields, soft overlapping round color planes, terracotta, faded sage, deep umber, warm off-white, paper and plaster texture, calm abstract brand surface, gentle emotional design language, quiet composition with generous negative space, flat 2D editorial graphic, crop-friendly, useful as package surface or brand mood background --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "다섯 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. terracotta, faded sage, deep umber, warm off-white의 큰 원형 필드가 겹치는 matte paper/plaster surface로, 브랜드 배경·패키지 면·카드 표면에 안정적으로 crop해 쓰기 좋은 조용한 추상 그래픽 재료입니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_05",
-      "assetHash": "3d2634a5526103916dbb0feaf6999f96d14c7fc2e6bae01c01c851e76ec6618c",
+      "assetHash": "a8351dcb13720534a8289cfbd3a45de9fcd37adecc273c62bf093f28e4e3c6da",
       "dnaClusters": [
         "Midjourney Translation",
         "Ambient Circle Field",
@@ -139,7 +139,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "5faf7bf2d1c6e1cc0d5ca9a53987ceeda464434cb1c6a46cbedc6fa8a7d220a4",
+      "highResAssetHash": "b28b95c424374d8cfdc1458dd795349b9fdea03dea8bad8d92aba1a34122cd6f",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -154,7 +154,7 @@
       "midjourneyPrompt": "single perfect circle motif, warm off-white background, only the outer rim softly luminous, subtle cobalt and pale cyan boundary light, no central fill, no central glow, minimal flat 2D graphic, protected void feeling, calm premium OS-native presence mark material, quiet circular boundary, editorial restraint, useful as brand signal, package seal fragment, loading or listening state graphic --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "Chris가 “원반/원형만” 저장하라고 지정한 여섯 번째 Midjourney 수동 입력 결과입니다. 완전한 원형 디스크와 부드러운 외곽 rim, warm off-white 바탕, subtle cool boundary light가 중심이며, 다른 불필요한 물체나 장식 없이 presence mark seed로 쓰기 좋은 원형 그래픽 재료입니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_06_disc_only",
-      "assetHash": "007defb3771cc20891ac9a4d808d4411eccb6eef4ea29101c1075f097ba8a75b",
+      "assetHash": "ee8bea4e612a5612f6e7d5288895e29306ad58a7b030342821e7865c6b32975c",
       "dnaClusters": [
         "Midjourney Translation",
         "Complete Circle",
@@ -167,7 +167,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "75c59e10cb8a211cb767f0956a64de447c772e8c0c11729349ba0d3f5648396e",
+      "highResAssetHash": "f00a817c0f2c8440cc1c3bf8e365d0206bd042e3161c13f2a59f8896f7c2518b",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -182,7 +182,7 @@
       "midjourneyPrompt": "large matte organic oval fields, soft overlapping warm earth color planes, faded sage green, terracotta, sand beige, deep umber, warm off-white, watercolor paper and plaster texture, calm abstract brand surface, quiet composition with cropped edges, generous negative space, flat 2D editorial graphic, crop-friendly, useful as package surface, card background, or brand mood layer --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "일곱 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. sage green, terracotta, sand beige, deep umber의 큰 organic oval field가 watercolor/paper texture로 겹쳐진 표면입니다. 이전 05의 matte circle field보다 더 자연스러운 타원형 crop과 회화적 물성이 강해 패키지 표면, 카드 배경, 브랜드 mood layer로 쓰기 좋습니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_07",
-      "assetHash": "d571a44093944c1486ec6e8800aa5b16f5cced2a55e681f2dee31de544b3cb55",
+      "assetHash": "2ede92bb77d0bd8eb0108b4ab729328c94cd37e321fa73d9e45a8bc0d5d2251f",
       "dnaClusters": [
         "Midjourney Translation",
         "Ambient Oval Field",
@@ -195,7 +195,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "ffa02d74eb076e4f6592c767ac5433d42c4a9e7e7160b9f577f703442195a688",
+      "highResAssetHash": "c9b11cd8f5a73e906509f745f06b8edf48af191cd5dc8f844015d861a6289888",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -210,7 +210,7 @@
       "midjourneyPrompt": "soft circular presence ring, complete round form with open warm off-white center, subtle cobalt blue and coral warmth on the lower rim, translucent paper-plaster texture, quiet boundary glow, calm premium design-system material, protected void feeling, flat 2D editorial graphic, crop-friendly, useful as presence mark seed, package seal material, or AI listening state visual --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "여덟 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. 열린 중심부를 가진 soft circular ring 형태이며, warm off-white 표면 위에 cobalt blue와 coral warmth가 하단 rim에 조용히 쌓입니다. Presence mark seed, 패키지 seal, AI listening state 같은 원형 시그널 재료로 쓰기 좋습니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_08",
-      "assetHash": "855b0498051b25416d8d3b91ebeb66a213c185b3ef1967525e74a38ea5ff6740",
+      "assetHash": "204db2649e63886deec291d89e01dbffb99e53021f1f446ce6f20c818c5e69d6",
       "dnaClusters": [
         "Midjourney Translation",
         "Soft Object / Presence Mark",
@@ -223,7 +223,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "7feeb9ec3172e96164bc82a8dffeba3723d4b9e2c2baba619e245fa6e5b99047",
+      "highResAssetHash": "c99856e8e51fcf139cd06ed178c001637b5545224e1be71902dd78c888c52834",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -238,7 +238,7 @@
       "midjourneyPrompt": "circular agency signal accent, perfect round ring accent material, warm off-white base, subtle cobalt, coral, charcoal and muted warm fill cues, no yellow line decoration, no outer yellow stroke, calm signal balance, flat 2D editorial product graphic, small badge-like accent but not a logo, useful for package corner, UI state signal, brand system mark fragment --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient, yellow line, yellow stroke",
       "analysis": "아홉 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. warm off-white paper ground 위에 큰 orbit ring, deep teal disc, coral/neutral split circle, 얇은 red/ochre arc가 균형을 만드는 circular signal motif입니다. 로고 완성형보다는 패키지 코너, 카드 edge, UI state signal에 crop해 쓰기 좋은 원형 accent material입니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_09",
-      "assetHash": "a999be453b245c61a5a4d0a0e4541ee96ab2db8093f197b8e0785ad6e26a786f",
+      "assetHash": "72291bfd0e2080ff94c2ad5808dc258661781f26b7659da062ed2402dde3e097",
       "dnaClusters": [
         "Midjourney Translation",
         "Circular Signal Accent",
@@ -251,7 +251,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "1ec4e11561e067ea986d5ac6c7cc73b96fe0fb2583b74594e825b223d281e614",
+      "highResAssetHash": "ce582c104eab9a4e05d2b974560b7f0ce433f8f511bf15a2e3166ec2787cba30",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -266,7 +266,7 @@
       "midjourneyPrompt": "angular abstract surface field, large cropped navy rounded plane, off-white and warm gray paper planes, translucent blue-gray shadow geometry, subtle peach warmth, tactile grain texture, quiet editorial product graphic, crop-friendly brand surface, useful for packaging panels, card backgrounds, and UI hero surfaces --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "열 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. deep navy rounded plane, off-white/warm gray angular planes, blue-gray translucent shadow가 겹치는 조용한 surface field입니다. 패키지 패널, 카드 배경, UI hero crop에 쓰기 좋은 절제된 그래픽 재료입니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_10",
-      "assetHash": "4297373057842e36761274b392ebe37483a7ea8139ae555df46d4f3130b7a952",
+      "assetHash": "5ff0345360e314b19ca308ebefd61c1d6e4e4e186729e63401c9cc6cdd20af67",
       "dnaClusters": [
         "Midjourney Translation",
         "Angular Surface Field",
@@ -279,7 +279,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "fa910370660fc973ca02c638d6783d4fcafd4be2914dbe8539cedb3bd1f1f1a0",
+      "highResAssetHash": "92fa84727792f0db953205b8efb094f63da0874828aae981d60ac45a2f41af6f",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -294,7 +294,7 @@
       "midjourneyPrompt": "soft ambient gradient surface, deep blue field dissolving into warm peach and pale blue-gray, broad atmospheric curve, tactile paper grain, quiet abstract brand material, calm warm-cool intelligence mood, no objects, no symbols, no interface, crop-friendly surface for packaging, editorial cards, and UI background layers --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "열한 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. deep blue에서 peach, pale blue-gray로 번지는 soft ambient gradient surface로, 구체적 오브젝트 없이 warm-cool mood와 촉각적 종이 질감을 제공합니다. 브랜드 배경, 카드 표면, 패키지 면에 넓게 crop해 쓰기 좋습니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_11",
-      "assetHash": "676f57a9af76b129ad2c5be1adf4a9e48802b677cede90ee2827b568db40b57b",
+      "assetHash": "a8d246fac502ed115722296c186843ecc55008312338a73e47e4d4514fcaff33",
       "dnaClusters": [
         "Midjourney Translation",
         "Soft Gradient Field",
@@ -307,7 +307,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "5cf0298fabfaa64b44564aeb6abf7f6e5695f2d63a7eb9186d75b14a572faba1",
+      "highResAssetHash": "8de38d177dffe4d07c1ea0a84633d5cdbc5da9c7a57505b962f0e76fa449807b",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -322,7 +322,7 @@
       "midjourneyPrompt": "single soft luminous circular disc, deep navy blue background, warm off-white matte center, subtle peach rim glow and cobalt outer halo, tactile grain texture, calm protected presence mark material, quiet premium abstract surface, crop-friendly circular signal graphic for packaging seals, UI states, and brand backgrounds --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "열두 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. deep navy 배경 위에 warm off-white 원반과 peach/cobalt halo가 둘러진 presence disc 계열입니다. 패키지 seal, UI 상태 그래픽, 브랜드 배경의 중심 모티프로 쓰기 좋은 조용한 원형 재료입니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_12",
-      "assetHash": "a87609e36375a05470e2933b9e379339b7e04d35f5cb6bd4ee40384c39bd54ac",
+      "assetHash": "e18e80649c0a91b3bcdc4b4488011cacea601d5a439a433b349781eebf1b0660",
       "dnaClusters": [
         "Midjourney Translation",
         "Complete Circle",
@@ -335,7 +335,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "7563967fb25a2e1988162a4ca14d244cfa67359c104a3673d9c87f1096820c1e",
+      "highResAssetHash": "3c0965d03f44d7c23ca4b9ba1d519ac5f1885b85246945570d3f2d8e9d5f7f54",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -350,7 +350,7 @@
       "midjourneyPrompt": "large warm off-white eclipse disc, soft circular shadow, muted coral highlight on upper rim, deep blue-gray shadow on lower-left rim, matte paper grain, quiet protected void, minimal abstract 2D presence material, generous neutral background, useful for package seal, calm UI state, and editorial brand surface --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "열세 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. warm off-white 배경과 원반, coral 상단 rim, blue-gray 하단 그림자가 만드는 조용한 eclipse disc입니다. 중심을 비운 protected presence 느낌이 강해 패키지 seal이나 차분한 UI state 모티프로 활용하기 좋습니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_13",
-      "assetHash": "89c2dbbed25511b1865a716c1e5a8e0e000313766ef471091a76b7e29e51f32a",
+      "assetHash": "05d997f55519181f61cfcca032c1c061fce1145f28701ff83bb31c6c59ba0c9b",
       "dnaClusters": [
         "Midjourney Translation",
         "Soft Presence Circle",
@@ -363,7 +363,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "d6ab4c69f85840ff7d1be2b046a08a970f7d5b44b176ca8aee6f69714aaf43fc",
+      "highResAssetHash": "29f2aae39e703172a001a9f7af290f5602dfc1214fd18f85e4e93caeb42526f7",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -378,7 +378,7 @@
       "midjourneyPrompt": "soft luminous circular ring, dark teal-blue background, warm coral glow on left and lower rim, cool cyan-blue glow on right rim, muted beige inner disc with tactile grain, calm warm-cool intelligence signal, abstract presence mark material, crop-friendly circular brand graphic for UI states, package seals, and editorial surfaces --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "열네 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. dark teal-blue 배경 위에 coral과 cyan-blue glow가 원형 rim을 따라 나뉘는 luminous ring입니다. 따뜻함과 차가움이 균형 잡힌 signal/presence 모티프로, UI state와 패키지 seal에 모두 적용하기 좋습니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_14",
-      "assetHash": "20dc1e479788dcc9bb8ff28b1187688963c4aab7ac58341f2a13e072293be327",
+      "assetHash": "c05f6fa95e8fffc5db455eab98855a40cbf960daaef9e94f83095b82878eb007",
       "dnaClusters": [
         "Midjourney Translation",
         "Circular Signal Accent",
@@ -391,7 +391,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "028e290d03e6098e25422d1555fb0090a80bdffd7fbd1adc0f956fec17831447",
+      "highResAssetHash": "f478fa78a43dbbe52a61f09e611d57b32fe267807ecbf98cb021c33148136c9b",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -406,7 +406,7 @@
       "midjourneyPrompt": "cropped cyan luminous circular arc edge, deep black-teal background, large off-frame ring curve, thin layered glass-like rim lines, soft turquoise halo glow, minimal abstract signal surface, premium quiet presence material, crop-friendly edge accent for UI states, package corners, and editorial hero backgrounds --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "열다섯 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. dark teal/black 배경 위에 cyan luminous arc가 크게 잘려 들어오는 edge/ring 계열입니다. 얇은 rim line과 halo가 있어 UI state, 패키지 모서리, hero crop에 쓰기 좋은 조용한 signal edge material입니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_15",
-      "assetHash": "a103f7844ab42819451ab6debe33a8b30a9de1fb13eaacdcf5ec6fc2e893edf1",
+      "assetHash": "ac773fcf28b2fabbfa88e41f004668a51bf7b5d18eea04ebf74287b3a9a06214",
       "dnaClusters": [
         "Midjourney Translation",
         "Edge Accent System",
@@ -419,7 +419,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "d2c2973ec7c028bbf8c34b558f7a73ffc4447efd54877c4b6d3c1b32e0611ed0",
+      "highResAssetHash": "8e699270288e4d4b224634eb60a9552a4e87be6cba35aa433c0a2e4a7d763174",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -434,7 +434,7 @@
       "midjourneyPrompt": "frosted blue glass circular disc, centered translucent bowl-like circle on warm textured off-white paper, subtle granular speckled surface, soft teal center shadow, muted olive rim, tactile optical material, calm protected presence mark, minimal abstract 2D object-surface hybrid, useful for package seal, UI state, and brand material study --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "열여섯 번째 Midjourney 수동 입력 결과를 Midjourney 레일에 저장했습니다. warm paper texture 위에 frosted blue glass disc가 중심에 놓인 이미지로, granular surface와 teal center shadow가 촉각적인 material cue를 만듭니다. 원형 presence mark, 패키지 seal, UI state 재료로 활용하기 좋습니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_26_16",
-      "assetHash": "acbabc8044c693ffbc0cb71e34f576c12760f613a8e15e75cfe4bf146c0bc643",
+      "assetHash": "8a6c4417518a6976b4f5db4e0cb1d1ff475ae011c1cc0306f3e228b143130ba3",
       "dnaClusters": [
         "Midjourney Translation",
         "Frosted Glass Disc",
@@ -447,7 +447,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "e10d5096c269b7b3a57fa132798ccaf81af1f05e6e10f2b6e79c3f2aa961ee37",
+      "highResAssetHash": "8397e3526258505146cb775c170689632d79120aa22828dade0e9b0cf46c9e89",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -462,7 +462,7 @@
       "midjourneyPrompt": "bitmap stripe rhythm surface, pure 2D abstract pattern, staggered horizontal bars, off-white paper base, deep black/navy blocks, muted yellow, dusty sky blue, small brick red accents, riso screenprint texture, tactile grain, crop-friendly packaging and card surface --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "열일곱 번째 Midjourney 수동 입력 결과입니다. off-white 종이 질감 위에 black/navy, dusty blue, muted yellow, brick red의 수평 막대가 비동기적으로 쌓인 bitmap/stripe rhythm surface입니다. 반복 패턴, 패키지 표면, editorial card background로 crop하거나 이어 붙여 쓰기 좋습니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_28_17",
-      "assetHash": "cf307d590e1f262325c542f0006404b0808f22bb5eb2d388b6e8e7461d8d8e30",
+      "assetHash": "9e8625524fd58ab8e3c12268fc1e8c297f321ddd9c6b95ad71842be5c641c159",
       "width": 1024,
       "height": 1024,
       "localArchivePath": "/opt/data/dna-archive/midjourney/2026-09-28/images/17_bitmap_stripe_rhythm_manual_midjourney.jpg",
@@ -478,7 +478,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "83895dbe4269ddd135794ade31694400ea29d4be8559c8e3365e0d1184d5aeb3",
+      "highResAssetHash": "328d952af5f01693cfad7b76fd83c682fd5e5047d8c065f724df2c32085e1dae",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -493,7 +493,7 @@
       "midjourneyPrompt": "floral radial signal bloom, abstract non-literal petal fan motif, broad rounded color wedges radiating from a shared center, coral, deep red, black, peach beige, muted teal blue, warm cream paper texture, matte vintage print grain, bold emotional accent surface, crop-friendly brand signal material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "열여덟 번째 Midjourney 수동 입력 결과입니다. 중심점에서 둥근 petal wedge들이 방사형으로 펼쳐지는 floral/signal bloom 계열입니다. coral, deep red, black, peach, muted teal이 matte paper texture와 결합해 감성적 accent, package hero crop, 브랜드 signal field로 활용하기 좋습니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_28_18",
-      "assetHash": "eb06b3c9dab00c313fcdeb43b81b55b9d65d0d5542b35c326d33e8e30a4a27ce",
+      "assetHash": "d5c9f8f20971cf8695d14afd58ce4f711e8d38602c26419ec3bf49a7087dca81",
       "width": 1024,
       "height": 1024,
       "localArchivePath": "/opt/data/dna-archive/midjourney/2026-09-28/images/18_floral_radial_signal_bloom.jpg",
@@ -509,7 +509,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "02134ad093370d8abace3c037580b5942233210c968ea3e478d7744d59ac37b2",
+      "highResAssetHash": "1883acd55f8dd801c2388079aaafdc03efdcce43bd0a226f3aac0a6f1c4b966f",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -524,7 +524,7 @@
       "midjourneyPrompt": "iridescent chrome material field, close cropped liquid metal surface, broad pearlescent ribbons, graphite, smoky teal, oily cyan, muted orange, warm highlights, tactile optical material, airbrushed granular texture, abstract crop-friendly brand surface, useful for hero background and package accent --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "열아홉 번째 Midjourney 수동 입력 결과입니다. liquid chrome처럼 접힌 표면과 cyan/orange iridescent highlight가 강한 tactile optical material입니다. 오브젝트보다는 close-crop material field로 읽히며, hero background, package accent, 고급 물성 mood surface로 쓰기 좋습니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_28_19",
-      "assetHash": "ebdbc5630c0ffd67298c94c8fbe9a253770058fe2347446e2655a7c820cfe780",
+      "assetHash": "c48b49658106af97021acae85bd5c816fa78e36e9e69365408a5273c6fbadc2d",
       "width": 1024,
       "height": 1024,
       "localArchivePath": "/opt/data/dna-archive/midjourney/2026-09-28/images/19_iridescent_chrome_material_field.jpg",
@@ -540,7 +540,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "1ae884d7602a2f1a35a5d8f5a7d36c2f4aa81764a4a8257da3b52a86546bc57b",
+      "highResAssetHash": "dc82815c7a5823280c20d2cf09373e054cb58b9ddccfa240af68038a8c008cda",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -555,7 +555,7 @@
       "midjourneyPrompt": "monochrome architectural block surface, pure 2D abstract geometric composition, large black fields, warm white vertical slab, gray diagonal plane, hard-edged crop, tactile print grain, brutal refined editorial geometry, high contrast negative space, crop-friendly package/card surface --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "스무 번째 Midjourney 수동 입력 결과입니다. 거대한 black field, warm white vertical slab, gray diagonal plane이 만드는 고대비 architectural block surface입니다. brutal하지만 정제된 editorial geometry와 tactile grain이 강해 패키지 패널, 카드 배경, section divider용 그래픽 재료로 좋습니다.",
       "sourceRun": "manual_midjourney_upload_2026_09_28_20",
-      "assetHash": "617f4d0b58180e7fc19a818dcae639d4693bbd710ff81a108f063d6fd87b6234",
+      "assetHash": "40606edf265655762f8bc5c4198e1ab6575ad676f38398ceb4b22ceb3386880c",
       "width": 1024,
       "height": 1024,
       "localArchivePath": "/opt/data/dna-archive/midjourney/2026-09-28/images/20_monochrome_architectural_block_surface.jpg",
@@ -571,7 +571,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "5017a048e752a9fd11957b5d160986fced37f88685a24a2cb0eb18904d9c5fc5",
+      "highResAssetHash": "7f7eb2f7418f265016f276e4381be530e46f6e5348e01c63651455ff461eb4a5",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -586,7 +586,7 @@
       "midjourneyPrompt": "tactile textile horizontal band system, broad hand-cut horizontal stripes, warm cream woven ground, ochre mustard bands, deep ink blue band, charcoal black bands, irregular fabric edges, visible fiber grain, restrained editorial stripe surface, crop-friendly brand and packaging material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "스물한 번째 Midjourney 수동 입력 결과입니다. 크림색 직물 바탕 위에 ochre mustard, deep ink blue, charcoal black 수평 밴드가 넓게 지나가는 tactile stripe surface입니다. 선이 완전히 기계적이지 않고 천의 결·손맛이 살아 있어 패키지 래핑, 카드 배경, 브랜드 surface pattern으로 쓰기 좋습니다.",
       "sourceRun": "manual_midjourney_upload_2026_10_02_21",
-      "assetHash": "cffbe5244cf76a5cbab660b5159312867d71d9c338024bdaabb42e9fafba186c",
+      "assetHash": "8b30703f8e157af94eb32b3f67027153bb0ffae3457473fb24dc723f14ca8028",
       "width": 1024,
       "height": 1024,
       "localArchivePath": "/opt/data/dna-archive/midjourney/2026-10-02/images/21_textile_horizontal_band_system_manual_midjourney.jpg",
@@ -602,7 +602,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "8107bb59afd59a7d969907cb47be69aeba24e3144ee2974794278deb4981ccdb",
+      "highResAssetHash": "7d0845ba288bf5c80ba87e8b436eb984b5c2febdab39ba1fc9c79c09c24e139d",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -617,7 +617,7 @@
       "midjourneyPrompt": "woven modular block grid, abstract textile patchwork composition, irregular rectangular blocks, warm ivory, black, muted mauve, plum, dusty sage, taupe gray, tactile woven fabric texture, quiet architectural rhythm, crop-friendly brand surface material, editorial geometric textile --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "스물두 번째 Midjourney 수동 입력 결과입니다. black/ivory를 중심으로 mauve, plum, dusty sage, taupe gray 직사각 블록들이 불규칙한 grid를 만드는 woven modular surface입니다. 기하학적이지만 차갑지 않고 러그/직물 같은 촉각성이 있어 브랜드 패턴, 섹션 배경, 패키지 texture로 활용하기 좋습니다.",
       "sourceRun": "manual_midjourney_upload_2026_10_02_22",
-      "assetHash": "68fa8c8554d8db53e68e82a955f1588e0fb4155aeed2ea8989fbe59e544b31ad",
+      "assetHash": "a71fdf355c8024f7b8ec6493d705afc6cc6e827c9a2142b5489fae491103e655",
       "width": 1024,
       "height": 1024,
       "localArchivePath": "/opt/data/dna-archive/midjourney/2026-10-02/images/22_woven_modular_block_grid_manual_midjourney.jpg",
@@ -633,7 +633,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "f484a6aa04c915cd8ad841e9dac92d06de1da89ddea48698eeb79669dcc59834",
+      "highResAssetHash": "2c57c92725c813d7a1e3a7c4cb7dde5864942fa5eeac372d9f7c906fd56167e2",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
@@ -648,7 +648,7 @@
       "midjourneyPrompt": "coral black stripe block surface, tactile abstract textile composition, bold vertical black stripe rhythm, coral red-orange blocks, warm cream ground, small gray patch, speckled screenprint grain, rough fabric edges, energetic editorial package surface, crop-friendly graphic material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "analysis": "스물세 번째 Midjourney 수동 입력 결과입니다. coral red-orange 블록과 굵은 black vertical stripe가 warm cream 바탕 위에서 강하게 충돌하는 textile/screenprint 계열입니다. 이전보다 에너지가 높고 graphic tension이 강해 accent surface, package crop, hero card material로 쓰기 좋습니다.",
       "sourceRun": "manual_midjourney_upload_2026_10_02_23",
-      "assetHash": "9fe4673f5ef7f55cfeb6d935621d4609fbc6258e5bca5c79b4beecfc889ac475",
+      "assetHash": "f4f3abf069952172973cb718ee5096f417aaeabe74299434e03eabd45b197e2a",
       "width": 1024,
       "height": 1024,
       "localArchivePath": "/opt/data/dna-archive/midjourney/2026-10-02/images/23_coral_black_stripe_block_surface_manual_midjourney.jpg",
@@ -664,7 +664,7 @@
       "highResDownloadLabel": "Kling 4K remaster PNG",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "5593aad3ed0aa61467df578ac32e40629b3dea47d0e1de3904ece0c270e4680b",
+      "highResAssetHash": "059741bd55d93d08e6fe3490c9f8c45fb8b1afd3930609a409ed5072ecaeeba2",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     }
