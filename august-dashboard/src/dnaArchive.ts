@@ -4,6 +4,10 @@ export type DnaArchiveItem = {
   created: string
   status: string
   imageSrc: string
+  highResImageSrc?: string
+  highResDownloadLabel?: string
+  highResWidth?: number
+  highResHeight?: number
   prompt: string
   midjourneyPrompt?: string
   analysis: string

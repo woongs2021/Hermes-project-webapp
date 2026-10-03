@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-02T18:20:00+09:00",
-  "sourcePolicy": "Public-safe manually supplied Midjourney outputs selected by Chris for Design DNA. Excludes raw private chats, credentials, and provider account details.",
+  "generatedAt": "2026-10-02T16:20:00+09:00",
+  "sourcePolicy": "Public-safe manually supplied Midjourney outputs selected by Chris for Design DNA. Midjourney items include Kling 4K remaster PNG downloads when highResImageSrc is present. Excludes raw private chats, credentials, and provider account details.",
   "items": [
     {
       "id": "2026-09-26-midjourney-01-capsule-pattern-translation",
@@ -21,7 +21,15 @@
         "Rounded Capsule UI",
         "Pattern Surface",
         "Tactile Optical Material"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/01_capsule_pattern_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "b610b872007c855ffca5147a04494c8ce662e40457b72f18654b3c98a366c965",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-02-directional-flow-translation",
@@ -41,7 +49,15 @@
         "Warm-Cool Intelligence",
         "Quiet Signal Rhythm",
         "Editorial Product Graphic"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/02_directional_flow_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/02_02_directional_flow_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "a28674a3b45f77583cd9f551adacb9e5a2215d96c255a8eb6659bb5ec9834078",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-03-geometric-arch-grid-translation",
@@ -61,7 +77,15 @@
         "Archive Pattern Surface",
         "Warm Gray Ochre System",
         "Tactile Optical Material"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/03_geometric_arch_grid_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/03_03_geometric_arch_grid_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "dbe829a7d9936aeeb5fcee9c6a1b5e6b6612731adefefd5f9782e54d62aa035c",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-04-modular-arch-surface-translation",
@@ -81,7 +105,15 @@
         "Archive Pattern Surface",
         "Warm Gray Ochre System",
         "Editorial Product Graphic"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/04_modular_arch_surface_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/04_04_modular_arch_surface_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "4f96955e1a0a126d9949dba836d85d0830c9afdae313a3b283b117885b8e7d44",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-05-matte-circle-fields-translation",
@@ -101,7 +133,15 @@
         "Matte Paper Texture",
         "Warm Earth Palette",
         "Quiet Abstract Motif"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/05_matte_circle_fields_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/05_05_matte_circle_fields_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "5faf7bf2d1c6e1cc0d5ca9a53987ceeda464434cb1c6a46cbedc6fa8a7d220a4",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-06-complete-circle-disc-translation",
@@ -121,7 +161,15 @@
         "Boundary Light",
         "Soft Object / Presence Mark",
         "Quiet Signal Rhythm"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/06_complete_circle_disc_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/06_06_complete_circle_disc_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "75c59e10cb8a211cb767f0956a64de447c772e8c0c11729349ba0d3f5648396e",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-07-warm-earth-oval-surface-translation",
@@ -141,7 +189,15 @@
         "Matte Paper Texture",
         "Warm Earth Palette",
         "Quiet Abstract Motif"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/07_warm_earth_oval_surface_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/07_07_warm_earth_oval_surface_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "ffa02d74eb076e4f6592c767ac5433d42c4a9e7e7160b9f577f703442195a688",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-08-soft-circular-ring-translation",
@@ -161,7 +217,15 @@
         "Complete Circle",
         "Warm-Cool Intelligence",
         "Tactile Optical Material"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/08_soft_circular_ring_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/08_08_soft_circular_ring_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "7feeb9ec3172e96164bc82a8dffeba3723d4b9e2c2baba619e245fa6e5b99047",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-09-orbit-circle-signal-translation",
@@ -181,7 +245,15 @@
         "Quiet Signal Rhythm",
         "Warm-Cool Intelligence",
         "Editorial Product Graphic"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/09_orbit_circle_signal_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/09_09_orbit_circle_signal_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "1ec4e11561e067ea986d5ac6c7cc73b96fe0fb2583b74594e825b223d281e614",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-10-angular-shadow-surface-translation",
@@ -201,7 +273,15 @@
         "Tactile Optical Material",
         "Protected Negative Space",
         "Editorial Product Graphic"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/10_angular_shadow_surface_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/10_10_angular_shadow_surface_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "fa910370660fc973ca02c638d6783d4fcafd4be2914dbe8539cedb3bd1f1f1a0",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-11-ambient-blue-peach-gradient-surface-translation",
@@ -221,7 +301,15 @@
         "Warm-Cool Intelligence",
         "Tactile Optical Material",
         "Editorial Abstract Surface"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/11_ambient_blue_peach_gradient_surface_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "5cf0298fabfaa64b44564aeb6abf7f6e5695f2d63a7eb9186d75b14a572faba1",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-12-deep-blue-halo-disc-translation",
@@ -241,7 +329,15 @@
         "Boundary Light",
         "Warm-Cool Intelligence",
         "Presence Mark"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/12_deep_blue_halo_disc_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/12_12_deep_blue_halo_disc_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "7563967fb25a2e1988162a4ca14d244cfa67359c104a3673d9c87f1096820c1e",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-13-warm-offwhite-eclipse-disc-translation",
@@ -261,7 +357,15 @@
         "Protected Human Context",
         "Matte Paper Texture",
         "Quiet Abstract Motif"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/13_warm_offwhite_eclipse_disc_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/13_13_warm_offwhite_eclipse_disc_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "d6ab4c69f85840ff7d1be2b046a08a970f7d5b44b176ca8aee6f69714aaf43fc",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-14-coral-blue-luminous-ring-translation",
@@ -281,7 +385,15 @@
         "Warm-Cool Intelligence",
         "Boundary Light",
         "Presence Mark"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/14_coral_blue_luminous_ring_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/14_14_coral_blue_luminous_ring_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "028e290d03e6098e25422d1555fb0090a80bdffd7fbd1adc0f956fec17831447",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-15-cyan-luminous-arc-edge-translation",
@@ -301,7 +413,15 @@
         "Boundary Light",
         "Cyan Luminous Arc",
         "Quiet Signal Rhythm"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/15_cyan_luminous_arc_edge_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/15_15_cyan_luminous_arc_edge_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "d2c2973ec7c028bbf8c34b558f7a73ffc4447efd54877c4b6d3c1b32e0611ed0",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-26-midjourney-16-frosted-blue-glass-disc-translation",
@@ -321,7 +441,15 @@
         "Tactile Optical Material",
         "Soft Presence Circle",
         "Protected Human Context"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-26/16_frosted_blue_glass_disc_midjourney_translation.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/16_16_frosted_blue_glass_disc_midjourney_translation_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "e10d5096c269b7b3a57fa132798ccaf81af1f05e6e10f2b6e79c3f2aa961ee37",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-28-midjourney-17-bitmap-stripe-rhythm-surface",
@@ -344,7 +472,15 @@
         "Screenprint Pattern",
         "Editorial Product Graphic",
         "Tactile Paper Texture"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-28/17_bitmap_stripe_rhythm_manual_midjourney.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/17_17_bitmap_stripe_rhythm_manual_midjourney_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "83895dbe4269ddd135794ade31694400ea29d4be8559c8e3365e0d1184d5aeb3",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-28-midjourney-18-floral-radial-signal-bloom",
@@ -367,7 +503,15 @@
         "Radial Color Plane",
         "Warm-Cool Intelligence",
         "Emotional Accent Surface"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-28/18_floral_radial_signal_bloom.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/18_18_floral_radial_signal_bloom_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "02134ad093370d8abace3c037580b5942233210c968ea3e478d7744d59ac37b2",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-28-midjourney-19-iridescent-chrome-material-field",
@@ -390,7 +534,15 @@
         "Tactile Optical Material",
         "Chrome Material Study",
         "Hero Background Surface"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-28/19_iridescent_chrome_material_field.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/19_19_iridescent_chrome_material_field_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "1ae884d7602a2f1a35a5d8f5a7d36c2f4aa81764a4a8257da3b52a86546bc57b",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-09-28-midjourney-20-monochrome-architectural-block-surface",
@@ -413,7 +565,15 @@
         "Architectural Block Geometry",
         "Protected Negative Space",
         "Tactile Print Grain"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-28/20_monochrome_architectural_block_surface.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "5017a048e752a9fd11957b5d160986fced37f88685a24a2cb0eb18904d9c5fc5",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-10-02-midjourney-21-textile-horizontal-band-system",
@@ -436,7 +596,15 @@
         "Warm Ochre Blue Palette",
         "Tactile Fabric Grain",
         "Editorial Product Graphic"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-10-02/21_textile_horizontal_band_system_manual_midjourney.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/21_21_textile_horizontal_band_system_manual_midjourney_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "8107bb59afd59a7d969907cb47be69aeba24e3144ee2974794278deb4981ccdb",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-10-02-midjourney-22-woven-modular-block-grid",
@@ -459,7 +627,15 @@
         "Tactile Fabric Grain",
         "Muted Plum Sage Palette",
         "Archive Pattern Surface"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-10-02/22_woven_modular_block_grid_manual_midjourney.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/22_22_woven_modular_block_grid_manual_midjourney_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "f484a6aa04c915cd8ad841e9dac92d06de1da89ddea48698eeb79669dcc59834",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     },
     {
       "id": "2026-10-02-midjourney-23-coral-black-stripe-block-surface",
@@ -482,7 +658,15 @@
         "Screenprint Pattern",
         "Tactile Fabric Grain",
         "Energetic Accent Surface"
-      ]
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-10-02/23_coral_black_stripe_block_surface_manual_midjourney.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "5593aad3ed0aa61467df578ac32e40629b3dea47d0e1de3904ece0c270e4680b",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-02T16:20:00+09:00"
     }
   ]
 }

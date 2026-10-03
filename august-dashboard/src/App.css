@@ -8493,6 +8493,28 @@
   background: color-mix(in srgb, var(--panel-surface) 82%, white);
 }
 
+.dna-high-res-download-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  padding: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--primary) 20%, var(--stroke));
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--primary) 6%, var(--panel-surface));
+}
+
+.dna-high-res-download-row span {
+  color: var(--muted-ink);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+.dna-high-res-download {
+  min-height: 36px;
+  font-weight: 700;
+}
+
 .brand-asset-detail-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
