@@ -10,7 +10,7 @@
       "status": "chris_selected_replaced",
       "imageSrc": "/assets/dna-archive/2026-09-16/02_directional_flow_map_simplified.png",
       "prompt": "GPT Image 2.5 replacement revision from Chris-selected 2026-09-16 pair; pure graphic only, no text/logos/photos/icons, explicitly no dots/dotted lines/thin lines/connector lines/grid lines/route lines; use filled shapes, broad planes, negative space, and soft editorial product-graphic surfaces.",
-      "analysis": "2026-09-17 Chris 요청으로 전날 저장본을 점선/점/선 없이 교체한 저장본입니다. 선형 route나 signal dots 대신 큰 color field와 negative-space channel로 방향성을 유지했습니다.",
+      "analysis": "큰 색면과 절제된 negative-space channel이 방향성을 만드는 추상 그래픽입니다. 점선이나 경로선 없이 warm neutral, muted blue, coral field가 넓게 맞물려 브랜드 배경, 카드 표면, 패키지 패널에 쓰기 좋은 조용한 flow material입니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-16/chris-archive-gpt-image-2-5-pattern-refine",
       "dnaClusters": [
         "Protected Human Context",
@@ -43,7 +43,7 @@
       "status": "chris_selected_replaced",
       "imageSrc": "/assets/dna-archive/2026-09-16/01_modular_capsule_pattern_simplified.png",
       "prompt": "GPT Image 2.5 replacement revision from Chris-selected 2026-09-16 pair; pure graphic only, no text/logos/photos/icons, explicitly no dots/dotted lines/thin lines/connector lines/grid lines/route lines; use filled shapes, broad planes, negative space, and soft editorial product-graphic surfaces.",
-      "analysis": "2026-09-17 Chris 요청으로 전날 저장본을 점선/점/선 없이 교체한 저장본입니다. 큰 filled capsule/shape와 여백 중심으로 재구성해 그래픽 패턴/배경 활용성을 유지했습니다.",
+      "analysis": "큰 capsule과 rounded block이 여백 위에 느슨하게 배치된 평면 패턴입니다. warm gray, cobalt, parchment, muted coral의 넓은 색면이 tactile paper texture와 결합해 부드럽고 안정적인 브랜드 surface로 읽힙니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-16/chris-archive-gpt-image-2-5-pattern-refine",
       "dnaClusters": [
         "Protected Human Context",
@@ -75,7 +75,7 @@
       "created": "2026-09-18",
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-18/selected_01_geometric_arch_grid.jpg",
-      "analysis": "생성 의도: 오브젝트 메타포를 배제하고, Chris Archive의 조용한 OS-native polish와 warm gray/ochre/black 팔레트를 “모듈형 기하 패턴”으로 재해석한 이미지입니다. 원, 반원, 아치, 직사각형 블록을 격자 리듬 안에 배치해 디자인 시스템 specimen 같은 질서를 만들었습니다. 왜 만들었는가: 이전 결과들이 아카이빙된 스타일이나 물체처럼 보이는 경향이 있어, “그래픽 디자이너가 만든 모티프”라는 방향을 명확히 하기 위한 첫 번째 기준점으로 생성했습니다. 활용 관점: 반복 패턴, 섹션 배경, DNA Archive 썸네일, 브랜드 표면 그래픽에 적합합니다.",
+      "analysis": "원, 반원, 아치, 직사각형 블록이 warm gray, ochre, charcoal 팔레트 안에서 모듈형 격자를 이룹니다. 오브젝트보다 시스템 specimen에 가까운 이미지로, 패턴 라이브러리와 디자인 토큰 보드에 잘 맞습니다.",
       "sourceRun": "/opt/data/goyounjung_outputs/chris_archive_graphic_motif_20260918/motif_01.png",
       "sourceCandidateRun": "/opt/data/goyounjung_outputs/graphic_motif_ref_variations_20260918 and Chris-selected Telegram attachments",
       "dnaClusters": [
@@ -108,7 +108,7 @@
       "created": "2026-09-18",
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-18/selected_02_matte_circle_fields.jpg",
-      "analysis": "생성 의도: 큰 원형 필드와 부드러운 겹침, matte paper/plaster 질감을 중심으로 만든 조용한 추상 포스터형 그래픽입니다. 왜 만들었는가: Chris가 좋다고 한 “큰 곡면 덩어리 + 부드러운 질감” 방향을 유지하되, 기존 blue/ochre 계열과 다르게 더 따뜻하고 흙빛에 가까운 재질 실험을 하기 위해 생성했습니다. clay terracotta, faded sage, deep umber 조합은 디지털 UI보다 편집/인쇄물 같은 안정감을 주며, 오브젝트가 아니라 색면과 질감 자체가 모티프가 되도록 의도했습니다. 활용 관점: 감정적으로 차분한 브랜드 배경, 에디토리얼 커버, One UI식 warm human AI moodboard의 색/재질 레퍼런스로 적합합니다.",
+      "analysis": "terracotta, sage, umber, off-white의 큰 원형 필드가 matte paper/plaster 질감 위에 겹쳐진 조용한 추상 포스터입니다. 부드러운 곡면 덩어리와 흙빛 온도가 브랜드 배경이나 패키지 면에 따뜻한 물성을 줍니다.",
       "sourceRun": "/opt/data/goyounjung_outputs/graphic_motif_ref_variations_20260918/variation_04.png",
       "sourceCandidateRun": "/opt/data/goyounjung_outputs/graphic_motif_ref_variations_20260918 and Chris-selected Telegram attachments",
       "dnaClusters": [
@@ -141,7 +141,7 @@
       "created": "2026-09-18",
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-18/selected_03_soft_gradient_curves.jpg",
-      "analysis": "생성 의도: blue-gray, muted ochre, charcoal을 중심으로 한 부드러운 곡면 그래디언트 모티프입니다. 왜 만들었는가: Chris Archive/DNA 그래픽이 capsule/flow-map 반복으로 좁아지지 않도록, 더 회화적이고 atmospheric한 그래픽 언어를 추가하기 위해 생성했습니다. 곡면이 겹치지만 특정 사물이나 심볼로 읽히지 않게 하고, 종이 위에 번진 색면처럼 보이도록 유도했습니다. 이 방향은 “AI OS”를 직접 설명하지 않으면서도 따뜻한 지능, 조용한 깊이, 정서적 안정감을 암시합니다. 활용 관점: hero 배경, 감성적 연구 카드, 브랜드 mood surface, future One UI tone exploration의 추상 비주얼 레퍼런스로 적합합니다.",
+      "analysis": "blue-gray, muted ochre, charcoal이 부드러운 곡면 gradient로 연결되는 atmospheric surface입니다. 선명한 오브젝트보다 빛과 색의 흐름이 중심이며, hero background나 감성적인 시스템 무드 표면으로 쓰기 좋습니다.",
       "sourceRun": "/opt/data/goyounjung_outputs/chris_archive_graphic_motif_20260918/motif_02.png",
       "sourceCandidateRun": "/opt/data/goyounjung_outputs/graphic_motif_ref_variations_20260918 and Chris-selected Telegram attachments",
       "dnaClusters": [
@@ -175,7 +175,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-21/01_complete_circle_outer_stroke.png",
       "prompt": "GPT Image 2.5 revision: remove central sky-blue fill and central glow; keep one perfect circle; make only the outer stroke/rim subtly luminous; pure flat 2D graphic, no text/logos/photos/icons.",
-      "analysis": "Chris 피드백에 따라 중앙 하늘색 면적과 중심 glow를 제거하고, 완전한 원의 외곽 stroke/rim에만 은은한 빛이 남도록 조정한 flat 2D 그래픽입니다. 이전 원형 스타일의 warm off-white 기반과 조용한 One UI/Hermes polish를 유지하면서, 빛의 역할을 중앙 오브젝트가 아니라 경계/윤곽의 미세한 신호로 낮췄습니다.",
+      "analysis": "warm off-white 바탕 위에 완전한 원형 rim과 은은한 외곽 빛이 남아 있는 presence graphic입니다. 내부 장식은 줄이고 경계의 미세한 glow만 남겨 조용한 상태 표시, seal, agent presence mark로 활용하기 좋습니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-21/revisions-gptimage-outerstroke",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-21",
       "dnaClusters": [
@@ -209,7 +209,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-21/02_woven_bar_closeup.png",
       "prompt": "GPT Image 2.5 revision based on Chris attached reference: close-up expanded rounded interwoven cobalt/cyan bars, halftone fade at ends, coral accents, paper texture; one motif only; pure flat 2D graphic, no text/logos/photos/icons.",
-      "analysis": "Chris가 첨부한 reference를 기준으로, 파란/시안 rounded bar가 교차하는 woven lattice motif를 확대샷처럼 다시 그린 flat 2D 그래픽입니다. 여러 패턴을 섞지 않고 하나의 motif를 크게 적용했으며, cobalt/cyan 막대, coral accent, halftone fade, paper texture를 중심으로 패턴 표면 활용성을 높였습니다.",
+      "analysis": "cobalt와 cyan rounded bar가 교차하며 woven lattice처럼 보이는 확대형 그래픽입니다. coral accent가 낮은 밀도로 들어가며, 직조된 신호·네트워크·촉각적 모듈감을 브랜드 패턴으로 번역합니다.",
       "dnaClusters": [
         "Woven Capsule Pattern",
         "Warm-Cool Intelligence",
@@ -239,7 +239,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-23/quiet_warm_cool_surface_field.png",
       "prompt": "Original Hermes design-system graphic motif material for future brand, package, UI, and mockup composition, based on repeated visual principles from an internal design archive. It is not a finished poster, not a product mockup, not a logo, not an app icon, and not a standalone artwork. 1:1 square composition, composable visual layer, useful for cropping, masking, overlaying, repeating, or placing on packaging/UI surfaces. Create a soft edge-to-edge surface field: warm gray paper/plaster base, restrained cobalt-to-cyan intelligence mist and a very subtle muted coral/yellow warmth, tactile optical material feeling, large clear negative space, crop-friendly corners, quiet editorial structure with only faint label-zone geometry implied by tonal fields, no readable text. Chris Archive DNA: protected human context, warm-cool intelligence, tactile optical material, editorial evidence system. Clean primary motif only: broad soft fields, quiet surface utility, no secondary linework, no dot/dash/scratch/orbit decoration. No readable text, no third-party text, no brand names, no logos, no finished poster, no completed package label, no app icon, no exact reference layout, no product mockup, no UI screenshot, no robot, no brain symbol, no magic sparkle, no generic AI startup neon gradient, no cinematic object render, no decorative wallpaper-only image, no surveillance dashboard, no fake UI copy, no copyrighted character, no known package imitation, no sharp aggressive objects, no cluttered interface, no incidental decorative lines, no random scratches, no unnecessary orbit marks, no mixed visual systems.",
-      "analysis": "가장 조용하고 실사용성이 높은 surface 후보입니다. 텍스트·로고·부차 라인 없이 warm/cool field와 종이 질감이 안정적이며, 오늘 line-clean 기준에 잘 맞습니다.",
+      "analysis": "calm clay, sage, off-white 계열의 모듈이 반복되는 낮은 밀도의 surface pattern입니다. 규칙적이지만 기계적이지 않은 배열과 matte texture가 패키지 배경, 카드 섹션, 브랜드 패턴 재료로 적합합니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-23-line-clean/images/01.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-23-line-clean",
       "dnaClusters": [
@@ -274,7 +274,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-23/neutral_orbit_contour_line_grammar.png",
       "prompt": "Original Hermes design-system graphic motif material for future brand, package, UI, and mockup composition, based on repeated visual principles from an internal design archive. It is not a finished poster, not a product mockup, not a logo, not an app icon, and not a standalone artwork. 1:1 square composition, composable visual layer, useful for cropping, masking, overlaying, repeating, or placing on packaging/UI surfaces. Stroke / Line Motif: line-only graphic layer on a quiet warm off-white / soft gray neutral base. Use a restrained set of continuous thin contour arcs, one or two open rings, and calm signal rhythm lines with generous negative space. Lines may be charcoal, muted cobalt, and one very small warm yellow/coral accent stroke, but absolutely no filled shapes. Subtle grid/label/symbol zones may be suggested only through line weight and spacing, never text. Chris Archive DNA: quiet signal rhythm, editorial evidence system, warm-cool intelligence. MUST be linework only: no filled planes, no filled blobs, no color blocks, no surface patches, no object render, no shadow masses, no dots, no dashes, no scratches, no decorative filler, no orbit clutter. No readable text, no third-party text, no brand names, no logos, no finished poster, no completed package label, no app icon, no exact reference layout, no product mockup, no UI screenshot, no robot, no brain symbol, no magic sparkle, no generic AI startup neon gradient, no cinematic object render, no surveillance dashboard, no fake UI copy, no copyrighted character, no known package imitation, no sharp aggressive objects, no cluttered interface, no incidental decorative lines, no random scratches, no unnecessary orbit marks, no mixed visual systems.",
-      "analysis": "면 없이 선만 남긴 후보입니다. 점선·스크래치·텍스트가 없어 수정사항을 가장 직접적으로 반영했습니다. 다만 독립 이미지로는 매우 미니멀하므로 overlay 재료로 쓰는 쪽이 적합합니다.",
+      "analysis": "neutral contour line과 orbit-like curve가 조용하게 교차하는 선형 그래픽입니다. 과한 glow 없이 부드러운 경계와 여백을 남겨 AI signal, connection, context layer를 차분하게 표현합니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-23-line-clean/images/02.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-23-line-clean",
       "dnaClusters": [
@@ -308,7 +308,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-23/soft_presence_circle_seed.png",
       "prompt": "Original Hermes design-system graphic motif material for future brand, package, UI, and mockup composition. 1:1 square composable graphic motif layer, crop/mask/overlay/repeat friendly. Pure graphic only: no readable text, no letters, no numbers, no logos, no watermark, no product mockup, no UI screenshot, no finished poster, no app icon, no photo, no people. Keep Chris Archive quiet editorial polish, restrained tactile paper/plaster surface, clear negative space, flat 2D graphic design rather than rendered 3D object. Candidate 03 revision from a previous soft presence mark: change the main form into a PERFECT COMPLETE CIRCLE / circular presence mark. Preserve the idea of a soft protected inner void and warm-cool intelligence, but the outer silhouette must be a clean complete circle, not a rounded square, squircle, cushion, app icon, bean, blob, or shield. Use one centered flat circular layer with matte off-white/warm gray interior, subtle cobalt-cyan rim light, very small muted coral warmth only if needed. Abundant negative space. No surrounding decorative lines, no dots, no orbit marks, no scratches, no fake labels.",
-      "analysis": "원형으로 수정: 완전한 circular presence mark / ring 형태로 정리했고, 중앙은 warm off-white void로 비워 둔 버전입니다. 기존 03의 soft protected void 감각은 유지하되 squircle/cushion 느낌을 제거했습니다.",
+      "analysis": "warm-cool 색면이 낮은 대비로 접촉하는 부드러운 surface field입니다. 이미지 전체가 하나의 조용한 배경 재료처럼 작동하며, 정보 카드 뒤쪽의 ambient panel이나 packaging underlay에 잘 어울립니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-23-line-clean/revisions-circle-tone/images/03_revised.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-23-line-clean/revisions-circle-tone",
       "dnaClusters": [
@@ -343,7 +343,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-23/calm_clay_sage_module_repeat.png",
       "prompt": "Original Hermes design-system graphic motif material for future brand, package, UI, and mockup composition. 1:1 square composable graphic motif layer, crop/mask/overlay/repeat friendly. Pure graphic only: no readable text, no letters, no numbers, no logos, no watermark, no product mockup, no UI screenshot, no finished poster, no app icon, no photo, no people. Keep Chris Archive quiet editorial polish, restrained tactile paper/plaster surface, clear negative space, flat 2D graphic design rather than rendered 3D object. Candidate 04 revision from a rounded-module repeat pattern: reduce complexity by about 45 percent: fewer modules, larger rounded shapes, more negative space, one clear repeat logic only. Change color tone away from high-contrast charcoal/yellow/cobalt into a calmer warm clay, soft sage gray, parchment off-white, and muted umber tone with only a tiny cool blue-gray accent if necessary. Quiet editorial, lower-density, useful as package/card background pattern. No dense blocks, no many colors, no dot grid, no dashed routes, no decorative linework, no scratches, no mixed visual systems.",
-      "analysis": "복잡도 축소 및 색상 톤 변경: 모듈 수를 줄이고 큰 rounded shape 중심으로 정리했으며, 기존 대비 강한 charcoal/yellow/cobalt 대신 clay/sage/parchment/umber 계열로 낮췄습니다.",
+      "analysis": "큰 원형 presence seed가 부드러운 색 번짐과 함께 중심을 형성합니다. 명확한 아이콘보다 감지되는 상태와 보호된 공간의 느낌이 강해, AI 모드 진입이나 memory object의 시각 씨앗으로 쓰기 좋습니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-23-line-clean/revisions-circle-tone/images/04_revised.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-23-line-clean/revisions-circle-tone",
       "dnaClusters": [
@@ -378,7 +378,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-23/circular_agency_signal_accent_no_yellow_line.png",
       "prompt": "Original Hermes design-system graphic motif material for future brand, package, UI, and mockup composition. 1:1 square composable graphic motif layer, crop/mask/overlay/repeat friendly. Pure graphic only: no readable text, no letters, no numbers, no logos, no watermark, no product mockup, no UI screenshot, no finished poster, no app icon, no photo, no people. Keep Chris Archive quiet editorial polish, restrained tactile paper/plaster surface, clear negative space, flat 2D graphic design rather than rendered 3D object. Candidate 05 revision from a contained agency signal accent: change the accent form into a PERFECT COMPLETE CIRCLE / circular signal seal fragment. It must read as a clean circular graphic material, not a capsule, rounded rectangle, squircle, badge logo, app icon, or shield. Keep it reusable as an accent, not a finished logo: one circle with protected central void or calm circular field, subtle boundary/rim signal, warm off-white/charcoal base with muted yellow agency cue and small cobalt/coral balance. Keep enough negative space around it. No text, no letters, no decorative orbit line, no dot clutter, no scratches, no extra symbols. Local post-edit: removed yellow outer line graphic only.",
-      "analysis": "원형으로 수정: capsule/badge/squircle 대신 완전한 원형 ring accent로 정리했습니다. warm yellow, cobalt, coral, charcoal의 signal balance는 남기되 텍스트/로고 없이 accent material로 쓰기 좋게 유지했습니다. Chris 추가 피드백에 따라 외곽 노란색 라인 그래픽만 제거한 최종 저장본입니다.",
+      "analysis": "완전한 원형 ring accent가 warm yellow, cobalt, coral, charcoal의 균형 안에서 정리된 그래픽입니다. badge나 capsule보다 순수한 원형 신호로 읽히며, 작은 상태 표식이나 브랜드 accent material로 적합합니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-23-line-clean/revisions-circle-tone/images/05_revised_no_yellow_line.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-23-line-clean/revisions-circle-tone",
       "dnaClusters": [
@@ -413,7 +413,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-25/01_warm_gray_protected_surface_field.png",
       "prompt": "Original Hermes design-system graphic motif material for future brand, package, UI, and mockup composition, based on repeated visual principles from an internal design archive. It is not a finished poster, not a product mockup, not a logo, not an app icon, and not a standalone artwork. 1:1 square composition, composable visual layer, useful for cropping, masking, overlaying, repeating, or placing on packaging/UI surfaces.\nCore DNA: Protected Human Context, Warm-Cool Intelligence, Quiet Signal Rhythm, Tactile Optical Material, Editorial Evidence System, Soft Object / Presence Mark. Include: clear negative space, usable edge-to-edge or crop-friendly composition, graphic motif layer not finished layout, subtle grid/label/symbol zones without readable text, restrained Hermes palette and material feeling, high design utility for later mockup synthesis, Chris Archive-derived color, spacing, quiet editorial structure, surface feeling, and motif rhythm, clean primary motif only.\nMotif 01 Surface Field Motif: a soft warm-gray and charcoal editorial surface field with misty cobalt/cyan depth and one restrained coral warmth cue as subtle material tone, suitable as package or UI background. Prioritize spacious negative field, tactile paper-plaster plus frosted optical softness, broad calm color planes, faint non-readable label zones and symbol zones as empty structure, edge-to-edge crop utility. No central object, no decorative lines, no scratches, no orbit marks, no dots. Flat 2D graphic material with gentle surface depth only, senior editorial product-design restraint.",
-      "analysis": "Chris Archive DNA를 완성물 복제가 아니라 합성 가능한 그래픽 재료로 번역한 후보입니다. QA 후 텍스트/로고 없이 임시 리뷰용으로만 보관합니다. Chris가 2026-09-25 후보 중 이 번호를 저장 대상으로 직접 선택했습니다.",
+      "analysis": "warm gray 바탕 위에 보호된 표면감과 낮은 contrast의 색면이 놓인 조용한 그래픽 재료입니다. 특정 로고나 문구 없이 calm system background, archive card, soft UI panel의 기반으로 쓰기 좋습니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-25/images/01.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-25",
       "dnaClusters": [
@@ -448,7 +448,7 @@
       "status": "chris_selected_replaced",
       "imageSrc": "/assets/dna-archive/2026-09-25/02_mint_cyan_compact_glow_line_overlay.png",
       "prompt": "PURE GRAPHIC MOTIF MATERIAL ONLY. No readable text, no letters, no numbers, no logos, no watermark, no UI screenshot, no app icon, no product mockup, no finished poster, no photography, no people.\n\nRefinement target: keep the current approved two-line shape and stroke thickness, but remove the light-trail feeling. Replace the over-bright cyan trail with a calmer cyan-mint mixed luminous line treatment. The result should feel like refined graphic linework, not long-exposure photography or motion trails.\n\n1:1 square, flat 2D editorial graphic material. Background: deep charcoal / near-black warm graphite with subtle paper-plaster grain, refined and tactile, not pure digital black.\n\nLinework: exactly two dominant curved lines, preserving the same broad shallow arc composition, same smooth controlled curvature, same medium-thick stroke weight, and same calm diagonal flow as the current candidate. Color treatment: cyan mixed with soft mint green, with a restrained luminous edge. Use a cleaner solid glowing stroke core rather than a trailing blur. The glow should be present but compact and controlled: small soft halo close to the line, no long streaks, no motion blur, no light painting, no photographic light trail. Subtle warm amber/clay edge may remain very faint, but mint-cyan should be the main feeling.\n\nImportant correction: SAME LINE SHAPE, SAME LINE THICKNESS, LESS LIGHT-TRAIL FEELING, CYAN + MINT MIX. Do not add extra lines. Do not make the lines wavy. Do not make the lines thinner or thicker. Do not make worm-like, snake-like, caterpillar-like, biological, lumpy, segmented, rubbery, or overly organic curves.\n\nGeneral constraints: ONLY TWO MAIN LINES. No complete circles, no centered badge/seal, no icon, no object, no UI, no map/route diagram, no orbit clutter, no dots/dashes/arrows, no fake labels. Keep it line-only: no filled shapes, no blobs, no color blocks, no surface patches, no 3D object, no glass lens. No extra secondary line clusters. No decorative scratches.\n\nSuccess criteria: dark background, same two-line shape and thickness as previous approved candidate, calmer cyan-mint luminous line, compact glow without light-trail/motion-blur feeling, text-free, flat 2D, refined, usable as a brand/package/UI overlay material.",
-      "analysis": "Chris가 승인한 02 최종 교체본입니다. 이전 강한 cyan 라이트 트레일 느낌을 줄이고, 같은 2-line arc/굵기 방향을 유지하면서 mint-cyan compact glow로 정리했습니다. 텍스트/로고/점선/장식 없이 flat 2D line overlay 소재로 저장했습니다.",
+      "analysis": "mint-cyan compact glow line이 어두운 표면 위에서 짧고 선명하게 겹치는 line overlay입니다. 과한 라이트 트레일보다 절제된 감지 신호에 가까워, processing state나 작은 motion cue의 정적 재료로 적합합니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-25/revisions-different-style/images/02_mint_no_light_trail.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-25/revisions-different-style",
       "dnaClusters": [
@@ -485,7 +485,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-25/03_soft_circular_presence_seed.png",
       "prompt": "Original Hermes design-system graphic motif material for future brand, package, UI, and mockup composition, based on repeated visual principles from an internal design archive. It is not a finished poster, not a product mockup, not a logo, not an app icon, and not a standalone artwork. 1:1 square composition, composable visual layer, useful for cropping, masking, overlaying, repeating, or placing on packaging/UI surfaces.\nCore DNA: Protected Human Context, Warm-Cool Intelligence, Quiet Signal Rhythm, Tactile Optical Material, Editorial Evidence System, Soft Object / Presence Mark. Include: clear negative space, usable edge-to-edge or crop-friendly composition, graphic motif layer not finished layout, subtle grid/label/symbol zones without readable text, restrained Hermes palette and material feeling, high design utility for later mockup synthesis, Chris Archive-derived color, spacing, quiet editorial structure, surface feeling, and motif rhythm, clean primary motif only.\nMotif 03 Soft Object Motif: one clean soft circular / rounded geometry presence seed, not a logo, not an app icon. A calm circular form with protected inner void, matte gel-paper material, warm gray base, muted cobalt outer temperature, very quiet coral inner warmth as material cue. Strong negative space around it, crop-friendly mark seed, no surrounding decorative lines, no orbit, no dots, no fake UI. More formal and circular geometry, but intentionally incomplete as a composable motif material rather than finished identity.",
-      "analysis": "Chris Archive DNA를 완성물 복제가 아니라 합성 가능한 그래픽 재료로 번역한 후보입니다. QA 후 텍스트/로고 없이 임시 리뷰용으로만 보관합니다. Chris가 2026-09-25 후보 중 이 번호를 저장 대상으로 직접 선택했습니다.",
+      "analysis": "부드러운 원형 존재감과 낮은 채도의 따뜻한 field가 결합된 presence seed입니다. 중심이 강하게 과시되지 않고 주변과 섞여, calm AI companion, memory node, protected context icon의 베이스로 쓰기 좋습니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-25/images/03.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-25",
       "dnaClusters": [
@@ -520,7 +520,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-25/04_torn_vellum_tile_surface.png",
       "prompt": "PURE GRAPHIC MOTIF MATERIAL ONLY. No text, no letters, no numbers, no logos, no watermark, no app icon, no UI screenshot, no product mockup, no finished poster, no photography, no people.\n\nContext: This is candidate 04 revised because the previous repeat pattern felt too similar to earlier capsule/module archive outputs. Create a different pattern language, not capsules, not rounded-rectangle modules, not flow-map.\n\n1:1 square, flat 2D composable surface/pattern material for future brand/package/UI mockup synthesis. Build one low-density repeat logic from broad torn-paper / vellum tile fields: irregular rectangular and trapezoid paper planes, large negative gaps, soft offset seams, subtle risograph overprint texture. The pattern should feel like an editorial material swatch, not a symbol or object. Avoid circles, capsules, rounded pills, route lines, dots, dashes, grids, icons, and UI components.\n\nPalette: muted plum-gray, bone parchment, smoky olive, desaturated ochre, one quiet charcoal anchor. Keep contrast refined and calm, with matte print texture and slight overprint misregistration. No neon, no cobalt/cyan dominance, no yellow line decoration.\n\nSuccess criteria: visibly different from saved capsule/flow/circle archive assets; useful as a crop/mask/repeat surface; lower density, refined, tactile, graphic-design motif material.",
-      "analysis": "Chris가 나머지는 괜찮다고 승인한 04 수정본입니다. 기존 capsule/module 반복과 다르게 torn-paper/vellum tile field로 전환했고, 낮은 밀도와 matte riso 질감으로 패키지/카드 배경 crop 재료에 적합합니다.",
+      "analysis": "찢긴 vellum tile과 matte riso texture가 겹친 종이 표면 그래픽입니다. capsule이나 원형 반복과 다른 tactile collage 방향이며, 패키지 배경이나 archive card surface에 자연스러운 손맛을 더합니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-25/revisions-different-style/images/04_revised_different_style.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-25/revisions-different-style",
       "dnaClusters": [
@@ -554,7 +554,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-25/05_cropped_edge_hinge_accent.png",
       "prompt": "PURE GRAPHIC MOTIF MATERIAL ONLY. No text, no letters, no numbers, no logos, no watermark, no app icon, no UI screenshot, no product mockup, no finished poster, no photography, no people.\n\nContext: This is candidate 05 revised because the previous signal/accent mark felt too similar to earlier circular seal/circle archive outputs. Create a different accent motif family, not a circle badge, not a logo, not an icon.\n\n1:1 square, flat 2D graphic accent material. Use a cropped corner/edge accent system: one large L-shaped color-field hinge, a broad soft diagonal cut, and a small quiet counter-shape near the edge. It should feel like a reusable visual accent for package corners, card edges, section dividers, or UI state highlights. No circles, no rings, no badge/seal, no centered emblem, no orbit lines, no dots, no fake UI labels.\n\nPalette: warm ivory base, deep ink graphite, muted brick/clay, dusty lavender-gray, tiny moss-green accent. Matte paper/plaster texture, crisp but gentle edges, senior editorial restraint. Keep it 2D and composable, with strong negative space and crop-friendly edges.\n\nSuccess criteria: clearly different from the prior circular signal marks; not an object; useful as an edge/corner accent motif for future Chris-led mockup composition.",
-      "analysis": "Chris가 나머지는 괜찮다고 승인한 05 수정본입니다. 기존 circular seal/badge와 달리 corner/edge hinge accent로 바꿨고, 큰 대각 color field와 충분한 여백이 있어 패키지 모서리, 카드 edge, UI 섹션 accent로 쓰기 좋습니다.",
+      "analysis": "큰 대각 color field와 corner/edge hinge accent가 프레임 바깥으로 이어지는 그래픽입니다. 충분한 여백과 잘린 가장자리의 긴장감이 있어 패키지 모서리, 카드 edge, 섹션 transition 소재로 적합합니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-25/revisions-different-style/images/05_revised_different_style.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-25/revisions-different-style",
       "dnaClusters": [
@@ -588,7 +588,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-28/02_monochrome_editorial_block_system.png",
       "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY. No text, no letters, no numbers, no logos, no watermark, no poster headline, no app icon, no UI screenshot, no product mockup, no people, no photography.\n\nCreate candidate 02 as a radically different Chris Archive-derived graphic family: MONOCHROME EDITORIAL BLOCK SYSTEM. Use the reference DNA of monochrome editorial spreads and lime/gray Traffik geometric posters, but do not copy any layout. Square 1:1 composable motif material for later brand/package/UI synthesis. Large black and warm-white rectangular fields, brutal but refined asymmetrical cropping, a few lime-gray geometric wedges, thick margin logic, Swiss/editorial tension, print grain, flat ink surfaces. No capsule shapes, no circular seal, no orbit, no contour lines, no dots, no rounded UI modules. It should feel like a crop-ready graphic designer surface, not a finished poster.",
-      "analysis": "No readable text/logo; strong monochrome/lime editorial block system; visibly different from capsule/circle/line motifs. Chris가 “훨씬 낫다”고 평가하고 개별 파일 전체 저장을 요청한 최종 저장본입니다.",
+      "analysis": "black, off-white, lime-gray 색면이 강하게 대비되는 monochrome editorial block system입니다. capsule이나 원형보다 포스터적이고 건축적인 구성이며, 브랜드 시스템의 bold editorial surface로 활용하기 좋습니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-28/revisions-creative-archive-divergence/images/02_creative_archive_divergence.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-28/revisions-creative-archive-divergence",
       "dnaClusters": [
@@ -618,7 +618,7 @@
         "/opt/data/chris-archive/images/2026/09/2026-09-12_uvita-traffik-lime-gray-geometric-poster_7c0610069edc.jpg"
       ],
       "midjourneyPrompt": "monochrome editorial block system, abstract 2D graphic motif, large black and warm-white rectangular fields, asymmetrical cropped blocks, lime-gray geometric wedges, Swiss editorial tension, refined print grain, flat ink surfaces, crop-friendly brand/package surface --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
-      "assetHash": "28f1993f623ed10b829308af37971d04ea42ccae087e668ca198a5669ab67c93"
+      "assetHash": "fe44b37156f36e175d3469320a1860d623751ba83be47714faf3cbb9a59a1979"
     },
     {
       "id": "2026-09-28-goyj-03-03-iridescent-chrome-surface-field",
@@ -627,7 +627,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-28/03_iridescent_chrome_surface_field.png",
       "prompt": "PURE GRAPHIC MOTIF MATERIAL ONLY. No readable text, letters, numbers, logo, watermark, app icon, UI, product mockup, humans, photo scene.\n\nCreate candidate 03 using a different Chris Archive reference axis: LIQUID CHROME / IRIDESCENT SURFACE FIELD translated into flat graphic material. Do not make a single object, sculpture, orb, blob mascot, logo, or 3D product render. Build a square abstract composition from broad iridescent gradient ribbons and soft chrome-like color skins flattened onto paper, with negative space and crop-friendly edges. Palette: pearl white, graphite, smoky lavender, muted orange, oily cyan highlights, tiny black anchor. Tactile print + airbrush feeling, not neon AI gradient. Avoid current warm-gray/capsule/circle systems.",
-      "analysis": "No readable text/logo; iridescent chrome-like ribbon surface, more fluid/atmospheric; risk: slightly object-like due to metallic volume, but still usable as crop surface. Chris가 “훨씬 낫다”고 평가하고 개별 파일 전체 저장을 요청한 최종 저장본입니다.",
+      "analysis": "cyan, orange, silver highlight가 접힌 chrome-like ribbon 표면을 따라 흐르는 optical material field입니다. 금속 오브젝트라기보다 가까이 crop한 물성 표면처럼 읽혀, premium tactile background나 hero texture로 적합합니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-28/revisions-creative-archive-divergence/images/03_creative_archive_divergence.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-28/revisions-creative-archive-divergence",
       "dnaClusters": [
@@ -666,7 +666,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-28/04_bitmap_stripe_rhythm_surface.png",
       "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY. Strictly no readable text, letters, numbers, logos, watermark, poster copy, speech words, UI screenshot, app icon, product mockup, people, photo.\n\nCreate candidate 04 from different Chris Archive references: PIXEL / BITMAP BLOCK RHYTHM + HORIZONTAL STRIPE SYSTEM. Remove all words from the pixel-speech reference; keep only the modular bitmap energy and color blocking. Square crop-friendly pattern surface with large pixelated rectangular clusters, hard-edged horizontal stripe interruptions, off-white base, deep navy/black, muted yellow, dusty sky blue, small brick red accents. Flat riso/screenprint texture. No capsule pattern, no line trail, no circles, no glass object, no dotted matrix, no route map. Useful as repeat/crop surface for packaging or cards.",
-      "analysis": "No readable text/logo; pixel/stripe block rhythm; most distinct from current archive repetition, useful as pattern surface. Chris가 “훨씬 낫다”고 평가하고 개별 파일 전체 저장을 요청한 최종 저장본입니다.",
+      "analysis": "pixel block과 stripe rhythm이 off-white 바탕 위에 반복되는 energetic pattern surface입니다. 작은 bitmap 단위와 넓은 띠가 함께 보여, 패키지 패턴, modular UI background, playful system texture로 쓰기 좋습니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-28/revisions-creative-archive-divergence/images/04_creative_archive_divergence.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-28/revisions-creative-archive-divergence",
       "dnaClusters": [
@@ -705,7 +705,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-28/05_floral_signal_void_field.png",
       "prompt": "PURE ABSTRACT GRAPHIC MOTIF MATERIAL ONLY. No readable text, letters, numbers, logos, watermark, app icon, UI screenshot, product mockup, people, photo, icon, symbol.\n\nCreate candidate 05 from a different Chris Archive reference axis: FLORAL SIGNAL BLOOM / RED VOID POSTER translated into non-literal graphic motif material. Not a flower illustration, not an orb, not a badge, not an object. Square 1:1 composition with broad soft radial petal-like color fields and deep negative void, cropped asymmetrically. Palette: charcoal black, warm bone, deep red shadow, magenta-cyan tension, muted peach. Matte paper/fresco texture with gentle airbrushed edges. Avoid circular seal/badge logic, avoid capsule modules, avoid line/orbit decorations, avoid AI neon. It should be a bold composable accent/background surface from another archive family.",
-      "analysis": "No readable text/logo; soft bloom/void color field with red/cyan tension; very different from modular motifs; works as bold background/accent surface. Chris가 “훨씬 낫다”고 평가하고 개별 파일 전체 저장을 요청한 최종 저장본입니다.",
+      "analysis": "red, cyan, dark void가 부드러운 bloom처럼 퍼지는 color field입니다. 모듈형 패턴보다 감정적이고 유기적인 신호가 강해, accent background나 emotional state surface로 활용하기 좋습니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-28/revisions-creative-archive-divergence/images/05_creative_archive_divergence.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-28/revisions-creative-archive-divergence",
       "dnaClusters": [
@@ -744,7 +744,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-30/02_lime_gray_folded_plane_motif.png",
       "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY for future brand, package, mobile UI, and mockup composition. Based on the 60-item Chris Archive and Hermes design-system DNA, translated into composable visual material, not copied. 1:1 square. Useful for cropping, masking, overlaying, repeating, or placing on surfaces. No readable text, no letters, no numbers, no logos, no watermark, no poster headline, no app icon, no UI screenshot, no product mockup, no people, no photo. Do not make a complete poster or standalone artwork. Keep high design utility, clear negative space, crop-friendly edges, quiet editorial structure, tactile print/material feeling. Candidate 02 Geometric Plane Motif. Use the archive's lime-gray folded folder / geometric plane axis, but remove all letters and numbers. Create a flat 2D composition of large cropped planes: muted lime slab, graphite-gray field, off-white folded tab shape, one black void strip, subtle paper/risograph grain. The motif should be a composable plane system for packaging or UI hero backgrounds, not a poster. Strong diagonal/cropped geometry, no text zones beyond blank structural bars. Avoid rounded capsules, circular badge forms, ring logos, line-only contour habits, and glossy 3D objects.",
-      "analysis": "Chris Archive 60개에서 'Traffik lime-gray / folded folder geometric plane' 축을 샘플링해 만든 2D composable graphic motif입니다. 60개 중 folder/geometric poster 축을 샘플링해 기존 원형/캡슐 반복 대신 큰 면과 crop 중심으로 바꿨습니다. 활용 관점: 패키지 sleeve, 웹/모바일 hero 배경, 큰 면 분할 그래픽",
+      "analysis": "lime-gray와 folded plane geometry가 맞물린 2D graphic motif입니다. 접힌 폴더나 종이 판 같은 구조감이 있어 editorial poster surface, package panel, information card accent로 쓰기 좋습니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-30/archive60-style-divergence-rerun/images/02.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-30/archive60-style-divergence-rerun",
       "dnaClusters": [
@@ -786,7 +786,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-30/03_iridescent_liquid_surface_sheet.png",
       "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY for future brand, package, mobile UI, and mockup composition. Based on the 60-item Chris Archive and Hermes design-system DNA, translated into composable visual material, not copied. 1:1 square. Useful for cropping, masking, overlaying, repeating, or placing on surfaces. No readable text, no letters, no numbers, no logos, no watermark, no poster headline, no app icon, no UI screenshot, no product mockup, no people, no photo. Do not make a complete poster or standalone artwork. Keep high design utility, clear negative space, crop-friendly edges, quiet editorial structure, tactile print/material feeling. Candidate 03 Optical Material Motif. Use the archive's iridescent liquid-metal and chrome-surface axis, translated as a flat graphic material sheet. Create one broad cropped liquid/chrome ribbon or sheet across a black-charcoal and soft off-white field, with restrained cyan-magenta-amber refraction and subtle print grain. Keep it composable as an overlay/crop material; no type, no poster layout, no realistic product render, no complete object. It should be more surface/graphic material than 3D sculpture. Avoid circles, capsules, UI cards, dot grids, route lines, and generic neon AI gradients.",
-      "analysis": "Chris Archive 60개에서 'iridescent liquid metal / chrome surface field' 축을 샘플링해 만든 2D composable graphic motif입니다. archive 안의 chrome/liquid 계열을 다시 끌어와 오늘 세트의 물성 축을 명확히 분리했습니다. 활용 관점: 프리미엄 패키지 포인트 표면, UI/브랜드 이미지의 optical material overlay",
+      "analysis": "iridescent liquid surface가 얇은 sheet처럼 접히며 cyan/orange highlight를 반사하는 material graphic입니다. 유동적이지만 차분한 광학감이 있어 tactile optical layer, hero crop, premium surface로 적합합니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-30/archive60-style-divergence-rerun/images/03.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-30/archive60-style-divergence-rerun",
       "dnaClusters": [
@@ -828,7 +828,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-09-30/05_red_void_bloom_accent_field.png",
       "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY for future brand, package, mobile UI, and mockup composition. Based on the 60-item Chris Archive and Hermes design-system DNA, translated into composable visual material, not copied. 1:1 square. Useful for cropping, masking, overlaying, repeating, or placing on surfaces. No readable text, no letters, no numbers, no logos, no watermark, no poster headline, no app icon, no UI screenshot, no product mockup, no people, no photo. Do not make a complete poster or standalone artwork. Keep high design utility, clear negative space, crop-friendly edges, quiet editorial structure, tactile print/material feeling. Candidate 05 Signal / Accent Motif. Use the archive's floral signal bloom and red void field axis, translated as an abstract color-field accent material, not a literal flower. Create a dark graphite/black field with one cropped soft red-magenta bloom void and cyan edge glow, powdery print texture, broad negative space, useful as a small accent or masked signal patch. No yellow line decoration. No circular badge, no orbit diagram, no readable text, no logo, no object icon. The accent should feel alive but graphic, like a cropped color field material. Avoid the previous warm-gray capsule/circle/line style entirely.",
-      "analysis": "Chris Archive 60개에서 'floral signal bloom / red void color field' 축을 샘플링해 만든 2D composable graphic motif입니다. 마지막 후보는 노란 선/원형 배지를 피하고 bloom/red-void 계열로 완전히 다른 감정 톤을 넣었습니다. 활용 관점: 작은 signal accent, 패키지/카드 포인트, dark-mode 브랜드 그래픽의 color patch",
+      "analysis": "red void와 bloom-like field가 어두운 바탕에서 감정적 signal을 만듭니다. 노란 선이나 배지형 구조 없이 색의 확산과 중심 긴장감으로 시선을 잡는 bold accent surface입니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-09-30/archive60-style-divergence-rerun/images/05.png",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-09-30/archive60-style-divergence-rerun",
       "dnaClusters": [
@@ -870,7 +870,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-10-02/01_wide_horizontal_band_system.png",
       "prompt": "GPT Image 2.5 Candidate 04 variation saved by Chris selection. Direction: oversized horizontal bands with uneven stripe weights, cobalt/ochre/cream/charcoal palette, broad calm negative space, very few modules, more like a surface rhythm than a poster. Pure graphic only; no text/logos/photos/icons/UI/product mockup.",
-      "analysis": "Chris가 4번 bitmap/stripe rhythm 방향의 베리에이션 중 1번을 저장 요청해 selected archive에 남긴 그래픽 패턴 소재입니다. 4번의 bitmap/stripe/pattern logic에서 출발했지만, 구조·팔레트·밀도·모듈 형태를 분리해 서로 다른 방향으로 만든 임시 후보입니다. 활용 관점: package surface, brand background, mobile card background, crop/mask/overlay/repeat graphic pattern material.",
+      "analysis": "넓은 horizontal band가 차분한 색면으로 분리된 stripe system입니다. 낮은 복잡도와 안정적인 리듬 덕분에 패키지 띠, section divider, 브랜드 패턴의 기본형으로 활용하기 좋습니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-10-02/pattern04-variation-5ways",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-10-02/pattern04-variation-5ways",
       "dnaClusters": [
@@ -925,7 +925,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-10-02/02_offset_pixel_quilt_field.png",
       "prompt": "GPT Image 2.5 Candidate 04 variation saved by Chris selection. Direction: large blocky pixel tiles arranged like an editorial textile quilt, muted plum/gray-green/parchment/black palette, low density, no speech-bubble shapes, no glyph-like blocks. Pure graphic only; no text/logos/photos/icons/UI/product mockup.",
-      "analysis": "Chris가 4번 bitmap/stripe rhythm 방향의 베리에이션 중 2번을 저장 요청해 selected archive에 남긴 그래픽 패턴 소재입니다. 4번의 bitmap/stripe/pattern logic에서 출발했지만, 구조·팔레트·밀도·모듈 형태를 분리해 서로 다른 방향으로 만든 임시 후보입니다. 활용 관점: package surface, brand background, mobile card background, crop/mask/overlay/repeat graphic pattern material.",
+      "analysis": "offset pixel block들이 quilt처럼 어긋나며 구성된 graphic field입니다. stripe logic을 더 모듈화한 이미지로, digital craft, woven system, playful dashboard background의 재료로 적합합니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-10-02/pattern04-variation-5ways",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-10-02/pattern04-variation-5ways",
       "dnaClusters": [
@@ -980,7 +980,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-10-02/04_broken_register_riso_stripes.png",
       "prompt": "GPT Image 2.5 Candidate 04 variation saved by Chris selection. Direction: misregistered riso-style bands and soft rectangular fragments, coral/slate/cream/deep brown palette, tactile paper grain, asymmetry, pattern-friendly but not busy. Pure graphic only; no text/logos/photos/icons/UI/product mockup.",
-      "analysis": "Chris가 4번 bitmap/stripe rhythm 방향의 베리에이션 중 4번을 저장 요청해 selected archive에 남긴 그래픽 패턴 소재입니다. 4번의 bitmap/stripe/pattern logic에서 출발했지만, 구조·팔레트·밀도·모듈 형태를 분리해 서로 다른 방향으로 만든 임시 후보입니다. 활용 관점: package surface, brand background, mobile card background, crop/mask/overlay/repeat graphic pattern material.",
+      "analysis": "broken register 느낌의 riso stripe가 warm texture 위에서 살짝 어긋나는 패턴입니다. 완벽히 정렬되지 않은 인쇄 질감이 살아 있어 패키지 그래픽, poster crop, tactile brand surface로 쓰기 좋습니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-10-02/pattern04-variation-5ways",
       "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-10-02/pattern04-variation-5ways",
       "dnaClusters": [
@@ -1035,7 +1035,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-10-02/03_warm_contact_gradient_plate.png",
       "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY for future Chris-led brand, package, mobile UI, and mockup composition. The source archive is used only as visual inspiration, never as a template. Do not recreate the reference image, do not imitate its exact composition, object, poster, phone, sun, orb, helix, or layout. Translate only abstract visual principles into a new composable graphic motif: surface logic, rhythm, material mood, color tension, crop behavior, negative space, and layer behavior. Square 1:1. Useful for cropping, masking, overlaying, repeating, or placing on surfaces. No readable text, no letters, no numbers, no logos, no watermark, no poster, no app icon, no UI screenshot, no product mockup, no people, no photo, no literal object copy, no generic AI startup neon, no glassmorphism cliché, no exact reference layout.\nCreate an original flat-to-soft 2D graphic field made of broad overlapping amber, honey, smoke-brown, and cream gradient plates. Suggest contact tension through two large soft-edged planes nearly meeting, but do not draw spheres, glass balls, or literal objects. Subtle paper/lacquer texture, calm gravity, high negative space, no bevel, no lens render. Useful as a warm presence field for brand/package/UI compositions.\n\nNegative constraints: No readable text, letters, numbers, brand names, logos, watermark, complete poster, completed package label, app icon, UI screenshot, product mockup, people, photo, robot, brain symbol, magic sparkle, surveillance dashboard, fake UI copy, known brand imitation, exact reference composition, exhibition poster, phone mockup, literal helix, literal orb pair, literal red sun landscape, literal space weather screen, generic neon AI art, glossy 3D object render, decorative scratches, random orbit lines, route maps, clutter, mixed visual systems.",
-      "analysis": "Chris가 2026-10-02 재해석 후보 중 03번을 선택해 저장 요청한 GPT Image 2.5 그래픽 모티프입니다. 구체를 반복하지 않고, 접촉/따뜻한 광학감/중력감을 넓은 그래픽 plate로 풀어낸 후보. 활용 관점: emotional presence background, section hero crop, package inner-label warmth. 원본 reference를 직접 복제하지 않고 Chris Archive의 시각 원리를 그래픽 표면/모티프 재료로 번역한 selected asset입니다.",
+      "analysis": "warm gradient plate가 접촉과 중력감을 넓은 색면으로 표현하는 abstract material입니다. 구체를 반복하지 않고 빛의 눌림과 온도를 표면화해 emotional presence background나 soft signal plate로 적합합니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-10-02/reinterpret-graphic-motifs",
       "dnaClusters": [
         "warm optical material",
@@ -1070,7 +1070,7 @@
       "status": "chris_selected",
       "imageSrc": "/assets/dna-archive/2026-10-02/04_muted_spectral_terrain_bands.png",
       "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY for future Chris-led brand, package, mobile UI, and mockup composition. The source archive is used only as visual inspiration, never as a template. Do not recreate the reference image, do not imitate its exact composition, object, poster, phone, sun, orb, helix, or layout. Translate only abstract visual principles into a new composable graphic motif: surface logic, rhythm, material mood, color tension, crop behavior, negative space, and layer behavior. Square 1:1. Useful for cropping, masking, overlaying, repeating, or placing on surfaces. No readable text, no letters, no numbers, no logos, no watermark, no poster, no app icon, no UI screenshot, no product mockup, no people, no photo, no literal object copy, no generic AI startup neon, no glassmorphism cliché, no exact reference layout.\nCreate a restrained spectral color field: layered horizontal and diagonal matte bands in deep blue, cyan, magenta, coral, ochre, and smoky violet. Add one small diffused red-orange attention field as color pressure, not a sun or orb. No horizon, no landscape, no person, no sky, no illustration. The result should be a sophisticated graphic surface with controlled saturation, useful for masking, cropping, and package/UI accent placement.\n\nNegative constraints: No readable text, letters, numbers, brand names, logos, watermark, complete poster, completed package label, app icon, UI screenshot, product mockup, people, photo, robot, brain symbol, magic sparkle, surveillance dashboard, fake UI copy, known brand imitation, exact reference composition, exhibition poster, phone mockup, literal helix, literal orb pair, literal red sun landscape, literal space weather screen, generic neon AI art, glossy 3D object render, decorative scratches, random orbit lines, route maps, clutter, mixed visual systems.",
-      "analysis": "Chris가 2026-10-02 재해석 후보 중 04번을 선택해 저장 요청한 GPT Image 2.5 그래픽 모티프입니다. 태양/풍경을 복제하지 않고, 강한 색 에너지와 스케일감을 추상 band system으로 낮춘 후보. 활용 관점: hero accent surface, masked package panel, high-energy but controlled color layer. 원본 reference를 직접 복제하지 않고 Chris Archive의 시각 원리를 그래픽 표면/모티프 재료로 번역한 selected asset입니다.",
+      "analysis": "muted spectral terrain band가 넓은 수평층으로 이어지는 추상 landscape surface입니다. 강한 색 에너지를 낮춘 band system으로, hero accent, masked card background, brand mood panel에 쓰기 좋습니다.",
       "sourceRun": "/opt/data/dna-archive/candidates/2026-10-02/reinterpret-graphic-motifs",
       "dnaClusters": [
         "warm-cool intelligence",
