@@ -2714,7 +2714,7 @@ function DesignDnaPanel() {
             <button type="button" className="chris-archive-modal-close" onClick={() => setSelectedDnaAsset(null)} aria-label="DNA Dashboard 상세 팝업 닫기">
               ×
             </button>
-            <div className="dna-generated-modal-media">
+            <div className="dna-generated-modal-media dna-dashboard-modal-media">
               <img src={toAppAssetSrc(selectedDnaAsset.highResImageSrc ?? selectedDnaAsset.imageSrc)} alt={`${selectedDnaAsset.title} generated full asset`} />
             </div>
             <div className="dna-generated-modal-copy">
