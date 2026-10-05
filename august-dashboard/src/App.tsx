@@ -2284,6 +2284,7 @@ function DesignDnaPanel() {
   const [selectedBrandAsset, setSelectedBrandAsset] = useState<BrandAssetSelection | null>(null)
   const [activeDesignDnaSection, setActiveDesignDnaSection] = useState<'system' | 'dashboard' | 'brandAsset'>('system')
   const [activeDnaDashboardSource, setActiveDnaDashboardSource] = useState<'gpt' | 'midjourney'>('gpt')
+  const [activeBrandAssetLane, setActiveBrandAssetLane] = useState<'brandMockup' | 'midjourneyMockup'>('brandMockup')
   const [activeBrandAssetSource, setActiveBrandAssetSource] = useState<string>('coffee-mockup-assets')
   const [isDnaPrinciplesOpen, setIsDnaPrinciplesOpen] = useState(false)
   const [dnaPrinciplesText, setDnaPrinciplesText] = useState('')
@@ -2619,9 +2620,33 @@ function DesignDnaPanel() {
               <p className="card-kicker">DNA Brand Asset · Moodboard</p>
               <h3>Design DNA를 실제 브랜드 에셋과 목업으로 확장하는 공간입니다.</h3>
               <p>
-                Coffee, outdoor mockup asset을 컬렉션별 탭으로 모아두고, Midjourney+Mockup 결과는 별도 탭에서 관리합니다. Chris Archive와 DNA Dashboard에서 고른 모티프를 실제 브랜드 표면으로 검증합니다.
+                Coffee와 Outdoor mockup reference는 Brand Mockup Assets 아래에서 컬렉션별로 관리하고, Midjourney+Mockup 결과는 별도 탭에서 관리합니다. Chris Archive와 DNA Dashboard에서 고른 모티프를 실제 브랜드 표면으로 검증합니다.
               </p>
               <div className="dna-dashboard-source-tabs" aria-label="DNA Brand Asset source split">
+                <button
+                  type="button"
+                  className={activeBrandAssetLane === 'brandMockup' ? 'dna-dashboard-source-tab active' : 'dna-dashboard-source-tab'}
+                  aria-pressed={activeBrandAssetLane === 'brandMockup'}
+                  onClick={() => setActiveBrandAssetLane('brandMockup')}
+                >
+                  <span>Brand Mockup Assets</span>
+                  <small>{brandMockupCollections.length} collections</small>
+                </button>
+                <button
+                  type="button"
+                  className={activeBrandAssetLane === 'midjourneyMockup' ? 'dna-dashboard-source-tab active' : 'dna-dashboard-source-tab'}
+                  aria-pressed={activeBrandAssetLane === 'midjourneyMockup'}
+                  onClick={() => setActiveBrandAssetLane('midjourneyMockup')}
+                >
+                  <span>Midjourney + Mockup</span>
+                  <small>manual synthesis</small>
+                </button>
+              </div>
+            </div>
+          </div>
+          {activeBrandAssetLane === 'brandMockup' && brandMockupCollections.length > 0 ? (
+            <>
+              <div className="dna-dashboard-source-tabs" aria-label="Brand Mockup Assets collections">
                 {brandMockupCollections.map((collection) => (
                   <button
                     type="button"
@@ -2631,49 +2656,40 @@ function DesignDnaPanel() {
                     key={collection.id}
                   >
                     <span>{collection.title}</span>
-                    <small>{collection.items.length} mockup assets</small>
-                  </button>
-                ))}
-                <button
-                  type="button"
-                  className={activeBrandAssetSource === 'midjourneyMockup' ? 'dna-dashboard-source-tab active' : 'dna-dashboard-source-tab'}
-                  aria-pressed={activeBrandAssetSource === 'midjourneyMockup'}
-                  onClick={() => setActiveBrandAssetSource('midjourneyMockup')}
-                >
-                  <span>Midjourney + Mockup</span>
-                  <small>manual synthesis</small>
-                </button>
-              </div>
-            </div>
-          </div>
-          {activeBrandAssetSource !== 'midjourneyMockup' && activeBrandMockupCollection ? (
-            <section className="content-card dna-brand-mockup-collection" aria-label={`${activeBrandMockupCollection.title} moodboard`}>
-              <div className="dna-brand-mockup-header">
-                <div>
-                  <p className="card-kicker">Mockup Collection</p>
-                  <h4>{activeBrandMockupCollection.title}</h4>
-                  <p>{activeBrandMockupCollection.description}</p>
-                </div>
-                <span>{activeBrandMockupCollection.items.length} assets</span>
-              </div>
-              <div className="dna-brand-mockup-grid" aria-label={`${activeBrandMockupCollection.title} moodboard`}>
-                {activeBrandMockupCollection.items.map((item) => (
-                  <button
-                    type="button"
-                    className="dna-brand-mockup-tile"
-                    key={item.id}
-                    onClick={() => setSelectedBrandAsset({ item, collection: activeBrandMockupCollection, lane: 'Mockup' })}
-                  >
-                    <img src={toAppAssetSrc(item.originalImageSrc ?? item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
-                    <span className="dna-brand-mockup-caption">
-                      <strong>{item.title}</strong>
-                      <span>{item.description}</span>
-                    </span>
+                    <small>{collection.items.length} assets</small>
                   </button>
                 ))}
               </div>
-            </section>
-          ) : activeBrandAssetSource === 'midjourneyMockup' && coffeeAssetExamples.length > 0 ? (
+              {activeBrandMockupCollection ? (
+                <section className="content-card dna-brand-mockup-collection" aria-label={`${activeBrandMockupCollection.title} moodboard`}>
+                  <div className="dna-brand-mockup-header">
+                    <div>
+                      <p className="card-kicker">Brand Mockup Assets</p>
+                      <h4>{activeBrandMockupCollection.title}</h4>
+                      <p>{activeBrandMockupCollection.description}</p>
+                    </div>
+                    <span>{activeBrandMockupCollection.items.length} assets</span>
+                  </div>
+                  <div className="dna-brand-mockup-grid" aria-label={`${activeBrandMockupCollection.title} moodboard`}>
+                    {activeBrandMockupCollection.items.map((item) => (
+                      <button
+                        type="button"
+                        className="dna-brand-mockup-tile"
+                        key={item.id}
+                        onClick={() => setSelectedBrandAsset({ item, collection: activeBrandMockupCollection, lane: 'Mockup' })}
+                      >
+                        <img src={toAppAssetSrc(item.originalImageSrc ?? item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
+                        <span className="dna-brand-mockup-caption">
+                          <strong>{item.title}</strong>
+                          <span>{item.description}</span>
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+            </>
+          ) : activeBrandAssetLane === 'midjourneyMockup' && coffeeAssetExamples.length > 0 ? (
             <div className="dna-brand-example-stack" aria-label="Coffee asset examples">
               {coffeeAssetExamples.map((coffeeAssetExample) => (
                 <section className="content-card dna-brand-mockup-collection" aria-label={`${coffeeAssetExample.title} moodboard`} key={coffeeAssetExample.id}>
@@ -2705,7 +2721,7 @@ function DesignDnaPanel() {
               ))}
             </div>
           ) : (
-            <div className="content-card dna-brand-asset-empty-state" aria-label={`${activeBrandAssetSource === 'mockup' ? 'Mockup' : 'Midjourney plus mockup'} 준비 상태`}>
+            <div className="content-card dna-brand-asset-empty-state" aria-label={`${activeBrandAssetLane === 'brandMockup' ? 'Brand Mockup Assets' : 'Midjourney plus mockup'} 준비 상태`}>
               <p>준비중입니다</p>
             </div>
           )}
