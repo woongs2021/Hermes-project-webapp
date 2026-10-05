@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-05T20:33:55+09:00",
+  "generatedAt": "2026-10-05T21:04:20+09:00",
   "sourcePolicy": "Public-safe manually supplied Midjourney outputs selected by Chris for Design DNA. Midjourney items include Kling 4K remaster PNG downloads when highResImageSrc is present. Excludes raw private chats, credentials, and provider account details.",
   "items": [
     {
@@ -853,6 +853,37 @@
       "highResAssetHash": "3d399809c320958e2d024882d0cd2d12721c8eaceb653b1998a38dd4338ee9a9",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-05T20:33:55+09:00"
+    },
+    {
+      "id": "2026-10-05-midjourney-30-warm-horizon-brush-field",
+      "title": "Midjourney 30 — Warm Horizon Brush Field",
+      "created": "2026-10-05",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-10-05/30_warm_horizon_brush_field_manual_midjourney.jpg",
+      "prompt": "abstract warm horizon brush field, soft gray beige paper ground, coral and peach horizontal bands, off-white sweeping light band, deep teal dark brush layer, red-orange lower field, dry brush grain, tactile editorial surface, premium brand package wrap and UI background material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "abstract warm horizon brush field, soft gray beige paper ground, coral and peach horizontal bands, off-white sweeping light band, deep teal dark brush layer, red-orange lower field, dry brush grain, tactile editorial surface, premium brand package wrap and UI background material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "soft gray-beige paper ground 위로 coral, peach, off-white, deep teal, red-orange brush bands가 수평으로 흐르는 추상 표면입니다. 넓은 여백과 거친 dry-brush grain, 어두운 중간 대역의 깊이가 함께 있어 package wrap, hero background, UI state surface에 쓰기 좋은 warm horizon material입니다.",
+      "sourceRun": "manual_midjourney_upload_2026_10_05_single_30",
+      "assetHash": "d0f932eccafdaaaebd6fd54ee99d15e3fa24768f4adfba45bf6706406a5a346b",
+      "width": 1024,
+      "height": 1024,
+      "localArchivePath": "/opt/data/dna-archive/midjourney/2026-10-05/images/30_warm_horizon_brush_field_manual_midjourney.jpg",
+      "dnaClusters": [
+        "Midjourney Translation",
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material",
+        "Horizon Surface",
+        "Editorial Product Graphic"
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-10-05/30_warm_horizon_brush_field_manual_midjourney.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/30_30_warm_horizon_brush_field_manual_midjourney_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "cdffbed6f0f5faee425fd16e1b5415129534cec9919601d5763c2d97bf53181b",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-05T21:04:20+09:00"
     }
   ]
 }
