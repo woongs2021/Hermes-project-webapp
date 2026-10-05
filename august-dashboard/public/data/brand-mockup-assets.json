@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-05T22:00:26+09:00",
+  "generatedAt": "2026-10-05T22:16:20+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -124,6 +124,69 @@
           "description": "유리와 석재 외벽 구조물에 흰 사각 행잉 사인이 매달린 mockup. 실외 간판, 매장 사인, hanging panel brand application을 검증하기 좋은 고대비 파사드 장면입니다.",
           "imageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/06_hanging-outdoor-sign-on-glass-facade_outdoor_mockup.jpg",
           "assetHash": "a3b745080048b5786f7e4429d38e5efb675d14b79013f9fcf9039828a68fff61",
+          "width": 1280,
+          "height": 853
+        }
+      ]
+    },
+    {
+      "id": "outdoor-mockup-assets-2",
+      "title": "Outdoor Mockup Assets 2",
+      "created": "2026-10-05",
+      "status": "mockup_moodboard_saved",
+      "description": "Outdoor lifestyle mockup references for applying Design DNA motifs to paper tags, tote bags, mobile screens, bucket hats, and T-shirt surfaces under real light and shadow.",
+      "items": [
+        {
+          "id": "outdoor-mockup-assets-2-01",
+          "title": "Held Paper Tag On Shadow Wall",
+          "description": "손에 들린 흰 종이 태그가 어두운 벽 그림자 위에 놓인 outdoor detail mockup. 행택, 브랜드 카드, 작은 라벨 그래픽을 자연광 아래에서 검증하기 좋습니다.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/01_held-paper-tag-on-shadow-wall_outdoor_mockup.jpg",
+          "assetHash": "09412c6c06a127a413b909bd32d2e541674aa695125d0564256fbe3c477ba89a",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "outdoor-mockup-assets-2-02",
+          "title": "Large Tote Bag On Shoulder",
+          "description": "회색 외벽과 금속 난간 앞에서 사람이 큰 흰 토트백을 메고 있는 lifestyle mockup. 넓은 패브릭 표면에 브랜드 패턴이나 로고를 적용해 실사용 착용감을 확인하기 좋습니다.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/02_large-tote-bag-on-shoulder_outdoor_mockup.jpg",
+          "assetHash": "78193f70299151a1772e44de61764ba3adc990da44a600500c5aeacd2148ff02",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "outdoor-mockup-assets-2-03",
+          "title": "Phone Screen On Ribbed Glass",
+          "description": "리브드 글라스/금속 질감 위에 흰 화면 스마트폰이 놓인 outdoor mobile mockup. 모바일 UI, 앱 아이콘, 잠금화면 그래픽을 강한 햇빛과 선형 배경 속에서 검증하기 좋습니다.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/03_phone-screen-on-ribbed-glass_outdoor_mockup.jpg",
+          "assetHash": "4be1bd0e2f5976cce0831900844b25198dc63323e35c4feaf62f1469a7993742",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "outdoor-mockup-assets-2-04",
+          "title": "White Bucket Hat On Stand",
+          "description": "짙은 브라운 벽 앞 스탠드에 흰 버킷햇이 놓인 apparel mockup. 작은 자수 로고, 반복 패턴, 패브릭 질감의 브랜드 적용을 보기 좋은 정면형 제품 장면입니다.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/04_white-bucket-hat-on-stand_outdoor_mockup.jpg",
+          "assetHash": "3374735ab216e88db4197d68d715ddfda6fc5f38a9bf99279c9cf14e210179dc",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "outdoor-mockup-assets-2-05",
+          "title": "Tote Bag On Chair Outdoor",
+          "description": "야외 의자에 흰 토트백이 걸려 있는 close lifestyle mockup. 패브릭 주름과 강한 빛/그림자가 살아 있어 로고, 패턴, 그래픽 면 적용의 실제감을 확인하기 좋습니다.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/05_tote-bag-on-chair-outdoor_outdoor_mockup.jpg",
+          "assetHash": "9a80e60930e443a22eeffb17b64352eb7c3fc490f8025e83a751144ea3b466ef",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "outdoor-mockup-assets-2-06",
+          "title": "White T-Shirt On Black Fence",
+          "description": "검은 직조형 펜스와 베이지 벽 앞에 흰 티셔츠가 걸린 outdoor apparel mockup. 중앙 전면 그래픽, 작은 chest mark, 패브릭 프린트 적용을 고대비 환경에서 검증하기 좋습니다.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/06_white-tshirt-on-black-fence_outdoor_mockup.jpg",
+          "assetHash": "8d930f95b7d9b7371d25a8c9f64bf032d564e831ffa1560b9616885314bff627",
           "width": 1280,
           "height": 853
         }
