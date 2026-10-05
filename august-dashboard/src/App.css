@@ -7098,6 +7098,73 @@
   color: var(--ink);
 }
 
+.brand-mockup-subtabs {
+  display: flex;
+  grid-template-columns: none;
+  align-items: flex-end;
+  gap: clamp(1.1rem, 2.8vw, 2rem);
+  max-width: none;
+  margin: 0.15rem 0 0.35rem;
+  padding: 0 0 0.35rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--stroke) 82%, transparent);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.brand-mockup-subtabs::-webkit-scrollbar {
+  display: none;
+}
+
+.brand-mockup-subtab {
+  position: relative;
+  display: inline-grid;
+  flex: 0 0 auto;
+  min-width: max-content;
+  gap: 0.08rem;
+  padding: 0.1rem 0 0.62rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted-ink);
+  text-align: left;
+}
+
+.brand-mockup-subtab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.36rem;
+  height: 2px;
+  border-radius: 999px;
+  background: transparent;
+  transform: scaleX(0.18);
+  transform-origin: left center;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.brand-mockup-subtab span {
+  font-size: 0.96rem;
+  font-weight: 760;
+  letter-spacing: -0.035em;
+}
+
+.brand-mockup-subtab small {
+  font-size: 0.71rem;
+  opacity: 0.78;
+}
+
+.brand-mockup-subtab.active {
+  border-color: transparent;
+  background: transparent;
+  color: var(--ink);
+}
+
+.brand-mockup-subtab.active::after {
+  background: color-mix(in srgb, var(--primary) 72%, var(--ink));
+  transform: scaleX(1);
+}
+
 .dna-brand-asset-panel {
   display: grid;
   gap: clamp(1rem, 2vw, 1.4rem);
