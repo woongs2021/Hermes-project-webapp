@@ -2646,11 +2646,11 @@ function DesignDnaPanel() {
           </div>
           {activeBrandAssetLane === 'brandMockup' && brandMockupCollections.length > 0 ? (
             <>
-              <div className="dna-dashboard-source-tabs" aria-label="Brand Mockup Assets collections">
+              <div className="dna-dashboard-source-tabs brand-mockup-subtabs" aria-label="Brand Mockup Assets collections">
                 {brandMockupCollections.map((collection) => (
                   <button
                     type="button"
-                    className={activeBrandAssetSource === collection.id ? 'dna-dashboard-source-tab active' : 'dna-dashboard-source-tab'}
+                    className={activeBrandAssetSource === collection.id ? 'dna-dashboard-source-tab brand-mockup-subtab active' : 'dna-dashboard-source-tab brand-mockup-subtab'}
                     aria-pressed={activeBrandAssetSource === collection.id}
                     onClick={() => setActiveBrandAssetSource(collection.id)}
                     key={collection.id}
