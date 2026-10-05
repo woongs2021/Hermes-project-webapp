@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-03T00:00:00+09:00",
+  "generatedAt": "2026-10-05T19:58:58+09:00",
   "sourcePolicy": "Only Chris-selected GoYJ generated assets are saved here. Unselected review candidates are temporary and are not published.",
   "items": [
     {
@@ -1097,6 +1097,194 @@
       "generationReason": "태양/풍경을 복제하지 않고, 강한 색 에너지와 스케일감을 추상 band system으로 낮춘 후보.",
       "detailedDescription": "Chris가 2026-10-02 재해석 후보 중 04번을 선택해 저장 요청한 GPT Image 2.5 그래픽 모티프입니다. 태양/풍경을 복제하지 않고, 강한 색 에너지와 스케일감을 추상 band system으로 낮춘 후보. 활용 관점: hero accent surface, masked package panel, high-energy but controlled color layer. 원본 reference를 직접 복제하지 않고 Chris Archive의 시각 원리를 그래픽 표면/모티프 재료로 번역한 selected asset입니다.",
       "midjourneyPrompt": "abstract 2D graphic motif material, muted spectral terrain bands, warm-cool intelligence, controlled saturation, layered color terrain, attention signal, tactile editorial design-system surface, crop-friendly, useful for packaging, brand surface, mobile UI background, refined calm composition --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-10-05-goyj-archive60-nonrepeat-actual-sampling-121948-02",
+      "title": "Blue Hourglass Compression Field",
+      "created": "2026-10-05",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-05/selected_02_blue_hourglass_compression_field.png",
+      "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY for future brand, package, mobile UI, and mockup composition. Based on distinct Chris Archive source references, translated into new composable material, not copied. 1:1 square. It must be useful for crop, mask, overlay, repeat, or surface application. No readable text, no letters, no numbers, no logos, no watermark, no poster headline, no app icon, no UI screenshot, no product mockup, no people, no photo. Do not make a complete poster or standalone artwork. Keep high design utility, clear negative space, tactile print/material feeling, refined Korean/Samsung-level restraint. Avoid the previously repeated defaults: warm-gray capsule grids, circle badges/seals, two glowing line overlays, route/orbit maps, dot-matrix-only AI, generic blue/mint/violet neon, chrome-object hero renders.\n\nCandidate 02 uses this distinct Chris Archive reference axis: Recovery Engineered blue hourglass system / luminous contact compression. Source references: Recovery Engineered blue hourglass system posters, Eclipse orb cyan-yellow shadow contact. Translate the archive DNA into PURE 2D GRAPHIC MOTIF MATERIAL for later crop/mask/overlay/repeat use. Do not copy the exact layout.\n\nArchive axis: blue hourglass recovery system, but translated away from posters into flat composable material. Deep midnight blue ground, one broad hourglass-like negative-space compression made from two soft triangular gradients meeting at a tiny cyan-yellow contact point, very subtle grain, low density. Not an object, not a symbol, not an app icon; a crop-friendly pressure/contact field. Avoid round badge, orbit, capsule, dot-matrix.\n\nNegative constraints: No readable text, letters, numbers, brand names, logos, watermark, poster, completed package label, app icon, UI screenshot, product mockup, people, human face, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, circle badge, capsule default, dot matrix default, orbit routes, decorative scratches, object render, bevel, lens flare overload.",
+      "negativePrompt": "No readable text, letters, numbers, brand names, logos, watermark, poster, completed package label, app icon, UI screenshot, product mockup, people, human face, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, circle badge, capsule default, dot matrix default, orbit routes, decorative scratches, object render, bevel, lens flare overload.",
+      "analysis": "Recovery Engineered 계열의 hourglass/contact 감각을 포스터나 오브젝트가 아니라 crop 가능한 압축 필드로 낮춘 그래픽 재료입니다. deep blue 바탕과 작은 cyan-yellow 접점이 모바일 카드/패키지 표면의 조용한 신호층으로 쓰기 좋습니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-10-05/archive60-nonrepeat-actual-sampling-121948",
+      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-10-05/archive60-nonrepeat-actual-sampling-121948",
+      "referenceAxis": "Recovery Engineered blue hourglass system / luminous contact compression",
+      "sourceReferences": [
+        {
+          "title": "Recovery Engineered blue hourglass system posters",
+          "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-12_recovery-engineered-blue-hourglass-system-posters_a02092d84823.jpg"
+        },
+        {
+          "title": "Eclipse orb cyan-yellow shadow contact",
+          "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-12_eclipse-orb-cyan-yellow-shadow-contact_f224861bb8ea.jpg"
+        }
+      ],
+      "dnaClusters": [
+        "Compression Field",
+        "Warm-Cool Intelligence",
+        "Quiet Signal Rhythm",
+        "Crop-Friendly Surface",
+        "Chris Archive Reference Sampling"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "2k",
+        "variant": "flare",
+        "background": "opaque",
+        "image_references": 2
+      },
+      "width": 2048,
+      "height": 2048,
+      "selectedReason": "Chris explicitly selected candidates 2, 3, 4, and 5 and asked Go Youn-jung to save them.",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-10-05/images/selected_02_blue_hourglass_compression_field.png",
+      "savedAt": "2026-10-05T19:58:58+09:00",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20261005_032329_666ed864-6973-4588-8c03-983242e14a5b.png",
+      "midjourneyPrompt": "abstract blue hourglass compression field, pure 2D graphic motif material, deep midnight blue ground, soft triangular gradient pressure shapes meeting at a tiny cyan yellow contact point, subtle tactile grain, spacious negative space, crop-friendly brand surface, calm premium design-system material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "assetHash": "d01a464fbb3f883be4592a0535dfbac2953045272526dac7bc6075d5e98a49b5"
+    },
+    {
+      "id": "2026-10-05-goyj-archive60-nonrepeat-actual-sampling-121948-03",
+      "title": "Taipei Cut-Shape Redline",
+      "created": "2026-10-05",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-05/selected_03_taipei_cut_shape_redline.png",
+      "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY for future brand, package, mobile UI, and mockup composition. Based on distinct Chris Archive source references, translated into new composable material, not copied. 1:1 square. It must be useful for crop, mask, overlay, repeat, or surface application. No readable text, no letters, no numbers, no logos, no watermark, no poster headline, no app icon, no UI screenshot, no product mockup, no people, no photo. Do not make a complete poster or standalone artwork. Keep high design utility, clear negative space, tactile print/material feeling, refined Korean/Samsung-level restraint. Avoid the previously repeated defaults: warm-gray capsule grids, circle badges/seals, two glowing line overlays, route/orbit maps, dot-matrix-only AI, generic blue/mint/violet neon, chrome-object hero renders.\n\nCandidate 03 uses this distinct Chris Archive reference axis: Framing and Filling Taipei exhibition poster / black cut shapes with red outline. Source references: Framing and Filling Taipei Exhibition Poster, Monochrome editorial spread black geometric blocks. Translate the archive DNA into PURE 2D GRAPHIC MOTIF MATERIAL for later crop/mask/overlay/repeat use. Do not copy the exact layout.\n\nArchive axis: Taipei framing/filling exhibition language. Make a pure 2D cut-shape material: off-white paper base, large irregular black cropped cutout masses entering from edges, one restrained red keyline contour following part of a cut shape, slight paper grain and screenprint ink. No typography, no labels, no poster layout, no centered logo. It should be useful as packaging surface or editorial background.\n\nNegative constraints: No readable text, letters, numbers, brand names, logos, watermark, poster, completed package label, app icon, UI screenshot, product mockup, people, human face, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, circle badge, capsule default, dot matrix default, orbit routes, decorative scratches, object render, bevel, lens flare overload.",
+      "negativePrompt": "No readable text, letters, numbers, brand names, logos, watermark, poster, completed package label, app icon, UI screenshot, product mockup, people, human face, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, circle badge, capsule default, dot matrix default, orbit routes, decorative scratches, object render, bevel, lens flare overload.",
+      "analysis": "Taipei 전시 포스터의 black cut-shape와 red keyline 신호를 텍스트 없는 2D 표면으로 번역했습니다. off-white 종이 질감, 검정 mass, 얇은 red contour가 브랜드 배경/패키지 패널에 명확한 그래픽 힘을 줍니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-10-05/archive60-nonrepeat-actual-sampling-121948",
+      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-10-05/archive60-nonrepeat-actual-sampling-121948",
+      "referenceAxis": "Framing and Filling Taipei exhibition poster / black cut shapes with red outline",
+      "sourceReferences": [
+        {
+          "title": "Framing and Filling Taipei Exhibition Poster",
+          "assetPath": "/opt/data/chris-archive/images/2026/10/2026-10-02_framing-filling-taipei-exhibition-poster_052745b10f5a.jpg"
+        },
+        {
+          "title": "Monochrome editorial spread black geometric blocks",
+          "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-12_monochrome-editorial-spread-black-geometric-blocks_68b328eb3eeb.jpg"
+        }
+      ],
+      "dnaClusters": [
+        "Cut-Shape Surface",
+        "Editorial Evidence System",
+        "Screenprint Paper Texture",
+        "Red Keyline Accent",
+        "Chris Archive Reference Sampling"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "2k",
+        "variant": "flare",
+        "background": "opaque",
+        "image_references": 2
+      },
+      "width": 2048,
+      "height": 2048,
+      "selectedReason": "Chris explicitly selected candidates 2, 3, 4, and 5 and asked Go Youn-jung to save them.",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-10-05/images/selected_03_taipei_cut_shape_redline.png",
+      "savedAt": "2026-10-05T19:58:58+09:00",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20261005_032408_d777c2f1-943c-476e-a00d-14ba34901229.png",
+      "midjourneyPrompt": "off-white paper field with large irregular black cropped cut-shape masses entering from the edges, one restrained red keyline contour, screenprint ink grain, pure 2D cut-shape graphic motif material, editorial packaging surface, quiet archive design language --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "assetHash": "0ff29271b75f97ced177a75b4d37a9d3ddbf1d7b4fb4f8052f5a375ba5648250"
+    },
+    {
+      "id": "2026-10-05-goyj-archive60-nonrepeat-actual-sampling-121948-04",
+      "title": "Space Weather Block Code",
+      "created": "2026-10-05",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-05/selected_04_space_weather_block_code.png",
+      "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY for future brand, package, mobile UI, and mockup composition. Based on distinct Chris Archive source references, translated into new composable material, not copied. 1:1 square. It must be useful for crop, mask, overlay, repeat, or surface application. No readable text, no letters, no numbers, no logos, no watermark, no poster headline, no app icon, no UI screenshot, no product mockup, no people, no photo. Do not make a complete poster or standalone artwork. Keep high design utility, clear negative space, tactile print/material feeling, refined Korean/Samsung-level restraint. Avoid the previously repeated defaults: warm-gray capsule grids, circle badges/seals, two glowing line overlays, route/orbit maps, dot-matrix-only AI, generic blue/mint/violet neon, chrome-object hero renders.\n\nCandidate 04 uses this distinct Chris Archive reference axis: Space Weather coded phone UI specimen / retro terminal blocks without text. Source references: Space Weather Coded Phone UI Specimen, BOOM WOW OOPS pixel speech blocks. Translate the archive DNA into PURE 2D GRAPHIC MOTIF MATERIAL for later crop/mask/overlay/repeat use. Do not copy the exact layout.\n\nArchive axis: retro coded space-weather instrument, but with ZERO text. Create a flat 2D abstract code-block material: dark graphite field, cream/yellow/green/coral rectangular ticks, chunky pixel bars, tiny square markers that do not form letters or numbers, one or two waveform-like block rows made only of rectangles. It should feel like a coded instrument surface for later masking, not a phone UI screenshot. No readable glyphs, no alphabet, no numerals, no dot matrix default.\n\nNegative constraints: No readable text, letters, numbers, brand names, logos, watermark, poster, completed package label, app icon, UI screenshot, product mockup, people, human face, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, circle badge, capsule default, dot matrix default, orbit routes, decorative scratches, object render, bevel, lens flare overload.",
+      "negativePrompt": "No readable text, letters, numbers, brand names, logos, watermark, poster, completed package label, app icon, UI screenshot, product mockup, people, human face, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, circle badge, capsule default, dot matrix default, orbit routes, decorative scratches, object render, bevel, lens flare overload.",
+      "analysis": "Space Weather/code specimen의 감각을 읽히는 문자 없이 block/tick/bar 패턴으로 정리한 그래픽 재료입니다. UI 스크린샷보다는 instrument surface에 가까워, repeat·mask·surface layer로 활용하기 좋습니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-10-05/archive60-nonrepeat-actual-sampling-121948",
+      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-10-05/archive60-nonrepeat-actual-sampling-121948",
+      "referenceAxis": "Space Weather coded phone UI specimen / retro terminal blocks without text",
+      "sourceReferences": [
+        {
+          "title": "Space Weather Coded Phone UI Specimen",
+          "assetPath": "/opt/data/chris-archive/images/2026/10/2026-10-02_space-weather-coded-phone-ui-specimen_05151c5b02b5.jpg"
+        },
+        {
+          "title": "BOOM WOW OOPS pixel speech blocks",
+          "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-12_boom-wow-oops-pixel-speech-blocks_064f2814c36c.jpg"
+        }
+      ],
+      "dnaClusters": [
+        "Abstract Code Blocks",
+        "Quiet Signal Rhythm",
+        "Pixel Instrument Surface",
+        "Low-Noise Pattern Material",
+        "Chris Archive Reference Sampling"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "2k",
+        "variant": "flare",
+        "background": "opaque",
+        "image_references": 2
+      },
+      "width": 2048,
+      "height": 2048,
+      "selectedReason": "Chris explicitly selected candidates 2, 3, 4, and 5 and asked Go Youn-jung to save them.",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-10-05/images/selected_04_space_weather_block_code.png",
+      "savedAt": "2026-10-05T19:58:58+09:00",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20261005_032448_2a3f7172-10f6-4a0f-a975-a92d5d9a6e3c.png",
+      "midjourneyPrompt": "abstract retro code block surface, dark graphite field with cream yellow green and coral rectangular ticks, chunky pixel bars and block rows that form no letters or numbers, pure 2D graphic motif material for brand and package surface, instrument-like but not UI screenshot --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "assetHash": "783e6e8f1a3d81e25fb23d1962b4ae892c422cf24bd91e4538cbc7c5702f7d5a"
+    },
+    {
+      "id": "2026-10-05-goyj-archive60-nonrepeat-actual-sampling-121948-05",
+      "title": "Analog Label Fragment Field",
+      "created": "2026-10-05",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-05/selected_05_analog_label_fragment_field.png",
+      "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY for future brand, package, mobile UI, and mockup composition. Based on distinct Chris Archive source references, translated into new composable material, not copied. 1:1 square. It must be useful for crop, mask, overlay, repeat, or surface application. No readable text, no letters, no numbers, no logos, no watermark, no poster headline, no app icon, no UI screenshot, no product mockup, no people, no photo. Do not make a complete poster or standalone artwork. Keep high design utility, clear negative space, tactile print/material feeling, refined Korean/Samsung-level restraint. Avoid the previously repeated defaults: warm-gray capsule grids, circle badges/seals, two glowing line overlays, route/orbit maps, dot-matrix-only AI, generic blue/mint/violet neon, chrome-object hero renders.\n\nCandidate 05 uses this distinct Chris Archive reference axis: Vinyl label abstract geometric specimen / analog circular fragments without badge logic. Source references: Vinyl label abstract geometric specimen, Floating vinyl records red halo package system. Translate the archive DNA into PURE 2D GRAPHIC MOTIF MATERIAL for later crop/mask/overlay/repeat use. Do not copy the exact layout.\n\nArchive axis: analog vinyl label specimen, translated into fragment material, not a round logo. Warm ivory and charcoal base with cropped partial ring segments, lime and muted lavender geometric wedges, soft red-orange halo blur at one edge, tactile paper/vinyl grain. Make rings incomplete and off-canvas so it is not a seal, badge, or icon. No text, no numbers, no label copy, no full centered circle.\n\nNegative constraints: No readable text, letters, numbers, brand names, logos, watermark, poster, completed package label, app icon, UI screenshot, product mockup, people, human face, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, circle badge, capsule default, dot matrix default, orbit routes, decorative scratches, object render, bevel, lens flare overload.",
+      "negativePrompt": "No readable text, letters, numbers, brand names, logos, watermark, poster, completed package label, app icon, UI screenshot, product mockup, people, human face, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, circle badge, capsule default, dot matrix default, orbit routes, decorative scratches, object render, bevel, lens flare overload.",
+      "analysis": "vinyl label/analog package 계열을 완전한 원형 배지로 만들지 않고 잘린 ring fragment와 edge halo로 풀었습니다. 패키지 표면, corner accent, crop background에 아날로그한 온도를 줄 수 있습니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-10-05/archive60-nonrepeat-actual-sampling-121948",
+      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-10-05/archive60-nonrepeat-actual-sampling-121948",
+      "referenceAxis": "Vinyl label abstract geometric specimen / analog circular fragments without badge logic",
+      "sourceReferences": [
+        {
+          "title": "Vinyl label abstract geometric specimen",
+          "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-12_vinyl-label-abstract-geometric-specimen_f7f277e31cb2.jpg"
+        },
+        {
+          "title": "Floating vinyl records red halo package system",
+          "assetPath": "/opt/data/chris-archive/images/2026/09/2026-09-12_floating-vinyl-records-red-halo-package-system_d3d8d24f2219.jpg"
+        }
+      ],
+      "dnaClusters": [
+        "Analog Ring Fragments",
+        "Package Surface Material",
+        "Warm-Cool Intelligence",
+        "Soft Signal Accent",
+        "Chris Archive Reference Sampling"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "2k",
+        "variant": "flare",
+        "background": "opaque",
+        "image_references": 2
+      },
+      "width": 2048,
+      "height": 2048,
+      "selectedReason": "Chris explicitly selected candidates 2, 3, 4, and 5 and asked Go Youn-jung to save them.",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-10-05/images/selected_05_analog_label_fragment_field.png",
+      "savedAt": "2026-10-05T19:58:58+09:00",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20261005_032525_0c497d22-a813-4aa8-b6c3-6a6ef4c5b757.png",
+      "midjourneyPrompt": "analog vinyl label fragment field, warm ivory and charcoal base, incomplete off-canvas ring segments, lime and muted lavender geometric wedges, soft red orange halo at one edge, tactile paper vinyl grain, pure 2D package surface motif, not a badge or logo --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "assetHash": "5649efe486e5e35cb71c4b96a2952fd2fea2bd51ae8ead5670126ed07b852c9b"
     }
   ]
 }
