@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-03T01:20:00+09:00",
+  "generatedAt": "2026-10-05T22:00:26+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -61,6 +61,69 @@
           "description": "Outdoor hanging cafe sign mockup on warm stone facade.",
           "imageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/06_hanging_cafe_sign_mockup.jpg",
           "assetHash": "e5cd542813f6e29800f0552e71aa556b296b7958cb40179ad1a5a5e16e30f4f9",
+          "width": 1280,
+          "height": 853
+        }
+      ]
+    },
+    {
+      "id": "outdoor-mockup-assets-1",
+      "title": "Outdoor Mockup Assets 1",
+      "created": "2026-10-05",
+      "status": "mockup_moodboard_saved",
+      "description": "Outdoor stationery, wall banner, poster, board, and hanging sign mockup references for applying Design DNA motifs to real exterior brand surfaces.",
+      "items": [
+        {
+          "id": "outdoor-mockup-assets-1-01",
+          "title": "Outdoor Paper Stack On Concrete",
+          "description": "거친 회색 콘크리트 바닥 위에 흰 종이 더미 두 개가 놓인 outdoor stationery mockup. 강한 자연광과 그림자가 있어 카드, 리플렛, 인쇄물 브랜드 표면 테스트에 적합합니다.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/01_paper-stacks-on-concrete_outdoor_mockup.jpg",
+          "assetHash": "7ca3503e1e92d9f85a13abc170d79ee87872d9266f05b8cf27715d0d406d3300",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "outdoor-mockup-assets-1-02",
+          "title": "Single Card On Metal Grid",
+          "description": "검은 금속 그리드 위에 흰 직사각형 카드가 놓인 mockup. 선형 구조와 그림자가 강해 명함, 초대장, 작은 브랜드 카드의 outdoor contrast 테스트에 좋습니다.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/02_single-card-on-metal-grid_outdoor_mockup.jpg",
+          "assetHash": "9ee7d94dfd9c2537067394e1d4f30f380f3ab7e04c6fe506c69c2733905005a7",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "outdoor-mockup-assets-1-03",
+          "title": "Vertical Fabric Banner On Stone Wall",
+          "description": "베이지 석재 외벽 사이에 긴 흰 패브릭 배너가 걸린 거리형 mockup. 세로형 브랜드 플래그, 패브릭 사인, 외부 파사드 적용을 검증하기 좋습니다.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/03_vertical-fabric-banner-on-stone-wall_outdoor_mockup.jpg",
+          "assetHash": "95d863c6ed4eaafe631cf6023ff8fa27c935a997321a78ba76dfdbc7dc43f899",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "outdoor-mockup-assets-1-04",
+          "title": "Framed Wall Poster On Stone Facade",
+          "description": "회색 석재 파사드 중앙에 큰 흰 프레임 포스터 영역이 있는 outdoor wall mockup. 대형 그래픽, 캠페인 보드, 매장 외벽 사인 적용에 적합합니다.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/04_framed-wall-poster-on-stone-facade_outdoor_mockup.jpg",
+          "assetHash": "3710a91d15b247a49f9a89d20d14501809740623083eb3a61e55a3bf2c603b82",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "outdoor-mockup-assets-1-05",
+          "title": "White Board Set With Pebble Background",
+          "description": "자갈과 검은 선반 앞에 흰 보드/카드 세트가 서 있는 material mood mockup. 여러 사이즈의 브랜드 보드, 표지, 패키지 전면을 함께 비교하기 좋습니다.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/05_white-board-set-with-pebble-background_outdoor_mockup.jpg",
+          "assetHash": "a2e94e197d2b6419bb76f06984705157126fa67e1905d22ed9b8d9988f7bebb6",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": "outdoor-mockup-assets-1-06",
+          "title": "Hanging Outdoor Sign On Glass Facade",
+          "description": "유리와 석재 외벽 구조물에 흰 사각 행잉 사인이 매달린 mockup. 실외 간판, 매장 사인, hanging panel brand application을 검증하기 좋은 고대비 파사드 장면입니다.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/06_hanging-outdoor-sign-on-glass-facade_outdoor_mockup.jpg",
+          "assetHash": "a3b745080048b5786f7e4429d38e5efb675d14b79013f9fcf9039828a68fff61",
           "width": 1280,
           "height": 853
         }
