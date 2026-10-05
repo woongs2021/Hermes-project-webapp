@@ -2286,6 +2286,7 @@ function DesignDnaPanel() {
   const [activeDnaDashboardSource, setActiveDnaDashboardSource] = useState<'gpt' | 'midjourney'>('gpt')
   const [activeBrandAssetLane, setActiveBrandAssetLane] = useState<'brandMockup' | 'midjourneyMockup'>('brandMockup')
   const [activeBrandAssetSource, setActiveBrandAssetSource] = useState<string>('coffee-mockup-assets')
+  const brandMockupSubtabNavRef = useRef<HTMLDivElement | null>(null)
   const [isDnaPrinciplesOpen, setIsDnaPrinciplesOpen] = useState(false)
   const [dnaPrinciplesText, setDnaPrinciplesText] = useState('')
   const [dnaPrinciplesError, setDnaPrinciplesError] = useState('')
@@ -2328,6 +2329,38 @@ function DesignDnaPanel() {
     }
   }, [])
 
+  const brandMockupCollections = brandMockupAssets.collections
+
+  useEffect(() => {
+    const nav = brandMockupSubtabNavRef.current
+    if (!nav || activeBrandAssetLane !== 'brandMockup') return
+
+    const updateBrandMockupIndicator = () => {
+      const activeButton = nav.querySelector<HTMLButtonElement>('.brand-mockup-subtab.active')
+      if (!activeButton) {
+        nav.style.setProperty('--brand-mockup-subtab-indicator-opacity', '0')
+        return
+      }
+
+      const navBox = nav.getBoundingClientRect()
+      const buttonBox = activeButton.getBoundingClientRect()
+      nav.style.setProperty('--brand-mockup-subtab-indicator-left', `${buttonBox.left - navBox.left + nav.scrollLeft}px`)
+      nav.style.setProperty('--brand-mockup-subtab-indicator-width', `${buttonBox.width}px`)
+      nav.style.setProperty('--brand-mockup-subtab-indicator-opacity', '1')
+    }
+
+    updateBrandMockupIndicator()
+    const animationFrame = window.requestAnimationFrame(updateBrandMockupIndicator)
+    window.addEventListener('resize', updateBrandMockupIndicator)
+    nav.addEventListener('scroll', updateBrandMockupIndicator, { passive: true })
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame)
+      window.removeEventListener('resize', updateBrandMockupIndicator)
+      nav.removeEventListener('scroll', updateBrandMockupIndicator)
+    }
+  }, [activeDesignDnaSection, activeBrandAssetLane, activeBrandAssetSource, brandMockupCollections.length])
+
   const dnaTotalItems = dnaArchive.items.length
   const midjourneyDnaTotalItems = midjourneyDnaArchive.items.length
   const activeDnaDashboardArchive = activeDnaDashboardSource === 'gpt' ? dnaArchive : midjourneyDnaArchive
@@ -2337,7 +2370,6 @@ function DesignDnaPanel() {
   const activeDnaDashboardCopy = activeDnaDashboardSource === 'gpt'
     ? 'GoYJ 루프에서 GPT Image 2.5로 만든 후보 중 Chris가 저장한 그래픽 재료입니다. 앞으로도 월/수/금 루프는 이 레일에 계속 쌓입니다.'
     : 'Chris가 Midjourney에 수동 입력해 만든 결과만 따로 저장하는 레일입니다. 같은 프롬프트 계열의 Midjourney 해석을 GPT 레일과 분리해서 비교할 수 있습니다.'
-  const brandMockupCollections = brandMockupAssets.collections
   const activeBrandMockupCollection = brandMockupCollections.find((collection) => collection.id === activeBrandAssetSource) ?? brandMockupCollections[0]
   const coffeeAssetExamples = brandMockupAssets.examples ?? []
 
@@ -2646,7 +2678,11 @@ function DesignDnaPanel() {
           </div>
           {activeBrandAssetLane === 'brandMockup' && brandMockupCollections.length > 0 ? (
             <>
-              <div className="dna-dashboard-source-tabs brand-mockup-subtabs" aria-label="Brand Mockup Assets collections">
+              <div
+                className="dna-dashboard-source-tabs brand-mockup-subtabs"
+                aria-label="Brand Mockup Assets collections"
+                ref={brandMockupSubtabNavRef}
+              >
                 {brandMockupCollections.map((collection) => (
                   <button
                     type="button"
@@ -2659,6 +2695,7 @@ function DesignDnaPanel() {
                     <small>{collection.items.length} assets</small>
                   </button>
                 ))}
+                <span className="brand-mockup-subtab-indicator" aria-hidden="true" />
               </div>
               {activeBrandMockupCollection ? (
                 <section className="content-card dna-brand-mockup-collection" aria-label={`${activeBrandMockupCollection.title} moodboard`}>
