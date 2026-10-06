@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-06T23:48:49+09:00",
+  "generatedAt": "2026-10-07T00:00:32+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -585,18 +585,18 @@
         {
           "id": "outdoor-mockup-example-01-04",
           "title": "Outdoor Mockup Example 1-4",
-          "description": "Outdoor Mockup Example 1-4: Kling HQ natural recomposition from the original Framed Wall Poster On Stone Facade mockup, preserving the two black posts and integrating the amber metaphor through the poster shadow/reflection area.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/04_outdoor-mockup-example-1-4_rev14_kling_shadow_natural_hq.png",
-          "assetHash": "a95541061c6ceb75080f12de02572cd6af4a01f66eadd07955ade71278a3a7e7",
+          "description": "Outdoor Mockup Example 1-4: Kling HQ natural synthesis using the newly replaced Framed Wall Poster On Stone Facade mockup as the primary geometry, with the amber folded metaphor integrated into the poster/glass surface.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/04_outdoor-mockup-example-1-4_rev15_kling_new_framed_mockup_hq.png",
+          "assetHash": "fffa7534df52d8b6029e06af066625ea8411580f9e5f03890f47dd625ed9da7f",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/04_outdoor-mockup-example-1-4_rev14_kling_shadow_natural_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/04_outdoor-mockup-example-1-4_rev15_kling_new_framed_mockup_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/26_26_warm_amber_folded_surface_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/04_framed-wall-poster-on-stone-facade_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T16:34:58+09:00"
+          "updatedAt": "2026-10-07T00:00:32+09:00"
         },
         {
           "id": "outdoor-mockup-example-01-05",
