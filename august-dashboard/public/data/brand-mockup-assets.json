@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-06T14:08:50+09:00",
+  "generatedAt": "2026-10-06T15:16:58+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -196,7 +196,7 @@
   "examples": [
     {
       "id": "coffee-asset-example-01",
-      "title": "Coffee Pattern Example 01",
+      "title": "Coffee Mockup Example 1",
       "created": "2026-09-26",
       "status": "nano_banana_pro_pattern_only",
       "sourceGraphic": "Midjourney 01 — Capsule Pattern Translation",
@@ -204,7 +204,7 @@
       "items": [
         {
           "id": "coffee-asset-example-01-01",
-          "title": "Pattern Cup Sleeve",
+          "title": "Coffee Mockup Example 1-1",
           "description": "Pattern-only cup sleeve application",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/01_pattern-cup-sleeve_kling4k_mockup.png",
           "assetHash": "efa63ef28ec86a88893b3bc2163d4900f342a217163ee6b510e909d1a2b888ca",
@@ -215,11 +215,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/01_onboard_cup_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "coffee-asset-example-01-02",
-          "title": "Pattern Coffee Bag And Cup Counter",
+          "title": "Coffee Mockup Example 1-2",
           "description": "Pattern-only coffee bag and cup counter application",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/02_pattern-coffee-bag-and-cup-counter_kling4k_mockup.png",
           "assetHash": "8170f32561f11e70b1a54c1fc532cb0f81db9da024ba945d07ba16851cb712ee",
@@ -230,11 +231,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/02_onboard_packaging_counter_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "coffee-asset-example-01-03",
-          "title": "Pattern Stacked Cup Set",
+          "title": "Coffee Mockup Example 1-3",
           "description": "Pattern-only stacked cup set application",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/03_pattern-stacked-cup-set_kling4k_mockup.png",
           "assetHash": "2692f6cf67042f2453be402e37b08f9b815c27a69eb5bcdb038284920d16ca66",
@@ -245,11 +247,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/03_onboard_cup_set_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "coffee-asset-example-01-04",
-          "title": "Pattern Tote Bag Mockup",
+          "title": "Coffee Mockup Example 1-4",
           "description": "Pattern-only tote bag mockup application",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/04_pattern-tote-bag-mockup_kling4k_mockup.png",
           "assetHash": "0d38c15a54ba19f5f92c90e643d312a4d9940e0219a3fd9a2913946632d4dddf",
@@ -260,11 +263,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/04_onboard_tote_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "coffee-asset-example-01-05",
-          "title": "Pattern Close-Up Cup Body",
+          "title": "Coffee Mockup Example 1-5",
           "description": "Pattern-only close-up cup body application",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/05_pattern-close-up-cup-body_kling4k_mockup.png",
           "assetHash": "db1f7978d56e4469c35db864cddf98c593056f10744bec89c040bdd0c29415f0",
@@ -275,11 +279,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/05_onboard_closeup_cup_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "coffee-asset-example-01-06",
-          "title": "Pattern Hanging Cafe Sign",
+          "title": "Coffee Mockup Example 1-6",
           "description": "Pattern-only hanging cafe sign application",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/06_pattern-hanging-cafe-sign_kling4k_mockup.png",
           "assetHash": "9f877e05a7798610c25092656a43a0ff353169724a335be61f0bdfaa56fafb7b",
@@ -290,7 +295,8 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/06_onboard_hanging_sign_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         }
       ],
       "synthesisTool": "Geometry-preserving upscale from approved mockup synthesis",
@@ -299,7 +305,7 @@
     },
     {
       "id": "coffee-asset-example-02",
-      "title": "Coffee Pattern Example 02",
+      "title": "Coffee Mockup Example 2",
       "created": "2026-09-28",
       "status": "nano_banana_pro_pattern_only",
       "sourceGraphic": "Midjourney 20 — Monochrome Architectural Block Surface",
@@ -307,7 +313,7 @@
       "items": [
         {
           "id": "coffee-asset-example-02-01",
-          "title": "Monochrome Block Cup Sleeve",
+          "title": "Coffee Mockup Example 2-1",
           "description": "Pattern-only cup sleeve application using Midjourney 20 monochrome architectural block surface motif",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/01_monochrome-block-cup-sleeve_kling4k_mockup.png",
           "assetHash": "eb26b28b6518fd45bcb0f8c31a65b5ccd4141c3c75b99d921f8cfa7f7a14ac69",
@@ -318,11 +324,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/01_monochrome_block_cup_sleeve_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "coffee-asset-example-02-02",
-          "title": "Monochrome Block Coffee Bag And Cup Counter",
+          "title": "Coffee Mockup Example 2-2",
           "description": "Pattern-only coffee bag and cup counter application using Midjourney 20 monochrome architectural block surface motif",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/02_monochrome-block-coffee-bag-and-cup-counter_kling4k_mockup.png",
           "assetHash": "063a7d6e219deabab7c825ae64b94cf82e410c2ed1f2cdf2169540efc23ce39b",
@@ -333,11 +340,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/02_monochrome_block_packaging_counter_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "coffee-asset-example-02-03",
-          "title": "Monochrome Block Stacked Cup Set",
+          "title": "Coffee Mockup Example 2-3",
           "description": "Pattern-only stacked cup set application using Midjourney 20 monochrome architectural block surface motif",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/03_monochrome-block-stacked-cup-set_kling4k_mockup.png",
           "assetHash": "af943a40012ef260ceb7a17ce87b02c22b2ff65a38ea46b3981f321468de549e",
@@ -348,11 +356,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/03_monochrome_block_stacked_cup_set_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "coffee-asset-example-02-04",
-          "title": "Monochrome Block Tote And Takeaway Cup",
+          "title": "Coffee Mockup Example 2-4",
           "description": "Pattern-only tote and takeaway cup application using Midjourney 20 monochrome architectural block surface motif",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/04_monochrome-block-tote-and-takeaway-cup_kling4k_mockup.png",
           "assetHash": "a1e348f1cbebaa5cb8bca74f50bfa9a88e729d51172ee4b65846f751e9071849",
@@ -363,11 +372,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/04_monochrome_block_tote_and_takeaway_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "coffee-asset-example-02-05",
-          "title": "Monochrome Block Close-Up Cup Body",
+          "title": "Coffee Mockup Example 2-5",
           "description": "Pattern-only close-up cup body application using Midjourney 20 monochrome architectural block surface motif",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/05_monochrome-block-close-up-cup-body_kling4k_mockup.png",
           "assetHash": "63f04545b62d6105ca6dc061e2dd149f7887e5486c7b46d08c2bac16dd5d8ec0",
@@ -378,11 +388,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/05_monochrome_block_closeup_cup_body_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "coffee-asset-example-02-06",
-          "title": "Monochrome Block Hanging Cafe Sign",
+          "title": "Coffee Mockup Example 2-6",
           "description": "Pattern-only hanging cafe sign application using Midjourney 20 monochrome architectural block surface motif",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/06_monochrome-block-hanging-cafe-sign_kling4k_mockup.png",
           "assetHash": "1e7a3828926fe417e5164fe7134f252dedd5c6267de68cc38d7c12334d49c82b",
@@ -393,7 +404,8 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/06_monochrome_block_hanging_cafe_sign_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         }
       ],
       "synthesisTool": "Geometry-preserving upscale from approved mockup synthesis",
@@ -401,16 +413,16 @@
       "resynthesizedAt": "2026-10-03T01:20:00+09:00"
     },
     {
-      "id": "coffee-asset-example-05",
-      "title": "Coffee Pattern Example 05",
+      "id": "coffee-asset-example-03",
+      "title": "Coffee Mockup Example 3",
       "created": "2026-09-28",
       "status": "nano_banana_pro_pattern_only",
       "sourceGraphic": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation",
       "description": "Kling 4K pattern-only resynthesis: Midjourney 11 ambient blue-peach gradient surface translation motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
       "items": [
         {
-          "id": "coffee-asset-example-05-01",
-          "title": "Ambient Gradient Cup Sleeve",
+          "id": "coffee-asset-example-03-01",
+          "title": "Coffee Mockup Example 3-1",
           "description": "Pattern-only cup sleeve application using Midjourney 11 ambient blue-peach gradient surface translation motif",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/01_ambient-gradient-cup-sleeve_kling4k_mockup.png",
           "assetHash": "069f898501dccb86cd2eed9186f6c5b26e785b8d8d772e763d4b17b3db48022e",
@@ -421,11 +433,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/01_ambient_gradient_cup_sleeve_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
-          "id": "coffee-asset-example-05-02",
-          "title": "Ambient Gradient Coffee Bag And Cup Counter",
+          "id": "coffee-asset-example-03-02",
+          "title": "Coffee Mockup Example 3-2",
           "description": "Pattern-only coffee bag and cup counter application using Midjourney 11 ambient blue-peach gradient surface translation motif",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/02_ambient-gradient-coffee-bag-and-cup-counter_kling4k_mockup.png",
           "assetHash": "a46ca157facd194e49ad769eb4b04953bc61b841ee4a1ad027cbf0eb5775385e",
@@ -436,11 +449,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/02_ambient_gradient_packaging_counter_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
-          "id": "coffee-asset-example-05-03",
-          "title": "Ambient Gradient Stacked Cup Set",
+          "id": "coffee-asset-example-03-03",
+          "title": "Coffee Mockup Example 3-3",
           "description": "Pattern-only stacked cup set application using Midjourney 11 ambient blue-peach gradient surface translation motif",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/03_ambient-gradient-stacked-cup-set_kling4k_mockup.png",
           "assetHash": "069064b39ab2d438689bd776bee0246a5034e38c8b68cdf5b13bccafd03a349e",
@@ -451,11 +465,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/03_ambient_gradient_stacked_cup_set_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
-          "id": "coffee-asset-example-05-04",
-          "title": "Ambient Gradient Tote And Takeaway Cup",
+          "id": "coffee-asset-example-03-04",
+          "title": "Coffee Mockup Example 3-4",
           "description": "Pattern-only tote and takeaway cup application using Midjourney 11 ambient blue-peach gradient surface translation motif",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/04_ambient-gradient-tote-and-takeaway-cup_kling4k_mockup.png",
           "assetHash": "8d8e0bbf227f39f70c14e768fe17484bc7364c8ca0a841011d76d93d4daa1d47",
@@ -466,11 +481,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/04_ambient_gradient_tote_and_takeaway_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
-          "id": "coffee-asset-example-05-05",
-          "title": "Ambient Gradient Close-Up Cup Body",
+          "id": "coffee-asset-example-03-05",
+          "title": "Coffee Mockup Example 3-5",
           "description": "Pattern-only close-up cup body application using Midjourney 11 ambient blue-peach gradient surface translation motif",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/05_ambient-gradient-close-up-cup-body_kling4k_mockup.png",
           "assetHash": "4aa918353fc6e1dc6cbdd40ca895da92c8bce90f8b48f9bcafa143832c069095",
@@ -481,11 +497,12 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/05_ambient_gradient_closeup_cup_body_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
-          "id": "coffee-asset-example-05-06",
-          "title": "Ambient Gradient Hanging Cafe Sign",
+          "id": "coffee-asset-example-03-06",
+          "title": "Coffee Mockup Example 3-6",
           "description": "Pattern-only hanging cafe sign application using Midjourney 11 ambient blue-peach gradient surface translation motif",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/06_ambient-gradient-hanging-cafe-sign_kling4k_mockup.png",
           "assetHash": "2c98952209f65920360e6eedad3c8314665a3712d5d5f93ccbadd3e864759684",
@@ -496,7 +513,8 @@
           "downloadLabel": "목업 완성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/06_ambient_gradient_hanging_cafe_sign_mockup.jpg",
-          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG."
+          "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         }
       ],
       "synthesisTool": "Geometry-preserving upscale from approved mockup synthesis",
@@ -506,17 +524,17 @@
     {
       "id": "outdoor-mockup-example-01",
       "tabId": "outdoor-mockup-1",
-      "title": "Outdoor Mockup 1 × Midjourney 26",
+      "title": "Outdoor Mockup Example 1",
       "created": "2026-10-05",
       "status": "kling_image_to_image_hq_natural_revision",
       "sourceGraphic": "Midjourney 26 — Warm Amber Folded Surface",
-      "description": "Kling HQ natural re-synthesis of the full-surface mockup set, preserving camera, shadows, folds, and physical surface integration while cleaning mask edges, dust, and low-resolution artifacts.",
+      "description": "Outdoor Mockup Example 1: high-quality natural full-surface Midjourney + Mockup synthesis set.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/26_26_warm_amber_folded_surface_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-1",
       "items": [
         {
           "id": "outdoor-mockup-example-01-01",
-          "title": "Paper Stack Full Warm Surface HQ Natural Natural",
+          "title": "Outdoor Mockup Example 1-1",
           "description": "Kling HQ natural full-surface re-synthesis using Midjourney 26 warm amber folded surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/01_paper-stack-full-warm-surface_rev05_kling_hq.png",
           "assetHash": "fc8afae6bb5b11fe673c6bf06a2818b935539952aa43ee37c9edcb4421dd7747",
@@ -528,11 +546,11 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/01_paper-stacks-on-concrete_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T14:08:50+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "outdoor-mockup-example-01-02",
-          "title": "Grid Card Cropped Warm Surface HQ Natural Natural",
+          "title": "Outdoor Mockup Example 1-2",
           "description": "Kling HQ natural full-surface re-synthesis using Midjourney 26 warm amber folded surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/02_grid-card-cropped-warm-surface_rev05_kling_hq.png",
           "assetHash": "d39ac2b1df07e468c2117269bb0725a3b68be122da7b571d96c9680f1d85c60b",
@@ -544,11 +562,11 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/02_single-card-on-metal-grid_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T14:08:50+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "outdoor-mockup-example-01-03",
-          "title": "Vertical Banner Full Folded Surface HQ Natural Natural",
+          "title": "Outdoor Mockup Example 1-3",
           "description": "Kling HQ natural full-surface re-synthesis using Midjourney 26 warm amber folded surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/03_vertical-banner-full-folded-surface_rev05_kling_hq.png",
           "assetHash": "6863e1fe9e9d5ab789ee711413025665c42fe6a6974c79346d0d2c7616a226b6",
@@ -560,27 +578,27 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/03_vertical-fabric-banner-on-stone-wall_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T14:08:50+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "outdoor-mockup-example-01-04",
-          "title": "Wall Poster Cropped Amber Surface HQ Natural Natural",
-          "description": "Kling HQ natural full-surface re-synthesis using Midjourney 26 warm amber folded surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/04_wall-poster-cropped-amber-surface_rev05_kling_hq.png",
-          "assetHash": "be7cc61fef863a078a6870d5ef98e8e6f11a625a36ea96117e6862581c0933f0",
+          "title": "Outdoor Mockup Example 1-4",
+          "description": "Outdoor Mockup Example 1-4: HQ wall poster render with an extended warm graphic projection through the lower gray cast-shadow area while preserving frame, wall, bollards, light, and physical shadow texture.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/04_outdoor-mockup-example-1-4_rev07_shadow_extended_hq.png",
+          "assetHash": "c6edab6fc61476534d927187cbc809382c8a691aeae717ca83fe6c43d0966d19",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/04_wall-poster-cropped-amber-surface_rev05_kling_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/04_outdoor-mockup-example-1-4_rev07_shadow_extended_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/26_26_warm_amber_folded_surface_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/04_framed-wall-poster-on-stone-facade_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T14:08:50+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "outdoor-mockup-example-01-05",
-          "title": "Board Set Cropped Warm Surface HQ Natural Natural",
+          "title": "Outdoor Mockup Example 1-5",
           "description": "Kling HQ natural full-surface re-synthesis using Midjourney 26 warm amber folded surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/05_board-set-cropped-warm-surface_rev05_kling_hq.png",
           "assetHash": "56fd6e7c89653232dbf615b8fa70c81acd10d25524f686dea8d95be4419d899d",
@@ -592,11 +610,11 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/05_white-board-set-with-pebble-background_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T14:08:50+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "outdoor-mockup-example-01-06",
-          "title": "Hanging Sign Full Amber Surface HQ Natural Natural",
+          "title": "Outdoor Mockup Example 1-6",
           "description": "Kling HQ natural full-surface re-synthesis using Midjourney 26 warm amber folded surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/06_hanging-sign-full-amber-surface_rev05_kling_hq.png",
           "assetHash": "0c034e49c9121af1c41765a7e3e5817c8a3784a1be1540bc282cf9ab06ffa9c6",
@@ -608,7 +626,7 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/06_hanging-outdoor-sign-on-glass-facade_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T14:08:50+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration revision; original mockup + source graphic + prior composite references; full-surface application, no small marks or solid-only treatments",
@@ -617,17 +635,17 @@
     {
       "id": "outdoor-mockup-example-02",
       "tabId": "outdoor-mockup-2",
-      "title": "Outdoor Mockup 2 × Midjourney 24",
+      "title": "Outdoor Mockup Example 2",
       "created": "2026-10-05",
       "status": "kling_image_to_image_hq_natural_revision",
       "sourceGraphic": "Midjourney 24 — Black Mountain Red Horizon Paper Surface",
-      "description": "Kling HQ natural re-synthesis of the full-surface mockup set, preserving camera, shadows, folds, and physical surface integration while cleaning mask edges, dust, and low-resolution artifacts.",
+      "description": "Outdoor Mockup Example 2: high-quality natural full-surface Midjourney + Mockup synthesis set.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/24_24_black_mountain_red_horizon_paper_surface_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-2",
       "items": [
         {
           "id": "outdoor-mockup-example-02-01",
-          "title": "Paper Tag Full Horizon Surface HQ Natural Natural",
+          "title": "Outdoor Mockup Example 2-1",
           "description": "Kling HQ natural full-surface re-synthesis using Midjourney 24 black mountain red horizon surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-02/2026-10-05/01_paper-tag-full-horizon-surface_rev05_kling_hq.png",
           "assetHash": "888fa3cbada73723294fc8f42a9667c11fbe9f5549986d9d5cee3849422719f4",
@@ -639,11 +657,11 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/01_held-paper-tag-on-shadow-wall_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T14:08:50+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-02",
-          "title": "Shoulder Tote Cropped Horizon Surface HQ Natural Natural",
+          "title": "Outdoor Mockup Example 2-2",
           "description": "Kling HQ natural full-surface re-synthesis using Midjourney 24 black mountain red horizon surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-02/2026-10-05/02_shoulder-tote-cropped-horizon-surface_rev05_kling_hq.png",
           "assetHash": "4b7de97f305b759dc6673230851e486c7817238f09f26c46607d850aa0d0cc74",
@@ -655,11 +673,11 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/02_large-tote-bag-on-shoulder_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T14:08:50+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-03",
-          "title": "Phone Screen Full Horizon Graphic HQ Natural Natural",
+          "title": "Outdoor Mockup Example 2-3",
           "description": "Kling HQ natural full-surface re-synthesis using Midjourney 24 black mountain red horizon surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-02/2026-10-05/03_phone-screen-full-horizon-graphic_rev05_kling_hq.png",
           "assetHash": "e951238a52b7abea60f0a572b5d7cea5a0458d87a6c694606a7aeb410c0ecbc4",
@@ -671,11 +689,11 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/03_phone-screen-on-ribbed-glass_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T14:08:50+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-04",
-          "title": "Bucket Hat Cropped Horizon Surface HQ Natural Natural",
+          "title": "Outdoor Mockup Example 2-4",
           "description": "Kling HQ natural full-surface re-synthesis using Midjourney 24 black mountain red horizon surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-02/2026-10-05/04_bucket-hat-cropped-horizon-surface_rev05_kling_hq.png",
           "assetHash": "1d73c04b1bbda1acd1f43b0ad8fd95f8bc91c47400adadb3ddf49a9fea007fe7",
@@ -687,11 +705,11 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/04_white-bucket-hat-on-stand_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T14:08:50+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-05",
-          "title": "Chair Tote Full Horizon Surface HQ Natural Natural",
+          "title": "Outdoor Mockup Example 2-5",
           "description": "Kling HQ natural full-surface re-synthesis using Midjourney 24 black mountain red horizon surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-02/2026-10-05/05_chair-tote-full-horizon-surface_rev05_kling_hq.png",
           "assetHash": "e260e5627b43359b01659dc122cbd8b28d450162c14e3fd9078b9e7bbba03114",
@@ -703,11 +721,11 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/05_tote-bag-on-chair-outdoor_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T14:08:50+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-06",
-          "title": "T-Shirt Cropped Horizon Surface HQ Natural Natural",
+          "title": "Outdoor Mockup Example 2-6",
           "description": "Kling HQ natural full-surface re-synthesis using Midjourney 24 black mountain red horizon surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-02/2026-10-05/06_t-shirt-cropped-horizon-surface_rev05_kling_hq.png",
           "assetHash": "ba9ca213ba4eb4cafb72a0541aa69ceb88d160013a52144a329afe4c0fdfb0c7",
@@ -719,7 +737,7 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/06_white-tshirt-on-black-fence_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T14:08:50+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration revision; original mockup + source graphic + prior composite references; full-surface application, no small marks or solid-only treatments",
