@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-06T18:55:17+09:00",
+  "generatedAt": "2026-10-06T23:39:46+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -105,9 +105,11 @@
           "title": "Framed Wall Poster On Stone Facade",
           "description": "회색 석재 파사드 중앙에 큰 흰 프레임 포스터 영역이 있는 outdoor wall mockup. 대형 그래픽, 캠페인 보드, 매장 외벽 사인 적용에 적합합니다.",
           "imageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/04_framed-wall-poster-on-stone-facade_outdoor_mockup.jpg",
-          "assetHash": "3710a91d15b247a49f9a89d20d14501809740623083eb3a61e55a3bf2c603b82",
+          "assetHash": "faa7ef4e951ea47ffaaf0c9b48c7f9c0fdebedcb248d7e619a5dda8f10db6cea",
           "width": 1280,
-          "height": 853
+          "height": 853,
+          "downloadSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/04_framed-wall-poster-on-stone-facade_outdoor_mockup.jpg",
+          "updatedAt": "2026-10-06T23:39:46+09:00"
         },
         {
           "id": "outdoor-mockup-assets-1-05",
