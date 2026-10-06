@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-06T17:22:31+09:00",
+  "generatedAt": "2026-10-06T17:35:57+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -567,18 +567,18 @@
         {
           "id": "outdoor-mockup-example-01-03",
           "title": "Outdoor Mockup Example 1-3",
-          "description": "Outdoor Mockup Example 1-3: left-center banner bg patch. The brick-through/transparent-looking area was filled with a warm champagne/amber background tone while preserving fabric shading and the existing metaphor edge.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/03_outdoor-mockup-example-1-3_rev17_left_center_bg_patch_hq.png",
-          "assetHash": "ab3206640125ae5911e98c319e11d1d31f3ecd841be96d6bca75216c0fa022b0",
+          "description": "Outdoor Mockup Example 1-3: Kling opaque fabric banner regeneration. The left-middle banner area was regenerated as an opaque printed fabric surface so the brick wall no longer appears to show through; metaphor area/crop may differ slightly for naturalness.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/03_outdoor-mockup-example-1-3_rev18_kling_opaque_banner_hq.png",
+          "assetHash": "7a1859435453d40860fdd0be92c0bd37eb94c0641aae65717025ab1a478f1e4d",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/03_outdoor-mockup-example-1-3_rev17_left_center_bg_patch_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/03_outdoor-mockup-example-1-3_rev18_kling_opaque_banner_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/26_26_warm_amber_folded_surface_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/03_vertical-fabric-banner-on-stone-wall_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T17:22:31+09:00"
+          "updatedAt": "2026-10-06T17:35:57+09:00"
         },
         {
           "id": "outdoor-mockup-example-01-04",
