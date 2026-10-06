@@ -2286,7 +2286,9 @@ function DesignDnaPanel() {
   const [activeDnaDashboardSource, setActiveDnaDashboardSource] = useState<'gpt' | 'midjourney'>('gpt')
   const [activeBrandAssetLane, setActiveBrandAssetLane] = useState<'brandMockup' | 'midjourneyMockup'>('brandMockup')
   const [activeBrandAssetSource, setActiveBrandAssetSource] = useState<string>('coffee-mockup-assets')
+  const [activeMidjourneyMockupSource, setActiveMidjourneyMockupSource] = useState<string>('coffee')
   const brandMockupSubtabNavRef = useRef<HTMLDivElement | null>(null)
+  const midjourneyMockupSubtabNavRef = useRef<HTMLDivElement | null>(null)
   const [isDnaPrinciplesOpen, setIsDnaPrinciplesOpen] = useState(false)
   const [dnaPrinciplesText, setDnaPrinciplesText] = useState('')
   const [dnaPrinciplesError, setDnaPrinciplesError] = useState('')
@@ -2361,6 +2363,36 @@ function DesignDnaPanel() {
     }
   }, [activeDesignDnaSection, activeBrandAssetLane, activeBrandAssetSource, brandMockupCollections.length])
 
+  useEffect(() => {
+    const nav = midjourneyMockupSubtabNavRef.current
+    if (!nav || activeBrandAssetLane !== 'midjourneyMockup') return
+
+    const updateMidjourneyMockupIndicator = () => {
+      const activeButton = nav.querySelector<HTMLButtonElement>('.brand-mockup-subtab.active')
+      if (!activeButton) {
+        nav.style.setProperty('--brand-mockup-subtab-indicator-opacity', '0')
+        return
+      }
+
+      const navBox = nav.getBoundingClientRect()
+      const buttonBox = activeButton.getBoundingClientRect()
+      nav.style.setProperty('--brand-mockup-subtab-indicator-left', `${buttonBox.left - navBox.left + nav.scrollLeft}px`)
+      nav.style.setProperty('--brand-mockup-subtab-indicator-width', `${buttonBox.width}px`)
+      nav.style.setProperty('--brand-mockup-subtab-indicator-opacity', '1')
+    }
+
+    updateMidjourneyMockupIndicator()
+    const animationFrame = window.requestAnimationFrame(updateMidjourneyMockupIndicator)
+    window.addEventListener('resize', updateMidjourneyMockupIndicator)
+    nav.addEventListener('scroll', updateMidjourneyMockupIndicator, { passive: true })
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame)
+      window.removeEventListener('resize', updateMidjourneyMockupIndicator)
+      nav.removeEventListener('scroll', updateMidjourneyMockupIndicator)
+    }
+  }, [activeDesignDnaSection, activeBrandAssetLane, activeMidjourneyMockupSource, brandMockupAssets.examples?.length])
+
   const dnaTotalItems = dnaArchive.items.length
   const midjourneyDnaTotalItems = midjourneyDnaArchive.items.length
   const activeDnaDashboardArchive = activeDnaDashboardSource === 'gpt' ? dnaArchive : midjourneyDnaArchive
@@ -2371,7 +2403,25 @@ function DesignDnaPanel() {
     ? 'GoYJ 루프에서 GPT Image 2.5로 만든 후보 중 Chris가 저장한 그래픽 재료입니다. 앞으로도 월/수/금 루프는 이 레일에 계속 쌓입니다.'
     : 'Chris가 Midjourney에 수동 입력해 만든 결과만 따로 저장하는 레일입니다. 같은 프롬프트 계열의 Midjourney 해석을 GPT 레일과 분리해서 비교할 수 있습니다.'
   const activeBrandMockupCollection = brandMockupCollections.find((collection) => collection.id === activeBrandAssetSource) ?? brandMockupCollections[0]
-  const coffeeAssetExamples = brandMockupAssets.examples ?? []
+  const allBrandAssetExamples = brandMockupAssets.examples ?? []
+  const midjourneyMockupGroups = [
+    {
+      id: 'coffee',
+      title: 'Coffee Mockup',
+      examples: allBrandAssetExamples.filter((example) => !example.tabId || example.tabId === 'coffee'),
+    },
+    {
+      id: 'outdoor-mockup-1',
+      title: 'Outdoor Mockup 1',
+      examples: allBrandAssetExamples.filter((example) => example.tabId === 'outdoor-mockup-1'),
+    },
+    {
+      id: 'outdoor-mockup-2',
+      title: 'Outdoor Mockup 2',
+      examples: allBrandAssetExamples.filter((example) => example.tabId === 'outdoor-mockup-2'),
+    },
+  ]
+  const activeMidjourneyMockupGroup = midjourneyMockupGroups.find((group) => group.id === activeMidjourneyMockupSource) ?? midjourneyMockupGroups[0]
 
   return (
     <div className="design-dna-shell design-dna-single-page">
@@ -2726,37 +2776,67 @@ function DesignDnaPanel() {
                 </section>
               ) : null}
             </>
-          ) : activeBrandAssetLane === 'midjourneyMockup' && coffeeAssetExamples.length > 0 ? (
-            <div className="dna-brand-example-stack" aria-label="Coffee asset examples">
-              {coffeeAssetExamples.map((coffeeAssetExample) => (
-                <section className="content-card dna-brand-mockup-collection" aria-label={`${coffeeAssetExample.title} moodboard`} key={coffeeAssetExample.id}>
-                  <div className="dna-brand-mockup-header">
-                    <div>
-                      <p className="card-kicker">Midjourney + Mockup</p>
-                      <h4>{coffeeAssetExample.title}</h4>
-                      <p>{coffeeAssetExample.description}</p>
-                    </div>
-                    <span>{coffeeAssetExample.items.length} assets{coffeeAssetExample.logoText ? ` · ${coffeeAssetExample.logoText}` : ''}</span>
-                  </div>
-                  <div className="dna-brand-mockup-grid" aria-label={`${coffeeAssetExample.title} moodboard`}>
-                    {coffeeAssetExample.items.map((item) => (
-                      <button
-                        type="button"
-                        className="dna-brand-mockup-tile"
-                        key={item.id}
-                        onClick={() => setSelectedBrandAsset({ item, collection: coffeeAssetExample, lane: 'Midjourney + Mockup' })}
-                      >
-                        <img src={toAppAssetSrc(item.originalImageSrc ?? item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
-                        <span className="dna-brand-mockup-caption">
-                          <strong>{item.title}</strong>
-                          <span>{item.description}</span>
-                        </span>
-                      </button>
-                    ))}
-                  </div>
-                </section>
-              ))}
-            </div>
+          ) : activeBrandAssetLane === 'midjourneyMockup' && allBrandAssetExamples.length > 0 ? (
+            <>
+              <div
+                className="dna-dashboard-source-tabs brand-mockup-subtabs midjourney-mockup-subtabs"
+                aria-label="Midjourney + Mockup collections"
+                ref={midjourneyMockupSubtabNavRef}
+              >
+                {midjourneyMockupGroups.map((group) => {
+                  const itemCount = group.examples.reduce((sum, example) => sum + example.items.length, 0)
+                  return (
+                    <button
+                      type="button"
+                      className={activeMidjourneyMockupSource === group.id ? 'dna-dashboard-source-tab brand-mockup-subtab active' : 'dna-dashboard-source-tab brand-mockup-subtab'}
+                      aria-pressed={activeMidjourneyMockupSource === group.id}
+                      onClick={() => setActiveMidjourneyMockupSource(group.id)}
+                      key={group.id}
+                    >
+                      <span>{group.title}</span>
+                      <small>{itemCount} assets</small>
+                    </button>
+                  )
+                })}
+                <span className="brand-mockup-subtab-indicator" aria-hidden="true" />
+              </div>
+              {activeMidjourneyMockupGroup.examples.length > 0 ? (
+                <div className="dna-brand-example-stack" aria-label={`${activeMidjourneyMockupGroup.title} examples`}>
+                  {activeMidjourneyMockupGroup.examples.map((brandAssetExample) => (
+                    <section className="content-card dna-brand-mockup-collection" aria-label={`${brandAssetExample.title} moodboard`} key={brandAssetExample.id}>
+                      <div className="dna-brand-mockup-header">
+                        <div>
+                          <p className="card-kicker">Midjourney + Mockup · {activeMidjourneyMockupGroup.title}</p>
+                          <h4>{brandAssetExample.title}</h4>
+                          <p>{brandAssetExample.description}</p>
+                        </div>
+                        <span>{brandAssetExample.items.length} assets{brandAssetExample.logoText ? ` · ${brandAssetExample.logoText}` : ''}</span>
+                      </div>
+                      <div className="dna-brand-mockup-grid" aria-label={`${brandAssetExample.title} moodboard`}>
+                        {brandAssetExample.items.map((item) => (
+                          <button
+                            type="button"
+                            className="dna-brand-mockup-tile"
+                            key={item.id}
+                            onClick={() => setSelectedBrandAsset({ item, collection: brandAssetExample, lane: 'Midjourney + Mockup' })}
+                          >
+                            <img src={toAppAssetSrc(item.originalImageSrc ?? item.imageSrc)} alt={item.title} loading="lazy" decoding="async" />
+                            <span className="dna-brand-mockup-caption">
+                              <strong>{item.title}</strong>
+                              <span>{item.description}</span>
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                    </section>
+                  ))}
+                </div>
+              ) : (
+                <div className="content-card dna-brand-asset-empty-state" aria-label={`${activeMidjourneyMockupGroup.title} 준비 상태`}>
+                  <p>준비중입니다</p>
+                </div>
+              )}
+            </>
           ) : (
             <div className="content-card dna-brand-asset-empty-state" aria-label={`${activeBrandAssetLane === 'brandMockup' ? 'Brand Mockup Assets' : 'Midjourney plus mockup'} 준비 상태`}>
               <p>준비중입니다</p>

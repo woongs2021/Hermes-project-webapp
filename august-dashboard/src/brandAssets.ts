@@ -8,6 +8,8 @@ export type BrandMockupAsset = {
   downloadLabel?: string
   sourceGraphicHighResImageSrc?: string
   resynthesisSourceImageSrc?: string
+  applicationMode?: string
+  mockupCollectionId?: string
   assetHash: string
   width: number
   height: number
@@ -24,6 +26,8 @@ export type BrandMockupCollection = {
   logoText?: string
   logoFont?: string
   synthesisTool?: string
+  tabId?: string
+  mockupCollectionId?: string
 }
 
 export type BrandMockupManifest = {
