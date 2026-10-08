@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-08T18:50:40+09:00",
+  "generatedAt": "2026-10-08T19:41:58+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -861,7 +861,7 @@
       "tabId": "outdoor-mockup-1",
       "title": "Outdoor Mockup A-4",
       "created": "2026-10-08",
-      "status": "kling_image_to_image_hq_natural_revision",
+      "status": "kling_image_to_image_hq_corrected_revision",
       "sourceGraphic": "Midjourney 08 — Soft Circular Ring Translation",
       "description": "Outdoor Mockup A의 네 번째 합성 세트입니다. Midjourney 8 Soft Circular Ring Translation을 A 목업 6개에 적용했습니다. A-4-5는 두 책자/보드의 seam과 별도 crop을 유지했습니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/08_08_soft_circular_ring_midjourney_translation_kling4k.png",
@@ -934,18 +934,18 @@
         {
           "id": "outdoor-mockup-example-a-04-05",
           "title": "Outdoor Mockup A-4-5",
-          "description": "Midjourney 08 — Soft Circular Ring Translation를 White Board Set With Pebble Background에 full-surface로 자연 합성한 Outdoor Mockup A-4 세트입니다; original mockup shadows, folds, material cues preserved.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-04/2026-10-08/05_outdoor-mockup-a-4-5_two-distinct-board-crops_midjourney-8_kling_hq.png",
-          "assetHash": "1c96aebfe86a4feacd57693341409fefff13662fee632068650bdf15f6f08638",
+          "description": "Midjourney 08 — Soft Circular Ring Translation를 White Board Set With Pebble Background에 full-surface로 자연 합성한 Outdoor Mockup A-4 세트입니다; original mockup shadows, folds, material cues preserved. Rev02는 Midjourney 8 링 그래픽을 더 확실히 적용하고, 두 보드의 seam과 별도 crop을 유지한 재합성본입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-04/2026-10-08/05_outdoor-mockup-a-4-5_rev02_fully-applied-separate-rings_midjourney-8_kling_hq.png",
+          "assetHash": "d27a336260c7550aec83ee5f272cfc023ce4e4574a5a6dfbf12d792c58db054e",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-04/2026-10-08/05_outdoor-mockup-a-4-5_two-distinct-board-crops_midjourney-8_kling_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-04/2026-10-08/05_outdoor-mockup-a-4-5_rev02_fully-applied-separate-rings_midjourney-8_kling_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/08_08_soft_circular_ring_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/05_white-board-set-with-pebble-background_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "kling_regenerated_two_distinct_board_crops",
-          "updatedAt": "2026-10-08T18:50:40+09:00"
+          "applicationMode": "kling_regenerated_fully_applied_two_distinct_board_rings",
+          "updatedAt": "2026-10-08T19:41:58+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-04-06",
@@ -965,7 +965,7 @@
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original mockups + source Midjourney 4K motif + rough direction image",
-      "resynthesizedAt": "2026-10-08T18:50:40+09:00"
+      "resynthesizedAt": "2026-10-08T19:41:58+09:00"
     },
     {
       "id": "outdoor-mockup-example-02",
@@ -1305,7 +1305,7 @@
       "tabId": "outdoor-mockup-2",
       "title": "Outdoor Mockup B-4",
       "created": "2026-10-08",
-      "status": "kling_image_to_image_hq_natural_revision",
+      "status": "kling_image_to_image_hq_corrected_revision",
       "sourceGraphic": "Midjourney 30 — Warm Horizon Brush Field",
       "description": "Outdoor Mockup B의 네 번째 합성 세트입니다. Midjourney 30 Warm Horizon Brush Field를 B 목업 6개에 적용했습니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/30_30_warm_horizon_brush_field_manual_midjourney_kling4k.png",
@@ -1378,18 +1378,18 @@
         {
           "id": "outdoor-mockup-example-b-04-05",
           "title": "Outdoor Mockup B-4-5",
-          "description": "Midjourney 30 — Warm Horizon Brush Field를 Tote Bag On Chair Outdoor에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다; original mockup shadows, folds, material cues preserved.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/05_outdoor-mockup-b-4-5_midjourney-30_kling_hq.png",
-          "assetHash": "ce0d294228f9b93d8fb754c3f6bf1f150acc959a7a5acd9ff08b15830ebe6ba9",
+          "description": "Midjourney 30 — Warm Horizon Brush Field를 Tote Bag On Chair Outdoor에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다; original mockup shadows, folds, material cues preserved. Rev02는 때묻은 느낌을 줄이고 깨끗한 토트백 패브릭 프린트로 자연스럽게 재합성한 버전입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/05_outdoor-mockup-b-4-5_rev02_clean-natural-tote_midjourney-30_kling_hq.png",
+          "assetHash": "9e746882a14e23f7dfbd9c11698ff166827eb5fe026601ffa7c4919acbd00fc1",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/05_outdoor-mockup-b-4-5_midjourney-30_kling_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/05_outdoor-mockup-b-4-5_rev02_clean-natural-tote_midjourney-30_kling_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/30_30_warm_horizon_brush_field_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/05_tote-bag-on-chair-outdoor_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T18:50:40+09:00"
+          "applicationMode": "kling_clean_natural_tote_textile_print",
+          "updatedAt": "2026-10-08T19:41:58+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-04-06",
@@ -1409,7 +1409,7 @@
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original mockups + source Midjourney 4K motif + rough direction image",
-      "resynthesizedAt": "2026-10-08T18:50:40+09:00"
+      "resynthesizedAt": "2026-10-08T19:41:58+09:00"
     }
   ]
 }
