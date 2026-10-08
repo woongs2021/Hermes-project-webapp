@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-08T16:52:51+09:00",
+  "generatedAt": "2026-10-08T17:18:00+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -1029,18 +1029,18 @@
         {
           "id": "outdoor-mockup-example-b-02-04",
           "title": "Outdoor Mockup B-2-4",
-          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 White Bucket Hat On Stand에 full-surface로 자연 합성한 Outdoor Mockup B-2 세트입니다. bucket hat fabric print / embroidered-like material integration; original mockup shadows, folds, material cues preserved.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/04_outdoor-mockup-b-2-4_midjourney-23_kling_hq.png",
-          "assetHash": "d7470588c9a62c1d0737b9b7dfb6322f0c6ffc2e059110f6ff1aaa9a4c4a3be3",
+          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 White Bucket Hat On Stand에 Kling으로 재합성한 B-2-4입니다. 기존보다 큰 color field를 우선하고 stripe를 edge accent로 줄이려는 방향의 자연 합성 revision입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/04_outdoor-mockup-b-2-4_rev04_large-front-fields-edge-stripe_midjourney-23_kling_hq.png",
+          "assetHash": "853655c6794e8f79d8005213d2a3a238a48663421317bfeff74c6284e95a7b45",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/04_outdoor-mockup-b-2-4_midjourney-23_kling_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/04_outdoor-mockup-b-2-4_rev04_large-front-fields-edge-stripe_midjourney-23_kling_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/04_white-bucket-hat-on-stand_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T16:52:51+09:00"
+          "applicationMode": "kling_hat_large_front_fields_edge_stripe_revision",
+          "updatedAt": "2026-10-08T17:18:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-02-05",
@@ -1076,7 +1076,7 @@
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup B assets + rough direction + selected Midjourney source graphic; full-surface application",
-      "resynthesizedAt": "2026-10-08T16:52:51+09:00"
+      "resynthesizedAt": "2026-10-08T17:18:00+09:00"
     },
     {
       "id": "outdoor-mockup-example-b-03",
@@ -1140,18 +1140,18 @@
         {
           "id": "outdoor-mockup-example-b-03-04",
           "title": "Outdoor Mockup B-3-4",
-          "description": "Midjourney 22 — Woven Modular Block Grid를 White Bucket Hat On Stand에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다. bucket hat fabric print / embroidered-like material integration; original mockup shadows, folds, material cues preserved.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/04_outdoor-mockup-b-3-4_midjourney-22_kling_hq.png",
-          "assetHash": "74e7ea00d4b628abbf959ebbc5b78924b9618971118dd5a46bd9e3f0448e9561",
+          "description": "Midjourney 22 — Woven Modular Block Grid를 White Bucket Hat On Stand에 Kling으로 재합성한 B-3-4입니다. 패턴 스케일을 키우고 작은 체크 밀도를 줄여 더 차분하고 큰 블록의 woven textile 느낌으로 수정했습니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/04_outdoor-mockup-b-3-4_rev02_large-scale-pattern_midjourney-22_kling_hq.png",
+          "assetHash": "724cb007bc77d7c9a3a56ed77f1078c672bd28818dcdebf8eb5718a8dabc2dde",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/04_outdoor-mockup-b-3-4_midjourney-22_kling_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/04_outdoor-mockup-b-3-4_rev02_large-scale-pattern_midjourney-22_kling_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/22_22_woven_modular_block_grid_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/04_white-bucket-hat-on-stand_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T16:52:51+09:00"
+          "applicationMode": "kling_hat_large_scale_pattern_revision",
+          "updatedAt": "2026-10-08T17:12:05+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-03-05",
@@ -1187,7 +1187,7 @@
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup B assets + rough direction + selected Midjourney source graphic; full-surface application",
-      "resynthesizedAt": "2026-10-08T16:52:51+09:00"
+      "resynthesizedAt": "2026-10-08T17:12:05+09:00"
     }
   ]
 }
