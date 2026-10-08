@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-08T19:41:58+09:00",
+  "generatedAt": "2026-10-08T20:29:51+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -992,7 +992,9 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/01_held-paper-tag-on-shadow-wall_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "displayOrder": 1,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-02",
@@ -1008,7 +1010,9 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/02_large-tote-bag-on-shoulder_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "displayOrder": 2,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-03",
@@ -1024,7 +1028,9 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/03_phone-screen-on-ribbed-glass_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "displayOrder": 3,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-04",
@@ -1040,7 +1046,9 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/04_white-bucket-hat-on-stand_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "displayOrder": 4,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-05",
@@ -1056,7 +1064,9 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/05_tote-bag-on-chair-outdoor_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "displayOrder": 5,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-06",
@@ -1072,138 +1082,31 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/06_white-tshirt-on-black-fence_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "displayOrder": 6,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration revision; original mockup + source graphic + prior composite references; full-surface application, no small marks or solid-only treatments",
-      "resynthesizedAt": "2026-10-06T14:08:50+09:00"
-    },
-    {
-      "id": "outdoor-mockup-example-b-02",
-      "tabId": "outdoor-mockup-2",
-      "title": "Outdoor Mockup B-2",
-      "created": "2026-10-08",
-      "status": "kling_image_to_image_hq_natural_revision",
-      "sourceGraphic": "Midjourney 23 — Coral Black Stripe Block Surface",
-      "description": "Outdoor Mockup B의 두 번째 합성 세트입니다. Midjourney 23 Coral Black Stripe Block Surface를 B 목업 6개에 full-surface 방식으로 적용했습니다.",
-      "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
-      "mockupCollectionId": "outdoor-mockup-assets-2",
-      "items": [
-        {
-          "id": "outdoor-mockup-example-b-02-01",
-          "title": "Outdoor Mockup B-2-1",
-          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 Held Paper Tag On Shadow Wall에 full-surface로 자연 합성한 Outdoor Mockup B-2 세트입니다. held paper tag full-surface printed material; original mockup shadows, folds, material cues preserved.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/01_outdoor-mockup-b-2-1_midjourney-23_kling_hq.png",
-          "assetHash": "097018934d374a8462254d2e024a7ee130d0846542cbe58407f96e98d3764ccc",
-          "width": 2496,
-          "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/01_outdoor-mockup-b-2-1_midjourney-23_kling_hq.png",
-          "downloadLabel": "목업 합성본 PNG 다운로드",
-          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
-          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/01_held-paper-tag-on-shadow-wall_outdoor_mockup.jpg",
-          "mockupCollectionId": "outdoor-mockup-assets-2",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T16:52:51+09:00"
-        },
-        {
-          "id": "outdoor-mockup-example-b-02-02",
-          "title": "Outdoor Mockup B-2-2",
-          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 Large Tote Bag On Shoulder에 full-surface로 자연 합성한 Outdoor Mockup B-2 세트입니다. large shoulder tote full-surface fabric print; original mockup shadows, folds, material cues preserved.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/02_outdoor-mockup-b-2-2_midjourney-23_kling_hq.png",
-          "assetHash": "d090f78bdb79e4b2eed0764907b82aaad40a8e3bc01ad523d509ecf0065c2671",
-          "width": 2496,
-          "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/02_outdoor-mockup-b-2-2_midjourney-23_kling_hq.png",
-          "downloadLabel": "목업 합성본 PNG 다운로드",
-          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
-          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/02_large-tote-bag-on-shoulder_outdoor_mockup.jpg",
-          "mockupCollectionId": "outdoor-mockup-assets-2",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T16:52:51+09:00"
-        },
-        {
-          "id": "outdoor-mockup-example-b-02-03",
-          "title": "Outdoor Mockup B-2-3",
-          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 Phone Screen On Ribbed Glass에 full-surface로 자연 합성한 Outdoor Mockup B-2 세트입니다. phone screen full-frame graphic surface; original mockup shadows, folds, material cues preserved.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/03_outdoor-mockup-b-2-3_midjourney-23_kling_hq.png",
-          "assetHash": "abffc1005f14a835f60e80767084bb9142bfe83dba4d3446a4c8475a68a3150a",
-          "width": 2496,
-          "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/03_outdoor-mockup-b-2-3_midjourney-23_kling_hq.png",
-          "downloadLabel": "목업 합성본 PNG 다운로드",
-          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
-          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/03_phone-screen-on-ribbed-glass_outdoor_mockup.jpg",
-          "mockupCollectionId": "outdoor-mockup-assets-2",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T16:52:51+09:00"
-        },
-        {
-          "id": "outdoor-mockup-example-b-02-04",
-          "title": "Outdoor Mockup B-2-4",
-          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 White Bucket Hat On Stand에 Kling으로 재합성한 B-2-4입니다. 기존보다 큰 color field를 우선하고 stripe를 edge accent로 줄이려는 방향의 자연 합성 revision입니다.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/04_outdoor-mockup-b-2-4_rev04_large-front-fields-edge-stripe_midjourney-23_kling_hq.png",
-          "assetHash": "853655c6794e8f79d8005213d2a3a238a48663421317bfeff74c6284e95a7b45",
-          "width": 2496,
-          "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/04_outdoor-mockup-b-2-4_rev04_large-front-fields-edge-stripe_midjourney-23_kling_hq.png",
-          "downloadLabel": "목업 합성본 PNG 다운로드",
-          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
-          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/04_white-bucket-hat-on-stand_outdoor_mockup.jpg",
-          "mockupCollectionId": "outdoor-mockup-assets-2",
-          "applicationMode": "kling_hat_large_front_fields_edge_stripe_revision",
-          "updatedAt": "2026-10-08T17:18:00+09:00"
-        },
-        {
-          "id": "outdoor-mockup-example-b-02-05",
-          "title": "Outdoor Mockup B-2-5",
-          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 Tote Bag On Chair Outdoor에 full-surface로 자연 합성한 Outdoor Mockup B-2 세트입니다. chair tote large fabric surface print; original mockup shadows, folds, material cues preserved.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/05_outdoor-mockup-b-2-5_midjourney-23_kling_hq.png",
-          "assetHash": "f7cdec3a97a02003ce94bf09c1e40dfaa460c33c4c4b549d83106309e971b785",
-          "width": 2496,
-          "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/05_outdoor-mockup-b-2-5_midjourney-23_kling_hq.png",
-          "downloadLabel": "목업 합성본 PNG 다운로드",
-          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
-          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/05_tote-bag-on-chair-outdoor_outdoor_mockup.jpg",
-          "mockupCollectionId": "outdoor-mockup-assets-2",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T16:52:51+09:00"
-        },
-        {
-          "id": "outdoor-mockup-example-b-02-06",
-          "title": "Outdoor Mockup B-2-6",
-          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 White T-Shirt On Black Fence에 full-surface로 자연 합성한 Outdoor Mockup B-2 세트입니다. t-shirt textile print integrated with folds and fence shadows; original mockup shadows, folds, material cues preserved.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/06_outdoor-mockup-b-2-6_midjourney-23_kling_hq.png",
-          "assetHash": "241003c7c32468fdeb43e8e46856c67d9ee63f66a2eb59870582b13f08c18dcf",
-          "width": 2496,
-          "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/06_outdoor-mockup-b-2-6_midjourney-23_kling_hq.png",
-          "downloadLabel": "목업 합성본 PNG 다운로드",
-          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
-          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/06_white-tshirt-on-black-fence_outdoor_mockup.jpg",
-          "mockupCollectionId": "outdoor-mockup-assets-2",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T16:52:51+09:00"
-        }
-      ],
-      "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup B assets + rough direction + selected Midjourney source graphic; full-surface application",
-      "resynthesizedAt": "2026-10-08T17:18:00+09:00"
+      "resynthesizedAt": "2026-10-06T14:08:50+09:00",
+      "displayOrder": 1,
+      "renumberedAt": "2026-10-08T20:29:51+09:00"
     },
     {
       "id": "outdoor-mockup-example-b-03",
       "tabId": "outdoor-mockup-2",
-      "title": "Outdoor Mockup B-3",
+      "title": "Outdoor Mockup B-2",
       "created": "2026-10-08",
       "status": "kling_image_to_image_hq_natural_revision",
       "sourceGraphic": "Midjourney 22 — Woven Modular Block Grid",
-      "description": "Outdoor Mockup B의 세 번째 합성 세트입니다. Midjourney 22 Woven Modular Block Grid를 B 목업 6개에 full-surface 방식으로 적용했습니다.",
+      "description": "Outdoor Mockup B의 두 번째 합성 세트입니다. Midjourney 22 Woven Modular Block Grid를 B 목업 6개에 full-surface 방식으로 적용했습니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/22_22_woven_modular_block_grid_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-2",
       "items": [
         {
           "id": "outdoor-mockup-example-b-03-01",
-          "title": "Outdoor Mockup B-3-1",
-          "description": "Midjourney 22 — Woven Modular Block Grid를 Held Paper Tag On Shadow Wall에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다. held paper tag full-surface printed material; original mockup shadows, folds, material cues preserved.",
+          "title": "Outdoor Mockup B-2-1",
+          "description": "Midjourney 22 — Woven Modular Block Grid를 Held Paper Tag On Shadow Wall에 full-surface로 자연 합성한 Outdoor Mockup B-2 세트입니다. held paper tag full-surface printed material; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/01_outdoor-mockup-b-3-1_midjourney-22_kling_hq.png",
           "assetHash": "65aa88725ad5136ed959848cc4748343e3998662619ca342c892b3c613653ab1",
           "width": 2496,
@@ -1214,12 +1117,14 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/01_held-paper-tag-on-shadow-wall_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T16:52:51+09:00"
+          "updatedAt": "2026-10-08T16:52:51+09:00",
+          "displayOrder": 1,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-03-02",
-          "title": "Outdoor Mockup B-3-2",
-          "description": "Midjourney 22 — Woven Modular Block Grid를 Large Tote Bag On Shoulder에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다. large shoulder tote full-surface fabric print; original mockup shadows, folds, material cues preserved.",
+          "title": "Outdoor Mockup B-2-2",
+          "description": "Midjourney 22 — Woven Modular Block Grid를 Large Tote Bag On Shoulder에 full-surface로 자연 합성한 Outdoor Mockup B-2 세트입니다. large shoulder tote full-surface fabric print; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/02_outdoor-mockup-b-3-2_midjourney-22_kling_hq.png",
           "assetHash": "88ee2ea9fc06670bb5505d008c55c4c57b3767a17d82a8b7a1aef635c5507f65",
           "width": 2496,
@@ -1230,12 +1135,14 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/02_large-tote-bag-on-shoulder_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T16:52:51+09:00"
+          "updatedAt": "2026-10-08T16:52:51+09:00",
+          "displayOrder": 2,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-03-03",
-          "title": "Outdoor Mockup B-3-3",
-          "description": "Midjourney 22 — Woven Modular Block Grid를 Phone Screen On Ribbed Glass에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다. phone screen full-frame graphic surface; original mockup shadows, folds, material cues preserved.",
+          "title": "Outdoor Mockup B-2-3",
+          "description": "Midjourney 22 — Woven Modular Block Grid를 Phone Screen On Ribbed Glass에 full-surface로 자연 합성한 Outdoor Mockup B-2 세트입니다. phone screen full-frame graphic surface; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/03_outdoor-mockup-b-3-3_midjourney-22_kling_hq.png",
           "assetHash": "9c87801b22f459dc2d513e21f514195df3cfa28f483dfcd267cdd823ff306c72",
           "width": 2496,
@@ -1246,11 +1153,13 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/03_phone-screen-on-ribbed-glass_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T16:52:51+09:00"
+          "updatedAt": "2026-10-08T16:52:51+09:00",
+          "displayOrder": 3,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-03-04",
-          "title": "Outdoor Mockup B-3-4",
+          "title": "Outdoor Mockup B-2-4",
           "description": "Midjourney 22 — Woven Modular Block Grid를 White Bucket Hat On Stand에 Kling으로 재합성한 B-3-4입니다. 패턴 스케일을 키우고 작은 체크 밀도를 줄여 더 차분하고 큰 블록의 woven textile 느낌으로 수정했습니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/04_outdoor-mockup-b-3-4_rev02_large-scale-pattern_midjourney-22_kling_hq.png",
           "assetHash": "724cb007bc77d7c9a3a56ed77f1078c672bd28818dcdebf8eb5718a8dabc2dde",
@@ -1262,12 +1171,14 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/04_white-bucket-hat-on-stand_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hat_large_scale_pattern_revision",
-          "updatedAt": "2026-10-08T17:12:05+09:00"
+          "updatedAt": "2026-10-08T17:12:05+09:00",
+          "displayOrder": 4,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-03-05",
-          "title": "Outdoor Mockup B-3-5",
-          "description": "Midjourney 22 — Woven Modular Block Grid를 Tote Bag On Chair Outdoor에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다. chair tote large fabric surface print; original mockup shadows, folds, material cues preserved.",
+          "title": "Outdoor Mockup B-2-5",
+          "description": "Midjourney 22 — Woven Modular Block Grid를 Tote Bag On Chair Outdoor에 full-surface로 자연 합성한 Outdoor Mockup B-2 세트입니다. chair tote large fabric surface print; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/05_outdoor-mockup-b-3-5_midjourney-22_kling_hq.png",
           "assetHash": "7e884c9a1cc632695a3be56da6a4608881c89525d914e546098e5628704c42df",
           "width": 2496,
@@ -1278,11 +1189,13 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/05_tote-bag-on-chair-outdoor_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T16:52:51+09:00"
+          "updatedAt": "2026-10-08T16:52:51+09:00",
+          "displayOrder": 5,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-03-06",
-          "title": "Outdoor Mockup B-3-6",
+          "title": "Outdoor Mockup B-2-6",
           "description": "Midjourney 22 — Woven Modular Block Grid를 White T-Shirt On Black Fence에 Kling으로 재합성한 B-3-6입니다. 기존보다 패턴 스케일을 키우고 더 넓직한 woven modular block으로 적용해 오밀조밀한 느낌을 줄였습니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/06_outdoor-mockup-b-3-6_rev02_large-scale-pattern_midjourney-22_kling_hq.png",
           "assetHash": "7a7ab503e831ab392a67a41c825d23843359be6383540d79cf5b760a2ec3ba6d",
@@ -1294,27 +1207,31 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/06_white-tshirt-on-black-fence_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_tshirt_large_scale_pattern_revision",
-          "updatedAt": "2026-10-08T17:29:17+09:00"
+          "updatedAt": "2026-10-08T17:29:17+09:00",
+          "displayOrder": 6,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup B assets + rough direction + selected Midjourney source graphic; full-surface application",
-      "resynthesizedAt": "2026-10-08T17:29:17+09:00"
+      "resynthesizedAt": "2026-10-08T17:29:17+09:00",
+      "displayOrder": 2,
+      "renumberedAt": "2026-10-08T20:29:51+09:00"
     },
     {
       "id": "outdoor-mockup-example-b-04",
       "tabId": "outdoor-mockup-2",
-      "title": "Outdoor Mockup B-4",
+      "title": "Outdoor Mockup B-3",
       "created": "2026-10-08",
       "status": "kling_image_to_image_hq_corrected_revision",
       "sourceGraphic": "Midjourney 30 — Warm Horizon Brush Field",
-      "description": "Outdoor Mockup B의 네 번째 합성 세트입니다. Midjourney 30 Warm Horizon Brush Field를 B 목업 6개에 적용했습니다.",
+      "description": "Outdoor Mockup B의 세 번째 합성 세트입니다. Midjourney 30 Warm Horizon Brush Field를 B 목업 6개에 적용했습니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/30_30_warm_horizon_brush_field_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-2",
       "items": [
         {
           "id": "outdoor-mockup-example-b-04-01",
-          "title": "Outdoor Mockup B-4-1",
-          "description": "Midjourney 30 — Warm Horizon Brush Field를 Held Paper Tag On Shadow Wall에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "title": "Outdoor Mockup B-3-1",
+          "description": "Midjourney 30 — Warm Horizon Brush Field를 Held Paper Tag On Shadow Wall에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/01_outdoor-mockup-b-4-1_midjourney-30_kling_hq.png",
           "assetHash": "de5aec3f8838268119728f7c45e693c84a5aa6908e57276ae8a20acc2fecc8b5",
           "width": 2496,
@@ -1325,12 +1242,14 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/01_held-paper-tag-on-shadow-wall_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T18:50:40+09:00"
+          "updatedAt": "2026-10-08T18:50:40+09:00",
+          "displayOrder": 1,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-04-02",
-          "title": "Outdoor Mockup B-4-2",
-          "description": "Midjourney 30 — Warm Horizon Brush Field를 Large Tote Bag On Shoulder에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "title": "Outdoor Mockup B-3-2",
+          "description": "Midjourney 30 — Warm Horizon Brush Field를 Large Tote Bag On Shoulder에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/02_outdoor-mockup-b-4-2_midjourney-30_kling_hq.png",
           "assetHash": "0f52faa1317531ae546775011432e340361814b73fac8a0f395ee126f8c7181d",
           "width": 2496,
@@ -1341,12 +1260,14 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/02_large-tote-bag-on-shoulder_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T18:50:40+09:00"
+          "updatedAt": "2026-10-08T18:50:40+09:00",
+          "displayOrder": 2,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-04-03",
-          "title": "Outdoor Mockup B-4-3",
-          "description": "Midjourney 30 — Warm Horizon Brush Field를 Phone Screen On Ribbed Glass에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "title": "Outdoor Mockup B-3-3",
+          "description": "Midjourney 30 — Warm Horizon Brush Field를 Phone Screen On Ribbed Glass에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/03_outdoor-mockup-b-4-3_midjourney-30_kling_hq.png",
           "assetHash": "97082460d55b9138a9d7e3ecfa97479cb67ce040f28a330fc94a89f137166466",
           "width": 2496,
@@ -1357,12 +1278,14 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/03_phone-screen-on-ribbed-glass_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T18:50:40+09:00"
+          "updatedAt": "2026-10-08T18:50:40+09:00",
+          "displayOrder": 3,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-04-04",
-          "title": "Outdoor Mockup B-4-4",
-          "description": "Midjourney 30 — Warm Horizon Brush Field를 White Bucket Hat On Stand에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "title": "Outdoor Mockup B-3-4",
+          "description": "Midjourney 30 — Warm Horizon Brush Field를 White Bucket Hat On Stand에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/04_outdoor-mockup-b-4-4_large-scale-apparel_midjourney-30_kling_hq.png",
           "assetHash": "eadd033b1b87f6037f47491f4eab2e3f677bfd747b9220fa7b30278ddfba9158",
           "width": 2496,
@@ -1373,12 +1296,14 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/04_white-bucket-hat-on-stand_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_large_scale_apparel_pattern",
-          "updatedAt": "2026-10-08T18:50:40+09:00"
+          "updatedAt": "2026-10-08T18:50:40+09:00",
+          "displayOrder": 4,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-04-05",
-          "title": "Outdoor Mockup B-4-5",
-          "description": "Midjourney 30 — Warm Horizon Brush Field를 Tote Bag On Chair Outdoor에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다; original mockup shadows, folds, material cues preserved. Rev02는 때묻은 느낌을 줄이고 깨끗한 토트백 패브릭 프린트로 자연스럽게 재합성한 버전입니다.",
+          "title": "Outdoor Mockup B-3-5",
+          "description": "Midjourney 30 — Warm Horizon Brush Field를 Tote Bag On Chair Outdoor에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다; original mockup shadows, folds, material cues preserved. Rev02는 때묻은 느낌을 줄이고 깨끗한 토트백 패브릭 프린트로 자연스럽게 재합성한 버전입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/05_outdoor-mockup-b-4-5_rev02_clean-natural-tote_midjourney-30_kling_hq.png",
           "assetHash": "9e746882a14e23f7dfbd9c11698ff166827eb5fe026601ffa7c4919acbd00fc1",
           "width": 2496,
@@ -1389,12 +1314,14 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/05_tote-bag-on-chair-outdoor_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_clean_natural_tote_textile_print",
-          "updatedAt": "2026-10-08T19:41:58+09:00"
+          "updatedAt": "2026-10-08T19:41:58+09:00",
+          "displayOrder": 5,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-04-06",
-          "title": "Outdoor Mockup B-4-6",
-          "description": "Midjourney 30 — Warm Horizon Brush Field를 White T-Shirt On Black Fence에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "title": "Outdoor Mockup B-3-6",
+          "description": "Midjourney 30 — Warm Horizon Brush Field를 White T-Shirt On Black Fence에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/06_outdoor-mockup-b-4-6_large-scale-apparel_midjourney-30_kling_hq.png",
           "assetHash": "b5a497513c384bef3f628f9e21d61acb19e46e55ede957cff46cd3034ab6ac82",
           "width": 2496,
@@ -1405,11 +1332,140 @@
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/06_white-tshirt-on-black-fence_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
           "applicationMode": "kling_large_scale_apparel_pattern",
-          "updatedAt": "2026-10-08T18:50:40+09:00"
+          "updatedAt": "2026-10-08T18:50:40+09:00",
+          "displayOrder": 6,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original mockups + source Midjourney 4K motif + rough direction image",
-      "resynthesizedAt": "2026-10-08T19:41:58+09:00"
+      "resynthesizedAt": "2026-10-08T19:41:58+09:00",
+      "displayOrder": 3,
+      "renumberedAt": "2026-10-08T20:29:51+09:00"
+    },
+    {
+      "id": "outdoor-mockup-example-b-02",
+      "tabId": "outdoor-mockup-2",
+      "title": "Outdoor Mockup B-4",
+      "created": "2026-10-08",
+      "status": "kling_image_to_image_hq_natural_revision",
+      "sourceGraphic": "Midjourney 23 — Coral Black Stripe Block Surface",
+      "description": "Outdoor Mockup B의 네 번째 합성 세트입니다. Midjourney 23 Coral Black Stripe Block Surface를 B 목업 6개에 full-surface 방식으로 적용했습니다.",
+      "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
+      "mockupCollectionId": "outdoor-mockup-assets-2",
+      "items": [
+        {
+          "id": "outdoor-mockup-example-b-02-01",
+          "title": "Outdoor Mockup B-4-1",
+          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 Held Paper Tag On Shadow Wall에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다. held paper tag full-surface printed material; original mockup shadows, folds, material cues preserved.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/01_outdoor-mockup-b-2-1_midjourney-23_kling_hq.png",
+          "assetHash": "097018934d374a8462254d2e024a7ee130d0846542cbe58407f96e98d3764ccc",
+          "width": 2496,
+          "height": 1664,
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/01_outdoor-mockup-b-2-1_midjourney-23_kling_hq.png",
+          "downloadLabel": "목업 합성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/01_held-paper-tag-on-shadow-wall_outdoor_mockup.jpg",
+          "mockupCollectionId": "outdoor-mockup-assets-2",
+          "applicationMode": "kling_hq_full_surface_natural",
+          "updatedAt": "2026-10-08T16:52:51+09:00",
+          "displayOrder": 1,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
+        },
+        {
+          "id": "outdoor-mockup-example-b-02-02",
+          "title": "Outdoor Mockup B-4-2",
+          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 Large Tote Bag On Shoulder에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다. large shoulder tote full-surface fabric print; original mockup shadows, folds, material cues preserved.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/02_outdoor-mockup-b-2-2_midjourney-23_kling_hq.png",
+          "assetHash": "d090f78bdb79e4b2eed0764907b82aaad40a8e3bc01ad523d509ecf0065c2671",
+          "width": 2496,
+          "height": 1664,
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/02_outdoor-mockup-b-2-2_midjourney-23_kling_hq.png",
+          "downloadLabel": "목업 합성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/02_large-tote-bag-on-shoulder_outdoor_mockup.jpg",
+          "mockupCollectionId": "outdoor-mockup-assets-2",
+          "applicationMode": "kling_hq_full_surface_natural",
+          "updatedAt": "2026-10-08T16:52:51+09:00",
+          "displayOrder": 2,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
+        },
+        {
+          "id": "outdoor-mockup-example-b-02-03",
+          "title": "Outdoor Mockup B-4-3",
+          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 Phone Screen On Ribbed Glass에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다. phone screen full-frame graphic surface; original mockup shadows, folds, material cues preserved.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/03_outdoor-mockup-b-2-3_midjourney-23_kling_hq.png",
+          "assetHash": "abffc1005f14a835f60e80767084bb9142bfe83dba4d3446a4c8475a68a3150a",
+          "width": 2496,
+          "height": 1664,
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/03_outdoor-mockup-b-2-3_midjourney-23_kling_hq.png",
+          "downloadLabel": "목업 합성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/03_phone-screen-on-ribbed-glass_outdoor_mockup.jpg",
+          "mockupCollectionId": "outdoor-mockup-assets-2",
+          "applicationMode": "kling_hq_full_surface_natural",
+          "updatedAt": "2026-10-08T16:52:51+09:00",
+          "displayOrder": 3,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
+        },
+        {
+          "id": "outdoor-mockup-example-b-02-04",
+          "title": "Outdoor Mockup B-4-4",
+          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 White Bucket Hat On Stand에 Kling으로 재합성한 B-2-4입니다. 기존보다 큰 color field를 우선하고 stripe를 edge accent로 줄이려는 방향의 자연 합성 revision입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/04_outdoor-mockup-b-2-4_rev04_large-front-fields-edge-stripe_midjourney-23_kling_hq.png",
+          "assetHash": "853655c6794e8f79d8005213d2a3a238a48663421317bfeff74c6284e95a7b45",
+          "width": 2496,
+          "height": 1664,
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/04_outdoor-mockup-b-2-4_rev04_large-front-fields-edge-stripe_midjourney-23_kling_hq.png",
+          "downloadLabel": "목업 합성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/04_white-bucket-hat-on-stand_outdoor_mockup.jpg",
+          "mockupCollectionId": "outdoor-mockup-assets-2",
+          "applicationMode": "kling_hat_large_front_fields_edge_stripe_revision",
+          "updatedAt": "2026-10-08T17:18:00+09:00",
+          "displayOrder": 4,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
+        },
+        {
+          "id": "outdoor-mockup-example-b-02-05",
+          "title": "Outdoor Mockup B-4-5",
+          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 Tote Bag On Chair Outdoor에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다. chair tote large fabric surface print; original mockup shadows, folds, material cues preserved.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/05_outdoor-mockup-b-2-5_midjourney-23_kling_hq.png",
+          "assetHash": "f7cdec3a97a02003ce94bf09c1e40dfaa460c33c4c4b549d83106309e971b785",
+          "width": 2496,
+          "height": 1664,
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/05_outdoor-mockup-b-2-5_midjourney-23_kling_hq.png",
+          "downloadLabel": "목업 합성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/05_tote-bag-on-chair-outdoor_outdoor_mockup.jpg",
+          "mockupCollectionId": "outdoor-mockup-assets-2",
+          "applicationMode": "kling_hq_full_surface_natural",
+          "updatedAt": "2026-10-08T16:52:51+09:00",
+          "displayOrder": 5,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
+        },
+        {
+          "id": "outdoor-mockup-example-b-02-06",
+          "title": "Outdoor Mockup B-4-6",
+          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 White T-Shirt On Black Fence에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다. t-shirt textile print integrated with folds and fence shadows; original mockup shadows, folds, material cues preserved.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/06_outdoor-mockup-b-2-6_midjourney-23_kling_hq.png",
+          "assetHash": "241003c7c32468fdeb43e8e46856c67d9ee63f66a2eb59870582b13f08c18dcf",
+          "width": 2496,
+          "height": 1664,
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/06_outdoor-mockup-b-2-6_midjourney-23_kling_hq.png",
+          "downloadLabel": "목업 합성본 PNG 다운로드",
+          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
+          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/06_white-tshirt-on-black-fence_outdoor_mockup.jpg",
+          "mockupCollectionId": "outdoor-mockup-assets-2",
+          "applicationMode": "kling_hq_full_surface_natural",
+          "updatedAt": "2026-10-08T16:52:51+09:00",
+          "displayOrder": 6,
+          "renumberedAt": "2026-10-08T20:29:51+09:00"
+        }
+      ],
+      "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup B assets + rough direction + selected Midjourney source graphic; full-surface application",
+      "resynthesizedAt": "2026-10-08T17:18:00+09:00",
+      "displayOrder": 4,
+      "renumberedAt": "2026-10-08T20:29:51+09:00"
     }
   ]
 }
