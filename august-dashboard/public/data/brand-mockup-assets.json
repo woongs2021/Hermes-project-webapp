@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-08T17:18:00+09:00",
+  "generatedAt": "2026-10-08T17:29:17+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -1172,22 +1172,22 @@
         {
           "id": "outdoor-mockup-example-b-03-06",
           "title": "Outdoor Mockup B-3-6",
-          "description": "Midjourney 22 — Woven Modular Block Grid를 White T-Shirt On Black Fence에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다. t-shirt textile print integrated with folds and fence shadows; original mockup shadows, folds, material cues preserved.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/06_outdoor-mockup-b-3-6_midjourney-22_kling_hq.png",
-          "assetHash": "2685b0a1cc9f0447d1d519ccdaa16742d75fed4f368aeae656c0c9de95a5bd15",
+          "description": "Midjourney 22 — Woven Modular Block Grid를 White T-Shirt On Black Fence에 Kling으로 재합성한 B-3-6입니다. 기존보다 패턴 스케일을 키우고 더 넓직한 woven modular block으로 적용해 오밀조밀한 느낌을 줄였습니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/06_outdoor-mockup-b-3-6_rev02_large-scale-pattern_midjourney-22_kling_hq.png",
+          "assetHash": "7a7ab503e831ab392a67a41c825d23843359be6383540d79cf5b760a2ec3ba6d",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/06_outdoor-mockup-b-3-6_midjourney-22_kling_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/06_outdoor-mockup-b-3-6_rev02_large-scale-pattern_midjourney-22_kling_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/22_22_woven_modular_block_grid_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/06_white-tshirt-on-black-fence_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-2",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-08T16:52:51+09:00"
+          "applicationMode": "kling_tshirt_large_scale_pattern_revision",
+          "updatedAt": "2026-10-08T17:29:17+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup B assets + rough direction + selected Midjourney source graphic; full-surface application",
-      "resynthesizedAt": "2026-10-08T17:12:05+09:00"
+      "resynthesizedAt": "2026-10-08T17:29:17+09:00"
     }
   ]
 }
