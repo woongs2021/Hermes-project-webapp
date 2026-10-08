@@ -2412,12 +2412,12 @@ function DesignDnaPanel() {
     },
     {
       id: 'outdoor-mockup-1',
-      title: 'Outdoor Mockup 1',
+      title: 'Outdoor Mockup A',
       examples: allBrandAssetExamples.filter((example) => example.tabId === 'outdoor-mockup-1'),
     },
     {
       id: 'outdoor-mockup-2',
-      title: 'Outdoor Mockup 2',
+      title: 'Outdoor Mockup B',
       examples: allBrandAssetExamples.filter((example) => example.tabId === 'outdoor-mockup-2'),
     },
   ]
