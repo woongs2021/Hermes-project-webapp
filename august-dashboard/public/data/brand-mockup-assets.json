@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-08T11:14:41+09:00",
+  "generatedAt": "2026-10-08T11:44:07+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -712,18 +712,18 @@
         {
           "id": "outdoor-mockup-example-a-02-05",
           "title": "Outdoor Mockup A-2-5",
-          "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 White Board Set With Pebble Background에 full-surface로 자연 합성한 A-2 세트입니다. 오른쪽 보드는 별도 crop 그래픽으로 교체해 여러 책자가 하나의 연속 그래픽처럼 보이지 않도록 수정했습니다; original mockup shadows, material cues preserved.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/05_outdoor-mockup-a-2-5_rev04_right-board-distinct-crop_midjourney-28_hq.png",
-          "assetHash": "0dffce22681ecc0f11d14745a0cc00502bb616d931d1b2f219db6e25fba03c32",
+          "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 White Board Set With Pebble Background에 Kling으로 새로 재합성한 A-2-5입니다. A-1-5처럼 두 책자/보드의 물리적 단차와 세로 seam을 유지하고, 한쪽은 기존 방향의 blue crop, 다른 한쪽은 별도 crop으로 적용해 하나의 연속 그래픽처럼 보이지 않도록 했습니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/05_outdoor-mockup-a-2-5_rev05_two-distinct-board-crops_midjourney-28_kling_hq.png",
+          "assetHash": "9b003cfa0b128ee8ee60142d03b35ba3811db1c4f6abcb0abafc319aab322fca",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/05_outdoor-mockup-a-2-5_rev04_right-board-distinct-crop_midjourney-28_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/05_outdoor-mockup-a-2-5_rev05_two-distinct-board-crops_midjourney-28_kling_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/28_28_electric_blue_pinch_fold_field_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/05_white-board-set-with-pebble-background_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "right_board_distinct_crop_revision",
-          "updatedAt": "2026-10-08T11:14:41+09:00"
+          "applicationMode": "kling_regenerated_two_distinct_board_crops",
+          "updatedAt": "2026-10-08T11:44:07+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-02-06",
@@ -743,7 +743,7 @@
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original mockup + rough direction + Midjourney 28 source graphic; full-surface application",
-      "resynthesizedAt": "2026-10-08T11:14:41+09:00"
+      "resynthesizedAt": "2026-10-08T11:44:07+09:00"
     },
     {
       "id": "outdoor-mockup-example-02",
