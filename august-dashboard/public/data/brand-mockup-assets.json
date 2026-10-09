@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T20:28:34+09:00",
+  "generatedAt": "2026-10-10T00:26:33+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -903,27 +903,27 @@
       "tabId": "outdoor-mockup-1",
       "title": "Outdoor Mockup A-4",
       "created": "2026-10-09",
-      "status": "kling_image_to_image_hq_replacement",
+      "status": "kling_local_corrected_full_surface_revision",
       "sourceGraphic": "Midjourney 34 — Torn Cobalt Black Paper Edge",
-      "description": "Outdoor Mockup A의 네 번째 합성 세트입니다. 기존 Midjourney 31 세트를 live manifest에서 제거하고, Midjourney 34 Torn Cobalt Black Paper Edge를 A 목업 6개에 full-surface 방식으로 적용했습니다. A-4-5는 두 책자/보드와 작은 명함의 물리적 분리감과 full-bleed 인쇄감을 함께 유지합니다.",
+      "description": "Outdoor Mockup A-4는 Midjourney 34 Torn Cobalt Black Paper Edge를 적용한 세트입니다. A-4-1은 top stack까지, A-4-5는 lower band/card 영역까지 더 채워 보이도록 교정했습니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/34_34_torn_cobalt_black_paper_edge_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-1",
       "items": [
         {
           "id": "outdoor-mockup-example-a-11-01",
           "title": "Outdoor Mockup A-4-1",
-          "description": "Midjourney 34 — Torn Cobalt Black Paper Edge를 Outdoor Paper Stack On Concrete에 full-surface로 자연 합성한 Outdoor Mockup A-4-1입니다. 코발트 블루와 블랙 torn paper edge 소재를 목업 표면에 물리적으로 인쇄된 듯 적용했습니다.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/01_outdoor-mockup-a-4-1_midjourney-34_kling_hq.png",
-          "assetHash": "8fe65503d0b1c01f01203cfa3653f613cb14a33c9405b1b690d5c6841470df85",
+          "description": "Midjourney 34 — Torn Cobalt Black Paper Edge를 적용한 A-4-1 교정본입니다. 이전 버전에서 흰 카드 스택으로 남아 보이던 상단 printable surface까지 같은 MJ34 계열로 채워 full-surface 인상을 강화했습니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/01_outdoor-mockup-a-4-1_rev03_full-surface-top-stack_midjourney-34_kling_hq.png",
+          "assetHash": "acdbd2ba49a376647c258773c6d07a2af6879266870fe7e4ab2e0ca880233665",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/01_outdoor-mockup-a-4-1_midjourney-34_kling_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/01_outdoor-mockup-a-4-1_rev03_full-surface-top-stack_midjourney-34_kling_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/34_34_torn_cobalt_black_paper_edge_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/01_paper-stacks-on-concrete_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-09T20:28:34+09:00",
+          "applicationMode": "kling_local_corrected_full_surface_midjourney_34",
+          "updatedAt": "2026-10-10T00:26:33+09:00",
           "displayOrder": 1
         },
         {
@@ -980,18 +980,18 @@
         {
           "id": "outdoor-mockup-example-a-11-05",
           "title": "Outdoor Mockup A-4-5",
-          "description": "Midjourney 34 — Torn Cobalt Black Paper Edge를 White Board Set With Pebble Background에 재합성한 Outdoor Mockup A-4-5입니다. 두 책자/보드와 좌측 하단 작은 명함이 서로 다른 crop의 같은 Midjourney 34 그래픽을 사용하며, seam/step/물리적 분리감과 edge-to-edge printed surface 느낌을 함께 유지했습니다.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/05_outdoor-mockup-a-4-5_full-bleed-card-booklets-separated_midjourney-34_kling_hq.png",
-          "assetHash": "a5bca214ea7cd180944e72b18d89b8b7ef2627737d29ec35626f4c3d5f0c2a1a",
+          "description": "Midjourney 34 — Torn Cobalt Black Paper Edge를 적용한 A-4-5 교정본입니다. 이전 버전에서 하단 white band와 작은 카드 하단이 덜 채워져 보이던 부분을 줄여 full-bleed surface로 보이도록 보정했습니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/05_outdoor-mockup-a-4-5_rev04_local-full-lower-band_midjourney-34_kling_hq.png",
+          "assetHash": "0197726feefcafd37cdc255294b6fee7352f5532ee5bc67de619e345baf75b4b",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/05_outdoor-mockup-a-4-5_full-bleed-card-booklets-separated_midjourney-34_kling_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/05_outdoor-mockup-a-4-5_rev04_local-full-lower-band_midjourney-34_kling_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/34_34_torn_cobalt_black_paper_edge_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/05_white-board-set-with-pebble-background_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "kling_regenerated_full_bleed_card_and_booklets_separated",
-          "updatedAt": "2026-10-09T20:28:34+09:00",
+          "applicationMode": "kling_local_corrected_full_surface_midjourney_34",
+          "updatedAt": "2026-10-10T00:26:33+09:00",
           "displayOrder": 5
         },
         {
@@ -1013,7 +1013,7 @@
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup A assets + Midjourney 34 4K motif + rough direction image",
-      "resynthesizedAt": "2026-10-09T20:28:34+09:00",
+      "resynthesizedAt": "2026-10-10T00:26:33+09:00",
       "displayOrder": 4
     },
     {
