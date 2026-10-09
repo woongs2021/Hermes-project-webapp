@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-08T23:23:39+09:00",
+  "generatedAt": "2026-10-09T00:00:00+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -530,7 +530,7 @@
       "created": "2026-10-08",
       "status": "kling_image_to_image_hq_corrected_revision",
       "sourceGraphic": "Midjourney 08 — Soft Circular Ring Translation",
-      "description": "Outdoor Mockup A의 첫 번째 합성 세트입니다. Midjourney 8 Soft Circular Ring Translation을 A 목업 6개에 적용했습니다. A-4-5는 두 책자/보드의 seam과 별도 crop을 유지했습니다.",
+      "description": "Outdoor Mockup A의 첫 번째 합성 세트입니다. Midjourney 8 Soft Circular Ring Translation을 A 목업 6개에 적용했습니다. A-1-5는 두 책자/보드의 seam과 별도 crop을 유지했습니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/08_08_soft_circular_ring_midjourney_translation_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-1",
       "items": [
@@ -550,7 +550,7 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 1,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-04-02",
@@ -568,7 +568,7 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 2,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-04-03",
@@ -586,7 +586,7 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 3,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-04-04",
@@ -604,7 +604,7 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 4,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-04-05",
@@ -622,7 +622,7 @@
           "applicationMode": "kling_regenerated_fully_applied_two_distinct_board_rings",
           "updatedAt": "2026-10-08T19:41:58+09:00",
           "displayOrder": 5,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-04-06",
@@ -640,13 +640,13 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 6,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original mockups + source Midjourney 4K motif + rough direction image",
       "resynthesizedAt": "2026-10-08T19:41:58+09:00",
       "displayOrder": 1,
-      "renumberedAt": "2026-10-08T23:03:01+09:00"
+      "renumberedAt": "2026-10-09T00:00:00+09:00"
     },
     {
       "id": "outdoor-mockup-example-a-08",
@@ -675,7 +675,7 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T22:55:05+09:00",
           "displayOrder": 1,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-08-02",
@@ -693,7 +693,7 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T22:55:05+09:00",
           "displayOrder": 2,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-08-03",
@@ -711,7 +711,7 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T22:55:05+09:00",
           "displayOrder": 3,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-08-04",
@@ -729,7 +729,7 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T22:55:05+09:00",
           "displayOrder": 4,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-08-05",
@@ -747,7 +747,7 @@
           "applicationMode": "local_card_surface_recomposite_mj02_booklets_preserved",
           "updatedAt": "2026-10-09T00:00:00+09:00",
           "displayOrder": 5,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-08-06",
@@ -765,153 +765,28 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T22:55:05+09:00",
           "displayOrder": 6,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup A assets + source Midjourney 4K motif + rough direction image",
       "resynthesizedAt": "2026-10-09T00:00:00+09:00",
       "displayOrder": 2,
-      "renumberedAt": "2026-10-08T23:03:01+09:00"
-    },
-    {
-      "id": "outdoor-mockup-example-01",
-      "tabId": "outdoor-mockup-1",
-      "title": "Outdoor Mockup A-3",
-      "created": "2026-10-05",
-      "status": "kling_image_to_image_hq_natural_revision",
-      "sourceGraphic": "Midjourney 26 — Warm Amber Folded Surface",
-      "description": "Outdoor Mockup A의 세 번째 합성 세트입니다. 기존 버전을 A-1로 정리했습니다.",
-      "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/26_26_warm_amber_folded_surface_manual_midjourney_kling4k.png",
-      "mockupCollectionId": "outdoor-mockup-assets-1",
-      "items": [
-        {
-          "id": "outdoor-mockup-example-01-01",
-          "title": "Outdoor Mockup A-3-1",
-          "description": "Outdoor Mockup Example 1-1: warm no-white revision. Bright white/popping neutral areas were reduced into muted champagne/beige tones while preserving the amber metaphor, shadows, and mockup material.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/01_outdoor-mockup-example-1-1_rev16_warm_no_white_hq.png",
-          "assetHash": "e1ada274da5f62223f0fefa87cef8fb288a9bda63cab850c935d458e4bfbda95",
-          "width": 2496,
-          "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/01_outdoor-mockup-example-1-1_rev16_warm_no_white_hq.png",
-          "downloadLabel": "목업 합성본 PNG 다운로드",
-          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/26_26_warm_amber_folded_surface_manual_midjourney_kling4k.png",
-          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/01_paper-stacks-on-concrete_outdoor_mockup.jpg",
-          "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T16:46:19+09:00",
-          "displayOrder": 1,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
-        },
-        {
-          "id": "outdoor-mockup-example-01-02",
-          "title": "Outdoor Mockup A-3-2",
-          "description": "Outdoor Mockup Example 1-2: warm no-white revision. Bright white/popping neutral areas were reduced into muted champagne/beige tones while preserving the amber metaphor, shadows, and mockup material.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/02_outdoor-mockup-example-1-2_rev16_warm_no_white_hq.png",
-          "assetHash": "5807241ed260241a913630265669368fc8374a7019c999550dcf02c472f039a3",
-          "width": 2496,
-          "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/02_outdoor-mockup-example-1-2_rev16_warm_no_white_hq.png",
-          "downloadLabel": "목업 합성본 PNG 다운로드",
-          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/26_26_warm_amber_folded_surface_manual_midjourney_kling4k.png",
-          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/02_single-card-on-metal-grid_outdoor_mockup.jpg",
-          "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T16:46:19+09:00",
-          "displayOrder": 2,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
-        },
-        {
-          "id": "outdoor-mockup-example-01-03",
-          "title": "Outdoor Mockup A-3-3",
-          "description": "Outdoor Mockup Example 1-3: completely regenerated from the original vertical fabric banner mockup with Kling. Previous problematic fold/transparency direction was discarded; the banner is rebuilt as an opaque calm amber printed fabric surface with a revised metaphor crop.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/03_outdoor-mockup-example-1-3_rev20b_kling_from_scratch_hq.png",
-          "assetHash": "966897f089dd133f874b94325ec669d7e12f551287c1a774efd49701818359b7",
-          "width": 2496,
-          "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/03_outdoor-mockup-example-1-3_rev20b_kling_from_scratch_hq.png",
-          "downloadLabel": "목업 합성본 PNG 다운로드",
-          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/26_26_warm_amber_folded_surface_manual_midjourney_kling4k.png",
-          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/03_vertical-fabric-banner-on-stone-wall_outdoor_mockup.jpg",
-          "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T18:55:17+09:00",
-          "displayOrder": 3,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
-        },
-        {
-          "id": "outdoor-mockup-example-01-04",
-          "title": "Outdoor Mockup A-3-4",
-          "description": "Outdoor Mockup Example 1-4: fresh Kling regeneration from the newly replaced Framed Wall Poster mockup, using the amber folded metaphor directly rather than the previous composite, so the new wall/frame/bollard mockup is clearly visible.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/04_outdoor-mockup-example-1-4_rev16a_kling_new_mockup_fresh_hq.png",
-          "assetHash": "a2c8e0aa4d2576bd1ed0466c4f023bdc25de359398169f70952db3357691149e",
-          "width": 2496,
-          "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/04_outdoor-mockup-example-1-4_rev16a_kling_new_mockup_fresh_hq.png",
-          "downloadLabel": "목업 합성본 PNG 다운로드",
-          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/26_26_warm_amber_folded_surface_manual_midjourney_kling4k.png",
-          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/04_framed-wall-poster-on-stone-facade_outdoor_mockup.jpg",
-          "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-07T00:22:06+09:00",
-          "displayOrder": 4,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
-        },
-        {
-          "id": "outdoor-mockup-example-01-05",
-          "title": "Outdoor Mockup A-3-5",
-          "description": "Kling HQ natural full-surface re-synthesis using Midjourney 26 warm amber folded surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/05_board-set-cropped-warm-surface_rev05_kling_hq.png",
-          "assetHash": "56fd6e7c89653232dbf615b8fa70c81acd10d25524f686dea8d95be4419d899d",
-          "width": 2496,
-          "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/05_board-set-cropped-warm-surface_rev05_kling_hq.png",
-          "downloadLabel": "목업 합성본 PNG 다운로드",
-          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/26_26_warm_amber_folded_surface_manual_midjourney_kling4k.png",
-          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/05_white-board-set-with-pebble-background_outdoor_mockup.jpg",
-          "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T15:16:58+09:00",
-          "displayOrder": 5,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
-        },
-        {
-          "id": "outdoor-mockup-example-01-06",
-          "title": "Outdoor Mockup A-3-6",
-          "description": "Kling HQ natural full-surface re-synthesis using Midjourney 26 warm amber folded surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/06_hanging-sign-full-amber-surface_rev05_kling_hq.png",
-          "assetHash": "0c034e49c9121af1c41765a7e3e5817c8a3784a1be1540bc282cf9ab06ffa9c6",
-          "width": 2496,
-          "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-01/2026-10-05/06_hanging-sign-full-amber-surface_rev05_kling_hq.png",
-          "downloadLabel": "목업 합성본 PNG 다운로드",
-          "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/26_26_warm_amber_folded_surface_manual_midjourney_kling4k.png",
-          "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/06_hanging-outdoor-sign-on-glass-facade_outdoor_mockup.jpg",
-          "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-06T15:16:58+09:00",
-          "displayOrder": 6,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
-        }
-      ],
-      "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration revision; original mockup + source graphic + prior composite references; full-surface application, no small marks or solid-only treatments",
-      "resynthesizedAt": "2026-10-06T14:08:50+09:00",
-      "displayOrder": 3,
-      "renumberedAt": "2026-10-08T23:03:01+09:00"
+      "renumberedAt": "2026-10-09T00:00:00+09:00"
     },
     {
       "id": "outdoor-mockup-example-a-02",
       "tabId": "outdoor-mockup-1",
-      "title": "Outdoor Mockup A-4",
+      "title": "Outdoor Mockup A-3",
       "created": "2026-10-08",
       "status": "kling_image_to_image_hq_natural_revision",
       "sourceGraphic": "Midjourney 28 — Electric Blue Pinch Fold Field",
-      "description": "Outdoor Mockup A의 네 번째 합성 세트입니다. Midjourney 28 Electric Blue Pinch Fold Field를 A 목업 6개에 full-surface 방식으로 적용했습니다.",
+      "description": "Outdoor Mockup A의 세 번째 합성 세트입니다. Midjourney 28 Electric Blue Pinch Fold Field를 A 목업 6개에 full-surface 방식으로 적용했습니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/28_28_electric_blue_pinch_fold_field_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-1",
       "items": [
         {
           "id": "outdoor-mockup-example-a-02-01",
-          "title": "Outdoor Mockup A-4-1",
+          "title": "Outdoor Mockup A-3-1",
           "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 Outdoor Paper Stack On Concrete에 full-surface로 자연 합성한 A-2 세트입니다. paper stack full-surface blue pinch-fold print; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/01_outdoor-mockup-a-2-1_midjourney-28_kling_hq.png",
           "assetHash": "df4080835911cdbb1c0456ffea7b032250919d2e289854da8b4e1d53d4028137",
@@ -925,11 +800,11 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T10:37:34+09:00",
           "displayOrder": 1,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-02-02",
-          "title": "Outdoor Mockup A-4-2",
+          "title": "Outdoor Mockup A-3-2",
           "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 Single Card On Metal Grid에 full-surface로 자연 합성한 A-2 세트입니다. card surface full-surface blue optical print; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/02_outdoor-mockup-a-2-2_midjourney-28_kling_hq.png",
           "assetHash": "a77b34477c70a32e91223026330473dba123335731b323813a4554baf90c1b70",
@@ -943,11 +818,11 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T10:37:34+09:00",
           "displayOrder": 2,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-02-03",
-          "title": "Outdoor Mockup A-4-3",
+          "title": "Outdoor Mockup A-3-3",
           "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 Vertical Fabric Banner On Stone Wall에 full-surface로 자연 합성한 A-2 세트입니다. vertical fabric banner opaque full-surface blue print; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/03_outdoor-mockup-a-2-3_midjourney-28_kling_hq.png",
           "assetHash": "478b11f1975710d53637c7d1ed97031e7aea3bc094ec9e14dd4c771375bcad4f",
@@ -961,11 +836,11 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T10:37:34+09:00",
           "displayOrder": 3,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-02-04",
-          "title": "Outdoor Mockup A-4-4",
+          "title": "Outdoor Mockup A-3-4",
           "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 Framed Wall Poster On Stone Facade에 full-surface로 자연 합성한 A-2 세트입니다. framed wall poster full-panel electric blue surface; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/04_outdoor-mockup-a-2-4_midjourney-28_kling_hq.png",
           "assetHash": "174deafbfe40156001f3f479782a387a05f4b474ffc92b49236a49e5fb2770ee",
@@ -979,12 +854,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T10:37:34+09:00",
           "displayOrder": 4,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-02-05",
-          "title": "Outdoor Mockup A-4-5",
-          "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 White Board Set With Pebble Background에 Kling으로 새로 재합성한 A-2-5입니다. A-1-5처럼 두 책자/보드의 물리적 단차와 세로 seam을 유지하고, 한쪽은 기존 방향의 blue crop, 다른 한쪽은 별도 crop으로 적용해 하나의 연속 그래픽처럼 보이지 않도록 했습니다.",
+          "title": "Outdoor Mockup A-3-5",
+          "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 White Board Set With Pebble Background에 Kling으로 새로 재합성한 Outdoor Mockup A-3-5입니다. A-3-5처럼 두 책자/보드의 물리적 단차와 세로 seam을 유지하고, 한쪽은 기존 방향의 blue crop, 다른 한쪽은 별도 crop으로 적용해 하나의 연속 그래픽처럼 보이지 않도록 했습니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/05_outdoor-mockup-a-2-5_rev05_two-distinct-board-crops_midjourney-28_kling_hq.png",
           "assetHash": "9b003cfa0b128ee8ee60142d03b35ba3811db1c4f6abcb0abafc319aab322fca",
           "width": 2496,
@@ -997,11 +872,11 @@
           "applicationMode": "kling_regenerated_two_distinct_board_crops",
           "updatedAt": "2026-10-08T11:44:07+09:00",
           "displayOrder": 5,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-02-06",
-          "title": "Outdoor Mockup A-4-6",
+          "title": "Outdoor Mockup A-3-6",
           "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 Hanging Outdoor Sign On Glass Facade에 full-surface로 자연 합성한 A-2 세트입니다. hanging outdoor sign full-face blue optical surface; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/06_outdoor-mockup-a-2-6_midjourney-28_kling_hq.png",
           "assetHash": "94bdcd21d2b533480f5724bf19d12185fda3629b47d2e85ce1c3a60c0cdf5581",
@@ -1015,28 +890,28 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T10:37:34+09:00",
           "displayOrder": 6,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original mockup + rough direction + Midjourney 28 source graphic; full-surface application",
       "resynthesizedAt": "2026-10-08T11:44:07+09:00",
-      "displayOrder": 4,
-      "renumberedAt": "2026-10-08T23:03:01+09:00"
+      "displayOrder": 3,
+      "renumberedAt": "2026-10-09T00:00:00+09:00"
     },
     {
       "id": "outdoor-mockup-example-a-03",
       "tabId": "outdoor-mockup-1",
-      "title": "Outdoor Mockup A-5",
+      "title": "Outdoor Mockup A-4",
       "created": "2026-10-08",
       "status": "kling_image_to_image_hq_natural_revision",
       "sourceGraphic": "Midjourney 21 — Textile Horizontal Band System",
-      "description": "Outdoor Mockup A의 다섯 번째 합성 세트입니다. Midjourney 21 Textile Horizontal Band System을 A 목업 6개에 full-surface 방식으로 적용했습니다. A-3-5는 A-1-5/A-2-5 규칙대로 두 책자/보드의 단차와 별도 crop을 유지했습니다.",
+      "description": "Outdoor Mockup A의 네 번째 합성 세트입니다. Midjourney 21 Textile Horizontal Band System을 A 목업 6개에 full-surface 방식으로 적용했습니다. A-4-5는 A-4-5/A-4-5 규칙대로 두 책자/보드의 단차와 별도 crop을 유지했습니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/21_21_textile_horizontal_band_system_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-1",
       "items": [
         {
           "id": "outdoor-mockup-example-a-03-01",
-          "title": "Outdoor Mockup A-5-1",
+          "title": "Outdoor Mockup A-4-1",
           "description": "Midjourney 21 — Textile Horizontal Band System를 Outdoor Paper Stack On Concrete에 full-surface로 자연 합성한 A-3 세트입니다. paper stack full-surface tactile textile band print; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-03/2026-10-08/01_outdoor-mockup-a-3-1_midjourney-21_kling_hq.png",
           "assetHash": "0a49f53267b4ce7eca2d793aadbec73c9f1397cf40870e1bf1fc79442909de06",
@@ -1050,11 +925,11 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T12:41:49+09:00",
           "displayOrder": 1,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-03-02",
-          "title": "Outdoor Mockup A-5-2",
+          "title": "Outdoor Mockup A-4-2",
           "description": "Midjourney 21 — Textile Horizontal Band System를 Single Card On Metal Grid에 full-surface로 자연 합성한 A-3 세트입니다. card surface horizontal band crop print; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-03/2026-10-08/02_outdoor-mockup-a-3-2_midjourney-21_kling_hq.png",
           "assetHash": "2b26a92da43df68ccf86e1f69d55b5e79f5e1612940c1a473afb840166091a17",
@@ -1068,11 +943,11 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T12:41:49+09:00",
           "displayOrder": 2,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-03-03",
-          "title": "Outdoor Mockup A-5-3",
+          "title": "Outdoor Mockup A-4-3",
           "description": "Midjourney 21 — Textile Horizontal Band System를 Vertical Fabric Banner On Stone Wall에 full-surface로 자연 합성한 A-3 세트입니다. vertical fabric banner textile band surface; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-03/2026-10-08/03_outdoor-mockup-a-3-3_midjourney-21_kling_hq.png",
           "assetHash": "94f7244f560a266be22f88046239219e3e856744094d346c414aaa1f61cc9ec0",
@@ -1086,11 +961,11 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T12:41:49+09:00",
           "displayOrder": 3,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-03-04",
-          "title": "Outdoor Mockup A-5-4",
+          "title": "Outdoor Mockup A-4-4",
           "description": "Midjourney 21 — Textile Horizontal Band System를 Framed Wall Poster On Stone Facade에 full-surface로 자연 합성한 A-3 세트입니다. framed wall poster full-panel textile band system; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-03/2026-10-08/04_outdoor-mockup-a-3-4_midjourney-21_kling_hq.png",
           "assetHash": "bbea19a5a9cbc454543cea4e1439b1bef77c6267ce5c8465e492cdfa85aaba64",
@@ -1104,12 +979,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T12:41:49+09:00",
           "displayOrder": 4,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-03-05",
-          "title": "Outdoor Mockup A-5-5",
-          "description": "Midjourney 21 — Textile Horizontal Band System을 White Board Set With Pebble Background에 Kling으로 재합성한 A-3-5입니다. A-1-5/A-2-5 규칙에 맞춰 두 책자/보드의 단차와 세로 seam을 유지하고, 좌우 보드의 stripe crop과 band 위치가 이어지지 않도록 서로 다른 crop으로 적용했습니다.",
+          "title": "Outdoor Mockup A-4-5",
+          "description": "Midjourney 21 — Textile Horizontal Band System을 White Board Set With Pebble Background에 Kling으로 재합성한 Outdoor Mockup A-4-5입니다. A-4-5/A-4-5 규칙에 맞춰 두 책자/보드의 단차와 세로 seam을 유지하고, 좌우 보드의 stripe crop과 band 위치가 이어지지 않도록 서로 다른 crop으로 적용했습니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-03/2026-10-08/05_outdoor-mockup-a-3-5_rev02_nonaligned-board-crops_midjourney-21_kling_hq.png",
           "assetHash": "a9a859b828fd7853e4f3a2d3fedf4ca3143c099d0077e455327b7d2bbedf56e7",
           "width": 2496,
@@ -1122,11 +997,11 @@
           "applicationMode": "kling_regenerated_two_distinct_nonaligned_board_crops",
           "updatedAt": "2026-10-08T15:25:30+09:00",
           "displayOrder": 5,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-03-06",
-          "title": "Outdoor Mockup A-5-6",
+          "title": "Outdoor Mockup A-4-6",
           "description": "Midjourney 21 — Textile Horizontal Band System를 Hanging Outdoor Sign On Glass Facade에 full-surface로 자연 합성한 A-3 세트입니다. hanging outdoor sign full-face textile band surface; original mockup shadows, folds, material cues preserved.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-03/2026-10-08/06_outdoor-mockup-a-3-6_midjourney-21_kling_hq.png",
           "assetHash": "1ca49a94de1e10a004ba4ece62d8bfb5439f5dd48f02c9e11071bf2ace012876",
@@ -1140,13 +1015,13 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T12:41:49+09:00",
           "displayOrder": 6,
-          "renumberedAt": "2026-10-08T23:03:01+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original mockup + rough direction + Midjourney 21 source graphic; A-3-5 uses accepted A-1-5 seam/depth reference",
       "resynthesizedAt": "2026-10-08T15:25:30+09:00",
-      "displayOrder": 5,
-      "renumberedAt": "2026-10-08T23:03:01+09:00"
+      "displayOrder": 4,
+      "renumberedAt": "2026-10-09T00:00:00+09:00"
     },
     {
       "id": "outdoor-mockup-example-02",
