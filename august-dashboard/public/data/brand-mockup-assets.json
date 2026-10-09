@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-10T00:26:33+09:00",
+  "generatedAt": "2026-10-10T01:32:18+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -653,7 +653,7 @@
       "tabId": "outdoor-mockup-1",
       "title": "Outdoor Mockup A-2",
       "created": "2026-10-08",
-      "status": "card_fixed_revision",
+      "status": "kling_a35_reference_full_bleed_revision",
       "sourceGraphic": "Midjourney 02 — Directional Flow",
       "description": "Outdoor Mockup A의 두 번째 합성 세트입니다. Midjourney 2 Directional Flow을 A 목업 6개에 full-surface 방식으로 적용했습니다. A-2-5 rev03은 책자 분리감은 유지하고, 좌측 하단 작은 명함/카드를 Midjourney 02 그래픽으로 교체했습니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/02_02_directional_flow_midjourney_translation_kling4k.png",
@@ -734,18 +734,18 @@
         {
           "id": "outdoor-mockup-example-a-08-05",
           "title": "Outdoor Mockup A-2-5",
-          "description": "Midjourney 02 — Directional Flow을 White Board Set With Pebble Background에 재합성한 Outdoor Mockup A-2-5입니다. Rev03은 기존 rev02의 책자/보드 분리감은 유지하고, A-1 계열처럼 보이던 좌측 하단 작은 명함/카드를 Midjourney 02 베이지·네이비·코랄 directional-flow 그래픽으로 교체한 버전입니다.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-08/2026-10-09/05_outdoor-mockup-a-2-5_rev03_mj02-card-fixed_booklets-preserved_midjourney-02_hq.png",
-          "assetHash": "fc7e14bd0ce5d83278e085c796ebf7b70806e135e1823fbdb8b99f48f8daa7c2",
+          "description": "A-3-5의 꽉 찬 board/booklet coverage를 기준으로 다시 합성한 5번 목업입니다. 두 rear board/booklet, lower band, front overlap, small card가 source graphic으로 더 꽉 차게 보이도록 교정했습니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-08/2026-10-09/05_outdoor-mockup-a-2-5_rev05_stronger-cropped-full-bleed_midjourney-02_kling_hq.png",
+          "assetHash": "9dccc7fe2da05d4d36b78512e7a433b73f456f235713423cff714bd9a3c65cc4",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-08/2026-10-09/05_outdoor-mockup-a-2-5_rev03_mj02-card-fixed_booklets-preserved_midjourney-02_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-08/2026-10-09/05_outdoor-mockup-a-2-5_rev05_stronger-cropped-full-bleed_midjourney-02_kling_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/02_02_directional_flow_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/05_white-board-set-with-pebble-background_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "local_card_surface_recomposite_mj02_booklets_preserved",
-          "updatedAt": "2026-10-09T00:00:00+09:00",
+          "applicationMode": "kling_regenerated_a35_full_bleed_reference_final",
+          "updatedAt": "2026-10-10T01:32:18+09:00",
           "displayOrder": 5,
           "renumberedAt": "2026-10-09T00:00:00+09:00"
         },
@@ -769,7 +769,7 @@
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup A assets + source Midjourney 4K motif + rough direction image",
-      "resynthesizedAt": "2026-10-09T00:00:00+09:00",
+      "resynthesizedAt": "2026-10-10T01:32:18+09:00",
       "displayOrder": 2,
       "renumberedAt": "2026-10-09T00:00:00+09:00"
     },
@@ -903,7 +903,7 @@
       "tabId": "outdoor-mockup-1",
       "title": "Outdoor Mockup A-4",
       "created": "2026-10-09",
-      "status": "kling_local_corrected_full_surface_revision",
+      "status": "kling_a35_reference_full_bleed_revision",
       "sourceGraphic": "Midjourney 34 — Torn Cobalt Black Paper Edge",
       "description": "Outdoor Mockup A-4는 Midjourney 34 Torn Cobalt Black Paper Edge를 적용한 세트입니다. A-4-1은 top stack까지, A-4-5는 lower band/card 영역까지 더 채워 보이도록 교정했습니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/34_34_torn_cobalt_black_paper_edge_manual_midjourney_kling4k.png",
@@ -980,18 +980,18 @@
         {
           "id": "outdoor-mockup-example-a-11-05",
           "title": "Outdoor Mockup A-4-5",
-          "description": "Midjourney 34 — Torn Cobalt Black Paper Edge를 적용한 A-4-5 교정본입니다. 이전 버전에서 하단 white band와 작은 카드 하단이 덜 채워져 보이던 부분을 줄여 full-bleed surface로 보이도록 보정했습니다.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/05_outdoor-mockup-a-4-5_rev04_local-full-lower-band_midjourney-34_kling_hq.png",
-          "assetHash": "0197726feefcafd37cdc255294b6fee7352f5532ee5bc67de619e345baf75b4b",
+          "description": "A-3-5의 꽉 찬 board/booklet coverage를 기준으로 다시 합성한 5번 목업입니다. 두 rear board/booklet, lower band, front overlap, small card가 source graphic으로 더 꽉 차게 보이도록 교정했습니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/05_outdoor-mockup-a-4-5_rev05_a35-full-bleed-reference_midjourney-34_kling_hq.png",
+          "assetHash": "61159314a11b5d3d9a7db44f013e5b0442a787fe3071712c82c9b41fc0cadf8b",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/05_outdoor-mockup-a-4-5_rev04_local-full-lower-band_midjourney-34_kling_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/05_outdoor-mockup-a-4-5_rev05_a35-full-bleed-reference_midjourney-34_kling_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/34_34_torn_cobalt_black_paper_edge_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/05_white-board-set-with-pebble-background_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "kling_local_corrected_full_surface_midjourney_34",
-          "updatedAt": "2026-10-10T00:26:33+09:00",
+          "applicationMode": "kling_regenerated_a35_full_bleed_reference_final",
+          "updatedAt": "2026-10-10T01:32:18+09:00",
           "displayOrder": 5
         },
         {
@@ -1013,7 +1013,7 @@
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup A assets + Midjourney 34 4K motif + rough direction image",
-      "resynthesizedAt": "2026-10-10T00:26:33+09:00",
+      "resynthesizedAt": "2026-10-10T01:32:18+09:00",
       "displayOrder": 4
     },
     {
@@ -1021,7 +1021,7 @@
       "tabId": "outdoor-mockup-1",
       "title": "Outdoor Mockup A-5",
       "created": "2026-10-09",
-      "status": "kling_image_to_image_hq_natural_revision",
+      "status": "kling_a35_reference_full_bleed_revision",
       "sourceGraphic": "Midjourney 32 — Rounded Overprint Color Blocks",
       "description": "Outdoor Mockup A의 다섯 번째 합성 세트입니다. Midjourney 32 Rounded Overprint Color Blocks를 A 목업 6개에 full-surface 방식으로 적용했습니다. A-5-5는 두 책자/보드와 작은 명함의 물리적 분리감을 유지했습니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/32_32_rounded_overprint_color_blocks_manual_midjourney_kling4k.png",
@@ -1098,18 +1098,18 @@
         {
           "id": "outdoor-mockup-example-a-09-05",
           "title": "Outdoor Mockup A-5-5",
-          "description": "Midjourney 32 — Rounded Overprint Color Blocks를 White Board Set With Pebble Background에 재합성한 Outdoor Mockup A-5-5입니다. 두 책자/보드와 좌측 하단 작은 명함이 서로 다른 crop의 같은 Midjourney 32 그래픽을 사용하며, seam/step/물리적 분리감을 유지했습니다.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-09/2026-10-09/05_outdoor-mockup-a-5-5_card-booklets-separated_midjourney-32_kling_hq.png",
-          "assetHash": "aec24be0b6b29cf6d77803e3d569d16b9f134db4bda035893a7747c9e9275631",
+          "description": "A-3-5의 꽉 찬 board/booklet coverage를 기준으로 다시 합성한 5번 목업입니다. 두 rear board/booklet, lower band, front overlap, small card가 source graphic으로 더 꽉 차게 보이도록 교정했습니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-09/2026-10-09/05_outdoor-mockup-a-5-5_rev03_stronger-cropped-full-bleed_midjourney-32_kling_hq.png",
+          "assetHash": "9ea573d85c2b1355e91e4b87f5c7666ded55f917c9888de4f59635a93de858ba",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-09/2026-10-09/05_outdoor-mockup-a-5-5_card-booklets-separated_midjourney-32_kling_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-09/2026-10-09/05_outdoor-mockup-a-5-5_rev03_stronger-cropped-full-bleed_midjourney-32_kling_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/32_32_rounded_overprint_color_blocks_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/05_white-board-set-with-pebble-background_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "kling_regenerated_card_and_booklets_separated",
-          "updatedAt": "2026-10-09T14:56:20+09:00",
+          "applicationMode": "kling_regenerated_a35_full_bleed_reference_final",
+          "updatedAt": "2026-10-10T01:32:18+09:00",
           "displayOrder": 5
         },
         {
@@ -1131,7 +1131,7 @@
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup A assets + Midjourney 32 4K motif + rough direction image",
-      "resynthesizedAt": "2026-10-09T14:56:20+09:00",
+      "resynthesizedAt": "2026-10-10T01:32:18+09:00",
       "displayOrder": 5
     },
     {
