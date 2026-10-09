@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-05T21:04:20+09:00",
+  "generatedAt": "2026-10-09T00:00:00+09:00",
   "sourcePolicy": "Public-safe manually supplied Midjourney outputs selected by Chris for Design DNA. Midjourney items include Kling 4K remaster PNG downloads when highResImageSrc is present. Excludes raw private chats, credentials, and provider account details.",
   "items": [
     {
@@ -884,6 +884,99 @@
       "highResAssetHash": "cdffbed6f0f5faee425fd16e1b5415129534cec9919601d5763c2d97bf53181b",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-05T21:04:20+09:00"
+    },
+    {
+      "id": "2026-10-09-midjourney-31-torn-burgundy-olive-paper-collage",
+      "title": "Midjourney 31 — Torn Burgundy Olive Paper Collage",
+      "created": "2026-10-09",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-10-09/31_torn_burgundy_olive_paper_collage_manual_midjourney.jpg",
+      "prompt": "abstract torn paper collage surface, layered burgundy handmade paper blocks, olive vertical torn strip, warm ivory paper ground, rough deckled edges, tactile fiber texture, premium editorial material sample, flat 2D crop-friendly brand surface --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "abstract torn paper collage surface, layered burgundy handmade paper blocks, olive vertical torn strip, warm ivory paper ground, rough deckled edges, tactile fiber texture, premium editorial material sample, flat 2D crop-friendly brand surface --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "버건디와 올리브 톤의 찢어진 종이 조각이 겹쳐진 tactile collage surface입니다. 거친 종이 섬유, 찢긴 가장자리, 낮은 채도의 깊은 컬러가 브랜드 패키지·카드·배경 표면에서 물성 중심의 조용한 존재감을 만들 수 있습니다.",
+      "sourceRun": "manual_midjourney_upload_2026_10_09_31",
+      "assetHash": "de5931cbc22bc8fd605e84c1a74a9971c8fa2fe4ec4c3cef45604937a3d651ff",
+      "dnaClusters": [
+        "Manual Midjourney",
+        "Torn Paper Collage",
+        "Tactile Paper Material",
+        "Burgundy Olive System",
+        "Editorial Product Graphic"
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-10-09/31_torn_burgundy_olive_paper_collage_manual_midjourney.jpg",
+      "width": 1024,
+      "height": 1024,
+      "localArchivePath": "/opt/data/dna-archive/midjourney/2026-10-09/images/31_torn_burgundy_olive_paper_collage_manual_midjourney.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/31_31_torn_burgundy_olive_paper_collage_manual_midjourney_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "571e26076c354e8fd4a4f5008d315e142fb994ed8390a856f4bce8f58874f4e6",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-09T00:00:00+09:00"
+    },
+    {
+      "id": "2026-10-09-midjourney-32-rounded-overprint-color-blocks",
+      "title": "Midjourney 32 — Rounded Overprint Color Blocks",
+      "created": "2026-10-09",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-10-09/32_rounded_overprint_color_blocks_manual_midjourney.jpg",
+      "prompt": "abstract rounded overprint color blocks, large soft-edged coral and olive forms, pale pink translucent slab, deep navy base shape, dusty lavender accent, tactile paper grain, riso ink overlap, warm human editorial brand surface, flat 2D crop-friendly motif --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "abstract rounded overprint color blocks, large soft-edged coral and olive forms, pale pink translucent slab, deep navy base shape, dusty lavender accent, tactile paper grain, riso ink overlap, warm human editorial brand surface, flat 2D crop-friendly motif --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "코랄, 올리브, 페일 핑크, 네이비 색면이 둥근 블록처럼 겹쳐진 riso/overprint 계열 그래픽입니다. 부드러운 모서리와 반투명한 색 겹침이 따뜻하고 인간적인 추상 신호처럼 읽혀 UI 배경, 패키지 패널, 브랜드 모티프 crop에 적합합니다.",
+      "sourceRun": "manual_midjourney_upload_2026_10_09_32",
+      "assetHash": "67ba0f0d74835eaf7903d45afd37fa5e4896b9c76a6900ba565f268f82b862b4",
+      "dnaClusters": [
+        "Manual Midjourney",
+        "Riso Overprint",
+        "Rounded Color Field",
+        "Warm Human Signal",
+        "Tactile Optical Material"
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-10-09/32_rounded_overprint_color_blocks_manual_midjourney.jpg",
+      "width": 1024,
+      "height": 1024,
+      "localArchivePath": "/opt/data/dna-archive/midjourney/2026-10-09/images/32_rounded_overprint_color_blocks_manual_midjourney.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/32_32_rounded_overprint_color_blocks_manual_midjourney_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "60b5bfb212b3bb5253c952373120df5cb981a01fdc68a6303a257e756608016f",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-09T00:00:00+09:00"
+    },
+    {
+      "id": "2026-10-09-midjourney-33-ivory-blind-emboss-relief-surface",
+      "title": "Midjourney 33 — Ivory Blind Emboss Relief Surface",
+      "created": "2026-10-09",
+      "status": "midjourney_manual_saved",
+      "sourceTool": "Midjourney",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-10-09/33_ivory_blind_emboss_relief_surface_manual_midjourney.jpg",
+      "prompt": "ivory blind emboss paper relief surface, large abstract curved pressed shapes, very low contrast debossed arcs, warm gray shadow, premium handmade paper texture, quiet tactile stationery material, minimal monochrome brand surface, flat close-up crop-friendly motif --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "midjourneyPrompt": "ivory blind emboss paper relief surface, large abstract curved pressed shapes, very low contrast debossed arcs, warm gray shadow, premium handmade paper texture, quiet tactile stationery material, minimal monochrome brand surface, flat close-up crop-friendly motif --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "analysis": "아이보리 종이 질감 위에 큰 곡선 형태가 낮은 음각·양각으로 눌린 blind emboss surface입니다. 거의 단색에 가까운 절제감과 미세한 그림자가 premium stationery, 조용한 브랜드 배경, 고급 패키지 표면에 잘 맞습니다.",
+      "sourceRun": "manual_midjourney_upload_2026_10_09_33",
+      "assetHash": "0cadcfd347de7fa4cffe7b9cbafa90d38b659dc98297888a96ed5804707838e8",
+      "dnaClusters": [
+        "Manual Midjourney",
+        "Blind Emboss Surface",
+        "Premium Paper Tactility",
+        "Low-Contrast Material",
+        "Quiet Signal Presence"
+      ],
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-10-09/33_ivory_blind_emboss_relief_surface_manual_midjourney.jpg",
+      "width": 1024,
+      "height": 1024,
+      "localArchivePath": "/opt/data/dna-archive/midjourney/2026-10-09/images/33_ivory_blind_emboss_relief_surface_manual_midjourney.jpg",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/33_33_ivory_blind_emboss_relief_surface_manual_midjourney_kling4k.png",
+      "highResDownloadLabel": "Kling 4K remaster PNG",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "3cdd7056b99b2dd40c8282d61c148230bba36b7f44cfb8ba15c96bf189a83227",
+      "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
+      "highResRemasteredAt": "2026-10-09T00:00:00+09:00"
     }
   ]
 }
