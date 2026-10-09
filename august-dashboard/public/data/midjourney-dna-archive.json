@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T00:00:00+09:00",
+  "generatedAt": "2026-10-09T20:14:51+09:00",
   "sourcePolicy": "Public-safe manually supplied Midjourney outputs selected by Chris for Design DNA. Midjourney items include Kling 4K remaster PNG downloads when highResImageSrc is present. Excludes raw private chats, credentials, and provider account details.",
   "items": [
     {
@@ -977,6 +977,56 @@
       "highResAssetHash": "3cdd7056b99b2dd40c8282d61c148230bba36b7f44cfb8ba15c96bf189a83227",
       "highResSourceTool": "Kling image_to_image / kling-image-v3_0_omni",
       "highResRemasteredAt": "2026-10-09T00:00:00+09:00"
+    },
+    {
+      "id": "2026-10-09-midjourney-34-torn-cobalt-black-paper-edge",
+      "sequence": 34,
+      "title": "Midjourney 34 — Torn Cobalt Black Paper Edge",
+      "created": "2026-10-09",
+      "status": "manual_midjourney_saved",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-10-09/34_torn_cobalt_black_paper_edge_manual_midjourney.jpg",
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-10-09/34_torn_cobalt_black_paper_edge_manual_midjourney.jpg",
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "f00b193b7c70f02240d6d257e1b493f4fb407c3548a5234025fa734f8f4d0555",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/34_34_torn_cobalt_black_paper_edge_manual_midjourney_kling4k.png",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "67a19ed7a6e4d5d62a04a69737b0a25e0b6dc3fd4538cd23661e3087543726df",
+      "highResSourceTool": "Kling image_to_image v3.0 omni 4K preservation remaster",
+      "highResRemasteredAt": "2026-10-09T20:14:51+09:00",
+      "highResDownloadLabel": "4K 고화질 PNG 다운로드",
+      "analysis": "강한 코발트 블루 평면 위에 거친 검은 종이 덩어리가 찢긴 수직 경계를 만들고, 가장자리 사이로 작은 구리빛 종이층이 드러나는 구성입니다. 고운 종이 섬유 질감과 비정형 tear edge가 선명해 패키지 표면, 포스터 crop, 카드형 목업의 강한 contrast material로 쓰기 좋습니다.",
+      "detailedDescription": "강한 코발트 블루 평면 위에 거친 검은 종이 덩어리가 찢긴 수직 경계를 만들고, 가장자리 사이로 작은 구리빛 종이층이 드러나는 구성입니다. 고운 종이 섬유 질감과 비정형 tear edge가 선명해 패키지 표면, 포스터 crop, 카드형 목업의 강한 contrast material로 쓰기 좋습니다.",
+      "midjourneyPrompt": "torn cobalt blue and black paper edge material, rough vertical ripped boundary, tiny copper paper layer exposed, tactile paper fiber texture, high contrast flat 2D graphic surface, crop-friendly brand material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "source": "manual_midjourney_upload",
+      "updatedAt": "2026-10-09T20:14:51+09:00",
+      "intendedLaterUse": "Design DNA mockup surface, package/card crop, brand material rail, and future Midjourney + Mockup synthesis source."
+    },
+    {
+      "id": "2026-10-09-midjourney-35-diagonal-textile-stripe-bands",
+      "sequence": 35,
+      "title": "Midjourney 35 — Diagonal Textile Stripe Bands",
+      "created": "2026-10-09",
+      "status": "manual_midjourney_saved",
+      "imageSrc": "/assets/dna-archive/midjourney/2026-10-09/35_diagonal_textile_stripe_bands_manual_midjourney.jpg",
+      "originalImageSrc": "/assets/dna-archive/midjourney/2026-10-09/35_diagonal_textile_stripe_bands_manual_midjourney.jpg",
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "5462ec6ee3c6a05f3d7771f4201d0534885a5759b7f4c3e5ceb92b9d8ad608a5",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/35_35_diagonal_textile_stripe_bands_manual_midjourney_kling4k.png",
+      "highResWidth": 4096,
+      "highResHeight": 4096,
+      "highResAssetHash": "805002fe931cfc16cda08561b8944cae64b3be5b580ed99d501d92e0c5bfc9e2",
+      "highResSourceTool": "Kling image_to_image v3.0 omni 4K preservation remaster",
+      "highResRemasteredAt": "2026-10-09T20:14:51+09:00",
+      "highResDownloadLabel": "4K 고화질 PNG 다운로드",
+      "analysis": "짙은 블랙/네이비 바탕 위로 오렌지, 레드, 블루, 피치, 그린, 퍼플 계열의 대각선 밴드가 지나가는 textile stripe composition입니다. 선들이 완전히 매끈하지 않고 직물 같은 결을 품고 있어, 브랜드 패턴·패키지 띠·모바일 배경 crop·목업 표면에 리듬감 있는 accent system으로 활용하기 좋습니다.",
+      "detailedDescription": "짙은 블랙/네이비 바탕 위로 오렌지, 레드, 블루, 피치, 그린, 퍼플 계열의 대각선 밴드가 지나가는 textile stripe composition입니다. 선들이 완전히 매끈하지 않고 직물 같은 결을 품고 있어, 브랜드 패턴·패키지 띠·모바일 배경 crop·목업 표면에 리듬감 있는 accent system으로 활용하기 좋습니다.",
+      "midjourneyPrompt": "diagonal textile stripe band system, dark navy black woven ground, orange red cobalt peach green purple bands, tactile fabric grain, bold editorial stripe rhythm, flat 2D crop-friendly pattern material for brand surfaces --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "source": "manual_midjourney_upload",
+      "updatedAt": "2026-10-09T20:14:51+09:00",
+      "intendedLaterUse": "Design DNA mockup surface, package/card crop, brand material rail, and future Midjourney + Mockup synthesis source."
     }
   ]
 }
