@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T10:41:10+09:00",
+  "generatedAt": "2026-10-09T16:00:42+09:00",
   "sourcePolicy": "Only Chris-selected GoYJ generated assets are saved here. Unselected review candidates are temporary and are not published.",
   "items": [
     {
@@ -1441,6 +1441,132 @@
       "generationReason": "Generated after Chris said the previous recommendations still felt too similar. The brief deliberately avoided prior capsule/circle/dot-matrix/line/UI/chrome/poster axes and shifted toward raw 2D graphic motif materials.",
       "detailedDescription": "거의 단색에 가까운 ivory/warm-gray 종이 위 음각·양각 형태가 남는 tactile paper surface입니다. 절제된 premium stationery 감각이 강하고, 조용한 브랜드 배경·패키지 표면으로 쓰기 좋습니다. 생성 목적은 Chris Archive를 그대로 재현하지 않고, 향후 Chris가 직접 mockup과 그래픽 시스템에 합성할 수 있는 독립적인 모티프 재료를 확보하는 것입니다.",
       "midjourneyPrompt": "blind emboss deboss paper surface, nearly monochrome ivory and warm gray, large abstract pressed shapes, very low contrast relief, soft edge shading, premium stationery feeling, tactile paper indentation and negative space, quiet flat brand surface material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient, UI, icon, 3D object render"
+    },
+    {
+      "id": "2026-10-09-goyj-archive-unused-style-reset-065151-01",
+      "title": "Archive-unused Modular Riso Slab Field",
+      "created": "2026-10-09",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-09/selected_archive_unused_01_modular_riso_slab_field.png",
+      "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY. Use the reference only as a remote taste sample for deep cobalt vs warm orange modular rhythm, but transform it into a flat graphic designer material: large riso-overprint rectangular slabs, offset ink plates, blocky vertical rhythm, imperfect misregistration, matte paper grain, crop/mask/overlay/repeat useful. Square composition, generous negative space, no finished poster. Absolutely no text, no letters, no numbers, no logos, no watermark, no UI screenshot, no app icon, no product mockup, no humans, no photo. Keep it flat: no 3D render, no bevel, no glass, no chrome, no object, no studio shadow, no tiny dots, no route lines, no capsules, no circles/rings.\n",
+      "analysis": "deep cobalt와 warm orange의 모듈 리듬을 Chris Archive의 미사용 레퍼런스에서 가져와, 사물 대신 riso overprint 색판과 큰 직사각 slab로 평면화한 그래픽 소재입니다. 이전 capsule/UI/원형 계열과 다르게 블록·잉크·종이 표면 중심이라 crop/mask/repeat 재료로 쓰기 좋습니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-10-09/archive-unused-style-reset-065151/images/01_modular_riso_slab_field.png",
+      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-10-09/archive-unused-style-reset-065151",
+      "referenceAxis": "blue-orange modular blocks → flat riso slab field",
+      "sourceReferences": [
+        "2026-09-11_blue-orange-modular-glow-blocks"
+      ],
+      "dnaClusters": [
+        "Archive-unused Reference Sampling",
+        "Riso Overprint Blocks",
+        "Warm-Cool Modular Rhythm",
+        "Flat Graphic Motif",
+        "Crop-Mask Material"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "variant": "flare",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "selectedReason": "Chris selected candidates 1, 2, and 3 from the archive-unused style reset set and asked to save them.",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-10-09/images/selected_archive_unused_01_modular_riso_slab_field.png",
+      "savedAt": "2026-10-09T16:00:42+09:00",
+      "assetHash": "4d1c84d1b5c25fecd1443cf6c612bb0078e8c31cc48455f6cb2fcfdb7626df1c",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20261009_065213_875c3bae-6b4a-429a-b148-9acd96cb3b34.png",
+      "jobId": "875c3bae-6b4a-429a-b148-9acd96cb3b34",
+      "qaVisualStatus": "PASS — no internal text/logos/watermark; flat 2D slab/riso material; strongly different from prior capsule/circle/dot-line families.",
+      "generationReason": "Generated after Chris asked to check Chris Archive and regenerate five candidates based mainly on references that had not been used before. The brief deliberately avoided repeated capsule UI, circle/ring, dot matrix, thin route-line, chrome/liquid, and poster-copy styles.",
+      "detailedDescription": "deep cobalt와 warm orange의 모듈 리듬을 Chris Archive의 미사용 레퍼런스에서 가져와, 사물 대신 riso overprint 색판과 큰 직사각 slab로 평면화한 그래픽 소재입니다. 이전 capsule/UI/원형 계열과 다르게 블록·잉크·종이 표면 중심이라 crop/mask/repeat 재료로 쓰기 좋습니다. 생성 목적은 Chris Archive의 미사용 레퍼런스 신호를 그대로 복제하지 않고, 향후 mockup/브랜드 표면/패키지/모션 배경에 합성 가능한 순수 2D 그래픽 모티프 소재로 전환하는 것입니다.",
+      "midjourneyPrompt": "abstract modular riso slab field, deep cobalt blue and warm orange color plates, large flat rectangular slabs, offset ink overprint, matte paper grain, imperfect misregistration, blocky vertical rhythm, premium crop-friendly graphic design material, flat 2D surface --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient, capsule UI, circles, rings, dot matrix, thin route lines, chrome, 3D render"
+    },
+    {
+      "id": "2026-10-09-goyj-archive-unused-style-reset-065151-02",
+      "title": "Archive-unused Brutal Directional Cut-paper",
+      "created": "2026-10-09",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-09/selected_archive_unused_02_brutal_directional_cutpaper.png",
+      "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY. Use the reference only for high-contrast directional energy and blue/black tension; remove all typography. Create blunt cut-paper brutal blocks: asymmetrical black slabs, ultramarine fields, torn/scissor-cut paper edges, charcoal paper texture, one small warm accent seam, strong crop-ready negative space. It should feel like composable graphic material, not a poster or illustration. Absolutely no text, no letters, no numbers, no logos, no watermark, no UI screenshot, no app icon, no product mockup, no people, no photo. No 3D render, no bevel, no glass, no chrome, no object render, no thin connector lines, no dot matrix, no circle badge, no capsule UI.\n",
+      "analysis": "blue/black directional energy를 텍스트 없이 blunt한 cut-paper slab로 바꾼 후보입니다. ultramarine, black, charcoal paper, 작은 warm accent가 강한 editorial tension을 만들지만 완성 포스터가 아니라 합성 가능한 평면 소재로 남아 있습니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-10-09/archive-unused-style-reset-065151/images/02_brutal_directional_cutpaper.png",
+      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-10-09/archive-unused-style-reset-065151",
+      "referenceAxis": "directional blue-black poster energy → no-text cut-paper blocks",
+      "sourceReferences": [
+        "2026-09-11_toward-blue-black-directional-stack"
+      ],
+      "dnaClusters": [
+        "Archive-unused Reference Sampling",
+        "Brutal Cut Paper",
+        "Directional Energy",
+        "Editorial Product Graphic",
+        "Anti-Poster Motif"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "variant": "flare",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "selectedReason": "Chris selected candidates 1, 2, and 3 from the archive-unused style reset set and asked to save them.",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-10-09/images/selected_archive_unused_02_brutal_directional_cutpaper.png",
+      "savedAt": "2026-10-09T16:00:42+09:00",
+      "assetHash": "604b530a871ce798661b85d597ceb94b1f258ae21ce4ccb1e508bec291c50960",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20261009_065246_9141c9c1-b52b-4a80-8c80-e1f113958763.png",
+      "jobId": "9141c9c1-b52b-4a80-8c80-e1f113958763",
+      "qaVisualStatus": "PASS — no internal text/logos/watermark; flat cut-paper blocks; editorial energy without poster copy.",
+      "generationReason": "Generated after Chris asked to check Chris Archive and regenerate five candidates based mainly on references that had not been used before. The brief deliberately avoided repeated capsule UI, circle/ring, dot matrix, thin route-line, chrome/liquid, and poster-copy styles.",
+      "detailedDescription": "blue/black directional energy를 텍스트 없이 blunt한 cut-paper slab로 바꾼 후보입니다. ultramarine, black, charcoal paper, 작은 warm accent가 강한 editorial tension을 만들지만 완성 포스터가 아니라 합성 가능한 평면 소재로 남아 있습니다. 생성 목적은 Chris Archive의 미사용 레퍼런스 신호를 그대로 복제하지 않고, 향후 mockup/브랜드 표면/패키지/모션 배경에 합성 가능한 순수 2D 그래픽 모티프 소재로 전환하는 것입니다.",
+      "midjourneyPrompt": "brutal directional cut paper graphic motif, asymmetrical black slabs, ultramarine blue fields, torn and scissor-cut paper edges, charcoal texture, one small warm accent seam, strong negative space, flat editorial composition material for cropping and masking --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient, thin connector lines, dot matrix, circle badge, capsule UI, chrome, 3D render"
+    },
+    {
+      "id": "2026-10-09-goyj-archive-unused-style-reset-065151-03",
+      "title": "Archive-unused Scanline Textile Band System",
+      "created": "2026-10-09",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-09/selected_archive_unused_03_scanline_textile_band_system.png",
+      "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY. Use the reference only for spectral RGB scanline rhythm, but remove the human/profile silhouette completely. Create a flat textile band system: broad woven bands, parallel chromatic stripes, slight wave cadence, screenprint ink bleed, matte black/navy ground, cropped diagonal flow. Useful as overlay/repeat/background material. Absolutely no text, no letters, no numbers, no logos, no watermark, no UI screenshot, no app icon, no product mockup, no humans, no faces, no portraits, no photo. Keep it flat: no neon AI gradient blob, no 3D render, no light-trail photography, no thin route lines, no dots/dashes, no circles/rings, no chrome.\n",
+      "analysis": "RGB scanline reference에서 인물/초상 요소를 제거하고, 넓은 woven band와 screenprint ink bleed로 전환한 후보입니다. 빛줄기 사진이나 AI 네온이 아니라 textile/stripe 소재처럼 보여 overlay, repeat, motion background의 원재료로 활용하기 좋습니다.",
+      "sourceRun": "/opt/data/dna-archive/candidates/2026-10-09/archive-unused-style-reset-065151/images/03_scanline_textile_band_system.png",
+      "sourceCandidateRun": "/opt/data/dna-archive/candidates/2026-10-09/archive-unused-style-reset-065151",
+      "referenceAxis": "RGB scanline portrait → human-free textile band rhythm",
+      "sourceReferences": [
+        "2026-09-12_rgb-scanline-human-profile-light-trail"
+      ],
+      "dnaClusters": [
+        "Archive-unused Reference Sampling",
+        "Textile Band System",
+        "Spectral Scanline Rhythm",
+        "Flat Overlay Material",
+        "Non-portrait Graphic Motif"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "variant": "flare",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "selectedReason": "Chris selected candidates 1, 2, and 3 from the archive-unused style reset set and asked to save them.",
+      "localSelectedPath": "/opt/data/dna-archive/selected/2026-10-09/images/selected_archive_unused_03_scanline_textile_band_system.png",
+      "savedAt": "2026-10-09T16:00:42+09:00",
+      "assetHash": "3a92b8a37d332879e8c934e189b07dca3486e862c99687edb1dc84eefd4d9a70",
+      "remoteUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_33N4uQF75H1KqPJ43f3UlfO1tyF/hf_20261009_065315_823d0420-0d51-4d9a-846e-027041da0162.png",
+      "jobId": "823d0420-0d51-4d9a-846e-027041da0162",
+      "qaVisualStatus": "PASS — no internal text/logos/watermark; no human/profile silhouette; reads as flat stripe/textile material rather than UI/object.",
+      "generationReason": "Generated after Chris asked to check Chris Archive and regenerate five candidates based mainly on references that had not been used before. The brief deliberately avoided repeated capsule UI, circle/ring, dot matrix, thin route-line, chrome/liquid, and poster-copy styles.",
+      "detailedDescription": "RGB scanline reference에서 인물/초상 요소를 제거하고, 넓은 woven band와 screenprint ink bleed로 전환한 후보입니다. 빛줄기 사진이나 AI 네온이 아니라 textile/stripe 소재처럼 보여 overlay, repeat, motion background의 원재료로 활용하기 좋습니다. 생성 목적은 Chris Archive의 미사용 레퍼런스 신호를 그대로 복제하지 않고, 향후 mockup/브랜드 표면/패키지/모션 배경에 합성 가능한 순수 2D 그래픽 모티프 소재로 전환하는 것입니다.",
+      "midjourneyPrompt": "spectral scanline textile band system, broad woven bands, parallel chromatic stripes, subtle wave cadence, screenprint ink bleed, matte black navy ground, cropped diagonal flow, flat 2D overlay material, premium graphic design motif --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, faces, photo, robot, brain, neon AI gradient, light trail photography, thin route lines, dots, dashes, circles, rings, chrome, 3D render"
     }
   ]
 }
