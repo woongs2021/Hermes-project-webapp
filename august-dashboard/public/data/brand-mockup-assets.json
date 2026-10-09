@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T15:24:36+09:00",
+  "generatedAt": "2026-10-09T00:00:00+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -903,9 +903,9 @@
       "tabId": "outdoor-mockup-1",
       "title": "Outdoor Mockup A-4",
       "created": "2026-10-09",
-      "status": "kling_image_to_image_hq_replacement",
+      "status": "kling_image_to_image_hq_corrected_revision",
       "sourceGraphic": "Midjourney 31 — Torn Burgundy Olive Paper Collage",
-      "description": "Outdoor Mockup A의 네 번째 합성 세트입니다. 기존 Midjourney 21 세트를 삭제하고, Midjourney 31 Torn Burgundy Olive Paper Collage를 A 목업 6개에 full-surface 방식으로 적용했습니다. A-4-5는 두 책자/보드와 작은 명함의 물리적 분리감을 유지했습니다.",
+      "description": "Outdoor Mockup A의 네 번째 합성 세트입니다. 기존 Midjourney 21 세트를 삭제하고, Midjourney 31 Torn Burgundy Olive Paper Collage를 A 목업 6개에 full-surface 방식으로 적용했습니다. Rev02는 A-4-2, A-4-3, A-4-5의 목업 표면 적합도를 재합성해 개선했습니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/31_31_torn_burgundy_olive_paper_collage_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-1",
       "items": [
@@ -929,35 +929,35 @@
         {
           "id": "outdoor-mockup-example-a-10-02",
           "title": "Outdoor Mockup A-4-2",
-          "description": "Midjourney 31 — Torn Burgundy Olive Paper Collage를 Single Card On Metal Grid에 full-surface로 자연 합성한 Outdoor Mockup A-4-2입니다. 원본 목업의 빛, 그림자, 재질감, 원근을 유지하면서 torn burgundy olive paper collage motif를 적용했습니다.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-10/2026-10-09/02_outdoor-mockup-a-4-2_midjourney-31_kling_hq.png",
-          "assetHash": "b9dc5f951bd7a9d72367512db6f9713ca395c5e6826ca99f5dfe034e449d4dd9",
+          "description": "Midjourney 31 — Torn Burgundy Olive Paper Collage를 Single Card On Metal Grid 목업의 카드 표면에만 자연 합성한 Outdoor Mockup A-4-2 rev02입니다. metal grid와 배경은 보존하고 카드 표면 안에 tactile paper collage가 인쇄된 버전입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-10/2026-10-09/02_outdoor-mockup-a-4-2_rev02_surface-fit_midjourney-31_kling_hq.png",
+          "assetHash": "8319714a3b9e850dca1061884ee7d3f94a791abeb6cb95c52284969bdb1b2763",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-10/2026-10-09/02_outdoor-mockup-a-4-2_midjourney-31_kling_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-10/2026-10-09/02_outdoor-mockup-a-4-2_rev02_surface-fit_midjourney-31_kling_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/31_31_torn_burgundy_olive_paper_collage_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/02_single-card-on-metal-grid_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-09T15:24:36+09:00",
+          "applicationMode": "kling_regenerated_card_surface_fit",
+          "updatedAt": "2026-10-09T00:00:00+09:00",
           "displayOrder": 2
         },
         {
           "id": "outdoor-mockup-example-a-10-03",
           "title": "Outdoor Mockup A-4-3",
-          "description": "Midjourney 31 — Torn Burgundy Olive Paper Collage를 Vertical Fabric Banner On Stone Wall에 full-surface로 자연 합성한 Outdoor Mockup A-4-3입니다. 원본 목업의 빛, 그림자, 재질감, 원근을 유지하면서 torn burgundy olive paper collage motif를 적용했습니다.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-10/2026-10-09/03_outdoor-mockup-a-4-3_midjourney-31_kling_hq.png",
-          "assetHash": "be75ceb642daa035367deaee2693e94ed234ee824e7c4f477247ad1f45bf061d",
+          "description": "Midjourney 31 — Torn Burgundy Olive Paper Collage를 Vertical Fabric Banner On Stone Wall 목업의 배너 표면에만 자연 합성한 Outdoor Mockup A-4-3 rev02입니다. stone wall/window/rod는 보존하고 fabric banner 안에 opaque printed textile처럼 적용한 버전입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-10/2026-10-09/03_outdoor-mockup-a-4-3_rev02_banner-surface-fit_midjourney-31_kling_hq.png",
+          "assetHash": "bbab579afe8755e84c543e9db488fc951009ce49fc37262b96e514d2a990fbfa",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-10/2026-10-09/03_outdoor-mockup-a-4-3_midjourney-31_kling_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-10/2026-10-09/03_outdoor-mockup-a-4-3_rev02_banner-surface-fit_midjourney-31_kling_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/31_31_torn_burgundy_olive_paper_collage_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/03_vertical-fabric-banner-on-stone-wall_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "kling_hq_full_surface_natural",
-          "updatedAt": "2026-10-09T15:24:36+09:00",
+          "applicationMode": "kling_regenerated_banner_surface_fit",
+          "updatedAt": "2026-10-09T00:00:00+09:00",
           "displayOrder": 3
         },
         {
@@ -980,18 +980,18 @@
         {
           "id": "outdoor-mockup-example-a-10-05",
           "title": "Outdoor Mockup A-4-5",
-          "description": "Midjourney 31 — Torn Burgundy Olive Paper Collage를 White Board Set With Pebble Background에 재합성한 Outdoor Mockup A-4-5입니다. 두 책자/보드와 좌측 하단 작은 명함이 서로 다른 crop의 같은 Midjourney 31 그래픽을 사용하며, seam/step/물리적 분리감을 유지했습니다.",
-          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-10/2026-10-09/05_outdoor-mockup-a-4-5_card-booklets-separated_midjourney-31_kling_hq.png",
-          "assetHash": "944a33d946ec4f193ed9c45f55772ebec32bf4d9d3c0b80625aefef2dff427fa",
+          "description": "Midjourney 31 — Torn Burgundy Olive Paper Collage를 White Board Set With Pebble Background에 재합성한 Outdoor Mockup A-4-5 rev02입니다. 두 책자/보드와 좌측 하단 작은 명함이 서로 다른 crop의 같은 Midjourney 31 그래픽을 사용하며, seam/step/물리적 분리감을 강화한 버전입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-10/2026-10-09/05_outdoor-mockup-a-4-5_rev02_card-booklets-separated_midjourney-31_kling_hq.png",
+          "assetHash": "a441be47df3e96dd7b1c20ec6e2074fc9a2b43d305e00fd4061ba5ab9644ee1e",
           "width": 2496,
           "height": 1664,
-          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-10/2026-10-09/05_outdoor-mockup-a-4-5_card-booklets-separated_midjourney-31_kling_hq.png",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-10/2026-10-09/05_outdoor-mockup-a-4-5_rev02_card-booklets-separated_midjourney-31_kling_hq.png",
           "downloadLabel": "목업 합성본 PNG 다운로드",
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/31_31_torn_burgundy_olive_paper_collage_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/05_white-board-set-with-pebble-background_outdoor_mockup.jpg",
           "mockupCollectionId": "outdoor-mockup-assets-1",
-          "applicationMode": "kling_regenerated_card_and_booklets_separated",
-          "updatedAt": "2026-10-09T15:24:36+09:00",
+          "applicationMode": "kling_regenerated_card_and_booklets_separated_rev02",
+          "updatedAt": "2026-10-09T00:00:00+09:00",
           "displayOrder": 5
         },
         {
@@ -1013,7 +1013,7 @@
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup A assets + Midjourney 31 4K motif + rough direction image",
-      "resynthesizedAt": "2026-10-09T15:24:36+09:00",
+      "resynthesizedAt": "2026-10-09T00:00:00+09:00",
       "displayOrder": 4
     },
     {
