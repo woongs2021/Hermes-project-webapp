@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-10T16:08:13+09:00",
-  "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
+  "generatedAt": "2026-10-10T07:38:34.990582Z",
+  "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples present selected graphic motifs as brand surfaces across coffee, outdoor, apparel, signage, and digital mockup contexts; private chats, credentials, and provider account data are excluded.",
   "collections": [
     {
       "id": "coffee-mockup-assets",
@@ -200,14 +200,14 @@
       "id": "coffee-asset-example-01",
       "title": "Coffee Mockup Example 1",
       "created": "2026-09-26",
-      "status": "nano_banana_pro_pattern_only",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 01 — Capsule Pattern Translation",
-      "description": "Kling 4K pattern-only resynthesis: Midjourney 01 graphic integrated onto Coffee Mockup Assets without logo lettering.",
+      "description": "둥근 캡슐 패턴과 온화한 색면을 컵, 백, 사인 표면에 적용한 커피 브랜드 목업 세트입니다. 작은 로고보다 표면 전체의 리듬과 촉감을 중심으로 보여줍니다.",
       "items": [
         {
           "id": "coffee-asset-example-01-01",
           "title": "Coffee Mockup Example 1-1",
-          "description": "Pattern-only cup sleeve application",
+          "description": "둥근 캡슐형 패턴과 부드러운 컬러 블록이 커피 표면 위에 차분하게 반복되는 그래픽 시스템입니다. 종이컵 슬리브와 컵 바디에 그래픽이 감기며, 손에 닿는 작은 브랜드 표면으로 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/01_pattern-cup-sleeve_kling4k_mockup.png",
           "assetHash": "efa63ef28ec86a88893b3bc2163d4900f342a217163ee6b510e909d1a2b888ca",
           "width": 4992,
@@ -228,7 +228,7 @@
         {
           "id": "coffee-asset-example-01-02",
           "title": "Coffee Mockup Example 1-2",
-          "description": "Pattern-only coffee bag and cup counter application",
+          "description": "둥근 캡슐형 패턴과 부드러운 컬러 블록이 커피 표면 위에 차분하게 반복되는 그래픽 시스템입니다. 커피백 전면과 카운터 위 컵 표면이 하나의 패키지 시스템처럼 이어집니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/02_pattern-coffee-bag-and-cup-counter_kling4k_mockup.png",
           "assetHash": "8170f32561f11e70b1a54c1fc532cb0f81db9da024ba945d07ba16851cb712ee",
           "width": 4992,
@@ -249,7 +249,7 @@
         {
           "id": "coffee-asset-example-01-03",
           "title": "Coffee Mockup Example 1-3",
-          "description": "Pattern-only stacked cup set application",
+          "description": "둥근 캡슐형 패턴과 부드러운 컬러 블록이 커피 표면 위에 차분하게 반복되는 그래픽 시스템입니다. 스택 형태의 컵과 백 전면에 패턴이 반복되어, 매대에서 보이는 세트감이 강조됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/03_pattern-stacked-cup-set_kling4k_mockup.png",
           "assetHash": "2692f6cf67042f2453be402e37b08f9b815c27a69eb5bcdb038284920d16ca66",
           "width": 4992,
@@ -270,7 +270,7 @@
         {
           "id": "coffee-asset-example-01-04",
           "title": "Coffee Mockup Example 1-4",
-          "description": "Pattern-only tote bag mockup application",
+          "description": "둥근 캡슐형 패턴과 부드러운 컬러 블록이 커피 표면 위에 차분하게 반복되는 그래픽 시스템입니다. 테이크아웃 컵과 백 표면에 그래픽이 적용되어 이동 중에도 브랜드 표면이 유지됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/04_pattern-tote-bag-mockup_kling4k_mockup.png",
           "assetHash": "0d38c15a54ba19f5f92c90e643d312a4d9940e0219a3fd9a2913946632d4dddf",
           "width": 4992,
@@ -291,7 +291,7 @@
         {
           "id": "coffee-asset-example-01-05",
           "title": "Coffee Mockup Example 1-5",
-          "description": "Pattern-only close-up cup body application",
+          "description": "둥근 캡슐형 패턴과 부드러운 컬러 블록이 커피 표면 위에 차분하게 반복되는 그래픽 시스템입니다. 클로즈업 컵 바디에서 재질, 곡면, 인쇄 패턴의 밀도가 가장 직접적으로 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/05_pattern-close-up-cup-body_kling4k_mockup.png",
           "assetHash": "db1f7978d56e4469c35db864cddf98c593056f10744bec89c040bdd0c29415f0",
           "width": 4992,
@@ -312,7 +312,7 @@
         {
           "id": "coffee-asset-example-01-06",
           "title": "Coffee Mockup Example 1-6",
-          "description": "Pattern-only hanging cafe sign application",
+          "description": "둥근 캡슐형 패턴과 부드러운 컬러 블록이 커피 표면 위에 차분하게 반복되는 그래픽 시스템입니다. 카페 행잉 사인 표면에 그래픽이 들어가 공간 밖에서도 같은 브랜드 톤을 이어줍니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-01/2026-10-03/06_pattern-hanging-cafe-sign_kling4k_mockup.png",
           "assetHash": "9f877e05a7798610c25092656a43a0ff353169724a335be61f0bdfaa56fafb7b",
           "width": 4992,
@@ -331,7 +331,7 @@
           "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
-      "synthesisTool": "Geometry-preserving upscale from approved mockup synthesis",
+      "synthesisTool": "High-resolution full-surface mockup integration",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
       "resynthesizedAt": "2026-10-03T01:20:00+09:00"
     },
@@ -339,14 +339,14 @@
       "id": "coffee-asset-example-02",
       "title": "Coffee Mockup Example 2",
       "created": "2026-09-28",
-      "status": "nano_banana_pro_pattern_only",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 20 — Monochrome Architectural Block Surface",
-      "description": "Kling 4K pattern-only resynthesis: Midjourney 20 monochrome architectural block surface motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
+      "description": "흑백 건축 블록 구조를 커피 패키지와 컵 표면에 적용한 세트입니다. 강한 장식보다 질서 있는 면 분할과 프리미엄한 흑백 대비를 보여줍니다.",
       "items": [
         {
           "id": "coffee-asset-example-02-01",
           "title": "Coffee Mockup Example 2-1",
-          "description": "Pattern-only cup sleeve application using Midjourney 20 monochrome architectural block surface motif",
+          "description": "흑백 건축 블록처럼 정리된 면 구조와 단단한 대비가 표면을 차분하게 잡아주는 그래픽 시스템입니다. 종이컵 슬리브와 컵 바디에 그래픽이 감기며, 손에 닿는 작은 브랜드 표면으로 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/01_monochrome-block-cup-sleeve_kling4k_mockup.png",
           "assetHash": "eb26b28b6518fd45bcb0f8c31a65b5ccd4141c3c75b99d921f8cfa7f7a14ac69",
           "width": 4992,
@@ -367,7 +367,7 @@
         {
           "id": "coffee-asset-example-02-02",
           "title": "Coffee Mockup Example 2-2",
-          "description": "Pattern-only coffee bag and cup counter application using Midjourney 20 monochrome architectural block surface motif",
+          "description": "흑백 건축 블록처럼 정리된 면 구조와 단단한 대비가 표면을 차분하게 잡아주는 그래픽 시스템입니다. 커피백 전면과 카운터 위 컵 표면이 하나의 패키지 시스템처럼 이어집니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/02_monochrome-block-coffee-bag-and-cup-counter_kling4k_mockup.png",
           "assetHash": "063a7d6e219deabab7c825ae64b94cf82e410c2ed1f2cdf2169540efc23ce39b",
           "width": 4992,
@@ -388,7 +388,7 @@
         {
           "id": "coffee-asset-example-02-03",
           "title": "Coffee Mockup Example 2-3",
-          "description": "Pattern-only stacked cup set application using Midjourney 20 monochrome architectural block surface motif",
+          "description": "흑백 건축 블록처럼 정리된 면 구조와 단단한 대비가 표면을 차분하게 잡아주는 그래픽 시스템입니다. 스택 형태의 컵과 백 전면에 패턴이 반복되어, 매대에서 보이는 세트감이 강조됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/03_monochrome-block-stacked-cup-set_kling4k_mockup.png",
           "assetHash": "af943a40012ef260ceb7a17ce87b02c22b2ff65a38ea46b3981f321468de549e",
           "width": 4992,
@@ -409,7 +409,7 @@
         {
           "id": "coffee-asset-example-02-04",
           "title": "Coffee Mockup Example 2-4",
-          "description": "Pattern-only tote and takeaway cup application using Midjourney 20 monochrome architectural block surface motif",
+          "description": "흑백 건축 블록처럼 정리된 면 구조와 단단한 대비가 표면을 차분하게 잡아주는 그래픽 시스템입니다. 테이크아웃 컵과 백 표면에 그래픽이 적용되어 이동 중에도 브랜드 표면이 유지됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/04_monochrome-block-tote-and-takeaway-cup_kling4k_mockup.png",
           "assetHash": "a1e348f1cbebaa5cb8bca74f50bfa9a88e729d51172ee4b65846f751e9071849",
           "width": 4992,
@@ -430,7 +430,7 @@
         {
           "id": "coffee-asset-example-02-05",
           "title": "Coffee Mockup Example 2-5",
-          "description": "Pattern-only close-up cup body application using Midjourney 20 monochrome architectural block surface motif",
+          "description": "흑백 건축 블록처럼 정리된 면 구조와 단단한 대비가 표면을 차분하게 잡아주는 그래픽 시스템입니다. 클로즈업 컵 바디에서 재질, 곡면, 인쇄 패턴의 밀도가 가장 직접적으로 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/05_monochrome-block-close-up-cup-body_kling4k_mockup.png",
           "assetHash": "63f04545b62d6105ca6dc061e2dd149f7887e5486c7b46d08c2bac16dd5d8ec0",
           "width": 4992,
@@ -451,7 +451,7 @@
         {
           "id": "coffee-asset-example-02-06",
           "title": "Coffee Mockup Example 2-6",
-          "description": "Pattern-only hanging cafe sign application using Midjourney 20 monochrome architectural block surface motif",
+          "description": "흑백 건축 블록처럼 정리된 면 구조와 단단한 대비가 표면을 차분하게 잡아주는 그래픽 시스템입니다. 카페 행잉 사인 표면에 그래픽이 들어가 공간 밖에서도 같은 브랜드 톤을 이어줍니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-02/2026-10-03/06_monochrome-block-hanging-cafe-sign_kling4k_mockup.png",
           "assetHash": "1e7a3828926fe417e5164fe7134f252dedd5c6267de68cc38d7c12334d49c82b",
           "width": 4992,
@@ -470,7 +470,7 @@
           "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
-      "synthesisTool": "Geometry-preserving upscale from approved mockup synthesis",
+      "synthesisTool": "High-resolution full-surface mockup integration",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
       "resynthesizedAt": "2026-10-03T01:20:00+09:00"
     },
@@ -478,14 +478,14 @@
       "id": "coffee-asset-example-04",
       "title": "Coffee Mockup Example 3",
       "created": "2026-10-10",
-      "status": "kling_4k_midjourney35_mockup_added",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 35 — Diagonal Textile Stripe Bands",
-      "description": "Kling 4K resynthesis: Midjourney 35 diagonal textile stripe material integrated onto Coffee Mockup Assets as the fourth coffee mockup example.",
+      "description": "대각선 텍스타일 스트라이프를 컵, 백, 사인 표면에 적용한 커피 목업 세트입니다. 사선의 방향감과 선명한 포인트 컬러가 브랜드 표면을 더 활동적으로 만듭니다.",
       "items": [
         {
           "id": "coffee-asset-example-04-01",
           "title": "Coffee Mockup Example 3-1",
-          "description": "Midjourney 35 diagonal textile stripe applied to paper cup sleeve/body surface.",
+          "description": "대각선 섬유 스트라이프와 청색·오렌지 포인트가 표면에 리듬감을 만드는 그래픽 시스템입니다. 종이컵 슬리브와 컵 바디에 그래픽이 감기며, 손에 닿는 작은 브랜드 표면으로 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-04/2026-10-10/01_stripe-cup-sleeve_midjourney-35_kling4k_mockup.png",
           "assetHash": "b84eb1e441520ae742306412deb1418c4912b44fff072ba80e66106cba1c9196",
           "width": 4992,
@@ -506,7 +506,7 @@
         {
           "id": "coffee-asset-example-04-02",
           "title": "Coffee Mockup Example 3-2",
-          "description": "Midjourney 35 diagonal textile stripe applied to coffee bag and counter cup surfaces.",
+          "description": "대각선 섬유 스트라이프와 청색·오렌지 포인트가 표면에 리듬감을 만드는 그래픽 시스템입니다. 커피백 전면과 카운터 위 컵 표면이 하나의 패키지 시스템처럼 이어집니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-04/2026-10-10/02_stripe-coffee-bag-and-cup-counter_midjourney-35_kling4k_mockup.png",
           "assetHash": "f35fa69e84666ad7b549297379056f1e95528e6527e498a4681a004465397480",
           "width": 4992,
@@ -527,7 +527,7 @@
         {
           "id": "coffee-asset-example-04-03",
           "title": "Coffee Mockup Example 3-3",
-          "description": "Midjourney 35 diagonal textile stripe applied to coffee bag front surface.",
+          "description": "대각선 섬유 스트라이프와 청색·오렌지 포인트가 표면에 리듬감을 만드는 그래픽 시스템입니다. 스택 형태의 컵과 백 전면에 패턴이 반복되어, 매대에서 보이는 세트감이 강조됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-04/2026-10-10/03_stripe-coffee-bag-front_midjourney-35_kling4k_mockup.png",
           "assetHash": "34f395bbae7e15081a1b4408cc4d6a7f5e5a11185e4b707a516f591b77c4acdd",
           "width": 4992,
@@ -548,7 +548,7 @@
         {
           "id": "coffee-asset-example-04-04",
           "title": "Coffee Mockup Example 3-4",
-          "description": "Midjourney 35 diagonal textile stripe applied to takeaway cup in-hand mockup.",
+          "description": "대각선 섬유 스트라이프와 청색·오렌지 포인트가 표면에 리듬감을 만드는 그래픽 시스템입니다. 테이크아웃 컵과 백 표면에 그래픽이 적용되어 이동 중에도 브랜드 표면이 유지됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-04/2026-10-10/04_stripe-takeaway-cup-hand_midjourney-35_kling4k_mockup.png",
           "assetHash": "9beb03277a6fae6b32a4c3c5b66320bee089b1c4269572542d73cfd3a09347cc",
           "width": 4992,
@@ -569,7 +569,7 @@
         {
           "id": "coffee-asset-example-04-05",
           "title": "Coffee Mockup Example 3-5",
-          "description": "Midjourney 35 diagonal textile stripe applied to close-up takeaway cup body.",
+          "description": "대각선 섬유 스트라이프와 청색·오렌지 포인트가 표면에 리듬감을 만드는 그래픽 시스템입니다. 클로즈업 컵 바디에서 재질, 곡면, 인쇄 패턴의 밀도가 가장 직접적으로 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-04/2026-10-10/05_stripe-close-up-cup-body_midjourney-35_kling4k_mockup.png",
           "assetHash": "3ca0294503b8e5656347dab98581dab9de4cd9882813bf90c81f4f49f7960264",
           "width": 4992,
@@ -590,7 +590,7 @@
         {
           "id": "coffee-asset-example-04-06",
           "title": "Coffee Mockup Example 3-6",
-          "description": "Midjourney 35 diagonal textile stripe applied to hanging cafe sign surface.",
+          "description": "대각선 섬유 스트라이프와 청색·오렌지 포인트가 표면에 리듬감을 만드는 그래픽 시스템입니다. 카페 행잉 사인 표면에 그래픽이 들어가 공간 밖에서도 같은 브랜드 톤을 이어줍니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-04/2026-10-10/06_stripe-hanging-cafe-sign_midjourney-35_kling4k_mockup.png",
           "assetHash": "41431d8fae9ed440a91a6d036a5229133843acebc33864c48a15e37f145dbfe6",
           "width": 4992,
@@ -615,14 +615,14 @@
       "id": "coffee-asset-example-03",
       "title": "Coffee Mockup Example 4",
       "created": "2026-09-28",
-      "status": "nano_banana_pro_pattern_only",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation",
-      "description": "Kling 4K pattern-only resynthesis: Midjourney 11 ambient blue-peach gradient surface translation motif integrated onto the same six Coffee Mockup Assets without logo lettering.",
+      "description": "블루·피치 그래디언트 표면을 다양한 목업에 적용한 세트입니다. 강한 패턴보다 빛, 온도, 여백감이 중심이 되는 부드러운 브랜드 표면을 보여줍니다.",
       "items": [
         {
           "id": "coffee-asset-example-03-01",
           "title": "Coffee Mockup Example 4-1",
-          "description": "Pattern-only cup sleeve application using Midjourney 11 ambient blue-peach gradient surface translation motif",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 종이컵 슬리브와 컵 바디에 그래픽이 감기며, 손에 닿는 작은 브랜드 표면으로 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/01_ambient-gradient-cup-sleeve_kling4k_mockup.png",
           "assetHash": "069f898501dccb86cd2eed9186f6c5b26e785b8d8d772e763d4b17b3db48022e",
           "width": 4992,
@@ -643,7 +643,7 @@
         {
           "id": "coffee-asset-example-03-02",
           "title": "Coffee Mockup Example 4-2",
-          "description": "Pattern-only coffee bag and cup counter application using Midjourney 11 ambient blue-peach gradient surface translation motif",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 커피백 전면과 카운터 위 컵 표면이 하나의 패키지 시스템처럼 이어집니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/02_ambient-gradient-coffee-bag-and-cup-counter_kling4k_mockup.png",
           "assetHash": "a46ca157facd194e49ad769eb4b04953bc61b841ee4a1ad027cbf0eb5775385e",
           "width": 4992,
@@ -664,7 +664,7 @@
         {
           "id": "coffee-asset-example-03-03",
           "title": "Coffee Mockup Example 4-3",
-          "description": "Pattern-only stacked cup set application using Midjourney 11 ambient blue-peach gradient surface translation motif",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 스택 형태의 컵과 백 전면에 패턴이 반복되어, 매대에서 보이는 세트감이 강조됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/03_ambient-gradient-stacked-cup-set_kling4k_mockup.png",
           "assetHash": "069064b39ab2d438689bd776bee0246a5034e38c8b68cdf5b13bccafd03a349e",
           "width": 4992,
@@ -685,7 +685,7 @@
         {
           "id": "coffee-asset-example-03-04",
           "title": "Coffee Mockup Example 4-4",
-          "description": "Pattern-only tote and takeaway cup application using Midjourney 11 ambient blue-peach gradient surface translation motif",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 테이크아웃 컵과 백 표면에 그래픽이 적용되어 이동 중에도 브랜드 표면이 유지됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/04_ambient-gradient-tote-and-takeaway-cup_kling4k_mockup.png",
           "assetHash": "8d8e0bbf227f39f70c14e768fe17484bc7364c8ca0a841011d76d93d4daa1d47",
           "width": 4992,
@@ -706,7 +706,7 @@
         {
           "id": "coffee-asset-example-03-05",
           "title": "Coffee Mockup Example 4-5",
-          "description": "Pattern-only close-up cup body application using Midjourney 11 ambient blue-peach gradient surface translation motif",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 클로즈업 컵 바디에서 재질, 곡면, 인쇄 패턴의 밀도가 가장 직접적으로 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/05_ambient-gradient-close-up-cup-body_kling4k_mockup.png",
           "assetHash": "4aa918353fc6e1dc6cbdd40ca895da92c8bce90f8b48f9bcafa143832c069095",
           "width": 4992,
@@ -727,7 +727,7 @@
         {
           "id": "coffee-asset-example-03-06",
           "title": "Coffee Mockup Example 4-6",
-          "description": "Pattern-only hanging cafe sign application using Midjourney 11 ambient blue-peach gradient surface translation motif",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 카페 행잉 사인 표면에 그래픽이 들어가 공간 밖에서도 같은 브랜드 톤을 이어줍니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup-4k/coffee-asset-example-05/2026-10-03/06_ambient-gradient-hanging-cafe-sign_kling4k_mockup.png",
           "assetHash": "2c98952209f65920360e6eedad3c8314665a3712d5d5f93ccbadd3e864759684",
           "width": 4992,
@@ -746,7 +746,7 @@
           "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
-      "synthesisTool": "Geometry-preserving upscale from approved mockup synthesis",
+      "synthesisTool": "High-resolution full-surface mockup integration",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
       "resynthesizedAt": "2026-10-03T01:20:00+09:00"
     },
@@ -755,16 +755,16 @@
       "tabId": "outdoor-mockup-1",
       "title": "Outdoor Mockup A-1",
       "created": "2026-10-08",
-      "status": "kling_image_to_image_hq_corrected_revision",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 08 — Soft Circular Ring Translation",
-      "description": "Outdoor Mockup A의 첫 번째 합성 세트입니다. Midjourney 8 Soft Circular Ring Translation을 A 목업 6개에 적용했습니다. A-1-5는 두 책자/보드의 seam과 별도 crop을 유지했습니다.",
+      "description": "부드러운 원형 링 그래픽을 Outdoor Mockup A 표면에 적용한 세트입니다. 콘크리트, 패브릭, 사인 같은 야외 재질 위에서 둥근 중심성과 차분한 확산감을 보여줍니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/08_08_soft_circular_ring_midjourney_translation_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-1",
       "items": [
         {
           "id": "outdoor-mockup-example-a-04-01",
           "title": "Outdoor Mockup A-1-1",
-          "description": "Midjourney 08 — Soft Circular Ring Translation를 Outdoor Paper Stack On Concrete에 full-surface로 자연 합성한 Outdoor Mockup A-1 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "부드러운 원형 링과 흐린 경계의 색면이 표면에 안정적인 중심감을 만드는 그래픽 시스템입니다. 콘크리트 위 종이 스택 전체에 그래픽이 감겨, 얇은 종이층과 인쇄 표면이 함께 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-04/2026-10-08/01_outdoor-mockup-a-4-1_midjourney-8_kling_hq.png",
           "assetHash": "faf8e93a0f61f6a7c97e45c2e67d6d157f0bc105262179a83de795c882c0d3cc",
           "width": 2496,
@@ -787,7 +787,7 @@
         {
           "id": "outdoor-mockup-example-a-04-02",
           "title": "Outdoor Mockup A-1-2",
-          "description": "Midjourney 08 — Soft Circular Ring Translation를 Single Card On Metal Grid에 full-surface로 자연 합성한 Outdoor Mockup A-1 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "부드러운 원형 링과 흐린 경계의 색면이 표면에 안정적인 중심감을 만드는 그래픽 시스템입니다. 메탈 그리드 위 단일 카드 표면에 그래픽이 꽉 차게 들어가 작은 브랜드 카드처럼 읽힙니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-04/2026-10-08/02_outdoor-mockup-a-4-2_midjourney-8_kling_hq.png",
           "assetHash": "12fc144643cf0ed35065cb30f6b1038b2fa8d91318fbb1b69aa7b56d7de0a03a",
           "width": 2496,
@@ -810,7 +810,7 @@
         {
           "id": "outdoor-mockup-example-a-04-03",
           "title": "Outdoor Mockup A-1-3",
-          "description": "Midjourney 08 — Soft Circular Ring Translation를 Vertical Fabric Banner On Stone Wall에 full-surface로 자연 합성한 Outdoor Mockup A-1 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "부드러운 원형 링과 흐린 경계의 색면이 표면에 안정적인 중심감을 만드는 그래픽 시스템입니다. 석재 벽 앞 세로 패브릭 배너에 그래픽이 적용되어, 천의 세로 흐름과 표면 텍스처가 살아납니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-04/2026-10-08/03_outdoor-mockup-a-4-3_midjourney-8_kling_hq.png",
           "assetHash": "72ae3f207a4aeabe7e700316a70996b11df825714275e4a0d19cfbc744ae2da0",
           "width": 2496,
@@ -833,7 +833,7 @@
         {
           "id": "outdoor-mockup-example-a-04-04",
           "title": "Outdoor Mockup A-1-4",
-          "description": "Midjourney 08 — Soft Circular Ring Translation를 Framed Wall Poster On Stone Facade에 full-surface로 자연 합성한 Outdoor Mockup A-1 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "부드러운 원형 링과 흐린 경계의 색면이 표면에 안정적인 중심감을 만드는 그래픽 시스템입니다. 석재 파사드의 프레임 포스터에 그래픽이 들어가 야외 벽면용 브랜드 패널처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-04/2026-10-08/04_outdoor-mockup-a-4-4_midjourney-8_kling_hq.png",
           "assetHash": "ed8dc553318dbb93f624643440af825d6ce52d71c76f8d9fbb685a385c95fdd5",
           "width": 2496,
@@ -856,7 +856,7 @@
         {
           "id": "outdoor-mockup-example-a-04-05",
           "title": "Outdoor Mockup A-1-5",
-          "description": "Midjourney 08 — Soft Circular Ring Translation를 White Board Set With Pebble Background에 full-surface로 자연 합성한 Outdoor Mockup A-1 세트입니다; original mockup shadows, folds, material cues preserved. Rev02는 Midjourney 8 링 그래픽을 더 확실히 적용하고, 두 보드의 seam과 별도 crop을 유지한 재합성본입니다.",
+          "description": "부드러운 원형 링과 흐린 경계의 색면이 표면에 안정적인 중심감을 만드는 그래픽 시스템입니다. 보드와 북렛, 작은 카드가 각각 다른 표면으로 분리되어 보이면서도 같은 그래픽 언어로 연결됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-04/2026-10-08/05_outdoor-mockup-a-4-5_rev02_fully-applied-separate-rings_midjourney-8_kling_hq.png",
           "assetHash": "d27a336260c7550aec83ee5f272cfc023ce4e4574a5a6dfbf12d792c58db054e",
           "width": 2496,
@@ -879,7 +879,7 @@
         {
           "id": "outdoor-mockup-example-a-04-06",
           "title": "Outdoor Mockup A-1-6",
-          "description": "Midjourney 08 — Soft Circular Ring Translation를 Hanging Outdoor Sign On Glass Facade에 full-surface로 자연 합성한 Outdoor Mockup A-1 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "부드러운 원형 링과 흐린 경계의 색면이 표면에 안정적인 중심감을 만드는 그래픽 시스템입니다. 유리 파사드 앞 행잉 사인 전체에 그래픽이 적용되어 거리에서 보이는 브랜드 신호가 됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-04/2026-10-08/06_outdoor-mockup-a-4-6_midjourney-8_kling_hq.png",
           "assetHash": "ef411b4dfbef6bbce0ddef24ca2c9edac5702e837587347d65f204b6ff124e7a",
           "width": 2496,
@@ -900,7 +900,7 @@
           "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
-      "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original mockups + source Midjourney 4K motif + rough direction image",
+      "synthesisTool": "High-resolution full-surface mockup integration",
       "resynthesizedAt": "2026-10-08T19:41:58+09:00",
       "displayOrder": 1,
       "renumberedAt": "2026-10-09T00:00:00+09:00"
@@ -910,16 +910,16 @@
       "tabId": "outdoor-mockup-1",
       "title": "Outdoor Mockup A-2",
       "created": "2026-10-08",
-      "status": "kling_a35_reference_full_bleed_revision",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 02 — Directional Flow",
-      "description": "Outdoor Mockup A의 두 번째 합성 세트입니다. Midjourney 2 Directional Flow을 A 목업 6개에 full-surface 방식으로 적용했습니다. A-2-5 rev03은 책자 분리감은 유지하고, 좌측 하단 작은 명함/카드를 Midjourney 02 그래픽으로 교체했습니다.",
+      "description": "밝은 방향성 흐름 그래픽을 Outdoor Mockup A 표면에 적용한 세트입니다. 강한 대비보다 부드러운 흐름, 여백, 얇은 움직임을 중심으로 한 야외 브랜드 표면입니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/02_02_directional_flow_midjourney_translation_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-1",
       "items": [
         {
           "id": "outdoor-mockup-example-a-08-01",
           "title": "Outdoor Mockup A-2-1",
-          "description": "Midjourney 02 — Directional Flow을 Outdoor Paper Stack On Concrete에 full-surface로 자연 합성한 Outdoor Mockup A-2 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "밝은 크림 톤과 흐르는 방향성이 표면에 조용한 움직임을 만드는 그래픽 시스템입니다. 콘크리트 위 종이 스택 전체에 그래픽이 감겨, 얇은 종이층과 인쇄 표면이 함께 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-08/2026-10-08/01_outdoor-mockup-a-2-1_midjourney-02_kling_hq.png",
           "assetHash": "5c495fbc96087b3f8ea3d0fd99d1cd1f58ef3b092b0bf0715504f8f1c7016e84",
           "width": 2496,
@@ -942,7 +942,7 @@
         {
           "id": "outdoor-mockup-example-a-08-02",
           "title": "Outdoor Mockup A-2-2",
-          "description": "Midjourney 02 — Directional Flow을 Single Card On Metal Grid에 full-surface로 자연 합성한 Outdoor Mockup A-2 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "밝은 크림 톤과 흐르는 방향성이 표면에 조용한 움직임을 만드는 그래픽 시스템입니다. 메탈 그리드 위 단일 카드 표면에 그래픽이 꽉 차게 들어가 작은 브랜드 카드처럼 읽힙니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-08/2026-10-08/02_outdoor-mockup-a-2-2_midjourney-02_kling_hq.png",
           "assetHash": "c006a17c915a3a13e631ac02d7f0b192ead02d5ec55fb67224f121138702d138",
           "width": 2496,
@@ -965,7 +965,7 @@
         {
           "id": "outdoor-mockup-example-a-08-03",
           "title": "Outdoor Mockup A-2-3",
-          "description": "Midjourney 02 — Directional Flow을 Vertical Fabric Banner On Stone Wall에 full-surface로 자연 합성한 Outdoor Mockup A-2 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "밝은 크림 톤과 흐르는 방향성이 표면에 조용한 움직임을 만드는 그래픽 시스템입니다. 석재 벽 앞 세로 패브릭 배너에 그래픽이 적용되어, 천의 세로 흐름과 표면 텍스처가 살아납니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-08/2026-10-08/03_outdoor-mockup-a-2-3_midjourney-02_kling_hq.png",
           "assetHash": "977d102604661ca1185cf87a790fb4f1896c2d4a4cbef349b28d8d4a4dba44e1",
           "width": 2496,
@@ -988,7 +988,7 @@
         {
           "id": "outdoor-mockup-example-a-08-04",
           "title": "Outdoor Mockup A-2-4",
-          "description": "Midjourney 02 — Directional Flow을 Framed Wall Poster On Stone Facade에 full-surface로 자연 합성한 Outdoor Mockup A-2 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "밝은 크림 톤과 흐르는 방향성이 표면에 조용한 움직임을 만드는 그래픽 시스템입니다. 석재 파사드의 프레임 포스터에 그래픽이 들어가 야외 벽면용 브랜드 패널처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-08/2026-10-08/04_outdoor-mockup-a-2-4_midjourney-02_kling_hq.png",
           "assetHash": "0f6fc43395bef40b337dc975f53e58c7044e363518121a32006eed8ccbe95120",
           "width": 2496,
@@ -1011,7 +1011,7 @@
         {
           "id": "outdoor-mockup-example-a-08-05",
           "title": "Outdoor Mockup A-2-5",
-          "description": "A-3-5의 꽉 찬 board/booklet coverage를 기준으로 다시 합성한 5번 목업입니다. 두 rear board/booklet, lower band, front overlap, small card가 source graphic으로 더 꽉 차게 보이도록 교정했습니다.",
+          "description": "밝은 크림 톤과 흐르는 방향성이 표면에 조용한 움직임을 만드는 그래픽 시스템입니다. 보드와 북렛, 작은 카드가 각각 다른 표면으로 분리되어 보이면서도 같은 그래픽 언어로 연결됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-08/2026-10-09/05_outdoor-mockup-a-2-5_rev05_stronger-cropped-full-bleed_midjourney-02_kling_hq.png",
           "assetHash": "9dccc7fe2da05d4d36b78512e7a433b73f456f235713423cff714bd9a3c65cc4",
           "width": 2496,
@@ -1034,7 +1034,7 @@
         {
           "id": "outdoor-mockup-example-a-08-06",
           "title": "Outdoor Mockup A-2-6",
-          "description": "Midjourney 02 — Directional Flow을 Hanging Outdoor Sign On Glass Facade에 full-surface로 자연 합성한 Outdoor Mockup A-2 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "밝은 크림 톤과 흐르는 방향성이 표면에 조용한 움직임을 만드는 그래픽 시스템입니다. 유리 파사드 앞 행잉 사인 전체에 그래픽이 적용되어 거리에서 보이는 브랜드 신호가 됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-08/2026-10-08/06_outdoor-mockup-a-2-6_midjourney-02_kling_hq.png",
           "assetHash": "d52f4a51d7a64a173a657c3c9b82244964894d12731dcce73fcaaeba85c77536",
           "width": 2496,
@@ -1055,7 +1055,7 @@
           "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
-      "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup A assets + source Midjourney 4K motif + rough direction image",
+      "synthesisTool": "High-resolution full-surface mockup integration",
       "resynthesizedAt": "2026-10-10T01:32:18+09:00",
       "displayOrder": 2,
       "renumberedAt": "2026-10-09T00:00:00+09:00"
@@ -1065,16 +1065,16 @@
       "tabId": "outdoor-mockup-1",
       "title": "Outdoor Mockup A-3",
       "created": "2026-10-08",
-      "status": "kling_image_to_image_hq_natural_revision",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 28 — Electric Blue Pinch Fold Field",
-      "description": "Outdoor Mockup A의 세 번째 합성 세트입니다. Midjourney 28 Electric Blue Pinch Fold Field를 A 목업 6개에 full-surface 방식으로 적용했습니다.",
+      "description": "강한 블루 접힘 구조를 Outdoor Mockup A 표면에 적용한 세트입니다. 종이, 패브릭, 사인 위에서 선명한 에너지와 물리적 표면감을 함께 보여줍니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/28_28_electric_blue_pinch_fold_field_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-1",
       "items": [
         {
           "id": "outdoor-mockup-example-a-02-01",
           "title": "Outdoor Mockup A-3-1",
-          "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 Outdoor Paper Stack On Concrete에 full-surface로 자연 합성한 A-2 세트입니다. paper stack full-surface blue pinch-fold print; original mockup shadows, folds, material cues preserved.",
+          "description": "전기적인 블루 톤과 접힌 듯한 핀치 구조가 강한 시각 에너지를 만드는 그래픽 시스템입니다. 콘크리트 위 종이 스택 전체에 그래픽이 감겨, 얇은 종이층과 인쇄 표면이 함께 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/01_outdoor-mockup-a-2-1_midjourney-28_kling_hq.png",
           "assetHash": "df4080835911cdbb1c0456ffea7b032250919d2e289854da8b4e1d53d4028137",
           "width": 2496,
@@ -1097,7 +1097,7 @@
         {
           "id": "outdoor-mockup-example-a-02-02",
           "title": "Outdoor Mockup A-3-2",
-          "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 Single Card On Metal Grid에 full-surface로 자연 합성한 A-2 세트입니다. card surface full-surface blue optical print; original mockup shadows, folds, material cues preserved.",
+          "description": "전기적인 블루 톤과 접힌 듯한 핀치 구조가 강한 시각 에너지를 만드는 그래픽 시스템입니다. 메탈 그리드 위 단일 카드 표면에 그래픽이 꽉 차게 들어가 작은 브랜드 카드처럼 읽힙니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/02_outdoor-mockup-a-2-2_midjourney-28_kling_hq.png",
           "assetHash": "a77b34477c70a32e91223026330473dba123335731b323813a4554baf90c1b70",
           "width": 2496,
@@ -1120,7 +1120,7 @@
         {
           "id": "outdoor-mockup-example-a-02-03",
           "title": "Outdoor Mockup A-3-3",
-          "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 Vertical Fabric Banner On Stone Wall에 full-surface로 자연 합성한 A-2 세트입니다. vertical fabric banner opaque full-surface blue print; original mockup shadows, folds, material cues preserved.",
+          "description": "전기적인 블루 톤과 접힌 듯한 핀치 구조가 강한 시각 에너지를 만드는 그래픽 시스템입니다. 석재 벽 앞 세로 패브릭 배너에 그래픽이 적용되어, 천의 세로 흐름과 표면 텍스처가 살아납니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/03_outdoor-mockup-a-2-3_midjourney-28_kling_hq.png",
           "assetHash": "478b11f1975710d53637c7d1ed97031e7aea3bc094ec9e14dd4c771375bcad4f",
           "width": 2496,
@@ -1143,7 +1143,7 @@
         {
           "id": "outdoor-mockup-example-a-02-04",
           "title": "Outdoor Mockup A-3-4",
-          "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 Framed Wall Poster On Stone Facade에 full-surface로 자연 합성한 A-2 세트입니다. framed wall poster full-panel electric blue surface; original mockup shadows, folds, material cues preserved.",
+          "description": "전기적인 블루 톤과 접힌 듯한 핀치 구조가 강한 시각 에너지를 만드는 그래픽 시스템입니다. 석재 파사드의 프레임 포스터에 그래픽이 들어가 야외 벽면용 브랜드 패널처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/04_outdoor-mockup-a-2-4_midjourney-28_kling_hq.png",
           "assetHash": "174deafbfe40156001f3f479782a387a05f4b474ffc92b49236a49e5fb2770ee",
           "width": 2496,
@@ -1166,7 +1166,7 @@
         {
           "id": "outdoor-mockup-example-a-02-05",
           "title": "Outdoor Mockup A-3-5",
-          "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 White Board Set With Pebble Background에 Kling으로 새로 재합성한 Outdoor Mockup A-3-5입니다. A-3-5처럼 두 책자/보드의 물리적 단차와 세로 seam을 유지하고, 한쪽은 기존 방향의 blue crop, 다른 한쪽은 별도 crop으로 적용해 하나의 연속 그래픽처럼 보이지 않도록 했습니다.",
+          "description": "전기적인 블루 톤과 접힌 듯한 핀치 구조가 강한 시각 에너지를 만드는 그래픽 시스템입니다. 보드와 북렛, 작은 카드가 각각 다른 표면으로 분리되어 보이면서도 같은 그래픽 언어로 연결됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/05_outdoor-mockup-a-2-5_rev05_two-distinct-board-crops_midjourney-28_kling_hq.png",
           "assetHash": "9b003cfa0b128ee8ee60142d03b35ba3811db1c4f6abcb0abafc319aab322fca",
           "width": 2496,
@@ -1189,7 +1189,7 @@
         {
           "id": "outdoor-mockup-example-a-02-06",
           "title": "Outdoor Mockup A-3-6",
-          "description": "Midjourney 28 — Electric Blue Pinch Fold Field를 Hanging Outdoor Sign On Glass Facade에 full-surface로 자연 합성한 A-2 세트입니다. hanging outdoor sign full-face blue optical surface; original mockup shadows, folds, material cues preserved.",
+          "description": "전기적인 블루 톤과 접힌 듯한 핀치 구조가 강한 시각 에너지를 만드는 그래픽 시스템입니다. 유리 파사드 앞 행잉 사인 전체에 그래픽이 적용되어 거리에서 보이는 브랜드 신호가 됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-02/2026-10-08/06_outdoor-mockup-a-2-6_midjourney-28_kling_hq.png",
           "assetHash": "94bdcd21d2b533480f5724bf19d12185fda3629b47d2e85ce1c3a60c0cdf5581",
           "width": 2496,
@@ -1210,7 +1210,7 @@
           "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
-      "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original mockup + rough direction + Midjourney 28 source graphic; full-surface application",
+      "synthesisTool": "High-resolution full-surface mockup integration",
       "resynthesizedAt": "2026-10-08T11:44:07+09:00",
       "displayOrder": 3,
       "renumberedAt": "2026-10-09T00:00:00+09:00"
@@ -1220,16 +1220,16 @@
       "tabId": "outdoor-mockup-1",
       "title": "Outdoor Mockup A-4",
       "created": "2026-10-09",
-      "status": "kling_a35_reference_full_bleed_revision",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 34 — Torn Cobalt Black Paper Edge",
-      "description": "Outdoor Mockup A-4는 Midjourney 34 Torn Cobalt Black Paper Edge를 적용한 세트입니다. A-4-1은 top stack까지, A-4-5는 lower band/card 영역까지 더 채워 보이도록 교정했습니다.",
+      "description": "코발트 블루와 블랙의 torn-paper 표면을 Outdoor Mockup A에 적용한 세트입니다. 종이 가장자리, 찢긴 면, 강한 대비가 야외 표면 위에서 또렷하게 작동합니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/34_34_torn_cobalt_black_paper_edge_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-1",
       "items": [
         {
           "id": "outdoor-mockup-example-a-11-01",
           "title": "Outdoor Mockup A-4-1",
-          "description": "Midjourney 34 — Torn Cobalt Black Paper Edge를 적용한 A-4-1 교정본입니다. 이전 버전에서 흰 카드 스택으로 남아 보이던 상단 printable surface까지 같은 MJ34 계열로 채워 full-surface 인상을 강화했습니다.",
+          "description": "코발트 블루와 블랙의 찢어진 종이 가장자리가 거친 레이어감과 선명한 대비를 만드는 그래픽 시스템입니다. 콘크리트 위 종이 스택 전체에 그래픽이 감겨, 얇은 종이층과 인쇄 표면이 함께 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/01_outdoor-mockup-a-4-1_rev03_full-surface-top-stack_midjourney-34_kling_hq.png",
           "assetHash": "acdbd2ba49a376647c258773c6d07a2af6879266870fe7e4ab2e0ca880233665",
           "width": 2496,
@@ -1251,7 +1251,7 @@
         {
           "id": "outdoor-mockup-example-a-11-02",
           "title": "Outdoor Mockup A-4-2",
-          "description": "Midjourney 34 — Torn Cobalt Black Paper Edge를 Single Card On Metal Grid에 full-surface로 자연 합성한 Outdoor Mockup A-4-2입니다. 코발트 블루와 블랙 torn paper edge 소재를 목업 표면에 물리적으로 인쇄된 듯 적용했습니다.",
+          "description": "코발트 블루와 블랙의 찢어진 종이 가장자리가 거친 레이어감과 선명한 대비를 만드는 그래픽 시스템입니다. 메탈 그리드 위 단일 카드 표면에 그래픽이 꽉 차게 들어가 작은 브랜드 카드처럼 읽힙니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/02_outdoor-mockup-a-4-2_midjourney-34_kling_hq.png",
           "assetHash": "5b82b149511ed63bf41832c879c658eceec1685ade7ea2d82f5adf550b5fbf91",
           "width": 2496,
@@ -1273,7 +1273,7 @@
         {
           "id": "outdoor-mockup-example-a-11-03",
           "title": "Outdoor Mockup A-4-3",
-          "description": "Midjourney 34 — Torn Cobalt Black Paper Edge를 Vertical Fabric Banner On Stone Wall에 full-surface로 자연 합성한 Outdoor Mockup A-4-3입니다. 코발트 블루와 블랙 torn paper edge 소재를 목업 표면에 물리적으로 인쇄된 듯 적용했습니다.",
+          "description": "코발트 블루와 블랙의 찢어진 종이 가장자리가 거친 레이어감과 선명한 대비를 만드는 그래픽 시스템입니다. 석재 벽 앞 세로 패브릭 배너에 그래픽이 적용되어, 천의 세로 흐름과 표면 텍스처가 살아납니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/03_outdoor-mockup-a-4-3_midjourney-34_kling_hq.png",
           "assetHash": "c90efe24d97fda0ceac8440b7419e0037ff8e0baefcb4bdf7487465c00d713eb",
           "width": 2496,
@@ -1295,7 +1295,7 @@
         {
           "id": "outdoor-mockup-example-a-11-04",
           "title": "Outdoor Mockup A-4-4",
-          "description": "Midjourney 34 — Torn Cobalt Black Paper Edge를 Framed Wall Poster On Stone Facade에 full-surface로 자연 합성한 Outdoor Mockup A-4-4입니다. 코발트 블루와 블랙 torn paper edge 소재를 목업 표면에 물리적으로 인쇄된 듯 적용했습니다.",
+          "description": "코발트 블루와 블랙의 찢어진 종이 가장자리가 거친 레이어감과 선명한 대비를 만드는 그래픽 시스템입니다. 석재 파사드의 프레임 포스터에 그래픽이 들어가 야외 벽면용 브랜드 패널처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/04_outdoor-mockup-a-4-4_midjourney-34_kling_hq.png",
           "assetHash": "de90a71c01967c62b55ab0d8aca6d38e60fefc1c43fa6858641b3483f14373b6",
           "width": 2496,
@@ -1317,7 +1317,7 @@
         {
           "id": "outdoor-mockup-example-a-11-05",
           "title": "Outdoor Mockup A-4-5",
-          "description": "A-3-5의 꽉 찬 board/booklet coverage를 기준으로 다시 합성한 5번 목업입니다. 두 rear board/booklet, lower band, front overlap, small card가 source graphic으로 더 꽉 차게 보이도록 교정했습니다.",
+          "description": "코발트 블루와 블랙의 찢어진 종이 가장자리가 거친 레이어감과 선명한 대비를 만드는 그래픽 시스템입니다. 보드와 북렛, 작은 카드가 각각 다른 표면으로 분리되어 보이면서도 같은 그래픽 언어로 연결됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/05_outdoor-mockup-a-4-5_rev05_a35-full-bleed-reference_midjourney-34_kling_hq.png",
           "assetHash": "61159314a11b5d3d9a7db44f013e5b0442a787fe3071712c82c9b41fc0cadf8b",
           "width": 2496,
@@ -1339,7 +1339,7 @@
         {
           "id": "outdoor-mockup-example-a-11-06",
           "title": "Outdoor Mockup A-4-6",
-          "description": "Midjourney 34 — Torn Cobalt Black Paper Edge를 Hanging Outdoor Sign On Glass Facade에 full-surface로 자연 합성한 Outdoor Mockup A-4-6입니다. 코발트 블루와 블랙 torn paper edge 소재를 목업 표면에 물리적으로 인쇄된 듯 적용했습니다.",
+          "description": "코발트 블루와 블랙의 찢어진 종이 가장자리가 거친 레이어감과 선명한 대비를 만드는 그래픽 시스템입니다. 유리 파사드 앞 행잉 사인 전체에 그래픽이 적용되어 거리에서 보이는 브랜드 신호가 됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-11/2026-10-09/06_outdoor-mockup-a-4-6_midjourney-34_kling_hq.png",
           "assetHash": "06e776617a453cdc86375aac10e249737608ee5ba2a301238512fb31247f72b9",
           "width": 2496,
@@ -1359,7 +1359,7 @@
           "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
-      "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup A assets + Midjourney 34 4K motif + rough direction image",
+      "synthesisTool": "High-resolution full-surface mockup integration",
       "resynthesizedAt": "2026-10-10T01:32:18+09:00",
       "displayOrder": 4
     },
@@ -1368,16 +1368,16 @@
       "tabId": "outdoor-mockup-1",
       "title": "Outdoor Mockup A-5",
       "created": "2026-10-09",
-      "status": "kling_a35_reference_full_bleed_revision",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 32 — Rounded Overprint Color Blocks",
-      "description": "Outdoor Mockup A의 다섯 번째 합성 세트입니다. Midjourney 32 Rounded Overprint Color Blocks를 A 목업 6개에 full-surface 방식으로 적용했습니다. A-5-5는 두 책자/보드와 작은 명함의 물리적 분리감을 유지했습니다.",
+      "description": "둥근 오버프린트 컬러 블록을 Outdoor Mockup A 표면에 적용한 세트입니다. 부드러운 형태, 겹침, 따뜻한 색면이 야외 매체 위에서 친근하고 그래픽적으로 보입니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/32_32_rounded_overprint_color_blocks_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-1",
       "items": [
         {
           "id": "outdoor-mockup-example-a-09-01",
           "title": "Outdoor Mockup A-5-1",
-          "description": "Midjourney 32 — Rounded Overprint Color Blocks를 Outdoor Paper Stack On Concrete에 full-surface로 자연 합성한 Outdoor Mockup A-5-1입니다. 원본 목업의 빛, 그림자, 재질감, 원근을 유지하면서 rounded overprint color block motif를 적용했습니다.",
+          "description": "둥근 오버프린트 컬러 블록이 겹치며 따뜻하고 그래픽적인 표면 리듬을 만드는 시스템입니다. 콘크리트 위 종이 스택 전체에 그래픽이 감겨, 얇은 종이층과 인쇄 표면이 함께 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-09/2026-10-09/01_outdoor-mockup-a-5-1_midjourney-32_kling_hq.png",
           "assetHash": "020cb97d4f4e0628a4a86622e95bbac253902b5067fad567739b3cbfdf0b3c27",
           "width": 2496,
@@ -1399,7 +1399,7 @@
         {
           "id": "outdoor-mockup-example-a-09-02",
           "title": "Outdoor Mockup A-5-2",
-          "description": "Midjourney 32 — Rounded Overprint Color Blocks를 Single Card On Metal Grid에 full-surface로 자연 합성한 Outdoor Mockup A-5-2입니다. 원본 목업의 빛, 그림자, 재질감, 원근을 유지하면서 rounded overprint color block motif를 적용했습니다.",
+          "description": "둥근 오버프린트 컬러 블록이 겹치며 따뜻하고 그래픽적인 표면 리듬을 만드는 시스템입니다. 메탈 그리드 위 단일 카드 표면에 그래픽이 꽉 차게 들어가 작은 브랜드 카드처럼 읽힙니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-09/2026-10-09/02_outdoor-mockup-a-5-2_midjourney-32_kling_hq.png",
           "assetHash": "b3c558c628e456e9de8d1afb6ea0bdc34738f871fcdec6fa37e2b5cd11b46b75",
           "width": 2496,
@@ -1421,7 +1421,7 @@
         {
           "id": "outdoor-mockup-example-a-09-03",
           "title": "Outdoor Mockup A-5-3",
-          "description": "Midjourney 32 — Rounded Overprint Color Blocks를 Vertical Fabric Banner On Stone Wall에 full-surface로 자연 합성한 Outdoor Mockup A-5-3입니다. 원본 목업의 빛, 그림자, 재질감, 원근을 유지하면서 rounded overprint color block motif를 적용했습니다.",
+          "description": "둥근 오버프린트 컬러 블록이 겹치며 따뜻하고 그래픽적인 표면 리듬을 만드는 시스템입니다. 석재 벽 앞 세로 패브릭 배너에 그래픽이 적용되어, 천의 세로 흐름과 표면 텍스처가 살아납니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-09/2026-10-09/03_outdoor-mockup-a-5-3_midjourney-32_kling_hq.png",
           "assetHash": "3f8c586a0666eeeec314abd97ed1068bfa6834bdf0cec043fcab8b99829809f4",
           "width": 2496,
@@ -1443,7 +1443,7 @@
         {
           "id": "outdoor-mockup-example-a-09-04",
           "title": "Outdoor Mockup A-5-4",
-          "description": "Midjourney 32 — Rounded Overprint Color Blocks를 Framed Wall Poster On Stone Facade에 full-surface로 자연 합성한 Outdoor Mockup A-5-4입니다. 원본 목업의 빛, 그림자, 재질감, 원근을 유지하면서 rounded overprint color block motif를 적용했습니다.",
+          "description": "둥근 오버프린트 컬러 블록이 겹치며 따뜻하고 그래픽적인 표면 리듬을 만드는 시스템입니다. 석재 파사드의 프레임 포스터에 그래픽이 들어가 야외 벽면용 브랜드 패널처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-09/2026-10-09/04_outdoor-mockup-a-5-4_midjourney-32_kling_hq.png",
           "assetHash": "d0c8d6c177df7bcdf5a4ce1ed72ba3c56a40588366f23aff77662ce3c9c438a5",
           "width": 2496,
@@ -1465,7 +1465,7 @@
         {
           "id": "outdoor-mockup-example-a-09-05",
           "title": "Outdoor Mockup A-5-5",
-          "description": "A-3-5의 꽉 찬 board/booklet coverage를 기준으로 다시 합성한 5번 목업입니다. 두 rear board/booklet, lower band, front overlap, small card가 source graphic으로 더 꽉 차게 보이도록 교정했습니다.",
+          "description": "둥근 오버프린트 컬러 블록이 겹치며 따뜻하고 그래픽적인 표면 리듬을 만드는 시스템입니다. 보드와 북렛, 작은 카드가 각각 다른 표면으로 분리되어 보이면서도 같은 그래픽 언어로 연결됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-09/2026-10-09/05_outdoor-mockup-a-5-5_rev03_stronger-cropped-full-bleed_midjourney-32_kling_hq.png",
           "assetHash": "9ea573d85c2b1355e91e4b87f5c7666ded55f917c9888de4f59635a93de858ba",
           "width": 2496,
@@ -1487,7 +1487,7 @@
         {
           "id": "outdoor-mockup-example-a-09-06",
           "title": "Outdoor Mockup A-5-6",
-          "description": "Midjourney 32 — Rounded Overprint Color Blocks를 Hanging Outdoor Sign On Glass Facade에 full-surface로 자연 합성한 Outdoor Mockup A-5-6입니다. 원본 목업의 빛, 그림자, 재질감, 원근을 유지하면서 rounded overprint color block motif를 적용했습니다.",
+          "description": "둥근 오버프린트 컬러 블록이 겹치며 따뜻하고 그래픽적인 표면 리듬을 만드는 시스템입니다. 유리 파사드 앞 행잉 사인 전체에 그래픽이 적용되어 거리에서 보이는 브랜드 신호가 됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-09/2026-10-09/06_outdoor-mockup-a-5-6_midjourney-32_kling_hq.png",
           "assetHash": "a9a802ce549058b29e68844b79025a79993dda124411c7d3e6d22c19f890dffd",
           "width": 2496,
@@ -1507,7 +1507,7 @@
           "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
-      "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup A assets + Midjourney 32 4K motif + rough direction image",
+      "synthesisTool": "High-resolution full-surface mockup integration",
       "resynthesizedAt": "2026-10-10T01:32:18+09:00",
       "displayOrder": 5
     },
@@ -1516,16 +1516,16 @@
       "tabId": "outdoor-mockup-2",
       "title": "Outdoor Mockup B-1",
       "created": "2026-10-05",
-      "status": "kling_image_to_image_hq_natural_revision",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 24 — Black Mountain Red Horizon Paper Surface",
-      "description": "Outdoor Mockup B의 첫 번째 합성 세트입니다. 기존 버전을 B-1로 정리했습니다.",
+      "description": "검은 산형 실루엣과 붉은 수평선 그래픽을 Outdoor Mockup B 표면에 적용한 세트입니다. 태그, 패브릭, 모바일 화면 위에서 강한 수평 구조와 깊은 색 대비를 보여줍니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/24_24_black_mountain_red_horizon_paper_surface_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-2",
       "items": [
         {
           "id": "outdoor-mockup-example-02-01",
           "title": "Outdoor Mockup B-1-1",
-          "description": "Kling HQ natural full-surface re-synthesis using Midjourney 24 black mountain red horizon surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
+          "description": "검은 산형 실루엣과 붉은 수평선이 표면에 묵직한 풍경감과 긴장감을 만드는 그래픽 시스템입니다. 손에 든 종이 태그 표면에 그래픽이 들어가 작지만 선명한 브랜드 샘플처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-02/2026-10-05/01_paper-tag-full-horizon-surface_rev05_kling_hq.png",
           "assetHash": "888fa3cbada73723294fc8f42a9667c11fbe9f5549986d9d5cee3849422719f4",
           "width": 2496,
@@ -1548,7 +1548,7 @@
         {
           "id": "outdoor-mockup-example-02-02",
           "title": "Outdoor Mockup B-1-2",
-          "description": "Kling HQ natural full-surface re-synthesis using Midjourney 24 black mountain red horizon surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
+          "description": "검은 산형 실루엣과 붉은 수평선이 표면에 묵직한 풍경감과 긴장감을 만드는 그래픽 시스템입니다. 어깨에 멘 큰 토트백 표면에 그래픽이 넓게 펼쳐져 패브릭 질감과 함께 읽힙니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-02/2026-10-05/02_shoulder-tote-cropped-horizon-surface_rev05_kling_hq.png",
           "assetHash": "4b7de97f305b759dc6673230851e486c7817238f09f26c46607d850aa0d0cc74",
           "width": 2496,
@@ -1571,7 +1571,7 @@
         {
           "id": "outdoor-mockup-example-02-03",
           "title": "Outdoor Mockup B-1-3",
-          "description": "Kling HQ natural full-surface re-synthesis using Midjourney 24 black mountain red horizon surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
+          "description": "검은 산형 실루엣과 붉은 수평선이 표면에 묵직한 풍경감과 긴장감을 만드는 그래픽 시스템입니다. 리브드 글라스 앞 스마트폰 화면에 그래픽이 채워져 디지털 브랜드 표면으로 전환됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-02/2026-10-05/03_phone-screen-full-horizon-graphic_rev05_kling_hq.png",
           "assetHash": "e951238a52b7abea60f0a572b5d7cea5a0458d87a6c694606a7aeb410c0ecbc4",
           "width": 2496,
@@ -1594,7 +1594,7 @@
         {
           "id": "outdoor-mockup-example-02-04",
           "title": "Outdoor Mockup B-1-4",
-          "description": "Kling HQ natural full-surface re-synthesis using Midjourney 24 black mountain red horizon surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
+          "description": "검은 산형 실루엣과 붉은 수평선이 표면에 묵직한 풍경감과 긴장감을 만드는 그래픽 시스템입니다. 화이트 버킷햇 곡면에 그래픽이 감기며 패브릭 제품 위의 패턴 적용감을 보여줍니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-02/2026-10-05/04_bucket-hat-cropped-horizon-surface_rev05_kling_hq.png",
           "assetHash": "1d73c04b1bbda1acd1f43b0ad8fd95f8bc91c47400adadb3ddf49a9fea007fe7",
           "width": 2496,
@@ -1617,7 +1617,7 @@
         {
           "id": "outdoor-mockup-example-02-05",
           "title": "Outdoor Mockup B-1-5",
-          "description": "Kling HQ natural full-surface re-synthesis using Midjourney 24 black mountain red horizon surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
+          "description": "검은 산형 실루엣과 붉은 수평선이 표면에 묵직한 풍경감과 긴장감을 만드는 그래픽 시스템입니다. 야외 의자 위 토트백 표면에 그래픽이 넓게 적용되어 생활 속 브랜드 오브젝트처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-02/2026-10-05/05_chair-tote-full-horizon-surface_rev05_kling_hq.png",
           "assetHash": "e260e5627b43359b01659dc122cbd8b28d450162c14e3fd9078b9e7bbba03114",
           "width": 2496,
@@ -1640,7 +1640,7 @@
         {
           "id": "outdoor-mockup-example-02-06",
           "title": "Outdoor Mockup B-1-6",
-          "description": "Kling HQ natural full-surface re-synthesis using Midjourney 24 black mountain red horizon surface; preserves original mockup camera, shadows, folds, and physical material while removing dirty mask edges and low-resolution artifacts.",
+          "description": "검은 산형 실루엣과 붉은 수평선이 표면에 묵직한 풍경감과 긴장감을 만드는 그래픽 시스템입니다. 블랙 펜스 앞 화이트 티셔츠에 그래픽이 인쇄되어 의류 표면에서의 활용 가능성을 보여줍니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-02/2026-10-05/06_t-shirt-cropped-horizon-surface_rev05_kling_hq.png",
           "assetHash": "ba9ca213ba4eb4cafb72a0541aa69ceb88d160013a52144a329afe4c0fdfb0c7",
           "width": 2496,
@@ -1661,7 +1661,7 @@
           "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
-      "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration revision; original mockup + source graphic + prior composite references; full-surface application, no small marks or solid-only treatments",
+      "synthesisTool": "High-resolution full-surface mockup integration",
       "resynthesizedAt": "2026-10-06T14:08:50+09:00",
       "displayOrder": 1,
       "renumberedAt": "2026-10-08T20:29:51+09:00"
@@ -1671,16 +1671,16 @@
       "tabId": "outdoor-mockup-2",
       "title": "Outdoor Mockup B-2",
       "created": "2026-10-08",
-      "status": "kling_image_to_image_hq_natural_revision",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 22 — Woven Modular Block Grid",
-      "description": "Outdoor Mockup B의 두 번째 합성 세트입니다. Midjourney 22 Woven Modular Block Grid를 B 목업 6개에 full-surface 방식으로 적용했습니다.",
+      "description": "모듈형 woven block grid를 Outdoor Mockup B 표면에 적용한 세트입니다. 패브릭, 종이 태그, 티셔츠 위에서 짜임새 있는 반복과 안정적인 패턴 밀도를 보여줍니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/22_22_woven_modular_block_grid_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-2",
       "items": [
         {
           "id": "outdoor-mockup-example-b-03-01",
           "title": "Outdoor Mockup B-2-1",
-          "description": "Midjourney 22 — Woven Modular Block Grid를 Held Paper Tag On Shadow Wall에 full-surface로 자연 합성한 Outdoor Mockup B-2 세트입니다. held paper tag full-surface printed material; original mockup shadows, folds, material cues preserved.",
+          "description": "직조된 듯한 모듈 블록 그리드가 섬유적 질서와 차분한 반복감을 만드는 그래픽 시스템입니다. 손에 든 종이 태그 표면에 그래픽이 들어가 작지만 선명한 브랜드 샘플처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/01_outdoor-mockup-b-3-1_midjourney-22_kling_hq.png",
           "assetHash": "65aa88725ad5136ed959848cc4748343e3998662619ca342c892b3c613653ab1",
           "width": 2496,
@@ -1703,7 +1703,7 @@
         {
           "id": "outdoor-mockup-example-b-03-02",
           "title": "Outdoor Mockup B-2-2",
-          "description": "Midjourney 22 — Woven Modular Block Grid를 Large Tote Bag On Shoulder에 full-surface로 자연 합성한 Outdoor Mockup B-2 세트입니다. large shoulder tote full-surface fabric print; original mockup shadows, folds, material cues preserved.",
+          "description": "직조된 듯한 모듈 블록 그리드가 섬유적 질서와 차분한 반복감을 만드는 그래픽 시스템입니다. 어깨에 멘 큰 토트백 표면에 그래픽이 넓게 펼쳐져 패브릭 질감과 함께 읽힙니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/02_outdoor-mockup-b-3-2_midjourney-22_kling_hq.png",
           "assetHash": "88ee2ea9fc06670bb5505d008c55c4c57b3767a17d82a8b7a1aef635c5507f65",
           "width": 2496,
@@ -1726,7 +1726,7 @@
         {
           "id": "outdoor-mockup-example-b-03-03",
           "title": "Outdoor Mockup B-2-3",
-          "description": "Midjourney 22 — Woven Modular Block Grid를 Phone Screen On Ribbed Glass에 full-surface로 자연 합성한 Outdoor Mockup B-2 세트입니다. phone screen full-frame graphic surface; original mockup shadows, folds, material cues preserved.",
+          "description": "직조된 듯한 모듈 블록 그리드가 섬유적 질서와 차분한 반복감을 만드는 그래픽 시스템입니다. 리브드 글라스 앞 스마트폰 화면에 그래픽이 채워져 디지털 브랜드 표면으로 전환됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/03_outdoor-mockup-b-3-3_midjourney-22_kling_hq.png",
           "assetHash": "9c87801b22f459dc2d513e21f514195df3cfa28f483dfcd267cdd823ff306c72",
           "width": 2496,
@@ -1749,7 +1749,7 @@
         {
           "id": "outdoor-mockup-example-b-03-04",
           "title": "Outdoor Mockup B-2-4",
-          "description": "Midjourney 22 — Woven Modular Block Grid를 White Bucket Hat On Stand에 Kling으로 재합성한 B-3-4입니다. 패턴 스케일을 키우고 작은 체크 밀도를 줄여 더 차분하고 큰 블록의 woven textile 느낌으로 수정했습니다.",
+          "description": "직조된 듯한 모듈 블록 그리드가 섬유적 질서와 차분한 반복감을 만드는 그래픽 시스템입니다. 화이트 버킷햇 곡면에 그래픽이 감기며 패브릭 제품 위의 패턴 적용감을 보여줍니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/04_outdoor-mockup-b-3-4_rev02_large-scale-pattern_midjourney-22_kling_hq.png",
           "assetHash": "724cb007bc77d7c9a3a56ed77f1078c672bd28818dcdebf8eb5718a8dabc2dde",
           "width": 2496,
@@ -1772,7 +1772,7 @@
         {
           "id": "outdoor-mockup-example-b-03-05",
           "title": "Outdoor Mockup B-2-5",
-          "description": "Midjourney 22 — Woven Modular Block Grid를 Tote Bag On Chair Outdoor에 full-surface로 자연 합성한 Outdoor Mockup B-2 세트입니다. chair tote large fabric surface print; original mockup shadows, folds, material cues preserved.",
+          "description": "직조된 듯한 모듈 블록 그리드가 섬유적 질서와 차분한 반복감을 만드는 그래픽 시스템입니다. 야외 의자 위 토트백 표면에 그래픽이 넓게 적용되어 생활 속 브랜드 오브젝트처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/05_outdoor-mockup-b-3-5_midjourney-22_kling_hq.png",
           "assetHash": "7e884c9a1cc632695a3be56da6a4608881c89525d914e546098e5628704c42df",
           "width": 2496,
@@ -1795,7 +1795,7 @@
         {
           "id": "outdoor-mockup-example-b-03-06",
           "title": "Outdoor Mockup B-2-6",
-          "description": "Midjourney 22 — Woven Modular Block Grid를 White T-Shirt On Black Fence에 Kling으로 재합성한 B-3-6입니다. 기존보다 패턴 스케일을 키우고 더 넓직한 woven modular block으로 적용해 오밀조밀한 느낌을 줄였습니다.",
+          "description": "직조된 듯한 모듈 블록 그리드가 섬유적 질서와 차분한 반복감을 만드는 그래픽 시스템입니다. 블랙 펜스 앞 화이트 티셔츠에 그래픽이 인쇄되어 의류 표면에서의 활용 가능성을 보여줍니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-03/2026-10-08/06_outdoor-mockup-b-3-6_rev02_large-scale-pattern_midjourney-22_kling_hq.png",
           "assetHash": "7a7ab503e831ab392a67a41c825d23843359be6383540d79cf5b760a2ec3ba6d",
           "width": 2496,
@@ -1816,7 +1816,7 @@
           "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
-      "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup B assets + rough direction + selected Midjourney source graphic; full-surface application",
+      "synthesisTool": "High-resolution full-surface mockup integration",
       "resynthesizedAt": "2026-10-08T17:29:17+09:00",
       "displayOrder": 2,
       "renumberedAt": "2026-10-08T20:29:51+09:00"
@@ -1826,16 +1826,16 @@
       "tabId": "outdoor-mockup-2",
       "title": "Outdoor Mockup B-3",
       "created": "2026-10-08",
-      "status": "kling_image_to_image_hq_corrected_revision",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 30 — Warm Horizon Brush Field",
-      "description": "Outdoor Mockup B의 세 번째 합성 세트입니다. Midjourney 30 Warm Horizon Brush Field를 B 목업 6개에 적용했습니다.",
+      "description": "따뜻한 horizon brush field를 Outdoor Mockup B 표면에 적용한 세트입니다. 패브릭과 종이 표면 위에서 온화한 색 번짐, 수평 리듬, 자연스러운 재질감을 보여줍니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-05/30_30_warm_horizon_brush_field_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-2",
       "items": [
         {
           "id": "outdoor-mockup-example-b-04-01",
           "title": "Outdoor Mockup B-3-1",
-          "description": "Midjourney 30 — Warm Horizon Brush Field를 Held Paper Tag On Shadow Wall에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "따뜻한 수평 브러시 필드가 표면에 햇빛 같은 온도와 부드러운 움직임을 만드는 그래픽 시스템입니다. 손에 든 종이 태그 표면에 그래픽이 들어가 작지만 선명한 브랜드 샘플처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/01_outdoor-mockup-b-4-1_midjourney-30_kling_hq.png",
           "assetHash": "de5aec3f8838268119728f7c45e693c84a5aa6908e57276ae8a20acc2fecc8b5",
           "width": 2496,
@@ -1858,7 +1858,7 @@
         {
           "id": "outdoor-mockup-example-b-04-02",
           "title": "Outdoor Mockup B-3-2",
-          "description": "Midjourney 30 — Warm Horizon Brush Field를 Large Tote Bag On Shoulder에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "따뜻한 수평 브러시 필드가 표면에 햇빛 같은 온도와 부드러운 움직임을 만드는 그래픽 시스템입니다. 어깨에 멘 큰 토트백 표면에 그래픽이 넓게 펼쳐져 패브릭 질감과 함께 읽힙니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/02_outdoor-mockup-b-4-2_midjourney-30_kling_hq.png",
           "assetHash": "0f52faa1317531ae546775011432e340361814b73fac8a0f395ee126f8c7181d",
           "width": 2496,
@@ -1881,7 +1881,7 @@
         {
           "id": "outdoor-mockup-example-b-04-03",
           "title": "Outdoor Mockup B-3-3",
-          "description": "Midjourney 30 — Warm Horizon Brush Field를 Phone Screen On Ribbed Glass에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "따뜻한 수평 브러시 필드가 표면에 햇빛 같은 온도와 부드러운 움직임을 만드는 그래픽 시스템입니다. 리브드 글라스 앞 스마트폰 화면에 그래픽이 채워져 디지털 브랜드 표면으로 전환됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/03_outdoor-mockup-b-4-3_midjourney-30_kling_hq.png",
           "assetHash": "97082460d55b9138a9d7e3ecfa97479cb67ce040f28a330fc94a89f137166466",
           "width": 2496,
@@ -1904,7 +1904,7 @@
         {
           "id": "outdoor-mockup-example-b-04-04",
           "title": "Outdoor Mockup B-3-4",
-          "description": "Midjourney 30 — Warm Horizon Brush Field를 White Bucket Hat On Stand에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "따뜻한 수평 브러시 필드가 표면에 햇빛 같은 온도와 부드러운 움직임을 만드는 그래픽 시스템입니다. 화이트 버킷햇 곡면에 그래픽이 감기며 패브릭 제품 위의 패턴 적용감을 보여줍니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/04_outdoor-mockup-b-4-4_large-scale-apparel_midjourney-30_kling_hq.png",
           "assetHash": "eadd033b1b87f6037f47491f4eab2e3f677bfd747b9220fa7b30278ddfba9158",
           "width": 2496,
@@ -1927,7 +1927,7 @@
         {
           "id": "outdoor-mockup-example-b-04-05",
           "title": "Outdoor Mockup B-3-5",
-          "description": "Midjourney 30 — Warm Horizon Brush Field를 Tote Bag On Chair Outdoor에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다; original mockup shadows, folds, material cues preserved. Rev02는 때묻은 느낌을 줄이고 깨끗한 토트백 패브릭 프린트로 자연스럽게 재합성한 버전입니다.",
+          "description": "따뜻한 수평 브러시 필드가 표면에 햇빛 같은 온도와 부드러운 움직임을 만드는 그래픽 시스템입니다. 야외 의자 위 토트백 표면에 그래픽이 넓게 적용되어 생활 속 브랜드 오브젝트처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/05_outdoor-mockup-b-4-5_rev02_clean-natural-tote_midjourney-30_kling_hq.png",
           "assetHash": "9e746882a14e23f7dfbd9c11698ff166827eb5fe026601ffa7c4919acbd00fc1",
           "width": 2496,
@@ -1950,7 +1950,7 @@
         {
           "id": "outdoor-mockup-example-b-04-06",
           "title": "Outdoor Mockup B-3-6",
-          "description": "Midjourney 30 — Warm Horizon Brush Field를 White T-Shirt On Black Fence에 full-surface로 자연 합성한 Outdoor Mockup B-3 세트입니다; original mockup shadows, folds, material cues preserved.",
+          "description": "따뜻한 수평 브러시 필드가 표면에 햇빛 같은 온도와 부드러운 움직임을 만드는 그래픽 시스템입니다. 블랙 펜스 앞 화이트 티셔츠에 그래픽이 인쇄되어 의류 표면에서의 활용 가능성을 보여줍니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-04/2026-10-08/06_outdoor-mockup-b-4-6_large-scale-apparel_midjourney-30_kling_hq.png",
           "assetHash": "b5a497513c384bef3f628f9e21d61acb19e46e55ede957cff46cd3034ab6ac82",
           "width": 2496,
@@ -1971,7 +1971,7 @@
           "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
-      "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original mockups + source Midjourney 4K motif + rough direction image",
+      "synthesisTool": "High-resolution full-surface mockup integration",
       "resynthesizedAt": "2026-10-08T19:41:58+09:00",
       "displayOrder": 3,
       "renumberedAt": "2026-10-08T20:29:51+09:00"
@@ -1981,16 +1981,16 @@
       "tabId": "outdoor-mockup-2",
       "title": "Outdoor Mockup B-4",
       "created": "2026-10-08",
-      "status": "kling_image_to_image_hq_natural_revision",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 23 — Coral Black Stripe Block Surface",
-      "description": "Outdoor Mockup B의 네 번째 합성 세트입니다. Midjourney 23 Coral Black Stripe Block Surface를 B 목업 6개에 full-surface 방식으로 적용했습니다.",
+      "description": "코랄·블랙 스트라이프 블록 표면을 Outdoor Mockup B에 적용한 세트입니다. 큰 색면과 선형 포인트가 태그, 가방, 티셔츠 표면을 더 또렷하고 도시적으로 만듭니다.",
       "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-02/23_23_coral_black_stripe_block_surface_manual_midjourney_kling4k.png",
       "mockupCollectionId": "outdoor-mockup-assets-2",
       "items": [
         {
           "id": "outdoor-mockup-example-b-02-01",
           "title": "Outdoor Mockup B-4-1",
-          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 Held Paper Tag On Shadow Wall에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다. held paper tag full-surface printed material; original mockup shadows, folds, material cues preserved.",
+          "description": "코랄과 블랙의 스트라이프 블록이 선명한 방향감과 그래픽 대비를 만드는 시스템입니다. 손에 든 종이 태그 표면에 그래픽이 들어가 작지만 선명한 브랜드 샘플처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/01_outdoor-mockup-b-2-1_midjourney-23_kling_hq.png",
           "assetHash": "097018934d374a8462254d2e024a7ee130d0846542cbe58407f96e98d3764ccc",
           "width": 2496,
@@ -2013,7 +2013,7 @@
         {
           "id": "outdoor-mockup-example-b-02-02",
           "title": "Outdoor Mockup B-4-2",
-          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 Large Tote Bag On Shoulder에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다. large shoulder tote full-surface fabric print; original mockup shadows, folds, material cues preserved.",
+          "description": "코랄과 블랙의 스트라이프 블록이 선명한 방향감과 그래픽 대비를 만드는 시스템입니다. 어깨에 멘 큰 토트백 표면에 그래픽이 넓게 펼쳐져 패브릭 질감과 함께 읽힙니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/02_outdoor-mockup-b-2-2_midjourney-23_kling_hq.png",
           "assetHash": "d090f78bdb79e4b2eed0764907b82aaad40a8e3bc01ad523d509ecf0065c2671",
           "width": 2496,
@@ -2036,7 +2036,7 @@
         {
           "id": "outdoor-mockup-example-b-02-03",
           "title": "Outdoor Mockup B-4-3",
-          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 Phone Screen On Ribbed Glass에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다. phone screen full-frame graphic surface; original mockup shadows, folds, material cues preserved.",
+          "description": "코랄과 블랙의 스트라이프 블록이 선명한 방향감과 그래픽 대비를 만드는 시스템입니다. 리브드 글라스 앞 스마트폰 화면에 그래픽이 채워져 디지털 브랜드 표면으로 전환됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/03_outdoor-mockup-b-2-3_midjourney-23_kling_hq.png",
           "assetHash": "abffc1005f14a835f60e80767084bb9142bfe83dba4d3446a4c8475a68a3150a",
           "width": 2496,
@@ -2059,7 +2059,7 @@
         {
           "id": "outdoor-mockup-example-b-02-04",
           "title": "Outdoor Mockup B-4-4",
-          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 White Bucket Hat On Stand에 Kling으로 재합성한 B-2-4입니다. 기존보다 큰 color field를 우선하고 stripe를 edge accent로 줄이려는 방향의 자연 합성 revision입니다.",
+          "description": "코랄과 블랙의 스트라이프 블록이 선명한 방향감과 그래픽 대비를 만드는 시스템입니다. 화이트 버킷햇 곡면에 그래픽이 감기며 패브릭 제품 위의 패턴 적용감을 보여줍니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/04_outdoor-mockup-b-2-4_rev04_large-front-fields-edge-stripe_midjourney-23_kling_hq.png",
           "assetHash": "853655c6794e8f79d8005213d2a3a238a48663421317bfeff74c6284e95a7b45",
           "width": 2496,
@@ -2082,7 +2082,7 @@
         {
           "id": "outdoor-mockup-example-b-02-05",
           "title": "Outdoor Mockup B-4-5",
-          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 Tote Bag On Chair Outdoor에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다. chair tote large fabric surface print; original mockup shadows, folds, material cues preserved.",
+          "description": "코랄과 블랙의 스트라이프 블록이 선명한 방향감과 그래픽 대비를 만드는 시스템입니다. 야외 의자 위 토트백 표면에 그래픽이 넓게 적용되어 생활 속 브랜드 오브젝트처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/05_outdoor-mockup-b-2-5_midjourney-23_kling_hq.png",
           "assetHash": "f7cdec3a97a02003ce94bf09c1e40dfaa460c33c4c4b549d83106309e971b785",
           "width": 2496,
@@ -2105,7 +2105,7 @@
         {
           "id": "outdoor-mockup-example-b-02-06",
           "title": "Outdoor Mockup B-4-6",
-          "description": "Midjourney 23 — Coral Black Stripe Block Surface를 White T-Shirt On Black Fence에 full-surface로 자연 합성한 Outdoor Mockup B-4 세트입니다. t-shirt textile print integrated with folds and fence shadows; original mockup shadows, folds, material cues preserved.",
+          "description": "코랄과 블랙의 스트라이프 블록이 선명한 방향감과 그래픽 대비를 만드는 시스템입니다. 블랙 펜스 앞 화이트 티셔츠에 그래픽이 인쇄되어 의류 표면에서의 활용 가능성을 보여줍니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-02/2026-10-08/06_outdoor-mockup-b-2-6_midjourney-23_kling_hq.png",
           "assetHash": "241003c7c32468fdeb43e8e46856c67d9ee63f66a2eb59870582b13f08c18dcf",
           "width": 2496,
@@ -2126,7 +2126,7 @@
           "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
-      "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup B assets + rough direction + selected Midjourney source graphic; full-surface application",
+      "synthesisTool": "High-resolution full-surface mockup integration",
       "resynthesizedAt": "2026-10-08T17:18:00+09:00",
       "displayOrder": 4,
       "renumberedAt": "2026-10-08T20:29:51+09:00"
@@ -2137,14 +2137,14 @@
       "created": "2026-10-10",
       "tabId": "outdoor-mockup-1",
       "displayOrder": 6,
-      "status": "kling_midjourney11_outdoor_a_set_added",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation",
-      "description": "Outdoor Mockup A set using Midjourney 11 ambient blue-peach gradient, added as the last A example.",
+      "description": "블루·피치 그래디언트 표면을 다양한 목업에 적용한 세트입니다. 강한 패턴보다 빛, 온도, 여백감이 중심이 되는 부드러운 브랜드 표면을 보여줍니다.",
       "items": [
         {
           "id": "outdoor-mockup-example-a-12-01",
           "title": "Outdoor Mockup A-6-1",
-          "description": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation applied to Outdoor Mockup A-6-1.",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 콘크리트 위 종이 스택 전체에 그래픽이 감겨, 얇은 종이층과 인쇄 표면이 함께 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-12/2026-10-10/01_outdoor-mockup-a-6-1_paper-stacks-on-concrete_midjourney-11_kling_hq.png",
           "assetHash": "3bcb9d6d5bfecec7d69c228ab93078299d9f87b17fdc8e559a4426b1fcb8e59e",
           "width": 2496,
@@ -2165,7 +2165,7 @@
         {
           "id": "outdoor-mockup-example-a-12-02",
           "title": "Outdoor Mockup A-6-2",
-          "description": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation applied to Outdoor Mockup A-6-2.",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 메탈 그리드 위 단일 카드 표면에 그래픽이 꽉 차게 들어가 작은 브랜드 카드처럼 읽힙니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-12/2026-10-10/02_outdoor-mockup-a-6-2_single-card-on-metal-grid_midjourney-11_kling_hq.png",
           "assetHash": "49abddb12ddfe9f92900091f2c2693ef9e617630dacbaf990af8687413808f8d",
           "width": 2496,
@@ -2186,7 +2186,7 @@
         {
           "id": "outdoor-mockup-example-a-12-03",
           "title": "Outdoor Mockup A-6-3",
-          "description": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation applied to Outdoor Mockup A-6-3.",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 석재 벽 앞 세로 패브릭 배너에 그래픽이 적용되어, 천의 세로 흐름과 표면 텍스처가 살아납니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-12/2026-10-10/03_outdoor-mockup-a-6-3_vertical-fabric-banner_midjourney-11_kling_hq.png",
           "assetHash": "bc383502edaa2d450a303603cad69e4b798a9134e72503062591d8eebd258857",
           "width": 2496,
@@ -2207,7 +2207,7 @@
         {
           "id": "outdoor-mockup-example-a-12-04",
           "title": "Outdoor Mockup A-6-4",
-          "description": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation applied to Outdoor Mockup A-6-4.",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 석재 파사드의 프레임 포스터에 그래픽이 들어가 야외 벽면용 브랜드 패널처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-12/2026-10-10/04_outdoor-mockup-a-6-4_framed-wall-poster_midjourney-11_kling_hq.png",
           "assetHash": "1da19a4ea6805123cdfc914d03ee3f3fce92c4e5ee3e9ef92abc08db85a42c15",
           "width": 2496,
@@ -2228,7 +2228,7 @@
         {
           "id": "outdoor-mockup-example-a-12-05",
           "title": "Outdoor Mockup A-6-5",
-          "description": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation applied to Outdoor Mockup A-6-5.",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 보드와 북렛, 작은 카드가 각각 다른 표면으로 분리되어 보이면서도 같은 그래픽 언어로 연결됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-12/2026-10-10/05_outdoor-mockup-a-6-5_white-board-set-full-bleed_midjourney-11_kling_hq.png",
           "assetHash": "61b6e2552fb00547302e134c49de8d4a8e77cf63f58028caffb6ea7dff01eed3",
           "width": 2496,
@@ -2249,7 +2249,7 @@
         {
           "id": "outdoor-mockup-example-a-12-06",
           "title": "Outdoor Mockup A-6-6",
-          "description": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation applied to Outdoor Mockup A-6-6.",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 유리 파사드 앞 행잉 사인 전체에 그래픽이 적용되어 거리에서 보이는 브랜드 신호가 됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-a-12/2026-10-10/06_outdoor-mockup-a-6-6_hanging-outdoor-sign_midjourney-11_kling_hq.png",
           "assetHash": "8b07f0d8e42052eb1b7cb1f4330e1622e248a017be9cd5012bf2e8bc1cbd4bba",
           "width": 2496,
@@ -2276,14 +2276,14 @@
       "created": "2026-10-10",
       "tabId": "outdoor-mockup-2",
       "displayOrder": 5,
-      "status": "kling_midjourney11_outdoor_b_set_added",
+      "status": "Surface study",
       "sourceGraphic": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation",
-      "description": "Outdoor Mockup B set using Midjourney 11 ambient blue-peach gradient, added as the last B example.",
+      "description": "블루·피치 그래디언트 표면을 다양한 목업에 적용한 세트입니다. 강한 패턴보다 빛, 온도, 여백감이 중심이 되는 부드러운 브랜드 표면을 보여줍니다.",
       "items": [
         {
           "id": "outdoor-mockup-example-b-05-01",
           "title": "Outdoor Mockup B-5-1",
-          "description": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation applied to Outdoor Mockup B-5-1.",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 손에 든 종이 태그 표면에 그래픽이 들어가 작지만 선명한 브랜드 샘플처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-05/2026-10-10/01_outdoor-mockup-b-5-1_held-paper-tag_midjourney-11_kling_hq.png",
           "assetHash": "24d548ef21e120ef8502ebeadff03fca69c00afe39af214fa7f3ea27e4e9f2dd",
           "width": 2496,
@@ -2304,7 +2304,7 @@
         {
           "id": "outdoor-mockup-example-b-05-02",
           "title": "Outdoor Mockup B-5-2",
-          "description": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation applied to Outdoor Mockup B-5-2.",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 어깨에 멘 큰 토트백 표면에 그래픽이 넓게 펼쳐져 패브릭 질감과 함께 읽힙니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-05/2026-10-10/02_outdoor-mockup-b-5-2_large-tote-bag_midjourney-11_kling_hq.png",
           "assetHash": "8d99932123bac388a9e339fd7ba938844c4c553a558089f53b08ed25e2bf83d2",
           "width": 2496,
@@ -2325,7 +2325,7 @@
         {
           "id": "outdoor-mockup-example-b-05-03",
           "title": "Outdoor Mockup B-5-3",
-          "description": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation applied to Outdoor Mockup B-5-3.",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 리브드 글라스 앞 스마트폰 화면에 그래픽이 채워져 디지털 브랜드 표면으로 전환됩니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-05/2026-10-10/03_outdoor-mockup-b-5-3_phone-screen_midjourney-11_kling_hq.png",
           "assetHash": "e57a22e07e48f76aad2e6cf89cca112bef2c21c4a97d19e5ce6d2a167bf915dd",
           "width": 2496,
@@ -2346,7 +2346,7 @@
         {
           "id": "outdoor-mockup-example-b-05-04",
           "title": "Outdoor Mockup B-5-4",
-          "description": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation applied to Outdoor Mockup B-5-4.",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 화이트 버킷햇 곡면에 그래픽이 감기며 패브릭 제품 위의 패턴 적용감을 보여줍니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-05/2026-10-10/04_outdoor-mockup-b-5-4_bucket-hat_midjourney-11_kling_hq.png",
           "assetHash": "1932111ebb19209a6851815c99d0531ddb6eba3cdc2b6089ef1fe1c04cbf7abd",
           "width": 2496,
@@ -2367,7 +2367,7 @@
         {
           "id": "outdoor-mockup-example-b-05-05",
           "title": "Outdoor Mockup B-5-5",
-          "description": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation applied to Outdoor Mockup B-5-5.",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 야외 의자 위 토트백 표면에 그래픽이 넓게 적용되어 생활 속 브랜드 오브젝트처럼 보입니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-05/2026-10-10/05_outdoor-mockup-b-5-5_tote-bag-on-chair_midjourney-11_kling_hq.png",
           "assetHash": "ac03558c63e5dd6e2783af2729ab4f8d703d2a00ef140fafb17d059cae8e82b6",
           "width": 2496,
@@ -2388,7 +2388,7 @@
         {
           "id": "outdoor-mockup-example-b-05-06",
           "title": "Outdoor Mockup B-5-6",
-          "description": "Midjourney 11 — Ambient Blue-Peach Gradient Surface Translation applied to Outdoor Mockup B-5-6.",
+          "description": "블루와 피치 톤이 부드럽게 번지는 그래디언트 표면이 차분하고 공기감 있는 분위기를 만드는 그래픽 시스템입니다. 블랙 펜스 앞 화이트 티셔츠에 그래픽이 인쇄되어 의류 표면에서의 활용 가능성을 보여줍니다.",
           "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/outdoor-mockup-example-b-05/2026-10-10/06_outdoor-mockup-b-5-6_white-tshirt_midjourney-11_kling_hq.png",
           "assetHash": "e50913834d0b3b599581302465509602d9b802533f613a440e8fd5740ec97a9e",
           "width": 2496,
