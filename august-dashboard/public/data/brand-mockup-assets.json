@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-10T14:58:18+09:00",
+  "generatedAt": "2026-10-10T16:08:13+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples are Kling 4K resyntheses using Chris-selected Midjourney 4K source graphics; excludes private chats, credentials, and provider account data.",
   "collections": [
     {
@@ -218,7 +218,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/01_onboard_cup_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-01/2026-10-03/01_pattern-cup-sleeve_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "0433d83c9b3bd3a23d34b256de1afc7bf185a7360a97c039254192c2df3a46ab",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-01-02",
@@ -234,7 +239,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/02_onboard_packaging_counter_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-01/2026-10-03/02_pattern-coffee-bag-and-cup-counter_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "9fce64f088097de5020716ed1fea79e4a5c0410f9cded6b04adf24d769d987ff",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-01-03",
@@ -250,7 +260,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/03_onboard_cup_set_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-01/2026-10-03/03_pattern-stacked-cup-set_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "227d3f1541613dfe2f14a978db32d4bf03c910ce917c85d8d57b1d6566c9cd1d",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-01-04",
@@ -266,7 +281,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/04_onboard_tote_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-01/2026-10-03/04_pattern-tote-bag-mockup_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "05ffe45ae30b4568891d3fe8168b75cb487863bf8dbed2b774aa518d4daaa0e3",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-01-05",
@@ -282,7 +302,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/05_onboard_closeup_cup_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-01/2026-10-03/05_pattern-close-up-cup-body_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "4b125f7b4217eba1db04c98497c7d6014ccd1eb946013106c3f84d8f47062713",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-01-06",
@@ -298,7 +323,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/01_01_capsule_pattern_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-01/2026-09-26/06_onboard_hanging_sign_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-01/2026-10-03/06_pattern-hanging-cafe-sign_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "2359e9b4c2e93a96b71edc6b3009ff0909fc84cc88b5123676b9d90e44faf915",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "synthesisTool": "Geometry-preserving upscale from approved mockup synthesis",
@@ -327,7 +357,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/01_monochrome_block_cup_sleeve_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-02/2026-10-03/01_monochrome-block-cup-sleeve_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "2fa67fa6e7029b371872121d9a9a7709909702eaf6f5b21d52f3cbf34e81aa85",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-02-02",
@@ -343,7 +378,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/02_monochrome_block_packaging_counter_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-02/2026-10-03/02_monochrome-block-coffee-bag-and-cup-counter_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "c6bae97b96c2d47065fa8c986b775fcbed46ebcdc9c5ed6c9c3f3eb8f7f2e169",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-02-03",
@@ -359,7 +399,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/03_monochrome_block_stacked_cup_set_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-02/2026-10-03/03_monochrome-block-stacked-cup-set_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "4520f1d8875f0c52f52b55f7af560a11cc9d18c7246136d4cceb3add32234a88",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-02-04",
@@ -375,7 +420,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/04_monochrome_block_tote_and_takeaway_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-02/2026-10-03/04_monochrome-block-tote-and-takeaway-cup_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "96c1a7e18750114c959d05b55e1260f624cd3581164f8595e099c34eb17e10f3",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-02-05",
@@ -391,7 +441,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/05_monochrome_block_closeup_cup_body_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-02/2026-10-03/05_monochrome-block-close-up-cup-body_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "fa1329f9c2bd5a5ae12401b137a2a4e8aa8d8878735571aee1a5464fc1c4b648",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-02-06",
@@ -407,7 +462,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/20_20_monochrome_architectural_block_surface_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-02/2026-09-28/06_monochrome_block_hanging_cafe_sign_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-02/2026-10-03/06_monochrome-block-hanging-cafe-sign_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "dae71dfcaab2079fcb4700f332f4dc562d05618804420413c273488d0df457c3",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "synthesisTool": "Geometry-preserving upscale from approved mockup synthesis",
@@ -436,7 +496,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/35_35_diagonal_textile_stripe_bands_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/01_white_paper_cup_mockup.jpg",
           "applicationMode": "kling_4k_midjourney35_coffee_mockup",
-          "updatedAt": "2026-10-10T02:54:02+09:00"
+          "updatedAt": "2026-10-10T02:54:02+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-04/2026-10-10/01_stripe-cup-sleeve_midjourney-35_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "a42a0416c40fe656a930033b7bdea5189d916895754e6262f24f7eadadece12b",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-04-02",
@@ -452,7 +517,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/35_35_diagonal_textile_stripe_bands_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/02_coffee_packaging_counter_mockup.jpg",
           "applicationMode": "kling_4k_midjourney35_coffee_mockup",
-          "updatedAt": "2026-10-10T02:54:02+09:00"
+          "updatedAt": "2026-10-10T02:54:02+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-04/2026-10-10/02_stripe-coffee-bag-and-cup-counter_midjourney-35_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "132ddd7f92c42407e4a96816ccb34b886796835b01312c8dae200ee4f480cd16",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-04-03",
@@ -468,7 +538,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/35_35_diagonal_textile_stripe_bands_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/03_coffee_bag_front_mockup.jpg",
           "applicationMode": "kling_4k_midjourney35_coffee_mockup",
-          "updatedAt": "2026-10-10T02:54:02+09:00"
+          "updatedAt": "2026-10-10T02:54:02+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-04/2026-10-10/03_stripe-coffee-bag-front_midjourney-35_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "ee089f34f7fe92f18167ba9e04b4e7a5ec47bbacf5713cdcc99e133706fb5f40",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-04-04",
@@ -484,7 +559,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/35_35_diagonal_textile_stripe_bands_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/04_takeaway_cup_hand_mockup.jpg",
           "applicationMode": "kling_4k_midjourney35_coffee_mockup",
-          "updatedAt": "2026-10-10T02:54:02+09:00"
+          "updatedAt": "2026-10-10T02:54:02+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-04/2026-10-10/04_stripe-takeaway-cup-hand_midjourney-35_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "372ce48550b31acd9fa0f5a9723a6c45045fd870293ce6a8f6a1286350e89b13",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-04-05",
@@ -500,7 +580,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/35_35_diagonal_textile_stripe_bands_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/05_plain_takeaway_cup_closeup.jpg",
           "applicationMode": "kling_4k_midjourney35_coffee_mockup",
-          "updatedAt": "2026-10-10T02:54:02+09:00"
+          "updatedAt": "2026-10-10T02:54:02+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-04/2026-10-10/05_stripe-close-up-cup-body_midjourney-35_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "d93aa0d8c0475836b70cd7fe1276fef94c7ff0f561545f09b43fb27f94d9562e",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-04-06",
@@ -516,7 +601,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-10-09/35_35_diagonal_textile_stripe_bands_manual_midjourney_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/06_hanging_cafe_sign_mockup.jpg",
           "applicationMode": "kling_4k_midjourney35_coffee_mockup",
-          "updatedAt": "2026-10-10T02:54:02+09:00"
+          "updatedAt": "2026-10-10T02:54:02+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-04/2026-10-10/06_stripe-hanging-cafe-sign_midjourney-35_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "8a694aee01978091141cffe2e406e67f5aedb02b1d0d72d73d44c25af0dba6d1",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "resynthesizedAt": "2026-10-10T02:54:02+09:00"
@@ -543,7 +633,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/01_ambient_gradient_cup_sleeve_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-03/2026-10-03/01_ambient-gradient-cup-sleeve_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "39bc7bdc296c1c059442ca68492581424996030d0c577f520fb6c87933990f29",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-03-02",
@@ -559,7 +654,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/02_ambient_gradient_packaging_counter_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-03/2026-10-03/02_ambient-gradient-coffee-bag-and-cup-counter_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "b5b9fbafa099a308c153444ccf9a60c7a56c5b230688e4cd3d742fa77d14bb3c",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-03-03",
@@ -575,7 +675,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/03_ambient_gradient_stacked_cup_set_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-03/2026-10-03/03_ambient-gradient-stacked-cup-set_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "a895e454be0843810f91f056eac5b768d207c73877b7ab978fe7338ca26b9a15",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-03-04",
@@ -591,7 +696,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/04_ambient_gradient_tote_and_takeaway_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-03/2026-10-03/04_ambient-gradient-tote-and-takeaway-cup_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "4c998fa78d231493284afef6c3e68e0741831aa476aa95fdb24086f58d3b063b",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-03-05",
@@ -607,7 +717,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/05_ambient_gradient_closeup_cup_body_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-03/2026-10-03/05_ambient-gradient-close-up-cup-body_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "7645ca871873825e53f0971649dcfd4b5a44cb5adb9774e9af52f315707e0843",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "coffee-asset-example-03-06",
@@ -623,7 +738,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-09-28/06_ambient_gradient_hanging_cafe_sign_mockup.jpg",
           "fixNote": "2026-10-03 geometry-preserving upscale from original mockup; list/detail composition remains identical while detail/download uses high-resolution PNG.",
-          "updatedAt": "2026-10-06T15:16:58+09:00"
+          "updatedAt": "2026-10-06T15:16:58+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-03/2026-10-03/06_ambient-gradient-hanging-cafe-sign_kling4k_mockup_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "775dbd2667288ac6042b39ea528394112c81a821647fd9cf1bc40fb61d088afe",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "synthesisTool": "Geometry-preserving upscale from approved mockup synthesis",
@@ -657,7 +777,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 1,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-04/2026-10-08/01_outdoor-mockup-a-4-1_midjourney-8_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "537b3f6bd0276a30933594f2130f29906583ccc7b82cbd000269688e09051395",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-04-02",
@@ -675,7 +800,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 2,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-04/2026-10-08/02_outdoor-mockup-a-4-2_midjourney-8_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "23ac5ab632d99082a7b62abbe256c0d0497e5c97839cb52ab92ee037d94e267a",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-04-03",
@@ -693,7 +823,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 3,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-04/2026-10-08/03_outdoor-mockup-a-4-3_midjourney-8_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "1c68832be719eacef4d77712f3fe15aeca61a90ab4a562dfd54f6582ae8ac5c3",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-04-04",
@@ -711,7 +846,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 4,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-04/2026-10-08/04_outdoor-mockup-a-4-4_midjourney-8_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "c7c0cb5df4c59a28aa6f1969763bcd440aa61555c669f5bf7907840d9c75c6db",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-04-05",
@@ -729,7 +869,12 @@
           "applicationMode": "kling_regenerated_fully_applied_two_distinct_board_rings",
           "updatedAt": "2026-10-08T19:41:58+09:00",
           "displayOrder": 5,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-04/2026-10-08/05_outdoor-mockup-a-4-5_rev02_fully-applied-separate-rings_midjourney-8_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "c56c7b9ef5cf039912b7ee41a600b492fed86d417294f744344e16fb52976274",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-04-06",
@@ -747,7 +892,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 6,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-04/2026-10-08/06_outdoor-mockup-a-4-6_midjourney-8_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "4d774cdd5738fc9bf71f478301dfb38f0f6587dc1920df6bc9fb879ee3a57e27",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original mockups + source Midjourney 4K motif + rough direction image",
@@ -782,7 +932,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T22:55:05+09:00",
           "displayOrder": 1,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-08/2026-10-08/01_outdoor-mockup-a-2-1_midjourney-02_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "76a5fd36e65ff74fc880fc059777592a117db908442052422736c209d7865b78",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-08-02",
@@ -800,7 +955,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T22:55:05+09:00",
           "displayOrder": 2,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-08/2026-10-08/02_outdoor-mockup-a-2-2_midjourney-02_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "e5720dc54398bb51b1fb905ed4812fc110e53e0c8bd39fe5151a37ee964837a9",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-08-03",
@@ -818,7 +978,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T22:55:05+09:00",
           "displayOrder": 3,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-08/2026-10-08/03_outdoor-mockup-a-2-3_midjourney-02_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "fa1c60e3c0090cf5a2ca82d32d079c8c16c03b553d8063757c9e76b19338326b",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-08-04",
@@ -836,7 +1001,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T22:55:05+09:00",
           "displayOrder": 4,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-08/2026-10-08/04_outdoor-mockup-a-2-4_midjourney-02_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "5a4cea15de64d0f56488f2fc5a34243d524a6dd4ff6bbc62c8197250d55b2237",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-08-05",
@@ -854,7 +1024,12 @@
           "applicationMode": "kling_regenerated_a35_full_bleed_reference_final",
           "updatedAt": "2026-10-10T01:32:18+09:00",
           "displayOrder": 5,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-08/2026-10-09/05_outdoor-mockup-a-2-5_rev05_stronger-cropped-full-bleed_midjourney-02_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "9411015b97047c6d0a8803e8ee8e3a701141f59d44e4d791930b4eb7a8d61182",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-08-06",
@@ -872,7 +1047,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T22:55:05+09:00",
           "displayOrder": 6,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-08/2026-10-08/06_outdoor-mockup-a-2-6_midjourney-02_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "2ba10283112245a2f3f46974f36bdf488038c0e98a9f852d66681730706b6166",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup A assets + source Midjourney 4K motif + rough direction image",
@@ -907,7 +1087,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T10:37:34+09:00",
           "displayOrder": 1,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-02/2026-10-08/01_outdoor-mockup-a-2-1_midjourney-28_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "60bd005f99e71b891170dab8ea3ac51fcfaea62201ddbb4c1592898f47b24f0d",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-02-02",
@@ -925,7 +1110,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T10:37:34+09:00",
           "displayOrder": 2,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-02/2026-10-08/02_outdoor-mockup-a-2-2_midjourney-28_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "23325dec03d5323e0fa981f556f6388f052716a82ca46e7ad804e1faabbc0352",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-02-03",
@@ -943,7 +1133,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T10:37:34+09:00",
           "displayOrder": 3,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-02/2026-10-08/03_outdoor-mockup-a-2-3_midjourney-28_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "5d4b85a6d796122f09da732707168939b8548503f6ef84115e9e2618dc3da7db",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-02-04",
@@ -961,7 +1156,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T10:37:34+09:00",
           "displayOrder": 4,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-02/2026-10-08/04_outdoor-mockup-a-2-4_midjourney-28_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "e715b4941fcfc7d1f741ed6af35db61376da2a9041dc2b42b99b594023872d1f",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-02-05",
@@ -979,7 +1179,12 @@
           "applicationMode": "kling_regenerated_two_distinct_board_crops",
           "updatedAt": "2026-10-08T11:44:07+09:00",
           "displayOrder": 5,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-02/2026-10-08/05_outdoor-mockup-a-2-5_rev05_two-distinct-board-crops_midjourney-28_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "08a56a05b113e98e06676f670c4c208c8eb6a582d0f42340ad3915fc447f0ee9",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-02-06",
@@ -997,7 +1202,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T10:37:34+09:00",
           "displayOrder": 6,
-          "renumberedAt": "2026-10-09T00:00:00+09:00"
+          "renumberedAt": "2026-10-09T00:00:00+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-02/2026-10-08/06_outdoor-mockup-a-2-6_midjourney-28_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "eac2cabdb437e84183583d0516974ef665e0747bcbc3a9094dc565fa2a564d8f",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original mockup + rough direction + Midjourney 28 source graphic; full-surface application",
@@ -1031,7 +1241,12 @@
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_local_corrected_full_surface_midjourney_34",
           "updatedAt": "2026-10-10T00:26:33+09:00",
-          "displayOrder": 1
+          "displayOrder": 1,
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-11/2026-10-09/01_outdoor-mockup-a-4-1_rev03_full-surface-top-stack_midjourney-34_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "85d299f5650f356db867c91c5298a5e5d63ccc38d5bf26a2a59b8cb0ff764a8b",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-11-02",
@@ -1048,7 +1263,12 @@
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-09T20:28:34+09:00",
-          "displayOrder": 2
+          "displayOrder": 2,
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-11/2026-10-09/02_outdoor-mockup-a-4-2_midjourney-34_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "b78b20ebec93c383a12b14baa1db2236eebb5781e63f1e5c676b4645c86b9d83",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-11-03",
@@ -1065,7 +1285,12 @@
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-09T20:28:34+09:00",
-          "displayOrder": 3
+          "displayOrder": 3,
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-11/2026-10-09/03_outdoor-mockup-a-4-3_midjourney-34_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "ecc3ea8aa401dfcb8647103c8e523d6870ad9fae7fa197ac7ab947a35dd3d2df",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-11-04",
@@ -1082,7 +1307,12 @@
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-09T20:28:34+09:00",
-          "displayOrder": 4
+          "displayOrder": 4,
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-11/2026-10-09/04_outdoor-mockup-a-4-4_midjourney-34_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "eea7afcb96330efe577d9ffa9d3c5202416fd6c80c68f508c75a9d8de024d0ac",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-11-05",
@@ -1099,7 +1329,12 @@
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_regenerated_a35_full_bleed_reference_final",
           "updatedAt": "2026-10-10T01:32:18+09:00",
-          "displayOrder": 5
+          "displayOrder": 5,
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-11/2026-10-09/05_outdoor-mockup-a-4-5_rev05_a35-full-bleed-reference_midjourney-34_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "453056d782f721735e9ad497bf95ff3bf015f539e6b695e90ef0057a3ad74486",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-11-06",
@@ -1116,7 +1351,12 @@
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-09T20:28:34+09:00",
-          "displayOrder": 6
+          "displayOrder": 6,
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-11/2026-10-09/06_outdoor-mockup-a-4-6_midjourney-34_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "877a555bbcfc5cd5c356b5ec74f5f10c66532bdc3359b1c513ceff384e5aa3ca",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup A assets + Midjourney 34 4K motif + rough direction image",
@@ -1149,7 +1389,12 @@
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-09T14:56:20+09:00",
-          "displayOrder": 1
+          "displayOrder": 1,
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-09/2026-10-09/01_outdoor-mockup-a-5-1_midjourney-32_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "06f3b3e5d83cd8133acb2347ba4e22f7680767dd9907b21bb933c7f0ab9e1bd9",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-09-02",
@@ -1166,7 +1411,12 @@
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-09T14:56:20+09:00",
-          "displayOrder": 2
+          "displayOrder": 2,
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-09/2026-10-09/02_outdoor-mockup-a-5-2_midjourney-32_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "4a1fb4f8d629b99a260f1fa3140d2999f414a30aeec801402a535e2df79e1e4d",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-09-03",
@@ -1183,7 +1433,12 @@
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-09T14:56:20+09:00",
-          "displayOrder": 3
+          "displayOrder": 3,
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-09/2026-10-09/03_outdoor-mockup-a-5-3_midjourney-32_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "f73a466ac4e0979f1e8c434bdf9b07311a0821968031214f090788d2c88ec842",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-09-04",
@@ -1200,7 +1455,12 @@
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-09T14:56:20+09:00",
-          "displayOrder": 4
+          "displayOrder": 4,
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-09/2026-10-09/04_outdoor-mockup-a-5-4_midjourney-32_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "8b82edfcf067a550dec6f33bc0ef2ffe9a02bfbc0e3082872f578bd5e4b3489c",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-09-05",
@@ -1217,7 +1477,12 @@
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_regenerated_a35_full_bleed_reference_final",
           "updatedAt": "2026-10-10T01:32:18+09:00",
-          "displayOrder": 5
+          "displayOrder": 5,
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-09/2026-10-09/05_outdoor-mockup-a-5-5_rev03_stronger-cropped-full-bleed_midjourney-32_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "74b6edbfaa10ff243f9304134e3f1c6e28716e93b9e131851e3d64eed62ea48d",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-09-06",
@@ -1234,7 +1499,12 @@
           "mockupCollectionId": "outdoor-mockup-assets-1",
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-09T14:56:20+09:00",
-          "displayOrder": 6
+          "displayOrder": 6,
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-09/2026-10-09/06_outdoor-mockup-a-5-6_midjourney-32_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "5001508b7a8ffe3a3cdd83a2958fe505b23703025a2e808f7ec8402ba9734259",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup A assets + Midjourney 32 4K motif + rough direction image",
@@ -1268,7 +1538,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-06T15:16:58+09:00",
           "displayOrder": 1,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-02/2026-10-05/01_paper-tag-full-horizon-surface_rev05_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "d4cfabc5dd4cf6d08afcbb95be7d3dc00153ebfdb1aeaa210f7efd6a9769298a",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-02",
@@ -1286,7 +1561,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-06T15:16:58+09:00",
           "displayOrder": 2,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-02/2026-10-05/02_shoulder-tote-cropped-horizon-surface_rev05_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "f66f19f39442de919e68e4cc731159c057927ba66d9a76a05edb324dfd568dff",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-03",
@@ -1304,7 +1584,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-06T15:16:58+09:00",
           "displayOrder": 3,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-02/2026-10-05/03_phone-screen-full-horizon-graphic_rev05_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "c9b53a290c16a83c3490aec7bf46fb8cd57ceb16c2a9fe028a80811a6f4f26fd",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-04",
@@ -1322,7 +1607,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-06T15:16:58+09:00",
           "displayOrder": 4,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-02/2026-10-05/04_bucket-hat-cropped-horizon-surface_rev05_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "017e5f3972fc9be790a0cd49e60035afd0cf1081c030f7685226e79207713112",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-05",
@@ -1340,7 +1630,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-06T15:16:58+09:00",
           "displayOrder": 5,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-02/2026-10-05/05_chair-tote-full-horizon-surface_rev05_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "9d432d426b1ef1d79137ea922498814d71cd62727b5fd7630cf1d2ef1b8c9231",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-02-06",
@@ -1358,7 +1653,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-06T15:16:58+09:00",
           "displayOrder": 6,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-02/2026-10-05/06_t-shirt-cropped-horizon-surface_rev05_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "82d6d215223c65a0237b0cc59ad80aea2b471157a799794f23f7ff41a1b9dfe1",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration revision; original mockup + source graphic + prior composite references; full-surface application, no small marks or solid-only treatments",
@@ -1393,7 +1693,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T16:52:51+09:00",
           "displayOrder": 1,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-03/2026-10-08/01_outdoor-mockup-b-3-1_midjourney-22_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "7f318c1bf8a4c67683d3839cee4e28c76555f35ff9af40953aaecde7e7c9d602",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-03-02",
@@ -1411,7 +1716,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T16:52:51+09:00",
           "displayOrder": 2,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-03/2026-10-08/02_outdoor-mockup-b-3-2_midjourney-22_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "0a8717aa97751b170b2ec59d44677168a69739db782480d43d40e38f72f457ff",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-03-03",
@@ -1429,7 +1739,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T16:52:51+09:00",
           "displayOrder": 3,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-03/2026-10-08/03_outdoor-mockup-b-3-3_midjourney-22_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "68781e4b9c98cb9343ab219d8386bc55b4c6eec5261124af3bbfffd0beff49a7",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-03-04",
@@ -1447,7 +1762,12 @@
           "applicationMode": "kling_hat_large_scale_pattern_revision",
           "updatedAt": "2026-10-08T17:12:05+09:00",
           "displayOrder": 4,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-03/2026-10-08/04_outdoor-mockup-b-3-4_rev02_large-scale-pattern_midjourney-22_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "59572ec146c34773a4d7b16668b81109eb78d6ac37cbe3c1385cfc1a7f9876a1",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-03-05",
@@ -1465,7 +1785,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T16:52:51+09:00",
           "displayOrder": 5,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-03/2026-10-08/05_outdoor-mockup-b-3-5_midjourney-22_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "92046d3df21be3ef08ccd58bbe43bb0314dea74c3ca8e1b9ac05aee4798caf35",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-03-06",
@@ -1483,7 +1808,12 @@
           "applicationMode": "kling_tshirt_large_scale_pattern_revision",
           "updatedAt": "2026-10-08T17:29:17+09:00",
           "displayOrder": 6,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-03/2026-10-08/06_outdoor-mockup-b-3-6_rev02_large-scale-pattern_midjourney-22_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "083ca099b46342091d5e6569d09af85ccd82967bccc3dd97e27fcb632cfa88ca",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup B assets + rough direction + selected Midjourney source graphic; full-surface application",
@@ -1518,7 +1848,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 1,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-04/2026-10-08/01_outdoor-mockup-b-4-1_midjourney-30_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "b08d63af6315e479b12dd95368654d6dc2608716c19505381a85bee15db8aec5",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-04-02",
@@ -1536,7 +1871,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 2,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-04/2026-10-08/02_outdoor-mockup-b-4-2_midjourney-30_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "fe0427845d0e2f16156e47b92e90798fc6d283d9fd5ab56d0e7aa816409b27ad",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-04-03",
@@ -1554,7 +1894,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 3,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-04/2026-10-08/03_outdoor-mockup-b-4-3_midjourney-30_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "eeae4ab1acf51e31871267fefc4120b6363de006beaaf46a5d69669c1b709a27",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-04-04",
@@ -1572,7 +1917,12 @@
           "applicationMode": "kling_large_scale_apparel_pattern",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 4,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-04/2026-10-08/04_outdoor-mockup-b-4-4_large-scale-apparel_midjourney-30_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "1e8747688af2415b3a05c783753365e46de501192aff9f5432c0a5061d87b679",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-04-05",
@@ -1590,7 +1940,12 @@
           "applicationMode": "kling_clean_natural_tote_textile_print",
           "updatedAt": "2026-10-08T19:41:58+09:00",
           "displayOrder": 5,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-04/2026-10-08/05_outdoor-mockup-b-4-5_rev02_clean-natural-tote_midjourney-30_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "fc2e7ecba8b9d6ca7a9d2ca486e97693c9a4220ee2ccfee5c36f01f38b6a5d69",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-04-06",
@@ -1608,7 +1963,12 @@
           "applicationMode": "kling_large_scale_apparel_pattern",
           "updatedAt": "2026-10-08T18:50:40+09:00",
           "displayOrder": 6,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-04/2026-10-08/06_outdoor-mockup-b-4-6_large-scale-apparel_midjourney-30_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "7f345bf0afad0b172bfccb22483c7929948cd764fecb19c2f6eb878bc7801199",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original mockups + source Midjourney 4K motif + rough direction image",
@@ -1643,7 +2003,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T16:52:51+09:00",
           "displayOrder": 1,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-02/2026-10-08/01_outdoor-mockup-b-2-1_midjourney-23_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "97dd95f296f0ba69580cb9ea07d942283ab8ab9e7589212501aaf45d7199a66e",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-02-02",
@@ -1661,7 +2026,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T16:52:51+09:00",
           "displayOrder": 2,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-02/2026-10-08/02_outdoor-mockup-b-2-2_midjourney-23_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "f38fc84718a60315b1c2dc683c2dbcc3c6d0a20e0bb1e522872b9ac997065677",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-02-03",
@@ -1679,7 +2049,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T16:52:51+09:00",
           "displayOrder": 3,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-02/2026-10-08/03_outdoor-mockup-b-2-3_midjourney-23_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "3c5625d59aa59dfb4c24bdf504ca53539213d0fa0c02bb7928d2f8deb93e3406",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-02-04",
@@ -1697,7 +2072,12 @@
           "applicationMode": "kling_hat_large_front_fields_edge_stripe_revision",
           "updatedAt": "2026-10-08T17:18:00+09:00",
           "displayOrder": 4,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-02/2026-10-08/04_outdoor-mockup-b-2-4_rev04_large-front-fields-edge-stripe_midjourney-23_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "0d738262d8b130641fc0ac0e2f3eadd049cf9394f5e3a25226059305ec0d4290",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-02-05",
@@ -1715,7 +2095,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T16:52:51+09:00",
           "displayOrder": 5,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-02/2026-10-08/05_outdoor-mockup-b-2-5_midjourney-23_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "0ae65c48056b4e356bd44cd234452a41c20b34e0c896ed0862046cf13fba00c2",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-02-06",
@@ -1733,7 +2118,12 @@
           "applicationMode": "kling_hq_full_surface_natural",
           "updatedAt": "2026-10-08T16:52:51+09:00",
           "displayOrder": 6,
-          "renumberedAt": "2026-10-08T20:29:51+09:00"
+          "renumberedAt": "2026-10-08T20:29:51+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-02/2026-10-08/06_outdoor-mockup-b-2-6_midjourney-23_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "a8ac564163cee04994a55c120d9ac68714ae7bbed4424169b88c12fae1135a15",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "synthesisTool": "Kling image_to_image v3.0 omni 2K natural integration; original Outdoor Mockup B assets + rough direction + selected Midjourney source graphic; full-surface application",
@@ -1765,7 +2155,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/01_paper-stacks-on-concrete_outdoor_mockup.jpg",
           "applicationMode": "kling_outdoor_midjourney11_ambient_gradient",
-          "updatedAt": "2026-10-10T14:58:18+09:00"
+          "updatedAt": "2026-10-10T14:58:18+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-12/2026-10-10/01_outdoor-mockup-a-6-1_paper-stacks-on-concrete_midjourney-11_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "542c7a6718e6ed0e4e2a06b58f650fffe3588d2bcc53ab006d16767f8199d7a4",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-12-02",
@@ -1781,7 +2176,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/02_single-card-on-metal-grid_outdoor_mockup.jpg",
           "applicationMode": "kling_outdoor_midjourney11_ambient_gradient",
-          "updatedAt": "2026-10-10T14:58:18+09:00"
+          "updatedAt": "2026-10-10T14:58:18+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-12/2026-10-10/02_outdoor-mockup-a-6-2_single-card-on-metal-grid_midjourney-11_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "fc886cc8cb85675b4f647e8526a2c852314d33ef20fe9041e7e0215a30017982",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-12-03",
@@ -1797,7 +2197,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/03_vertical-fabric-banner-on-stone-wall_outdoor_mockup.jpg",
           "applicationMode": "kling_outdoor_midjourney11_ambient_gradient",
-          "updatedAt": "2026-10-10T14:58:18+09:00"
+          "updatedAt": "2026-10-10T14:58:18+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-12/2026-10-10/03_outdoor-mockup-a-6-3_vertical-fabric-banner_midjourney-11_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "21d4ac68d273a4127219265a574ccb1e30c030be10194278a3f0cee05293db77",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-12-04",
@@ -1813,7 +2218,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/04_framed-wall-poster-on-stone-facade_outdoor_mockup_rev01.jpg",
           "applicationMode": "kling_outdoor_midjourney11_ambient_gradient",
-          "updatedAt": "2026-10-10T14:58:18+09:00"
+          "updatedAt": "2026-10-10T14:58:18+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-12/2026-10-10/04_outdoor-mockup-a-6-4_framed-wall-poster_midjourney-11_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "04611e91d92f2cda8da09ec676828f7e9e9272dcf5931195c1d701e8285bcc91",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-12-05",
@@ -1829,7 +2239,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/05_white-board-set-with-pebble-background_outdoor_mockup.jpg",
           "applicationMode": "kling_outdoor_midjourney11_ambient_gradient",
-          "updatedAt": "2026-10-10T14:58:18+09:00"
+          "updatedAt": "2026-10-10T14:58:18+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-12/2026-10-10/05_outdoor-mockup-a-6-5_white-board-set-full-bleed_midjourney-11_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "823cadeb4270cfb0a619ff06e39fa31822f5d77628f4271a0b9c5e1a15908699",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-a-12-06",
@@ -1845,7 +2260,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-1/2026-10-05/06_hanging-outdoor-sign-on-glass-facade_outdoor_mockup.jpg",
           "applicationMode": "kling_outdoor_midjourney11_ambient_gradient",
-          "updatedAt": "2026-10-10T14:58:18+09:00"
+          "updatedAt": "2026-10-10T14:58:18+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-a-12/2026-10-10/06_outdoor-mockup-a-6-6_hanging-outdoor-sign_midjourney-11_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "53a6b03e4fec707ae440d52fc59655174fa8ef887e788c81177e54657c79e121",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "resynthesizedAt": "2026-10-10T14:58:18+09:00"
@@ -1874,7 +2294,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/01_held-paper-tag-on-shadow-wall_outdoor_mockup.jpg",
           "applicationMode": "kling_outdoor_midjourney11_ambient_gradient",
-          "updatedAt": "2026-10-10T14:58:18+09:00"
+          "updatedAt": "2026-10-10T14:58:18+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-05/2026-10-10/01_outdoor-mockup-b-5-1_held-paper-tag_midjourney-11_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "51ede4958b308ace35f9a25f55c9d70230eb8ad90d49e381a5cae467017db651",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-05-02",
@@ -1890,7 +2315,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/02_large-tote-bag-on-shoulder_outdoor_mockup.jpg",
           "applicationMode": "kling_outdoor_midjourney11_ambient_gradient",
-          "updatedAt": "2026-10-10T14:58:18+09:00"
+          "updatedAt": "2026-10-10T14:58:18+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-05/2026-10-10/02_outdoor-mockup-b-5-2_large-tote-bag_midjourney-11_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "645b673fc0d7dab4da43649ece89a8459bd86515f619007fadf2e5e14fc95495",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-05-03",
@@ -1906,7 +2336,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/03_phone-screen-on-ribbed-glass_outdoor_mockup.jpg",
           "applicationMode": "kling_outdoor_midjourney11_ambient_gradient",
-          "updatedAt": "2026-10-10T14:58:18+09:00"
+          "updatedAt": "2026-10-10T14:58:18+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-05/2026-10-10/03_outdoor-mockup-b-5-3_phone-screen_midjourney-11_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "613ad33950ec6dad6aee231a3122b24dbbb7033131ae1fd93bc9f753718e785e",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-05-04",
@@ -1922,7 +2357,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/04_white-bucket-hat-on-stand_outdoor_mockup.jpg",
           "applicationMode": "kling_outdoor_midjourney11_ambient_gradient",
-          "updatedAt": "2026-10-10T14:58:18+09:00"
+          "updatedAt": "2026-10-10T14:58:18+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-05/2026-10-10/04_outdoor-mockup-b-5-4_bucket-hat_midjourney-11_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "cf18b422aab53adb42f7e982d83afc5793b5b08e56aed61ff201c22341cf41bf",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-05-05",
@@ -1938,7 +2378,12 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/05_tote-bag-on-chair-outdoor_outdoor_mockup.jpg",
           "applicationMode": "kling_outdoor_midjourney11_ambient_gradient",
-          "updatedAt": "2026-10-10T14:58:18+09:00"
+          "updatedAt": "2026-10-10T14:58:18+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-05/2026-10-10/05_outdoor-mockup-b-5-5_tote-bag-on-chair_midjourney-11_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "812ae9e7a413ee0677705f11a5f2d465d144cbea06094669b48012cd07d0fa15",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         },
         {
           "id": "outdoor-mockup-example-b-05-06",
@@ -1954,10 +2399,16 @@
           "sourceGraphicHighResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-26/11_11_ambient_blue_peach_gradient_surface_midjourney_translation_kling4k.png",
           "resynthesisSourceImageSrc": "/assets/dna-brand-assets/mockup/outdoor-mockup-assets-2/2026-10-05/06_white-tshirt-on-black-fence_outdoor_mockup.jpg",
           "applicationMode": "kling_outdoor_midjourney11_ambient_gradient",
-          "updatedAt": "2026-10-10T14:58:18+09:00"
+          "updatedAt": "2026-10-10T14:58:18+09:00",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/outdoor-mockup-example-b-05/2026-10-10/06_outdoor-mockup-b-5-6_white-tshirt_midjourney-11_kling_hq_preview.webp",
+          "previewWidth": 900,
+          "previewHeight": 600,
+          "previewAssetHash": "b28fd35da79192ab713c41bcd96ecd93a97b8496fb5b8202da5a9635f2304952",
+          "previewGeneratedAt": "2026-10-10T16:08:13+09:00"
         }
       ],
       "resynthesizedAt": "2026-10-10T14:58:18+09:00"
     }
-  ]
+  ],
+  "previewPolicy": "Midjourney + Mockup grid/list thumbnails use previewImageSrc WebP assets; detail view and download keep full-resolution imageSrc/downloadSrc."
 }

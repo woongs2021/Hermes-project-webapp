@@ -3,6 +3,11 @@ export type BrandMockupAsset = {
   title: string
   description: string
   imageSrc: string
+  previewImageSrc?: string
+  previewWidth?: number
+  previewHeight?: number
+  previewAssetHash?: string
+  previewGeneratedAt?: string
   originalImageSrc?: string
   downloadSrc?: string
   downloadLabel?: string
