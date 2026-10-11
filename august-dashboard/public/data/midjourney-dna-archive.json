@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T20:14:51+09:00",
+  "generatedAt": "2026-10-11T04:01:26.905577Z",
   "sourcePolicy": "Public-safe manually supplied Midjourney outputs selected by Chris for Design DNA. Midjourney items include Kling 4K remaster PNG downloads when highResImageSrc is present. Excludes raw private chats, credentials, and provider account details.",
   "items": [
     {
@@ -983,7 +983,7 @@
       "sequence": 34,
       "title": "Midjourney 34 — Torn Cobalt Black Paper Edge",
       "created": "2026-10-09",
-      "status": "manual_midjourney_saved",
+      "status": "midjourney_manual_saved",
       "imageSrc": "/assets/dna-archive/midjourney/2026-10-09/34_torn_cobalt_black_paper_edge_manual_midjourney.jpg",
       "originalImageSrc": "/assets/dna-archive/midjourney/2026-10-09/34_torn_cobalt_black_paper_edge_manual_midjourney.jpg",
       "width": 1024,
@@ -1001,14 +1001,25 @@
       "midjourneyPrompt": "torn cobalt blue and black paper edge material, rough vertical ripped boundary, tiny copper paper layer exposed, tactile paper fiber texture, high contrast flat 2D graphic surface, crop-friendly brand material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "source": "manual_midjourney_upload",
       "updatedAt": "2026-10-09T20:14:51+09:00",
-      "intendedLaterUse": "Design DNA mockup surface, package/card crop, brand material rail, and future Midjourney + Mockup synthesis source."
+      "intendedLaterUse": "Design DNA mockup surface, package/card crop, brand material rail, and future Midjourney + Mockup synthesis source.",
+      "dnaClusters": [
+        "Manual Midjourney",
+        "Torn Paper Surface",
+        "Cobalt Black Contrast",
+        "Tactile Edge Material",
+        "High-Contrast Brand Surface"
+      ],
+      "sourceTool": "Midjourney",
+      "prompt": "torn cobalt blue and black paper edge material, rough vertical ripped boundary, tiny copper paper layer exposed, tactile paper fiber texture, high contrast flat 2D graphic surface, crop-friendly brand material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "sourceRun": "manual-midjourney-intake-2026-10-09",
+      "localArchivePath": "/opt/data/dna-archive/midjourney/2026-10-09/images/34_torn_cobalt_black_paper_edge_manual_midjourney.jpg"
     },
     {
       "id": "2026-10-09-midjourney-35-diagonal-textile-stripe-bands",
       "sequence": 35,
       "title": "Midjourney 35 — Diagonal Textile Stripe Bands",
       "created": "2026-10-09",
-      "status": "manual_midjourney_saved",
+      "status": "midjourney_manual_saved",
       "imageSrc": "/assets/dna-archive/midjourney/2026-10-09/35_diagonal_textile_stripe_bands_manual_midjourney.jpg",
       "originalImageSrc": "/assets/dna-archive/midjourney/2026-10-09/35_diagonal_textile_stripe_bands_manual_midjourney.jpg",
       "width": 1024,
@@ -1026,7 +1037,18 @@
       "midjourneyPrompt": "diagonal textile stripe band system, dark navy black woven ground, orange red cobalt peach green purple bands, tactile fabric grain, bold editorial stripe rhythm, flat 2D crop-friendly pattern material for brand surfaces --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
       "source": "manual_midjourney_upload",
       "updatedAt": "2026-10-09T20:14:51+09:00",
-      "intendedLaterUse": "Design DNA mockup surface, package/card crop, brand material rail, and future Midjourney + Mockup synthesis source."
+      "intendedLaterUse": "Design DNA mockup surface, package/card crop, brand material rail, and future Midjourney + Mockup synthesis source.",
+      "dnaClusters": [
+        "Manual Midjourney",
+        "Diagonal Textile Stripe",
+        "Rhythmic Band System",
+        "Tactile Fabric Grain",
+        "Accent Surface Pattern"
+      ],
+      "sourceTool": "Midjourney",
+      "prompt": "diagonal textile stripe band system, dark navy black woven ground, orange red cobalt peach green purple bands, tactile fabric grain, bold editorial stripe rhythm, flat 2D crop-friendly pattern material for brand surfaces --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "sourceRun": "manual-midjourney-intake-2026-10-09",
+      "localArchivePath": "/opt/data/dna-archive/midjourney/2026-10-09/images/35_diagonal_textile_stripe_bands_manual_midjourney.jpg"
     }
   ]
 }
