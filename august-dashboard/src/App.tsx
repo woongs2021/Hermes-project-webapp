@@ -2863,9 +2863,9 @@ function DesignDnaPanel() {
                   <a
                     className="chris-design-system-download dna-high-res-download"
                     href={toAppAssetSrc(selectedDnaAsset.highResImageSrc)}
-                    download={`${selectedDnaAsset.title.replace(/[^a-zA-Z0-9가-힣_-]+/g, '-').replace(/^-|-$/g, '') || 'dna-asset'}-4k.png`}
+                    download={`${selectedDnaAsset.title.replace(/[^a-zA-Z0-9가-힣_-]+/g, '-').replace(/^-|-$/g, '') || 'dna-asset'}-4k${selectedDnaAsset.highResImageSrc?.toLowerCase().endsWith('.jpg') || selectedDnaAsset.highResImageSrc?.toLowerCase().endsWith('.jpeg') ? '.jpg' : '.png'}`}
                   >
-                    4K 고화질 PNG 다운로드
+                    {selectedDnaAsset.highResDownloadLabel ?? '4K 고화질 PNG 다운로드'}
                   </a>
                   <span>{selectedDnaAsset.highResWidth && selectedDnaAsset.highResHeight ? `${selectedDnaAsset.highResWidth} × ${selectedDnaAsset.highResHeight}` : (selectedDnaAsset.highResDownloadLabel ?? 'Kling 4K remaster')}</span>
                 </div>

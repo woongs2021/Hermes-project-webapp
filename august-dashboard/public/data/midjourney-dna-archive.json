@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-11T07:23:10.337488Z",
+  "generatedAt": "2026-10-11T07:36:24.328701Z",
   "sourcePolicy": "Public-safe manually supplied Midjourney outputs selected by Chris for Design DNA. Midjourney items include Kling 4K remaster PNG downloads when highResImageSrc is present. Excludes raw private chats, credentials, and provider account details.",
   "items": [
     {
@@ -536,13 +536,13 @@
         "Hero Background Surface"
       ],
       "originalImageSrc": "/assets/dna-archive/midjourney/2026-09-28/19_iridescent_chrome_material_field.jpg",
-      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/19_iridescent_chrome_material_field_preserve-upscale_4k.png",
-      "highResDownloadLabel": "4K 고화질 PNG 다운로드",
+      "highResImageSrc": "/assets/dna-archive/midjourney-4k/2026-09-28/19_iridescent_chrome_material_field_preserve-upscale_4k_q92.jpg",
+      "highResDownloadLabel": "4K 고화질 이미지 다운로드",
       "highResWidth": 4096,
       "highResHeight": 4096,
-      "highResAssetHash": "db8fc16a8bc824695c306c2c66f1cc52a66cbdf88f6e8219c3b7f517640d7dae",
+      "highResAssetHash": "8cfa4da046b4e1408be1ef59fad74f9f52c3cffb7d003c976c00f303062b0054",
       "highResSourceTool": "Geometry-preserving local 4K upscale from original Midjourney source",
-      "highResRemasteredAt": "2026-10-11T07:23:10.337454Z"
+      "highResRemasteredAt": "2026-10-11T07:36:24.328674Z"
     },
     {
       "id": "2026-09-28-midjourney-20-monochrome-architectural-block-surface",
