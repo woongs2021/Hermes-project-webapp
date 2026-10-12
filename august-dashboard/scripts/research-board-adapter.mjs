@@ -97,6 +97,24 @@ function normalizeComparableTitle(text = '') {
     .trim()
 }
 
+function normalizeComparableSource(text = '') {
+  return text
+    .toLowerCase()
+    .replace(/[`,.;)\]]+$/g, '')
+    .trim()
+}
+
+function sourceKeysFromText(text = '') {
+  const keys = new Set()
+  for (const match of text.matchAll(/10\.\d{4,9}\/[A-Za-z0-9._;()/:+-]+/g)) {
+    keys.add(`source:${normalizeComparableSource(match[0])}`)
+  }
+  for (const match of text.matchAll(/https?:\/\/[^\s`]+/g)) {
+    keys.add(`source:${normalizeComparableSource(match[0])}`)
+  }
+  return [...keys]
+}
+
 function firstNonEmpty(...values) {
   return values.find((value) => typeof value === 'string' && value.trim().length > 0)?.trim()
 }
@@ -146,10 +164,21 @@ function readWeeklySelectedIndex(path = weeklySelectedPath) {
     const title = titleMatch[1].trim()
     const window = lines.slice(index + 1, index + 9).join(' ')
     const statusMatch = window.match(/Muyeol status(?:\/caution)?:\s*([A-Z]+)/i)
-    selected.set(normalizeComparableTitle(title), statusMatch?.[1]?.toUpperCase() ?? 'WATCH')
+    const status = statusMatch?.[1]?.toUpperCase() ?? 'WATCH'
+    selected.set(`title:${normalizeComparableTitle(title)}`, status)
+    for (const sourceKey of sourceKeysFromText(`${title} ${window}`)) {
+      selected.set(sourceKey, status)
+    }
   }
 
   return selected
+}
+
+function selectedStatusFor(normalized, selectedIndex) {
+  return selectedIndex.get(`title:${normalizeComparableTitle(normalized.title)}`)
+    ?? sourceKeysFromText(normalized.urlOrId)
+      .map((sourceKey) => selectedIndex.get(sourceKey))
+      .find(Boolean)
 }
 
 export function readResearchSource(path = researchInputPath) {
@@ -196,7 +225,7 @@ function normalizeResearchItem(item, index, selectedIndex = new Map()) {
   const score = Number(item.initial_score_5 ?? 0)
   if (!Number.isFinite(score) || score < 0 || score > 5) fail(`source item[${index}].initial_score_5 must be 0-5`)
 
-  const selectedStatus = selectedIndex.get(normalizeComparableTitle(normalized.title))
+  const selectedStatus = selectedStatusFor(normalized, selectedIndex)
 
   return {
     id: `${normalized.dateKst}-${lane}-${slugify(normalized.title) || index}`,
