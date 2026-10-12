@@ -9398,3 +9398,203 @@
 :root[data-theme='dark'] .design-dna-shell {
   overflow-anchor: none;
 }
+
+
+/* Hermes automation board */
+.automation-board-card {
+  display: grid;
+  gap: 22px;
+  overflow: hidden;
+}
+
+.automation-board-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.42fr);
+  gap: 20px;
+  align-items: end;
+}
+
+.automation-board-header h3,
+.weekly-automation-summary h3 {
+  max-width: 720px;
+  font-size: clamp(1.8rem, 3.4vw, 3.8rem);
+  font-weight: 380;
+  letter-spacing: -0.07em;
+  line-height: 0.98;
+}
+
+.automation-board-header p:not(.card-kicker),
+.weekly-automation-summary p:not(.card-kicker) {
+  max-width: 760px;
+  color: var(--muted-ink);
+}
+
+.automation-summary-grid,
+.weekly-automation-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.automation-summary-grid span,
+.weekly-automation-metrics span {
+  display: grid;
+  gap: 4px;
+  min-height: 88px;
+  border: 1px solid var(--stroke);
+  border-radius: 20px;
+  padding: 14px;
+  background: var(--chip-surface);
+}
+
+.automation-summary-grid strong,
+.weekly-automation-metrics strong {
+  color: var(--ink);
+  font-size: clamp(1.7rem, 3vw, 2.8rem);
+  font-weight: 440;
+  letter-spacing: -0.06em;
+  line-height: 0.9;
+}
+
+.automation-summary-grid em,
+.weekly-automation-metrics em {
+  color: var(--quiet-ink);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 760;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.automation-owner-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.automation-owner-section {
+  display: grid;
+  gap: 10px;
+  border-top: 1px solid var(--stroke);
+  padding-top: 14px;
+}
+
+.automation-owner-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: baseline;
+}
+
+.automation-owner-heading h4 {
+  font-size: 1rem;
+  font-weight: 760;
+  letter-spacing: -0.03em;
+}
+
+.automation-owner-heading span {
+  color: var(--quiet-ink);
+  font-size: 0.76rem;
+  font-weight: 720;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.automation-loop-list {
+  display: grid;
+  gap: 8px;
+}
+
+.automation-loop-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.54fr) minmax(0, 1fr);
+  gap: 16px;
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 13px 14px;
+  background: color-mix(in srgb, var(--surface) 82%, var(--chip-surface));
+}
+
+.automation-loop-main {
+  display: grid;
+  gap: 5px;
+}
+
+.automation-loop-main strong {
+  color: var(--ink);
+  font-size: 0.96rem;
+  letter-spacing: -0.025em;
+}
+
+.automation-loop-main p {
+  color: var(--muted-ink);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.automation-loop-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-content: start;
+  justify-content: flex-end;
+}
+
+.automation-loop-meta span,
+.automation-status {
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  padding: 6px 9px;
+  background: var(--chip-surface);
+  color: var(--quiet-ink);
+  font-size: 0.72rem;
+  font-weight: 720;
+  line-height: 1.15;
+}
+
+.automation-status.ok {
+  border-color: color-mix(in srgb, var(--primary) 34%, var(--stroke));
+  color: var(--mid);
+}
+
+.automation-status.needs-check {
+  border-color: color-mix(in srgb, #d8812b 44%, var(--stroke));
+  color: #9a5a20;
+}
+
+.weekly-automation-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr);
+  gap: 22px;
+  align-items: end;
+  background:
+    radial-gradient(circle at 92% 8%, var(--active-surface-soft), transparent 34%),
+    var(--surface);
+}
+
+@media (max-width: 900px) {
+  .automation-board-header,
+  .weekly-automation-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-loop-row {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-loop-meta {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .automation-summary-grid,
+  .weekly-automation-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .automation-summary-grid span,
+  .weekly-automation-metrics span {
+    min-height: 76px;
+    padding: 12px;
+  }
+}
