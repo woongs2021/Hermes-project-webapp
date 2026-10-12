@@ -246,6 +246,16 @@ const automationLoops: AutomationLoop[] = [
     note: '웹앱 Weekly 데이터 카운트와 public manifest 상태 확인',
   },
   {
+    owner: 'Faker',
+    name: 'Update automation board weekly',
+    rhythm: '월 10:10 KST',
+    nextRun: '10/19 10:10',
+    status: 'ok',
+    delivery: 'Telegram · Chris DM',
+    costType: 'LLM',
+    note: '현재 켜진 cron 루프를 읽어 Team/Weekly 자동화 대시보드를 주간 갱신',
+  },
+  {
     owner: 'Yuna',
     name: 'AI/AX job impact research',
     rhythm: '수/금 09:15 KST',
