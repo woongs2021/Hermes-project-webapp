@@ -106,7 +106,7 @@ function normalizedSourceTitle(item) {
   if (directTitle) return directTitle
 
   const koreanTitle = firstNonEmpty(item.korean_title, item.title_ko)
-  const originalTitle = firstNonEmpty(item.original_title)
+  const originalTitle = firstNonEmpty(item.original_title, item.title_original)
 
   if (koreanTitle && originalTitle && koreanTitle !== originalTitle) return `${koreanTitle} / ${originalTitle}`
   return koreanTitle ?? originalTitle
@@ -116,7 +116,7 @@ function publicationDateFromSource(item) {
   const directDate = firstNonEmpty(item.publication_date)
   if (directDate) return directDate
 
-  const sourceVenueDate = firstNonEmpty(item.source_venue_date)
+  const sourceVenueDate = firstNonEmpty(item.source_venue_date, item.source_date)
   const dateMatch = sourceVenueDate?.match(/\b\d{4}-\d{2}-\d{2}\b/)
   if (dateMatch) return dateMatch[0]
 
@@ -179,8 +179,8 @@ function normalizeResearchItem(item, index, selectedIndex = new Map()) {
     dateKst: firstNonEmpty(item.date_kst, item.date),
     isoWeek: firstNonEmpty(item.iso_week) ?? isoWeekFromDate(firstNonEmpty(item.date_kst, item.date)),
     title: normalizedSourceTitle(item),
-    urlOrId: firstNonEmpty(item.url_or_id, item.url_or_stable_id),
-    sourceVenue: firstNonEmpty(item.source_venue, item.source_venue_date),
+    urlOrId: firstNonEmpty(item.url_or_id, item.url_or_stable_id, item.url, item.stable_id),
+    sourceVenue: firstNonEmpty(item.source_venue, item.source_venue_date, item.source),
     publicationDate: publicationDateFromSource(item),
     summary: firstNonEmpty(item.core_claim, item.one_line_core_claim),
     chrisRelevance: firstNonEmpty(item.chris_relevance, item.one_line_chris_relevance),
