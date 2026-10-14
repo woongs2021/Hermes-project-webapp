@@ -253,7 +253,7 @@ function normalizeResearchItem(item, index, selectedIndex = new Map()) {
 export function buildResearchBoardManifest(records, generatedAt = new Date().toISOString()) {
   const selectedIndex = readWeeklySelectedIndex()
   const items = records
-    .filter((record) => allowedLanes.has(record.lane ?? record.owner))
+    .filter((record) => allowedLanes.has(record.lane ?? record.owner ?? record.agent))
     .map((record, index) => normalizeResearchItem(record, index, selectedIndex))
     .sort((left, right) => left.dateKst.localeCompare(right.dateKst) || left.lane.localeCompare(right.lane) || left.title.localeCompare(right.title))
 
