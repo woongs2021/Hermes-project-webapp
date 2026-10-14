@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-14T09:09:40.861Z",
+  "generatedAt": "2026-10-14T09:28:44.450Z",
   "sourcePolicy": "public-safe research board manifest only; exposes chronological paper metadata, safe summaries, source links, lane labels, and validation/caution text; excludes raw logs, credentials, private IDs, local source paths, and hidden prompts",
   "status": "public_research_board_allowed",
   "items": [
@@ -8143,8 +8143,8 @@
       "sourceAccess": "full text",
       "sourceUrlOrId": "https://doi.org/10.1007/s10798-026-10128-0",
       "publicationDate": "2026-10-05",
-      "summary": "디자인 학생의 AI 리터러시를 23개 문항·5개 요인(AI 개념/기술, 도구 숙련, 윤리·독창성, 디자인 가치 인식, 출력 평가)으로 측정하는 척도를 EFA N=294, CFA N=325로 검증했습니다.",
-      "chrisRelevance": "AX/OBD 리더십에서 디자이너의 AI 역량을 프롬프트 기술이 아니라 윤리, 독창성, 결과 평가까지 포함한 교육·평가 체계로 다룰 근거입니다.",
+      "summary": "생성형 AI가 디자인 실무와 교육에 깊게 들어오고 있지만, 디자인 학생의 AI 리터러시를 디자인 맥락에 맞게 설명하고 측정하는 신뢰도 높은 도구가 부족하다는 문제에서 출발합니다. 연구진은 전문가 의견을 바탕으로 문항 풀을 만들고, EFA N=294와 CFA N=325를 통해 최종 23문항·5요인 척도(AI 개념/기술, AI 도구 숙련, AI 윤리와 독창성 인식, 디자인에서의 AI 가치 인식, AI 출력물 독립 평가)를 검증했습니다.",
+      "chrisRelevance": "Chris의 AX/OBD 관점에서는 디자이너의 AI 역량을 프롬프트 사용 능력 하나로 보지 않고, 윤리·독창성·디자인 가치 판단·출력 평가까지 포함한 교육/리뷰/조직 역량 언어로 정리할 수 있게 해주는 논문입니다.",
       "koreanSourceStatus": "no; global Springer journal",
       "score": 4.3,
       "duplicateSignal": "new — local JSONL search에서 DOI/title 중복 없음",
