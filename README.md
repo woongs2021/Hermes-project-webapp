@@ -1,178 +1,136 @@
 # Hermes Project Webapp
 
-Chris Park의 Hermes/OBD 작업을 웹에서 볼 수 있도록 구성한 **webapp repository**입니다. Faker가 구현/프로토타이핑 관점에서 다루고, Karina가 전체 운영 맥락과 GitHub 백업 흐름을 조율합니다.
+Chris Park의 Hermes Agent Team, OBD, AX 리서치와 Design DNA를 하나의 제품 표면으로 연결하는 GitHub Pages 기반 웹앱입니다.
 
-- Repository: `https://github.com/woongs2021/Hermes-project-webapp`
-- GitHub Pages: `https://woongs2021.github.io/Hermes-project-webapp/`
-- Related backup repo: `https://github.com/woongs2021/Hermes-project-backup`
+- **Repository:** https://github.com/woongs2021/Hermes-project-webapp
+- **Live Pages:** https://woongs2021.github.io/Hermes-project-webapp/
+- **High-resolution originals:** https://github.com/woongs2021/Hermes-project-assets/releases
+- **Related private backup:** `Hermes-project-backup`
 
-## 프로젝트 목적
+## Product intent
 
-이 웹앱은 Chris가 Hermes agent team으로 축적하는 research, visual, growth, OBD/ontology-business-design 흐름을 점차 하나의 product surface로 정리하기 위한 기반입니다.
+이 웹앱은 단순 대시보드가 아니라 Chris의 리서치, 시각 레퍼런스, 디자인 판단, 에이전트 협업을 탐색 가능한 작업 시스템으로 정리합니다.
 
-핵심 의도:
+- **Team:** Karina와 전문 에이전트의 역할·협업·검증 흐름
+- **Personal AX:** OBD Map, Research, Visual Archive를 통한 개인 지식/탐색 흐름
+- **Corporate AX:** Chris Archive와 Design DNA를 바탕으로 한 브랜드·디자인 시스템화
+- **Weekly:** 주간 후보, 검증 신호, 축적 현황의 짧은 점검
 
-- Hermes를 단순 챗봇이 아니라 **Harness / Loop / Graph Engineering** 기반의 작업 시스템으로 설명합니다.
-- daily/weekly loop에서 생기는 data, question, visual, decision을 웹앱에서 탐색 가능한 형태로 쌓습니다.
-- Chris의 디자인 리더십, OBD 관점, AI/AX job-shift research, visual archive를 연결합니다.
-- “AI티 나는 스타트업 UI”가 아니라, calm, premium, editorial, bento/SaaS-like dashboard 톤을 유지합니다.
+시각 톤은 과장된 AI 스타트업 미감보다 차분하고 인간적인 editorial/product surface를 목표로 합니다.
 
-## 현재 구성
+## Architecture
 
 ```text
-.
-├── august-dashboard/              # Vite + React dashboard source
-├── august-dashboard-safe-sources/ # public-safe dashboard source documents
-├── webapp-build-loop/             # Faker webapp planning/data loop export
-├── .github/workflows/pages.yml    # GitHub Pages deployment
-├── scripts/scan_export_safety.py  # curated export safety scan
-└── README.md
+Hermes-project-webapp
+├── august-dashboard/              # Vite + React source and local display previews
+├── august-dashboard-safe-sources/ # public-safe source documents
+├── webapp-build-loop/             # implementation/data planning feed
+└── .github/workflows/pages.yml    # Pages build and deploy
+
+Hermes-project-assets
+└── GitHub Releases                # 4K/HQ downloadable originals only
 ```
 
-### `august-dashboard/`
+### Asset contract
 
-현재 배포되는 Vite/React 앱입니다.
+| Need | Location | Manifest field |
+| --- | --- | --- |
+| UI code, metadata, thumbnail, display-ready WebP preview | `Hermes-project-webapp` | `imageSrc`, `previewImageSrc` |
+| 4K/HQ original download | `Hermes-project-assets` GitHub Release | `downloadSrc` |
 
-주요 특징:
+The current asset batch is [**`design-dna-2026-10`**](https://github.com/woongs2021/Hermes-project-assets/releases/tag/design-dna-2026-10). It holds **84 verified 4K/HQ originals**. The webapp manifest preserves local previews and points downloads to its versioned Release URLs.
 
-- Vite base: `/Hermes-project-webapp/`
-- GitHub Pages에서 asset path가 깨지지 않도록 구성
-- public dashboard manifest를 빌드 전에 검증/생성
-- source data는 `august-dashboard-safe-sources/dashboard-documents.json`에서 생성
+> New high-resolution originals must not be committed to this Pages repository. Upload the original to a public-safe Release first, keep/generate a local preview, then connect the two in the manifest.
 
-주요 명령:
+## Delivery phases and implemented state
+
+### Phase 1 — Foundation and public-safe delivery
+
+**Implemented**
+
+- Vite + React application under `august-dashboard/`
+- GitHub Pages build/deploy workflow with base path `/Hermes-project-webapp/`
+- curated public-safe export boundary; no credentials, runtime databases, raw conversations, private prompts, logs, caches, `node_modules/`, or build output
+- manifest/data validation before production builds
+
+### Phase 2 — Information architecture and responsive product shell
+
+**Implemented**
+
+- Four top-level contexts: Team, Personal AX, Corporate AX, Weekly
+- body-local child navigation: Personal AX → OBD Map / Research / Visual Archive; Corporate AX → Chris Archive / Design DNA
+- text-led, low-noise navigation and responsive desktop/tablet/mobile layouts
+- interaction and layout QA for tabs, modal behavior, loading states, overflow, and GitHub Pages path handling
+
+### Phase 3 — Research, archive, and Design DNA surfaces
+
+**Implemented**
+
+- Research Board backed by validated public research data; cards separate evidence-first summaries from AX/OBD/design-leadership interpretation
+- Chris Archive with visual reference thumbnails, detail modal, Karina observations, and design-system extraction candidates
+- Design DNA / Midjourney + Mockup collections with manifest-backed assets and downloadable original links
+- Visual Archive and Home visual data flows for selected public-facing materials
+
+### Phase 4 — High-resolution asset externalization
+
+**Implemented — `design-dna-2026-10`**
+
+- manifest-derived inventory of 84 4K/HQ assets, including byte size, SHA-256, release filename, and manifest references
+- originals uploaded to `Hermes-project-assets` Release rather than serving from Pages
+- all 84 `imageSrc` values use local WebP previews; all 84 `downloadSrc` values use verified Release URLs
+- provenance metadata added to migrated items: `sourceAssetStore`, `sourceAssetRelease`, `assetTier`
+- Release URLs, preview URLs, data validation, lint, production build, Pages deployment, and live manifest were verified before cleanup
+
+**Current cleanup state**
+
+- The Release is the download source of truth for these 84 originals.
+- Their tracked copies are removed from the current webapp tree after Release/manifest verification.
+- Git history is intentionally unchanged. History rewrite/force push is a separate, explicitly approved maintenance operation.
+
+## Development
 
 ```bash
 cd august-dashboard
 npm ci
-npm run build
+npm run validate:data
+npm run lint
+npm run build:public
 npm run preview
 ```
 
-### `webapp-build-loop/`
+## Deployment and verification
 
-Faker가 향후 웹앱 구현에 사용할 planning/data feed입니다.
-
-포함되는 방향:
-
-- IA/routes/component 후보
-- graph-engineering / why-Hermes framing
-- daily implementation notes
-- image-gallery data/assets
-- HomeVisualHero current pointer
-- visual archive tab 후보 데이터
-
-### `image-gallery` / `HomeVisualHero`
-
-Go Youn-jung daily visual loop의 최종 승인 이미지가 Faker webapp feed로 들어옵니다.
-
-현재 운영 규칙:
-
-- Go Youn-jung visual loop는 daily 2 images 기준입니다.
-- 7-day rolling window 안에서 color/metaphor가 반복되지 않게 조정합니다.
-- 최종본만 webapp feed에 들어갑니다.
-- pending/rejected/private prompt는 public webapp feed에 넣지 않습니다.
-- exact prompts는 기본적으로 숨기고, Chris가 별도로 요청할 때만 공유합니다.
-
-## GitHub Pages 배포
-
-이 repo는 GitHub Actions로 Pages에 배포됩니다.
-
-Workflow:
+Pushes to `main` run the Pages workflow:
 
 ```text
-push to main
-→ npm ci
-→ npm run build
-→ upload august-dashboard/dist
-→ deploy to GitHub Pages
+npm ci → npm run build → upload dist → deploy GitHub Pages
 ```
 
-배포 URL:
+Before reporting a public update as complete, verify:
 
-```text
-https://woongs2021.github.io/Hermes-project-webapp/
-```
+- data validation, lint, production build, and `git diff --check`
+- GitHub Actions deployment success
+- live manifest/content, not only the pushed source
+- a representative local preview (`image/*`) and external download URL (`200`)
+- desktop, tablet, and mobile UI behavior when UI code changes
 
-현재 확인된 상태:
+## Operational boundaries
 
-- Branch: `webapp-pages-20260802`
-- Main 반영 완료
-- Pages workflow 성공 확인
-- URL HTTP 200 확인
+### Allowed here
 
-## 안전/공개 범위
+- public-safe React/Vite code and data
+- thumbnails and display-ready previews
+- curated metadata, design rationale, selected visual assets
+- manifest links to public Release downloads
 
-이 repo는 웹앱용이지만, 여전히 curated export 기준으로 관리합니다.
+### Never commit here
 
-포함 가능:
+- 4K/HQ originals after the externalization contract
+- secrets, keys, OAuth/auth stores, session databases, private transcripts, raw logs, private prompts, rejected drafts
+- generated dependency/build/cache directories
 
-- public-safe dashboard source
-- generated manifest
-- webapp source code
-- public-facing image-gallery assets/metadata
-- Chris가 웹앱에 쓰기로 허용한 visual/story/data 구조
+## Next implementation direction
 
-포함 금지:
-
-- `.env`, `.env.*`
-- OAuth/auth store, token, credential
-- Hermes session DB, raw transcript, raw DM dump
-- gateway logs, request dumps
-- private prompt, pending review manifest, rejected drafts
-- `node_modules/`, `dist/`, cache folders
-
-push 전 확인:
-
-```bash
-python3 scripts/scan_export_safety.py .
-```
-
-## 향후 계획
-
-현재까지 계획된 방향:
-
-1. **Home / Project intro**
-   - Hermes를 “the harness”로 설명
-   - Chris의 OBD/AI design operating system으로 포지셔닝
-   - Go Youn-jung final visual set을 `HomeVisualHero`로 사용
-
-2. **Visual Archive**
-   - Pinterest-like masonry cards
-   - 이미지 클릭 시 rationale drawer/modal
-   - title, theme, metaphor, why, model, date, agent 표시
-   - exact prompt는 hidden by default
-
-3. **Research / Paper intelligence**
-   - Yuna + Go Youn-jung daily 3+3 research의 축적 데이터
-   - Friday Muyeol best-3 validation
-   - Karina final synthesis와 연결
-
-4. **Growth / SNS loop**
-   - Son의 growth question / SNS subscriber experiment 흐름
-   - source tags, reason, OBD/productization notes를 dashboard data로 전환
-
-5. **Harness / Loop / Graph Engineering**
-   - 처음에는 file-based `nodes.jsonl` / `edges.jsonl` MVP
-   - 이후 필요하면 KuzuDB/Neo4j 같은 graph DB로 확장
-   - Chris의 작업, 에이전트, 질문, 논문, 이미지, 결정의 관계를 탐색 가능하게 구성
-
-## 백업/업데이트 방식
-
-이 repo 업데이트도 자동 루프가 아닙니다.
-
-Chris가 적절한 시점에 “지금 백업해줘”라고 명령하면:
-
-1. curated export를 다시 생성합니다.
-2. safety scan을 통과시킵니다.
-3. 새 branch를 만듭니다.
-4. GitHub에 branch push합니다.
-5. main에 fast-forward merge합니다.
-6. Pages workflow와 URL을 확인합니다.
-
-## 현재 상태
-
-- Initial webapp branch: `webapp-pages-20260802`
-- Main 반영 완료
-- Latest known commit: `9ad7b5a`
-- Pages URL: `https://woongs2021.github.io/Hermes-project-webapp/`
+1. Add future Go Youn-jung and Midjourney originals through the Release-first asset contract.
+2. Continue accumulating Chris Archive analyses into explicit `DESIGN_SYSTEM.md` principles and selected Design DNA outputs.
+3. Expand relationship-aware navigation across questions, research, visual evidence, and design decisions while keeping public data curated and privacy-safe.
