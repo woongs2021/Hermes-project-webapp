@@ -17,6 +17,7 @@ const allowedItemKeys = new Set([
   'lane',
   'owner',
   'title',
+  'titleKo',
   'thumbnailLabel',
   'sourceVenue',
   'sourceAccess',
@@ -204,10 +205,13 @@ function normalizeResearchItem(item, index, selectedIndex = new Map()) {
   const lane = item.lane ?? item.owner ?? item.agent
   if (!allowedLanes.has(lane)) fail(`source item[${index}].lane is not allowed: ${lane}`)
 
+  const selectionTitle = normalizedSourceTitle(item)
+  const titleKo = item.title_en ? firstNonEmpty(item.title_ko, item.korean_title) : undefined
   const normalized = {
     dateKst: firstNonEmpty(item.date_kst, item.date),
     isoWeek: firstNonEmpty(item.iso_week) ?? isoWeekFromDate(firstNonEmpty(item.date_kst, item.date)),
-    title: normalizedSourceTitle(item),
+    title: firstNonEmpty(item.title_en, selectionTitle),
+    selectionTitle,
     urlOrId: firstNonEmpty(item.url_or_id, item.url_or_stable_id, item.url, item.stable_id),
     sourceVenue: firstNonEmpty(item.source_venue, item.source_venue_date, item.source),
     publicationDate: publicationDateFromSource(item),
@@ -225,15 +229,16 @@ function normalizeResearchItem(item, index, selectedIndex = new Map()) {
   const score = Number(item.initial_score_5 ?? 0)
   if (!Number.isFinite(score) || score < 0 || score > 5) fail(`source item[${index}].initial_score_5 must be 0-5`)
 
-  const selectedStatus = selectedStatusFor(normalized, selectedIndex)
+  const selectedStatus = selectedStatusFor({ ...normalized, title: normalized.selectionTitle }, selectedIndex)
 
   return {
-    id: `${normalized.dateKst}-${lane}-${slugify(normalized.title) || index}`,
+    id: `${normalized.dateKst}-${lane}-${slugify(normalized.selectionTitle) || index}`,
     dateKst: normalized.dateKst,
     isoWeek: normalizeIsoWeek(normalized.isoWeek),
     lane,
     owner: lane,
     title: normalized.title,
+    ...(titleKo ? { titleKo } : {}),
     thumbnailLabel: thumbnailLabel({ ...item, lane }),
     sourceVenue: normalized.sourceVenue,
     sourceAccess: normalized.sourceAccess,
@@ -287,6 +292,7 @@ export function validateResearchBoardManifest(manifest) {
     for (const field of ['id', 'dateKst', 'isoWeek', 'lane', 'owner', 'title', 'thumbnailLabel', 'sourceVenue', 'sourceAccess', 'sourceUrlOrId', 'publicationDate', 'summary', 'chrisRelevance', 'koreanSourceStatus', 'duplicateSignal']) {
       nonEmpty(item[field], `items[${index}].${field}`)
     }
+    if (item.titleKo !== undefined) nonEmpty(item.titleKo, `items[${index}].titleKo`)
     if (seenIds.has(item.id)) fail(`duplicate item id: ${item.id}`)
     seenIds.add(item.id)
     if (!/^\d{4}-\d{2}-\d{2}$/.test(item.dateKst)) fail(`items[${index}].dateKst must be YYYY-MM-DD`)

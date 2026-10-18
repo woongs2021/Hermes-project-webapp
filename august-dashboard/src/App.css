@@ -404,6 +404,20 @@
   transition: border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
 }
 
+.research-title-en,
+.research-title-ko {
+  display: block;
+}
+
+.research-title-ko {
+  margin-top: 5px;
+  color: var(--muted-ink);
+  font-size: 0.78em;
+  font-weight: 560;
+  letter-spacing: -0.025em;
+  line-height: 1.38;
+}
+
 :root[data-theme='dark'] .validated-paper-card {
   background: #111822;
 }

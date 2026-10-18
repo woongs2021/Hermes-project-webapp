@@ -2216,7 +2216,7 @@ function ResearchKanbanPanel({ selectedResearchId }: { selectedResearchId?: stri
                   >
                     <span className="validated-paper-rank">{String((index % rowItems.length) + 1 + rowIndex * 6).padStart(2, '0')}</span>
                     <span className="validated-paper-copy">
-                      <strong>{item.title}</strong>
+                      <strong><ResearchBilingualTitle item={item} /></strong>
                       <small>{laneLabel(item.lane)} · {item.dateKst} · {item.isoWeek}</small>
                       <span>{item.chrisRelevance || item.summary}</span>
                     </span>
@@ -2287,7 +2287,7 @@ function ResearchKanbanPanel({ selectedResearchId }: { selectedResearchId?: stri
                       <span>{item.thumbnailLabel}</span>
                     </span>
                     <span className="research-card-copy">
-                      <strong>{item.title}</strong>
+                      <strong><ResearchBilingualTitle item={item} /></strong>
                       <small>{item.dateKst} · {item.isoWeek}</small>
                       <span className="research-card-meta">
                         <em>{item.validationStatus}</em>
@@ -2329,7 +2329,7 @@ function ResearchKanbanPanel({ selectedResearchId }: { selectedResearchId?: stri
                 >
                   <span>{item.thumbnailLabel}</span>
                   <div>
-                    <strong>{item.title}</strong>
+                    <strong><ResearchBilingualTitle item={item} /></strong>
                     <small>{laneLabel(item.lane)} · {item.dateKst} · {item.isoWeek} · {item.validationStatus}</small>
                     <p>{item.summary}</p>
                   </div>
@@ -2442,6 +2442,15 @@ function buildValidatedPaperSynthesis(item: ResearchBoardItem) {
   return { summarySegments, detailParagraphs }
 }
 
+function ResearchBilingualTitle({ item }: { item: ResearchBoardItem }) {
+  return (
+    <>
+      <span className="research-title-en">{item.title}</span>
+      {item.titleKo ? <span className="research-title-ko">{item.titleKo}</span> : null}
+    </>
+  )
+}
+
 function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoardItem; generatedAt: string; policy: string }) {
   const primaryHref = primarySourceHref(item.sourceUrlOrId)
   const validatedSynthesis = item.status === 'friday_final_pick' ? buildValidatedPaperSynthesis(item) : null
@@ -2451,7 +2460,7 @@ function ResearchDetailPanel({ item, generatedAt, policy }: { item: ResearchBoar
       <div className="research-detail-header">
         <div>
           <p className="card-kicker">{laneLabel(item.lane)}</p>
-          <h3>{item.title}</h3>
+          <h3><ResearchBilingualTitle item={item} /></h3>
         </div>
         <span className="status-chip">score {item.score.toFixed(1)}</span>
       </div>

@@ -50,6 +50,7 @@
         "lane": { "enum": ["yuna", "goyounjung"] },
         "owner": { "enum": ["yuna", "goyounjung"] },
         "title": { "type": "string", "minLength": 1 },
+        "titleKo": { "type": "string", "minLength": 1 },
         "thumbnailLabel": { "type": "string", "minLength": 1, "maxLength": 12 },
         "sourceVenue": { "type": "string", "minLength": 1 },
         "sourceAccess": { "type": "string", "minLength": 1 },
