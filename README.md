@@ -38,9 +38,11 @@ Hermes-project-assets
 | UI code, metadata, thumbnail, display-ready WebP preview | `Hermes-project-webapp` | `imageSrc`, `previewImageSrc` |
 | 4K/HQ original download | `Hermes-project-assets` GitHub Release | `downloadSrc` |
 
-The current asset batches are [**`design-dna-2026-10`**](https://github.com/woongs2021/Hermes-project-assets/releases/tag/design-dna-2026-10) (**84** originals) and [**`midjourney-dna-archive-2026-10`**](https://github.com/woongs2021/Hermes-project-assets/releases/tag/midjourney-dna-archive-2026-10) (**35** Midjourney DNA Archive 4K originals). The webapp keeps local previews and resolves downloads to their versioned Release URLs.
+웹앱은 빠른 탐색을 위한 가벼운 미리보기를 제공하고, 4K/HQ 원본은 작품 상세의 **고화질 다운로드**를 통해 versioned GitHub Release에서 제공합니다. 원본은 Pages 저장소에 넣지 않아 화면 경험과 배포 용량을 함께 가볍게 유지합니다.
 
-> New high-resolution originals must not be committed to this Pages repository. Upload the original to a public-safe Release first, keep/generate a local preview, then connect the two in the manifest.
+The current asset batches are [**`design-dna-2026-10`**](https://github.com/woongs2021/Hermes-project-assets/releases/tag/design-dna-2026-10) (**84** originals) and [**`midjourney-dna-archive-2026-10`**](https://github.com/woongs2021/Hermes-project-assets/releases/tag/midjourney-dna-archive-2026-10) (**35** Midjourney DNA Archive 4K originals): **119 originals in total**. The webapp keeps local previews and resolves downloads to their versioned Release URLs.
+
+> New high-resolution originals must not be committed to this Pages repository. Upload the original to a public-safe Release first, keep/generate a local preview, then connect the two in the manifest. Public manifests must contain only display and download data—never local paths, raw operations, or private runtime details.
 
 ## Delivery phases and implemented state
 
@@ -73,19 +75,20 @@ The current asset batches are [**`design-dna-2026-10`**](https://github.com/woon
 
 ### Phase 4 — High-resolution asset externalization
 
-**Implemented — `design-dna-2026-10`**
+**Implemented — `design-dna-2026-10` + `midjourney-dna-archive-2026-10`**
 
-- manifest-derived inventory of 84 4K/HQ assets, including byte size, SHA-256, release filename, and manifest references
+- manifest-derived inventory of 119 4K/HQ assets, including byte size, SHA-256, release filename, and manifest references
 - originals uploaded to `Hermes-project-assets` Release rather than serving from Pages
-- all 84 `imageSrc` values use local WebP previews; all 84 `downloadSrc` values use verified Release URLs
+- local previews remain in the webapp; all eligible `downloadSrc` values use verified Release URLs
 - provenance metadata added to migrated items: `sourceAssetStore`, `sourceAssetRelease`, `assetTier`
 - Release URLs, preview URLs, data validation, lint, production build, Pages deployment, and live manifest were verified before cleanup
 
 **Current cleanup state**
 
-- The Release is the download source of truth for these 84 originals.
+- The Releases are the download source of truth for all 119 externalized originals.
 - Their tracked copies are removed from the current webapp tree after Release/manifest verification.
-- Git history is intentionally unchanged. History rewrite/force push is a separate, explicitly approved maintenance operation.
+- The same 119 original paths are removed from retained webapp history after an independently verified backup archive was created. Existing clones should be refreshed after the history rewrite.
+- A public-manifest validation guard blocks local filesystem paths and internal operational fields from being deployed.
 
 ## Development
 

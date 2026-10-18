@@ -2951,6 +2951,7 @@ function DesignDnaPanel() {
               <p className="card-kicker">DNA Dashboard · {activeDnaDashboardLabel}</p>
               <h3>GPT Image 2.5 루프와 Midjourney 수동 결과를 분리해서 쌓습니다.</h3>
               <p>{activeDnaDashboardCopy}</p>
+              <p className="manifest-policy">이 화면은 빠른 탐색을 위한 미리보기를 우선 제공합니다. 4K/HQ 원본이 연결된 작품은 상세의 <strong>고화질 다운로드</strong>에서 받을 수 있습니다.</p>
               <div className="dna-dashboard-source-tabs" aria-label="DNA Dashboard source split">
                 <button
                   type="button"

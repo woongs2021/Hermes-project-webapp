@@ -4,8 +4,6 @@ export type ChrisArchiveItem = {
   created: string
   status: string
   imageSrc: string
-  entryPath: string
-  assetPath: string
   summary: string
   interpretation: string
   tags: string[]

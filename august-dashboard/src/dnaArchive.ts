@@ -13,7 +13,6 @@ export type DnaArchiveItem = {
   midjourneyPrompt?: string
   analysis: string
   sourceTool?: string
-  sourceRun?: string
   dnaClusters: string[]
 }
 
