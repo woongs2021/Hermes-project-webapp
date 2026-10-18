@@ -38,7 +38,7 @@ Hermes-project-assets
 | UI code, metadata, thumbnail, display-ready WebP preview | `Hermes-project-webapp` | `imageSrc`, `previewImageSrc` |
 | 4K/HQ original download | `Hermes-project-assets` GitHub Release | `downloadSrc` |
 
-The current asset batch is [**`design-dna-2026-10`**](https://github.com/woongs2021/Hermes-project-assets/releases/tag/design-dna-2026-10). It holds **84 verified 4K/HQ originals**. The webapp manifest preserves local previews and points downloads to its versioned Release URLs.
+The current asset batches are [**`design-dna-2026-10`**](https://github.com/woongs2021/Hermes-project-assets/releases/tag/design-dna-2026-10) (**84** originals) and [**`midjourney-dna-archive-2026-10`**](https://github.com/woongs2021/Hermes-project-assets/releases/tag/midjourney-dna-archive-2026-10) (**35** Midjourney DNA Archive 4K originals). The webapp keeps local previews and resolves downloads to their versioned Release URLs.
 
 > New high-resolution originals must not be committed to this Pages repository. Upload the original to a public-safe Release first, keep/generate a local preview, then connect the two in the manifest.
 

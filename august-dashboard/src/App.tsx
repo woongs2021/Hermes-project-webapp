@@ -2720,6 +2720,12 @@ function DesignDnaPanel() {
     },
   ]
   const activeMidjourneyMockupGroup = midjourneyMockupGroups.find((group) => group.id === activeMidjourneyMockupSource) ?? midjourneyMockupGroups[0]
+  const selectedDnaAssetDownloadSrc = selectedDnaAsset?.highResDownloadSrc ?? selectedDnaAsset?.highResImageSrc
+  const selectedDnaAssetDownloadHref = selectedDnaAssetDownloadSrc
+    ? selectedDnaAssetDownloadSrc.startsWith('http')
+      ? selectedDnaAssetDownloadSrc
+      : toAppAssetSrc(selectedDnaAssetDownloadSrc)
+    : undefined
 
   return (
     <div className="design-dna-shell design-dna-single-page">
@@ -3150,18 +3156,18 @@ function DesignDnaPanel() {
               ×
             </button>
             <div className="dna-generated-modal-media">
-              <img src={toAppAssetSrc(selectedDnaAsset.highResImageSrc ?? selectedDnaAsset.imageSrc)} alt={`${selectedDnaAsset.title} generated full asset`} />
+              <img src={toAppAssetSrc(selectedDnaAsset.imageSrc)} alt={`${selectedDnaAsset.title} generated full asset`} />
             </div>
             <div className="dna-generated-modal-copy">
               <p className="card-kicker">{selectedDnaAsset.created} · {selectedDnaAsset.sourceTool ?? activeDnaDashboardLabel} · {selectedDnaAsset.status}</p>
               <h3 id="dna-generated-modal-title">{selectedDnaAsset.title}</h3>
               <p>{selectedDnaAsset.analysis}</p>
-              {selectedDnaAsset.highResImageSrc ? (
+              {selectedDnaAssetDownloadSrc && selectedDnaAssetDownloadHref ? (
                 <div className="dna-high-res-download-row" aria-label="4K high-resolution download">
                   <a
                     className="chris-design-system-download dna-high-res-download"
-                    href={toAppAssetSrc(selectedDnaAsset.highResImageSrc)}
-                    download={`${selectedDnaAsset.title.replace(/[^a-zA-Z0-9가-힣_-]+/g, '-').replace(/^-|-$/g, '') || 'dna-asset'}-4k${selectedDnaAsset.highResImageSrc?.toLowerCase().endsWith('.jpg') || selectedDnaAsset.highResImageSrc?.toLowerCase().endsWith('.jpeg') ? '.jpg' : '.png'}`}
+                    href={selectedDnaAssetDownloadHref}
+                    download={`${selectedDnaAsset.title.replace(/[^a-zA-Z0-9가-힣_-]+/g, '-').replace(/^-|-$/g, '') || 'dna-asset'}-4k${selectedDnaAssetDownloadSrc.toLowerCase().endsWith('.jpg') || selectedDnaAssetDownloadSrc.toLowerCase().endsWith('.jpeg') ? '.jpg' : '.png'}`}
                   >
                     {selectedDnaAsset.highResDownloadLabel ?? '4K 고화질 PNG 다운로드'}
                   </a>

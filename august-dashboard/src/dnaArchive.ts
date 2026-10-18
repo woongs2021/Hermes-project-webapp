@@ -5,6 +5,7 @@ export type DnaArchiveItem = {
   status: string
   imageSrc: string
   highResImageSrc?: string
+  highResDownloadSrc?: string
   highResDownloadLabel?: string
   highResWidth?: number
   highResHeight?: number
