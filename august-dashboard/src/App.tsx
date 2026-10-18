@@ -1276,6 +1276,58 @@ function AutomationBoardPanel() {
   )
 }
 
+function WeeklyResourceContinuityPanel() {
+  const layers = [
+    {
+      index: '01',
+      label: 'CURRENT EXPERIENCE',
+      title: '현재 웹앱 · 가벼운 탐색',
+      store: 'Hermes-project-webapp',
+      body: '현재 화면과 미리보기는 가볍게 유지해 빠르게 보고 탐색합니다.',
+    },
+    {
+      index: '02',
+      label: 'VERSIONED ORIGINALS',
+      title: '4K/HQ 원본 · 버전 보관',
+      store: 'Hermes-project-assets · GitHub Releases',
+      body: '고화질 원본은 버전이 남는 Release에 보관하고, 상세 화면의 다운로드로 연결합니다.',
+    },
+    {
+      index: '03',
+      label: 'PRE-CLEANUP HISTORY',
+      title: '정리 전 이력 · 복구 가능성',
+      store: 'Private backup Release',
+      body: '정리 전 전체 이력은 백업 번들과 checksum으로 분리 보관합니다.',
+    },
+  ]
+
+  return (
+    <section className="content-card weekly-resource-continuity" aria-label="Verified three-layer webapp resource continuity">
+      <div className="resource-continuity-header">
+        <p className="card-kicker">Resource continuity · verified</p>
+        <h3>검증된 3단계 리소스 백업 구조</h3>
+        <p>검증을 통해 현재 탐색 화면, 4K/HQ 원본, 정리 전 전체 이력이 서로 다른 역할로 이어짐을 확인했습니다.</p>
+      </div>
+      <div className="resource-continuity-layers" aria-label="Three resource continuity layers">
+        {layers.map((layer) => (
+          <article className="resource-continuity-layer" key={layer.index}>
+            <div className="resource-continuity-meta">
+              <span>{layer.index}</span>
+              <small>{layer.label}</small>
+            </div>
+            <div>
+              <h4>{layer.title}</h4>
+              <p className="resource-continuity-store">{layer.store}</p>
+            </div>
+            <p>{layer.body}</p>
+          </article>
+        ))}
+      </div>
+      <p className="resource-continuity-footer"><strong>검증 확인</strong> · 미리보기, 버전 원본, 정리 전 이력 백업이 분리된 역할로 리소스 연속성을 구성합니다.</p>
+    </section>
+  )
+}
+
 function WeeklyAutomationSummaryPanel() {
   return (
     <section className="content-card weekly-automation-summary" aria-label="Weekly automation operating summary">
@@ -3582,6 +3634,7 @@ function App() {
           <ResearchKanbanPanel selectedResearchId={selectedResearchIdFromMonthly} />
         ) : activeTab.id === 'report' ? (
           <>
+            <WeeklyResourceContinuityPanel />
             <WeeklyAutomationSummaryPanel />
             <MonthlyResearchSynthesisPanel onSelectResearchItem={openResearchItemFromMonthly} />
             <MuyeolValidationPanel />
