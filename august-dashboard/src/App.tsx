@@ -3634,10 +3634,10 @@ function App() {
           <ResearchKanbanPanel selectedResearchId={selectedResearchIdFromMonthly} />
         ) : activeTab.id === 'report' ? (
           <>
-            <WeeklyResourceContinuityPanel />
             <WeeklyAutomationSummaryPanel />
             <MonthlyResearchSynthesisPanel onSelectResearchItem={openResearchItemFromMonthly} />
             <MuyeolValidationPanel />
+            <WeeklyResourceContinuityPanel />
           </>
         ) : (
           <PlaceholderPanel tab={activeTab} />
