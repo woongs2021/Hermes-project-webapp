@@ -206,11 +206,12 @@ function normalizeResearchItem(item, index, selectedIndex = new Map()) {
   if (!allowedLanes.has(lane)) fail(`source item[${index}].lane is not allowed: ${lane}`)
 
   const selectionTitle = normalizedSourceTitle(item)
-  const titleKo = item.title_en ? firstNonEmpty(item.title_ko, item.korean_title) : undefined
+  const titleKo = firstNonEmpty(item.title_ko, item.korean_title)
   const normalized = {
     dateKst: firstNonEmpty(item.date_kst, item.date),
     isoWeek: firstNonEmpty(item.iso_week) ?? isoWeekFromDate(firstNonEmpty(item.date_kst, item.date)),
     title: firstNonEmpty(item.title_en, selectionTitle),
+    titleKo,
     selectionTitle,
     urlOrId: firstNonEmpty(item.url_or_id, item.url_or_stable_id, item.url, item.stable_id),
     sourceVenue: firstNonEmpty(item.source_venue, item.source_venue_date, item.source),
@@ -238,7 +239,7 @@ function normalizeResearchItem(item, index, selectedIndex = new Map()) {
     lane,
     owner: lane,
     title: normalized.title,
-    ...(titleKo ? { titleKo } : {}),
+    titleKo: normalized.titleKo,
     thumbnailLabel: thumbnailLabel({ ...item, lane }),
     sourceVenue: normalized.sourceVenue,
     sourceAccess: normalized.sourceAccess,
@@ -289,10 +290,9 @@ export function validateResearchBoardManifest(manifest) {
     for (const key of Object.keys(item)) {
       if (!allowedItemKeys.has(key)) fail(`items[${index}] has unsupported key "${key}"`)
     }
-    for (const field of ['id', 'dateKst', 'isoWeek', 'lane', 'owner', 'title', 'thumbnailLabel', 'sourceVenue', 'sourceAccess', 'sourceUrlOrId', 'publicationDate', 'summary', 'chrisRelevance', 'koreanSourceStatus', 'duplicateSignal']) {
+    for (const field of ['id', 'dateKst', 'isoWeek', 'lane', 'owner', 'title', 'titleKo', 'thumbnailLabel', 'sourceVenue', 'sourceAccess', 'sourceUrlOrId', 'publicationDate', 'summary', 'chrisRelevance', 'koreanSourceStatus', 'duplicateSignal']) {
       nonEmpty(item[field], `items[${index}].${field}`)
     }
-    if (item.titleKo !== undefined) nonEmpty(item.titleKo, `items[${index}].titleKo`)
     if (seenIds.has(item.id)) fail(`duplicate item id: ${item.id}`)
     seenIds.add(item.id)
     if (!/^\d{4}-\d{2}-\d{2}$/.test(item.dateKst)) fail(`items[${index}].dateKst must be YYYY-MM-DD`)

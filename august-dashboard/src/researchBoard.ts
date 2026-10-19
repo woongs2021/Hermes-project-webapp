@@ -7,7 +7,7 @@ export type ResearchBoardItem = {
   lane: ResearchLane
   owner: ResearchLane
   title: string
-  titleKo?: string
+  titleKo: string
   thumbnailLabel: string
   sourceVenue: string
   sourceAccess: string

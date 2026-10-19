@@ -29,6 +29,7 @@
         "lane",
         "owner",
         "title",
+        "titleKo",
         "thumbnailLabel",
         "sourceVenue",
         "sourceAccess",
