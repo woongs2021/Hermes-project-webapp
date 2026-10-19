@@ -185,196 +185,24 @@ type AutomationLoop = {
 }
 
 const automationLoops: AutomationLoop[] = [
-  {
-    owner: 'Karina',
-    name: 'Morning weather + warm note',
-    rhythm: '매일 09:00 KST',
-    nextRun: '10/13 09:00',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: '하루 시작을 짧게 정리하는 정서 안정 노트',
-  },
-  {
-    owner: 'Karina',
-    name: 'Midday warm note',
-    rhythm: '매일 12:00 KST',
-    nextRun: '10/13 12:00',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: '점심 무렵의 짧은 리셋 메시지',
-  },
-  {
-    owner: 'Karina',
-    name: 'Evening warm note',
-    rhythm: '매일 18:00 KST',
-    nextRun: '10/12 18:00',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: '퇴근 전후의 부드러운 마감 메시지',
-  },
-  {
-    owner: 'Karina',
-    name: 'Night warm note',
-    rhythm: '매일 22:00 KST',
-    nextRun: '10/12 22:00',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: '밤 10시 회복/정리용 메시지',
-  },
-  {
-    owner: 'Karina',
-    name: 'Specialist gateway watchdog',
-    rhythm: '5분마다',
-    nextRun: '계속',
-    status: 'ok',
-    delivery: 'local only',
-    costType: 'no-agent',
-    note: 'Yuna, GoYJ, Son, Faker, Muyeol gateway가 꺼지면 조용히 복구',
-  },
-  {
-    owner: 'Muyeol',
-    name: 'Weekly webapp data count update',
-    rhythm: '월 09:40 KST',
-    nextRun: '10/19 09:40',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: '웹앱 Weekly 데이터 카운트와 public manifest 상태 확인',
-  },
-  {
-    owner: 'Faker',
-    name: 'Update automation board weekly',
-    rhythm: '월 10:10 KST',
-    nextRun: '10/19 10:10',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: '현재 켜진 cron 루프를 읽어 Team/Weekly 자동화 대시보드를 주간 갱신',
-  },
-  {
-    owner: 'Yuna',
-    name: 'AI/AX job impact research',
-    rhythm: '수/금 09:15 KST',
-    nextRun: '10/14 09:15',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: 'AI/AX가 직무·산업에 미치는 변화 리서치',
-  },
-  {
-    owner: 'Yuna',
-    name: '3-item AI/AX research loop',
-    rhythm: '매일 09:30 KST',
-    nextRun: '10/13 09:30',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: 'global / Korea / package lens 3개 신호 선별',
-  },
-  {
-    owner: 'GoYJ',
-    name: 'Hermes DNA graphic motif candidates',
-    rhythm: '월/수/금 10:15 KST',
-    nextRun: '10/14 10:15',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: 'Design DNA 기반 그래픽 후보 5개 생성 루프',
-  },
-  {
-    owner: 'GoYJ',
-    name: 'Design jobs impact research',
-    rhythm: '수/금 09:25 KST',
-    nextRun: '10/14 09:25',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: 'AI/AX 변화가 디자인 직무에 주는 의미 해석',
-  },
-  {
-    owner: 'GoYJ',
-    name: '3-item UX/design research loop',
-    rhythm: '매일 09:40 KST',
-    nextRun: '10/13 09:40',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: 'global / Korea / package lens UX·디자인 신호 선별',
-  },
-  {
-    owner: 'Son',
-    name: 'AI/AX business market shift',
-    rhythm: '수/금 09:35 KST',
-    nextRun: '10/14 09:35',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: '리서치 결과를 비즈니스/시장 변화 관점으로 번역',
-  },
-  {
-    owner: 'Son',
-    name: 'Final SNS summary after AI/AX loop',
-    rhythm: '수/금 09:50 KST',
-    nextRun: '10/14 09:50',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: 'AI/AX 흐름을 SNS/성장 관점으로 요약',
-  },
-  {
-    owner: 'Faker',
-    name: 'Weekly Research 1-pick and trend refresh',
-    rhythm: '주 1회',
-    nextRun: '10/19 부근',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: 'Research board의 주간 1-pick과 trend 데이터 정리',
-  },
-  {
-    owner: 'Faker',
-    name: 'Consolidate AI/AX job-shift tabs',
-    rhythm: '수/금 09:45 KST',
-    nextRun: '10/14 09:45',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: 'AI/AX job-shift 결과를 웹앱 탭 구조에 통합',
-  },
-  {
-    owner: 'Faker',
-    name: 'Update research board from Muyeol 1-pick',
-    rhythm: '금 10:45 KST',
-    nextRun: '10/16 10:45',
-    status: 'needs-check',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: '지난 run은 배포/DOM 검증은 통과했지만 cron 기록은 error; prompt compact patch 완료',
-  },
-  {
-    owner: 'Muyeol',
-    name: 'Validate AI/AX job-shift loop',
-    rhythm: '금 09:55 KST',
-    nextRun: '10/16 09:55',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: 'AI/AX job-shift 루프의 검증·리스크 확인',
-  },
-  {
-    owner: 'Muyeol',
-    name: 'Weekly 1-pick validation for 3+3 research',
-    rhythm: '금 10:20 KST',
-    nextRun: '10/16 10:20',
-    status: 'ok',
-    delivery: 'Telegram · Chris DM',
-    costType: 'LLM',
-    note: 'Yuna/GoYJ 3+3 후보 중 주간 최종 1-pick 검증',
-  },
+  { owner: 'Karina', name: '아침 날씨·웜 노트', rhythm: '매일 09:00 KST', nextRun: '10/20 09:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '하루를 짧고 다정하게 여는 브리핑' },
+  { owner: 'Karina', name: '점심 웜 노트', rhythm: '매일 12:00 KST', nextRun: '10/19 12:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '점심 무렵의 가벼운 리셋' },
+  { owner: 'Karina', name: '저녁 웜 노트', rhythm: '매일 18:00 KST', nextRun: '10/19 18:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '저녁의 부드러운 마감 메시지' },
+  { owner: 'Karina', name: '밤 웜 노트', rhythm: '매일 22:00 KST', nextRun: '10/19 22:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '회복과 정리를 돕는 짧은 인사' },
+  { owner: 'Yuna', name: 'AI/AX 직무 영향 리서치', rhythm: '수·금 09:15 KST', nextRun: '10/21 09:15', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '국내외 직무·산업 변화 신호 조사' },
+  { owner: 'Yuna', name: '3-item AI/AX 리서치', rhythm: '매일 09:30 KST', nextRun: '10/20 09:30', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '글로벌·한국·패키지 관점 신호 선별' },
+  { owner: 'GoYJ', name: 'Hermes DNA 그래픽 모티프', rhythm: '월·수·금 10:15 KST', nextRun: '10/19 10:15', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: 'Design DNA용 그래픽 후보 생성' },
+  { owner: 'GoYJ', name: '디자인 직무 영향 리서치', rhythm: '수·금 09:25 KST', nextRun: '10/21 09:25', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: 'AI/AX와 디자인 역할 변화 해석' },
+  { owner: 'GoYJ', name: '3-item UX·디자인 리서치', rhythm: '매일 09:40 KST', nextRun: '10/20 09:40', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: 'UX·디자인 관점의 세 가지 신호 선별' },
+  { owner: 'Son', name: 'AI/AX 비즈니스 시장 변화', rhythm: '수·금 09:35 KST', nextRun: '10/21 09:35', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '리서치 결과를 시장 변화로 번역' },
+  { owner: 'Son', name: 'AI/AX SNS 시장 요약', rhythm: '수·금 09:50 KST', nextRun: '10/21 09:50', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '검증된 신호를 읽기 쉬운 시장 요약으로 정리' },
+  { owner: 'Faker', name: '주간 Research 1-pick·트렌드 갱신', rhythm: '월 00:00 KST', nextRun: '10/26 00:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '주간 리서치 보드의 선택과 흐름 점검' },
+  { owner: 'Faker', name: 'AI/AX job-shift 탭 통합', rhythm: '수·금 09:45 KST', nextRun: '10/21 09:45', status: 'needs-check', delivery: 'Direct message', costType: 'LLM', note: '최근 실행 오류 기록이 있어 다음 실행 확인 필요' },
+  { owner: 'Faker', name: 'Muyeol 1-pick 리서치 보드 반영', rhythm: '금 10:45 KST', nextRun: '10/23 10:45', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '검증된 주간 1-pick을 리서치 보드에 반영' },
+  { owner: 'Faker', name: '자동화 보드 주간 갱신', rhythm: '월 10:10 KST', nextRun: '10/26 10:10', status: 'needs-check', delivery: 'Direct message', costType: 'LLM', note: '첫 실행 결과가 아직 없어 다음 실행 확인 필요' },
+  { owner: 'Muyeol', name: 'AI/AX job-shift 루프 검증', rhythm: '금 09:55 KST', nextRun: '10/23 09:55', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '소스·리스크·구조를 주간 검증' },
+  { owner: 'Muyeol', name: '주간 1-pick 검증', rhythm: '금 10:20 KST', nextRun: '10/23 10:20', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '리서치 후보 중 한 가지 주간 학습을 검증' },
+  { owner: 'Muyeol', name: '주간 웹앱 데이터 카운트', rhythm: '월 09:40 KST', nextRun: '10/26 09:40', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '공개 데이터 지표와 manifest 상태 점검' },
 ]
 
 const automationOwnerOrder = ['Karina', 'Yuna', 'GoYJ', 'Son', 'Faker', 'Muyeol']
@@ -382,7 +210,7 @@ const automationSummary = {
   active: automationLoops.length,
   healthy: automationLoops.filter((loop) => loop.status === 'ok').length,
   needsCheck: automationLoops.filter((loop) => loop.status === 'needs-check').length,
-  pausedDefault: 0,
+  pausedDefault: 1,
 }
 const obdSubTabs: { id: ObdSubTabId; label: string; eyebrow: string; description: string }[] = [
   {
@@ -1229,8 +1057,8 @@ function AutomationBoardPanel() {
           <p className="card-kicker">Automation Loop Status</p>
           <h3>Hermes 팀이 지금 자동으로 돌리고 있는 루프</h3>
           <p>
-            Chris에게 실제로 메시지를 보내거나, 웹앱/리서치/검증 흐름을 유지하는 활성 루프만 정리했습니다.
-            꺼진 default job은 0개이며, watchdog은 토큰을 거의 쓰지 않는 no-agent 안전장치입니다.
+            모든 프로필의 cron 저장소에서 현재 켜진 루프만 정리했습니다.
+            default 저장소에는 중지된 루프 1개가 있으며, 표에는 공개 가능한 운영 정보만 표시합니다.
           </p>
         </div>
         <div className="automation-summary-grid" aria-label="Automation summary metrics">
@@ -1336,7 +1164,7 @@ function WeeklyAutomationSummaryPanel() {
         <h3>이번 주 자동화 루프 상태</h3>
         <p>
           Team 탭의 상세 Automation Board를 주간 화면에서는 네 가지 숫자로만 압축했습니다.
-          운영 루프는 켜진 것만 남겼고, default 쪽 paused job은 모두 정리된 상태입니다.
+          켜진 루프의 최근 실행 상태를 반영하며, default 저장소의 중지된 루프도 별도로 표시합니다.
         </p>
       </div>
       <div className="weekly-automation-metrics">
