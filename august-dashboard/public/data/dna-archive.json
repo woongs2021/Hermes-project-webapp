@@ -1322,6 +1322,64 @@
       "referenceAxis": "white helical band + chromatic capsule boundary, flattened into one broad protected interior plane",
       "assetHash": "4b6a8334431e3ab38ed0fa710c825425d432fe85f96db5712a0010ba80029152",
       "savedAt": "2026-10-14T10:38:26+09:00"
+    },
+    {
+      "id": "2026-10-21-archive60-style-divergence-03",
+      "title": "Iridescent Shear",
+      "created": "2026-10-21",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-21/03_iridescent_shear.png",
+      "analysis": "텍스트·로고·워터마크 없음. 단일 대각 광학 필름으로 보이며, 별도 오브젝트/아이콘으로 읽히지 않습니다.",
+      "detailedDescription": "광학 재료 축은 3D 오브젝트가 아니라, 검은 표면에 얹을 수 있는 하나의 넓은 연속 필름으로 제한했습니다. 활용 방향: 다크 UI·패키지 위 저불투명도 광학 포일 오버레이",
+      "referenceAxis": "iridescent liquid metal / chrome surface field",
+      "dnaClusters": [
+        "Editorial Evidence System",
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "model": "gpt_image_2_5",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "aspect_ratio": "1:1"
+      },
+      "width": 1024,
+      "height": 1024,
+      "selectedReason": "Chris explicitly approved candidates 3 and 5 and asked: '3번 5번 좋다. 저장해줘'.",
+      "savedAt": "2026-10-21T10:59:30+09:00",
+      "assetHash": "69cd98bd050b9ff66ac52fdf4fa57a1e41a3435263611195ecd76ec79fecf4a3",
+      "midjourneyPrompt": "single continuous iridescent optical foil surface flowing diagonally over a near-black field, broad calm cyan violet and restrained warm-rose interference, thin translucent ink-film quality, two large cropable planes and one soft shear edge, premium print-material overlay, flat 2D material, composable graphic motif material for packaging, mobile card surfaces and editorial overlays, quiet premium editorial design, crop-friendly, no 3D render, no decorative orbit or badge --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-10-21-archive60-style-divergence-05",
+      "title": "Red Void Bloom",
+      "created": "2026-10-21",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-21/05_red_void_bloom.png",
+      "analysis": "텍스트·로고·워터마크 없음. yellow line·orbit·badge가 없고, red void와 가장자리 bloom만 남긴 평면 신호 재료입니다.",
+      "detailedDescription": "bloom/red-void 축을 꽃 일러스트나 badge 대신, 넓은 빈 면과 모서리의 단일 색 신호로 정리했습니다. 활용 방향: 에디토리얼 커버·캠페인 표면의 한쪽 모서리 시그널 악센트",
+      "referenceAxis": "floral signal bloom / red void color field",
+      "dnaClusters": [
+        "Editorial Evidence System",
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "model": "gpt_image_2_5",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "aspect_ratio": "1:1"
+      },
+      "width": 1024,
+      "height": 1024,
+      "selectedReason": "Chris explicitly approved candidates 3 and 5 and asked: '3번 5번 좋다. 저장해줘'.",
+      "savedAt": "2026-10-21T10:59:30+09:00",
+      "assetHash": "b3ab71cac35e9bfb07215d95635080f23930b20dc76647411d03b5f80cb98c55",
+      "midjourneyPrompt": "flat vermilion-red paper field, one large cropped dark petal-like void entering from a corner, muted cyan-to-magenta soft ink bloom pressed against one edge only, broad continuous shapes, large quiet red negative space, restrained screen-print texture, flat 2D color field, composable graphic motif material for packaging, mobile card surfaces and editorial overlays, quiet premium editorial design, crop-friendly, no 3D render, no decorative orbit or badge --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     }
   ]
 }
