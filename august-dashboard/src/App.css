@@ -9575,6 +9575,12 @@
   color: #9a5a20;
 }
 
+.automation-loop-meta .automation-last-outcome {
+  border-color: color-mix(in srgb, var(--primary) 26%, var(--stroke));
+  background: color-mix(in srgb, var(--active-surface-soft) 68%, var(--chip-surface));
+  color: var(--mid);
+}
+
 .weekly-automation-summary {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr);

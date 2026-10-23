@@ -182,6 +182,7 @@ type AutomationLoop = {
   delivery: string
   costType: AutomationCostType
   note: string
+  lastOutcome?: string
 }
 
 const automationLoops: AutomationLoop[] = [
@@ -198,7 +199,7 @@ const automationLoops: AutomationLoop[] = [
   { owner: 'Son', name: 'AI/AX SNS 시장 요약', rhythm: '수·금 09:50 KST', nextRun: '10/21 09:50', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '검증된 신호를 읽기 쉬운 시장 요약으로 정리' },
   { owner: 'Faker', name: '주간 Research 1-pick·트렌드 갱신', rhythm: '월 00:00 KST', nextRun: '10/26 00:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '주간 리서치 보드의 선택과 흐름 점검' },
   { owner: 'Faker', name: 'AI/AX job-shift 탭 통합', rhythm: '수·금 09:45 KST', nextRun: '10/21 09:45', status: 'needs-check', delivery: 'Direct message', costType: 'LLM', note: '최근 실행 오류 기록이 있어 다음 실행 확인 필요' },
-  { owner: 'Faker', name: 'Muyeol 1-pick 리서치 보드 반영', rhythm: '금 10:45 KST', nextRun: '10/23 10:45', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '검증된 주간 1-pick을 리서치 보드에 반영' },
+  { owner: 'Faker', name: 'Muyeol 1-pick 리서치 보드 배포', rhythm: '금 10:45 KST', nextRun: '10/30 10:45', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: 'W43 GO 1픽을 Research Board와 GitHub Pages에 반영하고 라이브 화면을 확인', lastOutcome: 'Latest · W43 deployed · Pages verified' },
   { owner: 'Faker', name: '자동화 보드 주간 갱신', rhythm: '월 10:10 KST', nextRun: '10/26 10:10', status: 'needs-check', delivery: 'Direct message', costType: 'LLM', note: '첫 실행 결과가 아직 없어 다음 실행 확인 필요' },
   { owner: 'Muyeol', name: 'AI/AX job-shift 루프 검증', rhythm: '금 09:55 KST', nextRun: '10/23 09:55', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '소스·리스크·구조를 주간 검증' },
   { owner: 'Muyeol', name: '주간 1-pick 검증', rhythm: '금 10:20 KST', nextRun: '10/23 10:20', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '리서치 후보 중 한 가지 주간 학습을 검증' },
@@ -1091,6 +1092,7 @@ function AutomationBoardPanel() {
                       <span>Next · {loop.nextRun}</span>
                       <span>{loop.delivery}</span>
                       <span>{loop.costType}</span>
+                      {loop.lastOutcome ? <span className="automation-last-outcome">{loop.lastOutcome}</span> : null}
                       <AutomationStatusLabel status={loop.status} />
                     </div>
                   </article>
