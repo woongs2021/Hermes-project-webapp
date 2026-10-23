@@ -124,11 +124,13 @@ function normalizedSourceTitle(item) {
   const directTitle = firstNonEmpty(item.title)
   if (directTitle) return directTitle
 
+  // Canonical English titles are the stable matching/ID key for new bilingual records.
+  // This avoids lossy Korean Unicode slugging and keeps display translations out of identity.
+  const originalTitle = firstNonEmpty(item.title_en, item.original_title, item.title_original)
   const koreanTitle = firstNonEmpty(item.korean_title, item.title_ko)
-  const originalTitle = firstNonEmpty(item.original_title, item.title_original)
 
   if (koreanTitle && originalTitle && koreanTitle !== originalTitle) return `${koreanTitle} / ${originalTitle}`
-  return koreanTitle ?? originalTitle
+  return originalTitle ?? koreanTitle
 }
 
 function publicationDateFromSource(item) {
