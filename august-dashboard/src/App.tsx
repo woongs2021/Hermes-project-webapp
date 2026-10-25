@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState, type WheelEvent } from 'react'
 import { fallbackHomeVisualSet, loadHomeVisualSet, type HomeVisualItem, type HomeVisualSet } from './homeVisualSet'
 import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type ResearchBoardItem } from './researchBoard'
-import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, MuyeolValidationPanel, ObdGrowthTimelinePanel } from './extendedPanels'
+import { GraphRelationshipPanel, ObdGrowthTimelinePanel } from './extendedPanels'
 import { fallbackChrisArchive, loadChrisArchive, type ChrisArchiveItem, type ChrisArchiveManifest } from './chrisArchive'
 import { fallbackDnaArchive, loadDnaArchive, loadMidjourneyDnaArchive, type DnaArchiveItem, type DnaArchiveManifest } from './dnaArchive'
 import { fallbackBrandMockupAssets, loadBrandMockupAssets, type BrandMockupAsset, type BrandMockupCollection, type BrandMockupManifest } from './brandAssets'
+import { PersonalAxReportPanel } from './PersonalAxReportPanel'
 import './App.css'
 
 const publicAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
@@ -32,7 +33,7 @@ type Tab = {
   description: string
 }
 
-type TabGroupId = 'team' | 'personal-ax' | 'corporate-ax' | 'weekly'
+type TabGroupId = 'team' | 'personal-ax' | 'corporate-ax'
 
 type TabGroup = {
   id: TabGroupId
@@ -122,10 +123,10 @@ const tabs: Tab[] = [
   },
   {
     id: 'report',
-    label: 'Weekly',
-    eyebrow: 'Weekly research synthesis',
-    title: 'Research Week Review',
-    description: 'Yuna / Go Youn-jung 리서치 후보를 주간 지표와 주제 hook, 상위 후보로 압축해 Chris의 성장 방향을 읽습니다.',
+    label: 'Report',
+    eyebrow: 'October 2026 · Personal AX report',
+    title: 'Personal AX Report',
+    description: 'Muyeol이 선택·검증한 논문을 바탕으로 AI, 디자인, AX 운영의 10월 리서치 해석을 읽습니다.',
   },
 ]
 
@@ -139,20 +140,14 @@ const tabGroups: TabGroup[] = [
   {
     id: 'personal-ax',
     label: 'Personal AX',
-    eyebrow: 'OBD / Research / Visual',
-    tabIds: ['obd', 'research', 'visuals'],
+    eyebrow: 'OBD / Research / Visual / Report',
+    tabIds: ['obd', 'research', 'visuals', 'report'],
   },
   {
     id: 'corporate-ax',
     label: 'Corporate AX',
     eyebrow: 'Archive / Design DNA',
     tabIds: ['chrisArchive', 'design-dna'],
-  },
-  {
-    id: 'weekly',
-    label: 'Weekly',
-    eyebrow: 'Research loop',
-    tabIds: ['report'],
   },
 ]
 
@@ -1101,79 +1096,6 @@ function AutomationBoardPanel() {
             </section>
           )
         })}
-      </div>
-    </section>
-  )
-}
-
-function WeeklyResourceContinuityPanel() {
-  const layers = [
-    {
-      index: '01',
-      label: 'CURRENT EXPERIENCE',
-      title: '현재 웹앱 · 가벼운 탐색',
-      store: 'Hermes-project-webapp',
-      body: '현재 화면과 미리보기는 가볍게 유지해 빠르게 보고 탐색합니다.',
-    },
-    {
-      index: '02',
-      label: 'VERSIONED ORIGINALS',
-      title: '4K/HQ 원본 · 버전 보관',
-      store: 'Hermes-project-assets · GitHub Releases',
-      body: '고화질 원본은 버전이 남는 Release에 보관하고, 상세 화면의 다운로드로 연결합니다.',
-    },
-    {
-      index: '03',
-      label: 'PRE-CLEANUP HISTORY',
-      title: '정리 전 이력 · 복구 가능성',
-      store: 'Private backup Release',
-      body: '정리 전 전체 이력은 백업 번들과 checksum으로 분리 보관합니다.',
-    },
-  ]
-
-  return (
-    <section className="content-card weekly-resource-continuity" aria-label="Verified three-layer webapp resource continuity">
-      <div className="resource-continuity-header">
-        <p className="card-kicker">Resource continuity · verified</p>
-        <h3>검증된 3단계 리소스 백업 구조</h3>
-        <p>검증을 통해 현재 탐색 화면, 4K/HQ 원본, 정리 전 전체 이력이 서로 다른 역할로 이어짐을 확인했습니다.</p>
-      </div>
-      <div className="resource-continuity-layers" aria-label="Three resource continuity layers">
-        {layers.map((layer) => (
-          <article className="resource-continuity-layer" key={layer.index}>
-            <div className="resource-continuity-meta">
-              <span>{layer.index}</span>
-              <small>{layer.label}</small>
-            </div>
-            <div>
-              <h4>{layer.title}</h4>
-              <p className="resource-continuity-store">{layer.store}</p>
-            </div>
-            <p>{layer.body}</p>
-          </article>
-        ))}
-      </div>
-      <p className="resource-continuity-footer"><strong>검증 확인</strong> · 미리보기, 버전 원본, 정리 전 이력 백업이 분리된 역할로 리소스 연속성을 구성합니다.</p>
-    </section>
-  )
-}
-
-function WeeklyAutomationSummaryPanel() {
-  return (
-    <section className="content-card weekly-automation-summary" aria-label="Weekly automation operating summary">
-      <div>
-        <p className="card-kicker">Hermes operating status</p>
-        <h3>이번 주 자동화 루프 상태</h3>
-        <p>
-          Team 탭의 상세 Automation Board를 주간 화면에서는 네 가지 숫자로만 압축했습니다.
-          켜진 루프의 최근 실행 상태를 반영하며, default 저장소의 중지된 루프도 별도로 표시합니다.
-        </p>
-      </div>
-      <div className="weekly-automation-metrics">
-        <span><strong>{automationSummary.active}</strong><em>active loops</em></span>
-        <span><strong>{automationSummary.healthy}</strong><em>healthy</em></span>
-        <span><strong>{automationSummary.needsCheck}</strong><em>needs check</em></span>
-        <span><strong>{automationSummary.pausedDefault}</strong><em>paused default jobs</em></span>
       </div>
     </section>
   )
@@ -3275,7 +3197,7 @@ function App() {
     ? {
         eyebrow: 'Personal AX',
         title: 'Chris의 개인 지식과 감각을 정리하는 AX 공간',
-        description: 'OBD Map, Research, Visual Archive를 통해 Chris가 모은 신호와 질문, 시각적 레퍼런스를 개인 운영체계처럼 연결해 보는 영역입니다.',
+        description: 'OBD Map, Research, Visual Archive, Report를 통해 Chris가 모은 신호와 질문, 시각적 레퍼런스를 개인 운영체계처럼 연결해 보는 영역입니다.',
       }
     : activeTabGroup.id === 'corporate-ax'
       ? {
@@ -3338,12 +3260,6 @@ function App() {
     window.history.replaceState(null, '', `#${preferredTab.id}`)
   }
 
-  function openResearchItemFromMonthly(itemId: string) {
-    const researchTab = tabs.find((tab) => tab.id === 'research') ?? tabs[0]
-    setSelectedResearchIdFromMonthly(itemId)
-    setActiveTab(researchTab)
-    window.history.replaceState(null, '', `#${researchTab.id}`)
-  }
 
   function toggleThemeMode() {
     setThemeMode((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'))
@@ -3472,12 +3388,7 @@ function App() {
         ) : activeTab.id === 'research' ? (
           <ResearchKanbanPanel selectedResearchId={selectedResearchIdFromMonthly} />
         ) : activeTab.id === 'report' ? (
-          <>
-            <WeeklyAutomationSummaryPanel />
-            <MonthlyResearchSynthesisPanel onSelectResearchItem={openResearchItemFromMonthly} />
-            <MuyeolValidationPanel />
-            <WeeklyResourceContinuityPanel />
-          </>
+          <PersonalAxReportPanel />
         ) : (
           <PlaceholderPanel tab={activeTab} />
         )}

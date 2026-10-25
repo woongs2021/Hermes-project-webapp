@@ -9738,3 +9738,185 @@
     padding: 12px;
   }
 }
+
+/* Personal AX report: restrained editorial reading surface. */
+.personal-ax-report-shell {
+  width: min(100%, 920px);
+  margin: 0 auto;
+}
+
+.personal-ax-report-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 0 14px;
+  border-bottom: 1px solid var(--stroke);
+}
+
+.personal-ax-report-tabs,
+.personal-ax-report-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.personal-ax-report-tabs button,
+.personal-ax-report-actions button {
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  color: var(--muted-ink);
+  font: inherit;
+  font-size: 0.79rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.personal-ax-report-tabs button:hover,
+.personal-ax-report-tabs button:focus-visible,
+.personal-ax-report-tabs button.active,
+.personal-ax-report-actions button:hover,
+.personal-ax-report-actions button:focus-visible {
+  border-color: color-mix(in srgb, var(--primary) 55%, var(--stroke));
+  background: color-mix(in srgb, var(--primary) 9%, var(--surface));
+  color: var(--primary);
+  outline: none;
+}
+
+.personal-ax-download-status {
+  min-height: 20px;
+  margin: 10px 0 18px;
+  color: var(--muted-ink);
+  font-size: 0.76rem;
+}
+
+.personal-ax-report-article {
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: clamp(24px, 5vw, 58px);
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
+  box-shadow: 0 12px 36px color-mix(in srgb, var(--ink) 5%, transparent);
+}
+
+.personal-ax-report-article header {
+  max-width: 760px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--stroke);
+}
+
+.personal-ax-report-article h3 {
+  max-width: 720px;
+  margin: 10px 0 16px;
+  font-size: clamp(1.78rem, 4vw, 3.25rem);
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+}
+
+.personal-ax-report-dek {
+  max-width: 660px;
+  margin: 0;
+  color: var(--muted-ink);
+  font-size: clamp(1rem, 1.7vw, 1.2rem);
+  line-height: 1.75;
+}
+
+.personal-ax-report-note,
+.personal-ax-report-byline {
+  margin: 18px 0 0;
+  color: var(--muted-ink);
+  font-size: 0.79rem;
+  line-height: 1.65;
+}
+
+.personal-ax-report-byline {
+  padding-left: 12px;
+  border-left: 2px solid color-mix(in srgb, var(--primary) 36%, var(--stroke));
+}
+
+.personal-ax-report-section,
+.personal-ax-report-sources,
+.personal-ax-report-prompts {
+  max-width: 760px;
+  margin-top: 36px;
+}
+
+.personal-ax-report-article h4 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: 1.12rem;
+}
+
+.personal-ax-report-article p,
+.personal-ax-report-article li {
+  color: var(--muted-ink);
+  line-height: 1.9;
+}
+
+.personal-ax-report-article ul,
+.personal-ax-report-article ol {
+  margin: 16px 0 0;
+  padding-left: 1.3rem;
+}
+
+.personal-ax-report-article li + li { margin-top: 8px; }
+
+.personal-ax-report-sources {
+  padding: 22px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--primary) 5%, var(--surface));
+}
+
+.personal-ax-report-sources h4,
+.personal-ax-report-prompts h4 { margin-top: 6px; }
+
+.personal-ax-report-sources a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.personal-ax-report-sources span {
+  display: inline-block;
+  margin-left: 8px;
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 750;
+}
+
+.personal-ax-report-prompts {
+  padding-top: 28px;
+  border-top: 1px solid var(--stroke);
+}
+
+.personal-ax-report-prompts code {
+  display: block;
+  white-space: normal;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 640px) {
+  .personal-ax-report-controls { align-items: flex-start; flex-direction: column; }
+  .personal-ax-report-article { border-radius: 14px; }
+}
+
+@media print {
+  .topbar,
+  .workspace-group-intro,
+  .workspace-tab-nav,
+  .workspace-header,
+  .personal-ax-report-controls,
+  .personal-ax-download-status { display: none !important; }
+  .app-shell,
+  .workspace,
+  .personal-ax-report-shell { display: block; width: 100%; margin: 0; padding: 0; background: #fff; }
+  .personal-ax-report-article { border: 0; border-radius: 0; padding: 0; box-shadow: none; background: #fff; }
+  .personal-ax-report-section,
+  .personal-ax-report-sources,
+  .personal-ax-report-prompts { break-inside: avoid; }
+}
