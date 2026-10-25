@@ -9892,6 +9892,10 @@
   line-height: 1.9;
 }
 
+.personal-ax-report-section > p {
+  text-indent: 1em;
+}
+
 .personal-ax-report-article ul,
 .personal-ax-report-article ol {
   margin: 16px 0 0;
