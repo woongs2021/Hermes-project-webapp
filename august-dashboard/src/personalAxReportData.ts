@@ -76,8 +76,8 @@ export const personalAxReports: PersonalAxReport[] = [
       { title: 'Design Theater: Evaluating the Gap Between User-Facing Design Reasoning and Implementation in Generative UI Tools', href: 'https://doi.org/10.1609/aies.v9i2.43227', access: '원문 확인' },
     ],
     prompts: [
-      '[Midjourney prompt placeholder] Calm editorial visualization of scoped agent permissions, warm-white paper, cobalt control markers, no text, no dashboard clichés.',
-      '[Midjourney prompt placeholder] A staged execution path with one human intervention point, tactile glass and restrained coral signal, no readable UI text.',
+      'Calm editorial visualization of scoped agent permissions, warm-white paper, cobalt control markers, no text, no dashboard clichés.',
+      'A staged execution path with one human intervention point, tactile glass and restrained coral signal, no readable UI text.',
     ],
   },
   {
@@ -128,9 +128,9 @@ export const personalAxReports: PersonalAxReport[] = [
       { title: 'What is Human-Centered about Human-Centered AI? A Map of the Research Landscape', href: 'https://doi.org/10.1145/3544548.3580959', access: '원문 확인' },
     ],
     prompts: [
-      '[Midjourney prompt placeholder] Editorial desk with annotated design artifacts and one quiet AI review signal, soft paper grain, muted cobalt and coral, no text.',
-      '[Midjourney prompt placeholder] Abstract composition of human judgment and machine output held in balance, generous negative space, calm research publication mood.',
-      '[Midjourney prompt placeholder] Tactile quality-review tokens arranged as a learning system, warm-white background, no logos, no readable labels.',
+      'Editorial desk with annotated design artifacts and one quiet AI review signal, soft paper grain, muted cobalt and coral, no text.',
+      'Abstract composition of human judgment and machine output held in balance, generous negative space, calm research publication mood.',
+      'Tactile quality-review tokens arranged as a learning system, warm-white background, no logos, no readable labels.',
     ],
   },
   {
@@ -181,8 +181,8 @@ export const personalAxReports: PersonalAxReport[] = [
       { title: 'Measuring AI literacy in design education: development and validation of the artificial intelligence literacy scale for design students', href: 'https://doi.org/10.1007/s10798-026-10128-0', access: '원문 확인' },
     ],
     prompts: [
-      '[Midjourney prompt placeholder] Quiet AX operating loop as an editorial diagram, four tactile checkpoints, restrained warm-cool palette, no readable text.',
-      '[Midjourney prompt placeholder] A protected human decision space surrounded by subtle agent signals, calm premium product editorial, no sci-fi clichés.',
+      'Quiet AX operating loop as an editorial diagram, four tactile checkpoints, restrained warm-cool palette, no readable text.',
+      'A protected human decision space surrounded by subtle agent signals, calm premium product editorial, no sci-fi clichés.',
     ],
   },
   {
@@ -230,9 +230,9 @@ export const personalAxReports: PersonalAxReport[] = [
       { title: 'AI-redesigned packaging and consumer choice at retail shelves', href: 'https://doi.org/10.1108/IJRDM-06-2026-0473', access: '초록·메타데이터 확인' },
     ],
     prompts: [
-      '[Midjourney prompt placeholder] Editorial still life of tactile package layers, quiet shelf shadows, warm paper and recycled fiber, no logos, no readable text.',
-      '[Midjourney prompt placeholder] Abstract front-of-pack information hierarchy as embossed labels and translucent material, calm retail research editorial, no text.',
-      '[Midjourney prompt placeholder] Reuse and sorting journey expressed through one premium package unfolding into clear material pathways, muted natural palette, no icons.',
+      'Editorial still life of tactile package layers, quiet shelf shadows, warm paper and recycled fiber, no logos, no readable text.',
+      'Abstract front-of-pack information hierarchy as embossed labels and translucent material, calm retail research editorial, no text.',
+      'Reuse and sorting journey expressed through one premium package unfolding into clear material pathways, muted natural palette, no icons.',
     ],
   },
 ]
