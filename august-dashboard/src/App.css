@@ -9828,6 +9828,22 @@
   border-bottom: 1px solid var(--stroke);
 }
 
+.personal-ax-report-hero {
+  width: 100%;
+  margin: 0 0 1.4rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--stroke) 82%, transparent);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.personal-ax-report-hero img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2.4 / 1;
+  object-fit: cover;
+}
+
 .personal-ax-report-article h3 {
   max-width: 720px;
   margin: 10px 0 16px;

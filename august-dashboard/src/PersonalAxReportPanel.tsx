@@ -66,6 +66,7 @@ function escapeHtml(value: string) {
 }
 
 function reportHtml(report: PersonalAxReport) {
+  const heroUrl = `${window.location.origin}${import.meta.env.BASE_URL}${report.heroImage}`
   const sections = report.sections.map((section) => `
     <section>
       <h2>${escapeHtml(section.heading)}</h2>
@@ -75,7 +76,7 @@ function reportHtml(report: PersonalAxReport) {
   const sources = report.sources.map((source) => `<li><a href="${escapeHtml(source.href)}">${escapeHtml(source.title)}</a> <small>${source.access}</small></li>`).join('')
   const prompts = report.prompts.map((prompt) => `<li>${escapeHtml(prompt)}</li>`).join('')
 
-  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(report.title)}</title><style>body{max-width:760px;margin:56px auto;padding:0 24px;color:#17233a;background:#fcfbf8;font:16px/1.8 system-ui,sans-serif}small{color:#60708a}h1{font-size:34px;line-height:1.28}h2{margin-top:44px;font-size:21px}a{color:#315f97}li{margin:8px 0}.eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:12px}</style></head><body><p class="eyebrow">${escapeHtml(report.eyebrow)}</p><h1>${escapeHtml(report.title)}</h1><p>${escapeHtml(report.dek)}</p>${sections}<section><h2>References</h2><ul>${sources}</ul></section><section><h2>Midjourney prompt placeholders</h2><ul>${prompts}</ul></section></body></html>`
+  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(report.title)}</title><style>body{max-width:760px;margin:56px auto;padding:0 24px;color:#17233a;background:#fcfbf8;font:16px/1.8 system-ui,sans-serif}small{color:#60708a}h1{font-size:34px;line-height:1.28}h2{margin-top:44px;font-size:21px}a{color:#315f97}li{margin:8px 0}.eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:12px}</style></head><body><p class="eyebrow">${escapeHtml(report.eyebrow)}</p><img src="${escapeHtml(heroUrl)}" alt="${escapeHtml(report.heroAlt)}" style="width:100%;border-radius:16px;display:block;margin:0 0 28px"><h1>${escapeHtml(report.title)}</h1><p>${escapeHtml(report.dek)}</p>${sections}<section><h2>References</h2><ul>${sources}</ul></section><section><h2>Midjourney prompt placeholders</h2><ul>${prompts}</ul></section></body></html>`
 }
 
 export function PersonalAxReportPanel() {
@@ -120,6 +121,9 @@ export function PersonalAxReportPanel() {
 
       <article className="personal-ax-report-article" id="personal-ax-report-print">
         <header>
+          <figure className="personal-ax-report-hero">
+            <img src={`${import.meta.env.BASE_URL}${report.heroImage}`} alt={report.heroAlt} />
+          </figure>
           <p className="card-kicker">{report.eyebrow}</p>
           <h3>{report.title}</h3>
           <p className="personal-ax-report-dek">{report.dek}</p>

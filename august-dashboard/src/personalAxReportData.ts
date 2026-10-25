@@ -12,6 +12,8 @@ export type PersonalAxReport = {
   eyebrow: string
   title: string
   dek: string
+  heroImage: string
+  heroAlt: string
   sections: Array<{
     heading: string
     paragraphs: string[]
@@ -32,6 +34,8 @@ export const personalAxReports: PersonalAxReport[] = [
     eyebrow: 'October 2026 · literature-grounded research report',
     title: '에이전트의 신뢰는 “얼마나 많이 하는가”보다 “언제 멈추고 되돌릴 수 있는가”에서 시작된다',
     dek: '10월의 AI 리서치는 완전 자동화의 매력보다 실행 중 통제, 프라이버시, 구현 검증을 더 중요한 제품 언어로 남겼다.',
+    heroImage: 'assets/personal-ax-reports/ai-research-hero.jpg',
+    heroAlt: '연결된 컴퓨팅 노드와 투명한 데이터 블록을 표현한 AI 리서치 일러스트레이션.',
     sections: [
       {
         heading: '이번 달의 선택',
@@ -82,6 +86,8 @@ export const personalAxReports: PersonalAxReport[] = [
     eyebrow: 'October 2026 · literature-grounded design research report',
     title: 'AI 리터러시는 프롬프트 속도가 아니라 판단·평가·독창성을 함께 다루는 디자인 역량이다',
     dek: '10월의 디자인 리서치는 AI 도입 이후에도 디자이너가 사라지지 않는 이유를 산출물 생산이 아닌 검토와 책임의 언어로 정리한다.',
+    heroImage: 'assets/personal-ax-reports/design-research-hero.jpg',
+    heroAlt: '기하학적 인물과 로봇이 균형을 이루는 디자인 리서치 일러스트레이션.',
     sections: [
       {
         heading: '도구 숙련을 넘어서는 기준',
@@ -133,6 +139,8 @@ export const personalAxReports: PersonalAxReport[] = [
     eyebrow: 'October 2026 · evidence-led trend synthesis',
     title: 'AX의 다음 경쟁은 자동화의 양이 아니라 통제 가능한 운영 품질을 누가 설계하는가에 달려 있다',
     dek: '10월의 선택 논문을 한데 보면 AX는 기능 도입 프로젝트가 아니라 신뢰·검증·조직 학습을 연결하는 경험 운영의 문제로 이동하고 있다.',
+    heroImage: 'assets/personal-ax-reports/ax-trends-hero.jpg',
+    heroAlt: '넓은 미래형 공간에서 사람과 이동체가 공존하는 AX 트렌드 비주얼.',
     sections: [
       {
         heading: '세 가지 변화',
@@ -183,6 +191,8 @@ export const personalAxReports: PersonalAxReport[] = [
     eyebrow: 'October 2026 · literature-grounded package design report',
     title: '패키지 디자인은 시각적 장식이 아니라 주의·해석·행동을 매개하는 리테일 경험의 인터페이스다',
     dek: '10월의 패키지 디자인 리포트는 전면 라벨, 기호 체계, 재활용 단서와 AI 재설계 실험을 통해 패키지를 구매 전·사용 중·사용 후의 행동을 연결하는 정보 환경으로 검토한다.',
+    heroImage: 'assets/personal-ax-reports/package-design-hero.jpg',
+    heroAlt: '재활용 상자와 소재 샘플, 소형 제품이 배열된 패키지 디자인 플랫레이.',
     sections: [
       {
         heading: '연구 범위와 논의의 출발점',
