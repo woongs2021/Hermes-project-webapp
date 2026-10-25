@@ -1,4 +1,4 @@
-export type PersonalAxReportId = 'ai-research' | 'design-research' | 'ax-trends'
+export type PersonalAxReportId = 'ai-research' | 'design-research' | 'ax-trends' | 'package-design'
 
 export type ReportSource = {
   title: string
@@ -29,7 +29,7 @@ export const personalAxReports: PersonalAxReport[] = [
   {
     id: 'ai-research',
     label: 'AI 리서치',
-    eyebrow: 'October 2026 · reference-led research note',
+    eyebrow: 'October 2026 · literature-grounded research report',
     title: '에이전트의 신뢰는 “얼마나 많이 하는가”보다 “언제 멈추고 되돌릴 수 있는가”에서 시작된다',
     dek: '10월의 AI 리서치는 완전 자동화의 매력보다 실행 중 통제, 프라이버시, 구현 검증을 더 중요한 제품 언어로 남겼다.',
     sections: [
@@ -79,7 +79,7 @@ export const personalAxReports: PersonalAxReport[] = [
   {
     id: 'design-research',
     label: '디자인 리서치',
-    eyebrow: 'October 2026 · reference-led design capability note',
+    eyebrow: 'October 2026 · literature-grounded design research report',
     title: 'AI 리터러시는 프롬프트 속도가 아니라 판단·평가·독창성을 함께 다루는 디자인 역량이다',
     dek: '10월의 디자인 리서치는 AI 도입 이후에도 디자이너가 사라지지 않는 이유를 산출물 생산이 아닌 검토와 책임의 언어로 정리한다.',
     sections: [
@@ -130,7 +130,7 @@ export const personalAxReports: PersonalAxReport[] = [
   {
     id: 'ax-trends',
     label: 'AX 트렌드',
-    eyebrow: 'October 2026 · synthesis, not prediction',
+    eyebrow: 'October 2026 · evidence-led trend synthesis',
     title: 'AX의 다음 경쟁은 자동화의 양이 아니라 통제 가능한 운영 품질을 누가 설계하는가에 달려 있다',
     dek: '10월의 선택 논문을 한데 보면 AX는 기능 도입 프로젝트가 아니라 신뢰·검증·조직 학습을 연결하는 경험 운영의 문제로 이동하고 있다.',
     sections: [
@@ -175,6 +175,54 @@ export const personalAxReports: PersonalAxReport[] = [
     prompts: [
       '[Midjourney prompt placeholder] Quiet AX operating loop as an editorial diagram, four tactile checkpoints, restrained warm-cool palette, no readable text.',
       '[Midjourney prompt placeholder] A protected human decision space surrounded by subtle agent signals, calm premium product editorial, no sci-fi clichés.',
+    ],
+  },
+  {
+    id: 'package-design',
+    label: '패키지 디자인',
+    eyebrow: 'October 2026 · literature-grounded package design report',
+    title: '패키지 디자인은 시각적 장식이 아니라 주의·해석·행동을 매개하는 리테일 경험의 인터페이스다',
+    dek: '10월의 패키지 디자인 리포트는 전면 라벨, 기호 체계, 재활용 단서와 AI 재설계 실험을 통해 패키지를 구매 전·사용 중·사용 후의 행동을 연결하는 정보 환경으로 검토한다.',
+    sections: [
+      {
+        heading: '연구 범위와 논의의 출발점',
+        paragraphs: [
+          '패키지 디자인을 브랜드의 표면으로만 설명하면, 실제 구매와 사용의 맥락에서 작동하는 정보·물성·행동 단서를 충분히 포착하기 어렵다. 본 리포트는 리테일 선반의 선택, 전면 라벨의 해석, 사용 후 분리배출, AI 재설계 패키지의 평가를 다룬 연구를 함께 검토한다. 공통된 문제의식은 패키지가 상품을 감싸는 결과물이 아니라, 제한된 시간 안에 주의를 얻고 의미를 전달하며 다음 행동을 가능하게 하는 인터페이스라는 점이다. 따라서 평가는 “보기 좋은가”라는 질문에 머물지 않고, 누구에게 무엇을 빠르게 알리고 어떤 오해를 줄이며 어떤 행동을 촉발하거나 방해하는지를 포함해야 한다.',
+          '「Packaging and purchase decisions」은 진열 환경에서 패키지가 시각·정보·편의 단서를 통해 구매 결정에 개입하는 커뮤니케이션 매체임을 다룬다. 이후의 연구들은 이 명제를 더 구체적으로 나눈다. 기호학적 패키징 연구는 칩스 패키지 실험·설문 374명을 분석해 패키지 기호가 브랜드 이미지와 지각된 품질을 거쳐 충성도와 구매의도에 연결될 수 있음을 제시한다. 이 결과는 특정 국가와 제품 범주에 놓인 연구이므로 일반적 인과 법칙으로 확대할 수는 없다. 다만 소비자는 그래픽을 독립적으로 보지 않고, 브랜드가 약속하는 품질과 적합성을 읽는 단서로 해석한다는 점에서 패키지의 역할을 다시 보게 한다.',
+        ],
+        bullets: [
+          '검토 초점 01 · 선반에서의 주의와 비교 판단',
+          '검토 초점 02 · 전면 라벨과 브랜드·품질 해석',
+          '검토 초점 03 · 사용 후 행동과 물성·정보의 연결',
+        ],
+      },
+      {
+        heading: '레퍼런스에서 발췌한 핵심 근거',
+        paragraphs: [
+          '「Front-of-Pack Nutritional Labels as retail demand cues」는 폴란드·스페인·이탈리아·포르투갈·그리스의 소비자 731명을 대상으로 한 다섯 개 무작위 실험을 통해, Nutri-Score와 같은 전면 영양 라벨이 건강성 지각, 브랜드 태도, 구매의도에 영향을 주는 리테일 단서로 작동할 수 있음을 다룬다. 여기서 중요한 부분은 라벨을 규제 정보의 부속물로 보지 않는다는 점이다. 전면의 제한된 면적에서 소비자가 무엇을 읽고 비교하는지가 브랜드의 신뢰와 선택에 함께 개입한다. 다만 자발적 라벨링 시장과 해당 국가의 제도·문화 맥락이 결과에 영향을 줄 수 있으므로, 다른 시장에 적용할 때에는 이해도·가격 민감도·카테고리 차이를 별도로 검증해야 한다.',
+          '「Rethinking Packaging for Food Waste Prevention」은 52개 연구를 검토하여 패키지가 보존 기능을 넘어 가정 내 식품 폐기 행동에 개입할 수 있는 디자인 기회임을 정리한다. 이 문헌고찰이 중요한 이유는 패키지의 경험을 계산대 앞에서 끝내지 않고, 개봉·보관·잔량 판단·폐기까지 확장하기 때문이다. 사용자가 유통기한, 보관 조건, 재사용 가능성, 잔량을 해석하는 방식은 결국 제품 가치와 폐기 비용에 연결된다. 그러나 스코핑 리뷰가 모든 패키지 개입의 효과 크기를 보장하지는 않는다. 따라서 실제 적용에서는 폐기 감소라는 큰 주장보다, 특정 정보 단서나 물성 변화가 어느 사용 장면의 오해를 줄이는지부터 관찰하는 편이 타당하다.',
+          '「AI-redesigned packaging and consumer choice at retail shelves」는 실제 선반 환경에서 AI 재설계 패키지가 기존 패키지와 경쟁하는 구매 접점 자극으로 측정될 수 있음을 제기한다. 이 연구는 AI가 만든 시안의 참신성을 곧바로 소비자 가치로 등치하지 말아야 한다는 점에서 유의미하다. 패키지의 변화는 첫 시선 진입, 정보 탐색, 브랜드 식별, 비교, 최종 선택이라는 서로 다른 단계에서 검증되어야 한다. 원문 접근 범위가 제한된 연구이므로 세부 효과나 수치를 여기에서 인용하지 않는다. 대신 AI 활용은 빠른 시안 생산의 근거가 아니라, 실제 선반·사용 환경에서 어떤 가설을 더 정교하게 시험할 수 있게 하는 보조 수단으로 해석한다.',
+        ],
+      },
+      {
+        heading: '디자인·브랜드 운영에 대한 함의',
+        paragraphs: [
+          '이 연구들을 종합하면 패키지 디자인의 품질은 세 가지 질문으로 구조화할 수 있다. 첫째, 구매 전에는 브랜드명·카테고리·핵심 효익이 경쟁 자극 사이에서 충분히 구별되는가. 둘째, 사용 중에는 필요한 정보가 사용자의 시간 압박과 이해 수준에 맞게 읽히는가. 셋째, 사용 후에는 소재·분리배출·보관·재사용에 관한 다음 행동이 물성 및 그래픽 단서와 모순되지 않는가. 이는 단순한 체크리스트가 아니라, 그래픽·구조·정보·서비스를 같은 경험의 층으로 다루기 위한 분석 틀이다.',
+          '실무 검증도 단계별로 구분할 필요가 있다. 선반 테스트에서는 첫 주목 속도, 브랜드 회상, 비교 시간, 선택 이유를 분리해 보고, 사용성 테스트에서는 개봉·보관·폐기처럼 실제 접점에서의 오류와 망설임을 관찰한다. 지속가능성 메시지는 친환경 색상이나 상징만으로 평가하지 않고, 사용자가 무엇을 실제로 분리하고 보관할 수 있는지까지 확인해야 한다. 이때 패키지는 더 많은 정보를 싣는 화면이 아니라, 가장 중요한 행동을 덜 혼란스럽게 만드는 물리적 인터페이스가 된다. 10월의 레퍼런스는 패키지의 가치를 시각적 주목 하나가 아니라 주의, 해석, 신뢰, 행동의 연쇄로 측정해야 한다는 점을 분명히 한다.',
+        ],
+      },
+    ],
+    sources: [
+      { title: 'Packaging and purchase decisions', href: 'https://doi.org/10.1108/00070700410553602', access: '초록·메타데이터 확인' },
+      { title: 'How semiotic product packaging, brand image, perceived brand quality influence brand loyalty and purchase intention', href: 'https://doi.org/10.1108/APJML-12-2023-1237', access: '초록·메타데이터 확인' },
+      { title: 'Rethinking Packaging for Food Waste Prevention: A Scoping Review of Consumer Behavior and Design Opportunities', href: 'https://doi.org/10.3390/su17115213', access: '원문 확인' },
+      { title: 'Front-of-Pack Nutritional Labels as retail demand cues: Evidence from five voluntary-labeling markets', href: 'https://doi.org/10.1016/j.jretconser.2026.105057', access: '원문 확인' },
+      { title: 'AI-redesigned packaging and consumer choice at retail shelves', href: 'https://doi.org/10.1108/IJRDM-06-2026-0473', access: '초록·메타데이터 확인' },
+    ],
+    prompts: [
+      '[Midjourney prompt placeholder] Editorial still life of tactile package layers, quiet shelf shadows, warm paper and recycled fiber, no logos, no readable text.',
+      '[Midjourney prompt placeholder] Abstract front-of-pack information hierarchy as embossed labels and translucent material, calm retail research editorial, no text.',
+      '[Midjourney prompt placeholder] Reuse and sorting journey expressed through one premium package unfolding into clear material pathways, muted natural palette, no icons.',
     ],
   },
 ]
