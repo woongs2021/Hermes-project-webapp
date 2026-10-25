@@ -9740,6 +9740,15 @@
 }
 
 /* Personal AX report: restrained editorial reading surface. */
+.personal-ax-report-highlight {
+  color: inherit;
+  padding: 0 0.12em 0.05em;
+  border-radius: 0.14em;
+  background: linear-gradient(180deg, transparent 34%, rgb(218 255 70 / 15%) 34%, rgb(218 255 70 / 15%) 88%, transparent 88%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 .personal-ax-report-shell {
   width: min(100%, 920px);
   margin: 0 auto;

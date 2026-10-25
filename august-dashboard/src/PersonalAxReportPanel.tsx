@@ -3,6 +3,25 @@ import { personalAxReports, type PersonalAxReport } from './personalAxReportData
 
 type DownloadStatus = 'idle' | 'downloaded' | 'error'
 
+const highlightPhrases = [
+  '실행 전 계획 공개, 실행 중 권한 확인, 실행 후 회복 가능성',
+  '사용자가 결정권을 잃지 않았다고 느끼는 반복 경험',
+  '판단·평가·독창성을 함께 다루는 디자인 역량',
+  '좋은 질문·평가·수정이 반복될 조건',
+  '통제 가능한 운영 품질',
+  '권한 설계, 상호작용 순서, 조직의 평가 체계',
+  '주의, 해석, 신뢰, 행동의 연쇄',
+  '구매 전·사용 중·사용 후의 행동',
+  '물리적 인터페이스',
+]
+
+function highlightText(value: string) {
+  const expression = new RegExp(`(${highlightPhrases.map((phrase) => phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'g')
+  return value.split(expression).map((part, index) => highlightPhrases.includes(part)
+    ? <mark className="personal-ax-report-highlight" key={`${part}-${index}`}>{part}</mark>
+    : part)
+}
+
 function escapeHtml(value: string) {
   return value.replace(/[&<>'"]/g, (character) => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;',
@@ -74,8 +93,8 @@ export function PersonalAxReportPanel() {
         {report.sections.map((section) => (
           <section className="personal-ax-report-section" key={section.heading}>
             <h4>{section.heading}</h4>
-            {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-            {section.bullets ? <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul> : null}
+            {section.paragraphs.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}
+            {section.bullets ? <ul>{section.bullets.map((bullet) => <li key={bullet}>{highlightText(bullet)}</li>)}</ul> : null}
           </section>
         ))}
 
