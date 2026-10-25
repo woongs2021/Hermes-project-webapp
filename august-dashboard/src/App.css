@@ -9741,12 +9741,25 @@
 
 /* Personal AX report: restrained editorial reading surface. */
 .personal-ax-report-highlight {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
   color: inherit;
   padding: 0 0.12em 0.05em;
+  background: transparent;
   border-radius: 0.14em;
-  background: linear-gradient(180deg, transparent 34%, rgb(218 255 70 / 15%) 34%, rgb(218 255 70 / 15%) 88%, transparent 88%);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+
+.personal-ax-report-highlight::before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  inset: 34% -0.12em 7%;
+  border-radius: 0.14em;
+  background: rgb(218 255 70 / 20%);
+  transform: skewX(-2deg);
 }
 
 .personal-ax-report-shell {
