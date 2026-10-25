@@ -16,10 +16,10 @@ function reportHtml(report: PersonalAxReport) {
       ${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}
       ${section.bullets ? `<ul>${section.bullets.map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join('')}</ul>` : ''}
     </section>`).join('')
-  const sources = report.sources.map((source) => `<li><a href="${escapeHtml(source.href)}">${escapeHtml(source.title)}</a> <small>${source.status}</small></li>`).join('')
+  const sources = report.sources.map((source) => `<li><a href="${escapeHtml(source.href)}">${escapeHtml(source.title)}</a> <small>${source.access}</small></li>`).join('')
   const prompts = report.prompts.map((prompt) => `<li>${escapeHtml(prompt)}</li>`).join('')
 
-  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(report.title)}</title><style>body{max-width:760px;margin:56px auto;padding:0 24px;color:#17233a;background:#fcfbf8;font:16px/1.8 system-ui,sans-serif}small{color:#60708a}h1{font-size:34px;line-height:1.28}h2{margin-top:44px;font-size:21px}a{color:#315f97}li{margin:8px 0}.eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:12px}</style></head><body><p class="eyebrow">${escapeHtml(report.eyebrow)}</p><h1>${escapeHtml(report.title)}</h1><p>${escapeHtml(report.dek)}</p>${sections}<section><h2>Muyeol-selected sources</h2><ul>${sources}</ul></section><section><h2>Midjourney prompt placeholders</h2><ul>${prompts}</ul></section></body></html>`
+  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(report.title)}</title><style>body{max-width:760px;margin:56px auto;padding:0 24px;color:#17233a;background:#fcfbf8;font:16px/1.8 system-ui,sans-serif}small{color:#60708a}h1{font-size:34px;line-height:1.28}h2{margin-top:44px;font-size:21px}a{color:#315f97}li{margin:8px 0}.eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:12px}</style></head><body><p class="eyebrow">${escapeHtml(report.eyebrow)}</p><h1>${escapeHtml(report.title)}</h1><p>${escapeHtml(report.dek)}</p>${sections}<section><h2>References</h2><ul>${sources}</ul></section><section><h2>Midjourney prompt placeholders</h2><ul>${prompts}</ul></section></body></html>`
 }
 
 export function PersonalAxReportPanel() {
@@ -67,8 +67,8 @@ export function PersonalAxReportPanel() {
           <p className="card-kicker">{report.eyebrow}</p>
           <h3>{report.title}</h3>
           <p className="personal-ax-report-dek">{report.dek}</p>
-          <p className="personal-ax-report-byline">Yuna의 AI·시장 신호, Go Youn-jung의 UX·디자인 리서치, Son의 현장 정착·학습·브랜드 운영 해석을 Karina가 종합하고, Muyeol의 선정·리스크 검토를 우선 반영했습니다.</p>
-          <p className="personal-ax-report-note">아래의 해석은 선택 논문의 결과를 제품 효과로 단정하지 않으며, Muyeol 검증 로그의 주의사항을 유지합니다.</p>
+          <p className="personal-ax-report-byline">아래 글은 각 레퍼런스의 공개 초록·메타데이터 또는 원문에서 확인한 연구 대상, 방법, 핵심 주장과 적용 한계를 구분해 정리했습니다.</p>
+          <p className="personal-ax-report-note">연구의 결과를 모든 제품·조직에 대한 효과로 일반화하지 않으며, 본문에서 연구 범위와 해석의 경계를 함께 표시합니다.</p>
         </header>
 
         {report.sections.map((section) => (
@@ -80,9 +80,9 @@ export function PersonalAxReportPanel() {
         ))}
 
         <section className="personal-ax-report-sources">
-          <p className="card-kicker">Stable cited sources · Muyeol-selected</p>
-          <h4>인용 논문과 검증 상태</h4>
-          <ul>{report.sources.map((source) => <li key={source.href}><a href={source.href} target="_blank" rel="noreferrer">{source.title}</a><span>{source.status}</span></li>)}</ul>
+          <p className="card-kicker">Cited references</p>
+          <h4>인용 레퍼런스와 확인 범위</h4>
+          <ul>{report.sources.map((source) => <li key={source.href}><a href={source.href} target="_blank" rel="noreferrer">{source.title}</a><span>{source.access}</span></li>)}</ul>
         </section>
 
         <section className="personal-ax-report-prompts">
