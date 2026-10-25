@@ -9809,7 +9809,7 @@
 .personal-ax-report-article h3 {
   max-width: 720px;
   margin: 10px 0 16px;
-  font-size: clamp(1.78rem, 4vw, 3.25rem);
+  font-size: clamp(0.89rem, 2vw, 1.625rem);
   line-height: 1.2;
   letter-spacing: -0.045em;
 }
