@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type WheelEvent } from 'react'
 import { fallbackHomeVisualSet, loadHomeVisualSet, type HomeVisualItem, type HomeVisualSet } from './homeVisualSet'
 import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type ResearchBoardItem } from './researchBoard'
-import { GraphRelationshipPanel, ObdGrowthTimelinePanel } from './extendedPanels'
+import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, ObdGrowthTimelinePanel } from './extendedPanels'
 import { fallbackChrisArchive, loadChrisArchive, type ChrisArchiveItem, type ChrisArchiveManifest } from './chrisArchive'
 import { fallbackDnaArchive, loadDnaArchive, loadMidjourneyDnaArchive, type DnaArchiveItem, type DnaArchiveManifest } from './dnaArchive'
 import { fallbackBrandMockupAssets, loadBrandMockupAssets, type BrandMockupAsset, type BrandMockupCollection, type BrandMockupManifest } from './brandAssets'
@@ -14,7 +14,7 @@ const designDnaSystemPrinciplesDocHref = publicAssetPath('/docs/design-dna-syste
 const designDnaVisualStyleMethodDocHref = publicAssetPath('/docs/design-dna-visual-style-generation-method-2026-09-28.md')
 const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
 
-type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report'
+type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report' | 'weekly'
 type ThemeMode = 'light' | 'dark'
 type ObdSubTabId = 'growth' | 'graph' | 'about'
 type TextSegment = { text: string; emphasis?: boolean }
@@ -33,7 +33,7 @@ type Tab = {
   description: string
 }
 
-type TabGroupId = 'team' | 'personal-ax' | 'corporate-ax'
+type TabGroupId = 'team' | 'personal-ax' | 'corporate-ax' | 'weekly'
 
 type TabGroup = {
   id: TabGroupId
@@ -128,6 +128,13 @@ const tabs: Tab[] = [
     title: 'Personal AX Report',
     description: 'Muyeol이 선택·검증한 논문을 바탕으로 AI, 디자인, AX 운영의 10월 리서치 해석을 읽습니다.',
   },
+  {
+    id: 'weekly',
+    label: 'Weekly',
+    eyebrow: 'Weekly research synthesis',
+    title: 'Research Week Review',
+    description: 'Yuna와 Go Youn-jung의 리서치 후보를 주간 지표, 공통 주제, 상위 후보로 압축해 이번 주의 판단 신호를 읽습니다.',
+  },
 ]
 
 const tabGroups: TabGroup[] = [
@@ -148,6 +155,12 @@ const tabGroups: TabGroup[] = [
     label: 'Corporate AX',
     eyebrow: 'Archive / Design DNA',
     tabIds: ['chrisArchive', 'design-dna'],
+  },
+  {
+    id: 'weekly',
+    label: 'Weekly',
+    eyebrow: 'Research loop',
+    tabIds: ['weekly'],
   },
 ]
 
@@ -3260,6 +3273,14 @@ function App() {
     window.history.replaceState(null, '', `#${preferredTab.id}`)
   }
 
+  function openResearchItemFromWeekly(itemId: string) {
+    const researchTab = tabs.find((tab) => tab.id === 'research')
+    if (!researchTab) return
+    setSelectedResearchIdFromMonthly(itemId)
+    setActiveTab(researchTab)
+    window.history.replaceState(null, '', '#research')
+  }
+
 
   function toggleThemeMode() {
     setThemeMode((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'))
@@ -3389,6 +3410,8 @@ function App() {
           <ResearchKanbanPanel selectedResearchId={selectedResearchIdFromMonthly} />
         ) : activeTab.id === 'report' ? (
           <PersonalAxReportPanel />
+        ) : activeTab.id === 'weekly' ? (
+          <MonthlyResearchSynthesisPanel onSelectResearchItem={openResearchItemFromWeekly} />
         ) : (
           <PlaceholderPanel tab={activeTab} />
         )}
