@@ -485,7 +485,7 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
 
       <section className="monthly-metric-grid" aria-label="Latest weekly and archive data metrics">
         <article className="metric-card monthly-metric">
-          <p className="card-kicker">종합 리서치</p>
+          <p className="card-kicker">Total Paper Research</p>
           <h3>{researchBoard.items.length}</h3>
           <p>누적 논문 · 이번 주 {weekly.weekItems.length}개 수집</p>
         </article>
