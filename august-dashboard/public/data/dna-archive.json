@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-14T18:09:54+09:00",
+  "generatedAt": "2026-10-26T10:58:00+09:00",
   "sourcePolicy": "Only Chris-selected GoYJ generated assets are saved here. Unselected review candidates are temporary and are not published.",
   "items": [
     {
@@ -1380,6 +1380,80 @@
       "savedAt": "2026-10-21T10:59:30+09:00",
       "assetHash": "b3ab71cac35e9bfb07215d95635080f23930b20dc76647411d03b5f80cb98c55",
       "midjourneyPrompt": "flat vermilion-red paper field, one large cropped dark petal-like void entering from a corner, muted cyan-to-magenta soft ink bloom pressed against one edge only, broad continuous shapes, large quiet red negative space, restrained screen-print texture, flat 2D color field, composable graphic motif material for packaging, mobile card surfaces and editorial overlays, quiet premium editorial design, crop-friendly, no 3D render, no decorative orbit or badge --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-10-26-archive60-style-divergence-05",
+      "title": "Red Bloom Cutout",
+      "created": "2026-10-26",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-26/05_red_bloom_cutout.png",
+      "analysis": "yellow line, orbit clutter, badge/logo cue를 배제했습니다. 검정 cutout과 우측 overprint만 있는 비서사적 edge 소재입니다.",
+      "dnaClusters": [
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "model": "gpt_image_2_5",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "aspect_ratio": "1:1",
+        "reference_upload_fallback": false
+      },
+      "width": 1024,
+      "height": 1024,
+      "selectedReason": "Chris instruction: last image save (resolved as current candidate 05, Red Bloom Cutout).",
+      "midjourneyPrompt": "flat 2D signal accent graphic material, dark wine-red field, one enormous soft near-black edge cutout entering from the left and restrained cyan-magenta overprint compressed at the far right, opaque risograph grain, wide quiet central negative space, crop-friendly packaging and mobile-card surface, no flower, petals, circle, badge, orbit, yellow line, halo, object, icon, neon glow, poster, UI, or 3D render --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-10-26-nonrepeat-reset-02",
+      "title": "Soft Fresco Gradient",
+      "created": "2026-10-26",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-26/02_soft_fresco_gradient.png",
+      "analysis": "오커·더스티 로즈·쿨 슬레이트가 천천히 번지는 저밀도 2D 색면입니다. 오브젝트나 기하 상징 없이 카드 배경·패키지 면·오버레이에 쓰기 좋은 조용한 표면입니다.",
+      "dnaClusters": [
+        "Tactile Optical Material",
+        "Warm-Cool Intelligence",
+        "Quiet Signal Rhythm"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "aspect_ratio": "1:1"
+      },
+      "width": 1024,
+      "height": 1024,
+      "selectedReason": "Chris explicitly selected candidates 02 and 04 for save and webapp update.",
+      "midjourneyPrompt": "flat 2D soft fresco gradient graphic material, full canvas chalky plaster pigment field, muted ochre melting into dusty rose and cool slate, subtle cloudy tonal transitions, premium quiet editorial surface, no object, no geometry, crop-friendly packaging and mobile background --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-10-26-nonrepeat-reset-04",
+      "title": "Textile Band System",
+      "created": "2026-10-26",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-26/04_textile_band_system.png",
+      "analysis": "오베르진·머스터드·웜 본·포레스트 그린의 넓은 직물 밴드가 만드는 평면 패턴입니다. 얇은 선·격자·문자형 분절 없이, 랩·슬리브·카드 표면에 크롭 적용하기 좋습니다.",
+      "dnaClusters": [
+        "Tactile Optical Material",
+        "Quiet Signal Rhythm",
+        "Warm-Cool Intelligence"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "aspect_ratio": "1:1"
+      },
+      "width": 1024,
+      "height": 1024,
+      "selectedReason": "Chris explicitly selected candidates 02 and 04 for save and webapp update.",
+      "midjourneyPrompt": "flat 2D broad woven textile band graphic material, deep aubergine, dusty mustard, warm bone and muted forest green, only three or four wide interlocking matte bands, tactile weave surface, no thin threads, no tartan, no grid, no text-like segmentation, crop-friendly packaging wrap and mobile background --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     }
   ]
 }
