@@ -432,11 +432,12 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
     const weekItems = weeks.get(selectedWeek) ?? []
     const yuna = weekItems.filter((item) => item.lane === 'yuna')
     const go = weekItems.filter((item) => item.lane === 'goyounjung')
+    const allYuna = items.filter((item) => item.lane === 'yuna')
+    const allGo = items.filter((item) => item.lane === 'goyounjung')
     const avgScore = weekItems.length === 0 ? 0 : weekItems.reduce((sum, item) => sum + item.score, 0) / weekItems.length
-    const weekDates = [...new Set(weekItems.map((item) => item.dateKst))].sort()
     const topItems = [...weekItems].sort((left, right) => right.score - left.score).slice(0, 6)
 
-    return { selectedWeek, weekItems, yuna, go, avgScore, weekDates, topItems }
+    return { selectedWeek, weekItems, yuna, go, allYuna, allGo, avgScore, topItems }
   }, [researchBoard])
 
   const gptDnaTotal = dnaArchive.items.length
@@ -444,7 +445,6 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
   const brandMockupTotal = brandMockupAssets.collections.reduce((sum, collection) => sum + collection.items.length, 0)
   const brandExampleTotal = brandMockupAssets.examples?.reduce((sum, collection) => sum + collection.items.length, 0) ?? 0
   const designDnaTotal = gptDnaTotal + midjourneyDnaTotal + brandMockupTotal + brandExampleTotal
-  const researchGoSignals = researchBoard.items.filter((item) => item.validationStatus === 'GO').length
   const indexedDataTotal = researchBoard.items.length + chrisArchive.items.length + designDnaTotal + visualSet.items.length
 
   const themes = [
@@ -466,9 +466,9 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
     <div className="monthly-panel-grid" aria-label="Weekly research synthesis">
       <article className="content-card monthly-hero-card">
         <p className="card-kicker">Weekly synthesis · {weekly.selectedWeek}</p>
-        <h3>매주 리서치 후보 수와 신호를 업데이트하는 결산 화면</h3>
+        <h3>토탈 논문 리서치 현황판</h3>
         <p>
-          매일 쌓인 논문 카드를 주간 단위로 다시 읽어, Yuna의 AI UX 축과 Go Youn-jung의 UX/BX/design management 축이 어디에서 만나는지 보여줍니다.
+          누적 연구를 종합·김연아·고윤정 세 축으로 분리해, 전체 규모와 이번 주 수집 흐름을 한눈에 확인합니다.
         </p>
       </article>
 
@@ -485,14 +485,19 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
 
       <section className="monthly-metric-grid" aria-label="Latest weekly and archive data metrics">
         <article className="metric-card monthly-metric">
-          <p className="card-kicker">Weekly papers</p>
-          <h3>{weekly.weekItems.length}</h3>
-          <p>{weekly.weekDates.join(' · ')}</p>
+          <p className="card-kicker">종합 리서치</p>
+          <h3>{researchBoard.items.length}</h3>
+          <p>누적 논문 · 이번 주 {weekly.weekItems.length}개 수집</p>
         </article>
         <article className="metric-card monthly-metric">
-          <p className="card-kicker">Total papers</p>
-          <h3>{researchBoard.items.length}</h3>
-          <p>{researchGoSignals} GO signals · {weekly.yuna.length + weekly.go.length} latest candidates</p>
+          <p className="card-kicker">김연아 리서치</p>
+          <h3>{weekly.allYuna.length}</h3>
+          <p>AI · agent UX · 이번 주 {weekly.yuna.length}개</p>
+        </article>
+        <article className="metric-card monthly-metric">
+          <p className="card-kicker">고윤정 리서치</p>
+          <h3>{weekly.allGo.length}</h3>
+          <p>UX · BX · design · 이번 주 {weekly.go.length}개</p>
         </article>
         <article className="metric-card monthly-metric">
           <p className="card-kicker">Chris Archive</p>
