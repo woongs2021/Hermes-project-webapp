@@ -194,24 +194,24 @@ type AutomationLoop = {
 }
 
 const automationLoops: AutomationLoop[] = [
-  { owner: 'Karina', name: '아침 날씨·웜 노트', rhythm: '매일 09:00 KST', nextRun: '10/20 09:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '하루를 짧고 다정하게 여는 브리핑' },
-  { owner: 'Karina', name: '점심 웜 노트', rhythm: '매일 12:00 KST', nextRun: '10/19 12:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '점심 무렵의 가벼운 리셋' },
-  { owner: 'Karina', name: '저녁 웜 노트', rhythm: '매일 18:00 KST', nextRun: '10/19 18:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '저녁의 부드러운 마감 메시지' },
-  { owner: 'Karina', name: '밤 웜 노트', rhythm: '매일 22:00 KST', nextRun: '10/19 22:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '회복과 정리를 돕는 짧은 인사' },
-  { owner: 'Yuna', name: 'AI/AX 직무 영향 리서치', rhythm: '수·금 09:15 KST', nextRun: '10/21 09:15', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '국내외 직무·산업 변화 신호 조사' },
-  { owner: 'Yuna', name: '3-item AI/AX 리서치', rhythm: '매일 09:30 KST', nextRun: '10/20 09:30', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '글로벌·한국·패키지 관점 신호 선별' },
-  { owner: 'GoYJ', name: 'Hermes DNA 그래픽 모티프', rhythm: '월·수·금 10:15 KST', nextRun: '10/19 10:15', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: 'Design DNA용 그래픽 후보 생성' },
-  { owner: 'GoYJ', name: '디자인 직무 영향 리서치', rhythm: '수·금 09:25 KST', nextRun: '10/21 09:25', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: 'AI/AX와 디자인 역할 변화 해석' },
-  { owner: 'GoYJ', name: '3-item UX·디자인 리서치', rhythm: '매일 09:40 KST', nextRun: '10/20 09:40', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: 'UX·디자인 관점의 세 가지 신호 선별' },
-  { owner: 'Son', name: 'AI/AX 비즈니스 시장 변화', rhythm: '수·금 09:35 KST', nextRun: '10/21 09:35', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '리서치 결과를 시장 변화로 번역' },
-  { owner: 'Son', name: 'AI/AX SNS 시장 요약', rhythm: '수·금 09:50 KST', nextRun: '10/21 09:50', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '검증된 신호를 읽기 쉬운 시장 요약으로 정리' },
-  { owner: 'Faker', name: '주간 Research 1-pick·트렌드 갱신', rhythm: '월 00:00 KST', nextRun: '10/26 00:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '주간 리서치 보드의 선택과 흐름 점검' },
-  { owner: 'Faker', name: 'AI/AX job-shift 탭 통합', rhythm: '수·금 09:45 KST', nextRun: '10/21 09:45', status: 'needs-check', delivery: 'Direct message', costType: 'LLM', note: '최근 실행 오류 기록이 있어 다음 실행 확인 필요' },
-  { owner: 'Faker', name: 'Muyeol 1-pick 리서치 보드 배포', rhythm: '금 10:45 KST', nextRun: '10/30 10:45', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: 'W43 GO 1픽을 Research Board와 GitHub Pages에 반영하고 라이브 화면을 확인', lastOutcome: 'Latest · W43 deployed · Pages verified' },
-  { owner: 'Faker', name: '자동화 보드 주간 갱신', rhythm: '월 10:10 KST', nextRun: '10/26 10:10', status: 'needs-check', delivery: 'Direct message', costType: 'LLM', note: '첫 실행 결과가 아직 없어 다음 실행 확인 필요' },
-  { owner: 'Muyeol', name: 'AI/AX job-shift 루프 검증', rhythm: '금 09:55 KST', nextRun: '10/23 09:55', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '소스·리스크·구조를 주간 검증' },
-  { owner: 'Muyeol', name: '주간 1-pick 검증', rhythm: '금 10:20 KST', nextRun: '10/23 10:20', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '리서치 후보 중 한 가지 주간 학습을 검증' },
-  { owner: 'Muyeol', name: '주간 웹앱 데이터 카운트', rhythm: '월 09:40 KST', nextRun: '10/26 09:40', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '공개 데이터 지표와 manifest 상태 점검' },
+  { owner: 'Karina', name: '아침 날씨·웜 노트', rhythm: '매일 09:00 KST', nextRun: '10/27 09:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '하루를 짧고 다정하게 여는 브리핑' },
+  { owner: 'Karina', name: '점심 웜 노트', rhythm: '매일 12:00 KST', nextRun: '10/26 12:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '점심 무렵의 가벼운 리셋' },
+  { owner: 'Karina', name: '저녁 웜 노트', rhythm: '매일 18:00 KST', nextRun: '10/26 18:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '저녁의 부드러운 마감 메시지' },
+  { owner: 'Karina', name: '밤 웜 노트', rhythm: '매일 22:00 KST', nextRun: '10/26 22:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '회복과 정리를 돕는 짧은 인사' },
+  { owner: 'Yuna', name: 'AI/AX 직무 영향 리서치', rhythm: '수·금 09:15 KST', nextRun: '10/28 09:15', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '국내외 직무·산업 변화 신호 조사' },
+  { owner: 'Yuna', name: '3-item AI/AX 리서치', rhythm: '매일 09:30 KST', nextRun: '10/27 09:30', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '글로벌·한국·패키지 관점 신호 선별' },
+  { owner: 'GoYJ', name: 'Hermes DNA 그래픽 모티프', rhythm: '월·수·금 10:15 KST', nextRun: '10/26 10:15', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: 'Design DNA용 그래픽 후보 생성' },
+  { owner: 'GoYJ', name: '디자인 직무 영향 리서치', rhythm: '수·금 09:25 KST', nextRun: '10/28 09:25', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: 'AI/AX와 디자인 역할 변화 해석' },
+  { owner: 'GoYJ', name: '3-item UX·디자인 리서치', rhythm: '매일 09:40 KST', nextRun: '10/27 09:40', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: 'UX·디자인 관점의 세 가지 신호 선별' },
+  { owner: 'Son', name: 'AI/AX 비즈니스 시장 변화', rhythm: '수·금 09:35 KST', nextRun: '10/28 09:35', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '리서치 결과를 시장 변화로 번역' },
+  { owner: 'Son', name: 'AI/AX SNS 시장 요약', rhythm: '수·금 09:50 KST', nextRun: '10/28 09:50', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '검증된 신호를 읽기 쉬운 시장 요약으로 정리' },
+  { owner: 'Faker', name: '주간 Research 1-pick·트렌드 갱신', rhythm: '월 00:00 KST', nextRun: '11/02 00:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '주간 리서치 보드의 선택과 흐름 점검' },
+  { owner: 'Faker', name: 'AI/AX job-shift 탭 통합', rhythm: '수·금 09:45 KST', nextRun: '10/28 09:45', status: 'needs-check', delivery: 'Direct message', costType: 'LLM', note: '최근 실행 오류 기록이 있어 다음 실행 확인 필요' },
+  { owner: 'Faker', name: 'Muyeol 1-pick 리서치 보드 배포', rhythm: '금 10:45 KST', nextRun: '10/30 10:45', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '검증된 주간 1-pick을 Research Board와 공개 배포 화면에 반영' },
+  { owner: 'Faker', name: '자동화 보드 주간 갱신', rhythm: '월 10:10 KST', nextRun: '11/02 10:10', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '현재 활성 루프와 운영 상태를 공개 보드에 갱신' },
+  { owner: 'Muyeol', name: 'AI/AX job-shift 루프 검증', rhythm: '금 09:55 KST', nextRun: '10/30 09:55', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '소스·리스크·구조를 주간 검증' },
+  { owner: 'Muyeol', name: '주간 1-pick 검증', rhythm: '금 10:20 KST', nextRun: '10/30 10:20', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '리서치 후보 중 한 가지 주간 학습을 검증' },
+  { owner: 'Muyeol', name: '주간 웹앱 데이터 카운트', rhythm: '월 09:40 KST', nextRun: '11/02 09:40', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '공개 데이터 지표와 manifest 상태 점검' },
 ]
 
 const automationOwnerOrder = ['Karina', 'Yuna', 'GoYJ', 'Son', 'Faker', 'Muyeol']
@@ -1109,6 +1109,24 @@ function AutomationBoardPanel() {
             </section>
           )
         })}
+      </div>
+    </section>
+  )
+}
+
+function WeeklyAutomationSummaryPanel() {
+  return (
+    <section className="content-card weekly-automation-summary" aria-label="Weekly Hermes operating status">
+      <div>
+        <p className="card-kicker">Hermes operating status</p>
+        <h3>이번 주 운영 루프 요약</h3>
+        <p>Team의 Automation Board와 같은 현재 cron 기준 지표입니다. 공개 가능한 운영 상태만 간결하게 표시합니다.</p>
+      </div>
+      <div className="weekly-automation-metrics" aria-label="Weekly automation summary metrics">
+        <span><strong>{automationSummary.active}</strong><em>active</em></span>
+        <span><strong>{automationSummary.healthy}</strong><em>ok</em></span>
+        <span><strong>{automationSummary.needsCheck}</strong><em>check</em></span>
+        <span><strong>{automationSummary.pausedDefault}</strong><em>paused</em></span>
       </div>
     </section>
   )
@@ -3411,7 +3429,10 @@ function App() {
         ) : activeTab.id === 'report' ? (
           <PersonalAxReportPanel />
         ) : activeTab.id === 'weekly' ? (
-          <MonthlyResearchSynthesisPanel onSelectResearchItem={openResearchItemFromWeekly} />
+          <>
+            <WeeklyAutomationSummaryPanel />
+            <MonthlyResearchSynthesisPanel onSelectResearchItem={openResearchItemFromWeekly} />
+          </>
         ) : (
           <PlaceholderPanel tab={activeTab} />
         )}
