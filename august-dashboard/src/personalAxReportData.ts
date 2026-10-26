@@ -1,4 +1,4 @@
-export type PersonalAxReportId = 'ai-research' | 'design-research' | 'ax-trends' | 'package-design'
+export type PersonalAxReportId = 'ai-research' | 'design-research' | 'ax-trends' | 'package-design' | 'design-education'
 
 export type ReportSource = {
   title: string
@@ -233,6 +233,56 @@ export const personalAxReports: PersonalAxReport[] = [
       'Editorial still life of tactile package layers, quiet shelf shadows, warm paper and recycled fiber, no logos, no readable text.',
       'Abstract front-of-pack information hierarchy as embossed labels and translucent material, calm retail research editorial, no text.',
       'Reuse and sorting journey expressed through one premium package unfolding into clear material pathways, muted natural palette, no icons.',
+    ],
+  },
+  {
+    id: 'design-education',
+    label: '디자인교육 트렌드',
+    eyebrow: 'October 2026 · literature-grounded design education trend report',
+    title: '디자인교육의 다음 과제는 AI를 가르치는 일이 아니라, AI와 함께 판단하는 과정을 학습시키는 일이다',
+    dek: '도구 사용 허용 여부의 이분법을 넘어, 문제 정의·탐색·비평·출처 공개·평가를 다시 엮는 디자인교육의 변화를 검토한다.',
+    heroImage: 'assets/personal-ax-reports/design-education-hero.svg',
+    heroAlt: '푸른 격자와 접힌 종이 형태, 주황색 표식으로 구성한 추상적 디자인 학습 풍경.',
+    sections: [
+      {
+        heading: '변화의 출발점: AI 사용 규칙에서 학습 경험의 설계로',
+        paragraphs: [
+          '생성형 AI가 디자인 스튜디오에 들어오면서 교육의 질문은 “사용을 금지할 것인가, 허용할 것인가”에서 멈출 수 없게 됐다. 초안과 이미지, 리서치 요약을 빠르게 만들 수 있다는 사실은 분명하지만, 그 속도가 학생의 관찰·해석·형태 탐색을 실제로 깊게 만드는지는 별개의 문제다. 이 리포트는 디자인교육을 도구 기능의 훈련장으로 보지 않는다. 학생이 문제를 어떻게 규정하고, 어떤 근거로 결과를 채택하거나 반려하며, 타인의 작업과 모델의 출력을 어떻게 설명할 수 있는지를 배우는 판단의 환경으로 본다.',
+          '「Measuring AI literacy in design education」은 이 변화에 비교적 구체적인 언어를 준다. 연구진은 전문가 의견을 토대로 척도 문항을 구성하고, 탐색적·확인적 요인분석에 각각 294명과 325명의 학생 데이터를 사용해 디자인 학생의 AI 리터러시를 검증했다. 최종 도구는 AI 개념·기술, 도구 숙련, 윤리·독창성 인식, 디자인에서의 AI 가치 인식, AI 출력의 독립적 평가라는 다섯 요소를 구분한다. 즉 프롬프트를 빨리 쓰는 능력 하나가 아니라, 결과를 거리 두고 읽는 능력이 교육의 대상이라는 뜻이다. 다만 척도 개발 연구는 특정 수업의 성과나 졸업생의 실무 역량을 보장하지 않는다. 이 다섯 요소는 평가표를 곧바로 인사 기준으로 옮기기보다, 수업과 리뷰에서 빠지기 쉬운 질문을 복원하는 데 쓰는 편이 적절하다.',
+        ],
+        bullets: [
+          '핵심 이동: 사용 허용의 규정에서, 생성·검토·공개·수정의 학습 흐름으로.',
+          '교육 질문: 학생은 AI의 첫 결과를 넘어서 판단 기준과 반례를 설명할 수 있는가?',
+          '적용 경계: 리터러시 척도는 학습 대화를 돕는 도구이지, 창의성의 단일 점수표가 아니다.',
+        ],
+      },
+      {
+        heading: '스튜디오 수업은 결과물이 아니라 과정의 증거를 본다',
+        paragraphs: [
+          'AI 활용을 창의성의 자동 증폭으로 말하는 것도, 창의성의 종말로 말하는 것도 충분하지 않다. 「Can artificial intelligence support creativity in early design processes?」는 도시 가구 과제를 수행한 디자인 학생 40명을 두 집단으로 나누고, 두 단계 과제를 통해 생성형 AI가 초기 아이데이션과 인지부하에 미치는 영향을 살폈다. 익명화된 결과물은 전문가가 Creative Product Semantic Scale로 평가했고, 인지부하는 NASA-TLX로 측정했다. 이 연구는 AI가 초기 탐색에서 대안 생산과 성찰적 반복의 매개가 될 가능성을 제기한다. 그러나 과제·도구·학생 수가 제한된 준실험이므로, “AI를 쓰면 모든 학생의 창의성이 높아진다”는 결론으로 넓힐 수 없다.',
+          '교육적으로 더 중요한 해석은 학생이 결과 이미지를 제출하는 데서 멈추지 않고, 무엇을 관찰했고 어떤 입력을 바꿨으며 어느 안을 왜 버렸는지 남기는 일이다. 스케치, 레퍼런스, 프롬프트, 생성 결과, 재구성한 시안 사이의 연결을 보여 줄 때 평가는 산출물의 광택만 보지 않게 된다. 이 과정 기록은 AI를 감시하기 위한 서류가 아니다. 첫 답을 쉽게 믿지 않고, 문제에 맞는 선택지로 다시 좁히는 디자인 판단을 드러내는 학습 장치다. 특히 초보 학습자에게는 여러 안을 빠르게 받는 경험보다, 차이를 비교하고 기준을 말로 붙이는 경험이 더 오래 남을 수 있다.',
+          '따라서 스튜디오의 과제도 두 개의 리듬으로 나누어 볼 수 있다. 앞단에서는 손 스케치·현장 관찰·재료 실험처럼 문제와 몸의 거리를 좁히는 탐색을 확보한다. 중간에는 AI를 써서 변주·대조·가설 생성을 넓힌다. 끝단에서는 어떤 결과가 사용자, 맥락, 접근성, 제작 조건에 맞는지 사람이 다시 검토한다. 이 순서는 AI를 배제하자는 제안이 아니라, 생성 속도와 평가 속도를 같은 것으로 착각하지 않기 위한 구조다. 평가는 최종 포스터 한 장보다 연구 질문, 선택·반려의 근거, 수정의 방향이 얼마나 선명한지를 함께 보아야 한다.',
+        ],
+      },
+      {
+        heading: '윤리·공개·협업을 별도 강의가 아닌 스튜디오의 언어로',
+        paragraphs: [
+          'AI의 사용 사실을 어떻게 다룰지도 교육의 주변 규칙이 아니라 디자이너 정체성의 문제다. 「Communicating the use of generative AI to design students: Fostering ethics rather than teaching it」은 생성형 AI 활용을 학생에게 전달하는 방법을 다루며, 개인의 정체성과 윤리적 고려, 그리고 AI 사용 사실의 인정 필요성을 함께 논의한다. 논문은 AI를 다른 디자이너의 작업이나 프로젝트 중 받은 도움과 비교해 보며, 허용되는 사용과 권장되는 사용을 수업의 학습성과에 연결한다. 이는 한 번의 윤리 강의가 해결책이라는 뜻이 아니다. 무엇을 외부 도움으로 보며, 어떤 장면에서는 출처와 기여를 어떻게 밝히고, 무엇을 학생 스스로 검증해야 하는지 과제마다 구체화해야 한다는 제안에 가깝다.',
+          '「Developing AI literacy through design education」도 AI 리터러시를 윤리·인지·실천을 포함하는 다차원 역량으로 보고, 대학원생 18명이 AI 기반 서비스를 설계하는 한 수업에서 Research through Design, Human-Centred Design, Human-Centred AI의 세 실천을 적용한 과정을 분석했다. 한 학급의 설계 과정에서 얻은 예비적 통찰이므로 교육과정 전체의 효과로 일반화할 수는 없다. 그럼에도 AI를 추상적 기술 강의로 분리하지 않고, 사용자 조사·프로토타이핑·피드백·반성 안에서 다룰 수 있다는 점은 중요하다. 학생은 모델의 한계와 편향을 암기하는 대신, 자신의 설계가 누구에게 어떤 불이익을 만들 수 있는지 실제 과업 안에서 질문하게 된다.',
+          '다음 수업에서 바로 시험할 수 있는 최소 단위는 작다. 과제 브리프에 AI를 사용할 수 있는 단계와 금지선을 명시하고, 중간 리뷰에는 “AI가 만든 것”이 아니라 “AI를 통해 무엇을 검토했고 무엇을 바꾸었는가”를 묻는 칸을 넣는다. 최종 제출에는 사용 도구·입력·참조한 자료·사람이 확인한 판단을 짧게 밝히고, 동료 피드백에서는 근거가 약한 주장이나 배제될 수 있는 사용자를 찾게 한다. 이 방식은 창작을 문서화로 억누르려는 것이 아니다. 학생이 도움을 받은 사실을 숨기지 않으면서도, 자신의 선택과 책임을 말할 수 있게 하는 공용 언어다. 디자인교육의 경쟁력은 최신 툴을 가장 빨리 교체하는 데 있지 않다. 불확실한 도구가 바뀌어도 관찰하고, 비교하고, 설명하고, 다시 고칠 수 있는 판단의 근력을 길러 주는 데 있다.',
+        ],
+      },
+    ],
+    sources: [
+      { title: 'Measuring AI literacy in design education: development and validation of the artificial intelligence literacy scale for design students', href: 'https://doi.org/10.1007/s10798-026-10128-0', access: '초록·메타데이터 확인' },
+      { title: 'Can artificial intelligence support creativity in early design processes?', href: 'https://doi.org/10.1177/14780771241254637', access: '초록·메타데이터 확인' },
+      { title: 'Communicating the use of generative AI to design students: Fostering ethics rather than teaching it', href: 'https://doi.org/10.21606/drs.2024.731', access: '초록·메타데이터 확인' },
+      { title: 'Developing AI literacy through design education', href: 'https://doi.org/10.21606/nordes.2025.25', access: '초록·메타데이터 확인' },
+    ],
+    prompts: [
+      'Quiet editorial studio table with tracing paper, a cobalt folded form, graphite sketches and one coral annotation, warm paper texture, no text, no UI.',
+      'Abstract learning system made of layered translucent grids and tactile paper decisions, calm design journal photography, no logos, no readable marks.',
+      'Human judgment narrowing many generative possibilities into one considered direction, soft shadows, material honesty, no AI clichés.',
     ],
   },
 ]
