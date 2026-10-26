@@ -66,7 +66,7 @@ const obdMilestones: ObdMilestone[] = [
 ]
 
 function laneLabel(lane: ResearchBoardItem['lane']) {
-  return lane === 'yuna' ? 'Yuna · AI / agent UX' : 'Go Youn-jung · UX / brand / design'
+  return lane === 'yuna' ? 'AI Paper Research · AI / agent UX' : 'Design Paper Research · UX / brand / design'
 }
 
 function useDashboardSources() {
@@ -466,9 +466,9 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
     <div className="monthly-panel-grid" aria-label="Weekly research synthesis">
       <article className="content-card monthly-hero-card">
         <p className="card-kicker">Weekly synthesis · {weekly.selectedWeek}</p>
-        <h3>토탈 논문 리서치 현황판</h3>
+        <h3>Total Paper Research Overview</h3>
         <p>
-          누적 연구를 종합·김연아·고윤정 세 축으로 분리해, 전체 규모와 이번 주 수집 흐름을 한눈에 확인합니다.
+          누적 연구를 종합·AI 논문 리서치·디자인 논문 리서치 세 축으로 분리해, 전체 규모와 이번 주 수집 흐름을 한눈에 확인합니다.
         </p>
       </article>
 
@@ -490,12 +490,12 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
           <p>누적 논문 · 이번 주 {weekly.weekItems.length}개 수집</p>
         </article>
         <article className="metric-card monthly-metric">
-          <p className="card-kicker">김연아 리서치</p>
+          <p className="card-kicker">AI Paper Research</p>
           <h3>{weekly.allYuna.length}</h3>
           <p>AI · agent UX · 이번 주 {weekly.yuna.length}개</p>
         </article>
         <article className="metric-card monthly-metric">
-          <p className="card-kicker">고윤정 리서치</p>
+          <p className="card-kicker">Design Paper Research</p>
           <h3>{weekly.allGo.length}</h3>
           <p>UX · BX · design · 이번 주 {weekly.go.length}개</p>
         </article>
@@ -522,7 +522,7 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
         <article className="metric-card monthly-metric">
           <p className="card-kicker">Lane balance</p>
           <h3>{weekly.yuna.length} / {weekly.go.length}</h3>
-          <p>Yuna / Go Youn-jung</p>
+          <p>AI Paper / Design Paper</p>
         </article>
         <article className="metric-card monthly-metric">
           <p className="card-kicker">Avg relevance</p>
