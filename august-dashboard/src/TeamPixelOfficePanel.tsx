@@ -46,9 +46,13 @@ function PixelOfficeZone({ agent, toAssetSrc }: { agent: PixelOfficeAgent; toAss
         className="pixel-office-sprite"
         src={toAssetSrc(agent.pixelAvatarSrc)}
         alt=""
-        width="64"
-        height="64"
+        width="96"
+        height="144"
         decoding="async"
+        onError={({ currentTarget }) => {
+          currentTarget.onerror = null
+          currentTarget.src = toAssetSrc(agent.profileSrc)
+        }}
       />
       <div className="pixel-office-zone-copy">
         <p className="pixel-office-zone-label">{zoneLabel}</p>
@@ -72,13 +76,13 @@ export function TeamPixelOfficePanel({ agents, toAssetSrc }: TeamPixelOfficePane
           <h3 id="pixel-office-title">한 사람의 질문이, 함께 검토되는 여섯 개의 자리</h3>
         </div>
         <p>
-          지금 이 장면은 역할과 공개 가능한 상태만 담은 조용한 작업 지도입니다. 정확한 실행 정보 대신,
-          각 자리가 무엇을 맡는지 읽을 수 있습니다.
+          기존 공개 프로필의 색감을 바탕으로 만든 전신 2D 픽셀 캐릭터와 역할만 담은 조용한 작업 지도입니다.
+          정확한 실행 정보 대신, 각 자리가 무엇을 맡는지 읽을 수 있습니다.
         </p>
       </header>
 
       <div className="pixel-office-legend" aria-label="장면 범례">
-        <span><i className="pixel-office-legend-mark pixel-office-legend-mark--person" aria-hidden="true" />기존 프로필에서 만든 픽셀 아바타</span>
+        <span><i className="pixel-office-legend-mark pixel-office-legend-mark--person" aria-hidden="true" />기존 공개 프로필 기반 전신 2D 픽셀 캐릭터</span>
         <span><i className="pixel-office-legend-mark pixel-office-legend-mark--status" aria-hidden="true" />공개 가능한 상태</span>
         <span><i className="pixel-office-legend-mark pixel-office-legend-mark--freshness" aria-hidden="true" />갱신 정보가 없으면 정보 없음</span>
       </div>

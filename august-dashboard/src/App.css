@@ -3512,11 +3512,6 @@
   object-fit: cover;
 }
 
-.team-pixel-avatar {
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-}
-
 .agent-profile-copy {
   display: grid;
   gap: 9px;
@@ -10137,8 +10132,10 @@
 .pixel-office-sprite {
   align-self: end;
   z-index: 1;
-  width: min(100%, 68px);
+  width: min(100%, 58px);
   height: auto;
+  max-height: 82%;
+  object-fit: contain;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
 }

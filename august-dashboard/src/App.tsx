@@ -1109,17 +1109,12 @@ function TeamPanel() {
             <article className="content-card agent-profile-card" key={sceneAgent.id}>
               <div className="agent-face-frame">
                 <img
-                  className="team-pixel-avatar"
-                  src={toAppAssetSrc(sceneAgent.pixelAvatarSrc)}
-                  alt={`${sceneAgent.name}의 기존 공개 프로필 사진에서 파생한 픽셀 아바타`}
+                  src={toAppAssetSrc(sceneAgent.profileSrc)}
+                  alt={`${sceneAgent.name}의 기존 공개 프로필 사진`}
                   width="92"
                   height="92"
                   loading="eager"
                   decoding="async"
-                  onError={({ currentTarget }) => {
-                    currentTarget.onerror = null
-                    currentTarget.src = toAppAssetSrc(sceneAgent.profileSrc)
-                  }}
                 />
               </div>
               <div className="agent-profile-copy">
