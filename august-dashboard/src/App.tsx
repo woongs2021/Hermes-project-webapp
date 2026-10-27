@@ -6,6 +6,8 @@ import { fallbackChrisArchive, loadChrisArchive, type ChrisArchiveItem, type Chr
 import { fallbackDnaArchive, loadDnaArchive, loadMidjourneyDnaArchive, type DnaArchiveItem, type DnaArchiveManifest } from './dnaArchive'
 import { fallbackBrandMockupAssets, loadBrandMockupAssets, type BrandMockupAsset, type BrandMockupCollection, type BrandMockupManifest } from './brandAssets'
 import { PersonalAxReportPanel } from './PersonalAxReportPanel'
+import { createTeamPixelOfficeAgents } from './teamPixelOffice'
+import { TeamPixelOfficePanel } from './TeamPixelOfficePanel'
 import './App.css'
 
 const publicAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
@@ -178,49 +180,17 @@ const metricPlaceholders = ['Primary signal', 'Open loops', 'Weekly check-in']
 const listPlaceholders = ['Next handoff note', 'Recent validation slot', 'Reference card surface']
 const researchLaneFilters = ['all', 'yuna', 'goyounjung', 'final'] as const
 
-type AutomationLoopStatus = 'ok' | 'needs-check'
-type AutomationCostType = 'LLM' | 'script-only' | 'no-agent'
-
-type AutomationLoop = {
-  owner: string
-  name: string
-  rhythm: string
-  nextRun: string
-  status: AutomationLoopStatus
-  delivery: string
-  costType: AutomationCostType
-  note: string
-  lastOutcome?: string
+type TeamWorkingPrinciple = {
+  title: string
+  description: string
 }
 
-const automationLoops: AutomationLoop[] = [
-  { owner: 'Karina', name: '아침 날씨·웜 노트', rhythm: '매일 09:00 KST', nextRun: '10/27 09:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '하루를 짧고 다정하게 여는 브리핑' },
-  { owner: 'Karina', name: '점심 웜 노트', rhythm: '매일 12:00 KST', nextRun: '10/26 12:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '점심 무렵의 가벼운 리셋' },
-  { owner: 'Karina', name: '저녁 웜 노트', rhythm: '매일 18:00 KST', nextRun: '10/26 18:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '저녁의 부드러운 마감 메시지' },
-  { owner: 'Karina', name: '밤 웜 노트', rhythm: '매일 22:00 KST', nextRun: '10/26 22:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '회복과 정리를 돕는 짧은 인사' },
-  { owner: 'Yuna', name: 'AI/AX 직무 영향 리서치', rhythm: '수·금 09:15 KST', nextRun: '10/28 09:15', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '국내외 직무·산업 변화 신호 조사' },
-  { owner: 'Yuna', name: '3-item AI/AX 리서치', rhythm: '매일 09:30 KST', nextRun: '10/27 09:30', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '글로벌·한국·패키지 관점 신호 선별' },
-  { owner: 'GoYJ', name: 'Hermes DNA 그래픽 모티프', rhythm: '월·수·금 10:15 KST', nextRun: '10/26 10:15', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: 'Design DNA용 그래픽 후보 생성' },
-  { owner: 'GoYJ', name: '디자인 직무 영향 리서치', rhythm: '수·금 09:25 KST', nextRun: '10/28 09:25', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: 'AI/AX와 디자인 역할 변화 해석' },
-  { owner: 'GoYJ', name: '3-item UX·디자인 리서치', rhythm: '매일 09:40 KST', nextRun: '10/27 09:40', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: 'UX·디자인 관점의 세 가지 신호 선별' },
-  { owner: 'Son', name: 'AI/AX 비즈니스 시장 변화', rhythm: '수·금 09:35 KST', nextRun: '10/28 09:35', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '리서치 결과를 시장 변화로 번역' },
-  { owner: 'Son', name: 'AI/AX SNS 시장 요약', rhythm: '수·금 09:50 KST', nextRun: '10/28 09:50', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '검증된 신호를 읽기 쉬운 시장 요약으로 정리' },
-  { owner: 'Faker', name: '주간 Research 1-pick·트렌드 갱신', rhythm: '월 00:00 KST', nextRun: '11/02 00:00', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '주간 리서치 보드의 선택과 흐름 점검' },
-  { owner: 'Faker', name: 'AI/AX job-shift 탭 통합', rhythm: '수·금 09:45 KST', nextRun: '10/28 09:45', status: 'needs-check', delivery: 'Direct message', costType: 'LLM', note: '최근 실행 오류 기록이 있어 다음 실행 확인 필요' },
-  { owner: 'Faker', name: 'Muyeol 1-pick 리서치 보드 배포', rhythm: '금 10:45 KST', nextRun: '10/30 10:45', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '검증된 주간 1-pick을 Research Board와 공개 배포 화면에 반영' },
-  { owner: 'Faker', name: '자동화 보드 주간 갱신', rhythm: '월 10:10 KST', nextRun: '11/02 10:10', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '현재 활성 루프와 운영 상태를 공개 보드에 갱신' },
-  { owner: 'Muyeol', name: 'AI/AX job-shift 루프 검증', rhythm: '금 09:55 KST', nextRun: '10/30 09:55', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '소스·리스크·구조를 주간 검증' },
-  { owner: 'Muyeol', name: '주간 1-pick 검증', rhythm: '금 10:20 KST', nextRun: '10/30 10:20', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '리서치 후보 중 한 가지 주간 학습을 검증' },
-  { owner: 'Muyeol', name: '주간 웹앱 데이터 카운트', rhythm: '월 09:40 KST', nextRun: '11/02 09:40', status: 'ok', delivery: 'Direct message', costType: 'LLM', note: '공개 데이터 지표와 manifest 상태 점검' },
+const teamWorkingPrinciples: TeamWorkingPrinciple[] = [
+  { title: '질문에서 시작', description: 'Chris의 질문을 먼저 맥락과 판단 기준으로 정리합니다.' },
+  { title: '역할을 나눠 검토', description: '리서치, 경험, 범위, 구현, 검증의 관점을 함께 사용합니다.' },
+  { title: '근거를 남김', description: '결과는 읽을 수 있는 근거와 함께 다음 판단으로 이어집니다.' },
+  { title: '공개 경계를 지킴', description: '공개 화면에는 역할과 원칙만 담고 내부 운영 정보는 남기지 않습니다.' },
 ]
-
-const automationOwnerOrder = ['Karina', 'Yuna', 'GoYJ', 'Son', 'Faker', 'Muyeol']
-const automationSummary = {
-  active: automationLoops.length,
-  healthy: automationLoops.filter((loop) => loop.status === 'ok').length,
-  needsCheck: automationLoops.filter((loop) => loop.status === 'needs-check').length,
-  pausedDefault: 1,
-}
 const obdSubTabs: { id: ObdSubTabId; label: string; eyebrow: string; description: string }[] = [
   {
     id: 'about',
@@ -497,6 +467,8 @@ const agentProfiles: AgentProfile[] = [
   },
 ]
 
+const teamPixelOfficeAgents = createTeamPixelOfficeAgents()
+
 const architectureScreens: ArchitectureScreen[] = [
   {
     number: '01',
@@ -566,9 +538,9 @@ const dataBranches: ArchitectureBranch[] = [
     children: ['items[].still', 'items[].turntable', 'sourcePolicy'],
   },
   {
-    title: '/opt/data/design-dna-studio',
-    intent: 'Design DNA private workspace',
-    children: ['PROJECT_DESIGN_DNA.md', 'projects/<id>/design_dna', 'brand', 'prompts', 'evaluation'],
+    title: 'Design DNA · private source boundary',
+    intent: '공개 화면에는 안전한 요약만 연결하는 비공개 작업 영역',
+    children: ['승인 전 원본', '브랜드 탐색', '프롬프트 실험', '평가 기록'],
   },
   {
     title: '/data/research',
@@ -1054,79 +1026,45 @@ function ChrisIntroPanel() {
 }
 
 
-function AutomationStatusLabel({ status }: { status: AutomationLoopStatus }) {
-  return <span className={`automation-status ${status}`}>{status === 'ok' ? 'ok' : 'needs check'}</span>
-}
-
-function AutomationBoardPanel() {
+function TeamWorkingPrinciplesPanel() {
   return (
-    <section className="content-card automation-board-card" aria-label="Hermes automation loop status">
+    <section className="content-card automation-board-card" aria-label="Hermes team working principles">
       <div className="automation-board-header">
         <div>
-          <p className="card-kicker">Automation Loop Status</p>
-          <h3>Hermes 팀이 지금 자동으로 돌리고 있는 루프</h3>
+          <p className="card-kicker">Team working principles</p>
+          <h3>함께 판단하고, 안전하게 다음 단계로 넘기는 방식</h3>
           <p>
-            모든 프로필의 cron 저장소에서 현재 켜진 루프만 정리했습니다.
-            default 저장소에는 중지된 루프 1개가 있으며, 표에는 공개 가능한 운영 정보만 표시합니다.
+            이 화면은 실시간 운영 현황이 아니라 Hermes 팀이 역할을 함께 연결하는 안정적인 원칙을 보여줍니다.
           </p>
-        </div>
-        <div className="automation-summary-grid" aria-label="Automation summary metrics">
-          <span><strong>{automationSummary.active}</strong><em>active</em></span>
-          <span><strong>{automationSummary.healthy}</strong><em>ok</em></span>
-          <span><strong>{automationSummary.needsCheck}</strong><em>check</em></span>
-          <span><strong>{automationSummary.pausedDefault}</strong><em>paused</em></span>
         </div>
       </div>
 
       <div className="automation-owner-stack">
-        {automationOwnerOrder.map((owner) => {
-          const ownerLoops = automationLoops.filter((loop) => loop.owner === owner)
-          if (ownerLoops.length === 0) return null
-          return (
-            <section className="automation-owner-section" key={owner} aria-label={`${owner} automation loops`}>
-              <div className="automation-owner-heading">
-                <h4>{owner}</h4>
-                <span>{ownerLoops.length} loops</span>
-              </div>
-              <div className="automation-loop-list">
-                {ownerLoops.map((loop) => (
-                  <article className="automation-loop-row" key={`${loop.owner}-${loop.name}`}>
-                    <div className="automation-loop-main">
-                      <strong>{loop.name}</strong>
-                      <p>{loop.note}</p>
-                    </div>
-                    <div className="automation-loop-meta" aria-label={`${loop.name} metadata`}>
-                      <span>{loop.rhythm}</span>
-                      <span>Next · {loop.nextRun}</span>
-                      <span>{loop.delivery}</span>
-                      <span>{loop.costType}</span>
-                      {loop.lastOutcome ? <span className="automation-last-outcome">{loop.lastOutcome}</span> : null}
-                      <AutomationStatusLabel status={loop.status} />
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-          )
-        })}
+        {teamWorkingPrinciples.map((principle) => (
+          <article className="automation-loop-row" key={principle.title}>
+            <div className="automation-loop-main">
+              <strong>{principle.title}</strong>
+              <p>{principle.description}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   )
 }
 
-function WeeklyAutomationSummaryPanel() {
+function WeeklyTeamPrinciplesPanel() {
   return (
-    <section className="content-card weekly-automation-summary" aria-label="Weekly Hermes operating status">
+    <section className="content-card weekly-automation-summary" aria-label="Hermes team working principles">
       <div>
-        <p className="card-kicker">Hermes operating status</p>
-        <h3>이번 주 운영 루프 요약</h3>
-        <p>Team의 Automation Board와 같은 현재 cron 기준 지표입니다. 공개 가능한 운영 상태만 간결하게 표시합니다.</p>
+        <p className="card-kicker">Team working principles</p>
+        <h3>리서치 결과를 다음 판단으로 잇는 공통 원칙</h3>
+        <p>공개 화면은 현재 운영 현황 대신, 팀이 근거를 해석하고 검토하는 방식을 간결하게 설명합니다.</p>
       </div>
-      <div className="weekly-automation-metrics" aria-label="Weekly automation summary metrics">
-        <span><strong>{automationSummary.active}</strong><em>active</em></span>
-        <span><strong>{automationSummary.healthy}</strong><em>ok</em></span>
-        <span><strong>{automationSummary.needsCheck}</strong><em>check</em></span>
-        <span><strong>{automationSummary.pausedDefault}</strong><em>paused</em></span>
+      <div className="weekly-automation-metrics" aria-label="Team working principles">
+        {teamWorkingPrinciples.slice(0, 3).map((principle) => (
+          <span key={principle.title}><strong>{principle.title}</strong><em>{principle.description}</em></span>
+        ))}
       </div>
     </section>
   )
@@ -1135,6 +1073,8 @@ function WeeklyAutomationSummaryPanel() {
 function TeamPanel() {
   return (
     <div className="team-grid" aria-label="Karina Hermes Agent Team">
+      <TeamPixelOfficePanel agents={teamPixelOfficeAgents} toAssetSrc={toAppAssetSrc} />
+
       <article className="content-card team-loop-card">
         <p className="card-kicker">Task completion loop</p>
         <h3>Chris → Karina → Agent Team → Muyeol → Karina → Chris</h3>
@@ -1161,22 +1101,39 @@ function TeamPanel() {
       </figure>
 
       <section className="agent-card-grid" aria-label="Agent character profiles">
-        {agentProfiles.map((agent) => (
-          <article className="content-card agent-profile-card" key={agent.name}>
-            <div className="agent-face-frame">
-              <img src={toAppAssetSrc(agent.faceSrc)} alt={`${agent.name} character face`} width="92" height="92" loading="eager" decoding="async" />
-            </div>
-            <div className="agent-profile-copy">
-              <p className="card-kicker">{agent.title}</p>
-              <h3>{agent.name}</h3>
-              <p>{agent.summary}</p>
-              <p className="agent-handoff">{agent.handoff}</p>
-            </div>
-          </article>
-        ))}
+        {teamPixelOfficeAgents.map((sceneAgent) => {
+          const agent = agentProfiles.find((profile) => profile.name === sceneAgent.name)
+          if (!agent) return null
+
+          return (
+            <article className="content-card agent-profile-card" key={sceneAgent.id}>
+              <div className="agent-face-frame">
+                <img
+                  className="team-pixel-avatar"
+                  src={toAppAssetSrc(sceneAgent.pixelAvatarSrc)}
+                  alt={`${sceneAgent.name}의 기존 공개 프로필 사진에서 파생한 픽셀 아바타`}
+                  width="92"
+                  height="92"
+                  loading="eager"
+                  decoding="async"
+                  onError={({ currentTarget }) => {
+                    currentTarget.onerror = null
+                    currentTarget.src = toAppAssetSrc(sceneAgent.profileSrc)
+                  }}
+                />
+              </div>
+              <div className="agent-profile-copy">
+                <p className="card-kicker">{sceneAgent.roleLabel}</p>
+                <h3>{sceneAgent.name}</h3>
+                <p>{agent.summary}</p>
+                <p className="agent-handoff">{agent.handoff}</p>
+              </div>
+            </article>
+          )
+        })}
       </section>
 
-      <AutomationBoardPanel />
+      <TeamWorkingPrinciplesPanel />
     </div>
   )
 }
@@ -3430,7 +3387,7 @@ function App() {
           <PersonalAxReportPanel />
         ) : activeTab.id === 'weekly' ? (
           <>
-            <WeeklyAutomationSummaryPanel />
+            <WeeklyTeamPrinciplesPanel />
             <MonthlyResearchSynthesisPanel onSelectResearchItem={openResearchItemFromWeekly} />
           </>
         ) : (
