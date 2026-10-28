@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-26T10:58:00+09:00",
+  "generatedAt": "2026-10-28T10:30:00+09:00",
   "sourcePolicy": "Only Chris-selected GoYJ generated assets are saved here. Unselected review candidates are temporary and are not published.",
   "items": [
     {
@@ -1454,6 +1454,151 @@
       "height": 1024,
       "selectedReason": "Chris explicitly selected candidates 02 and 04 for save and webapp update.",
       "midjourneyPrompt": "flat 2D broad woven textile band graphic material, deep aubergine, dusty mustard, warm bone and muted forest green, only three or four wide interlocking matte bands, tactile weave surface, no thin threads, no tartan, no grid, no text-like segmentation, crop-friendly packaging wrap and mobile background --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-10-28-archive60-style-divergence-01",
+      "title": "Coral–Cobalt Riso Margin",
+      "created": "2026-10-28",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-28/01_coral-cobalt_riso_margin.png",
+      "analysis": "텍스트·로고·오브젝트가 없고, 코랄/코발트의 드라이 잉크 질감이 따뜻한 시스템 지성을 과장 없이 전달합니다.",
+      "referenceAxis": "riso-vellum paper field / warm mesh overprint",
+      "dnaClusters": [
+        "Protected Human Context",
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "model": "gpt_image_2_5",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "aspect_ratio": "1:1",
+        "reference_upload_fallback": false
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "e107a549507fac659bd91889d20d2c8793c8dfee86a5ace3092c0a5ead3c48b0",
+      "selectedReason": "Chris instruction: 오늘은 괜찮네 모두 저장해줘 (all five current candidates).",
+      "midjourneyPrompt": "flat 2D risograph vellum surface field, chalk-white uncoated paper ground, coral overprint entering from lower-left and muted ultramarine offset field at upper-right, dry ink grain, open quiet center, crop-friendly packaging and mobile-card background material --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-10-28-archive60-style-divergence-02",
+      "title": "Aubergine Phase Repeat",
+      "created": "2026-10-28",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-28/02_aubergine_phase_repeat.png",
+      "analysis": "동일한 저채도 보라 계열 안에서 cyan register가 최소 신호 역할을 합니다. UI나 로고가 아닌 평면 패턴입니다.",
+      "referenceAxis": "violet motion field / cropped semicircle rhythm",
+      "dnaClusters": [
+        "Protected Human Context",
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "model": "gpt_image_2_5",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "aspect_ratio": "1:1",
+        "reference_upload_fallback": false
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "138b335df69d63858779638452f4b5f03a8636bb431a916ae0e7d5df4e3f894b",
+      "selectedReason": "Chris instruction: 오늘은 괜찮네 모두 저장해줘 (all five current candidates).",
+      "midjourneyPrompt": "flat 2D phase-shift repeat material, deep aubergine paper field with five broad cropped lavender semicircular bands, restrained cyan registration offset, blunt ends, irregular spacious rhythm, no badge or linework, useful for packaging wrap and card-corner crops --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-10-28-archive60-style-divergence-03",
+      "title": "Amber–Slate Ink Contact",
+      "created": "2026-10-28",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-28/03_amber-slate_ink_contact.png",
+      "analysis": "Warm-Cool Intelligence를 가장 절제된 방식으로 담은 후보입니다. 열린 상단 여백이 실제 합성 시 텍스트/정보 레이어를 수용합니다.",
+      "referenceAxis": "amber contact / translucent mesh paper field",
+      "dnaClusters": [
+        "Protected Human Context",
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "model": "gpt_image_2_5",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "aspect_ratio": "1:1",
+        "reference_upload_fallback": false
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "5adcbc43b782d623951873afdc4909885e9c954f5184df2a054c705640fd7378",
+      "selectedReason": "Chris instruction: 오늘은 괜찮네 모두 저장해줘 (all five current candidates).",
+      "midjourneyPrompt": "flat 2D optical ink-wash surface, parchment field, broad transparent amber wash from left meeting one calm slate-blue lower-right overlap, soft paper grain, open upper negative space, quiet care-oriented mobile and packaging overlay --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-10-28-archive60-style-divergence-04",
+      "title": "Midnight Fold Margin",
+      "created": "2026-10-28",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-28/04_midnight_fold_margin.png",
+      "analysis": "이 세트에서 가장 높은 대비를 담당하지만, 3D 물성·화살표·기호 없이 차분한 구조를 유지합니다.",
+      "referenceAxis": "blue-black brutal crop / architectural folded planes",
+      "dnaClusters": [
+        "Protected Human Context",
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "model": "gpt_image_2_5",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "aspect_ratio": "1:1",
+        "reference_upload_fallback": false
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "c13b078bc77785411635f3db797488047ae208e89db72a43e06b5fc9b6a454e5",
+      "selectedReason": "Chris instruction: 오늘은 괜찮네 모두 저장해줘 (all five current candidates).",
+      "midjourneyPrompt": "flat 2D brutal architectural plane material, midnight blue and near-black uncoated paper planes, two cropped diagonal fold boundaries, restrained pale-blue lower margin, broad central negative space, premium dark packaging and cover background --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-10-28-archive60-style-divergence-05",
+      "title": "Terracotta Cutout Field",
+      "created": "2026-10-28",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-28/05_terracotta_cutout_field.png",
+      "analysis": "yellow line decoration과 badge/logo 인상을 배제했습니다. 화면의 중심이 아니라 가장자리에서 작동하는 signal 소재입니다.",
+      "referenceAxis": "black cut-paper / terracotta-red editorial field",
+      "dnaClusters": [
+        "Protected Human Context",
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "model": "gpt_image_2_5",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "aspect_ratio": "1:1",
+        "reference_upload_fallback": false
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "3082acab5d0483600e2daca29ef1aeff2aba02957bdc857e258adb2df7b27a1d",
+      "selectedReason": "Chris instruction: 오늘은 괜찮네 모두 저장해줘 (all five current candidates).",
+      "midjourneyPrompt": "flat 2D cut-paper signal accent, faded terracotta-red paper field, one large asymmetric near-black cut-paper void at top-left and low-saturation pink wedge at far lower-right, matte ink texture, crop-friendly edge material, no yellow line or badge --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     }
   ]
 }
