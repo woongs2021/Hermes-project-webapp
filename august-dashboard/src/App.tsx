@@ -205,6 +205,7 @@ const automationLoops: AutomationLoop[] = [
   { owner: 'GoYJ', name: '3-item UX·디자인 리서치', rhythm: '매일 09:40 KST', status: 'ok', delivery: 'Telegram', note: 'UX·디자인 관점의 세 가지 신호 선별' },
   { owner: 'Son', name: 'AI/AX 비즈니스 시장 변화', rhythm: '수·금 09:35 KST', status: 'ok', delivery: 'Telegram', note: '리서치 결과를 시장 변화로 번역' },
   { owner: 'Son', name: 'AI/AX SNS 시장 요약', rhythm: '수·금 09:50 KST', status: 'ok', delivery: 'Telegram', note: '검증된 신호를 읽기 쉬운 시장 요약으로 정리' },
+  { owner: 'Son', name: 'Threads 검토용 초안', rhythm: '주 3회', status: 'ok', delivery: 'Telegram', note: 'AI/AX·디자인·교육 관점의 검토용 Threads 초안을 전달' },
   { owner: 'Faker', name: '주간 Research 1-pick·트렌드 갱신', rhythm: '월 00:00 KST', status: 'ok', delivery: 'Telegram', note: '주간 리서치 보드의 선택과 흐름 점검' },
   { owner: 'Faker', name: 'AI/AX job-shift 탭 통합', rhythm: '수·금 09:45 KST', status: 'needs-check', delivery: 'Telegram', note: '다음 실행 전 상태 확인 필요' },
   { owner: 'Faker', name: 'Muyeol 1-pick 리서치 보드 배포', rhythm: '금 10:45 KST', status: 'ok', delivery: 'Telegram', note: '검증된 주간 1-pick을 Research Board에 반영' },
