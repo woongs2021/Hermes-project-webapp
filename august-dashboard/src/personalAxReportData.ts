@@ -1,4 +1,4 @@
-export type PersonalAxReportId = 'ai-research' | 'design-research' | 'ax-trends' | 'package-design' | 'design-education'
+export type PersonalAxReportId = 'ai-research' | 'design-research' | 'ax-trends' | 'package-design' | 'design-education' | 'threads-content'
 
 export type ReportSource = {
   title: string
@@ -18,6 +18,7 @@ export type PersonalAxReport = {
     heading: string
     paragraphs: string[]
     bullets?: string[]
+    afterBulletsParagraphs?: string[]
   }>
   sources: ReportSource[]
   prompts: string[]
@@ -291,6 +292,84 @@ export const personalAxReports: PersonalAxReport[] = [
       'Quiet editorial studio table with tracing paper, a cobalt folded form, graphite sketches and one coral annotation, warm paper texture, no text, no UI.',
       'Abstract learning system made of layered translucent grids and tactile paper decisions, calm design journal photography, no logos, no readable marks.',
       'Human judgment narrowing many generative possibilities into one considered direction, soft shadows, material honesty, no AI clichés.',
+    ],
+  },
+  {
+    id: 'threads-content',
+    label: 'Threads 분석',
+    eyebrow: 'October 2026 · Threads content analysis',
+    title: 'AI를 설명하는 사람이 아니라, 변화를 실제로 운영해 본 사람의 브랜드가 된다',
+    dek: 'Chris의 최근 Threads는 AI·디자인·AX를 빠른 소식의 연속으로 다루기보다, 도구를 써 본 뒤 업무·조직·창작의 판단으로 되돌려 놓는다. 이 리포트는 그 반복되는 관찰이 독자 신뢰와 개인 브랜드에 만드는 의미를 정리한다.',
+    heroImage: 'assets/personal-ax-reports/ax-trends-hero.jpg',
+    heroAlt: '넓은 미래형 공간에서 사람과 이동체가 공존하는 AX 트렌드 비주얼.',
+    sections: [
+      {
+        heading: '1. 선정 범위와 읽는 방법',
+        paragraphs: [
+          '이 글은 최신 Threads 게시물 50개 가운데 음식·요리·식당을 실질 주제로 삼은 글을 제외한 뒤, 최신순으로 의미 있는 30편을 질적으로 검토한 결과다. 이번 범위에서는 실제 음식 콘텐츠로 분류할 게시물이 없어, 최신 30편을 선정했다. 분석의 대상은 게시물의 제목·주제·본문에서 확인되는 표현과 반복 패턴이며, 성과 지표·댓글·도달은 포함하지 않았다. 따라서 여기서 말하는 강점과 개선점은 반응의 크기를 판정하는 결론이 아니라, 콘텐츠 자체가 만드는 인상과 운영 가능성에 대한 해석이다.',
+          'Threads와 Hermes의 읽기 전용 연동이 완료되어 이 분석을 작성할 수 있었다. 수집된 게시물 텍스트의 문장과 주제만 읽었으며, 게시물 밖의 사실이나 성과를 덧붙이지 않았다. **하이라이트 표시는 본문에서 반복적으로 확인되는 핵심 관찰을 빠르게 읽기 위한 표지이며, 별도의 성과 근거를 뜻하지 않는다.**',
+        ],
+      },
+      {
+        heading: '2. 콘텐츠의 중심축: AI를 ‘뉴스’보다 ‘과업의 변화’로 읽는다',
+        paragraphs: [
+          '선정 글에서 가장 선명한 축은 AI를 하나의 신기한 모델이나 기능으로 끝내지 않는 태도다. 「앤트로픽이 본 AI의 변화」, 여러 차례의 「오늘자 AI/AX 시장조사 요약」, 「AX로의 전환」은 직업 전체의 대체보다 문서 작성, 자료 정리, 초안 제작, 반복 분석처럼 과업이 다시 나뉘는 장면을 계속 바라본다. 「관리자에서 플레이어 코치로」와 「AI를 지속적으로 공부하는 자 vs AI가 더 성숙해질 때까지 기다리는 자」는 그 변화가 개인의 학습과 리더의 역할로 이어진다는 점을 보탠다.',
+          '이 반복은 채널의 관점을 분명하게 한다. 새 모델, 연구, 기업 사례는 각각 다른 소재이지만, Chris의 글에서는 대체로 ‘그래서 누가 무엇을 배우고 검토해야 하는가’라는 질문으로 귀결된다. 독자에게는 도구 이름을 많이 아는 계정보다 변화의 순서를 해석해 주는 계정으로 읽힐 가능성이 있다. 브랜드 관점에서도 AI 전문성은 단순 속보성보다, 변화가 실제 일의 기준을 어떻게 바꾸는지 설명하는 언어에서 형성된다.',
+        ],
+        bullets: [
+          '반복되는 해석 단위: 직업이 아니라 과업, 생성 자체가 아니라 판단과 검증.',
+          '반복되는 대상: 주니어의 학습, 관리자의 실무성, 조직의 도입과 정착.',
+          '반복되는 결론: AI 활용은 도구 사용법만이 아니라 업무 흐름과 책임의 설계 문제다.',
+        ],
+      },
+      {
+        heading: '3. 강점: 관찰·자기 실험·문화 해석이 한 문장 안에서 만난다',
+        paragraphs: [
+          '이 채널의 두 번째 강점은 외부 변화와 개인의 사용 경험을 분리하지 않는 데 있다. 「오픈AI Dots와 헤르메스 에이전트」, 「헤르메스 에이전트 Codex 모델 변경: 5.6 Terra로」, 「헤르메스 에이전트 4개월 사용 후기」에서는 구독, 모델 변경, 팀 구성, 끊김, 축적된 맥락을 구체적인 사용자 감각으로 말한다. 「지난 연휴에 업데이트된 헤르메스 에이전트」와 「토큰 사용량 잔액 기준으로 업무량도 함께 자동 조정하는 스킬을 생성했다」는 자동화가 늘 편리하지만은 않으며, 품질 개입과 비용의 조정이 남는다는 점을 보여 준다.',
+          '이 경험담은 제품 추천처럼 단순화되지 않는다. 에이전트 루프는 반복 업무와 모니터링에 유용하지만, 사내 AX에서는 토큰 대비 ROI를 증명하기 어렵다는 글도 있고, 원하는 웹사이트의 디자인은 사람이 중간에 피드백해야 했다는 글도 있다. 이 균형은 신뢰의 자산이다. 독자는 도구의 장점을 소개받는 동시에, 어디서 사람이 개입하고 무엇을 포기해야 하는지도 함께 읽는다.',
+          '문화와 디자인의 글도 같은 태도를 강화한다. 「오디세이의 가짜같은 진짜」와 「AI와 관계 중심의 스파이더맨」은 생성물이 넘칠수록 맥락과 서사가 중요해진다는 생각으로 이어진다. 「그래픽 디자인의 거장, 스테판 사그마이스터 강연 후기」, 「현대자동차그룹 CDO 피터슈라이어 강연」, 「UX KOREA 2026- Fall 참여 후기」는 기술 담론을 디자인의 기본기와 현장 감각에 연결한다. 결과적으로 Chris의 개인 브랜드는 AI 낙관이나 회의론 한쪽보다, 빠른 도구 변화 속에서도 무엇이 남는지를 질문하는 실무자의 위치를 얻는다.',
+        ],
+      },
+      {
+        heading: '4. 독자와 브랜드가 얻는 것: 불안을 실행 언어로 바꾸는 신뢰',
+        paragraphs: [
+          '독자가 이 채널에서 반복적으로 받는 가치는 ‘AI가 무엇을 할 수 있는가’의 목록보다, 불안을 어떻게 업무 질문으로 바꿀지에 대한 언어다. 「대기업 인하우스의 AI UX」과 「AX로의 전환」은 보안, 승인, 내부 문화, 사내 도구라는 제약을 함께 말한다. 「디발자」라는 정체성 질문, 직장생활을 오래 이어 온 사람에 대한 글, 일반 직장인이 토큰에 쓸 적정 금액을 묻는 짧은 게시물은 기술 담론을 생활과 경력의 감각으로 낮춘다.',
+          '이 점은 브랜드에 중요한 차이를 만든다. 전문 용어가 많은 채널은 정보를 줄 수 있지만, 독자가 자기 환경에 옮길 판단 기준까지 주지는 못한다. 반면 이 글들은 “무엇을 자동화할까”보다 “어떤 급한 문제를 작은 도구로 풀 수 있을까”, “누가 검수하고 어떤 맥락이 쌓이는가”를 묻는다. 특히 디자인·기획·조직 운영의 경계에 있는 독자에게, 이것은 AI 시대의 역할을 다시 설명하는 콘텐츠가 된다.',
+          '다만 신뢰는 단정에서 나오지 않는다. 게시물 안에서도 AI가 직업을 한 번에 없애기보다 과업을 바꾼다고 말하고, 생성 도구의 결과를 ‘좋다’고 평가할 때에도 디테일, 비용, 사용 장면을 함께 적는다. 이 차분한 조건부 해석을 계속 유지하는 것이 브랜드의 핵심 자산이다.',
+        ],
+      },
+      {
+        heading: '5. 마케터 관점의 개선점: 강한 관점을 더 쉽게 축적하게 만들기',
+        paragraphs: [
+          '현재의 강점은 소재의 폭이 넓다는 데 있지만, 독자가 처음 방문했을 때 반복되는 관점을 한눈에 묶어 읽기에는 글의 형식이 다소 흩어질 수 있다. 시장조사 요약, 논문 1픽, 제품 사용기, 강연 후기, 개인적 단상이 각각 충분히 의미 있지만, 이들이 ‘AI와 디자인의 판단 체계’라는 하나의 아카이브로 연결된다는 표지는 더 선명해질 수 있다.',
+          '개선의 방향은 표현을 더 자극적으로 바꾸는 것이 아니라, 게시물마다 관찰의 좌표를 작게 고정하는 데 있다. 예를 들어 새 모델 글에는 ‘바뀐 과업 / 직접 확인할 장면 / 남는 판단’을, 사용기에는 ‘도입 전제 / 실제 마찰 / 다음 조정’을, 문화·디자인 글에는 ‘작품의 단서 / AI 시대의 해석 / 브랜드에 남는 기준’을 붙일 수 있다. 같은 형식이 반복되면 독자는 긴 글을 다 읽지 않아도 Chris가 무엇을 중요하게 보는지 학습한다.',
+          '또한 외부 자료를 소개하는 글에서는 자료의 내용과 Chris의 해석을 문단이나 표지로 분리하면 좋다. 현재도 ‘보인다’, ‘같다’, ‘예상된다’처럼 판단의 온도를 조절하는 문장이 있으나, “자료가 말하는 범위”와 “실무에서 가져갈 제안”을 나누면 근거 중심의 인상이 더 또렷해진다. 이는 권위를 더하는 장치가 아니라, 독자가 자기 조직에 적용할 수 있는 범위를 스스로 판단하게 하는 장치다.',
+          '한편 짧은 질문형 게시물은 지금의 인간적인 온도를 유지하되, 다음 글로 연결되는 질문으로 설계할 수 있다. 예컨대 토큰 비용이나 직무 정체성을 묻는 글 뒤에, 며칠 뒤 실제 사용 조건과 바뀐 생각을 한 문단으로 덧붙이는 방식이다. 질문이 즉각적인 공감을 만들고, 후속 관찰이 Chris만의 기준을 남긴다. 이 연결이 생기면 개인적 단상은 본문과 별개인 가벼운 글이 아니라, 시장조사와 사용기를 이어 주는 현장 메모가 된다. 단, 모든 질문에 결론을 급히 붙일 필요는 없다. 답이 아직 없다는 사실과 다음에 확인할 장면을 남기는 편이 이 채널의 차분한 신뢰와 더 잘 맞는다. 그 여백 자체도 관점이 된다.',
+        ],
+      },
+      {
+        heading: '6. 즉시 실행할 콘텐츠 운영 제안',
+        paragraphs: [
+          '다음 운영은 새로운 소재를 더 많이 찾기보다, 이미 강한 세 갈래를 연재 가능한 단위로 만드는 데서 시작할 수 있다. 첫째, 주간 시장조사는 ‘이번 주의 신호–바뀌는 과업–팀이 물을 질문’의 세 문단으로 통일한다. 둘째, 에이전트 사용기는 ‘실험 조건–예상 밖의 마찰–다음 설정’으로 남긴다. 셋째, 강연·영화·전시 후기는 ‘인상적인 장면–디자인/AI에 대한 해석–내 작업에 남길 기준’으로 정리한다.',
+        ],
+        bullets: [
+          '월요일: 시장·논문에서 한 가지 신호를 고르고, 직업 전체가 아닌 바뀌는 과업 하나를 설명한다.',
+          '수요일: 실제 도구 사용에서 생긴 마찰이나 수정 한 가지를 기록해, 성공 사례만 쌓이지 않게 한다.',
+          '금요일: 문화·디자인 사례를 통해 그 주의 기술 담론을 맥락과 서사의 언어로 다시 읽는다.',
+          '월말: 세 갈래에서 반복된 문장과 질문을 묶어 ‘이번 달에 바뀐 판단 기준’으로 회고한다.',
+        ],
+        afterBulletsParagraphs: [
+          '이 운영의 목적은 빈도를 위한 빈도가 아니다. 시장 해석, 사용 경험, 문화적 비평이 서로 보강되는 리듬을 만들면, 각각의 짧은 글도 다음 글을 위한 맥락이 된다. Chris의 채널은 이미 AI를 삶과 일의 구조 변화로 읽는 톤을 갖고 있다. 앞으로는 그 관점이 어떤 글에서도 즉시 알아볼 수 있게, 관찰의 형식과 아카이브의 연결을 조금 더 정돈하는 것이 적절하다.',
+        ],
+      },
+    ],
+    sources: [
+      { title: 'Chris의 Threads', href: 'https://www.threads.com/@woongstable', access: '원문 확인' },
+    ],
+    prompts: [
+      'Calm editorial still life of an AI workbench: research cards, translucent workflow layers, one human annotation, warm white paper, muted cobalt and olive accents, tactile materials, no logos, no readable text, no futuristic cliché',
+      'A thoughtful designer-manager balancing three signals—automation, judgment, and context—as a precise kinetic mobile, mist lavender background, deep olive and ochre details, premium Korean editorial art direction, no text',
+      'Abstract archive of weekly observations transforming into a coherent path: stacked paper notes, subtle data threads, quiet studio light, restrained product editorial photography, no UI, no readable labels',
     ],
   },
 ]

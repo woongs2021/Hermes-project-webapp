@@ -57,6 +57,18 @@ const highlightPhrases = [
   '생성 속도와 평가 속도를 같은 것으로 착각하지 않기',
   '선택과 책임을 말할 수 있게 하는 공용 언어',
   '판단의 근력을 길러 주는 데',
+  // Threads 분석
+  'AI를 하나의 모델이 아니라 과업의 변화로 읽는다.',
+  '직업 전체보다 문서·초안·반복 분석 같은 과업이 먼저 바뀐다.',
+  '생성 속도와 판단의 품질은 같은 것이 아니다.',
+  '자동화의 가치는 사람이 무엇을 검수할지 정할 때 선명해진다.',
+  '도구 경험의 장점과 마찰을 함께 말하는 태도가 신뢰를 만든다.',
+  'AI 담론은 보안·승인·비용·조직 문화의 현실을 통과해야 한다.',
+  '콘텐츠의 차별점은 속보가 아니라 변화의 순서를 해석하는 언어다.',
+  '맥락과 서사는 생성물이 많아질수록 더 중요한 선택 기준이 된다.',
+  '자료가 말하는 범위와 실무 해석을 분리할수록 브랜드의 근거가 또렷해진다.',
+  '시장 해석·사용 경험·문화 비평을 연결하면 짧은 글도 아카이브가 된다.',
+  'Threads와 Hermes의 읽기 전용 연동이 완료되어 이 분석을 작성할 수 있었다.',
 ]
 
 function highlightText(value: string) {
@@ -79,6 +91,7 @@ function reportHtml(report: PersonalAxReport) {
       <h2>${escapeHtml(section.heading)}</h2>
       ${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}
       ${section.bullets ? `<ul>${section.bullets.map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join('')}</ul>` : ''}
+      ${section.afterBulletsParagraphs?.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('') ?? ''}
     </section>`).join('')
   const sources = report.sources.map((source) => `<li><a href="${escapeHtml(source.href)}">${escapeHtml(source.title)}</a> <small>${source.access}</small></li>`).join('')
   const prompts = report.prompts.map((prompt) => `<li>${escapeHtml(prompt)}</li>`).join('')
@@ -90,6 +103,7 @@ export function PersonalAxReportPanel() {
   const [activeId, setActiveId] = useState(personalAxReports[0].id)
   const [downloadStatus, setDownloadStatus] = useState<DownloadStatus>('idle')
   const report = personalAxReports.find((item) => item.id === activeId) ?? personalAxReports[0]
+  const isThreadsContentReport = report.id === 'threads-content'
 
   const downloadHtml = () => {
     try {
@@ -134,8 +148,14 @@ export function PersonalAxReportPanel() {
           <p className="card-kicker">{report.eyebrow}</p>
           <h3>{report.title}</h3>
           <p className="personal-ax-report-dek">{report.dek}</p>
-          <p className="personal-ax-report-byline">아래 글은 각 레퍼런스의 공개 초록·메타데이터 또는 원문에서 확인한 연구 대상, 방법, 핵심 주장과 적용 한계를 구분해 정리했습니다.</p>
-          <p className="personal-ax-report-note">연구의 결과를 모든 제품·조직에 대한 효과로 일반화하지 않으며, 본문에서 연구 범위와 해석의 경계를 함께 표시합니다.</p>
+          <p className="personal-ax-report-byline">{isThreadsContentReport
+            ? '아래 글은 최신 본인 Threads 게시물 50개에서 실제 음식·요리·식당 주제를 제외해 선정한 비음식 게시물 30편을 질적으로 분석한 결과입니다. Threads와 Hermes의 읽기 전용 연동을 사용했습니다.'
+            : '아래 글은 각 레퍼런스의 공개 초록·메타데이터 또는 원문에서 확인한 연구 대상, 방법, 핵심 주장과 적용 한계를 구분해 정리했습니다.'}
+          </p>
+          <p className="personal-ax-report-note">{isThreadsContentReport
+            ? '참여도 지표, 댓글, 도달은 분석에 포함하지 않았으며, 본문은 게시물 텍스트에서 확인되는 주제와 표현의 반복 패턴을 해석합니다.'
+            : '연구의 결과를 모든 제품·조직에 대한 효과로 일반화하지 않으며, 본문에서 연구 범위와 해석의 경계를 함께 표시합니다.'}
+          </p>
         </header>
 
         {report.sections.map((section) => (
@@ -143,6 +163,7 @@ export function PersonalAxReportPanel() {
             <h4>{section.heading}</h4>
             {section.paragraphs.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}
             {section.bullets ? <ul>{section.bullets.map((bullet) => <li key={bullet}>{highlightText(bullet)}</li>)}</ul> : null}
+            {section.afterBulletsParagraphs?.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}
           </section>
         ))}
 
