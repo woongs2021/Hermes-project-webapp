@@ -8,16 +8,22 @@ type Position = { x: number; y: number }
 type Obstacle = { x: number; y: number; width: number; height: number }
 type Walker = { position: Position; direction: Direction; mirrored: boolean; duration: number }
 
-const playerHalfSize = { x: 3, y: 8 }
-const sceneBounds = { minX: 4, maxX: 96, minY: 9, maxY: 92 }
-const worktables: Obstacle[] = [
-  { x: 11, y: 17, width: 36, height: 25 },
-  { x: 68, y: 12, width: 19, height: 45 },
-  { x: 30, y: 52, width: 39, height: 28 },
+const playerHalfSize = { x: 4, y: 13 }
+const sceneBounds = { minX: 10, maxX: 86, minY: 12, maxY: 93 }
+// Background analysis: shelves, walls, counters and three worktables are all non-walkable.
+const nonWalkableAreas: Obstacle[] = [
+  { x: 0, y: 0, width: 100, height: 12 }, // upper wall / window ledge
+  { x: 0, y: 0, width: 10, height: 51 }, // left library and plant
+  { x: 0, y: 47, width: 11, height: 53 }, // lower-left cabinet and plant
+  { x: 86, y: 0, width: 14, height: 100 }, // right library and plant
+  { x: 11, y: 16, width: 37, height: 27 }, // upper research table + stools
+  { x: 68, y: 11, width: 20, height: 48 }, // right material table + stools
+  { x: 31, y: 52, width: 38, height: 30 }, // central making table + stools
+  { x: 0, y: 73, width: 29, height: 27 }, // caption reading space remains clear
 ]
 const initialPositions: Record<AtelierSpriteId, Position> = {
-  karina: { x: 53, y: 34 }, yuna: { x: 8, y: 74 }, goyounjung: { x: 77, y: 75 },
-  son: { x: 60, y: 88 }, faker: { x: 91, y: 72 }, muyeol: { x: 18, y: 48 },
+  karina: { x: 55, y: 33 }, yuna: { x: 18, y: 59 }, goyounjung: { x: 77, y: 76 },
+  son: { x: 58, y: 34 }, faker: { x: 24, y: 59 }, muyeol: { x: 78, y: 76 },
 }
 
 const zoneLabels: Record<PixelOfficeAgent['zone'], string> = {
@@ -29,19 +35,21 @@ const zoneNotes: Record<PixelOfficeAgent['zone'], string> = {
   planning: '범위와 다음 실행 단위를 선명하게 만듭니다.', build: '작동하는 화면과 자동화를 만듭니다.', validation: '공개 경계와 완성도를 마지막으로 확인합니다.',
 }
 
-function overlapsWorktable(position: Position) {
-  return worktables.some((table) => (
-    position.x + playerHalfSize.x > table.x
-    && position.x - playerHalfSize.x < table.x + table.width
-    && position.y + playerHalfSize.y > table.y
-    && position.y - playerHalfSize.y < table.y + table.height
+function overlapsNonWalkableArea(position: Position) {
+  return nonWalkableAreas.some((area) => (
+    position.x + playerHalfSize.x > area.x
+    && position.x - playerHalfSize.x < area.x + area.width
+    && position.y + playerHalfSize.y > area.y
+    && position.y - playerHalfSize.y < area.y + area.height
   ))
 }
 
 function isWalkable(position: Position) {
-  return position.x >= sceneBounds.minX && position.x <= sceneBounds.maxX
-    && position.y >= sceneBounds.minY && position.y <= sceneBounds.maxY
-    && !overlapsWorktable(position)
+  return position.x - playerHalfSize.x >= sceneBounds.minX
+    && position.x + playerHalfSize.x <= sceneBounds.maxX
+    && position.y - playerHalfSize.y >= sceneBounds.minY
+    && position.y + playerHalfSize.y <= sceneBounds.maxY
+    && !overlapsNonWalkableArea(position)
 }
 
 function canTravel(from: Position, to: Position) {
