@@ -149,7 +149,7 @@ export function PersonalAxReportPanel() {
           <h3>{report.title}</h3>
           <p className="personal-ax-report-dek">{report.dek}</p>
           <p className="personal-ax-report-byline">{isThreadsContentReport
-            ? '아래 글은 최신 본인 Threads 게시물 50개에서 실제 음식·요리·식당 주제를 제외해 선정한 비음식 게시물 30편을 질적으로 분석한 결과입니다. Threads와 Hermes의 읽기 전용 연동을 사용했습니다.'
+            ? '아래 글은 최신 본인 Threads 게시물 30편을 질적으로 분석한 결과입니다. Threads와 Hermes의 읽기 전용 연동을 사용했습니다.'
             : '아래 글은 각 레퍼런스의 공개 초록·메타데이터 또는 원문에서 확인한 연구 대상, 방법, 핵심 주장과 적용 한계를 구분해 정리했습니다.'}
           </p>
           <p className="personal-ax-report-note">{isThreadsContentReport
