@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type CSSProperties, type MouseEvent } from 'react'
+import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent, type MouseEvent, type PointerEvent } from 'react'
 import { teamAtelierSpriteMap, type AtelierDirection, type AtelierSpriteId } from './teamAtelierSpriteMap'
 import { freshnessLabels, sceneStatusLabels, type PixelOfficeAgent } from './teamPixelOffice'
 
@@ -8,11 +8,14 @@ type Position = { x: number; y: number }
 type Obstacle = { x: number; y: number; width: number; height: number }
 type Walker = { position: Position; direction: Direction; mirrored: boolean; duration: number }
 type RoleBubble = { title: string; description: string }
+type DragState = { id: AtelierSpriteId; pointerId: number; offset: Position }
 
 // The collision shape follows a character's grounded footprint, not its tall transparent canvas.
 const playerHalfSize = { x: 3.6, y: 7 }
 const walkerSeparation = 15
-const sceneBounds = { minX: 10, maxX: 86, minY: 21, maxY: 93 }
+// Selected bubbles need headroom as well as the character's grounded footprint.
+const sceneBounds = { minX: 10, maxX: 86, minY: 32, maxY: 93 }
+const inputStep = 3
 // Background analysis: shelves, walls, counters and three worktables are all non-walkable.
 const nonWalkableAreas: Obstacle[] = [
   { x: 0, y: 0, width: 100, height: 12 }, // upper wall / window ledge
@@ -24,7 +27,7 @@ const nonWalkableAreas: Obstacle[] = [
   { x: 31, y: 52, width: 38, height: 30 }, // central making table + stools
 ]
 const initialPositions: Record<AtelierSpriteId, Position> = {
-  karina: { x: 54, y: 30 }, yuna: { x: 16, y: 53 }, goyounjung: { x: 75, y: 68 },
+  karina: { x: 54, y: 39 }, yuna: { x: 16, y: 53 }, goyounjung: { x: 75, y: 68 },
   son: { x: 64, y: 43 }, faker: { x: 25, y: 80 }, muyeol: { x: 80, y: 86 },
 }
 
@@ -76,7 +79,7 @@ function isSeparatedFromOthers(candidate: Position, occupiedPositions: Position[
 function getDirection(deltaX: number, deltaY: number, current: Direction) {
   if (Math.abs(deltaX) + Math.abs(deltaY) < 0.1) return current
   if (Math.abs(deltaY) > Math.abs(deltaX)) return deltaY > 0 ? 'front' : 'back'
-  return deltaY > 0 ? 'front-three-quarter' : 'back-three-quarter'
+  return deltaY >= 0 ? 'front-three-quarter' : 'back-three-quarter'
 }
 
 function shouldMirror(direction: Direction, deltaX: number) {
@@ -107,6 +110,7 @@ export function TeamPixelOfficePanel({ agents, toAssetSrc }: TeamPixelOfficePane
   const sceneRef = useRef<HTMLElement>(null)
   const selectedIdRef = useRef<AtelierSpriteId | null>(null)
   const previousSelectedIdRef = useRef<AtelierSpriteId | null>(null)
+  const dragRef = useRef<DragState | null>(null)
   const timersRef = useRef<number[]>([])
 
   useEffect(() => {
@@ -171,8 +175,74 @@ export function TeamPixelOfficePanel({ agents, toAssetSrc }: TeamPixelOfficePane
     }
   }, [agents])
 
+  function positionFromPointer(clientX: number, clientY: number): Position | null {
+    const scene = sceneRef.current
+    if (!scene) return null
+    const rect = scene.getBoundingClientRect()
+    return {
+      x: ((clientX - rect.left) / rect.width) * 100,
+      y: ((clientY - rect.top) / rect.height) * 100,
+    }
+  }
+
+  function moveSelectedWalker(id: AtelierSpriteId, candidate: Position) {
+    setWalkers((current) => {
+      const walker = current[id]
+      if (!isWalkable(candidate) || !canTravel(walker.position, candidate)) return current
+      const deltaX = candidate.x - walker.position.x
+      const deltaY = candidate.y - walker.position.y
+      const direction = getDirection(deltaX, deltaY, walker.direction)
+      return {
+        ...current,
+        [id]: { position: candidate, direction, mirrored: shouldMirror(direction, deltaX), duration: 0 },
+      }
+    })
+  }
+
+  function startDrag(id: AtelierSpriteId, event: PointerEvent<HTMLButtonElement>) {
+    if (selectedIdRef.current !== id) return
+    const pointerPosition = positionFromPointer(event.clientX, event.clientY)
+    if (!pointerPosition) return
+    const walker = walkers[id]
+    dragRef.current = {
+      id,
+      pointerId: event.pointerId,
+      offset: { x: pointerPosition.x - walker.position.x, y: pointerPosition.y - walker.position.y },
+    }
+    event.currentTarget.setPointerCapture(event.pointerId)
+    event.preventDefault()
+  }
+
+  function moveDrag(event: PointerEvent<HTMLButtonElement>) {
+    const drag = dragRef.current
+    if (!drag || drag.pointerId !== event.pointerId) return
+    const pointerPosition = positionFromPointer(event.clientX, event.clientY)
+    if (!pointerPosition) return
+    moveSelectedWalker(drag.id, { x: pointerPosition.x - drag.offset.x, y: pointerPosition.y - drag.offset.y })
+    event.preventDefault()
+  }
+
+  function endDrag(event: PointerEvent<HTMLButtonElement>) {
+    if (dragRef.current?.pointerId !== event.pointerId) return
+    dragRef.current = null
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId)
+  }
+
+  function moveWithKeyboard(id: AtelierSpriteId, event: KeyboardEvent<HTMLButtonElement>) {
+    const offsets: Partial<Record<string, Position>> = {
+      ArrowUp: { x: 0, y: -inputStep }, ArrowDown: { x: 0, y: inputStep },
+      ArrowLeft: { x: -inputStep, y: 0 }, ArrowRight: { x: inputStep, y: 0 },
+    }
+    const offset = offsets[event.key]
+    if (!offset || selectedIdRef.current !== id) return
+    event.preventDefault()
+    const walker = walkers[id]
+    moveSelectedWalker(id, { x: walker.position.x + offset.x, y: walker.position.y + offset.y })
+  }
+
   function selectWalker(id: AtelierSpriteId, event: MouseEvent<HTMLButtonElement>) {
     event.stopPropagation()
+    if (selectedIdRef.current === id) return
     const previouslySelectedId = selectedIdRef.current
     const scene = sceneRef.current
     const rect = event.currentTarget.getBoundingClientRect()
@@ -236,6 +306,11 @@ export function TeamPixelOfficePanel({ agents, toAssetSrc }: TeamPixelOfficePane
               aria-label={`${agent.name}의 역할 보기`}
               aria-pressed={isSelected}
               onClick={(event) => selectWalker(id, event)}
+              onPointerDown={(event) => startDrag(id, event)}
+              onPointerMove={moveDrag}
+              onPointerUp={endDrag}
+              onPointerCancel={endDrag}
+              onKeyDown={(event) => moveWithKeyboard(id, event)}
             >
               {isSelected && <span className={`pixel-atelier-role-bubble${walker.position.x < 25 ? ' pixel-atelier-role-bubble--left' : walker.position.x > 75 ? ' pixel-atelier-role-bubble--right' : ''}`}><b>{roleBubble.title}</b><span>{roleBubble.description}</span></span>}
               <img
@@ -254,7 +329,7 @@ export function TeamPixelOfficePanel({ agents, toAssetSrc }: TeamPixelOfficePane
             </button>
           )
         })}
-        <figcaption><b>Pixel Atelier · 함께 이동 중</b><span>캐릭터를 선택하면 역할을 보고, 빈 배경을 선택하면 다시 이동해.</span></figcaption>
+        <figcaption><b>Pixel Atelier · 함께 이동 중</b><span>캐릭터를 선택해 역할을 보고, 드래그하거나 방향키로 움직여. 빈 배경을 선택하면 다시 이동해.</span></figcaption>
         <span className="pixel-atelier-review" aria-hidden="true">Chris · 검토</span>
       </figure>
 
