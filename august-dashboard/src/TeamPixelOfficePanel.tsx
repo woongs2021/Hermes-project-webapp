@@ -312,7 +312,7 @@ export function TeamPixelOfficePanel({ agents, toAssetSrc }: TeamPixelOfficePane
               onPointerCancel={endDrag}
               onKeyDown={(event) => moveWithKeyboard(id, event)}
             >
-              {isSelected && <span className={`pixel-atelier-role-bubble${walker.position.x < 25 ? ' pixel-atelier-role-bubble--left' : walker.position.x > 75 ? ' pixel-atelier-role-bubble--right' : ''}`}><b>{roleBubble.title}</b><span>{roleBubble.description}</span></span>}
+              {isSelected && <span className={`pixel-atelier-role-bubble${walker.position.x < 25 ? ' pixel-atelier-role-bubble--left' : walker.position.x > 75 ? ' pixel-atelier-role-bubble--right' : ''}${walker.position.y < 55 ? ' pixel-atelier-role-bubble--below' : ''}`}><b>{roleBubble.title}</b><span>{roleBubble.description}</span></span>}
               <img
                 src={toAssetSrc(fallback ? agent.pixelAvatarSrc : teamAtelierSpriteMap[id][walker.direction])}
                 alt=""
