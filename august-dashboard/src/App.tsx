@@ -211,7 +211,7 @@ const automationLoops: AutomationLoop[] = [
   { owner: 'Faker', name: '자동화 보드 주간 갱신', rhythm: '월 10:10 KST', status: 'needs-check', delivery: 'Telegram', note: '운영 현황을 다음 주 기준으로 점검', schedulerActive: true },
   { owner: 'Muyeol', name: 'AI/AX job-shift 루프 검증', rhythm: '금 09:55 KST', status: 'ok', delivery: 'Telegram', note: '소스·리스크·구조를 주간 검증' },
   { owner: 'Muyeol', name: '주간 1-pick 검증', rhythm: '금 10:20 KST', status: 'ok', delivery: 'Telegram', note: '리서치 후보 중 한 가지 주간 학습을 검증' },
-  { owner: 'Muyeol', name: '주간 웹앱 데이터 점검', rhythm: '월 09:40 KST', status: 'paused', delivery: 'Telegram', note: '현재 일시정지된 공개 데이터·manifest 검토' },
+  { owner: 'Muyeol', name: '주간 웹앱 데이터 점검', rhythm: '월 09:40 KST', status: 'ok', delivery: 'Telegram', note: '공개 데이터·manifest 상태를 주간 점검', schedulerActive: true },
 ]
 
 const automationOwnerOrder = ['Karina', 'Yuna', 'GoYJ', 'Son', 'Faker', 'Muyeol']
