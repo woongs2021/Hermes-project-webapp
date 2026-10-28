@@ -180,6 +180,35 @@ const metricPlaceholders = ['Primary signal', 'Open loops', 'Weekly check-in']
 const listPlaceholders = ['Next handoff note', 'Recent validation slot', 'Reference card surface']
 const researchLaneFilters = ['all', 'yuna', 'goyounjung', 'final'] as const
 
+type AutomationLoopStatus = 'ok' | 'needs-check' | 'paused'
+type AutomationLoop = {
+  owner: string
+  name: string
+  rhythm: string
+  status: AutomationLoopStatus
+  delivery: string
+  note: string
+}
+
+// Public-safe snapshot of enabled Hermes schedules. It is intentionally a concise
+// operating overview rather than a live control surface or a source of credentials.
+const automationLoops: AutomationLoop[] = [
+  { owner: 'Karina', name: '아침 웜 노트', rhythm: '매일 09:00 KST', status: 'ok', delivery: 'Telegram', note: '날씨와 함께 하루를 여는 짧은 브리핑' },
+  { owner: 'Karina', name: '점심 웜 노트', rhythm: '매일 12:00 KST', status: 'ok', delivery: 'Telegram', note: '점심 무렵의 가벼운 리셋' },
+  { owner: 'Karina', name: '저녁 웜 노트', rhythm: '매일 18:00 KST', status: 'ok', delivery: 'Telegram', note: '저녁의 부드러운 마감 메시지' },
+  { owner: 'Karina', name: '밤 웜 노트', rhythm: '매일 22:00 KST', status: 'needs-check', delivery: 'Telegram', note: '다음 실행에서 상태를 다시 확인하는 회복 메시지' },
+  { owner: 'Faker', name: '자동화 보드 주간 갱신', rhythm: '월 10:10 KST', status: 'needs-check', delivery: 'Telegram', note: '운영 현황을 다음 주 기준으로 점검' },
+  { owner: 'Muyeol', name: '주간 웹앱 데이터 점검', rhythm: '월 09:40 KST', status: 'paused', delivery: 'Telegram', note: '현재 일시정지된 공개 데이터·manifest 검토' },
+]
+
+const automationOwnerOrder = ['Karina', 'Faker', 'Muyeol']
+const automationSummary = {
+  active: automationLoops.filter((loop) => loop.status !== 'paused').length,
+  healthy: automationLoops.filter((loop) => loop.status === 'ok').length,
+  needsCheck: automationLoops.filter((loop) => loop.status === 'needs-check').length,
+  paused: automationLoops.filter((loop) => loop.status === 'paused').length,
+}
+
 type TeamWorkingPrinciple = {
   title: string
   description: string
@@ -1053,6 +1082,53 @@ function TeamWorkingPrinciplesPanel() {
   )
 }
 
+function AutomationStatusLabel({ status }: { status: AutomationLoopStatus }) {
+  const label = status === 'ok' ? '정상' : status === 'paused' ? '일시정지' : '확인 필요'
+  return <span className={`automation-status ${status}`}>{label}</span>
+}
+
+function AutomationBoardPanel() {
+  return (
+    <section className="content-card automation-board-card" aria-label="Hermes automation loop status">
+      <div className="automation-board-header">
+        <div>
+          <p className="card-kicker">Automation Loop Status</p>
+          <h3>지금 돌고 있는 운영 루프</h3>
+          <p>현재 켜진 자동화와 점검이 필요한 흐름을 한눈에 보며, 다음 판단에 필요한 상태만 남깁니다.</p>
+        </div>
+        <div className="automation-summary-grid" aria-label="Automation summary metrics">
+          <span><strong>{automationSummary.active}</strong><em>active</em></span>
+          <span><strong>{automationSummary.healthy}</strong><em>ok</em></span>
+          <span><strong>{automationSummary.needsCheck}</strong><em>check</em></span>
+          <span><strong>{automationSummary.paused}</strong><em>paused</em></span>
+        </div>
+      </div>
+
+      <div className="automation-owner-stack">
+        {automationOwnerOrder.map((owner) => {
+          const ownerLoops = automationLoops.filter((loop) => loop.owner === owner)
+          if (ownerLoops.length === 0) return null
+          return (
+            <section className="automation-owner-section" key={owner} aria-label={`${owner} automation loops`}>
+              <div className="automation-owner-heading"><h4>{owner}</h4><span>{ownerLoops.length} loops</span></div>
+              <div className="automation-loop-list">
+                {ownerLoops.map((loop) => (
+                  <article className="automation-loop-row" key={`${loop.owner}-${loop.name}`}>
+                    <div className="automation-loop-main"><strong>{loop.name}</strong><p>{loop.note}</p></div>
+                    <div className="automation-loop-meta" aria-label={`${loop.name} metadata`}>
+                      <span>{loop.rhythm}</span><span>{loop.delivery}</span><AutomationStatusLabel status={loop.status} />
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          )
+        })}
+      </div>
+    </section>
+  )
+}
+
 function WeeklyTeamPrinciplesPanel() {
   return (
     <section className="content-card weekly-automation-summary" aria-label="Hermes team working principles">
@@ -1073,8 +1149,6 @@ function WeeklyTeamPrinciplesPanel() {
 function TeamPanel() {
   return (
     <div className="team-grid" aria-label="Karina Hermes Agent Team">
-      <TeamPixelOfficePanel agents={teamPixelOfficeAgents} toAssetSrc={toAppAssetSrc} />
-
       <article className="content-card team-loop-card">
         <p className="card-kicker">Task completion loop</p>
         <h3>Chris → Karina → Agent Team → Muyeol → Karina → Chris</h3>
@@ -1128,7 +1202,9 @@ function TeamPanel() {
         })}
       </section>
 
+      <TeamPixelOfficePanel agents={teamPixelOfficeAgents} toAssetSrc={toAppAssetSrc} />
       <TeamWorkingPrinciplesPanel />
+      <AutomationBoardPanel />
     </div>
   )
 }
