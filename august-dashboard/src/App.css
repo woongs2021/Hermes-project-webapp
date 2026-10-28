@@ -10240,3 +10240,14 @@
 :root[data-theme='dark'] .pixel-atelier-scene { border-color:#83907d; }:root[data-theme='dark'] .pixel-atelier-scene figcaption,:root[data-theme='dark'] .pixel-atelier-review { background:rgba(36,39,35,.89); color:#e8e4d9; }
 @media(max-width:760px) { .pixel-atelier-intro { grid-template-columns:1fr; gap:12px; }.pixel-atelier-activity-list { grid-template-columns:repeat(2,minmax(0,1fr)); }.pixel-atelier-scene { aspect-ratio:4/3; } }
 @media(max-width:480px) { .pixel-atelier-activity-list { grid-template-columns:1fr; }.pixel-atelier-activity-list article { min-height:0; padding:12px 0; border-right:0; }.pixel-atelier-scene figcaption { left:3%; bottom:3%; max-width:195px; padding:8px 10px; }.pixel-atelier-scene>img { object-position:52% center; }.pixel-atelier-review { right:3%; bottom:3%; } }
+
+/* Pixel Atelier motion: six small directional sprites stay behind the editorial scene, never a game HUD. */
+.pixel-atelier-scene--active { cursor:default; }
+.pixel-atelier-walker { position:absolute; z-index:2; width:clamp(26px,3.7vw,52px); pointer-events:none; transform:translate(-50%,-92%); filter:drop-shadow(2px 3px 1px rgba(54,42,31,.28)); transition:left var(--walk-duration,7600ms) linear, top var(--walk-duration,7600ms) linear; }
+.pixel-atelier-walker img { display:block; width:100%; height:auto; image-rendering:pixelated; image-rendering:crisp-edges; user-select:none; -webkit-user-drag:none; }
+.pixel-atelier-walker--mirrored img { transform:scaleX(-1); }
+.pixel-atelier-walker--fallback { width:clamp(20px,2.8vw,38px); aspect-ratio:1/1.5; }
+.pixel-atelier-walker--fallback img { width:300%; height:400%; max-width:none; max-height:none; transform:translate(0,0); }
+.pixel-atelier-walker--fallback.pixel-atelier-walker--mirrored img { transform:scaleX(-1); }
+@media(max-width:760px) { .pixel-atelier-walker { width:clamp(15px,4.4vw,23px); } .pixel-atelier-walker--fallback { width:clamp(15px,4.4vw,23px); } .pixel-atelier-scene figcaption { max-width:165px; font-size:.56rem; line-height:1.35; } }
+@media(prefers-reduced-motion:reduce) { .pixel-atelier-walker { transition:none; } }
