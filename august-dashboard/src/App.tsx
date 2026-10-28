@@ -188,22 +188,36 @@ type AutomationLoop = {
   status: AutomationLoopStatus
   delivery: string
   note: string
+  schedulerActive?: boolean
 }
 
-// Public-safe snapshot of enabled Hermes schedules. It is intentionally a concise
-// operating overview rather than a live control surface or a source of credentials.
+// Public-safe team-loop inventory. `schedulerActive` reflects the schedules
+// currently visible to Hermes; the full inventory preserves the team operating loops.
 const automationLoops: AutomationLoop[] = [
-  { owner: 'Karina', name: '아침 웜 노트', rhythm: '매일 09:00 KST', status: 'ok', delivery: 'Telegram', note: '날씨와 함께 하루를 여는 짧은 브리핑' },
-  { owner: 'Karina', name: '점심 웜 노트', rhythm: '매일 12:00 KST', status: 'ok', delivery: 'Telegram', note: '점심 무렵의 가벼운 리셋' },
-  { owner: 'Karina', name: '저녁 웜 노트', rhythm: '매일 18:00 KST', status: 'ok', delivery: 'Telegram', note: '저녁의 부드러운 마감 메시지' },
-  { owner: 'Karina', name: '밤 웜 노트', rhythm: '매일 22:00 KST', status: 'needs-check', delivery: 'Telegram', note: '다음 실행에서 상태를 다시 확인하는 회복 메시지' },
-  { owner: 'Faker', name: '자동화 보드 주간 갱신', rhythm: '월 10:10 KST', status: 'needs-check', delivery: 'Telegram', note: '운영 현황을 다음 주 기준으로 점검' },
+  { owner: 'Karina', name: '아침 날씨·웜 노트', rhythm: '매일 09:00 KST', status: 'ok', delivery: 'Telegram', note: '하루를 짧고 다정하게 여는 브리핑', schedulerActive: true },
+  { owner: 'Karina', name: '점심 웜 노트', rhythm: '매일 12:00 KST', status: 'ok', delivery: 'Telegram', note: '점심 무렵의 가벼운 리셋', schedulerActive: true },
+  { owner: 'Karina', name: '저녁 웜 노트', rhythm: '매일 18:00 KST', status: 'ok', delivery: 'Telegram', note: '저녁의 부드러운 마감 메시지', schedulerActive: true },
+  { owner: 'Karina', name: '밤 웜 노트', rhythm: '매일 22:00 KST', status: 'ok', delivery: 'Telegram', note: '회복과 정리를 돕는 짧은 인사', schedulerActive: true },
+  { owner: 'Yuna', name: 'AI/AX 직무 영향 리서치', rhythm: '수·금 09:15 KST', status: 'ok', delivery: 'Telegram', note: '국내외 직무·산업 변화 신호 조사' },
+  { owner: 'Yuna', name: '3-item AI/AX 리서치', rhythm: '매일 09:30 KST', status: 'ok', delivery: 'Telegram', note: '글로벌·한국·패키지 관점 신호 선별' },
+  { owner: 'GoYJ', name: 'Hermes DNA 그래픽 모티프', rhythm: '월·수·금 10:15 KST', status: 'ok', delivery: 'Telegram', note: 'Design DNA용 그래픽 후보 생성' },
+  { owner: 'GoYJ', name: '디자인 직무 영향 리서치', rhythm: '수·금 09:25 KST', status: 'ok', delivery: 'Telegram', note: 'AI/AX와 디자인 역할 변화 해석' },
+  { owner: 'GoYJ', name: '3-item UX·디자인 리서치', rhythm: '매일 09:40 KST', status: 'ok', delivery: 'Telegram', note: 'UX·디자인 관점의 세 가지 신호 선별' },
+  { owner: 'Son', name: 'AI/AX 비즈니스 시장 변화', rhythm: '수·금 09:35 KST', status: 'ok', delivery: 'Telegram', note: '리서치 결과를 시장 변화로 번역' },
+  { owner: 'Son', name: 'AI/AX SNS 시장 요약', rhythm: '수·금 09:50 KST', status: 'ok', delivery: 'Telegram', note: '검증된 신호를 읽기 쉬운 시장 요약으로 정리' },
+  { owner: 'Faker', name: '주간 Research 1-pick·트렌드 갱신', rhythm: '월 00:00 KST', status: 'ok', delivery: 'Telegram', note: '주간 리서치 보드의 선택과 흐름 점검' },
+  { owner: 'Faker', name: 'AI/AX job-shift 탭 통합', rhythm: '수·금 09:45 KST', status: 'needs-check', delivery: 'Telegram', note: '다음 실행 전 상태 확인 필요' },
+  { owner: 'Faker', name: 'Muyeol 1-pick 리서치 보드 배포', rhythm: '금 10:45 KST', status: 'ok', delivery: 'Telegram', note: '검증된 주간 1-pick을 Research Board에 반영' },
+  { owner: 'Faker', name: '자동화 보드 주간 갱신', rhythm: '월 10:10 KST', status: 'needs-check', delivery: 'Telegram', note: '운영 현황을 다음 주 기준으로 점검', schedulerActive: true },
+  { owner: 'Muyeol', name: 'AI/AX job-shift 루프 검증', rhythm: '금 09:55 KST', status: 'ok', delivery: 'Telegram', note: '소스·리스크·구조를 주간 검증' },
+  { owner: 'Muyeol', name: '주간 1-pick 검증', rhythm: '금 10:20 KST', status: 'ok', delivery: 'Telegram', note: '리서치 후보 중 한 가지 주간 학습을 검증' },
   { owner: 'Muyeol', name: '주간 웹앱 데이터 점검', rhythm: '월 09:40 KST', status: 'paused', delivery: 'Telegram', note: '현재 일시정지된 공개 데이터·manifest 검토' },
 ]
 
-const automationOwnerOrder = ['Karina', 'Faker', 'Muyeol']
+const automationOwnerOrder = ['Karina', 'Yuna', 'GoYJ', 'Son', 'Faker', 'Muyeol']
 const automationSummary = {
-  active: automationLoops.filter((loop) => loop.status !== 'paused').length,
+  registered: automationLoops.length,
+  active: automationLoops.filter((loop) => loop.schedulerActive).length,
   healthy: automationLoops.filter((loop) => loop.status === 'ok').length,
   needsCheck: automationLoops.filter((loop) => loop.status === 'needs-check').length,
   paused: automationLoops.filter((loop) => loop.status === 'paused').length,
@@ -1093,12 +1107,12 @@ function AutomationBoardPanel() {
       <div className="automation-board-header">
         <div>
           <p className="card-kicker">Automation Loop Status</p>
-          <h3>지금 돌고 있는 운영 루프</h3>
-          <p>현재 켜진 자동화와 점검이 필요한 흐름을 한눈에 보며, 다음 판단에 필요한 상태만 남깁니다.</p>
+          <h3>팀의 운영 루프 현황</h3>
+          <p>등록된 팀 루프와 Hermes 스케줄러에서 현재 확인되는 실제 실행 루프를 분리해 보여줍니다.</p>
         </div>
         <div className="automation-summary-grid" aria-label="Automation summary metrics">
-          <span><strong>{automationSummary.active}</strong><em>active</em></span>
-          <span><strong>{automationSummary.healthy}</strong><em>ok</em></span>
+          <span><strong>{automationSummary.registered}</strong><em>registered</em></span>
+          <span><strong>{automationSummary.active}</strong><em>scheduler active</em></span>
           <span><strong>{automationSummary.needsCheck}</strong><em>check</em></span>
           <span><strong>{automationSummary.paused}</strong><em>paused</em></span>
         </div>
