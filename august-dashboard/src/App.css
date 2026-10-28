@@ -10247,11 +10247,13 @@
 .pixel-atelier-walker:focus-visible { outline:2px solid #bd7961; outline-offset:3px; border-radius:8px; }
 .pixel-atelier-walker--selected { z-index:4; cursor:default; }
 .pixel-atelier-walker img { display:block; width:100%; height:auto; image-rendering:pixelated; image-rendering:crisp-edges; user-select:none; -webkit-user-drag:none; }
-.pixel-atelier-role-bubble { position:absolute; z-index:1; left:50%; bottom:55%; width:max-content; max-width:min(190px,44vw); padding:8px 10px; border:1px solid rgba(81,72,57,.24); border-radius:10px; background:rgba(255,253,247,.97); box-shadow:0 8px 18px rgba(57,48,35,.16); color:#31352f; font-family:inherit; font-size:clamp(.58rem,.8vw,.72rem); font-weight:600; line-height:1.42; text-align:left; white-space:normal; transform:translateX(-50%); pointer-events:none; }
+.pixel-atelier-role-bubble { position:absolute; z-index:1; left:50%; bottom:64%; width:max-content; max-width:min(190px,44vw); padding:8px 10px; border:1px solid rgba(81,72,57,.24); border-radius:10px; background:rgba(255,253,247,.97); box-shadow:0 8px 18px rgba(57,48,35,.16); color:#31352f; font-family:inherit; font-size:clamp(.58rem,.8vw,.72rem); font-weight:600; line-height:1.42; text-align:left; white-space:normal; transform:translateX(-50%); pointer-events:none; }
+.pixel-atelier-role-bubble b { display:block; margin-bottom:2px; color:#76513b; font-size:clamp(.64rem,.9vw,.79rem); font-weight:800; letter-spacing:.01em; line-height:1.2; }
+.pixel-atelier-role-bubble>span { display:block; }
 .pixel-atelier-role-bubble::after { position:absolute; left:50%; bottom:-5px; width:8px; height:8px; border-right:1px solid rgba(81,72,57,.24); border-bottom:1px solid rgba(81,72,57,.24); background:rgba(255,253,247,.97); content:''; transform:translateX(-50%) rotate(45deg); }
 .pixel-atelier-walker--mirrored img { transform:scaleX(-1); }
 .pixel-atelier-walker--fallback { width:clamp(20px,2.8vw,38px); aspect-ratio:1/1.5; }
 .pixel-atelier-walker--fallback img { width:300%; height:400%; max-width:none; max-height:none; transform:translate(0,0); }
 .pixel-atelier-walker--fallback.pixel-atelier-walker--mirrored img { transform:scaleX(-1); }
-@media(max-width:760px) { .pixel-atelier-walker { width:clamp(23px,6.6vw,35px); } .pixel-atelier-role-bubble { max-width:150px; padding:6px 8px; font-size:.56rem; } .pixel-atelier-walker--fallback { width:clamp(15px,4.4vw,23px); } .pixel-atelier-scene figcaption { left:3%; top:3%; bottom:auto; max-width:165px; font-size:.56rem; line-height:1.35; } }
+@media(max-width:760px) { .pixel-atelier-walker { width:clamp(23px,6.6vw,35px); } .pixel-atelier-role-bubble { max-width:150px; padding:6px 8px; font-size:.56rem; } .pixel-atelier-role-bubble--left { left:0; transform:none; } .pixel-atelier-role-bubble--right { left:auto; right:0; transform:none; } .pixel-atelier-walker--fallback { width:clamp(15px,4.4vw,23px); } .pixel-atelier-scene figcaption { left:3%; top:3%; bottom:auto; max-width:165px; font-size:.56rem; line-height:1.35; } }
 @media(prefers-reduced-motion:reduce) { .pixel-atelier-walker { transition:none; } }

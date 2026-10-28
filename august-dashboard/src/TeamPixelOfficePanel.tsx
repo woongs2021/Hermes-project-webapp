@@ -7,6 +7,7 @@ type Direction = AtelierDirection
 type Position = { x: number; y: number }
 type Obstacle = { x: number; y: number; width: number; height: number }
 type Walker = { position: Position; direction: Direction; mirrored: boolean; duration: number }
+type RoleBubble = { title: string; description: string }
 
 // The collision shape follows a character's grounded footprint, not its tall transparent canvas.
 const playerHalfSize = { x: 3.6, y: 7 }
@@ -34,6 +35,14 @@ const zoneLabels: Record<PixelOfficeAgent['zone'], string> = {
 const zoneNotes: Record<PixelOfficeAgent['zone'], string> = {
   coordination: '요청과 handoff를 한 흐름으로 정리합니다.', research: '근거가 될 신호와 맥락을 살펴봅니다.', visual: '경험의 온도와 시각 언어를 다듬습니다.',
   planning: '범위와 다음 실행 단위를 선명하게 만듭니다.', build: '작동하는 화면과 자동화를 구현합니다.', validation: '공개 경계와 최종 리스크를 확인합니다.',
+}
+const roleBubbles: Record<AtelierSpriteId, RoleBubble> = {
+  karina: { title: 'Orchestrator', description: '요청을 실행 순서와 협업 흐름으로 조율합니다.' },
+  yuna: { title: 'AI Researcher', description: 'AI 기술과 트렌드에서 판단 근거를 찾습니다.' },
+  goyounjung: { title: 'Design Specialist', description: 'UX와 브랜드의 경험 언어를 설계합니다.' },
+  son: { title: 'Product Manager', description: '범위와 우선순위를 실행 단위로 정리합니다.' },
+  faker: { title: 'Developer', description: '프로토타입과 자동화를 구현합니다.' },
+  muyeol: { title: 'Validator', description: '완성도와 리스크를 검증합니다.' },
 }
 
 function overlapsNonWalkableArea(position: Position) {
@@ -214,6 +223,7 @@ export function TeamPixelOfficePanel({ agents, toAssetSrc }: TeamPixelOfficePane
           const walker = walkers[id]
           const fallback = failedSprites[id]
           const isSelected = selectedId === id
+          const roleBubble = roleBubbles[id]
           const style = {
             left: `${walker.position.x}%`, top: `${walker.position.y}%`, '--walk-duration': `${walker.duration}ms`,
           } as CSSProperties
@@ -227,7 +237,7 @@ export function TeamPixelOfficePanel({ agents, toAssetSrc }: TeamPixelOfficePane
               aria-pressed={isSelected}
               onClick={(event) => selectWalker(id, event)}
             >
-              {isSelected && <span className="pixel-atelier-role-bubble">{agent.activityLabel}</span>}
+              {isSelected && <span className={`pixel-atelier-role-bubble${walker.position.x < 25 ? ' pixel-atelier-role-bubble--left' : walker.position.x > 75 ? ' pixel-atelier-role-bubble--right' : ''}`}><b>{roleBubble.title}</b><span>{roleBubble.description}</span></span>}
               <img
                 src={toAssetSrc(fallback ? agent.pixelAvatarSrc : teamAtelierSpriteMap[id][walker.direction])}
                 alt=""
