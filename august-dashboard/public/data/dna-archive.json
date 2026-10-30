@@ -1599,6 +1599,90 @@
       "assetHash": "3082acab5d0483600e2daca29ef1aeff2aba02957bdc857e258adb2df7b27a1d",
       "selectedReason": "Chris instruction: 오늘은 괜찮네 모두 저장해줘 (all five current candidates).",
       "midjourneyPrompt": "flat 2D cut-paper signal accent, faded terracotta-red paper field, one large asymmetric near-black cut-paper void at top-left and low-saturation pink wedge at far lower-right, matte ink texture, crop-friendly edge material, no yellow line or badge --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-10-31-archive60-style-divergence-01",
+      "title": "Apricot–Cobalt Contact Field",
+      "created": "2026-10-31",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-31/01_apricot-cobalt_contact_field.png",
+      "analysis": "상단 여백이 넓고 중앙의 오브젝트성이 없어 정보 레이어와의 합성이 쉽습니다. 지난 세트의 리소 오버프린트와 달리 한 번의 부드러운 색소 접점만 사용합니다.",
+      "referenceAxis": "warm-cool soft-contact pigment field / amber contact study",
+      "dnaClusters": [
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "model": "gpt_image_2_5",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "aspect_ratio": "1:1",
+        "reference_upload_fallback": false
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "9a082a4b30fa8a4acc5c0e3e49cb8185e66abf750e8259b267078a35290077b4",
+      "selectedReason": "Chris instruction: 좋아. 1 3 4 저장해줘.",
+      "midjourneyPrompt": "flat 2D pigment contact field, warm apricot uncoated paper ground gently meeting a broad desaturated cobalt ink wash along the far lower edge, quiet low density, generous blank upper area, soft offset lithographic ink texture, crop-friendly packaging interior and mobile card surface --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-10-31-archive60-style-divergence-03",
+      "title": "Oxblood Pressed Ridges",
+      "created": "2026-10-31",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-31/03_oxblood_pressed_ridges.png",
+      "analysis": "텍스트·로고·완성 포스터의 단서가 없고, oxblood가 작은 high-signal 역할만 합니다. 기존의 큰 검정 cut-plane과 달리 선형 band 재료로 작동합니다.",
+      "referenceAxis": "black analog press texture / oxblood package-surface signal",
+      "dnaClusters": [
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "model": "gpt_image_2_5",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "aspect_ratio": "1:1",
+        "reference_upload_fallback": false
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "d27aa74f00c1bfe2bcf3b2899294d9b2cea81e055f25ac6b484ff05f4c0a65d8",
+      "selectedReason": "Chris instruction: 좋아. 1 3 4 저장해줘.",
+      "midjourneyPrompt": "flat 2D analog pressed-ink surface, matte charcoal-black uncoated paper with three broad irregular diagonal ridge bands edge to edge, restrained oxblood overprint beneath one ridge, subtle fibrous paper grain, open cropped geometry --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-10-31-archive60-style-divergence-04",
+      "title": "Cyan–Coral Register Margin",
+      "created": "2026-10-31",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-10-31/04_cyan-coral_register_margin.png",
+      "analysis": "재생성으로 AI식 스펙트럼 glow를 제거했습니다. 후보 중 가장 낮은 밀도로, overlay와 crop의 실용성이 가장 높습니다.",
+      "referenceAxis": "chromatic boundary reduced to flat two-ink register margin",
+      "dnaClusters": [
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "model": "gpt_image_2_5",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "aspect_ratio": "1:1",
+        "reference_upload_fallback": false
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "10db5704fbe942cfe0dffef93317c3657f6d39213513c9e29af2ad7ecc41fe3f",
+      "selectedReason": "Chris instruction: 좋아. 1 3 4 저장해줘.",
+      "midjourneyPrompt": "strictly flat two-ink print material on warm white uncoated paper, pale cyan and muted coral vertical paper edges entering only from far right, narrow unprinted registration sliver, large calm blank field, dry ink texture, crop-ready packaging margin --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     }
   ]
 }
