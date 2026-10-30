@@ -70,7 +70,7 @@ function slugify(text) {
 
 function thumbnailLabel(item) {
   const lanePrefix = item.lane === 'yuna' ? 'YU' : 'GJ'
-  const week = normalizeIsoWeek(item.iso_week)?.replace(/^\d{4}-W/, 'W') ?? 'W??'
+  const week = normalizeIsoWeek(String(item.iso_week ?? ''))?.replace(/^\d{4}-W/, 'W') ?? 'W??'
   return `${lanePrefix}-${week}`
 }
 
