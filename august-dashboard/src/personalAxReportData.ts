@@ -1,4 +1,4 @@
-export type PersonalAxReportId = 'ai-research' | 'design-research' | 'ax-trends' | 'package-design' | 'design-education' | 'threads-content'
+export type PersonalAxReportId = 'ai-research' | 'design-research' | 'ax-trends' | 'package-design' | 'design-education' | 'designer-ai-exposure' | 'threads-content'
 
 export type ReportSource = {
   title: string
@@ -292,6 +292,68 @@ export const personalAxReports: PersonalAxReport[] = [
       'Quiet editorial studio table with tracing paper, a cobalt folded form, graphite sketches and one coral annotation, warm paper texture, no text, no UI.',
       'Abstract learning system made of layered translucent grids and tactile paper decisions, calm design journal photography, no logos, no readable marks.',
       'Human judgment narrowing many generative possibilities into one considered direction, soft shadows, material honesty, no AI clichés.',
+    ],
+  },
+  {
+    id: 'designer-ai-exposure',
+    label: '디자이너 AI 위험',
+    eyebrow: 'November 2026 · global / Korea employment signal report',
+    title: '디자이너의 AI 노출도와 고용 위험: 해외·한국 비교',
+    dek: 'AI 노출은 업무가 영향을 받는 정도이고, 대체·감원은 별도의 고용 결과다. 해외와 한국의 공개 근거를 나누어, 디자인 업무에서 바뀌는 일과 아직 단정할 수 없는 일을 정리한다.',
+    heroImage: 'assets/personal-ax-reports/ai-research-hero.jpg',
+    heroAlt: '연결된 정보 단위와 사람의 판단 지점을 표현한 차분한 AI 리서치 일러스트레이션.',
+    sections: [
+      {
+        heading: '먼저 구분할 것: 노출도는 해고·대체의 동의어가 아니다',
+        paragraphs: [
+          '디자이너의 AI 노출도는 전반적으로 중상~높음으로 볼 수 있다. 이미지·레이아웃·카피 초안, 변형안, 리사이징, 간단한 프로토타입처럼 반복적이고 규격화된 산출물 제작은 생성형 AI의 영향을 빠르게 받는다. 그러나 AI 노출도는 직무 안의 과업이 바뀔 가능성을 뜻할 뿐, 직무 전체가 사라지거나 특정 개인의 고용이 줄어든다는 예측과는 다르다.',
+          'ILO·OECD·IMF가 공통으로 강조하는 지점은 직업 전체의 자동화보다 업무 단위의 재배치와 보완이다. 고용 위험은 AI 성능 하나가 아니라 수요, 조직의 도입 방식, 규제, 숙련 재배치, 경기와 채용 조건이 함께 만든 결과다. 따라서 이 리포트는 노출, 과업 재구성, 대체 가능성, 실제 감원·채용 변화를 분리해 읽는다.',
+        ],
+        bullets: [
+          '노출: AI가 보조하거나 바꿀 수 있는 과업의 비중.',
+          '대체 위험: 과업 또는 역할을 사람 없이 수행하려는 압력.',
+          '감원·고용 변화: 실제 고용 데이터로 별도 확인해야 하는 결과.',
+        ],
+      },
+      {
+        heading: '해외: 높은 업무 노출, 그러나 즉시 대체의 직접 증거는 제한적이다',
+        paragraphs: [
+          'ILO의 2025년 직업 노출 분석은 전 세계 노동자 약 4명 중 1명이 생성형 AI에 어느 정도 노출된 직업에 종사한다고 본다. 다만 가장 높은 노출군은 사무·행정직이며, 보고서는 직업 소멸보다 직무 변형을 중심 시나리오로 제시한다. 디자인도 같은 구분이 필요하다.',
+          '시각·그래픽·브랜드 디자인은 이미지 생성, 합성, 수정안, 프레젠테이션 시각화, 캠페인 에셋 변형 같은 과업에서 높은 노출을 보인다. 요구사항이 명확하고 대량 제작이 가능한 업무일수록 자동화와 단가 압력이 먼저 나타날 가능성이 크다. 반면 UX·제품 디자인은 화면과 카피 초안, 프로토타입 생성에는 노출되지만 사용자 맥락 조사, 문제 정의, 우선순위 판단, 실험 설계, 접근성, 제품·기술·사업 간 조율까지 대체하기는 어렵다.',
+          'WEF는 기업 설문을 바탕으로 그래픽 디자이너를 2025~2030년 빠르게 감소할 가능성이 있는 직무군에 포함했다. 이는 관측된 해고 통계나 인과 추정이 아니라 고용주의 기대 조사다. 이를 “그래픽 디자이너 일자리가 이미 사라졌다”는 증거로 읽어서는 안 된다.',
+        ],
+      },
+      {
+        heading: '한국: 노출은 현실적이지만, 직군별 대체율은 아직 확정할 수 없다',
+        paragraphs: [
+          '한국은행의 직업별 AI 노출도 분석은 AI 영향이 단순·저숙련 직무에만 한정되지 않으며, 정보처리와 전문지식 비중이 높은 직무에서도 나타날 수 있음을 보여준다. 디지털 콘텐츠와 정보를 다루는 디자이너는 AI 활용·노출 가능성이 낮지 않다. 다만 이 지수는 업무특성에 따른 노출도이지, 한국 디자이너의 실현된 감원율을 뜻하지 않는다.',
+          '현재 공개 통계만으로 “한국 디자이너의 AI 대체율은 몇 %”라고 말할 근거는 부족하다. 디자인산업 통계는 산업과 인력 규모를 파악하는 데 유용하지만, 생성형 AI 때문에 발생한 직종별 순고용 변화를 별도로 측정하지는 않는다. 광고·커머스·콘텐츠 운영처럼 납기와 변형안 수가 많고 외주·프리랜서 단가 경쟁이 강한 영역에서는 제작단가와 주니어 진입 업무가 먼저 압박받을 가능성이 있다.',
+          '반대로 대기업 제품조직, 공공·금융 UX, 브랜드 리스크가 큰 서비스 환경에서는 보안·규제·접근성·다부서 조율·품질책임 때문에 AI가 우선 보조도구로 자리 잡을 가능성이 높다. 이는 국제 연구와 국내 산업구조를 결합한 해석이며, 국내 직종별 인과추정 결과는 아니다.',
+        ],
+      },
+      {
+        heading: '위험을 가르는 변수와 디자인 리더의 대응',
+        paragraphs: [
+          '위험은 반복 제작과 정형 수정의 비중, 문제 정의와 품질·브랜드·법적 책임의 위치, 조직이 생산성 이익을 재배치에 쓸지 감축에 쓸지에 따라 달라진다. 특히 주니어가 초안 제작을 통해 익히던 학습 경로가 압축되면 장기적으로 인재육성 리스크가 커질 수 있다. 저작권, 출처, 유사성, 개인정보, 편향, 접근성을 검증할 체계가 없으면 비용 절감보다 재작업과 평판 위험이 커질 수도 있다.',
+          '핵심은 “디자이너를 대체할 수 있는가”보다 “어떤 업무를 AI에 맡기고, 누가 최종 판단과 책임을 질 것인가”다. 인력 논의 전에 업무를 자동화 가능, AI 보조, 인간 책임으로 분해해 측정할 필요가 있다. 그래픽·브랜드 팀은 생성과 변형, 자산관리는 표준화하되 브랜드 가이드·저작권·승인 책임을 명확히 해야 한다. UX·제품 팀은 절감한 시간을 사용자 조사, 실험, 접근성, 서비스 구조 검증에 재투자하는 편이 경쟁력을 높인다.',
+        ],
+        bullets: [
+          '생산량뿐 아니라 품질, 권리, 접근성, 수정·검수 비용까지 포함해 도입 효과를 본다.',
+          '주니어 교육을 프롬프트 작성에서 비평, 리서치, 시스템 사고, 원본성·권리 검토로 확장한다.',
+          '개인의 고용 전망을 단일 노출 점수나 자극적 헤드라인으로 단정하지 않는다.',
+        ],
+      },
+    ],
+    sources: [
+      { title: 'ILO, Generative AI and Jobs: A Refined Global Index of Occupational Exposure (2025)', href: 'https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure', access: '원문 확인' },
+      { title: 'OECD Employment Outlook 2023 — Artificial intelligence and the labour market', href: 'https://doi.org/10.1787/08785bba-en', access: '원문 확인' },
+      { title: 'World Economic Forum, The Future of Jobs Report 2025', href: 'https://www.weforum.org/publications/the-future-of-jobs-report-2025/', access: '원문 확인' },
+      { title: 'IMF, Gen-AI: Artificial Intelligence and the Future of Work (2024)', href: 'https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542666', access: '원문 확인' },
+      { title: '한국은행, AI와 노동시장 변화: 직업별 AI 노출도를 중심으로', href: 'https://www.bok.or.kr/portal/bbs/P0002353/list.do?menuNo=200433', access: '원문 확인' },
+      { title: '한국디자인진흥원 디자인산업 통계·조사', href: 'https://www.designdb.com/', access: '원문 확인' },
+    ],
+    prompts: [
+      'Editorial comparison of global and Korean design work signals: layered warm paper fields, folded cobalt grid, one restrained coral decision marker, graphite shadows, calm high-end design research journal, no text, no logos, no robots, no generic AI-startup imagery.',
     ],
   },
   {
