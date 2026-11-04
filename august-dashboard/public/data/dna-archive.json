@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-28T10:35:00+09:00",
+  "generatedAt": "2026-11-04T01:33:26Z",
   "sourcePolicy": "Only Chris-selected GoYJ generated assets are saved here. Unselected review candidates are temporary and are not published.",
   "items": [
     {
@@ -1683,6 +1683,68 @@
       "assetHash": "10db5704fbe942cfe0dffef93317c3657f6d39213513c9e29af2ad7ecc41fe3f",
       "selectedReason": "Chris instruction: 좋아. 1 3 4 저장해줘.",
       "midjourneyPrompt": "strictly flat two-ink print material on warm white uncoated paper, pale cyan and muted coral vertical paper edges entering only from far right, narrow unprinted registration sliver, large calm blank field, dry ink texture, crop-ready packaging margin --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-11-04-archive60-style-divergence-1104-03",
+      "title": "Vellum Mesh Atmosphere",
+      "created": "2026-11-04",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-11-04/03_vellum-mesh_atmosphere.png",
+      "analysis": "PASS — no readable text, logo, UI, bubble/orb, or glass object. The diffuse cyan/coral/violet mesh atmosphere stays flat and works as a translucent surface layer.",
+      "referenceAxis": "riso-vellum paper fields / halftone mesh atmospheres",
+      "dnaClusters": [
+        "Tactile Optical Material",
+        "Warm-Cool Intelligence"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "model": "gpt_image_2_5",
+        "reference_upload_fallback": false
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "b7294ea6fe21f1aecb8f568421cadf31124afd57dc92c7fb136ae6ba7740f4e6",
+      "selectedReason": "Chris instruction: 3 5번 저장해줘.",
+      "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY for future brand, package, mobile UI, and mockup composition. Based on the current Chris Archive and Hermes design-system DNA, translated into composable visual material, not copied. 1:1 square. Useful for cropping, masking, overlaying, repeating, or placing on surfaces. No readable text, no letters, no numbers, no logos, no watermark, no poster headline, no app icon, no UI screenshot, no product mockup, no people, no photo. Do not make a complete poster or standalone artwork. Keep high design utility, clear negative space, crop-friendly edges, quiet editorial structure, tactile print/material feeling.\n\nSpecific direction:\nCreate a flat 2D riso-vellum atmosphere: pale mineral-gray paper with broad edge-cropped clouds of muted cyan, dusty coral, and smoky violet formed only by enlarged soft halftone mesh and translucent ink overlap. Leave a large calm off-white-to-gray reserve through the center. The forms must remain amorphous surface weather, never spheres, circles, bubbles, lenses, glass, blobs, or 3D objects. Print-like registration softness and paper fiber are welcome; no dots as a grid, no text-like blocks, no UI, no emblem, no poster composition, no glow.\n\nHard exclusions:\nNo readable text, letters, numbers, brand names, logos, watermark, complete poster, completed package label, app icon, UI screenshot, product mockup, people, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, mixed visual systems, random decorative scratches, unnecessary orbit lines, route maps, dot-matrix default, warm-gray capsule default, circle badge default.",
+      "negativePrompt": "No readable text, letters, numbers, brand names, logos, watermark, complete poster, completed package label, app icon, UI screenshot, product mockup, people, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, mixed visual systems, random decorative scratches, unnecessary orbit lines, route maps, dot-matrix default, warm-gray capsule default, circle badge default.",
+      "intendedLaterUse": "translucent overlay, card tint, packaging inner-surface, soft crop layer",
+      "motifType": "Riso Vellum Surface",
+      "qaVisualStatus": "PASS — no readable text, logo, UI, bubble/orb, or glass object. The diffuse cyan/coral/violet mesh atmosphere stays flat and works as a translucent surface layer."
+    },
+    {
+      "id": "2026-11-04-archive60-style-divergence-1104-05",
+      "title": "Charcoal Ember Field",
+      "created": "2026-11-04",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-11-04/05_charcoal-ember_field.png",
+      "analysis": "PASS — no text, logo, UI, orbit, yellow line, badge, or object. The red-to-charcoal ink-pressure field remains low-density and crop-ready.",
+      "referenceAxis": "red shadow void / vinyl-grain black field / restrained warm signal",
+      "dnaClusters": [
+        "Protected Human Context",
+        "Warm-Cool Intelligence"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque",
+        "model": "gpt_image_2_5",
+        "reference_upload_fallback": false
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "42a48d02008644b202b1bd8e78ce49ae116781bfcd041e4df3ae5b39a8abefc4",
+      "selectedReason": "Chris instruction: 3 5번 저장해줘.",
+      "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY for future brand, package, mobile UI, and mockup composition. Based on the current Chris Archive and Hermes design-system DNA, translated into composable visual material, not copied. 1:1 square. Useful for cropping, masking, overlaying, repeating, or placing on surfaces. No readable text, no letters, no numbers, no logos, no watermark, no poster headline, no app icon, no UI screenshot, no product mockup, no people, no photo. Do not make a complete poster or standalone artwork. Keep high design utility, clear negative space, crop-friendly edges, quiet editorial structure, tactile print/material feeling.\n\nSpecific direction:\nCreate a flat tactile charcoal-black paper surface with one diffuse deep-crimson ink bloom arriving from the far left edge and fading into a broad protected near-black reserve. The bloom is a soft irregular field of ink pressure and vinyl-like print grain, not a circle, record, flower, object, halo, or glow. Keep it low-density, crop-friendly, matte, and quietly warm. Strictly no yellow line decoration, no orbit, no rings, no thin strokes, no dots, no labels, no badge, no logo, no text, no UI, no poster finish.\n\nHard exclusions:\nNo readable text, letters, numbers, brand names, logos, watermark, complete poster, completed package label, app icon, UI screenshot, product mockup, people, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, mixed visual systems, random decorative scratches, unnecessary orbit lines, route maps, dot-matrix default, warm-gray capsule default, circle badge default.",
+      "negativePrompt": "No readable text, letters, numbers, brand names, logos, watermark, complete poster, completed package label, app icon, UI screenshot, product mockup, people, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, mixed visual systems, random decorative scratches, unnecessary orbit lines, route maps, dot-matrix default, warm-gray capsule default, circle badge default.",
+      "intendedLaterUse": "dark package surface, UI background accent, corner overlay, cropped signal field",
+      "motifType": "Signal Accent Surface",
+      "qaVisualStatus": "PASS — no text, logo, UI, orbit, yellow line, badge, or object. The red-to-charcoal ink-pressure field remains low-density and crop-ready."
     }
   ]
 }
