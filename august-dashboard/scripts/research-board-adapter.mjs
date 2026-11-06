@@ -229,8 +229,8 @@ function normalizeResearchItem(item, index, selectedIndex = new Map()) {
     nonEmpty(value, `source item[${index}].${field}`)
   }
 
-  const score = Number(item.initial_score_5 ?? 0)
-  if (!Number.isFinite(score) || score < 0 || score > 5) fail(`source item[${index}].initial_score_5 must be 0-5`)
+  const score = Number(item.initial_score_5 ?? item.score ?? 0)
+  if (!Number.isFinite(score) || score < 0 || score > 5) fail(`source item[${index}].initial_score_5 or score must be 0-5`)
 
   const selectedStatus = selectedStatusFor({ ...normalized, title: normalized.selectionTitle }, selectedIndex)
 
