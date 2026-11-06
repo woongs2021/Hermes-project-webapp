@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-04T01:33:26Z",
+  "generatedAt": "2026-11-06T00:00:00Z",
   "sourcePolicy": "Only Chris-selected GoYJ generated assets are saved here. Unselected review candidates are temporary and are not published.",
   "items": [
     {
@@ -1745,6 +1745,227 @@
       "intendedLaterUse": "dark package surface, UI background accent, corner overlay, cropped signal field",
       "motifType": "Signal Accent Surface",
       "qaVisualStatus": "PASS — no text, logo, UI, orbit, yellow line, badge, or object. The red-to-charcoal ink-pressure field remains low-density and crop-ready."
+    },
+    {
+      "id": "2026-11-06-archive60-style-divergence-1106-01",
+      "title": "Lime Aperture Reserve",
+      "created": "2026-11-06",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-11-06/01_lime_aperture_reserve.png",
+      "analysis": "PASS — no text, logo, UI, badge, orbit, dots, or 3D object. The large graphite reserve makes this the strongest dark base/mask candidate.",
+      "referenceAxis": "Digital 360 lime signal / black-white editorial aperture system",
+      "sourceReferences": [
+        {
+          "id": "2026-09-14_digital-360-media-landscape-dual-poster",
+          "title": "Digital 360 media landscape dual poster",
+          "tags": [
+            "dual poster system",
+            "media landscape",
+            "human immersion",
+            "underwater photography",
+            "white-space editorial",
+            "rounded poster cards",
+            "capsule object",
+            "lime green signal",
+            "bold grotesk typography",
+            "technology agency"
+          ]
+        },
+        {
+          "id": "2026-09-13_black-void-typographic-poster-with-gray-frame",
+          "title": "Black void typographic poster with gray frame",
+          "tags": []
+        }
+      ],
+      "dnaClusters": [
+        "Protected Human Context",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "b93a503b9fa8568b1d96f6ea0509ec62ec3004b3640db97deda3acdba8ff81be",
+      "selectedReason": "Chris explicitly selected this Design DNA candidate for archive and dashboard publication on 2026-11-06.",
+      "midjourneyPrompt": "Cut-Paper Aperture Field, Digital 360 lime signal / black-white editorial aperture system, package sleeve cutout field, dark-mode mobile-card underlay, crop mask with a protected content reserve, flat 2D graphic motif material, tactile editorial paper surface, quiet premium product-design system, crop-friendly composition and generous negative space --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-11-06-archive60-style-divergence-1106-02",
+      "title": "Cyan Sediment Field",
+      "created": "2026-11-06",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-11-06/02_cyan_sediment_field.png",
+      "analysis": "PASS — no text, logo, UI, object, line decoration, or finished-poster cue. The broad warm-white reserve supports content overlay.",
+      "referenceAxis": "neon gradient landscape reduced to muted cyan-coral terrain strata",
+      "sourceReferences": [
+        {
+          "id": "2026-10-02_neon-gradient-landscape-red-sun-human-scale",
+          "title": "Neon Gradient Landscape with Red Sun and Human Scale",
+          "tags": [
+            "neon gradient landscape",
+            "red sun",
+            "human scale",
+            "surreal terrain",
+            "high saturation",
+            "color mood",
+            "immersive world",
+            "emotional landscape"
+          ]
+        },
+        {
+          "id": "2026-09-11_ai-context-ui-moodboard",
+          "title": "AI context UI moodboard / ambient emotional workspace",
+          "tags": [
+            "ambient AI",
+            "emotional computing",
+            "context-aware interface",
+            "calm dashboard",
+            "soft card UI",
+            "personal AI assistant",
+            "workplace intelligence",
+            "adaptive profile",
+            "stress/energy signal",
+            "premium minimalism"
+          ]
+        }
+      ],
+      "dnaClusters": [
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "5289fbf18cf0c001de03fb7fbe2c2739ad8ac46d06f39529eccb83e6b7f23823",
+      "selectedReason": "Chris explicitly selected this Design DNA candidate for archive and dashboard publication on 2026-11-06.",
+      "midjourneyPrompt": "Soft Gradient Terrain Surface, neon gradient landscape reduced to muted cyan-coral terrain strata, large packaging interior, calm mobile section background, soft overlay below editorial content, flat 2D graphic motif material, tactile editorial paper surface, quiet premium product-design system, crop-friendly composition and generous negative space --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-11-06-archive60-style-divergence-1106-03",
+      "title": "Blue Pressure Fold",
+      "created": "2026-11-06",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-11-06/03_blue_pressure_fold.png",
+      "analysis": "PASS — no text, logo, UI, circle, orbit, or thin-line system. It has intentionally restrained paper-plane depth but remains a flat material, not an object.",
+      "referenceAxis": "Recovery Engineered blue system / quiet technical pressure planes",
+      "sourceReferences": [
+        {
+          "id": "2026-09-12_recovery-engineered-blue-hourglass-system-posters",
+          "title": "Recovery Engineered blue hourglass system posters",
+          "tags": [
+            "recovery engineered",
+            "blue hourglass glow",
+            "rounded technical posters",
+            "luminous contact point",
+            "cyan projection cube",
+            "dark system interface",
+            "code labels",
+            "measurement scale",
+            "engineered wellness",
+            "technical calm"
+          ]
+        },
+        {
+          "id": "2026-09-12_hilal-spatial-studio-minimal-grid-posters",
+          "title": "Hilal Spatial Studio minimal grid posters",
+          "tags": [
+            "minimal spatial identity",
+            "architectural grid",
+            "thin line system",
+            "human-centered manifesto",
+            "quiet typography",
+            "sage gray palette",
+            "neutral poster system",
+            "spatial studio branding",
+            "coordinate lines",
+            "editorial restraint"
+          ]
+        }
+      ],
+      "dnaClusters": [
+        "Quiet Signal Rhythm",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "5fdbb96a7f9b7d33772fd49b28cfdbe541618be94bb1ed3f1f2bb8cd93bd3bb4",
+      "selectedReason": "Chris explicitly selected this Design DNA candidate for archive and dashboard publication on 2026-11-06.",
+      "midjourneyPrompt": "Blind-Emboss Plane Material, Recovery Engineered blue system / quiet technical pressure planes, premium carton surface, monochrome card texture, emboss/deboss production reference, flat 2D graphic motif material, tactile editorial paper surface, quiet premium product-design system, crop-friendly composition and generous negative space --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-11-06-archive60-style-divergence-1106-04",
+      "title": "Soft Pixel Weft",
+      "created": "2026-11-06",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-11-06/04_soft_pixel_weft.png",
+      "analysis": "PASS — no readable glyphs, text, UI, dots, dashes, badges, or logos. Full-bleed rhythmic block logic is usable as a repeat/pattern surface.",
+      "referenceAxis": "Space Weather coded specimen / pixel mosaic reduced to text-free woven blocks",
+      "sourceReferences": [
+        {
+          "id": "2026-10-02_space-weather-coded-phone-ui-specimen",
+          "title": "Space Weather Coded Phone UI Specimen",
+          "tags": [
+            "coded phone UI",
+            "retro terminal",
+            "space weather",
+            "pixel chart",
+            "symbol pattern",
+            "monospace typography",
+            "dense data texture",
+            "diagnostic interface"
+          ]
+        },
+        {
+          "id": "2026-09-12_boom-wow-oops-pixel-speech-blocks",
+          "title": "BOOM WOW OOPS pixel speech blocks",
+          "tags": [
+            "pixel speech blocks",
+            "boom wow oops",
+            "reaction mosaic",
+            "colored labels",
+            "black void",
+            "pop signal map",
+            "modular language tiles",
+            "meme typography",
+            "emotional fragments",
+            "low-res graphic"
+          ]
+        }
+      ],
+      "dnaClusters": [
+        "Quiet Signal Rhythm",
+        "Warm-Cool Intelligence"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "c3e2a61bddbbb461748958f1a47fd7b4cf9b2231dbafad5d55e673a63febeeb5",
+      "selectedReason": "Chris explicitly selected this Design DNA candidate for archive and dashboard publication on 2026-11-06.",
+      "midjourneyPrompt": "Bitmap Weave Pattern, Space Weather coded specimen / pixel mosaic reduced to text-free woven blocks, repeatable package wrap, mobile-divider texture, low-contrast panel fill or masked strip, flat 2D graphic motif material, tactile editorial paper surface, quiet premium product-design system, crop-friendly composition and generous negative space --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     }
   ]
 }
