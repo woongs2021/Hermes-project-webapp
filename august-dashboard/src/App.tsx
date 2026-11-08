@@ -2596,14 +2596,9 @@ function DesignDnaPanel() {
       examples: allBrandAssetExamples.filter((example) => !example.tabId || example.tabId === 'coffee'),
     },
     {
-      id: 'outdoor-mockup-1',
-      title: 'Outdoor Mockup A',
-      examples: allBrandAssetExamples.filter((example) => example.tabId === 'outdoor-mockup-1'),
-    },
-    {
-      id: 'outdoor-mockup-2',
-      title: 'Outdoor Mockup B',
-      examples: allBrandAssetExamples.filter((example) => example.tabId === 'outdoor-mockup-2'),
+      id: 'outdoor-mockup',
+      title: 'Outdoor Mockup',
+      examples: allBrandAssetExamples.filter((example) => example.tabId === 'outdoor-mockup'),
     },
     {
       id: 'package-mockup',
