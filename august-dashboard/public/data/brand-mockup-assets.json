@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-10T07:38:34.990582Z",
+  "generatedAt": "2026-11-08T14:28:06.700216Z",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples present selected graphic motifs as brand surfaces across coffee, outdoor, apparel, signage, and digital mockup contexts; private chats, credentials, and provider account data are excluded.",
   "collections": [
     {
@@ -191,6 +191,105 @@
           "assetHash": "8d930f95b7d9b7371d25a8c9f64bf032d564e831ffa1560b9616885314bff627",
           "width": 1280,
           "height": 853
+        }
+      ]
+    },
+    {
+      "id": "package-mockup-assets",
+      "title": "Package Mockup Assets",
+      "created": "2026-11-08",
+      "status": "mockup_moodboard_saved",
+      "description": "Blank package, beverage, cosmetic, and gift-packaging mockup references for applying Design DNA to physical brand surfaces.",
+      "items": [
+        {
+          "id": "package-mockup-assets-01",
+          "title": "Twin Green Bottle Labels",
+          "description": "Two upright green glass bottles with blank white body and neck labels for beer or beverage branding.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/package-mockup-assets/2026-11-08/01_twin_green_bottle_labels.jpg",
+          "assetHash": "7f59116d4aff305307b8b6fb6022314e7683838c8289649292f79a57aba3c6d5",
+          "width": 1280,
+          "height": 850
+        },
+        {
+          "id": "package-mockup-assets-02",
+          "title": "Crown Cap Close-Up",
+          "description": "Top view of an amber glass bottle with a blank white crimped crown cap for cap branding.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/package-mockup-assets/2026-11-08/02_crown_cap_close_up.jpg",
+          "assetHash": "1e9911b8589ecd892585b2fc2e737d4b105819b04858de6360e7b7545319e194",
+          "width": 1280,
+          "height": 850
+        },
+        {
+          "id": "package-mockup-assets-03",
+          "title": "Tall Beverage Can Mockup",
+          "description": "Matte white slim aluminum can with a silver pull tab for beverage label and identity design.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/package-mockup-assets/2026-11-08/03_tall_beverage_can_mockup.jpg",
+          "assetHash": "eb82d1222fdd46f38b6815bea13cfeea60416421129e9881a7a545b1dd75322d",
+          "width": 1280,
+          "height": 850
+        },
+        {
+          "id": "package-mockup-assets-04",
+          "title": "Tube and Carton Set",
+          "description": "Upright white squeeze tube beside a tall rectangular carton for skincare or cosmetic branding.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/package-mockup-assets/2026-11-08/04_tube_and_carton_set.jpg",
+          "assetHash": "790d836990d5a2f66a0c5925c70d260063a3ba6690d756727d5bfdde68ec31c7",
+          "width": 1280,
+          "height": 850
+        },
+        {
+          "id": "package-mockup-assets-05",
+          "title": "Tray-Based Squeeze Tube",
+          "description": "White squeeze tube resting diagonally in a wooden tray for cosmetic or personal-care branding.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/package-mockup-assets/2026-11-08/05_tray_based_squeeze_tube.jpg",
+          "assetHash": "ea12f0965678eccd1632bb876144775b9120a3ca67c902d150fed91f8f595d5c",
+          "width": 1280,
+          "height": 850
+        },
+        {
+          "id": "package-mockup-assets-06",
+          "title": "Wrapped Wine Bottle Base",
+          "description": "Close crop of a dark glass bottle with a blank white wrap label for wine branding.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/package-mockup-assets/2026-11-08/06_wrapped_wine_bottle_base.jpg",
+          "assetHash": "7dd8368d1ce691978c6551ca90a69afb7b32c1e9dbc9d535e64dd273b8f94ace",
+          "width": 1280,
+          "height": 850
+        },
+        {
+          "id": "package-mockup-assets-07",
+          "title": "Diagonal Wine Bottle Label",
+          "description": "Dark glass wine bottle shown diagonally with a large blank white label for vineyard branding.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/package-mockup-assets/2026-11-08/07_diagonal_wine_bottle_label.jpg",
+          "assetHash": "aa6db877ffc0b67827f519d4b3011a79cd27186b5dddc9b610b3e34c82e4c439",
+          "width": 1280,
+          "height": 850
+        },
+        {
+          "id": "package-mockup-assets-08",
+          "title": "Bottle Cap Layout",
+          "description": "Green glass bottle neck and three blank white crown caps for beverage cap and neck-label branding.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/package-mockup-assets/2026-11-08/08_bottle_cap_layout.jpg",
+          "assetHash": "ceee6d23388aad0fdcb967ef42024f7b9407d34135c5c60ac7c0fe6d1dfa5825",
+          "width": 1280,
+          "height": 850
+        },
+        {
+          "id": "package-mockup-assets-09",
+          "title": "Paired Paper Canisters",
+          "description": "Two white cylindrical canisters with metal-rimmed ends for product packaging and label branding.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/package-mockup-assets/2026-11-08/09_paired_paper_canisters.jpg",
+          "assetHash": "335024baae6577b1c952a8fa71347410332f5022aa9f42f28d7fa08cc5ea3a83",
+          "width": 1280,
+          "height": 850
+        },
+        {
+          "id": "package-mockup-assets-10",
+          "title": "Wooden Wine Gift Crate",
+          "description": "Open pale wood presentation crate holding a labeled dark wine bottle for premium gift branding.",
+          "imageSrc": "/assets/dna-brand-assets/mockup/package-mockup-assets/2026-11-08/10_wooden_wine_gift_crate.jpg",
+          "assetHash": "a0ecb570a604c06f225320d9406fdafc338497f7019bd2ec0e5f4aaeab0c34d8",
+          "width": 1280,
+          "height": 850
         }
       ]
     }

@@ -2894,7 +2894,7 @@ function DesignDnaPanel() {
               <p className="card-kicker">DNA Brand Asset · Moodboard</p>
               <h3>Design DNA를 실제 브랜드 에셋과 목업으로 확장하는 공간입니다.</h3>
               <p>
-                Coffee와 Outdoor mockup reference는 Brand Mockup Assets 아래에서 컬렉션별로 관리하고, Midjourney+Mockup 결과는 별도 탭에서 관리합니다. Chris Archive와 DNA Dashboard에서 고른 모티프를 실제 브랜드 표면으로 검증합니다.
+                Coffee, Outdoor, Package mockup reference는 Brand Mockup Assets 아래에서 컬렉션별로 관리하고, Midjourney+Mockup 결과는 별도 탭에서 관리합니다. Chris Archive와 DNA Dashboard에서 고른 모티프를 실제 브랜드 표면으로 검증합니다.
               </p>
               <div className="dna-dashboard-source-tabs" aria-label="DNA Brand Asset source split">
                 <button
