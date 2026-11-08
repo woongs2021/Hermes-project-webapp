@@ -2605,6 +2605,11 @@ function DesignDnaPanel() {
       title: 'Outdoor Mockup B',
       examples: allBrandAssetExamples.filter((example) => example.tabId === 'outdoor-mockup-2'),
     },
+    {
+      id: 'package-mockup',
+      title: 'Package Mockup',
+      examples: allBrandAssetExamples.filter((example) => example.tabId === 'package-mockup'),
+    },
   ]
   const activeMidjourneyMockupGroup = midjourneyMockupGroups.find((group) => group.id === activeMidjourneyMockupSource) ?? midjourneyMockupGroups[0]
   const selectedDnaAssetDownloadSrc = selectedDnaAsset?.highResDownloadSrc ?? selectedDnaAsset?.highResImageSrc
