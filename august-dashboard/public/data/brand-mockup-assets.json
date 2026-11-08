@@ -915,7 +915,7 @@
     {
       "id": "outdoor-mockup-example-a-04",
       "tabId": "outdoor-mockup",
-      "title": "Outdoor Mockup 1",
+      "title": "Outdoor Mockup A-1",
       "created": "2026-10-08",
       "status": "Surface study",
       "sourceGraphic": "Midjourney 08 — Soft Circular Ring Translation",
@@ -1088,7 +1088,7 @@
     {
       "id": "outdoor-mockup-example-a-08",
       "tabId": "outdoor-mockup",
-      "title": "Outdoor Mockup 2",
+      "title": "Outdoor Mockup A-2",
       "created": "2026-10-08",
       "status": "Surface study",
       "sourceGraphic": "Midjourney 02 — Directional Flow",
@@ -1261,7 +1261,7 @@
     {
       "id": "outdoor-mockup-example-a-02",
       "tabId": "outdoor-mockup",
-      "title": "Outdoor Mockup 3",
+      "title": "Outdoor Mockup A-3",
       "created": "2026-10-08",
       "status": "Surface study",
       "sourceGraphic": "Midjourney 28 — Electric Blue Pinch Fold Field",
@@ -1434,7 +1434,7 @@
     {
       "id": "outdoor-mockup-example-a-11",
       "tabId": "outdoor-mockup",
-      "title": "Outdoor Mockup 4",
+      "title": "Outdoor Mockup A-4",
       "created": "2026-10-09",
       "status": "Surface study",
       "sourceGraphic": "Midjourney 34 — Torn Cobalt Black Paper Edge",
@@ -1599,7 +1599,7 @@
     },
     {
       "id": "outdoor-mockup-example-a-12",
-      "title": "Outdoor Mockup 5",
+      "title": "Outdoor Mockup A-5",
       "created": "2026-10-10",
       "tabId": "outdoor-mockup",
       "displayOrder": 5,
@@ -1764,7 +1764,7 @@
     {
       "id": "outdoor-mockup-example-02",
       "tabId": "outdoor-mockup",
-      "title": "Outdoor Mockup 6",
+      "title": "Outdoor Mockup B-1",
       "created": "2026-10-05",
       "status": "Surface study",
       "sourceGraphic": "Midjourney 24 — Black Mountain Red Horizon Paper Surface",
@@ -1937,7 +1937,7 @@
     {
       "id": "outdoor-mockup-example-b-03",
       "tabId": "outdoor-mockup",
-      "title": "Outdoor Mockup 7",
+      "title": "Outdoor Mockup B-2",
       "created": "2026-10-08",
       "status": "Surface study",
       "sourceGraphic": "Midjourney 22 — Woven Modular Block Grid",
@@ -2110,7 +2110,7 @@
     {
       "id": "outdoor-mockup-example-b-04",
       "tabId": "outdoor-mockup",
-      "title": "Outdoor Mockup 8",
+      "title": "Outdoor Mockup B-3",
       "created": "2026-10-08",
       "status": "Surface study",
       "sourceGraphic": "Midjourney 30 — Warm Horizon Brush Field",
@@ -2283,7 +2283,7 @@
     {
       "id": "outdoor-mockup-example-b-02",
       "tabId": "outdoor-mockup",
-      "title": "Outdoor Mockup 9",
+      "title": "Outdoor Mockup B-4",
       "created": "2026-10-08",
       "status": "Surface study",
       "sourceGraphic": "Midjourney 23 — Coral Black Stripe Block Surface",
@@ -2455,7 +2455,7 @@
     },
     {
       "id": "outdoor-mockup-example-b-05",
-      "title": "Outdoor Mockup 10",
+      "title": "Outdoor Mockup B-5",
       "created": "2026-10-10",
       "tabId": "outdoor-mockup",
       "displayOrder": 10,
