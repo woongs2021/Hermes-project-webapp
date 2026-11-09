@@ -9903,7 +9903,27 @@
   font-size: clamp(1.02rem, 1.8vw, 1.2rem);
   font-weight: 800;
   line-height: 1.6;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--primary) 54%, transparent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
 }
+
+.dissertation-method-map {
+  margin-top: 24px;
+  padding: 22px;
+  border: 1px solid color-mix(in srgb, var(--primary) 22%, var(--stroke));
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--primary) 4%, var(--surface));
+}
+
+.dissertation-method-map h5 { margin: 4px 0 10px; color: var(--ink); font-size: 1.05rem; }
+.dissertation-method-map > p { margin: 0 0 14px; }
+.dissertation-method-table-wrap { overflow-x: auto; margin: 16px 0; }
+.dissertation-method-map table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 0.84rem; }
+.dissertation-method-map th, .dissertation-method-map td { padding: 12px; border: 1px solid color-mix(in srgb, var(--primary) 16%, var(--stroke)); text-align: left; vertical-align: top; line-height: 1.65; }
+.dissertation-method-map th { color: var(--ink); background: color-mix(in srgb, var(--primary) 9%, var(--surface)); font-weight: 750; }
+.dissertation-method-map .dissertation-method-note { margin-bottom: 0; font-size: 0.87rem; }
 
 .personal-ax-report-more {
   margin-top: 16px;

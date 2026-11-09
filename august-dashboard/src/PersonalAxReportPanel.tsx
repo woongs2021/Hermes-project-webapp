@@ -108,6 +108,9 @@ export function PersonalAxReportPanel({ reportId }: { reportId?: PersonalAxRepor
   const report = visibleReports.find((item) => item.id === activeId) ?? visibleReports[0]
   const isThreadsContentReport = report.id === 'threads-content'
   const isDissertationReport = report.id === 'dissertation'
+  const orderedSections = isDissertationReport
+    ? [...report.sections].sort((a, b) => (a.heading === '예상 논문 제목과 초록' ? -1 : b.heading === '예상 논문 제목과 초록' ? 1 : 0))
+    : report.sections
 
   const downloadHtml = () => {
     try {
@@ -168,7 +171,7 @@ export function PersonalAxReportPanel({ reportId }: { reportId?: PersonalAxRepor
           </p>
         </header>
 
-        {report.sections.map((section) => {
+        {orderedSections.map((section) => {
           const intro = section.paragraphs.slice(0, 2)
           const details = section.paragraphs.slice(2)
           const isProposedPaperAbstract = isDissertationReport && section.heading === '예상 논문 제목과 초록'
@@ -179,6 +182,25 @@ export function PersonalAxReportPanel({ reportId }: { reportId?: PersonalAxRepor
               {details.length > 0 ? <details className="personal-ax-report-more"><summary>더 깊이 읽기</summary>{details.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}</details> : null}
               {section.bullets ? <ul>{section.bullets.map((bullet) => <li key={bullet}>{highlightText(bullet)}</li>)}</ul> : null}
               {section.afterBulletsParagraphs?.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}
+              {isDissertationReport && section.heading === '연구 설계: 인터뷰 → 프로토타입 → 4주 단일사례 사용' ? (
+                <div className="dissertation-method-map" aria-label="권장 연구 방법론 도표">
+                  <p className="card-kicker">Recommended analysis plan</p>
+                  <h5>권장 연구 방법론 도표</h5>
+                  <p>핵심은 <strong>질적 기술연구 + 사례 내 주제분석</strong>이야. 인터뷰와 사용 로그를 같은 분석틀로 연결하되, 효과 검증으로 과장하지 않고 설계 요구와 승인 흐름을 드러내는 데 집중해.</p>
+                  <div className="dissertation-method-table-wrap">
+                    <table>
+                      <thead><tr><th>연구 단계</th><th>자료·분석 방법</th><th>산출물</th></tr></thead>
+                      <tbody>
+                        <tr><td>요구 탐색</td><td>교육전문가 10명 반구조화 인터뷰 → Braun &amp; Clarke식 반사적 주제분석</td><td>위임 과업·인간 승인·위험·데이터 경계 코드</td></tr>
+                        <tr><td>설계 번역</td><td>인터뷰 주제를 과업–승인–근거–예외 매트릭스로 교차 정리</td><td>김조교 기능 명세와 human-in-the-loop 서비스 블루프린트</td></tr>
+                        <tr><td>초기 사용</td><td>4주 단일사례 로그 → 사례 내 패턴 매칭과 시간순(process tracing) 분석</td><td>수용·수정·반려·복구가 발생한 대표 사용 사례</td></tr>
+                        <tr><td>해석 보완</td><td>참여자 검토 2~3명, 제2 코더 대조, 부정 사례 확인</td><td>설계 원리의 수정 근거와 해석 한계</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="dissertation-method-note">권장 이유: 표본과 사용 기간이 제한된 이 연구에는 통계적 효과 검정보다, 어떤 조건에서 교육자의 판단이 유지·변경·회복되는지를 추적하는 분석이 더 타당해. 정량 지표는 시간·재작업 횟수의 <em>탐색적 기술통계</em>로만 보조해.</p>
+                </div>
+              ) : null}
             </section>
           )
         })}
