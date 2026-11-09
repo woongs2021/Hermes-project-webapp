@@ -32,9 +32,9 @@ export const personalAxReports: PersonalAxReport[] = [
   {
     id: 'ai-research',
     label: 'AI 리서치',
-    eyebrow: 'October 2026 · literature-grounded research report',
+    eyebrow: 'Literature-grounded research report',
     title: '에이전트 신뢰의 출발점은 수행량이 아니라, 멈춤과 되돌림을 언제 보장하는가에 있다',
-    dek: '10월 AI 리서치가 남긴 제품 언어의 우선순위는 완전 자동화의 매력보다 실행 중 통제, 프라이버시, 구현 검증에 있다.',
+    dek: '이 리서치가 남긴 제품 언어의 우선순위는 완전 자동화의 매력보다 실행 중 통제, 프라이버시, 구현 검증에 있다.',
     heroImage: 'assets/personal-ax-reports/ai-research-hero.jpg',
     heroAlt: '연결된 컴퓨팅 노드와 투명한 데이터 블록으로 구성한 AI 리서치 일러스트레이션.',
     sections: [
@@ -85,9 +85,9 @@ export const personalAxReports: PersonalAxReport[] = [
   {
     id: 'design-research',
     label: '디자인 리서치',
-    eyebrow: 'October 2026 · literature-grounded design research report',
+    eyebrow: 'Literature-grounded design research report',
     title: 'AI 리터러시는 프롬프트 속도보다 판단·평가·독창성을 함께 다루는 디자인 역량이다',
-    dek: '10월 디자인 리서치는 AI 도입 뒤에도 디자이너의 역할이 남는 이유를 산출물 생산이 아니라 검토와 책임으로 설명한다.',
+    dek: '디자인 리서치는 AI 도입 뒤에도 디자이너의 역할이 남는 이유를 산출물 생산이 아니라 검토와 책임으로 설명한다.',
     heroImage: 'assets/personal-ax-reports/design-research-hero.jpg',
     heroAlt: '기하학적 인물과 로봇의 균형을 담아낸 디자인 리서치 일러스트레이션.',
     sections: [
@@ -139,9 +139,9 @@ export const personalAxReports: PersonalAxReport[] = [
   {
     id: 'ax-trends',
     label: 'AX 트렌드',
-    eyebrow: 'October 2026 · evidence-led trend synthesis',
+    eyebrow: 'Evidence-led trend synthesis',
     title: 'AX의 다음 경쟁은 자동화 규모가 아니라 통제 가능한 운영 품질을 누가 설계하느냐에 달려 있다',
-    dek: '10월에 고른 논문은 AX를 기능 도입이 아닌 신뢰·검증·조직 학습을 잇는 경험 운영의 과제로 바라보게 한다.',
+    dek: '선별한 논문은 AX를 기능 도입이 아닌 신뢰·검증·조직 학습을 잇는 경험 운영의 과제로 바라보게 한다.',
     heroImage: 'assets/personal-ax-reports/ax-trends-cubes-hero.jpg',
     heroAlt: '반투명한 파랑·분홍·주황 입체 큐브를 겹쳐 AX 운영 요소의 연결과 조합을 담아낸 이미지.',
     sections: [
@@ -158,7 +158,7 @@ export const personalAxReports: PersonalAxReport[] = [
         ],
       },
       {
-        heading: '11월 운영으로 이어 갈 질문',
+        heading: '운영으로 이어 갈 질문',
         paragraphs: [
           '요지를 정리하면, 다음 달에는 새로운 기능 목록보다 하나의 얇은 검증 루프를 먼저 만든다. 에이전트 작업마다 계획 미리보기, 권한 범위, 중단·되돌리기, 실행 로그의 네 지점을 점검한다. 디자인 산출물에는 주장한 근거와 실제 화면을 대조하는 QA를 붙인다. 마지막으로 팀 회고에서는 “AI가 해냈다”가 아니라 “누가 어떤 근거로 승인했고 무엇을 다음에 검증할 것인가”를 남긴다. 이 기록이 쌓일 때 AX는 유행어가 아니라 조직이 재사용할 수 있는 신뢰의 운영체계가 된다.',
           '이 운영 방향은 기술 변화, 디자인 공동 작업의 품질, 현장 정착과 브랜드 검수의 가치를 한 줄로 연결한다. 당장 필요한 것은 거대한 전환 프로그램보다 각 팀이 공통으로 쓸 수 있는 작은 증거 포맷이다. 예를 들어 기능마다 위임 범위, 사용자 확인 문구, 실패 시 복구 책임자, 다음 검증 지표를 한 장에 남긴다. 이 포맷은 실패를 숨기는 보고서가 아니라 다음 결정의 비용을 낮추는 팀의 기억이 된다. 그렇게 하면 속도와 안전을 맞바꾸지 않고도, 무엇이 실제 가치인지 차분하게 비교할 수 있다. AX의 성숙도는 AI를 얼마나 넓게 붙였는지가 아니라 이 판단의 흔적을 얼마나 투명하게 축적하는지에서 드러난다.',
@@ -171,7 +171,7 @@ export const personalAxReports: PersonalAxReport[] = [
         ],
       },
       {
-        heading: '10월 트렌드를 실행 기준으로 구체화하기',
+        heading: '트렌드를 실행 기준으로 구체화하기',
         paragraphs: [
           '이번 레퍼런스 묶음에서 중요한 변화는 AI가 더 많은 일을 할 수 있다는 사실보다, 그 일이 제품의 책임 구조를 바꾼다는 점이다. 프라이버시 선호 제어 연구는 위임 범위의 세분화를, 계획 후 실행 연구는 실행 순서 속 사용자 확인을, UX 도구 문헌고찰은 자동화와 평가 거버넌스를 함께 검토해야 한다는 문제를 각각 비춘다. 방법과 대상은 다르지만 제품팀이 당장 확인할 질문은 공통적이다. 누가 시작을 승인하는가, 실행 과정에서 누가 방향을 바꿀 수 있는가, 결과가 문제를 일으켰을 때 누가 어떤 근거로 되돌리는가.',
           'AX 트렌드를 로드맵으로 옮길 때에는 커다란 전환 선언보다 작은 책임 단위를 먼저 만든다. 한 기능을 고르고 위임 범위, 사용자 확인 문구, 외부 전송 여부, 실패 시 복구 행동, 사람의 검토 기준을 한 장에 적는다. 다음 주에는 이 다섯 항목이 실제 화면과 운영 과정에서 지켜졌는지 확인한다. 이는 레퍼런스의 주장을 성과 보장으로 과장하지 않으면서도 제품과 브랜드가 배울 수 있는 실험으로 바꾸는 방법이다. 신뢰는 완벽한 모델에서 한 번에 만들어지지 않는다. 약속한 범위를 지키고, 예외를 숨기지 않으며, 이용자가 판단을 되찾을 수 있게 하는 반복에서 생긴다.',
@@ -192,9 +192,9 @@ export const personalAxReports: PersonalAxReport[] = [
   {
     id: 'package-design',
     label: '패키지 디자인',
-    eyebrow: 'October 2026 · literature-grounded package design report',
+    eyebrow: 'Literature-grounded package design report',
     title: '패키지 디자인은 시각 장식이 아니라 주의·해석·행동을 연결하는 리테일 경험의 인터페이스다',
-    dek: '10월 패키지 디자인 리포트는 전면 라벨·기호 체계·재활용 단서와 AI 재설계 실험을 통해 패키지가 구매 전·사용 중·사용 후 행동을 잇는 정보 환경임을 살핀다.',
+    dek: '이 패키지 디자인 리포트는 전면 라벨·기호 체계·재활용 단서와 AI 재설계 실험을 통해 패키지가 구매 전·사용 중·사용 후 행동을 잇는 정보 환경임을 살핀다.',
     heroImage: 'assets/personal-ax-reports/package-design-hero.jpg',
     heroAlt: '재활용 상자, 소재 샘플, 소형 제품을 배열해 구성한 패키지 디자인 플랫레이.',
     sections: [
@@ -245,7 +245,7 @@ export const personalAxReports: PersonalAxReport[] = [
   {
     id: 'design-education',
     label: '디자인교육 트렌드',
-    eyebrow: 'October 2026 · literature-grounded design education trend report',
+    eyebrow: 'Literature-grounded design education trend report',
     title: '디자인교육의 다음 과제는 AI 사용법이 아니라, AI와 함께 판단하는 과정을 익히게 하는 일이다',
     dek: '도구 사용의 허용·금지 이분법을 넘어 문제 정의·탐색·비평·출처 공개·평가를 다시 연결하는 디자인교육의 변화를 짚는다.',
     heroImage: 'assets/personal-ax-reports/design-education-hero.jpg',
@@ -297,7 +297,7 @@ export const personalAxReports: PersonalAxReport[] = [
   {
     id: 'designer-ai-exposure',
     label: '디자이너 AI 위험',
-    eyebrow: 'November 2026 · global / Korea employment signal report',
+    eyebrow: 'Global / Korea employment signal report',
     title: '디자이너 AI 노출도와 고용 위험을 해외·한국 사례로 비교하기',
     dek: 'AI 노출은 업무가 영향을 받는 정도이고 대체·감원은 별도의 고용 결과다. 해외와 한국의 공개 근거를 구분해 디자인 업무에서 달라지는 일과 아직 단정할 수 없는 일을 짚는다.',
     heroImage: 'assets/personal-ax-reports/designer-ai-exposure-hero.jpg',
@@ -359,7 +359,7 @@ export const personalAxReports: PersonalAxReport[] = [
   {
     id: 'threads-content',
     label: 'Threads 분석',
-    eyebrow: 'October 2026 · Threads content analysis',
+    eyebrow: 'Threads content analysis',
     title: 'AI를 설명하기보다 변화를 실제로 운영해 본 사람의 브랜드가 된다',
     dek: 'Chris의 최근 Threads는 AI·디자인·AX를 빠른 소식의 연속보다 도구를 써 본 뒤의 업무·조직·창작 판단으로 되돌린다. 이 글은 그 반복된 관찰이 독자 신뢰와 개인 브랜드에 남기는 의미를 살핀다.',
     heroImage: 'assets/personal-ax-reports/threads-analysis-hero.jpg',
