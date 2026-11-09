@@ -1528,29 +1528,6 @@
       "assetTier": "source image"
     },
     {
-      "id": "2026-11-08-midjourney-53-prismatic-glass-blur",
-      "title": "Midjourney 53 — Prismatic Glass Blur",
-      "created": "2026-11-08",
-      "status": "midjourney_manual_saved",
-      "sourceTool": "Midjourney",
-      "imageSrc": "/assets/dna-archive/midjourney/2026-11-08/53_prismatic-glass-blur_manual_midjourney.jpg",
-      "originalImageSrc": "/assets/dna-archive/midjourney/2026-11-08/53_prismatic-glass-blur_manual_midjourney.jpg",
-      "prompt": "abstract macro of curved translucent glass with soft-focus prismatic reflections, cyan, cobalt, coral, pink, and amber color blooms against dark voids, glossy highlights, fluid organic composition --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
-      "midjourneyPrompt": "abstract macro of curved translucent glass with soft-focus prismatic reflections, cyan, cobalt, coral, pink, and amber color blooms against dark voids, glossy highlights, fluid organic composition --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
-      "analysis": "검은 틈 사이로 청록·파랑·주황·분홍의 흐릿한 무지갯빛 반사가 유리처럼 번져 있어 뷰티 브랜드나 디지털 배경 표면에 적합하다.",
-      "assetHash": "85d559f91e084bc2037ce6b0ea2b633362c4b7719f1382b74cefd7fee099993a",
-      "width": 1024,
-      "height": 1024,
-      "dnaClusters": [
-        "Manual Midjourney",
-        "Design DNA",
-        "iridescent refraction",
-        "soft focus",
-        "organic reflections"
-      ],
-      "assetTier": "source image"
-    },
-    {
       "id": "2026-11-08-midjourney-54-prism-sheet-crossing",
       "title": "Midjourney 54 — Prism Sheet Crossing",
       "created": "2026-11-08",
