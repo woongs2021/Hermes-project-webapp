@@ -300,8 +300,8 @@ export const personalAxReports: PersonalAxReport[] = [
     eyebrow: 'November 2026 · global / Korea employment signal report',
     title: '디자이너의 AI 노출도와 고용 위험: 해외·한국 비교',
     dek: 'AI 노출은 업무가 영향을 받는 정도이고, 대체·감원은 별도의 고용 결과다. 해외와 한국의 공개 근거를 나누어, 디자인 업무에서 바뀌는 일과 아직 단정할 수 없는 일을 정리한다.',
-    heroImage: 'assets/personal-ax-reports/ai-research-hero.jpg',
-    heroAlt: '연결된 정보 단위와 사람의 판단 지점을 표현한 차분한 AI 리서치 일러스트레이션.',
+    heroImage: 'assets/personal-ax-reports/designer-ai-exposure-hero.jpg',
+    heroAlt: '주황색 층과 파란 격자 위의 흰 판·원형 표식으로, AI 노출과 판단 지점을 대비한 추상 일러스트.',
     sections: [
       {
         heading: '먼저 구분할 것: 노출도는 해고·대체의 동의어가 아니다',
