@@ -10012,6 +10012,14 @@
 @media (max-width: 640px) {
   .personal-ax-report-controls { align-items: flex-start; flex-direction: column; }
   .personal-ax-report-article { border-radius: 14px; }
+  .personal-ax-report-article h3 {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.42;
+    letter-spacing: -0.035em;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
 }
 
 @media print {
