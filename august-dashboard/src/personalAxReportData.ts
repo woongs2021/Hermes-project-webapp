@@ -362,8 +362,8 @@ export const personalAxReports: PersonalAxReport[] = [
     eyebrow: 'October 2026 · Threads content analysis',
     title: 'AI를 설명하는 사람이 아니라, 변화를 실제로 운영해 본 사람의 브랜드가 된다',
     dek: 'Chris의 최근 Threads는 AI·디자인·AX를 빠른 소식의 연속으로 다루기보다, 도구를 써 본 뒤 업무·조직·창작의 판단으로 되돌려 놓는다. 이 리포트는 그 반복되는 관찰이 독자 신뢰와 개인 브랜드에 만드는 의미를 정리한다.',
-    heroImage: 'assets/personal-ax-reports/threads-content-hero.jpg',
-    heroAlt: '따뜻한 종이 질감 위에 파랑·주황 기하학적 도형과 연필 선이 구성된 편집적 추상 이미지.',
+    heroImage: 'assets/personal-ax-reports/threads-analysis-hero.jpg',
+    heroAlt: '색 띠와 흰 종이 단면이 반복되는 수직 구성으로, 축적된 관찰과 콘텐츠 흐름을 표현한 편집적 이미지.',
     sections: [
       {
         heading: '1. 선정 범위와 읽는 방법',
