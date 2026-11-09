@@ -9910,6 +9910,8 @@
 }
 
 .dissertation-method-map {
+  min-width: 0;
+  max-width: 100%;
   margin-top: 24px;
   padding: 22px;
   border: 1px solid color-mix(in srgb, var(--primary) 22%, var(--stroke));
@@ -9919,11 +9921,31 @@
 
 .dissertation-method-map h5 { margin: 4px 0 10px; color: var(--ink); font-size: 1.05rem; }
 .dissertation-method-map > p { margin: 0 0 14px; }
-.dissertation-method-table-wrap { overflow-x: auto; margin: 16px 0; }
+.dissertation-method-table-wrap {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  margin: 16px 0;
+}
 .dissertation-method-map table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 0.84rem; }
 .dissertation-method-map th, .dissertation-method-map td { padding: 12px; border: 1px solid color-mix(in srgb, var(--primary) 16%, var(--stroke)); text-align: left; vertical-align: top; line-height: 1.65; }
 .dissertation-method-map th { color: var(--ink); background: color-mix(in srgb, var(--primary) 9%, var(--surface)); font-weight: 750; }
 .dissertation-method-map .dissertation-method-note { margin-bottom: 0; font-size: 0.87rem; }
+
+@media (max-width: 900px) {
+  .personal-ax-report-shell,
+  .personal-ax-report-article,
+  .personal-ax-report-section,
+  .dissertation-method-map {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .dissertation-method-map {
+    padding: clamp(14px, 3vw, 22px);
+  }
+}
 
 .personal-ax-report-more {
   margin-top: 16px;
