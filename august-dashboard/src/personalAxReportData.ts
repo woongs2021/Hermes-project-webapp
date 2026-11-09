@@ -142,8 +142,8 @@ export const personalAxReports: PersonalAxReport[] = [
     eyebrow: 'October 2026 · evidence-led trend synthesis',
     title: 'AX의 다음 경쟁은 자동화의 양이 아니라 통제 가능한 운영 품질을 누가 설계하는가에 달려 있다',
     dek: '10월의 선택 논문을 한데 보면 AX는 기능 도입 프로젝트가 아니라 신뢰·검증·조직 학습을 연결하는 경험 운영의 문제로 이동하고 있다.',
-    heroImage: 'assets/personal-ax-reports/ax-trends-hero.jpg',
-    heroAlt: '넓은 미래형 공간에서 사람과 이동체가 공존하는 AX 트렌드 비주얼.',
+    heroImage: 'assets/personal-ax-reports/ax-trends-cubes-hero.jpg',
+    heroAlt: '반투명한 파랑·분홍·주황의 입체 큐브가 겹쳐진 구성으로, AX 운영 요소의 연결과 조합을 표현한 이미지.',
     sections: [
       {
         heading: '세 가지 변화',
