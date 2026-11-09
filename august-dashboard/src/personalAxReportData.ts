@@ -1,4 +1,4 @@
-export type PersonalAxReportId = 'ai-research' | 'design-research' | 'ax-trends' | 'package-design' | 'design-education' | 'designer-ai-exposure' | 'threads-content'
+export type PersonalAxReportId = 'ai-research' | 'design-research' | 'ax-trends' | 'package-design' | 'design-education' | 'designer-ai-exposure' | 'threads-content' | 'dissertation'
 
 export type ReportSource = {
   title: string
@@ -432,6 +432,66 @@ export const personalAxReports: PersonalAxReport[] = [
       'Calm editorial still life of an AI workbench: research cards, translucent workflow layers, one human annotation, warm white paper, muted cobalt and olive accents, tactile materials, no logos, no readable text, no futuristic cliché',
       'A thoughtful designer-manager balancing three signals—automation, judgment, and context—as a precise kinetic mobile, mist lavender background, deep olive and ochre details, premium Korean editorial art direction, no text',
       'Abstract archive of weekly observations transforming into a coherent path: stacked paper notes, subtle data threads, quiet studio light, restrained product editorial photography, no UI, no readable labels',
+    ],
+  },
+  {
+    id: 'dissertation',
+    label: 'Dissertation',
+    eyebrow: 'Dissertation idea 01 · educator-facing AI agent design study',
+    title: '교육자용 AI 조교는 자동화 도구가 아니라, 판단·피드백·승인 과정을 남기는 교수지원 인프라가 될 수 있다',
+    dek: '교육전문가 인터뷰를 바탕으로 맞춤형 김조교를 설계하고, 4주 단일사례 사용을 통해 교육자의 판단권을 보존하는 에이전트 설계 원리를 탐색하는 국내 학술지 투고용 연구 아이디어다.',
+    heroImage: 'assets/personal-ax-reports/design-education-hero.svg',
+    heroAlt: '푸른 격자와 접힌 종이 형태, 주황색 표식으로 구성한 추상적 교육 연구 풍경.',
+    sections: [
+      {
+        heading: '연구 문제와 제안하는 논지',
+        paragraphs: [
+          '이 연구의 출발점은 교육자용 AI를 “교수를 대신하는 자동 답변기”로 보지 않는 데 있다. 수업자료 구성, 학습자 질문 분류, 루브릭 기반 피드백 초안, 프로젝트 회고처럼 반복되는 교육 업무에서 AI는 초안을 만들 수 있다. 그러나 교육 맥락에서 중요한 책임은 교육자의 판단, 맥락 해석, 승인과 수정에 남는다. 따라서 김조교의 역할은 결과를 대신 확정하는 것이 아니라, 교육자가 더 나은 판단을 내리도록 초안·근거·위험·수정 지점을 드러내는 교수지원 에이전트로 정의한다.',
+          '핵심 연구 질문은 네 가지다. 교육전문가들은 어떤 업무에 조교형 AI 지원을 필요로 하는가. 무엇을 위임 가능하다고 보고 어떤 판단은 직접 유지하려 하는가. 인터뷰 기반으로 설계한 김조교는 4주 사용 과정에서 어떤 도움·오류·위험을 보이는가. 마지막으로 교육자의 판단권과 책임을 보존하는 에이전트 설계 원리는 무엇인가. 이 질문은 AI 사용 유무보다 교육자 업무의 위임·검토·승인 흐름을 연구 대상으로 삼는다.',
+        ],
+        bullets: [
+          '연구의 주장 범위: 교수법 효과 검증이 아니라 설계 요구와 초기 사용 경험의 탐색.',
+          '에이전트의 위치: 자동 결정자가 아니라 초안·검토·성찰을 지원하는 조교.',
+          '핵심 가치: 더 많은 산출물보다 판단 근거와 피드백 이력이 남는 교육 운영.',
+        ],
+      },
+      {
+        heading: '연구 설계: 인터뷰 → 프로토타입 → 4주 단일사례',
+        paragraphs: [
+          '첫 단계는 교수·교사·교육기획자·교육운영자 등 교육전문가 10명을 목적표집해 반구조화 인터뷰를 수행하는 것이다. 인터뷰는 반복 업무, AI가 초안을 만들어도 되는 과업, 반드시 사람이 판단해야 하는 과업, 승인 기준, 개인정보·평가공정성·저작권 위험을 중심으로 구성한다. 표본 수 10명은 요구분석을 위한 질적 탐색에는 가능하지만, 포화를 당연하게 주장하지 않고 역할·교육 단계·AI 경험의 분포를 투명하게 제시해야 한다.',
+          '둘째, 인터뷰에서 나온 과업·판단 기준·위험·승인 지점을 김조교의 기능 명세로 번역한다. 첫 버전은 수업자료 구조화, 학습자 질문 분류, 피드백 초안, 회고 요약처럼 되돌릴 수 있는 저위험 업무에 한정한다. 학생의 실제 개인정보를 입력하거나 성적을 자동 확정하는 기능은 제외하고, 실제 수업 자료가 필요할 경우 비식별 또는 합성 사례를 사용한다.',
+          '셋째, 연구자가 4주간 김조교를 사용하며 단일사례 로그를 남긴다. 과업 유형과 빈도, 초안 수용·수정·반려 여부, 검토 시간, 재작업, 오류·환각 사례, 최종 판단이 바뀐 이유를 기록한다. 이후 인터뷰 참여자 2~3명에게 익명화한 프로토타입과 사용 사례를 검토받고, 질적 코딩 일부는 제2 연구자와 대조한다. 이 보완은 개발자·사용자·평가자가 같은 사람인 단일사례의 확증편향을 줄이는 최소 장치다.',
+        ],
+      },
+      {
+        heading: '분석 기준과 윤리 경계',
+        paragraphs: [
+          '분석의 중심은 생산성 수치 하나가 아니라 감사 가능한 과정이다. 어떤 요청에서 김조교의 초안이 수용·수정·반려됐는지, 교육자는 어떤 근거로 최종 판단했는지, 오류나 편향은 어느 단계에서 발견됐는지를 함께 본다. 시간 절감이나 재작업 횟수는 탐색적 기술통계로 제시할 수 있지만, 1인 4주 자료를 일반적 효율성이나 교육성과의 증거로 확대하지 않는다.',
+          '윤리와 데이터 거버넌스는 연구 설계의 부록이 아니라 선행 조건이다. 인터뷰 참여자에게 연구 목적과 기록 범위를 설명하고 동의·익명화를 확보해야 한다. 학생 발화, 평가 자료, 민감 정보는 원칙적으로 시스템에 넣지 않으며, 입력·보존·공유·삭제 범위와 교육자의 최종 승인권을 명시한다. 연구는 AI가 교육자의 책임을 대체하는지 묻기보다, 책임이 흐려지지 않도록 어떤 통제와 기록이 필요한지를 확인한다.',
+        ],
+        bullets: [
+          '관찰 단위: 과업, AI 초안, 교육자 수정·반려, 최종 승인 근거, 예외와 회복.',
+          '안전 경계: 실제 학생 개인정보·자동 성적확정·고위험 판단의 위임은 초기 파일럿에서 제외.',
+          '해석 경계: 단일사례는 사용 가능성과 설계 긴장을 보여 주며, 효과성과 일반화를 보장하지 않음.',
+        ],
+      },
+      {
+        heading: '국내 학술지 투고 가능성과 다음 검증',
+        paragraphs: [
+          '현재 설계는 교육공학·교육정보화·AI/디자인교육·HCI/UX 교육 분야에서 질적 탐색 또는 설계기반 사례연구로 투고할 가능성이 있다. 가장 적합한 포지션은 “교육자 업무지원을 위한 맞춤형 AI 에이전트의 설계 요구와 초기 사용 경험”이다. 국내 선행연구에는 AI 시대 UX 교육과정을 실무자 인터뷰로 탐색한 사례, 생성형 AI 디자인교육에서 선택 근거와 수정 과정을 중시한 사례, AI와 주니어 연구자의 문제정의 분석을 비교한 사례가 있다. 이는 교육을 툴 숙련보다 문제정의·검증·협업·성찰의 구조로 보게 한다.',
+          '다만 1인 1개월 사용만으로 교수법 향상, 업무 효율 개선, 교육자 일반 적용 가능성을 주장하기는 어렵다. 논문에서는 이 한계를 먼저 밝히고, 후속 연구로 실제 교육자 5~10명이 한 학기 동안 사용하는 다중사례 또는 설계기반 연구를 제안하는 편이 적절하다. 첫 논문의 성과는 “김조교가 효과가 있었다”는 결론보다, 어떤 업무를 맡길 수 있고 어떤 인간 승인 지점을 남겨야 하는지에 대한 검증 가능한 설계 원리를 남기는 데 있다.',
+        ],
+      },
+    ],
+    sources: [
+      { title: 'An Industry-Driven UX Design Education Process in the AI Era: Based on Interviews with UX Design Practitioners', href: 'https://doi.org/10.17703/JCCT.2026.12.3.359', access: '초록·메타데이터 확인' },
+      { title: 'A Study on the Development of an AI-Integrated Design Thinking Education Model', href: 'https://doi.org/10.30693/SMJ.2026.15.4.159', access: '원문 확인' },
+      { title: 'A Comparison of Thematic Analysis by Large Language Models and Junior UX Researchers in Early UX Problem Definition', href: 'https://doi.org/10.31678/sdc118.6', access: '초록·메타데이터 확인' },
+      { title: 'A study on learner-led curriculum design for generative AI-based design education', href: 'https://www.riss.kr/link?id=A110252120', access: '초록·메타데이터 확인' },
+      { title: 'Oversight in Action: Experiences with Instructor-Moderated LLM Responses in an Online Discussion Forum', href: 'https://dl.acm.org/doi/10.1145/3716640.3716651', access: '초록·메타데이터 확인' },
+    ],
+    prompts: [
+      'A calm Korean editorial research desk for educator-facing AI: annotated teaching cards, one human approval marker, folded paper grid, cobalt blue and restrained vermilion, warm tactile materials, no text, no logos, no generic AI startup imagery.',
     ],
   },
 ]
