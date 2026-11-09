@@ -158,7 +158,7 @@ export function PersonalAxReportPanel({ reportId }: { reportId?: PersonalAxRepor
           <h3>{report.title}</h3>
           <p className="personal-ax-report-dek">{report.dek}</p>
           <p className="personal-ax-report-byline">{isDissertationReport
-            ? '이 글은 교육자용 AI 조교를 실제로 설계하고 검증하기 위한 연구 메모야. 아직 결론이 아니라, 무엇을 확인해야 하는지부터 차근히 정리했어.'
+            ? '이 글은 교육자용 AI 조교를 실제로 설계하고 검증하기 위한 연구 메모입니다. 아직 결론이 아니라, 무엇을 확인해야 하는지부터 차근히 정리했습니다.'
             : isThreadsContentReport
               ? '최근 Threads 30편을 읽으며, 반복되는 생각과 다음에 더 선명하게 만들 포인트를 블로그 노트처럼 정리했어.'
               : '논문을 그대로 옮기기보다, 지금의 일과 제품에 어떤 질문을 던지는지 쉽게 풀어봤어. 근거와 해석의 경계는 본문 안에서 함께 표시해 뒀어.'}
