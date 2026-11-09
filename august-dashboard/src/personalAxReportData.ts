@@ -248,8 +248,8 @@ export const personalAxReports: PersonalAxReport[] = [
     eyebrow: 'October 2026 · literature-grounded design education trend report',
     title: '디자인교육의 다음 과제는 AI를 가르치는 일이 아니라, AI와 함께 판단하는 과정을 학습시키는 일이다',
     dek: '도구 사용 허용 여부의 이분법을 넘어, 문제 정의·탐색·비평·출처 공개·평가를 다시 엮는 디자인교육의 변화를 검토한다.',
-    heroImage: 'assets/personal-ax-reports/design-education-hero.svg',
-    heroAlt: '푸른 격자와 접힌 종이 형태, 주황색 표식으로 구성한 추상적 디자인 학습 풍경.',
+    heroImage: 'assets/personal-ax-reports/design-education-hero.jpg',
+    heroAlt: '연보라 바탕 위에 주황·초록 기하 도형과 검은 선, 학습 자료를 든 인물이 배치된 디자인교육의 추상 일러스트.',
     sections: [
       {
         heading: '변화의 출발점: AI 사용 규칙에서 학습 경험의 설계로',
