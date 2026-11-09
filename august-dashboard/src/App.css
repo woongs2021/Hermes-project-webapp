@@ -9897,6 +9897,14 @@
   text-indent: 0;
 }
 
+.personal-ax-report-section > p.personal-ax-paper-title {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-size: clamp(1.02rem, 1.8vw, 1.2rem);
+  font-weight: 800;
+  line-height: 1.6;
+}
+
 .personal-ax-report-more {
   margin-top: 16px;
   padding: 14px 16px;

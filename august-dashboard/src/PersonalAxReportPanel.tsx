@@ -171,10 +171,11 @@ export function PersonalAxReportPanel({ reportId }: { reportId?: PersonalAxRepor
         {report.sections.map((section) => {
           const intro = section.paragraphs.slice(0, 2)
           const details = section.paragraphs.slice(2)
+          const isProposedPaperAbstract = isDissertationReport && section.heading === '예상 논문 제목과 초록'
           return (
             <section className="personal-ax-report-section" key={section.heading}>
               <h4>{section.heading}</h4>
-              {intro.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}
+              {intro.map((paragraph, index) => <p key={paragraph} className={isProposedPaperAbstract && index === 0 ? 'personal-ax-paper-title' : undefined}>{highlightText(paragraph)}</p>)}
               {details.length > 0 ? <details className="personal-ax-report-more"><summary>더 깊이 읽기</summary>{details.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}</details> : null}
               {section.bullets ? <ul>{section.bullets.map((bullet) => <li key={bullet}>{highlightText(bullet)}</li>)}</ul> : null}
               {section.afterBulletsParagraphs?.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}
