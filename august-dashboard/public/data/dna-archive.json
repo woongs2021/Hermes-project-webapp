@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-06T00:00:00Z",
+  "generatedAt": "2026-11-09T01:25:00Z",
   "sourcePolicy": "Only Chris-selected GoYJ generated assets are saved here. Unselected review candidates are temporary and are not published.",
   "items": [
     {
@@ -1966,6 +1966,58 @@
       "assetHash": "c3e2a61bddbbb461748958f1a47fd7b4cf9b2231dbafad5d55e673a63febeeb5",
       "selectedReason": "Chris explicitly selected this Design DNA candidate for archive and dashboard publication on 2026-11-06.",
       "midjourneyPrompt": "Bitmap Weave Pattern, Space Weather coded specimen / pixel mosaic reduced to text-free woven blocks, repeatable package wrap, mobile-divider texture, low-contrast panel fill or masked strip, flat 2D graphic motif material, tactile editorial paper surface, quiet premium product-design system, crop-friendly composition and generous negative space --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-11-09-archive60-style-divergence-1109-02",
+      "title": "Vermilion Fold Field",
+      "created": "2026-11-09",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-11-09/02_vermilion_fold_field.png",
+      "analysis": "PASS — 읽히는 기호나 라벨이 없으며, 평면은 크롭·마스킹에 적합합니다.",
+      "referenceAxis": "Traffik vermilion-black folded planes / analog paper grain",
+      "sourceReferences": [
+        {
+          "title": "TRAFFIK 027 red-black geometric folded poster",
+          "tags": [
+            "Brutal Editorial Geometry",
+            "Red folder plane",
+            "Giant numeral as architecture",
+            "Layered poster object",
+            "Metadata spine / micro labels"
+          ]
+        },
+        {
+          "title": "Traffik layered folder geometric poster",
+          "tags": [
+            "layered folder poster",
+            "pastel geometric planes",
+            "black field",
+            "white vertical label",
+            "grayscale texture strip",
+            "file tab shape",
+            "archive folder metaphor",
+            "grainy gradient",
+            "micro typography",
+            "analog print system"
+          ]
+        }
+      ],
+      "dnaClusters": [
+        "Warm-Cool Intelligence",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "0a0d9066acfe37c3696875508ee20a60d050cd5c33e6ac17f727cb4d56fa1aa0",
+      "selectedReason": "Chris explicitly selected candidate 02 for archive and dashboard publication on 2026-11-09.",
+      "midjourneyPrompt": "Vermilion Fold Field, Traffik vermilion-black folded planes translated into broad flat geometric print planes with analog paper grain, composable crop-friendly package wrap fragment, brand section underlay, or edge-cropped overlay, quiet premium editorial product-design material, large protected negative space --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
     }
   ]
 }
