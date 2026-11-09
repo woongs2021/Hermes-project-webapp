@@ -440,8 +440,8 @@ export const personalAxReports: PersonalAxReport[] = [
     eyebrow: 'Dissertation idea 01 · educator-facing AI agent design study',
     title: '교육자용 AI 조교는 자동화 도구가 아니라, 판단·피드백·승인 과정을 남기는 교수지원 인프라가 될 수 있다',
     dek: '교육전문가 인터뷰를 바탕으로 맞춤형 김조교를 설계하고, 4주 단일사례 사용을 통해 교육자의 판단권을 보존하는 에이전트 설계 원리를 탐색하는 국내 학술지 투고용 연구 아이디어다.',
-    heroImage: 'assets/personal-ax-reports/design-education-hero.svg',
-    heroAlt: '푸른 격자와 접힌 종이 형태, 주황색 표식으로 구성한 추상적 교육 연구 풍경.',
+    heroImage: 'assets/personal-ax-reports/dissertation-hero.jpg',
+    heroAlt: '코발트 블루와 선명한 레드의 종이·카드 레이어 위에 작은 빨간 핀과 원형 표식이 배치된 연구 자료의 추상 구성.',
     sections: [
       {
         heading: '연구 문제와 제안하는 논지',
