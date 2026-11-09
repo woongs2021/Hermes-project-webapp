@@ -155,10 +155,10 @@ export function PersonalAxReportPanel({ reportId }: { reportId?: PersonalAxRepor
           <h3>{report.title}</h3>
           <p className="personal-ax-report-dek">{report.dek}</p>
           <p className="personal-ax-report-byline">{isDissertationReport
-            ? '아래 내용은 논문 아이디어 단계의 연구 제안입니다. 예상 초록과 결과는 연구 수행 전의 검증 가능한 가설·산출물로 제시하며, 완료된 연구 결과를 뜻하지 않습니다.'
+            ? '이 글은 교육자용 AI 조교를 실제로 설계하고 검증하기 위한 연구 메모야. 아직 결론이 아니라, 무엇을 확인해야 하는지부터 차근히 정리했어.'
             : isThreadsContentReport
-              ? '아래 글은 최신 본인 Threads 게시물 30편을 질적으로 분석한 결과입니다. Threads와 Hermes의 읽기 전용 연동을 사용했습니다.'
-              : '아래 글은 각 레퍼런스의 공개 초록·메타데이터 또는 원문에서 확인한 연구 대상, 방법, 핵심 주장과 적용 한계를 구분해 정리했습니다.'}
+              ? '최근 Threads 30편을 읽으며, 반복되는 생각과 다음에 더 선명하게 만들 포인트를 블로그 노트처럼 정리했어.'
+              : '논문을 그대로 옮기기보다, 지금의 일과 제품에 어떤 질문을 던지는지 쉽게 풀어봤어. 근거와 해석의 경계는 본문 안에서 함께 표시해 뒀어.'}
           </p>
           <p className="personal-ax-report-note">{isDissertationReport
             ? '학생 개인정보와 자동 성적확정은 초기 파일럿 범위에서 제외하며, 교육자의 최종 승인권·수정 이력·예외 처리를 연구의 관찰 대상으로 둡니다.'
@@ -168,14 +168,19 @@ export function PersonalAxReportPanel({ reportId }: { reportId?: PersonalAxRepor
           </p>
         </header>
 
-        {report.sections.map((section) => (
-          <section className="personal-ax-report-section" key={section.heading}>
-            <h4>{section.heading}</h4>
-            {section.paragraphs.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}
-            {section.bullets ? <ul>{section.bullets.map((bullet) => <li key={bullet}>{highlightText(bullet)}</li>)}</ul> : null}
-            {section.afterBulletsParagraphs?.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}
-          </section>
-        ))}
+        {report.sections.map((section) => {
+          const intro = section.paragraphs.slice(0, 2)
+          const details = section.paragraphs.slice(2)
+          return (
+            <section className="personal-ax-report-section" key={section.heading}>
+              <h4>{section.heading}</h4>
+              {intro.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}
+              {details.length > 0 ? <details className="personal-ax-report-more"><summary>더 깊이 읽기</summary>{details.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}</details> : null}
+              {section.bullets ? <ul>{section.bullets.map((bullet) => <li key={bullet}>{highlightText(bullet)}</li>)}</ul> : null}
+              {section.afterBulletsParagraphs?.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}
+            </section>
+          )
+        })}
 
         <section className="personal-ax-report-sources">
           <p className="card-kicker">Cited references</p>

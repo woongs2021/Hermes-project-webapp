@@ -9892,9 +9892,27 @@
   line-height: 1.9;
 }
 
-.personal-ax-report-section > p {
-  text-indent: 1em;
+.personal-ax-report-section > p,
+.personal-ax-report-more > p {
+  text-indent: 0;
 }
+
+.personal-ax-report-more {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border: 1px solid color-mix(in srgb, var(--primary) 16%, var(--stroke));
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--primary) 3%, var(--surface));
+}
+
+.personal-ax-report-more summary {
+  cursor: pointer;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.personal-ax-report-more[open] summary { margin-bottom: 14px; }
 
 .personal-ax-report-article ul,
 .personal-ax-report-article ol {
