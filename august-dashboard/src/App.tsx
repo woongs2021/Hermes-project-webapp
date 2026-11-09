@@ -16,7 +16,7 @@ const designDnaSystemPrinciplesDocHref = publicAssetPath('/docs/design-dna-syste
 const designDnaVisualStyleMethodDocHref = publicAssetPath('/docs/design-dna-visual-style-generation-method-2026-09-28.md')
 const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
 
-type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report' | 'weekly'
+type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report' | 'dissertation' | 'weekly'
 type ThemeMode = 'light' | 'dark'
 type ObdSubTabId = 'growth' | 'graph' | 'about'
 type TextSegment = { text: string; emphasis?: boolean }
@@ -131,6 +131,13 @@ const tabs: Tab[] = [
     description: 'Muyeol이 선택·검증한 논문을 바탕으로 AI, 디자인, AX 운영의 10월 리서치 해석을 읽습니다.',
   },
   {
+    id: 'dissertation',
+    label: 'Dissertation',
+    eyebrow: 'Research concept · educator-facing AI agent',
+    title: 'Dissertation Idea 01',
+    description: '교육자의 판단·피드백·승인 과정을 보존하는 맞춤형 AI 조교의 설계 요구와 초기 사용 경험을 탐색합니다.',
+  },
+  {
     id: 'weekly',
     label: 'Weekly',
     eyebrow: 'Weekly research synthesis',
@@ -149,8 +156,8 @@ const tabGroups: TabGroup[] = [
   {
     id: 'personal-ax',
     label: 'Personal AX',
-    eyebrow: 'OBD / Research / Visual / Report',
-    tabIds: ['obd', 'research', 'visuals', 'report'],
+    eyebrow: 'OBD / Research / Visual / Report / Dissertation',
+    tabIds: ['obd', 'research', 'visuals', 'report', 'dissertation'],
   },
   {
     id: 'corporate-ax',
@@ -3471,6 +3478,8 @@ function App() {
           <ResearchKanbanPanel selectedResearchId={selectedResearchIdFromMonthly} />
         ) : activeTab.id === 'report' ? (
           <PersonalAxReportPanel />
+        ) : activeTab.id === 'dissertation' ? (
+          <PersonalAxReportPanel reportId="dissertation" />
         ) : activeTab.id === 'weekly' ? (
           <>
             <WeeklyTeamPrinciplesPanel />

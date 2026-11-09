@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { personalAxReports, type PersonalAxReport } from './personalAxReportData'
+import { personalAxReports, type PersonalAxReport, type PersonalAxReportId } from './personalAxReportData'
 
 type DownloadStatus = 'idle' | 'downloaded' | 'error'
 
@@ -99,11 +99,15 @@ function reportHtml(report: PersonalAxReport) {
   return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(report.title)}</title><style>body{max-width:760px;margin:56px auto;padding:0 24px;color:#17233a;background:#fcfbf8;font:16px/1.8 system-ui,sans-serif}small{color:#60708a}h1{font-size:34px;line-height:1.28}h2{margin-top:44px;font-size:21px}section>p{text-indent:1em}a{color:#315f97}li{margin:8px 0}.eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:12px}</style></head><body><p class="eyebrow">${escapeHtml(report.eyebrow)}</p><img src="${escapeHtml(heroUrl)}" alt="${escapeHtml(report.heroAlt)}" style="width:100%;border-radius:16px;display:block;margin:0 0 28px"><h1>${escapeHtml(report.title)}</h1><p>${escapeHtml(report.dek)}</p>${sections}<section><h2>인용 레퍼런스</h2><ul>${sources}</ul></section><section><h2>미드저니 프롬프트</h2><ul>${prompts}</ul></section></body></html>`
 }
 
-export function PersonalAxReportPanel() {
-  const [activeId, setActiveId] = useState(personalAxReports[0].id)
+export function PersonalAxReportPanel({ reportId }: { reportId?: PersonalAxReportId }) {
+  const visibleReports = reportId
+    ? personalAxReports.filter((item) => item.id === reportId)
+    : personalAxReports.filter((item) => item.id !== 'dissertation')
+  const [activeId, setActiveId] = useState(reportId ?? visibleReports[0].id)
   const [downloadStatus, setDownloadStatus] = useState<DownloadStatus>('idle')
-  const report = personalAxReports.find((item) => item.id === activeId) ?? personalAxReports[0]
+  const report = visibleReports.find((item) => item.id === activeId) ?? visibleReports[0]
   const isThreadsContentReport = report.id === 'threads-content'
+  const isDissertationReport = report.id === 'dissertation'
 
   const downloadHtml = () => {
     try {
@@ -124,15 +128,17 @@ export function PersonalAxReportPanel() {
   }
 
   return (
-    <div className="personal-ax-report-shell" aria-label="Personal AX October 2026 reports">
+    <div className="personal-ax-report-shell" aria-label={isDissertationReport ? 'Dissertation research concept' : 'Personal AX October 2026 reports'}>
       <div className="personal-ax-report-controls">
-        <nav className="personal-ax-report-tabs" aria-label="Personal AX report categories">
-          {personalAxReports.map((item) => (
-            <button key={item.id} type="button" className={item.id === report.id ? 'active' : ''} aria-pressed={item.id === report.id} onClick={() => { setActiveId(item.id); setDownloadStatus('idle') }}>
-              {item.label}
-            </button>
-          ))}
-        </nav>
+        {visibleReports.length > 1 ? (
+          <nav className="personal-ax-report-tabs" aria-label="Personal AX report categories">
+            {visibleReports.map((item) => (
+              <button key={item.id} type="button" className={item.id === report.id ? 'active' : ''} aria-pressed={item.id === report.id} onClick={() => { setActiveId(item.id); setDownloadStatus('idle') }}>
+                {item.label}
+              </button>
+            ))}
+          </nav>
+        ) : <span />}
         <div className="personal-ax-report-actions">
           <button type="button" onClick={downloadHtml}>HTML 다운로드</button>
           <button type="button" onClick={() => window.print()}>인쇄 / PDF 저장</button>
@@ -148,13 +154,17 @@ export function PersonalAxReportPanel() {
           <p className="card-kicker">{report.eyebrow}</p>
           <h3>{report.title}</h3>
           <p className="personal-ax-report-dek">{report.dek}</p>
-          <p className="personal-ax-report-byline">{isThreadsContentReport
-            ? '아래 글은 최신 본인 Threads 게시물 30편을 질적으로 분석한 결과입니다. Threads와 Hermes의 읽기 전용 연동을 사용했습니다.'
-            : '아래 글은 각 레퍼런스의 공개 초록·메타데이터 또는 원문에서 확인한 연구 대상, 방법, 핵심 주장과 적용 한계를 구분해 정리했습니다.'}
+          <p className="personal-ax-report-byline">{isDissertationReport
+            ? '아래 내용은 논문 아이디어 단계의 연구 제안입니다. 예상 초록과 결과는 연구 수행 전의 검증 가능한 가설·산출물로 제시하며, 완료된 연구 결과를 뜻하지 않습니다.'
+            : isThreadsContentReport
+              ? '아래 글은 최신 본인 Threads 게시물 30편을 질적으로 분석한 결과입니다. Threads와 Hermes의 읽기 전용 연동을 사용했습니다.'
+              : '아래 글은 각 레퍼런스의 공개 초록·메타데이터 또는 원문에서 확인한 연구 대상, 방법, 핵심 주장과 적용 한계를 구분해 정리했습니다.'}
           </p>
-          <p className="personal-ax-report-note">{isThreadsContentReport
-            ? '참여도 지표, 댓글, 도달은 분석에 포함하지 않았으며, 본문은 게시물 텍스트에서 확인되는 주제와 표현의 반복 패턴을 해석합니다.'
-            : '연구의 결과를 모든 제품·조직에 대한 효과로 일반화하지 않으며, 본문에서 연구 범위와 해석의 경계를 함께 표시합니다.'}
+          <p className="personal-ax-report-note">{isDissertationReport
+            ? '학생 개인정보와 자동 성적확정은 초기 파일럿 범위에서 제외하며, 교육자의 최종 승인권·수정 이력·예외 처리를 연구의 관찰 대상으로 둡니다.'
+            : isThreadsContentReport
+              ? '참여도 지표, 댓글, 도달은 분석에 포함하지 않았으며, 본문은 게시물 텍스트에서 확인되는 주제와 표현의 반복 패턴을 해석합니다.'
+              : '연구의 결과를 모든 제품·조직에 대한 효과로 일반화하지 않으며, 본문에서 연구 범위와 해석의 경계를 함께 표시합니다.'}
           </p>
         </header>
 
