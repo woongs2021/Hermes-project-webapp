@@ -99,15 +99,18 @@ function reportHtml(report: PersonalAxReport) {
   return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(report.title)}</title><style>body{max-width:760px;margin:56px auto;padding:0 24px;color:#17233a;background:#fcfbf8;font:16px/1.8 system-ui,sans-serif}small{color:#60708a}h1{font-size:34px;line-height:1.28}h2{margin-top:44px;font-size:21px}section>p{text-indent:1em}a{color:#315f97}li{margin:8px 0}.eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:12px}</style></head><body><p class="eyebrow">${escapeHtml(report.eyebrow)}</p><img src="${escapeHtml(heroUrl)}" alt="${escapeHtml(report.heroAlt)}" style="width:100%;border-radius:16px;display:block;margin:0 0 28px"><h1>${escapeHtml(report.title)}</h1><p>${escapeHtml(report.dek)}</p>${sections}<section><h2>인용 레퍼런스</h2><ul>${sources}</ul></section><section><h2>미드저니 프롬프트</h2><ul>${prompts}</ul></section></body></html>`
 }
 
-export function PersonalAxReportPanel({ reportId }: { reportId?: PersonalAxReportId }) {
-  const visibleReports = reportId
-    ? personalAxReports.filter((item) => item.id === reportId)
-    : personalAxReports.filter((item) => item.id !== 'dissertation')
-  const [activeId, setActiveId] = useState(reportId ?? visibleReports[0].id)
+export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: PersonalAxReportId; reportIds?: PersonalAxReportId[] }) {
+  const visibleReports = reportIds
+    ? reportIds.map((id) => personalAxReports.find((item) => item.id === id)).filter((item): item is PersonalAxReport => Boolean(item))
+    : reportId
+      ? personalAxReports.filter((item) => item.id === reportId)
+      : personalAxReports.filter((item) => item.id !== 'dissertation' && item.id !== 'dissertation-idea-2')
+  const [activeId, setActiveId] = useState(reportIds?.[0] ?? reportId ?? visibleReports[0].id)
   const [downloadStatus, setDownloadStatus] = useState<DownloadStatus>('idle')
   const report = visibleReports.find((item) => item.id === activeId) ?? visibleReports[0]
   const isThreadsContentReport = report.id === 'threads-content'
-  const isDissertationReport = report.id === 'dissertation'
+  const isDissertationReport = report.id === 'dissertation' || report.id === 'dissertation-idea-2'
+  const isLearnerDissertation = report.id === 'dissertation-idea-2'
   const orderedSections = isDissertationReport
     ? [...report.sections].sort((a, b) => (a.heading === '예상 논문 제목과 초록' ? -1 : b.heading === '예상 논문 제목과 초록' ? 1 : 0))
     : report.sections
@@ -158,13 +161,17 @@ export function PersonalAxReportPanel({ reportId }: { reportId?: PersonalAxRepor
           <h3>{report.title}</h3>
           <p className="personal-ax-report-dek">{report.dek}</p>
           <p className="personal-ax-report-byline">{isDissertationReport
-            ? '이 글은 교육자용 AI 조교를 실제로 설계하고 검증하기 위한 연구 메모입니다. 아직 결론이 아니라, 무엇을 확인해야 하는지부터 차근히 정리했습니다.'
+            ? isLearnerDissertation
+              ? '이 글은 학습자용 개인화 교육 에이전트를 실제로 설계하고 검증하기 위한 연구 메모입니다. 아직 결론이 아니라, 어떤 학습 경험과 통제권을 확인해야 하는지부터 차근히 정리했습니다.'
+              : '이 글은 교육자용 AI 조교를 실제로 설계하고 검증하기 위한 연구 메모입니다. 아직 결론이 아니라, 무엇을 확인해야 하는지부터 차근히 정리했습니다.'
             : isThreadsContentReport
               ? '최근 Threads 30편을 읽으며, 반복되는 생각과 다음에 더 선명하게 만들 포인트를 블로그 노트처럼 정리했어.'
               : '논문을 그대로 옮기기보다, 지금의 일과 제품에 어떤 질문을 던지는지 쉽게 풀어봤어. 근거와 해석의 경계는 본문 안에서 함께 표시해 뒀어.'}
           </p>
           <p className="personal-ax-report-note">{isDissertationReport
-            ? '학생 개인정보와 자동 성적확정은 초기 파일럿 범위에서 제외하며, 교육자의 최종 승인권·수정 이력·예외 처리를 연구의 관찰 대상으로 둡니다.'
+            ? isLearnerDissertation
+              ? '이 연구는 참여자의 선택 동의를 전제로 최소한의 학습 맥락만 활용하며, 성적·민감정보·자동 의사결정은 파일럿 범위에서 제외합니다.'
+              : '학생 개인정보와 자동 성적확정은 초기 파일럿 범위에서 제외하며, 교육자의 최종 승인권·수정 이력·예외 처리를 연구의 관찰 대상으로 둡니다.'
             : isThreadsContentReport
               ? '참여도 지표, 댓글, 도달은 분석에 포함하지 않았으며, 본문은 게시물 텍스트에서 확인되는 주제와 표현의 반복 패턴을 해석합니다.'
               : '연구의 결과를 모든 제품·조직에 대한 효과로 일반화하지 않으며, 본문에서 연구 범위와 해석의 경계를 함께 표시합니다.'}

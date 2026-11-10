@@ -3479,7 +3479,7 @@ function App() {
         ) : activeTab.id === 'report' ? (
           <PersonalAxReportPanel />
         ) : activeTab.id === 'dissertation' ? (
-          <PersonalAxReportPanel reportId="dissertation" />
+          <PersonalAxReportPanel reportIds={['dissertation', 'dissertation-idea-2']} />
         ) : activeTab.id === 'weekly' ? (
           <>
             <WeeklyTeamPrinciplesPanel />
