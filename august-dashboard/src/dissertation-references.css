@@ -1,0 +1,67 @@
+
+.dissertation-top10-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.dissertation-top10-grid .validated-paper-card {
+  width: 100%;
+  min-width: 0;
+}
+
+.dissertation-reference-list-card {
+  display: grid;
+  gap: 18px;
+}
+
+.dissertation-reference-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dissertation-reference-list button {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  gap: 8px;
+  padding: 16px;
+  color: inherit;
+  text-align: left;
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.dissertation-reference-list button:hover,
+.dissertation-reference-list button:focus-visible,
+.dissertation-reference-list button[aria-pressed='true'] {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.dissertation-reference-list button > span,
+.dissertation-reference-list button small {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.dissertation-reference-list button strong {
+  min-width: 0;
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 700px) {
+  .dissertation-top10-grid,
+  .dissertation-reference-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -6,6 +6,7 @@ import { fallbackChrisArchive, loadChrisArchive, type ChrisArchiveItem, type Chr
 import { fallbackDnaArchive, loadDnaArchive, loadMidjourneyDnaArchive, type DnaArchiveItem, type DnaArchiveManifest } from './dnaArchive'
 import { fallbackBrandMockupAssets, loadBrandMockupAssets, type BrandMockupAsset, type BrandMockupCollection, type BrandMockupManifest } from './brandAssets'
 import { PersonalAxReportPanel } from './PersonalAxReportPanel'
+import { DissertationReferencesPanel } from './DissertationReferencesPanel'
 import { createTeamPixelOfficeAgents } from './teamPixelOffice'
 import { TeamPixelOfficePanel } from './TeamPixelOfficePanel'
 import './App.css'
@@ -16,7 +17,7 @@ const designDnaSystemPrinciplesDocHref = publicAssetPath('/docs/design-dna-syste
 const designDnaVisualStyleMethodDocHref = publicAssetPath('/docs/design-dna-visual-style-generation-method-2026-09-28.md')
 const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
 
-type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report' | 'dissertation-idea-1' | 'dissertation-idea-2' | 'weekly'
+type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report' | 'dissertation-idea-1' | 'dissertation-idea-2' | 'references' | 'weekly'
 type ThemeMode = 'light' | 'dark'
 type ObdSubTabId = 'growth' | 'graph' | 'about'
 type TextSegment = { text: string; emphasis?: boolean }
@@ -145,6 +146,13 @@ const tabs: Tab[] = [
     description: '학습자의 계획·성찰·통제권을 보존하는 세 가지 개인화 교육 에이전트의 초기 사용 경험을 탐색합니다.',
   },
   {
+    id: 'references',
+    label: 'References',
+    eyebrow: 'Dissertation evidence map · 42 related papers',
+    title: 'Dissertation References',
+    description: '두 논문 아이디어의 설계 질문과 맞닿는 기존 AI·UX·디자인교육 연구를 모아, 상위 10개와 전체 레퍼런스를 구분해 봅니다.',
+  },
+  {
     id: 'weekly',
     label: 'Weekly',
     eyebrow: 'Weekly research synthesis',
@@ -163,8 +171,8 @@ const tabGroups: TabGroup[] = [
   {
     id: 'personal-ax',
     label: 'Personal AX',
-    eyebrow: 'OBD / Research / Visual / Report / Dissertation ideas',
-    tabIds: ['obd', 'research', 'visuals', 'report', 'dissertation-idea-1', 'dissertation-idea-2'],
+    eyebrow: 'OBD / Research / Visual / Report / Dissertation ideas / References',
+    tabIds: ['obd', 'research', 'visuals', 'report', 'dissertation-idea-1', 'dissertation-idea-2', 'references'],
   },
   {
     id: 'corporate-ax',
@@ -3491,6 +3499,8 @@ function App() {
           <PersonalAxReportPanel reportId="dissertation" />
         ) : activeTab.id === 'dissertation-idea-2' ? (
           <PersonalAxReportPanel reportId="dissertation-idea-2" />
+        ) : activeTab.id === 'references' ? (
+          <DissertationReferencesPanel />
         ) : activeTab.id === 'weekly' ? (
           <>
             <WeeklyTeamPrinciplesPanel />
