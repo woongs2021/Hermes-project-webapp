@@ -440,8 +440,8 @@ export const personalAxReports: PersonalAxReport[] = [
     eyebrow: 'Dissertation idea 02 · learner-facing personalized education agent study',
     title: '개인화 교육 에이전트는 학습을 대신하는 도구가 아니라, 학습자의 계획·성찰·통제권을 함께 설계하는 경험이 될 수 있다',
     dek: '서로 다른 학습 맥락의 참여자 5명이 일정·과제 비서, 커리큘럼·코칭, 개인화 에이전트를 4주간 사용하며 학습자 자율성·신뢰·데이터 통제 경험을 탐색하는 국내 학술지 투고용 연구 아이디어입니다.',
-    heroImage: 'assets/personal-ax-reports/dissertation-hero.jpg',
-    heroAlt: '코발트 블루와 선명한 레드의 종이·카드 레이어에 작은 빨간 핀과 원형 표식을 배치한 연구 자료의 추상 구성.',
+    heroImage: 'assets/personal-ax-reports/dissertation-idea-2-learner-agents.jpg',
+    heroAlt: '파란색과 주황색 종이 카드 더미를 학습 자료처럼 배열한 편집적 구성.',
     sections: [
       { heading: '연구 문제와 제안 논지', paragraphs: [
         '이 연구는 수강생 또는 학생을 위한 교육 AI를 정답을 알려 주는 튜터나 감시형 관리 도구로 한정하지 않습니다. 학습자가 자신의 시간, 과제, 목표와 부담을 조절하는 과정에서 어떤 도움을 원하고 어디까지의 개인화를 수용하는지 탐색하는 경험 연구로 접근합니다. 핵심은 에이전트의 수행량이 아니라, 학습자가 계획을 수정하고 제안을 거부하며 자신의 데이터와 판단을 통제할 수 있는가입니다.',
