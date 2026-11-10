@@ -6811,9 +6811,21 @@
 
 @media (max-width: 560px) {
   .app-shell {
+    grid-template-columns: minmax(0, 1fr);
     width: 100%;
     min-height: 100svh;
     margin: 0 auto;
+  }
+
+  .workspace,
+  .workspace-tab-nav {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .workspace-tab-nav {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
   }
 
   .topbar {
@@ -10321,6 +10333,25 @@
 .pixel-atelier-walker { position:absolute; z-index:3; box-sizing:border-box; width:clamp(39px,5.55vw,78px); margin:0; padding:0; border:0; background:transparent; color:inherit; opacity:1; mix-blend-mode:normal; cursor:pointer; touch-action:none; pointer-events:auto; transform:translate(-50%,-92%); filter:drop-shadow(2px 3px 1px rgba(54,42,31,.28)); transition:left var(--walk-duration,5067ms) linear, top var(--walk-duration,5067ms) linear; }
 .pixel-atelier-walker:focus-visible { outline:0; }
 .pixel-atelier-walker--selected { z-index:4; cursor:default; }
+
+/* Global compact-width containment: keep nav labels and long research tables inside their own scroll areas. */
+@media (max-width: 900px) {
+  .app-shell {
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+  }
+
+  .workspace,
+  .workspace-tab-nav {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .workspace-tab-nav {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+}
 .pixel-atelier-walker img { display:block; width:100%; height:auto; image-rendering:auto; user-select:none; -webkit-user-drag:none; }
 .pixel-atelier-role-bubble { position:absolute; z-index:1; left:50%; bottom:76%; width:max-content; max-width:min(190px,44vw); margin-bottom:20px; padding:8px 10px; border:1px solid rgba(81,72,57,.24); border-radius:10px; background:rgba(255,253,247,.97); box-shadow:0 8px 18px rgba(57,48,35,.16); color:#31352f; font-family:inherit; font-size:clamp(.58rem,.8vw,.72rem); font-weight:600; line-height:1.42; text-align:left; white-space:normal; transform:translateX(-50%); pointer-events:none; }
 .pixel-atelier-role-bubble b { display:block; margin-bottom:2px; color:#76513b; font-size:clamp(.64rem,.9vw,.79rem); font-weight:800; letter-spacing:.01em; line-height:1.2; }
