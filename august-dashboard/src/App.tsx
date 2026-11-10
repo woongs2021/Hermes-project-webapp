@@ -16,7 +16,7 @@ const designDnaSystemPrinciplesDocHref = publicAssetPath('/docs/design-dna-syste
 const designDnaVisualStyleMethodDocHref = publicAssetPath('/docs/design-dna-visual-style-generation-method-2026-09-28.md')
 const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
 
-type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report' | 'dissertation' | 'weekly'
+type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report' | 'dissertation-idea-1' | 'dissertation-idea-2' | 'weekly'
 type ThemeMode = 'light' | 'dark'
 type ObdSubTabId = 'growth' | 'graph' | 'about'
 type TextSegment = { text: string; emphasis?: boolean }
@@ -131,11 +131,18 @@ const tabs: Tab[] = [
     description: 'Muyeol이 선택·검증한 논문을 바탕으로 AI, 디자인, AX 운영의 10월 리서치 해석을 읽습니다.',
   },
   {
-    id: 'dissertation',
-    label: 'Dissertation',
+    id: 'dissertation-idea-1',
+    label: 'Dissertation Idea 01',
     eyebrow: 'Research concept · educator-facing AI agent',
     title: 'Dissertation Idea 01',
     description: '교육자의 판단·피드백·승인 과정을 보존하는 맞춤형 AI 조교의 설계 요구와 초기 사용 경험을 탐색합니다.',
+  },
+  {
+    id: 'dissertation-idea-2',
+    label: 'Dissertation Idea 02',
+    eyebrow: 'Research concept · learner-facing personalized education agent',
+    title: 'Dissertation Idea 02',
+    description: '학습자의 계획·성찰·통제권을 보존하는 세 가지 개인화 교육 에이전트의 초기 사용 경험을 탐색합니다.',
   },
   {
     id: 'weekly',
@@ -156,8 +163,8 @@ const tabGroups: TabGroup[] = [
   {
     id: 'personal-ax',
     label: 'Personal AX',
-    eyebrow: 'OBD / Research / Visual / Report / Dissertation',
-    tabIds: ['obd', 'research', 'visuals', 'report', 'dissertation'],
+    eyebrow: 'OBD / Research / Visual / Report / Dissertation ideas',
+    tabIds: ['obd', 'research', 'visuals', 'report', 'dissertation-idea-1', 'dissertation-idea-2'],
   },
   {
     id: 'corporate-ax',
@@ -3262,7 +3269,9 @@ function App() {
         ? '#obd'
         : window.location.hash === '#team'
           ? '#home'
-          : window.location.hash
+          : window.location.hash === '#dissertation'
+            ? '#dissertation-idea-1'
+            : window.location.hash
     const hashTab = tabs.find((tab) => `#${tab.id}` === normalizedHash)
     return hashTab ?? tabs[0]
   })
@@ -3478,8 +3487,10 @@ function App() {
           <ResearchKanbanPanel selectedResearchId={selectedResearchIdFromMonthly} />
         ) : activeTab.id === 'report' ? (
           <PersonalAxReportPanel />
-        ) : activeTab.id === 'dissertation' ? (
-          <PersonalAxReportPanel reportIds={['dissertation', 'dissertation-idea-2']} />
+        ) : activeTab.id === 'dissertation-idea-1' ? (
+          <PersonalAxReportPanel reportId="dissertation" />
+        ) : activeTab.id === 'dissertation-idea-2' ? (
+          <PersonalAxReportPanel reportId="dissertation-idea-2" />
         ) : activeTab.id === 'weekly' ? (
           <>
             <WeeklyTeamPrinciplesPanel />
