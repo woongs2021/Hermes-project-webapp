@@ -40,7 +40,7 @@ Hermes-project-assets
 
 웹앱은 빠른 탐색을 위한 가벼운 미리보기를 제공하고, 4K/HQ 원본은 작품 상세의 **고화질 다운로드**를 통해 versioned GitHub Release에서 제공합니다. 원본은 Pages 저장소에 넣지 않아 화면 경험과 배포 용량을 함께 가볍게 유지합니다.
 
-The current asset batches are [**`design-dna-2026-10`**](https://github.com/woongs2021/Hermes-project-assets/releases/tag/design-dna-2026-10) (**84** originals) and [**`midjourney-dna-archive-2026-10`**](https://github.com/woongs2021/Hermes-project-assets/releases/tag/midjourney-dna-archive-2026-10) (**35** Midjourney DNA Archive 4K originals): **119 originals in total**. The webapp keeps local previews and resolves downloads to their versioned Release URLs.
+The current asset batches are [**`design-dna-2026-10`**](https://github.com/woongs2021/Hermes-project-assets/releases/tag/design-dna-2026-10) (**84** originals), [**`midjourney-dna-archive-2026-10`**](https://github.com/woongs2021/Hermes-project-assets/releases/tag/midjourney-dna-archive-2026-10) (**35** Midjourney DNA Archive 4K originals), and [**`design-dna-2026-11`**](https://github.com/woongs2021/Hermes-project-assets/releases/tag/design-dna-2026-11) (**196** Design DNA mockup originals): **315 originals in total**. The webapp keeps local previews and resolves downloads to their versioned Release URLs.
 
 > New high-resolution originals must not be committed to this Pages repository. Upload the original to a public-safe Release first, keep/generate a local preview, then connect the two in the manifest. Public manifests must contain only display and download data—never local paths, raw operations, or private runtime details.
 
