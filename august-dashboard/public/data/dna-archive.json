@@ -2018,6 +2018,246 @@
       "assetHash": "0a0d9066acfe37c3696875508ee20a60d050cd5c33e6ac17f727cb4d56fa1aa0",
       "selectedReason": "Chris explicitly selected candidate 02 for archive and dashboard publication on 2026-11-09.",
       "midjourneyPrompt": "Vermilion Fold Field, Traffik vermilion-black folded planes translated into broad flat geometric print planes with analog paper grain, composable crop-friendly package wrap fragment, brand section underlay, or edge-cropped overlay, quiet premium editorial product-design material, large protected negative space --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient"
+    },
+    {
+      "id": "2026-11-11-archive60-style-divergence-1111-01",
+      "title": "Fresco Horizon Wash",
+      "created": "2026-11-11",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-11-11/01_fresco_horizon_wash.webp",
+      "analysis": "PASS — no text/logo/UI; broad matte color surface with crop-friendly left reserve.",
+      "referenceAxis": "soft fresco gradient / surreal human-scale horizon color field",
+      "sourceReferences": [
+        {
+          "id": "2026-10-02_neon-gradient-landscape-red-sun-human-scale",
+          "title": "Neon Gradient Landscape with Red Sun and Human Scale",
+          "tags": [
+            "neon gradient landscape",
+            "red sun",
+            "human scale",
+            "surreal terrain",
+            "high saturation",
+            "color mood",
+            "immersive world",
+            "emotional landscape"
+          ]
+        },
+        {
+          "id": "2026-09-11_balanced-gradient-cushion-contact",
+          "title": "Balanced gradient cushion contact",
+          "tags": [
+            "gradient cushion",
+            "soft contact",
+            "warm-cool equilibrium",
+            "stacked organic volumes",
+            "black negative space",
+            "tactile glow",
+            "balanced interface",
+            "color field object",
+            "soft geometry",
+            "cushion bridge"
+          ]
+        }
+      ],
+      "dnaClusters": [
+        "Warm-Cool Intelligence",
+        "Tactile Optical Material"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "6cb2f6a7deb1efd098c5d4cea04abdfe3e6b8a39fa49337c498265adcff4fa09",
+      "selectedReason": "Chris explicitly selected candidate 01 for archive and dashboard publication on 2026-11-11.",
+      "midjourneyPrompt": "Fresco Horizon Wash, soft fresco gradient / surreal human-scale horizon color field, premium package background, brand-card crop, soft mobile surface overlay, flat 2D graphic motif material, tactile editorial paper surface, quiet premium product-design system, crop-friendly composition and generous negative space --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "previewImageSrc": "/assets/dna-archive/2026-11-11/01_fresco_horizon_wash.webp",
+      "downloadSrc": "https://github.com/woongs2021/Hermes-project-assets/releases/download/design-dna-2026-11/goyj-dna-2026-11-11__01_fresco_horizon_wash__1024.png",
+      "downloadLabel": "원본 PNG 다운로드"
+    },
+    {
+      "id": "2026-11-11-archive60-style-divergence-1111-03",
+      "title": "Graphite Moiré Veil",
+      "created": "2026-11-11",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-11-11/03_graphite_moiré_veil.webp",
+      "analysis": "PASS — no readable text, rings, orbits, capsules, or logo; low-contrast dark ink field preserves reserve.",
+      "referenceAxis": "monochrome crescent void / smoky print-grain optical field",
+      "sourceReferences": [
+        {
+          "id": "2026-09-12_uvita-twins-monochrome-crescent-void-poster",
+          "title": "Uvita Twins monochrome crescent void poster",
+          "tags": [
+            "monochrome poster",
+            "crescent void",
+            "archive void",
+            "grainy black arc",
+            "metadata typography",
+            "outline letterforms",
+            "UVITA TWINS",
+            "TRAFFIK",
+            "edition number 026",
+            "grayscale field"
+          ]
+        },
+        {
+          "id": "2026-09-12_uvita-twins-blue-black-smoke-orbital-poster",
+          "title": "Uvita Twins blue-black smoke orbital poster",
+          "tags": [
+            "smoke orbital field",
+            "blue black crescent",
+            "soft void",
+            "thin typography",
+            "gray poster field",
+            "blurred orbital motion"
+          ]
+        }
+      ],
+      "dnaClusters": [
+        "Tactile Optical Material",
+        "Protected Human Context"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "e47710531d116c5c0ede44549590c8d7cad4ed3624b7ab8c5a166c04353ef27d",
+      "selectedReason": "Chris explicitly selected candidate 03 for archive and dashboard publication on 2026-11-11.",
+      "midjourneyPrompt": "Graphite Moiré Veil, monochrome crescent void / smoky print-grain optical field, dark package interior, charcoal mobile overlay, masked editorial underlay, flat 2D graphic motif material, tactile editorial paper surface, quiet premium product-design system, crop-friendly composition and generous negative space --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "previewImageSrc": "/assets/dna-archive/2026-11-11/03_graphite_moiré_veil.webp",
+      "downloadSrc": "https://github.com/woongs2021/Hermes-project-assets/releases/download/design-dna-2026-11/goyj-dna-2026-11-11__03_graphite_moire_veil__1024.png",
+      "downloadLabel": "원본 PNG 다운로드"
+    },
+    {
+      "id": "2026-11-11-archive60-style-divergence-1111-04",
+      "title": "Bitmap Tidal Repeat",
+      "created": "2026-11-11",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-11-11/04_bitmap_tidal_repeat.webp",
+      "analysis": "PASS — no letters, numerals, UI or chart-like blocks; simple large cells make a repeatable material.",
+      "referenceAxis": "pixel/bitmap block rhythm / coded scan-field without interface language",
+      "sourceReferences": [
+        {
+          "id": "2026-09-12_boom-wow-oops-pixel-speech-blocks",
+          "title": "BOOM WOW OOPS pixel speech blocks",
+          "tags": [
+            "pixel speech blocks",
+            "boom wow oops",
+            "reaction mosaic",
+            "colored labels",
+            "black void",
+            "pop signal map",
+            "modular language tiles",
+            "meme typography",
+            "emotional fragments",
+            "low-res graphic"
+          ]
+        },
+        {
+          "id": "2026-10-02_space-weather-coded-phone-ui-specimen",
+          "title": "Space Weather Coded Phone UI Specimen",
+          "tags": [
+            "coded phone UI",
+            "retro terminal",
+            "space weather",
+            "pixel chart",
+            "symbol pattern",
+            "monospace typography",
+            "dense data texture",
+            "diagnostic interface"
+          ]
+        }
+      ],
+      "dnaClusters": [
+        "Quiet Signal Rhythm",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "2304832c0914cb7828f0696e391b2d031bd2f958882b0f18c51ea811df2d2092",
+      "selectedReason": "Chris explicitly selected candidate 04 for archive and dashboard publication on 2026-11-11.",
+      "midjourneyPrompt": "Bitmap Tidal Repeat, pixel/bitmap block rhythm / coded scan-field without interface language, repeat package wrap, fabric-like card surface, modular crop texture, flat 2D graphic motif material, tactile editorial paper surface, quiet premium product-design system, crop-friendly composition and generous negative space --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "previewImageSrc": "/assets/dna-archive/2026-11-11/04_bitmap_tidal_repeat.webp",
+      "downloadSrc": "https://github.com/woongs2021/Hermes-project-assets/releases/download/design-dna-2026-11/goyj-dna-2026-11-11__04_bitmap_tidal_repeat__1024.png",
+      "downloadLabel": "원본 PNG 다운로드"
+    },
+    {
+      "id": "2026-11-11-archive60-style-divergence-1111-05",
+      "title": "Bloom Void Accent",
+      "created": "2026-11-11",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-11-11/05_bloom_void_accent.webp",
+      "analysis": "PASS — no yellow decoration, lines, orbit, badge, logo, or text; one cropped corner color field retains dark reserve.",
+      "referenceAxis": "floral signal bloom / cyan-magenta void color field",
+      "sourceReferences": [
+        {
+          "id": "2026-09-12_florilegia-cyan-magenta-bloom-void",
+          "title": "Florilegia cyan-magenta bloom void",
+          "tags": [
+            "biomorphic bloom",
+            "cyan magenta flower void",
+            "organic orb",
+            "central black void",
+            "soft powder texture",
+            "chromatic petals",
+            "living signal surface",
+            "flower as portal",
+            "black specimen field",
+            "micro metadata labels"
+          ]
+        },
+        {
+          "id": "2026-09-12_cyan-pastel-orb-soft-shadow-field",
+          "title": "Cyan pastel orb soft shadow field",
+          "tags": [
+            "pastel orb",
+            "cyan field",
+            "soft chromatic shadow",
+            "yellow core",
+            "pink rim",
+            "teal overlap",
+            "gentle AI aura",
+            "airy glow",
+            "halftone texture",
+            "optimistic presence"
+          ]
+        }
+      ],
+      "dnaClusters": [
+        "Warm-Cool Intelligence",
+        "Protected Human Context"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "67c57f82272f8e88f1d4c6dd8c51fc4aa7f24263e0f1637003367edd0170076c",
+      "selectedReason": "Chris explicitly selected candidate 05 for archive and dashboard publication on 2026-11-11.",
+      "midjourneyPrompt": "Bloom Void Accent, floral signal bloom / cyan-magenta void color field, corner accent on package/carton, dark mobile hero crop, layered brand surface, flat 2D graphic motif material, tactile editorial paper surface, quiet premium product-design system, crop-friendly composition and generous negative space --ar 1:1 --style raw --s 120 --no text, letters, numbers, logo, watermark, poster, app icon, UI screenshot, product mockup, people, photo, robot, brain, neon AI gradient",
+      "previewImageSrc": "/assets/dna-archive/2026-11-11/05_bloom_void_accent.webp",
+      "downloadSrc": "https://github.com/woongs2021/Hermes-project-assets/releases/download/design-dna-2026-11/goyj-dna-2026-11-11__05_bloom_void_accent__1024.png",
+      "downloadLabel": "원본 PNG 다운로드"
     }
   ]
 }
