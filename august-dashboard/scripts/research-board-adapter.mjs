@@ -218,7 +218,7 @@ function normalizeResearchItem(item, index, selectedIndex = new Map()) {
     urlOrId: firstNonEmpty(item.url_or_id, item.url_or_stable_id, item.url, item.stable_id),
     sourceVenue: firstNonEmpty(item.source_venue, item.source_venue_date, item.source),
     publicationDate: publicationDateFromSource(item),
-    summary: firstNonEmpty(item.core_claim, item.one_line_core_claim),
+    summary: firstNonEmpty(item.core_claim, item.one_line_core_claim, item.summary),
     chrisRelevance: firstNonEmpty(item.chris_relevance, item.one_line_chris_relevance),
     koreanSourceStatus: koreanSourceStatusFromSource(item),
     sourceAccess: firstNonEmpty(item.source_access, item.source_access_confidence),
