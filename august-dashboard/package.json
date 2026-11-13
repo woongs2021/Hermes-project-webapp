@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm run generate:data && vite",
     "generate:data": "npm run generate:manifest && npm run generate:home-visuals && npm run generate:research-board",
-    "validate:data": "npm run validate:manifest && npm run validate:home-visuals && npm run validate:research-board && npm run validate:public-dna",
+    "validate:data": "npm run validate:manifest && npm run validate:home-visuals && npm run validate:research-board && npm run validate:public-dna && npm run validate:career-jobs",
     "generate:manifest": "node scripts/generate-dashboard-manifest.mjs",
     "validate:manifest": "node scripts/validate-dashboard-manifest.mjs",
     "generate:home-visuals": "node scripts/generate-home-visual-set.mjs",
@@ -14,6 +14,7 @@
     "generate:research-board": "node scripts/generate-research-board.mjs",
     "validate:research-board": "node scripts/validate-research-board.mjs",
     "validate:public-dna": "node scripts/validate-public-dna-archives.mjs",
+    "validate:career-jobs": "node scripts/validate-career-jobs.mjs",
     "generate:team-pixel-avatars": "node --experimental-strip-types scripts/generate-team-pixel-avatars.mjs",
     "verify:team-pixel-avatars": "node --experimental-strip-types scripts/verify-team-pixel-avatars.mjs",
     "verify:team-atelier-sprites": "node scripts/verify-team-atelier-sprites.mjs",

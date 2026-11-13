@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-13T07:32:48Z",
+  "sourcePolicy": "1차 드래프트: 공식 출처 24개를 점검했고, 역할 상세까지 검증된 후보 1건만 표시합니다. 확인이 막힌 출처는 후보가 아닌 watchlist에 남깁니다.",
+  "jobs": [
+    {
+      "id": "anthropic-customer-success-manager-seoul-5391112008",
+      "companyOrInstitution": "Anthropic",
+      "category": "ai_ax_education",
+      "title": "Customer Success Manager",
+      "location": "Seoul, South Korea",
+      "status": "ACTIVE",
+      "fit": "medium",
+      "checkedAt": "2026-11-13T07:32:48Z",
+      "verificationState": "verified_detail",
+      "canonicalUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5391112008",
+      "sourceEvidence": "Official detail lists Seoul, South Korea and describes customer enablement, change-management and Train-the-Trainer work.",
+      "publishedSalaryText": "공고 미공개",
+      "deadline": "공고 미공개",
+      "eligibility": "확인 필요",
+      "workMode": "확인 필요"
+    }
+  ],
+  "watchlists": {
+    "priorityUniversities": [
+      {
+        "name": "한국폴리텍대학교",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://www.kopo.ac.kr/content.do?menu=308",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 페이지는 확인됐으나 현재 역할별 채용 상세를 확인하지 못했습니다."
+      },
+      {
+        "name": "국립공주대학교(공주대학교)",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://www.kongju.ac.kr/kor/790/subview.do",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "official_index_only",
+        "verificationNote": "현재 역할별 교원 채용 상세를 확인하지 못했습니다."
+      },
+      {
+        "name": "성균관대학교",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://www.skku.edu/skkumedia/job/list.do?bbsId=job",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "fetch_blocked",
+        "verificationNote": "공식 게시판 응답을 확인할 수 없어 재확인이 필요합니다."
+      }
+    ],
+    "globalCompanies": [
+      {
+        "name": "Google",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://www.google.com/about/careers/applications/jobs/results/?location=Seoul%2C%20South%20Korea",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 서울 검색에서 역할별 일치 공고를 확인하지 못했습니다."
+      },
+      {
+        "name": "Apple",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://jobs.apple.com/en-us/search?location=seoul-SEL",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 서울 검색에서 역할별 일치 공고를 확인하지 못했습니다."
+      },
+      {
+        "name": "Meta",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://www.metacareers.com/jobsearch/?q=design&location=Seoul%2C%20South%20Korea",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 검색에서 역할별 일치 공고를 확인하지 못했습니다."
+      },
+      {
+        "name": "Anthropic",
+        "result": "open matching role",
+        "sourceUrl": "https://www.anthropic.com/careers",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "verified_detail",
+        "verificationNote": "검증된 서울 Customer Success Manager 공고가 있습니다."
+      },
+      {
+        "name": "OpenAI",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://openai.com/careers/search/",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "fetch_blocked",
+        "verificationNote": "공식 검색 응답을 확인할 수 없어 재확인이 필요합니다."
+      },
+      {
+        "name": "Microsoft",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://apply.careers.microsoft.com/careers?q=Seoul",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "official_index_only",
+        "verificationNote": "역할별 서울 결과를 확인하지 못했습니다."
+      },
+      {
+        "name": "Amazon/AWS",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://www.amazon.jobs/content/en/locations/south-korea/seoul",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 서울 페이지에서 역할별 일치 공고를 확인하지 못했습니다."
+      },
+      {
+        "name": "NVIDIA",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite?locations=9133692f9283016bb3d1d8e7c355b6fd",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 검색에서 역할별 기록을 확인하지 못했습니다."
+      },
+      {
+        "name": "Adobe",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://careers.adobe.com/us/en/search-results?keywords=&location=Seoul%2C%20South%20Korea",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 서울 검색에서 역할별 기록을 확인하지 못했습니다."
+      },
+      {
+        "name": "Salesforce",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://www.salesforce.com/company/careers/jobs/?location=Seoul%2C%20South%20Korea&bc=OTH",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "ambiguous",
+        "verificationNote": "공식 경력 페이지에서 역할별 결과를 확인하지 못했습니다."
+      },
+      {
+        "name": "IBM",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://www.ibm.com/careers/search?field_keyword=&field_location=Seoul%2C%20South%20Korea",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 검색에서 역할별 서울 결과를 확인하지 못했습니다."
+      },
+      {
+        "name": "Oracle",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://careers.oracle.com/en/sites/jobsearch/jobs?location=Seoul%2C%20South%20Korea",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 검색에서 역할별 서울 결과를 확인하지 못했습니다."
+      },
+      {
+        "name": "SAP",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://jobs.sap.com/",
+        "checkedAt": "2026-11-13T07:32:48Z",
+        "verificationState": "fetch_blocked",
+        "verificationNote": "공식 검색 응답을 확인할 수 없어 재확인이 필요합니다."
+      }
+    ]
+  },
+  "evidenceLimit": "UNVERIFIED는 마감 또는 부재를 뜻하지 않습니다. 역할별 공식 상세에서 확인된 공고만 후보로 표시합니다."
+}

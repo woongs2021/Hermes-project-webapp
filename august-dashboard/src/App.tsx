@@ -7,6 +7,7 @@ import { fallbackDnaArchive, loadDnaArchive, loadMidjourneyDnaArchive, type DnaA
 import { fallbackBrandMockupAssets, loadBrandMockupAssets, type BrandMockupAsset, type BrandMockupCollection, type BrandMockupManifest } from './brandAssets'
 import { PersonalAxReportPanel } from './PersonalAxReportPanel'
 import { DissertationReferencesPanel } from './DissertationReferencesPanel'
+import { CareerPanel } from './CareerPanel'
 import { createTeamPixelOfficeAgents } from './teamPixelOffice'
 import { TeamPixelOfficePanel } from './TeamPixelOfficePanel'
 import './App.css'
@@ -17,7 +18,7 @@ const designDnaSystemPrinciplesDocHref = publicAssetPath('/docs/design-dna-syste
 const designDnaVisualStyleMethodDocHref = publicAssetPath('/docs/design-dna-visual-style-generation-method-2026-09-28.md')
 const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
 
-type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report' | 'dissertation' | 'weekly'
+type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report' | 'dissertation' | 'career' | 'weekly'
 type ThemeMode = 'light' | 'dark'
 type ObdSubTabId = 'growth' | 'graph' | 'about'
 type DissertationSubTabId = 'dissertation-idea-1' | 'dissertation-idea-2' | 'references'
@@ -140,6 +141,13 @@ const tabs: Tab[] = [
     description: '두 Dissertation Idea와 관련 레퍼런스를 한 공간에서 읽고 비교합니다.',
   },
   {
+    id: 'career',
+    label: 'Career',
+    eyebrow: 'Official-source opportunity watch',
+    title: 'Career',
+    description: '역할별 공식 상세에서 확인된 후보와, 추가 확인이 필요한 공식 채용 출처를 구분해 봅니다.',
+  },
+  {
     id: 'weekly',
     label: 'Weekly',
     eyebrow: 'Weekly research synthesis',
@@ -158,8 +166,8 @@ const tabGroups: TabGroup[] = [
   {
     id: 'personal-ax',
     label: 'Personal AX',
-    eyebrow: 'OBD / Research / Visual / Report / Dissertation',
-    tabIds: ['obd', 'research', 'visuals', 'report', 'dissertation'],
+    eyebrow: 'OBD / Research / Visual / Report / Dissertation / Career',
+    tabIds: ['obd', 'research', 'visuals', 'report', 'dissertation', 'career'],
   },
   {
     id: 'corporate-ax',
@@ -3329,7 +3337,7 @@ function App() {
     ? {
         eyebrow: 'Personal AX',
         title: 'Chris의 개인 지식과 감각을 정리하는 AX 공간',
-        description: 'OBD Map, Research, Visual Archive, Report를 통해 Chris가 모은 신호와 질문, 시각적 레퍼런스를 개인 운영체계처럼 연결해 보는 영역입니다.',
+        description: 'OBD Map, Research, Visual Archive, Report, Career를 통해 Chris가 모은 신호와 질문, 시각적 레퍼런스를 개인 운영체계처럼 연결해 보는 영역입니다.',
       }
     : activeTabGroup.id === 'corporate-ax'
       ? {
@@ -3531,6 +3539,8 @@ function App() {
           <PersonalAxReportPanel />
         ) : activeTab.id === 'dissertation' ? (
           <DissertationPanel />
+        ) : activeTab.id === 'career' ? (
+          <CareerPanel />
         ) : activeTab.id === 'weekly' ? (
           <>
             <WeeklyTeamPrinciplesPanel />
