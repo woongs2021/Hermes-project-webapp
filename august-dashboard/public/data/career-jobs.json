@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-13T10:38:30+00:00",
+  "generatedAt": "2026-11-13T12:13:26+00:00",
   "sourcePolicy": "1차 드래프트: 역할·출처를 공식 소스로 점검했고, 역할 상세까지 검증된 후보만 표시합니다. 국내 플랫폼·통신·스케일업 watchlist는 10년+ 시니어 UX·제품·브랜드·디자인 리더십과 AI·AX 전환 인접성을 기준으로 두며, 공식 역할 상세에서 Senior/Lead/Principal/Head 또는 10년+ 요건이 확인될 때만 후보로 승격합니다. 대학 우선도는 학교의 절대적 서열이 아닌 디자인 전공군·인접성·공고 추적성·교육 미션을 반영한 탐색 순서입니다.",
   "jobs": [
     {
@@ -101,6 +101,17 @@
         "monitoringRationale": "디자인학과를 중심으로 시각·제품·디지털 매체 인접 수요를 상시 확인할 대상입니다."
       },
       {
+        "name": "명지대학교",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://www.mju.ac.kr/bbs/mjukr/141/list.do",
+        "programUrl": "https://www.mju.ac.kr/mjukr/index.do",
+        "checkedAt": "2026-11-13T12:13:26+00:00",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 채용 공지 인덱스는 확인됐으나 현재 디자인 전임교원 역할 상세를 확인하지 못했습니다.",
+        "monitoringRationale": "산업·시각디자인과 디지털 콘텐츠 인접 전공군을 함께 확인할 수 있어 디자인 전임 임용 탐색 범위를 보완합니다.",
+        "priority": 8
+      },
+      {
         "name": "금오공과대학교",
         "result": "UNVERIFIED",
         "sourceUrl": "https://www.kumoh.ac.kr/",
@@ -108,7 +119,7 @@
         "checkedAt": "2026-11-13T10:24:22+00:00",
         "verificationState": "official_index_only",
         "verificationNote": "공식 학교 사이트 응답은 확인됐으나 현재 역할별 교원 채용 상세를 확인하지 못했습니다.",
-        "priority": 8,
+        "priority": 9,
         "monitoringRationale": "산업디자인공학의 제품·제조·UX 인접성이 뚜렷해 공학 결합형 디자인 수요를 보기 좋습니다."
       },
       {
@@ -119,7 +130,7 @@
         "checkedAt": "2026-11-13T10:24:22+00:00",
         "verificationState": "official_index_only",
         "verificationNote": "공식 학교 사이트 응답은 확인됐으나 현재 역할별 교원 채용 상세를 확인하지 못했습니다.",
-        "priority": 9,
+        "priority": 10,
         "monitoringRationale": "공업·산업디자인의 실무·산업 연계성을 중심으로 디자인 교육 수요를 확인합니다."
       },
       {
@@ -130,7 +141,7 @@
         "checkedAt": "2026-11-13T10:24:22+00:00",
         "verificationState": "official_index_only",
         "verificationNote": "공식 페이지는 확인됐으나 현재 역할별 채용 상세를 확인하지 못했습니다.",
-        "priority": 10,
+        "priority": 11,
         "monitoringRationale": "캠퍼스 분산형 직무·실습 디자인교육이라 중앙과 캠퍼스 공지를 함께 확인해야 합니다."
       },
       {
@@ -141,7 +152,7 @@
         "checkedAt": "2026-11-13T10:24:22+00:00",
         "verificationState": "official_index_only",
         "verificationNote": "공식 학교 사이트 응답은 확인됐으나 현재 역할별 교원 채용 상세를 확인하지 못했습니다.",
-        "priority": 11,
+        "priority": 12,
         "monitoringRationale": "실무형 디자인 교육의 전임 수요를 별도로 감시하되, 역할 상세가 확인될 때만 후보로 판정합니다."
       }
     ],
