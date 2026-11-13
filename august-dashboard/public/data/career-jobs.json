@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-13T07:32:48Z",
-  "sourcePolicy": "1차 드래프트: 역할·출처 24개를 점검했고, 역할 상세까지 검증된 후보 1건만 표시합니다. 우선 대학은 디자인 전공군의 폭·UX/산업/시각/디지털 인접성·공식 공고 추적성·교육 미션으로 정렬한 탐색 순서이며, 학교의 절대적 서열이 아닙니다. 역할별 상세는 다음 정기 점검에서 확인합니다.",
+  "generatedAt": "2026-11-13T10:38:30+00:00",
+  "sourcePolicy": "1차 드래프트: 역할·출처를 공식 소스로 점검했고, 역할 상세까지 검증된 후보만 표시합니다. 국내 플랫폼·통신·스케일업 watchlist는 10년+ 시니어 UX·제품·브랜드·디자인 리더십과 AI·AX 전환 인접성을 기준으로 두며, 공식 역할 상세에서 Senior/Lead/Principal/Head 또는 10년+ 요건이 확인될 때만 후보로 승격합니다. 대학 우선도는 학교의 절대적 서열이 아닌 디자인 전공군·인접성·공고 추적성·교육 미션을 반영한 탐색 순서입니다.",
   "jobs": [
     {
       "id": "anthropic-customer-success-manager-seoul-5391112008",
@@ -249,6 +249,174 @@
         "checkedAt": "2026-11-13T07:32:48Z",
         "verificationState": "fetch_blocked",
         "verificationNote": "공식 검색 응답을 확인할 수 없어 재확인이 필요합니다."
+      }
+    ],
+    "koreanLargeCompanies": [
+      {
+        "name": "네이버",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://recruit.navercorp.com/",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 채용 페이지는 확인됐으나 현재 역할별 시니어 공고 상세를 확인하지 못했습니다.",
+        "monitoringRationale": "대규모 소비자 서비스와 AI·커머스·콘텐츠 접점의 UX·제품·브랜드 디자인 리더십을 탐색합니다."
+      },
+      {
+        "name": "카카오",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://careers.kakao.com/",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 채용 페이지는 확인됐으나 현재 역할별 시니어 공고 상세를 확인하지 못했습니다.",
+        "monitoringRationale": "멀티서비스 생태계의 제품 경험·브랜드·플랫폼 전환 역할을 우선 확인합니다."
+      },
+      {
+        "name": "라인플러스",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://careers.linecorp.com/",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 채용 페이지는 확인됐으나 현재 역할별 시니어 공고 상세를 확인하지 못했습니다.",
+        "monitoringRationale": "국내외 메신저·핀테크·콘텐츠 서비스의 제품/UX 리더십을 확인합니다."
+      },
+      {
+        "name": "쿠팡",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://www.coupang.jobs/kr/",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "fetch_blocked",
+        "verificationNote": "공식 채용 페이지 응답이 제한돼 역할별 시니어 공고 상세 재확인이 필요합니다.",
+        "monitoringRationale": "커머스·로지스틱스·광고 서비스의 복합 고객경험과 제품 디자인 리더십을 탐색합니다."
+      },
+      {
+        "name": "우아한형제들",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://career.woowahan.com/",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 채용 페이지는 확인됐으나 현재 역할별 시니어 공고 상세를 확인하지 못했습니다.",
+        "monitoringRationale": "커머스·로컬 서비스의 제품·브랜드·디자인 조직 리드 역할을 확인합니다."
+      },
+      {
+        "name": "당근",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://www.daangn.com/jobs",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 채용 페이지는 확인됐으나 현재 역할별 시니어 공고 상세를 확인하지 못했습니다.",
+        "monitoringRationale": "로컬 커뮤니티·거래·광고 경험을 다루는 제품/UX·브랜드 리더십을 확인합니다."
+      },
+      {
+        "name": "토스",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://toss.im/career",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 채용 페이지는 확인됐으나 현재 역할별 시니어 공고 상세를 확인하지 못했습니다.",
+        "monitoringRationale": "핀테크·금융 경험과 조직 단위 제품·브랜드 디자인 리더십을 탐색합니다."
+      }
+    ],
+    "telecomCompanies": [
+      {
+        "name": "SK텔레콤",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://careers.sktelecom.com/",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 채용 페이지는 확인됐으나 현재 역할별 시니어 공고 상세를 확인하지 못했습니다.",
+        "monitoringRationale": "AI·데이터·통신 서비스 전환과 대규모 고객경험의 디자인/AX 리더 역할을 확인합니다."
+      },
+      {
+        "name": "KT",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://recruit.kt.com/",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 채용 페이지는 확인됐으나 현재 역할별 시니어 공고 상세를 확인하지 못했습니다.",
+        "monitoringRationale": "AICT·B2B/B2C 서비스의 UX·서비스디자인·전환 리더십을 탐색합니다."
+      },
+      {
+        "name": "LG유플러스",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://www.lguplus.com/recruit",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "fetch_blocked",
+        "verificationNote": "공식 채용 페이지 응답이 제한돼 역할별 시니어 공고 상세 재확인이 필요합니다.",
+        "monitoringRationale": "통신·미디어·홈 서비스의 고객경험과 디지털 전환 디자인 리더십을 확인합니다."
+      }
+    ],
+    "seniorGrowthCompanies": [
+      {
+        "name": "리디",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://ridicorp.com/careers/",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "fetch_blocked",
+        "verificationNote": "공식 채용 페이지 응답이 제한돼 역할별 시니어 공고 상세 재확인이 필요합니다.",
+        "monitoringRationale": "콘텐츠·커머스 구독 경험의 제품·브랜드·디자인 리드 역할을 탐색합니다."
+      },
+      {
+        "name": "무신사",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://recruit.musinsa.com/",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "fetch_blocked",
+        "verificationNote": "공식 채용 페이지 응답이 제한돼 역할별 시니어 공고 상세 재확인이 필요합니다.",
+        "monitoringRationale": "패션 커머스·브랜드 플랫폼의 제품 경험과 브랜드 디자인 리더십을 확인합니다."
+      },
+      {
+        "name": "야놀자",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://careers.yanolja.co/",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 채용 페이지는 확인됐으나 현재 역할별 시니어 공고 상세를 확인하지 못했습니다.",
+        "monitoringRationale": "여행·호스피탈리티·B2B SaaS의 복합 서비스 경험과 디자인 전환 역할을 탐색합니다."
+      },
+      {
+        "name": "버킷플레이스(오늘의집)",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://bucketplace.com/careers",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 채용 페이지는 확인됐으나 현재 역할별 시니어 공고 상세를 확인하지 못했습니다.",
+        "monitoringRationale": "리빙 커머스·커뮤니티 제품의 UX·콘텐츠·브랜드 경험 리더십을 확인합니다."
+      },
+      {
+        "name": "컬리",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://career.kurly.com/",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "fetch_blocked",
+        "verificationNote": "공식 채용 페이지 응답이 제한돼 역할별 시니어 공고 상세 재확인이 필요합니다.",
+        "monitoringRationale": "리테일·커머스 경험의 고객 여정과 브랜드·제품 디자인 리더십을 확인합니다."
+      },
+      {
+        "name": "직방",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://zigbang.recruiter.co.kr/appsite/company/index",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "fetch_blocked",
+        "verificationNote": "공식 채용 페이지 응답이 제한돼 역할별 시니어 공고 상세 재확인이 필요합니다.",
+        "monitoringRationale": "프롭테크·공간 경험의 제품/서비스 디자인 리더 역할을 탐색합니다."
+      },
+      {
+        "name": "쏘카",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://career.socarcorp.kr/",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "fetch_blocked",
+        "verificationNote": "공식 채용 페이지 응답이 제한돼 역할별 시니어 공고 상세 재확인이 필요합니다.",
+        "monitoringRationale": "모빌리티·구독·운영 서비스의 UX·제품·브랜드 전환 리더십을 확인합니다."
+      },
+      {
+        "name": "크래프톤",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://career.krafton.com/",
+        "checkedAt": "2026-11-13T10:38:30+00:00",
+        "verificationState": "fetch_blocked",
+        "verificationNote": "공식 채용 페이지 응답이 제한돼 역할별 시니어 공고 상세 재확인이 필요합니다.",
+        "monitoringRationale": "글로벌 콘텐츠·플랫폼 경험의 제품·브랜드·디자인 조직 리드 역할을 탐색합니다."
       }
     ]
   },

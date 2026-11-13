@@ -101,8 +101,8 @@ function validateManifest(manifest) {
   const ids = new Set()
   manifest.jobs.forEach((job, index) => validateJob(job, index, ids))
   assertObject(manifest.watchlists, 'manifest.watchlists')
-  assertAllowedKeys(manifest.watchlists, new Set(['priorityUniversities', 'globalCompanies']), 'manifest.watchlists')
-  for (const group of ['priorityUniversities', 'globalCompanies']) {
+  assertAllowedKeys(manifest.watchlists, new Set(['priorityUniversities', 'koreanLargeCompanies', 'telecomCompanies', 'seniorGrowthCompanies', 'globalCompanies']), 'manifest.watchlists')
+  for (const group of ['priorityUniversities', 'koreanLargeCompanies', 'telecomCompanies', 'seniorGrowthCompanies', 'globalCompanies']) {
     if (!Array.isArray(manifest.watchlists[group]) || manifest.watchlists[group].length === 0) fail(`manifest.watchlists.${group} must be a non-empty array`)
     const names = new Set()
     manifest.watchlists[group].forEach((item, index) => {
@@ -117,4 +117,4 @@ function validateManifest(manifest) {
 
 const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'))
 validateManifest(manifest)
-console.log(`validated career jobs=${manifest.jobs.length} universities=${manifest.watchlists.priorityUniversities.length} globalCompanies=${manifest.watchlists.globalCompanies.length}`)
+console.log(`validated career jobs=${manifest.jobs.length} universities=${manifest.watchlists.priorityUniversities.length} domesticPlatform=${manifest.watchlists.koreanLargeCompanies.length} telecom=${manifest.watchlists.telecomCompanies.length} seniorGrowth=${manifest.watchlists.seniorGrowthCompanies.length} globalCompanies=${manifest.watchlists.globalCompanies.length}`)

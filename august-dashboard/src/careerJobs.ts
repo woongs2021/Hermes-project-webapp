@@ -39,6 +39,9 @@ export type CareerJobsManifest = {
   jobs: CareerJob[]
   watchlists: {
     priorityUniversities: CareerWatchlistItem[]
+    koreanLargeCompanies: CareerWatchlistItem[]
+    telecomCompanies: CareerWatchlistItem[]
+    seniorGrowthCompanies: CareerWatchlistItem[]
     globalCompanies: CareerWatchlistItem[]
   }
   evidenceLimit: string
@@ -49,7 +52,7 @@ export const fallbackCareerJobsManifest: CareerJobsManifest = {
   generatedAt: '',
   sourcePolicy: '',
   jobs: [],
-  watchlists: { priorityUniversities: [], globalCompanies: [] },
+  watchlists: { priorityUniversities: [], koreanLargeCompanies: [], telecomCompanies: [], seniorGrowthCompanies: [], globalCompanies: [] },
   evidenceLimit: '공식 공고 데이터를 불러오지 못했습니다.',
 }
 

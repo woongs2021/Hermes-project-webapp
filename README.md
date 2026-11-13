@@ -79,7 +79,8 @@ The current asset batches are [**`design-dna-2026-10`**](https://github.com/woon
 
 - `Personal AX → Career` provides a public-safe weekly opportunity surface at `#career`.
 - Candidate cards require an official role-detail URL, role-level evidence, a verification timestamp, and `verified_detail`; uncertain search responses remain in a separate official watchlist.
-- The first draft presents the preflight snapshot: 1 verified Korea-based AI·AX education candidate, 11 priority-university checks, and 13 global-company checks. `UNVERIFIED` never means closed or unavailable.
+- The first draft presents the preflight snapshot: 1 verified Korea-based AI·AX education candidate, 11 priority-university checks, 7 Korean platform/large-company checks, 3 telecom checks, 8 senior-growth-company checks, and 13 global-company checks. `UNVERIFIED` never means closed or unavailable.
+- Korean corporate watchlists target 10+ year UX/product/brand/design leadership and AI·AX-transition roles. A company is never a candidate by name alone: only a role detail that explicitly states Senior/Lead/Principal/Head/Director or 10+ years can be promoted as an explicit senior target.
 - Priority universities are an ordered design-faculty **monitoring priority**, not a reputation ranking: program breadth, UX/industrial/visual/digital adjacency, official hiring traceability, and degree/teaching mission determine the order. Hongik Seoul and Sejong are tracked separately.
 - Monday’s release flow is Korea-first source checks → role-detail verification → conservative public summary. Unpublished salary, deadline, work mode, and eligibility remain visibly unknown.
 
