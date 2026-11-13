@@ -20,10 +20,18 @@ function formatCheckedAt(value: string) {
   return new Intl.DateTimeFormat('ko-KR', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Asia/Seoul' }).format(new Date(value))
 }
 
-function Watchlist({ title, items, description }: { title: string; items: CareerWatchlistItem[]; description?: string }) {
+type WatchlistGroup = {
+  id: string
+  title: string
+  items: CareerWatchlistItem[]
+  description?: string
+  wide?: boolean
+}
+
+function Watchlist({ title, items, description, wide = false }: WatchlistGroup) {
   const isPriorityUniversityList = title === '우선 대학'
   return (
-    <section className="career-watchlist-group" aria-label={title}>
+    <section className={wide ? 'career-watchlist-group career-watchlist-group--wide' : 'career-watchlist-group'} aria-label={title}>
       <div className="career-watchlist-heading"><h4>{title}</h4><span>{items.length}개</span></div>
       {(isPriorityUniversityList || description) && <p className="career-priority-note">{description ?? '디자인 관련 전임 임용을 위한 탐색 우선도예요. 학교 서열이 아니라 전공군·인접성·공고 추적성·교육 미션을 함께 봅니다.'}</p>}
       <ol className={isPriorityUniversityList ? 'career-priority-list' : undefined}>
@@ -45,6 +53,25 @@ export function CareerPanel() {
   useEffect(() => { void loadCareerJobs().then(setManifest) }, [])
 
   const jobs = useMemo(() => manifest.jobs.filter((job) => filter === 'all' || job.category === filter), [filter, manifest.jobs])
+  const universityWatchlist: WatchlistGroup = {
+    id: 'universities',
+    title: '우선 대학',
+    items: manifest.watchlists.priorityUniversities,
+    wide: true,
+  }
+  const companyWatchlists: WatchlistGroup[] = [
+    { id: 'korean-large', title: '국내 플랫폼·대기업', items: manifest.watchlists.koreanLargeCompanies, description: '네이버·카카오·라인·쿠팡·우아한형제들·당근·토스의 공식 채용을 UX·제품·브랜드·AI/AX 리더십 관점에서 확인합니다.' },
+    { id: 'telecom', title: '통신 3사', items: manifest.watchlists.telecomCompanies, description: 'AI·데이터·B2C/B2B 서비스 전환과 대규모 고객경험을 다루는 시니어 디자인 역할을 우선 확인합니다.' },
+    { id: 'senior-growth', title: '시니어 10년+ 타깃', items: manifest.watchlists.seniorGrowthCompanies, description: '스케일업·디지털 기업의 UX·제품·브랜드·디자인 리드 역할을 봅니다. 공식 상세에 Senior/Lead/Principal/Head 또는 10년+ 경력이 명시된 경우에만 후보로 올립니다.' },
+    { id: 'global', title: '글로벌 기업', items: manifest.watchlists.globalCompanies },
+  ]
+  const watchlistGroups = filter === 'faculty' ? [universityWatchlist] : filter === 'all' ? [universityWatchlist, ...companyWatchlists] : companyWatchlists
+  const watchlistHeading = filter === 'faculty' ? '교수 임용 공식 watchlist' : filter === 'all' ? '공식 watchlist' : '기업 직군 공식 watchlist'
+  const watchlistDescription = filter === 'faculty'
+    ? '교수 임용 필터에서는 학교 목록만 봅니다. 기업 목록은 다른 직군을 선택하면 표시됩니다.'
+    : filter === 'all'
+      ? '공식 페이지를 확인했지만 역할별 상세가 확인되지 않거나 응답이 제한된 출처입니다. UNVERIFIED는 공고 마감이나 부재를 뜻하지 않습니다.'
+      : '기업 직군 필터에서는 기업 목록만 봅니다. UNVERIFIED는 공고 마감이나 부재를 뜻하지 않습니다.'
 
   return (
     <div className="career-shell" aria-label="Career opportunities">
@@ -80,14 +107,10 @@ export function CareerPanel() {
         )) : <div className="content-card career-empty"><h3>이 범주의 확인된 후보가 없습니다</h3><p>현재 필터에서 역할별 공식 상세로 확인된 공고가 없습니다. 공식 watchlist는 아래에서 계속 확인할 수 있습니다.</p></div>}
       </section>
 
-      <section className="content-card career-watchlists" aria-label="Official watchlists">
-        <header><p className="card-kicker">Official watchlist</p><h3>공식 watchlist</h3><p>공식 페이지를 확인했지만 역할별 상세가 확인되지 않거나 응답이 제한된 출처입니다. UNVERIFIED는 공고 마감이나 부재를 뜻하지 않습니다.</p></header>
+      <section className="content-card career-watchlists" aria-label={watchlistHeading}>
+        <header><p className="card-kicker">Official watchlist</p><h3>{watchlistHeading}</h3><p>{watchlistDescription}</p></header>
         <div className="career-watchlist-grid">
-          <Watchlist title="우선 대학" items={manifest.watchlists.priorityUniversities} />
-          <Watchlist title="국내 플랫폼·대기업" items={manifest.watchlists.koreanLargeCompanies} description="네이버·카카오·라인·쿠팡·우아한형제들·당근·토스의 공식 채용을 UX·제품·브랜드·AI/AX 리더십 관점에서 확인합니다." />
-          <Watchlist title="통신 3사" items={manifest.watchlists.telecomCompanies} description="AI·데이터·B2C/B2B 서비스 전환과 대규모 고객경험을 다루는 시니어 디자인 역할을 우선 확인합니다." />
-          <Watchlist title="시니어 10년+ 타깃" items={manifest.watchlists.seniorGrowthCompanies} description="스케일업·디지털 기업의 UX·제품·브랜드·디자인 리드 역할을 봅니다. 공식 상세에 Senior/Lead/Principal/Head 또는 10년+ 경력이 명시된 경우에만 후보로 올립니다." />
-          <Watchlist title="글로벌 기업" items={manifest.watchlists.globalCompanies} />
+          {watchlistGroups.map((group) => <Watchlist key={group.id} {...group} />)}
         </div>
       </section>
 
