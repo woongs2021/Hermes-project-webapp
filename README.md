@@ -79,7 +79,7 @@ The current asset batches are [**`design-dna-2026-10`**](https://github.com/woon
 
 - `Personal AX → Career` provides a public-safe weekly opportunity surface at `#career`.
 - Candidate cards require an official role-detail URL, role-level evidence, a verification timestamp, and `verified_detail`; uncertain search responses remain in a separate official watchlist.
-- The first draft presents the preflight snapshot: 1 verified Korea-based AI·AX education candidate, 3 priority-university checks, and 13 global-company checks. `UNVERIFIED` never means closed or unavailable.
+- The first draft presents the preflight snapshot: 1 verified Korea-based AI·AX education candidate, 9 priority-university checks, and 13 global-company checks. `UNVERIFIED` never means closed or unavailable.
 - Monday’s release flow is Korea-first source checks → role-detail verification → conservative public summary. Unpublished salary, deadline, work mode, and eligibility remain visibly unknown.
 
 ### Phase 4 — High-resolution asset externalization

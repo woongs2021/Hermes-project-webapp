@@ -100,7 +100,7 @@ function validateManifest(manifest) {
     if (!Array.isArray(manifest.watchlists[group])) fail(`manifest.watchlists.${group} must be an array`)
     manifest.watchlists[group].forEach((item, index) => validateWatchlistItem(item, index, group))
   }
-  if (manifest.watchlists.priorityUniversities.length !== 3) fail('manifest.watchlists.priorityUniversities must contain 3 items')
+  if (manifest.watchlists.priorityUniversities.length !== 9) fail('manifest.watchlists.priorityUniversities must contain 9 items')
   if (manifest.watchlists.globalCompanies.length !== 13) fail('manifest.watchlists.globalCompanies must contain 13 items')
   if (manifest.jobs.some((job) => job.verificationState !== 'verified_detail')) fail('unverified role cannot appear as a job')
   return manifest
