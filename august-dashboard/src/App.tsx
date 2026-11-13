@@ -225,7 +225,7 @@ const automationLoops: AutomationLoop[] = [
   { owner: 'Son', name: 'Threads 검토용 초안', rhythm: '주 3회', status: 'ok', delivery: 'Telegram', note: 'AI/AX·디자인·교육 관점의 검토용 Threads 초안을 전달' },
   { owner: 'Son', name: 'Career 주간 전체 모니터링', rhythm: '월 08:00 KST', status: 'ok', delivery: 'Pages · Direct report', note: '대학·기업·글로벌 공고를 검증해 Career 업데이트와 요약 보고로 연결', schedulerActive: true },
   { owner: 'Faker', name: '주간 Research 1-pick·트렌드 갱신', rhythm: '월 00:00 KST', status: 'ok', delivery: 'Telegram', note: '주간 리서치 보드의 선택과 흐름 점검' },
-  { owner: 'Faker', name: 'AI/AX job-shift 탭 통합', rhythm: '수·금 09:45 KST', status: 'needs-check', delivery: 'Telegram', note: '다음 실행 전 상태 확인 필요' },
+  { owner: 'Faker', name: 'AI/AX job-shift 탭 통합', rhythm: '수·금 09:45 KST', status: 'ok', delivery: 'Telegram', note: 'AI·디자인·시장 신호를 탭과 근거 그래프로 누적' },
   { owner: 'Faker', name: 'Muyeol 1-pick 리서치 보드 배포', rhythm: '금 10:45 KST', status: 'ok', delivery: 'Telegram', note: '검증된 주간 1-pick을 Research Board에 반영' },
   { owner: 'Faker', name: '자동화 보드 주간 갱신', rhythm: '월 10:10 KST', status: 'needs-check', delivery: 'Telegram', note: '운영 현황을 다음 주 기준으로 점검', schedulerActive: true },
   { owner: 'Muyeol', name: 'AI/AX job-shift 루프 검증', rhythm: '금 09:55 KST', status: 'ok', delivery: 'Telegram', note: '소스·리스크·구조를 주간 검증' },
