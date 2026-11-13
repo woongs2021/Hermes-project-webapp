@@ -4,7 +4,8 @@ import { resolve } from 'node:path'
 const manifestPath = resolve(process.argv[2] ?? 'public/data/career-jobs.json')
 const allowedRootKeys = new Set(['version', 'generatedAt', 'sourcePolicy', 'jobs', 'watchlists', 'evidenceLimit'])
 const allowedJobKeys = new Set(['id', 'companyOrInstitution', 'category', 'title', 'location', 'status', 'fit', 'checkedAt', 'verificationState', 'canonicalUrl', 'sourceEvidence', 'publishedSalaryText', 'deadline', 'eligibility', 'workMode'])
-const allowedWatchlistKeys = new Set(['name', 'result', 'sourceUrl', 'checkedAt', 'verificationState', 'verificationNote'])
+const requiredWatchlistKeys = new Set(['name', 'result', 'sourceUrl', 'checkedAt', 'verificationState', 'verificationNote'])
+const allowedWatchlistKeys = new Set([...requiredWatchlistKeys, 'priority', 'monitoringRationale', 'programUrl'])
 const categories = new Set(['faculty', 'corporate_design', 'ai_ax_education'])
 const statuses = new Set(['NEW', 'UPDATED', 'ACTIVE', 'CLOSED', 'UNVERIFIED'])
 const verificationStates = new Set(['verified_detail', 'official_index_only', 'fetch_blocked', 'ambiguous'])
@@ -74,12 +75,17 @@ function validateWatchlistItem(item, index, group) {
   const label = `watchlists.${group}[${index}]`
   assertObject(item, label)
   assertAllowedKeys(item, allowedWatchlistKeys, label)
-  assertRequiredStrings(item, [...allowedWatchlistKeys], label)
+  assertRequiredStrings(item, [...requiredWatchlistKeys], label)
   assertPublicSafe(item, label)
   if (!watchResults.has(item.result)) fail(`${label}.result is invalid`)
   if (!verificationStates.has(item.verificationState)) fail(`${label}.verificationState is invalid`)
   assertIso(item.checkedAt, `${label}.checkedAt`)
   assertHttps(item.sourceUrl, `${label}.sourceUrl`)
+  if (group === 'priorityUniversities') {
+    if (!Number.isInteger(item.priority) || item.priority !== index + 1) fail(`${label}.priority must be contiguous and match display order`)
+    assertRequiredStrings(item, ['monitoringRationale', 'programUrl'], label)
+    assertHttps(item.programUrl, `${label}.programUrl`)
+  }
   if (item.result === 'open matching role' && item.verificationState !== 'verified_detail') fail(`${label} open matching role must be verified_detail`)
   if (item.result === 'UNVERIFIED' && item.verificationState === 'verified_detail') fail(`${label} UNVERIFIED cannot be verified_detail`)
 }
@@ -97,11 +103,14 @@ function validateManifest(manifest) {
   assertObject(manifest.watchlists, 'manifest.watchlists')
   assertAllowedKeys(manifest.watchlists, new Set(['priorityUniversities', 'globalCompanies']), 'manifest.watchlists')
   for (const group of ['priorityUniversities', 'globalCompanies']) {
-    if (!Array.isArray(manifest.watchlists[group])) fail(`manifest.watchlists.${group} must be an array`)
-    manifest.watchlists[group].forEach((item, index) => validateWatchlistItem(item, index, group))
+    if (!Array.isArray(manifest.watchlists[group]) || manifest.watchlists[group].length === 0) fail(`manifest.watchlists.${group} must be a non-empty array`)
+    const names = new Set()
+    manifest.watchlists[group].forEach((item, index) => {
+      validateWatchlistItem(item, index, group)
+      if (names.has(item.name)) fail(`watchlists.${group}[${index}].name is duplicated`)
+      names.add(item.name)
+    })
   }
-  if (manifest.watchlists.priorityUniversities.length !== 9) fail('manifest.watchlists.priorityUniversities must contain 9 items')
-  if (manifest.watchlists.globalCompanies.length !== 13) fail('manifest.watchlists.globalCompanies must contain 13 items')
   if (manifest.jobs.some((job) => job.verificationState !== 'verified_detail')) fail('unverified role cannot appear as a job')
   return manifest
 }

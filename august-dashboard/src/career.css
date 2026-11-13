@@ -254,12 +254,32 @@
   font-size: 1rem;
 }
 
-.career-watchlist-group ul {
+.career-watchlist-group ul,
+.career-watchlist-group ol {
   display: grid;
   gap: 8px;
   margin: 12px 0 0;
   padding: 0;
   list-style: none;
+}
+
+.career-priority-note {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.career-priority-rank {
+  display: inline-grid;
+  place-items: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: var(--active-surface-soft);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .career-watchlist-group li {

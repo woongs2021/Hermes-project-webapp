@@ -27,6 +27,9 @@ export type CareerWatchlistItem = {
   checkedAt: string
   verificationState: CareerVerificationState
   verificationNote: string
+  priority?: number
+  monitoringRationale?: string
+  programUrl?: string
 }
 
 export type CareerJobsManifest = {

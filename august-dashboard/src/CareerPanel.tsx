@@ -21,17 +21,19 @@ function formatCheckedAt(value: string) {
 }
 
 function Watchlist({ title, items }: { title: string; items: CareerWatchlistItem[] }) {
+  const isPriorityUniversityList = title === '우선 대학'
   return (
     <section className="career-watchlist-group" aria-label={title}>
       <div className="career-watchlist-heading"><h4>{title}</h4><span>{items.length}개</span></div>
-      <ul>
+      {isPriorityUniversityList && <p className="career-priority-note">디자인 관련 전임 임용을 위한 탐색 우선도예요. 학교 서열이 아니라 전공군·인접성·공고 추적성·교육 미션을 함께 봅니다.</p>}
+      <ol className={isPriorityUniversityList ? 'career-priority-list' : undefined}>
         {items.map((item) => (
           <li key={item.name}>
-            <div><strong>{item.name}</strong><p>{item.verificationNote}</p></div>
-            <div className="career-watchlist-meta"><span className={item.result === 'open matching role' ? 'career-result open' : 'career-result'}>{item.result}</span><a href={item.sourceUrl} target="_blank" rel="noreferrer">공식 소스</a></div>
+            <div><strong>{isPriorityUniversityList && item.priority ? <><span className="career-priority-rank">{item.priority}</span>{item.name}</> : item.name}</strong><p>{item.monitoringRationale ?? item.verificationNote}</p></div>
+            <div className="career-watchlist-meta"><span className={item.result === 'open matching role' ? 'career-result open' : 'career-result'}>{item.result}</span><a href={item.sourceUrl} target="_blank" rel="noreferrer">공식 채용</a>{item.programUrl && <a href={item.programUrl} target="_blank" rel="noreferrer">관련 전공</a>}</div>
           </li>
         ))}
-      </ul>
+      </ol>
     </section>
   )
 }
