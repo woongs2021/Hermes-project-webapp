@@ -154,6 +154,17 @@
         "verificationNote": "공식 학교 사이트 응답은 확인됐으나 현재 역할별 교원 채용 상세를 확인하지 못했습니다.",
         "priority": 12,
         "monitoringRationale": "실무형 디자인 교육의 전임 수요를 별도로 감시하되, 역할 상세가 확인될 때만 후보로 판정합니다."
+      },
+      {
+        "name": "경희대학교",
+        "result": "UNVERIFIED",
+        "sourceUrl": "https://www.khu.ac.kr/kor/user/contents/view.do?menuNo=200270",
+        "checkedAt": "2026-11-14T00:00:00+09:00",
+        "verificationState": "official_index_only",
+        "verificationNote": "공식 대학 채용·교원 안내 진입점은 확인했으나, 이번 반영 시점에는 디자인 계열 교원 역할 상세 공고를 확인하지 못했습니다.",
+        "priority": 13,
+        "monitoringRationale": "서울·국제캠퍼스의 예술·디자인 교육과 시각·산업·디지털 인접 전공을 함께 확인할 수 있어, 디자인·UX 교육 교원임용 공식 공고를 보수적으로 점검합니다.",
+        "programUrl": "https://www.khu.ac.kr/kor/user/contents/view.do?menuNo=200269"
       }
     ],
     "globalCompanies": [
