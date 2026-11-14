@@ -2685,8 +2685,8 @@ function DesignDnaPanel() {
         </div>
         <figure className="design-dna-hero-image">
           <img
-            src={publicAssetPath('/assets/design-dna/hero/complete-circle-outer-stroke-19x10.png')}
-            alt="Complete Circle — Outer Stroke Light wide hero graphic"
+            src={publicAssetPath('/assets/design-dna/section-heroes/2026-11-14/human-context-paper-fold-19x10-2026-11-14.jpg')}
+            alt="따뜻한 종이 접힘과 깊은 navy 표면이 만나는 Hermes의 사람 맥락과 디자인 판단 hero graphic"
             loading="eager"
             decoding="async"
           />
@@ -2749,8 +2749,8 @@ function DesignDnaPanel() {
         <div className="content-card design-dna-axis-map">
           <figure className="design-dna-section-hero-image">
             <img
-              src={publicAssetPath('/assets/design-dna/section-heroes/core-dna-hero-19x10.png')}
-              alt="Core DNA GoYJ generated hero graphic"
+              src={publicAssetPath('/assets/design-dna/section-heroes/2026-11-14/core-axes-paper-stripes-19x10-2026-11-14.jpg')}
+              alt="navy, warm white, coral, pale blue의 종이 표면이 나란히 놓인 Core DNA 3개 중심축 hero graphic"
               loading="eager"
               decoding="async"
             />
@@ -2781,8 +2781,8 @@ function DesignDnaPanel() {
         <div className="content-card expression-layer-map">
           <figure className="design-dna-section-hero-image">
             <img
-              src={publicAssetPath('/assets/design-dna/section-heroes/expression-layer-hero-circle-blue-pink-split-stroke-19x10.png')}
-              alt="Expression Layer GoYJ generated hero graphic"
+              src={publicAssetPath('/assets/design-dna/section-heroes/2026-11-14/expression-axes-paper-arcs-19x10-2026-11-14.jpg')}
+              alt="deep blue와 vermilion 종이 아치가 겹치는 Expression Layer 2개 표현축 hero graphic"
               loading="eager"
               decoding="async"
             />
