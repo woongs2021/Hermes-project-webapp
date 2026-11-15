@@ -1961,9 +1961,9 @@ function ResearchKanbanPanel({ selectedResearchId }: { selectedResearchId?: stri
           {paperIdeaShortlist.items.map((item: PaperIdeaShortlistItem) => (
             <article className="paper-idea-shortlist-item" key={item.id}>
               <div className="paper-idea-badges"><span>{item.idea === 'educator-judgment' ? 'A · 교육자 판단권' : 'B · 학습자 통제권'}</span><strong>{item.directRelevance}/100</strong></div>
-              <h4>{item.title}</h4><p className="paper-idea-title-ko">{item.titleKo}</p><p>{item.summary}</p><p className="paper-idea-fit">{item.fit}</p>
+              <h4><a className="paper-idea-title-link" href={item.url} target="_blank" rel="noreferrer" aria-label={`${item.title} 논문 원문 열기`}>{item.title}<span aria-hidden="true"> ↗</span></a></h4><p className="paper-idea-title-ko">{item.titleKo}</p><p>{item.summary}</p><p className="paper-idea-fit">{item.fit}</p>
               <footer><span>{item.authors} · {item.venue} · {item.year}</span><span>{item.evidenceLevel} · {item.validationStatus}</span></footer>
-              <a href={item.url} target="_blank" rel="noreferrer">DOI {item.doi}</a>
+              <a className="paper-idea-doi-link" href={item.url} target="_blank" rel="noreferrer">논문 원문 / DOI 열기 <span aria-hidden="true">↗</span></a>
             </article>
           ))}
         </div>
