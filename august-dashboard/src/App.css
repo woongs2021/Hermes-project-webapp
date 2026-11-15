@@ -10364,3 +10364,18 @@
 @media(max-width:1024px) { .pixel-atelier-role-bubble { bottom:94%; margin-bottom:14px; } .pixel-atelier-role-bubble--below { top:100%; bottom:auto; margin:8px 0 0; } .pixel-atelier-role-bubble--below::after { top:-5px; bottom:auto; border-top:1px solid rgba(81,72,57,.24); border-right:0; border-bottom:0; border-left:1px solid rgba(81,72,57,.24); } }
 @media(max-width:760px) { .pixel-atelier-walker { width:clamp(23px,6.6vw,35px); } .pixel-atelier-role-bubble { max-width:150px; padding:6px 8px; font-size:.56rem; } .pixel-atelier-role-bubble--left { left:0; transform:none; } .pixel-atelier-role-bubble--right { left:auto; right:0; transform:none; } .pixel-atelier-walker--fallback { width:clamp(15px,4.4vw,23px); } .pixel-atelier-scene figcaption { left:3%; top:3%; bottom:auto; max-width:165px; font-size:.56rem; line-height:1.35; } }
 @media(prefers-reduced-motion:reduce) { .pixel-atelier-walker { transition:none; } }
+
+.paper-idea-shortlist-card { display:grid; gap:16px; grid-column:1 / -1; padding:clamp(20px,3vw,30px); }
+.paper-idea-shortlist-header, .paper-idea-badges, .paper-idea-shortlist-item footer { display:flex; align-items:flex-start; justify-content:space-between; gap:14px; }
+.paper-idea-shortlist-header h3, .paper-idea-shortlist-item h4 { margin:6px 0; }
+.paper-idea-shortlist-header p, .paper-idea-shortlist-item p { margin:0; color:var(--muted-ink); line-height:1.6; }
+.paper-idea-count, .paper-idea-badges span, .paper-idea-badges strong { border:1px solid var(--stroke); border-radius:999px; padding:6px 9px; font-size:.76rem; white-space:nowrap; }
+.paper-idea-count, .paper-idea-badges strong { color:var(--primary); background:var(--active-surface); }
+.paper-idea-rule, .paper-idea-validation-note { margin:0; color:var(--quiet-ink); font-size:.86rem; }
+.paper-idea-shortlist-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.paper-idea-shortlist-item { display:grid; gap:10px; border:1px solid var(--stroke); border-radius:18px; padding:16px; background:var(--panel-surface); }
+.paper-idea-title-ko { font-weight:700; color:var(--ink) !important; }
+.paper-idea-fit { color:var(--primary) !important; }
+.paper-idea-shortlist-item footer { flex-wrap:wrap; color:var(--quiet-ink); font-size:.76rem; }
+.paper-idea-shortlist-item a { color:var(--primary); font-size:.8rem; font-weight:700; }
+@media(max-width:720px) { .paper-idea-shortlist-grid { grid-template-columns:1fr; } .paper-idea-shortlist-header { flex-direction:column; } }

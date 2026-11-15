@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.august-dashboard/schemas/paper-idea-shortlist.schema.json",
+  "title": "Public-safe paper idea shortlist",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "updatedAt", "status", "policy", "selection", "items"],
+  "properties": {
+    "version": { "const": 1 },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "status": { "const": "published_after_validation" },
+    "policy": { "type": "string", "minLength": 1 },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimumVisible", "maximumVisible", "directRelevanceThreshold", "rule"],
+      "properties": {
+        "minimumVisible": { "const": 3 },
+        "maximumVisible": { "const": 4 },
+        "directRelevanceThreshold": { "const": 80 },
+        "rule": { "type": "string", "minLength": 1 }
+      }
+    },
+    "items": { "type": "array", "minItems": 3, "items": { "$ref": "#/$defs/item" } }
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "lane", "idea", "title", "titleKo", "authors", "venue", "year", "doi", "url", "directRelevance", "evidenceLevel", "summary", "fit", "validationStatus", "publicSafe"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "lane": { "enum": ["yuna", "goyounjung"] },
+        "idea": { "enum": ["educator-judgment", "learner-agency"] },
+        "title": { "type": "string", "minLength": 1 },
+        "titleKo": { "type": "string", "minLength": 1 },
+        "authors": { "type": "string", "minLength": 1 },
+        "venue": { "type": "string", "minLength": 1 },
+        "year": { "type": "integer", "minimum": 1900, "maximum": 2100 },
+        "doi": { "type": "string", "pattern": "^10\\." },
+        "url": { "type": "string", "pattern": "^https://doi\\.org/" },
+        "directRelevance": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "evidenceLevel": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string", "minLength": 1 },
+        "fit": { "type": "string", "minLength": 1 },
+        "validationStatus": { "enum": ["GO", "HOLD"] },
+        "publicSafe": { "const": true }
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type WheelEvent } from 'react'
 import { fallbackHomeVisualSet, loadHomeVisualSet, type HomeVisualItem, type HomeVisualSet } from './homeVisualSet'
 import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type ResearchBoardItem } from './researchBoard'
+import { fallbackPaperIdeaShortlist, loadPaperIdeaShortlist, type PaperIdeaShortlist, type PaperIdeaShortlistItem } from './paperIdeaShortlist'
 import { GraphRelationshipPanel, MonthlyResearchSynthesisPanel, ObdGrowthTimelinePanel } from './extendedPanels'
 import { fallbackChrisArchive, loadChrisArchive, type ChrisArchiveItem, type ChrisArchiveManifest } from './chrisArchive'
 import { fallbackDnaArchive, loadDnaArchive, loadMidjourneyDnaArchive, type DnaArchiveItem, type DnaArchiveManifest } from './dnaArchive'
@@ -217,6 +218,7 @@ const automationLoops: AutomationLoop[] = [
   { owner: 'Karina', name: '밤 웜 노트', rhythm: '매일 22:00 KST', status: 'ok', delivery: 'Telegram', note: '회복과 정리를 돕는 짧은 인사', schedulerActive: true },
   { owner: 'Yuna', name: 'AI/AX 직무 영향 리서치', rhythm: '수·금 09:15 KST', status: 'ok', delivery: 'Telegram', note: '국내외 직무·산업 변화 신호 조사' },
   { owner: 'Yuna', name: '3-item AI/AX 리서치', rhythm: '매일 09:30 KST', status: 'ok', delivery: 'Telegram', note: '글로벌·한국·패키지 관점 신호 선별' },
+  { owner: 'Yuna · GoYJ', name: '논문 아이디어 우선 shortlist', rhythm: '월·금', status: 'ok', delivery: 'Pages', note: '교육자 판단권·학습자 계획/성찰/통제권과 직접 관련된 3~4편만 공개; Muyeol GO 없이는 갱신하지 않음' },
   { owner: 'GoYJ', name: 'Hermes DNA 그래픽 모티프', rhythm: '월·수·금 10:15 KST', status: 'ok', delivery: 'Telegram', note: 'Design DNA용 그래픽 후보 생성' },
   { owner: 'GoYJ', name: '디자인 직무 영향 리서치', rhythm: '수·금 09:25 KST', status: 'ok', delivery: 'Telegram', note: 'AI/AX와 디자인 역할 변화 해석' },
   { owner: 'GoYJ', name: '3-item UX·디자인 리서치', rhythm: '매일 09:40 KST', status: 'ok', delivery: 'Telegram', note: 'UX·디자인 관점의 세 가지 신호 선별' },
@@ -224,16 +226,16 @@ const automationLoops: AutomationLoop[] = [
   { owner: 'Son', name: 'AI/AX SNS 시장 요약', rhythm: '수·금 09:50 KST', status: 'ok', delivery: 'Telegram', note: '검증된 신호를 읽기 쉬운 시장 요약으로 정리' },
   { owner: 'Son', name: 'Threads 검토용 초안', rhythm: '주 3회', status: 'ok', delivery: 'Telegram', note: 'AI/AX·디자인·교육 관점의 검토용 Threads 초안을 전달' },
   { owner: 'Son', name: 'Career 주간 전체 모니터링', rhythm: '월 08:00 KST', status: 'ok', delivery: 'Pages · Direct report', note: '대학·기업·글로벌 공고를 검증해 Career 업데이트와 요약 보고로 연결', schedulerActive: true },
-  { owner: 'Faker', name: '주간 Research 1-pick·트렌드 갱신', rhythm: '월 00:00 KST', status: 'ok', delivery: 'Telegram', note: '주간 리서치 보드의 선택과 흐름 점검' },
+  { owner: 'Faker', name: '주간 Research 1-pick·트렌드 갱신', rhythm: '월 00:00 KST', status: 'ok', delivery: 'Telegram', note: '논문 shortlist와 한 번의 검증된 주간 발행으로 묶어 중복 배포를 피함' },
   { owner: 'Faker', name: 'AI/AX job-shift 탭 통합', rhythm: '수·금 09:45 KST', status: 'ok', delivery: 'Telegram', note: 'AI·디자인·시장 신호를 탭과 근거 그래프로 누적' },
   { owner: 'Faker', name: 'Muyeol 1-pick 리서치 보드 배포', rhythm: '금 10:45 KST', status: 'ok', delivery: 'Telegram', note: '검증된 주간 1-pick을 Research Board에 반영' },
   { owner: 'Faker', name: '자동화 보드 주간 갱신', rhythm: '월 10:10 KST', status: 'needs-check', delivery: 'Telegram', note: '운영 현황을 다음 주 기준으로 점검', schedulerActive: true },
   { owner: 'Muyeol', name: 'AI/AX job-shift 루프 검증', rhythm: '금 09:55 KST', status: 'ok', delivery: 'Telegram', note: '소스·리스크·구조를 주간 검증' },
   { owner: 'Muyeol', name: '주간 1-pick 검증', rhythm: '금 10:20 KST', status: 'ok', delivery: 'Telegram', note: '리서치 후보 중 한 가지 주간 학습을 검증' },
-  { owner: 'Muyeol', name: '주간 웹앱 데이터 점검', rhythm: '월 09:40 KST', status: 'ok', delivery: 'Telegram', note: '공개 데이터·manifest 상태를 주간 점검', schedulerActive: true },
+  { owner: 'Muyeol', name: '주간 웹앱 데이터 점검', rhythm: '월 09:40 KST', status: 'ok', delivery: 'Telegram', note: '월요일에도 공개 데이터·manifest를 검증하며, 실패/보류 시 새 shortlist는 배포하지 않음', schedulerActive: true },
 ]
 
-const automationOwnerOrder = ['Karina', 'Yuna', 'GoYJ', 'Son', 'Faker', 'Muyeol']
+const automationOwnerOrder = ['Karina', 'Yuna', 'Yuna · GoYJ', 'GoYJ', 'Son', 'Faker', 'Muyeol']
 const automationSummary = {
   registered: automationLoops.length,
   active: automationLoops.filter((loop) => loop.schedulerActive).length,
@@ -1767,6 +1769,7 @@ function sourceAccessLabel(item: ResearchBoardItem) {
 
 function ResearchKanbanPanel({ selectedResearchId }: { selectedResearchId?: string }) {
   const [board, setBoard] = useState<ResearchBoard>(fallbackResearchBoard)
+  const [paperIdeaShortlist, setPaperIdeaShortlist] = useState<PaperIdeaShortlist>(fallbackPaperIdeaShortlist)
   const [selectedId, setSelectedId] = useState('')
   const [validatedStackOrder, setValidatedStackOrder] = useState<string[]>([])
   const [isValidatedMarqueePaused, setIsValidatedMarqueePaused] = useState(false)
@@ -1803,6 +1806,9 @@ function ResearchKanbanPanel({ selectedResearchId }: { selectedResearchId?: stri
         const currentStillExists = loadedBoard.items.some((item) => item.id === currentId)
         return currentStillExists ? currentId : getTopResearchItemForCurrentWeek(loadedBoard.items)?.id ?? ''
       })
+    })
+    loadPaperIdeaShortlist().then((loadedShortlist) => {
+      if (isMounted) setPaperIdeaShortlist(loadedShortlist)
     })
 
     return () => {
@@ -1941,6 +1947,28 @@ function ResearchKanbanPanel({ selectedResearchId }: { selectedResearchId?: stri
 
   return (
     <div className="research-board-grid" aria-label="Chronological research kanban board">
+      <section className="content-card paper-idea-shortlist-card" aria-label="Dissertation idea priority paper shortlist">
+        <div className="paper-idea-shortlist-header">
+          <div>
+            <p className="card-kicker">Paper idea priority shortlist</p>
+            <h3>교육자의 판단권과 학습자의 통제권을 위한 검증 논문</h3>
+            <p>두 논문 아이디어에 직접 관련된 공개 안전 shortlist입니다. 관련성 {paperIdeaShortlist.selection.directRelevanceThreshold}/100 이상, 검증 GO인 항목만 최대 {paperIdeaShortlist.selection.maximumVisible}편까지 보입니다.</p>
+          </div>
+          <span className="paper-idea-count">{paperIdeaShortlist.items.length} / {paperIdeaShortlist.selection.maximumVisible} 공개</span>
+        </div>
+        <p className="paper-idea-rule">{paperIdeaShortlist.items.length < paperIdeaShortlist.selection.maximumVisible ? '강한 관련성이 부족하면 네 번째 항목을 억지로 채우지 않습니다.' : '네 항목 모두 직접 관련성 기준과 공개 검증 상태를 충족합니다.'}</p>
+        <div className="paper-idea-shortlist-grid">
+          {paperIdeaShortlist.items.map((item: PaperIdeaShortlistItem) => (
+            <article className="paper-idea-shortlist-item" key={item.id}>
+              <div className="paper-idea-badges"><span>{item.idea === 'educator-judgment' ? 'A · 교육자 판단권' : 'B · 학습자 통제권'}</span><strong>{item.directRelevance}/100</strong></div>
+              <h4>{item.title}</h4><p className="paper-idea-title-ko">{item.titleKo}</p><p>{item.summary}</p><p className="paper-idea-fit">{item.fit}</p>
+              <footer><span>{item.authors} · {item.venue} · {item.year}</span><span>{item.evidenceLevel} · {item.validationStatus}</span></footer>
+              <a href={item.url} target="_blank" rel="noreferrer">DOI {item.doi}</a>
+            </article>
+          ))}
+        </div>
+        <p className="paper-idea-validation-note">검증이 HOLD이거나 공개 안전 계약을 통과하지 못하면 새 항목을 발행하지 않고 이전 검증본을 유지합니다.</p>
+      </section>
       <article className="content-card research-board-brief">
         <p className="card-kicker">Research loop archive</p>
         <h3>초창기 기록부터 시간순으로 보는 논문 칸반</h3>
