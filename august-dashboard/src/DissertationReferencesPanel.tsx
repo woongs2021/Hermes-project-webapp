@@ -35,7 +35,7 @@ const emptyManifest: ReferenceManifest = {
 
 const ideaLabel = (fit: IdeaFit) => fit === 'educator' ? 'Idea 01 · 교육자 AI 조교' : 'Idea 02 · 학습자 에이전트'
 const statusLabel = (status: string) => status.startsWith('GO') ? '검증 메모 있음' : status.startsWith('WATCH') ? '추가 확인 필요' : '후보 검토 중'
-const primaryHref = (value: string) => value.split(/\s*(?:;|\/)\s*/).find((part) => /^https?:\/\//.test(part)) ?? ''
+const sourceHrefs = (value: string) => [...new Set(value.match(/https?:\/\/[^\s;]+/g) ?? [])]
 
 function ReferenceTitle({ item }: { item: DissertationReference }) {
   return <><span className="research-title-en">{item.titleEn}</span><span className="research-title-ko">{item.titleKo}</span></>
@@ -58,6 +58,7 @@ export function DissertationReferencesPanel() {
 
   const visibleReferences = useMemo(() => manifest.allRelevantReferences.filter((item) => filter === 'all' || item.ideaFit === filter), [manifest, filter])
   const selected = manifest.allRelevantReferences.find((item) => item.referenceId === selectedId) ?? manifest.top10[0]
+  const selectedSourceHrefs = selected ? sourceHrefs(selected.urlOrDoi) : []
 
   return (
     <div className="research-board-grid dissertation-references-panel" aria-label="Dissertation references">
@@ -98,7 +99,7 @@ export function DissertationReferencesPanel() {
             <p><strong>논문 아이디어와의 연결</strong>{selected.fitRationaleKo}</p>
             {selected.evidenceBoundary ? <p><strong>근거 범위</strong>{selected.evidenceBoundary}</p> : null}
             <div className="metadata-grid"><span>검토 상태: {selected.verificationStatus}</span><span>접근 범위: {selected.sourceAccess ?? selected.sourceAccessNote ?? '원천 미기록'}</span></div>
-            <div className="research-source-row"><p><strong>Source / DOI</strong>{selected.urlOrDoi}</p>{primaryHref(selected.urlOrDoi) ? <a className="research-source-link" href={primaryHref(selected.urlOrDoi)} target="_blank" rel="noreferrer">공개 소스 열기</a> : null}</div>
+            <div className="research-source-row"><p><strong>Source / DOI</strong>{selected.urlOrDoi}</p><div className="dissertation-source-actions">{selectedSourceHrefs.map((href, index) => <a className="dissertation-source-button" key={href} href={href} target="_blank" rel="noreferrer">{selectedSourceHrefs.length === 1 ? '논문 원문 바로가기' : `논문 원문 ${index + 1} 바로가기`} <span aria-hidden="true">↗</span></a>)}</div></div>
           </div>
         </article>
       ) : null}

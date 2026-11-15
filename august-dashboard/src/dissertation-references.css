@@ -65,3 +65,33 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+
+.dissertation-source-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.dissertation-source-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  padding: 9px 12px;
+  color: var(--accent-ink, var(--ink));
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  background: color-mix(in srgb, var(--accent) 13%, var(--panel-surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 56%, var(--line));
+  border-radius: 999px;
+}
+
+.dissertation-source-button:hover,
+.dissertation-source-button:focus-visible {
+  color: var(--panel-surface);
+  background: var(--accent);
+  outline: none;
+}
