@@ -97,7 +97,7 @@ function validateManifest(manifest) {
   assertPublicSafe(manifest, 'manifest')
   if (manifest.version !== 1) fail('manifest.version must be 1')
   assertIso(manifest.generatedAt, 'manifest.generatedAt')
-  if (!Array.isArray(manifest.jobs) || manifest.jobs.length === 0) fail('manifest.jobs must be a non-empty array')
+  if (!Array.isArray(manifest.jobs)) fail('manifest.jobs must be an array')
   const ids = new Set()
   manifest.jobs.forEach((job, index) => validateJob(job, index, ids))
   assertObject(manifest.watchlists, 'manifest.watchlists')
