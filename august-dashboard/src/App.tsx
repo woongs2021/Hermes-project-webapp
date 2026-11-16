@@ -203,42 +203,46 @@ type AutomationLoop = {
   owner: string
   name: string
   rhythm: string
+  nextRun: string
   status: AutomationLoopStatus
   delivery: string
+  cost: string
   note: string
-  schedulerActive?: boolean
 }
 
-// Public-safe team-loop inventory. `schedulerActive` reflects the schedules
-// currently visible to Hermes; the full inventory preserves the team operating loops.
+// Public-safe snapshot of enabled Hermes schedules, refreshed 2026-11-16 KST.
+// It intentionally excludes scheduler IDs, private destinations, paths, and raw logs.
 const automationLoops: AutomationLoop[] = [
-  { owner: 'Karina', name: '아침 날씨·웜 노트', rhythm: '매일 09:00 KST', status: 'ok', delivery: 'Telegram', note: '하루를 짧고 다정하게 여는 브리핑', schedulerActive: true },
-  { owner: 'Karina', name: '점심 웜 노트', rhythm: '매일 12:00 KST', status: 'ok', delivery: 'Telegram', note: '점심 무렵의 가벼운 리셋', schedulerActive: true },
-  { owner: 'Karina', name: '저녁 웜 노트', rhythm: '매일 18:00 KST', status: 'ok', delivery: 'Telegram', note: '저녁의 부드러운 마감 메시지', schedulerActive: true },
-  { owner: 'Karina', name: '밤 웜 노트', rhythm: '매일 22:00 KST', status: 'ok', delivery: 'Telegram', note: '회복과 정리를 돕는 짧은 인사', schedulerActive: true },
-  { owner: 'Yuna', name: 'AI/AX 직무 영향 리서치', rhythm: '수·금 09:15 KST', status: 'ok', delivery: 'Telegram', note: '국내외 직무·산업 변화 신호 조사' },
-  { owner: 'Yuna', name: '3-item AI/AX 리서치', rhythm: '매일 09:30 KST', status: 'ok', delivery: 'Telegram', note: '글로벌·한국·패키지 관점 신호 선별' },
-  { owner: 'Yuna · GoYJ', name: '논문 아이디어 우선 shortlist', rhythm: '월·금', status: 'ok', delivery: 'Pages', note: '교육자 판단권·학습자 계획/성찰/통제권과 직접 관련된 3~4편만 공개; Muyeol GO 없이는 갱신하지 않음' },
-  { owner: 'GoYJ', name: 'Hermes DNA 그래픽 모티프', rhythm: '월·수·금 10:15 KST', status: 'ok', delivery: 'Telegram', note: 'Design DNA용 그래픽 후보 생성' },
-  { owner: 'GoYJ', name: '디자인 직무 영향 리서치', rhythm: '수·금 09:25 KST', status: 'ok', delivery: 'Telegram', note: 'AI/AX와 디자인 역할 변화 해석' },
-  { owner: 'GoYJ', name: '3-item UX·디자인 리서치', rhythm: '매일 09:40 KST', status: 'ok', delivery: 'Telegram', note: 'UX·디자인 관점의 세 가지 신호 선별' },
-  { owner: 'Son', name: 'AI/AX 비즈니스 시장 변화', rhythm: '수·금 09:35 KST', status: 'ok', delivery: 'Telegram', note: '리서치 결과를 시장 변화로 번역' },
-  { owner: 'Son', name: 'AI/AX SNS 시장 요약', rhythm: '수·금 09:50 KST', status: 'ok', delivery: 'Telegram', note: '검증된 신호를 읽기 쉬운 시장 요약으로 정리' },
-  { owner: 'Son', name: 'Threads 검토용 초안', rhythm: '주 3회', status: 'ok', delivery: 'Telegram', note: 'AI/AX·디자인·교육 관점의 검토용 Threads 초안을 전달' },
-  { owner: 'Son', name: 'Career 주간 전체 모니터링', rhythm: '월 08:00 KST', status: 'ok', delivery: 'Pages · Direct report', note: '대학·기업·글로벌 공고를 검증해 Career 업데이트와 요약 보고로 연결', schedulerActive: true },
-  { owner: 'Faker', name: '주간 Research 1-pick·트렌드 갱신', rhythm: '월 00:00 KST', status: 'ok', delivery: 'Telegram', note: '논문 shortlist와 한 번의 검증된 주간 발행으로 묶어 중복 배포를 피함' },
-  { owner: 'Faker', name: 'AI/AX job-shift 탭 통합', rhythm: '수·금 09:45 KST', status: 'ok', delivery: 'Telegram', note: 'AI·디자인·시장 신호를 탭과 근거 그래프로 누적' },
-  { owner: 'Faker', name: 'Muyeol 1-pick 리서치 보드 배포', rhythm: '금 10:45 KST', status: 'ok', delivery: 'Telegram', note: '검증된 주간 1-pick을 Research Board에 반영' },
-  { owner: 'Faker', name: '자동화 보드 주간 갱신', rhythm: '월 10:10 KST', status: 'needs-check', delivery: 'Telegram', note: '운영 현황을 다음 주 기준으로 점검', schedulerActive: true },
-  { owner: 'Muyeol', name: 'AI/AX job-shift 루프 검증', rhythm: '금 09:55 KST', status: 'ok', delivery: 'Telegram', note: '소스·리스크·구조를 주간 검증' },
-  { owner: 'Muyeol', name: '주간 1-pick 검증', rhythm: '금 10:20 KST', status: 'ok', delivery: 'Telegram', note: '리서치 후보 중 한 가지 주간 학습을 검증' },
-  { owner: 'Muyeol', name: '주간 웹앱 데이터 점검', rhythm: '월 09:40 KST', status: 'ok', delivery: 'Telegram', note: '월요일에도 공개 데이터·manifest를 검증하며, 실패/보류 시 새 shortlist는 배포하지 않음', schedulerActive: true },
+  { owner: 'Karina', name: '아침 날씨·웜 노트', rhythm: '매일 09:00 KST', nextRun: '화 09:00 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '에이전트 실행', note: '하루를 짧고 다정하게 여는 브리핑' },
+  { owner: 'Karina', name: '점심 웜 노트', rhythm: '매일 12:00 KST', nextRun: '월 12:00 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '에이전트 실행', note: '점심 무렵의 가벼운 리셋' },
+  { owner: 'Karina', name: '저녁 웜 노트', rhythm: '매일 18:00 KST', nextRun: '월 18:00 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '에이전트 실행', note: '저녁의 부드러운 마감 메시지' },
+  { owner: 'Karina', name: '밤 웜 노트', rhythm: '매일 22:00 KST', nextRun: '월 22:00 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '에이전트 실행', note: '회복과 정리를 돕는 짧은 인사' },
+  { owner: 'Yuna', name: 'AI/AX 직무 영향 리서치', rhythm: '수·금 09:15 KST', nextRun: '수 09:15 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '리서치 실행', note: '국내외 직무·산업 변화 신호 조사' },
+  { owner: 'Yuna', name: '논문 아이디어 근거 리서치', rhythm: '매일 09:30 KST', nextRun: '화 09:30 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '리서치 실행', note: '교육과 학습자 지원에 맞는 검증 후보 선별' },
+  { owner: 'GoYJ', name: 'Hermes DNA 그래픽 모티프', rhythm: '월·수·금 10:15 KST', nextRun: '월 10:15 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '이미지 생성', note: 'Design DNA용 그래픽 후보 생성' },
+  { owner: 'GoYJ', name: '디자인 직무 영향 리서치', rhythm: '수·금 09:25 KST', nextRun: '수 09:25 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '리서치 실행', note: 'AI/AX와 디자인 역할 변화 해석' },
+  { owner: 'GoYJ', name: 'UX·디자인 논문 근거 리서치', rhythm: '매일 09:40 KST', nextRun: '월 09:40 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '리서치 실행', note: 'UX·디자인 관점의 검증 후보 선별' },
+  { owner: 'Son', name: 'AI/AX SNS 최종 요약', rhythm: '수·금 09:50 KST', nextRun: '수 09:50 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '에이전트 실행', note: '검증된 신호를 읽기 쉬운 시장 요약으로 정리' },
+  { owner: 'Son', name: 'AI/AX 비즈니스 시장 변화', rhythm: '수·금 09:35 KST', nextRun: '수 09:35 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '리서치 실행', note: '리서치 결과를 시장 변화로 번역' },
+  { owner: 'Son', name: 'Threads 검토용 초안', rhythm: '월·수·금 09:30 KST', nextRun: '수 09:30 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '에이전트 실행', note: 'AI·디자인·교육 관점의 검토용 초안 전달' },
+  { owner: 'Son', name: 'Career 주간 전체 모니터링', rhythm: '월 08:00 KST', nextRun: '다음 월 08:00 KST', status: 'ok', delivery: '공개 페이지·보고', cost: '리서치·배포', note: '대학·기업·글로벌 공고를 보수적으로 확인' },
+  { owner: 'Son', name: 'Career 국내·대학 사전 점검', rhythm: '월 07:30 KST', nextRun: '다음 월 07:30 KST', status: 'ok', delivery: '내부 핸드오프', cost: '리서치 실행', note: '공개 전 공식 출처 기반의 국내 점검' },
+  { owner: 'Son', name: 'Career 글로벌 A 사전 점검', rhythm: '월 07:40 KST', nextRun: '다음 월 07:40 KST', status: 'ok', delivery: '내부 핸드오프', cost: '리서치 실행', note: '글로벌 대상군 A의 공식 공고 점검' },
+  { owner: 'Son', name: 'Career 글로벌 B 사전 점검', rhythm: '월 07:50 KST', nextRun: '다음 월 07:50 KST', status: 'ok', delivery: '내부 핸드오프', cost: '리서치 실행', note: '글로벌 대상군 B의 공식 공고 점검' },
+  { owner: 'Faker', name: '논문 아이디어 shortlist 발행', rhythm: '월 10:15 KST', nextRun: '월 10:15 KST', status: 'ok', delivery: '공개 페이지·보고', cost: '빌드·배포', note: '검증 승인된 후보만 공개 shortlist에 반영' },
+  { owner: 'Faker', name: 'AI/AX job-shift 탭 통합', rhythm: '수·금 09:45 KST', nextRun: '수 09:45 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '에이전트 실행', note: 'AI·디자인·시장 신호를 근거 구조로 누적' },
+  { owner: 'Faker', name: '논문 아이디어 shortlist 금요일 발행', rhythm: '금 10:45 KST', nextRun: '금 10:45 KST', status: 'ok', delivery: '공개 페이지·보고', cost: '빌드·배포', note: '검증 승인된 후보만 주간 공개에 반영' },
+  { owner: 'Faker', name: 'Career 공개 검증·발행', rhythm: '월 08:35 KST', nextRun: '다음 월 08:35 KST', status: 'ok', delivery: '공개 페이지·보고', cost: '빌드·배포', note: '안전한 주간 Career 데이터만 검증·발행' },
+  { owner: 'Faker', name: '자동화 보드 주간 갱신', rhythm: '월 10:10 KST', nextRun: '다음 월 10:10 KST', status: 'ok', delivery: '공개 페이지·보고', cost: '빌드·배포', note: '활성 운영 루프의 공개 안전 현황 갱신' },
+  { owner: 'Muyeol', name: 'AI/AX job-shift 루프 검증', rhythm: '금 09:55 KST', nextRun: '금 09:55 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '소스·리스크·구조를 주간 검증' },
+  { owner: 'Muyeol', name: '논문 아이디어 shortlist 사전 검증', rhythm: '금 10:20 KST', nextRun: '금 10:20 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '공개 전 근거와 안전 경계를 확인' },
+  { owner: 'Muyeol', name: '주간 웹앱·Career 사전 검증', rhythm: '월 10:00 KST', nextRun: '다음 월 10:00 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '월요일 공개 전 데이터와 경계를 확인' },
+  { owner: 'Muyeol', name: '주간 웹앱 데이터 수량 점검', rhythm: '월 09:40 KST', nextRun: '다음 월 09:40 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '공개 데이터 수량과 빌드 상태를 점검' },
 ]
 
-const automationOwnerOrder = ['Karina', 'Yuna', 'Yuna · GoYJ', 'GoYJ', 'Son', 'Faker', 'Muyeol']
+const automationOwnerOrder = ['Karina', 'Yuna', 'GoYJ', 'Son', 'Faker', 'Muyeol']
 const automationSummary = {
-  registered: automationLoops.length,
-  active: automationLoops.filter((loop) => loop.schedulerActive).length,
+  active: automationLoops.length,
   healthy: automationLoops.filter((loop) => loop.status === 'ok').length,
   needsCheck: automationLoops.filter((loop) => loop.status === 'needs-check').length,
   paused: automationLoops.filter((loop) => loop.status === 'paused').length,
@@ -1129,12 +1133,12 @@ function AutomationBoardPanel() {
         <div>
           <p className="card-kicker">Automation Loop Status</p>
           <h3>팀의 운영 루프 현황</h3>
-          <p>등록된 팀 루프와 Hermes 스케줄러에서 현재 확인되는 실제 실행 루프를 분리해 보여줍니다.</p>
+          <p>현재 활성화된 Hermes 운영 루프만 반영한 공개 안전 상태입니다. 다음 실행 시각은 KST 기준입니다.</p>
         </div>
         <div className="automation-summary-grid" aria-label="Automation summary metrics">
-          <span><strong>{automationSummary.registered}</strong><em>registered</em></span>
-          <span><strong>{automationSummary.active}</strong><em>scheduler active</em></span>
-          <span><strong>{automationSummary.needsCheck}</strong><em>check</em></span>
+          <span><strong>{automationSummary.active}</strong><em>active</em></span>
+          <span><strong>{automationSummary.healthy}</strong><em>ok</em></span>
+          <span><strong>{automationSummary.needsCheck}</strong><em>needs check</em></span>
           <span><strong>{automationSummary.paused}</strong><em>paused</em></span>
         </div>
       </div>
@@ -1151,7 +1155,7 @@ function AutomationBoardPanel() {
                   <article className="automation-loop-row" key={`${loop.owner}-${loop.name}`}>
                     <div className="automation-loop-main"><strong>{loop.name}</strong><p>{loop.note}</p></div>
                     <div className="automation-loop-meta" aria-label={`${loop.name} metadata`}>
-                      <span>{loop.rhythm}</span><span>{loop.delivery}</span><AutomationStatusLabel status={loop.status} />
+                      <span>{loop.rhythm}</span><span>다음 {loop.nextRun}</span><span>{loop.delivery}</span><span>{loop.cost}</span><AutomationStatusLabel status={loop.status} />
                     </div>
                   </article>
                 ))}
@@ -1166,16 +1170,17 @@ function AutomationBoardPanel() {
 
 function WeeklyTeamPrinciplesPanel() {
   return (
-    <section className="content-card weekly-automation-summary" aria-label="Hermes team working principles">
+    <section className="content-card weekly-automation-summary" aria-label="Hermes operating status">
       <div>
-        <p className="card-kicker">Team working principles</p>
-        <h3>리서치 결과를 다음 판단으로 잇는 공통 원칙</h3>
-        <p>공개 화면은 현재 운영 현황 대신, 팀이 근거를 해석하고 검토하는 방식을 간결하게 설명합니다.</p>
+        <p className="card-kicker">Hermes operating status</p>
+        <h3>이번 주, {automationSummary.active}개의 루프가 함께 움직입니다</h3>
+        <p>Team의 Automation Board와 같은 활성 스케줄 스냅샷입니다. 공개 화면에는 운영 역할과 상태만 담습니다.</p>
       </div>
-      <div className="weekly-automation-metrics" aria-label="Team working principles">
-        {teamWorkingPrinciples.slice(0, 3).map((principle) => (
-          <span key={principle.title}><strong>{principle.title}</strong><em>{principle.description}</em></span>
-        ))}
+      <div className="weekly-automation-metrics" aria-label="Hermes operating status metrics">
+        <span><strong>{automationSummary.active}</strong><em>active loops</em></span>
+        <span><strong>{automationSummary.healthy}</strong><em>ok</em></span>
+        <span><strong>{automationSummary.needsCheck}</strong><em>needs check</em></span>
+        <span><strong>{automationSummary.paused}</strong><em>paused</em></span>
       </div>
     </section>
   )
