@@ -3412,6 +3412,7 @@ function App() {
       const navBox = nav.getBoundingClientRect()
       const buttonBox = activeButton.getBoundingClientRect()
       nav.style.setProperty('--workspace-tab-indicator-left', `${buttonBox.left - navBox.left + nav.scrollLeft}px`)
+      nav.style.setProperty('--workspace-tab-indicator-top', `${buttonBox.bottom - navBox.top + nav.scrollTop - 2}px`)
       nav.style.setProperty('--workspace-tab-indicator-width', `${buttonBox.width}px`)
       nav.style.setProperty('--workspace-tab-indicator-opacity', '1')
     }
