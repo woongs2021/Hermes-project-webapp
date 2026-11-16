@@ -34,7 +34,7 @@ const fallbackReport: AxWeeklyReport = {
   status: 'awaiting_first_qualified_week',
   week: null,
   generatedAt: null,
-  sourcePolicy: '공개 접근 가능한 신뢰 출처의 짧은 자체 요약만 포함하며 개인·비공개·원시 조사 데이터는 포함하지 않습니다.',
+  sourcePolicy: '공개 접근 가능한 신뢰 출처의 짧은 자체 요약만 포함하며 개인·비공개·원시 조사 데이터는 포함하지 않는다.',
   cases: [],
 }
 
@@ -69,7 +69,7 @@ export function AxCaseWeeklyReportPanel() {
       <header className="ax-case-report-intro">
         <p className="card-kicker">Public AX case report</p>
         <h3>국내외 AX 사례를, 도입 사실과 해석의 경계를 나눠 읽는다</h3>
-        <p>월·수·금에 확인한 공개 사례 중, 중복되지 않고 출처·업무 변화·한계를 확인할 수 있는 국내 1건과 해외 1건 이상만 주간 리포트로 남겨. 결과를 과장하지 않고, 실제 업무 흐름에서 무엇이 바뀌었는지를 중심으로 읽어.</p>
+        <p>월·수·금에 확인한 공개 사례 중, 중복되지 않고 출처·업무 변화·한계를 확인할 수 있는 국내 1건과 해외 1건 이상만 주간 리포트로 남긴다. 결과를 과장하지 않고, 실제 업무 흐름에서 무엇이 바뀌었는지를 중심으로 읽는다.</p>
         <div className="ax-case-report-meta" aria-label="AX 사례 리포트 상태">
           <span>{report.week ? `Week ${report.week}` : '첫 공개 리포트 대기'}</span>
           <span>{report.generatedAt ? `발행 ${new Date(report.generatedAt).toLocaleDateString('ko-KR')}` : '금요일 적격 사례 확인 후 발행'}</span>
@@ -77,12 +77,12 @@ export function AxCaseWeeklyReportPanel() {
         </div>
       </header>
 
-      {loadError ? <p className="ax-case-report-notice">이번 주 리포트를 불러오지 못했습니다. 다음 검증된 공개본을 유지합니다.</p> : null}
+      {loadError ? <p className="ax-case-report-notice">이번 주 리포트를 불러오지 못했다. 직전 검증 공개본을 유지한다.</p> : null}
       {report.status === 'awaiting_first_qualified_week' ? (
         <section className="ax-case-report-empty">
           <p className="card-kicker">Qualifying set required</p>
-          <h4>첫 리포트는 국내 1건·해외 1건이 모두 확인될 때만 공개해.</h4>
-          <p>기준을 충족하지 못한 회차에는 빈 사례를 채우지 않고, 다음 조사 회차까지 기다려. 공개 전에는 중복 여부, 원문 링크, 공개 범위와 주장 한계를 다시 확인해.</p>
+          <h4>첫 리포트는 국내 1건·해외 1건이 모두 확인될 때만 공개한다.</h4>
+          <p>기준을 충족하지 못한 회차에는 빈 사례를 채우지 않고, 다음 조사 회차까지 기다린다. 공개 전에는 중복 여부, 원문 링크, 공개 범위와 주장 한계를 다시 확인한다.</p>
         </section>
       ) : (
         <div className="ax-case-report-groups">
