@@ -10021,6 +10021,49 @@
   line-height: 1.75;
 }
 
+/* AX Cases: a source-led weekly reading surface, calm before the first qualified release. */
+.ax-case-report-shell { width: min(100%, 1020px); margin: 0 auto; }
+.ax-case-report-intro,
+.ax-case-report-empty,
+.ax-case-report-region,
+.ax-case-report-policy {
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
+}
+.ax-case-report-intro { padding: clamp(24px, 5vw, 48px); }
+.ax-case-report-intro h3 { max-width: 720px; margin: 8px 0 14px; color: var(--ink); font-size: clamp(1.55rem, 3.4vw, 2.8rem); letter-spacing: -0.062em; line-height: 1.05; }
+.ax-case-report-intro > p:not(.card-kicker) { max-width: 700px; margin: 0; color: var(--muted-ink); line-height: 1.8; }
+.ax-case-report-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.ax-case-report-meta span,
+.ax-case-report-region-heading span { padding: 6px 9px; border-radius: 999px; background: color-mix(in srgb, var(--primary) 8%, var(--surface)); color: var(--primary); font-size: 0.74rem; font-weight: 750; }
+.ax-case-report-empty,
+.ax-case-report-notice { margin-top: 18px; padding: 26px; }
+.ax-case-report-empty h4 { margin: 6px 0 10px; color: var(--ink); font-size: 1.12rem; }
+.ax-case-report-empty p:not(.card-kicker),
+.ax-case-report-notice,
+.ax-case-report-policy { color: var(--muted-ink); line-height: 1.75; }
+.ax-case-report-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 18px; }
+.ax-case-report-region { padding: 22px; }
+.ax-case-report-region-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 16px; border-bottom: 1px solid var(--stroke); }
+.ax-case-report-region-heading .card-kicker { margin: 0; }
+.ax-case-card { padding: 22px 0; border-bottom: 1px solid var(--stroke); }
+.ax-case-card:last-child { padding-bottom: 0; border-bottom: 0; }
+.ax-case-card-topline,
+.ax-case-card-source { display: flex; flex-wrap: wrap; gap: 7px; color: var(--muted-ink); font-size: 0.76rem; }
+.ax-case-card-topline span:first-child { color: var(--primary); font-weight: 750; }
+.ax-case-card h4 { margin: 10px 0 8px; font-size: 1.1rem; line-height: 1.4; }
+.ax-case-card h4 a,
+.ax-case-card-source a { color: var(--ink); text-decoration-color: color-mix(in srgb, var(--primary) 65%, transparent); text-underline-offset: 4px; }
+.ax-case-card-source a { color: var(--primary); font-weight: 750; }
+.ax-case-card-source span { color: var(--muted-ink); }
+.ax-case-card dl { display: grid; gap: 12px; margin: 18px 0 0; }
+.ax-case-card dl div { padding-left: 12px; border-left: 2px solid color-mix(in srgb, var(--primary) 26%, var(--stroke)); }
+.ax-case-card dt { color: var(--ink); font-size: 0.76rem; font-weight: 780; }
+.ax-case-card dd { margin: 4px 0 0; color: var(--muted-ink); font-size: 0.86rem; line-height: 1.7; }
+.ax-case-report-policy { margin-top: 18px; padding: 16px 18px; font-size: 0.78rem; }
+@media (max-width: 760px) { .ax-case-report-groups { grid-template-columns: 1fr; } .ax-case-report-intro, .ax-case-report-region { padding: 20px; } }
+
 @media (max-width: 640px) {
   .personal-ax-report-controls { align-items: flex-start; flex-direction: column; }
   .personal-ax-report-article { border-radius: 14px; }

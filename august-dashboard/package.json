@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm run generate:data && vite",
     "generate:data": "npm run generate:manifest && npm run generate:home-visuals && npm run generate:research-board",
-    "validate:data": "npm run validate:manifest && npm run validate:home-visuals && npm run validate:research-board && npm run validate:paper-idea-shortlist && npm run validate:public-dna && npm run validate:career-jobs",
+    "validate:data": "npm run validate:manifest && npm run validate:home-visuals && npm run validate:research-board && npm run validate:paper-idea-shortlist && npm run validate:public-dna && npm run validate:career-jobs && npm run validate:ax-weekly-report",
     "generate:manifest": "node scripts/generate-dashboard-manifest.mjs",
     "validate:manifest": "node scripts/validate-dashboard-manifest.mjs",
     "generate:home-visuals": "node scripts/generate-home-visual-set.mjs",
@@ -16,6 +16,7 @@
     "validate:paper-idea-shortlist": "node scripts/validate-paper-idea-shortlist.mjs",
     "validate:public-dna": "node scripts/validate-public-dna-archives.mjs",
     "validate:career-jobs": "node scripts/validate-career-jobs.mjs",
+    "validate:ax-weekly-report": "node scripts/validate-ax-weekly-report.mjs",
     "generate:team-pixel-avatars": "node --experimental-strip-types scripts/generate-team-pixel-avatars.mjs",
     "verify:team-pixel-avatars": "node --experimental-strip-types scripts/verify-team-pixel-avatars.mjs",
     "verify:team-atelier-sprites": "node scripts/verify-team-atelier-sprites.mjs",
