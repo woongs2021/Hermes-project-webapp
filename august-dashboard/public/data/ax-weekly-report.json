@@ -1,7 +1,48 @@
 {
   "version": 2,
   "publicSafe": true,
-  "status": "awaiting_first_qualified_week",
+  "status": "published",
   "sourcePolicy": "공개 접근 가능한 신뢰 출처의 짧은 자체 요약만 포함하며 개인·비공개·원시 조사 데이터는 포함하지 않는다.",
-  "releases": []
+  "releases": [
+    {
+      "week": "2026-W47",
+      "generatedAt": "2026-11-16T09:15:00Z",
+      "cases": [
+        {
+          "id": "2026-w47-skt-customer-support",
+          "region": "Korea",
+          "organization": "SK텔레콤",
+          "titleKo": "상담사 통화 중 지원과 통화 후 처리에 Claude를 적용한 고객지원 운영 사례",
+          "sourceTitle": "SK Telecom enhances customer support for millions of Koreans with Claude in Amazon Bedrock",
+          "sourceUrl": "https://claude.com/customers/skt",
+          "sourceName": "Anthropic 고객 사례",
+          "sourceType": "official",
+          "publishedAt": "2026",
+          "workflowKo": "고객센터 상담 지원 · 통화 후 처리",
+          "whatChangedKo": "SK텔레콤은 Claude를 상담사가 통화 중 활용하는 지원 흐름과 통화 후 처리에 적용했다. 원문은 상담사 평가 기준 LLM 응답 품질과 통화 후 처리 응답 품질을 별도로 제시한다.",
+          "evidenceKo": "Anthropic의 공개 고객 사례는 Amazon Bedrock 환경의 Claude 적용, 통화 중 지원과 통화 후 처리라는 사용 지점, 그리고 내부 평가 지표를 명시한다.",
+          "implicationKo": "고객지원 AX는 상담사를 대체한다는 단일 주장보다, 실시간 보조와 사후 정리처럼 책임과 검토 지점이 남는 업무 단위로 설계할 때 운영 경계를 더 분명히 볼 수 있다.",
+          "claimBoundaryKo": "공개 고객 사례의 자체 보고 내용이다. 비교 조건과 장기 고객 경험·인력 효과를 독립적으로 검증한 결과로 일반화하지 않는다.",
+          "publicSafe": true
+        },
+        {
+          "id": "2026-w47-stripe-claude-code-rollout",
+          "region": "Global",
+          "organization": "Stripe",
+          "titleKo": "보안 통제를 전제로 Claude Code를 전사 개발 환경에 배포한 사례",
+          "sourceTitle": "Stripe deploys Claude Code to 1,370 engineers with zero-configuration enterprise rollout",
+          "sourceUrl": "https://claude.com/customers/stripe",
+          "sourceName": "Anthropic 고객 사례",
+          "sourceType": "official",
+          "publishedAt": "2026",
+          "workflowKo": "개발 도구 배포 · 코드 마이그레이션",
+          "whatChangedKo": "Stripe는 서명된 엔터프라이즈 바이너리로 보안 우려를 해소한 뒤 Claude Code를 1,370명 개발자에게 기본 설정 없이 배포했고, Scala에서 Java로의 코드 마이그레이션에도 활용했다고 공개했다.",
+          "evidenceKo": "Anthropic의 공개 고객 사례는 전사 배포 규모, 서명 바이너리 도입 이유, 코드 마이그레이션 사례와 함께 개발자 교육 프로그램의 운영 방식을 명시한다.",
+          "implicationKo": "개발 AX의 핵심은 도구 접근성만이 아니라 보안 승인, 배포 표준, 사용 교육처럼 조직이 신뢰할 수 있는 운영 조건을 함께 설계하는 데 있다.",
+          "claimBoundaryKo": "공개 고객 사례의 자체 보고 내용이다. 특정 마이그레이션 사례를 모든 팀의 생산성·보안 효과로 일반화하지 않는다.",
+          "publicSafe": true
+        }
+      ]
+    }
+  ]
 }
