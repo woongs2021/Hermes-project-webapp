@@ -53,6 +53,18 @@ export function CareerPanel() {
   useEffect(() => { void loadCareerJobs().then(setManifest) }, [])
 
   const jobs = useMemo(() => manifest.jobs.filter((job) => filter === 'all' || job.category === filter), [filter, manifest.jobs])
+  const weeklyVerificationSummary = useMemo(() => {
+    const verifiedCompanies = Array.from(new Set(
+      Object.values(manifest.watchlists)
+        .flat()
+        .filter((item) => item.verificationState === 'verified_detail')
+        .map((item) => item.name),
+    ))
+    return {
+      verifiedCompanies,
+      publicCandidateCount: manifest.jobs.length,
+    }
+  }, [manifest.jobs.length, manifest.watchlists])
   const universityWatchlist: WatchlistGroup = {
     id: 'universities',
     title: '우선 대학',
@@ -78,6 +90,15 @@ export function CareerPanel() {
       <section className="content-card career-brief">
         <div><p className="card-kicker">Career 1st draft</p><h3>공식 상세로 확인된 기회만 차분히 봅니다</h3><p>후보 카드는 역할별 공식 공고 상세에서 확인된 항목만 표시합니다. 그 외 출처는 공식 watchlist에서 확인 상태로 분리합니다.</p><p className="career-source-policy">{manifest.sourcePolicy}</p></div>
         <div className="career-brief-meta"><span>검증 시각</span><strong>{formatCheckedAt(manifest.generatedAt)}</strong></div>
+      </section>
+
+      <section className="content-card career-weekly-summary" aria-label="이번 주 Career 검증 요약">
+        <header><p className="card-kicker">Weekly verification summary</p><h3>상세 확인과 공개 후보를 구분합니다</h3><p>공식 역할 상세가 열리는 것만으로는 추천 후보가 되지 않습니다. 역할·경력·한국 근무 또는 지원 자격까지 공식 상세에서 확인될 때만 후보 카드로 공개합니다.</p></header>
+        <div className="career-summary-metrics">
+          <article><span>공식 역할 상세 확인</span><strong>{weeklyVerificationSummary.verifiedCompanies.length}건</strong><p>{weeklyVerificationSummary.verifiedCompanies.length ? weeklyVerificationSummary.verifiedCompanies.join(' · ') : '확인된 역할 상세 없음'}</p></article>
+          <article><span>공개 후보 기준 충족</span><strong>{weeklyVerificationSummary.publicCandidateCount}건</strong><p>후보 카드는 역할별 근거가 모두 확인된 경우에만 표시합니다.</p></article>
+        </div>
+        <div className="career-candidate-criteria"><strong>공개 후보 기준</strong><ol><li>대상 범위에 맞는 역할</li><li>공식 상세에 명시된 시니어 경력 요건</li><li>한국 근무 또는 한국 지원 자격</li></ol></div>
       </section>
 
       <section className="content-card career-workflow" aria-label="Career monitoring workflow">

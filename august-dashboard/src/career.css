@@ -19,6 +19,7 @@
 }
 
 .career-brief h3,
+.career-weekly-summary h3,
 .career-workflow h3,
 .career-filter-card h3,
 .career-watchlists h3,
@@ -32,6 +33,7 @@
 }
 
 .career-brief p:not(.card-kicker),
+.career-weekly-summary header > p:not(.card-kicker),
 .career-watchlists header > p:not(.card-kicker),
 .career-empty p,
 .career-evidence-limit {
@@ -57,6 +59,72 @@
   color: var(--mid);
   font-size: 0.92rem;
   line-height: 1.4;
+}
+
+.career-weekly-summary {
+  display: grid;
+  gap: 18px;
+}
+
+.career-weekly-summary header {
+  max-width: 780px;
+}
+
+.career-summary-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.career-summary-metrics article,
+.career-candidate-criteria {
+  min-width: 0;
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  padding: 14px;
+  background: var(--chip-surface);
+}
+
+.career-summary-metrics span,
+.career-candidate-criteria > strong {
+  color: var(--quiet-ink);
+  font-size: 0.76rem;
+  font-weight: 760;
+}
+
+.career-summary-metrics strong {
+  display: block;
+  margin-top: 5px;
+  color: var(--primary);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.career-summary-metrics p,
+.career-candidate-criteria li {
+  color: var(--muted-ink);
+  font-size: 0.83rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.career-summary-metrics p {
+  margin-top: 7px;
+}
+
+.career-candidate-criteria ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.career-candidate-criteria li {
+  border-left: 2px solid color-mix(in srgb, var(--primary) 42%, var(--stroke));
+  padding-left: 9px;
 }
 
 .career-workflow {
@@ -322,6 +390,8 @@
 
 @media (max-width: 640px) {
   .career-brief,
+  .career-summary-metrics,
+  .career-candidate-criteria ol,
   .career-workflow,
   .career-filter-card,
   .career-watchlist-grid {
