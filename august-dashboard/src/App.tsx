@@ -3411,7 +3411,7 @@ function App() {
 
       const navBox = nav.getBoundingClientRect()
       const buttonBox = activeButton.getBoundingClientRect()
-      nav.style.setProperty('--workspace-tab-indicator-left', `${buttonBox.left - navBox.left}px`)
+      nav.style.setProperty('--workspace-tab-indicator-left', `${buttonBox.left - navBox.left + nav.scrollLeft}px`)
       nav.style.setProperty('--workspace-tab-indicator-width', `${buttonBox.width}px`)
       nav.style.setProperty('--workspace-tab-indicator-opacity', '1')
     }
@@ -3419,10 +3419,12 @@ function App() {
     updateWorkspaceIndicator()
     const animationFrame = window.requestAnimationFrame(updateWorkspaceIndicator)
     window.addEventListener('resize', updateWorkspaceIndicator)
+    nav.addEventListener('scroll', updateWorkspaceIndicator, { passive: true })
 
     return () => {
       window.cancelAnimationFrame(animationFrame)
       window.removeEventListener('resize', updateWorkspaceIndicator)
+      nav.removeEventListener('scroll', updateWorkspaceIndicator)
     }
   }, [activeTab.id, bodyTabs.length])
 
