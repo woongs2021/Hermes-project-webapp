@@ -23,7 +23,7 @@ const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
 type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report' | 'ax-cases' | 'dissertation' | 'career' | 'weekly'
 type ThemeMode = 'light' | 'dark'
 type ObdSubTabId = 'growth' | 'graph' | 'about'
-type DissertationSubTabId = 'dissertation-idea-1' | 'dissertation-idea-2' | 'references'
+type DissertationSubTabId = 'dissertation-idea-1' | 'dissertation-idea-2' | 'dissertation-idea-3' | 'references'
 type TextSegment = { text: string; emphasis?: boolean }
 
 type BrandAssetSelection = {
@@ -3311,11 +3311,13 @@ function ObdKnowledgeLoopPanel() {
 const dissertationSubTabs: { id: DissertationSubTabId; label: string }[] = [
   { id: 'dissertation-idea-1', label: 'Dissertation Idea 01' },
   { id: 'dissertation-idea-2', label: 'Dissertation Idea 02' },
+  { id: 'dissertation-idea-3', label: 'Dissertation Idea 03' },
   { id: 'references', label: 'References' },
 ]
 
 function getInitialDissertationSubTab(): DissertationSubTabId {
   if (window.location.hash === '#dissertation-idea-2') return 'dissertation-idea-2'
+  if (window.location.hash === '#dissertation-idea-3') return 'dissertation-idea-3'
   if (window.location.hash === '#references') return 'references'
   return 'dissertation-idea-1'
 }
@@ -3348,6 +3350,8 @@ function DissertationPanel() {
         <PersonalAxReportPanel reportId="dissertation" />
       ) : activeSubTab === 'dissertation-idea-2' ? (
         <PersonalAxReportPanel reportId="dissertation-idea-2" />
+      ) : activeSubTab === 'dissertation-idea-3' ? (
+        <PersonalAxReportPanel reportId="dissertation-idea-3" />
       ) : (
         <DissertationReferencesPanel />
       )}
@@ -3363,7 +3367,7 @@ function App() {
         ? '#obd'
         : window.location.hash === '#team'
           ? '#home'
-          : window.location.hash === '#dissertation' || window.location.hash === '#dissertation-idea-1' || window.location.hash === '#dissertation-idea-2' || window.location.hash === '#references'
+          : window.location.hash === '#dissertation' || window.location.hash === '#dissertation-idea-1' || window.location.hash === '#dissertation-idea-2' || window.location.hash === '#dissertation-idea-3' || window.location.hash === '#references'
             ? '#dissertation'
             : window.location.hash
     const hashTab = tabs.find((tab) => `#${tab.id}` === normalizedHash)

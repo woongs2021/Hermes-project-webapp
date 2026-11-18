@@ -104,13 +104,14 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
     ? reportIds.map((id) => personalAxReports.find((item) => item.id === id)).filter((item): item is PersonalAxReport => Boolean(item))
     : reportId
       ? personalAxReports.filter((item) => item.id === reportId)
-      : personalAxReports.filter((item) => item.id !== 'dissertation' && item.id !== 'dissertation-idea-2')
+      : personalAxReports.filter((item) => item.id !== 'dissertation' && item.id !== 'dissertation-idea-2' && item.id !== 'dissertation-idea-3')
   const [activeId, setActiveId] = useState(reportIds?.[0] ?? reportId ?? visibleReports[0].id)
   const [downloadStatus, setDownloadStatus] = useState<DownloadStatus>('idle')
   const report = visibleReports.find((item) => item.id === activeId) ?? visibleReports[0]
   const isThreadsContentReport = report.id === 'threads-content'
-  const isDissertationReport = report.id === 'dissertation' || report.id === 'dissertation-idea-2'
+  const isDissertationReport = report.id === 'dissertation' || report.id === 'dissertation-idea-2' || report.id === 'dissertation-idea-3'
   const isLearnerDissertation = report.id === 'dissertation-idea-2'
+  const isPortfolioDissertation = report.id === 'dissertation-idea-3'
   const orderedSections = isDissertationReport
     ? [...report.sections].sort((a, b) => (a.heading === '예상 논문 제목과 초록' ? -1 : b.heading === '예상 논문 제목과 초록' ? 1 : 0))
     : report.sections
@@ -163,6 +164,8 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
           <p className="personal-ax-report-byline">{isDissertationReport
             ? isLearnerDissertation
               ? '이 글은 학습자용 개인화 교육 에이전트를 실제로 설계하고 검증하기 위한 연구 메모입니다. 아직 결론이 아니라, 어떤 학습 경험과 통제권을 확인해야 하는지부터 차근히 정리했습니다.'
+              : isPortfolioDissertation
+                ? '이 글은 학생과 주니어 디자이너가 AI 보조 작업을 포트폴리오에서 투명하게 설명하고, 리뷰어가 그 과정을 검토할 수 있게 하는 연구 메모입니다. 탐지 결과가 아니라 작업의 판단 흔적을 확인하는 방법을 살핍니다.'
               : '이 글은 교육자용 AI 조교를 실제로 설계하고 검증하기 위한 연구 메모입니다. 아직 결론이 아니라, 무엇을 확인해야 하는지부터 차근히 정리했습니다.'
             : isThreadsContentReport
               ? '최근 Threads 30편을 읽으며, 반복되는 생각과 다음에 더 선명하게 만들 포인트를 블로그 노트처럼 정리했어.'
@@ -171,6 +174,8 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
           <p className="personal-ax-report-note">{isDissertationReport
             ? isLearnerDissertation
               ? '이 연구는 참여자의 선택 동의를 전제로 최소한의 학습 맥락만 활용하며, 성적·민감정보·자동 의사결정은 파일럿 범위에서 제외합니다.'
+              : isPortfolioDissertation
+                ? 'AI 탐지기를 진실 판정기로 사용하지 않습니다. 공개 가능한 작업 기록, 권리·출처, 품질 점검과 최종 인간 책임을 함께 검토하며, 채용 성과나 진위 판별의 정확도를 단정하지 않습니다.'
               : '학생 개인정보와 자동 성적확정은 초기 파일럿 범위에서 제외하며, 교육자의 최종 승인권·수정 이력·예외 처리를 연구의 관찰 대상으로 둡니다.'
             : isThreadsContentReport
               ? '참여도 지표, 댓글, 도달은 분석에 포함하지 않았으며, 본문은 게시물 텍스트에서 확인되는 주제와 표현의 반복 패턴을 해석합니다.'

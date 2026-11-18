@@ -1,4 +1,4 @@
-export type PersonalAxReportId = 'ai-research' | 'design-research' | 'ax-trends' | 'package-design' | 'design-education' | 'designer-ai-exposure' | 'threads-content' | 'dissertation' | 'dissertation-idea-2'
+export type PersonalAxReportId = 'ai-research' | 'design-research' | 'ax-trends' | 'package-design' | 'design-education' | 'designer-ai-exposure' | 'threads-content' | 'dissertation' | 'dissertation-idea-2' | 'dissertation-idea-3'
 
 export type ReportSource = {
   title: string
@@ -433,6 +433,51 @@ export const personalAxReports: PersonalAxReport[] = [
       'A thoughtful designer-manager balancing three signals—automation, judgment, and context—as a precise kinetic mobile, mist lavender background, deep olive and ochre details, premium Korean editorial art direction, no text',
       'Abstract archive of weekly observations transforming into a coherent path: stacked paper notes, subtle data threads, quiet studio light, restrained product editorial photography, no UI, no readable labels',
     ],
+  },
+  {
+    id: 'dissertation-idea-3',
+    label: 'Idea 03 · AI 포트폴리오 투명성',
+    eyebrow: 'Dissertation idea 03 · transparent AI-assisted design portfolio review',
+    title: 'AI 보조 디자인 포트폴리오는 탐지 결과가 아니라, 문제 정의·선택·수정·책임의 흔적으로 검토될 수 있다',
+    dek: '학생과 주니어 디자이너가 AI를 활용한 작업을 과장하거나 숨기지 않고 설명하고, 리뷰어가 결과물의 진위 판정 대신 기여·판단·권리·품질을 검토할 수 있는 포트폴리오 기록과 평가 흐름을 탐색하는 국내 학술지 투고용 연구 아이디어입니다.',
+    heroImage: 'assets/personal-ax-reports/dissertation-hero.jpg',
+    heroAlt: '코발트 블루와 선명한 레드의 종이·카드 레이어에 작은 빨간 핀과 원형 표식을 배치한 연구 자료의 추상 구성.',
+    sections: [
+      { heading: '연구 문제와 제안 논지', paragraphs: [
+        '이 연구는 AI 보조 디자인 작업의 포트폴리오를 “AI가 만들었는지 아닌지”로 가르는 문제로 보지 않습니다. 학생과 주니어 디자이너가 어떤 문제를 정의했고, AI를 어느 범위에서 사용했으며, 여러 후보를 어떻게 비교하고 무엇을 수정·반려했는지 설명할 수 있는가를 살피는 연구입니다. 리뷰어 역시 탐지기의 확률을 진실 판정으로 삼기보다, 공개 가능한 과정 기록과 최종 결과의 품질·권리·책임을 함께 검토합니다.',
+        '핵심 주장은 AI 사용 고지 한 줄이나 결과 이미지 한 장만으로는 작업의 기여와 판단을 충분히 읽기 어렵다는 데 있습니다. 다만 상세한 프롬프트나 개인 작업 로그의 전면 공개를 요구하지 않습니다. 포트폴리오 목적과 민감도에 맞춰, 문제 프레이밍, AI 사용 범위, 후보 비교, 수정·반려 이유, 출처·권리, 품질 확인, 최종 인간 책임을 짧은 증거 묶음으로 제시하는 방식을 탐색합니다.' ], bullets: [
+        '연구의 주장 범위: 포트폴리오 설명·검토 경험과 설계 요구의 탐색이며, 채용 결과나 진위 판별 정확도의 검증이 아님.',
+        '핵심 원칙: AI 탐지기는 보조 신호일 수 있어도 창작 기여나 부정행위의 진실 판정기로 사용하지 않음.',
+        '검토 대상: 완성물만이 아니라 문제 정의, AI 사용 범위, 선택·수정·반려와 최종 책임의 연결.' ] },
+      { heading: '포트폴리오 증거 묶음: 무엇을 어떻게 남길 것인가', paragraphs: [
+        '사례마다 하나의 디자인 과업을 골라, 브리프와 문제 정의, 참고자료·제약, AI가 관여한 단계와 도구, 후보안 3~5개, 비교 기준, 채택·수정·반려 메모, 최종 산출물, 품질 점검표를 하나의 케이스 카드로 구성합니다. AI의 출력 전체나 사적 대화를 수집하지 않고, 참여자가 공개에 동의한 요약과 대표 장면만 사용합니다.',
+        '권리·출처 기록에는 사용한 모델·서비스의 약관 확인일, 입력한 자료의 권한 상태, 외부 이미지·폰트·데이터의 출처, 생성물의 재사용·표기 조건, 불명확한 항목의 보류 또는 대체 결정을 포함합니다. 품질 점검은 브리프 적합성, 정보 정확성, 접근성, 유사성·표절 우려, 제작 가능성처럼 과업에 맞는 기준으로 구성하고, 최종 제출·공개의 책임자가 누구인지 명시합니다.' ], bullets: [
+        '카드 01 · 문제 프레이밍: 해결하려는 맥락, 제약, 사람이 정한 성공 기준.',
+        '카드 02 · AI 사용 범위: 사용 단계·도구·입력 자료의 권한과 사람이 맡은 결정.',
+        '카드 03 · 후보 비교와 판단: 비교 기준, 채택·수정·반려 이유, 남은 불확실성.',
+        '카드 04 · 검증과 책임: 권리·출처, 품질 점검, 최종 공개·제출 책임자.' ] },
+      { heading: '연구 설계: 포트폴리오 제작자와 리뷰어의 교차 사례', paragraphs: [
+        '학생 또는 주니어 디자이너 6~8명과 디자인 교육자·실무 리뷰어 4~6명을 목적표집해, AI 보조 작업이 포함된 포트폴리오 케이스를 함께 검토하는 질적 다중사례 연구를 제안합니다. 제작자는 기존 또는 새 과업의 기록을 위 증거 묶음으로 재구성하고, 리뷰어는 결과물만 보는 조건과 과정 카드를 함께 보는 조건에서 무엇을 확인할 수 있고 무엇은 여전히 알 수 없는지 말합니다.',
+        '자료는 제작 전·후 인터뷰, 포트폴리오 케이스 카드, 화면 녹화 또는 선택적 작업 일지, 리뷰 세션의 발화·주석, 사후 회고로 구성합니다. 연구자는 AI 사용량이나 탐지 점수를 능력의 대리 지표로 사용하지 않습니다. 대신 설명의 충분성, 판단 근거의 추적 가능성, 권리·출처 인식, 품질 검토, 공개 부담과 프라이버시 경계가 어떻게 협상되는지 분석합니다.' ], bullets: [
+        'RQ1: 제작자는 AI 사용 범위와 인간의 판단·수정·책임을 어떤 기록으로 설명하는가?',
+        'RQ2: 리뷰어는 결과물만 볼 때와 과정 증거를 함께 볼 때 어떤 질문·불확실성·검토 기준을 사용하는가?',
+        'RQ3: 공개 가능성, 권리·출처, 프라이버시를 해치지 않으면서 신뢰 가능한 포트폴리오 기록은 어떻게 설계되는가?' ] },
+      { heading: '분석 기준과 윤리·권리 경계', paragraphs: [
+        '사례별로 문제 정의→AI 사용→후보 비교→수정·반려→품질 확인→최종 책임의 타임라인을 만들고, 제작자와 리뷰어의 발화를 주제분석으로 비교합니다. 분석 코드는 프레이밍, AI 기여 범위, 인간 기여, 비교 기준, 수정·반려, 권리·출처, 품질 점검, 공개 부담, 불확실성, 책임 이관으로 구성합니다. 부정 사례와 리뷰어 간 불일치도 결과에서 숨기지 않습니다.',
+        '연구는 탐지기 결과로 참여자의 정직성이나 작품의 원작성을 판정하지 않습니다. 포트폴리오에 포함된 클라이언트 자료, 동료 피드백, 개인 프롬프트, 계정 정보는 최소수집·비식별 원칙을 적용하며, 참여자는 사례의 일부 또는 전부를 철회할 수 있어야 합니다. 권리 상태가 불명확한 참고자료·생성물은 공개 가능한 증거로 취급하지 않고, 보류·대체·추가 확인의 결정을 기록합니다.' ] },
+      { heading: '예상 논문 제목과 초록', paragraphs: [
+        'AI 보조 디자인 포트폴리오의 투명한 설명과 검토 경험 탐색: 학생·주니어 디자이너의 과정 기록과 리뷰어 판단을 중심으로',
+        '본 연구는 생성형 AI를 활용한 디자인 작업이 포함된 포트폴리오에서 제작자의 기여와 판단을 어떻게 투명하게 설명하고 검토할 수 있는지 탐색한다. 학생 또는 주니어 디자이너와 디자인 교육자·실무 리뷰어를 대상으로, 문제 정의, AI 사용 범위, 후보안 비교, 수정·반려 이유, 권리·출처, 품질 점검, 최종 인간 책임을 담은 포트폴리오 케이스 카드를 구성하고 검토 세션을 분석한다. 연구는 AI 탐지기를 진실 판정 도구로 사용하지 않으며, 결과물만 보는 조건과 과정 증거를 함께 보는 조건에서 제작자와 리뷰어가 제기하는 질문·불확실성·검토 기준을 질적으로 비교한다. 결과는 포트폴리오 설명의 충분성, 판단 근거의 추적 가능성, 공개 부담, 권리·출처 확인, 품질 검토와 책임 배분의 긴장을 제시할 예정이다. 본 연구는 채용 성과나 원작성 판별의 정확도를 일반화하지 않으며, AI 보조 디자인 작업을 책임 있게 제시·검토하기 위한 최소 기록 단위와 UX 설계 원리를 제안하고자 한다.' ] },
+      { heading: '예상 산출물 및 다음 검증', paragraphs: [
+        '예상 산출물은 AI 보조 디자인 포트폴리오 케이스 카드 템플릿, 제작자용 공개 범위 체크리스트, 리뷰어용 질문 가이드, 권리·출처 및 품질 점검표, 그리고 불확실성을 표시하는 최종 책임 문구입니다. 이 산출물은 AI 사용을 증명하거나 의심을 해소하는 인증서가 아니라, 서로 다른 기여와 판단을 더 구체적으로 대화하기 위한 공용 언어입니다.',
+        '후속 연구에서는 학교 수업·부트캠프·실제 포트폴리오 리뷰 현장에서 장기 사용을 관찰하고, 접근성·산업 분야·협업 형태에 따른 기록 부담을 비교할 수 있습니다. 현재 연구는 특정 포맷이 채용에 유리하다고 단정하지 않고, 제작자와 리뷰어가 무엇을 확인할 수 있으며 무엇은 여전히 확인할 수 없는지를 투명하게 만드는 초기 단계입니다.' ] },
+    ],
+    sources: [
+      { title: 'A Study on Visual Design Portfolio Education Involving Design Work Created with Generative AI', href: 'https://doi.org/10.47294/ksbda.27.2.57', access: '초록·메타데이터 확인' },
+      { title: 'GenAI-supported portfolio assessment for complex thinking: a GPT-based innovation in business education', href: 'https://doi.org/10.3389/feduc.2026.1729156', access: '원문 확인' },
+      { title: 'Measuring Human Contribution in AI-Assisted Content Generation', href: 'https://aclanthology.org/2026.acl-long.279/', access: '원문 확인' },
+    ],
+    prompts: ['A calm Korean editorial portfolio review desk: annotated design alternatives, a transparent process timeline, human decision markers, cobalt blue and restrained vermilion paper layers, no text, no logos, no detector imagery.'],
   },
   {
     id: 'dissertation-idea-2',

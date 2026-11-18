@@ -3,16 +3,41 @@
   "sectionTitleKo": "가장 논문 아이디어와 연관된 논문 10개",
   "selectionBoundaryKo": "제목·초록/메타데이터·기존 후보의 검증 메모에서 확인되는 범위만 사용했습니다. sourceAccess가 비어 있는 항목은 접근 가능 여부를 주장하지 않으며, unreviewed/WATCH 항목은 검증 완료로 승격하지 않습니다.",
   "counts": {
-    "allRelevant": 42,
+    "allRelevant": 49,
     "educatorAssistant": 17,
     "learnerAgent": 25,
-    "top10": 10
+    "top10": 10,
+    "aiPortfolio": 7
   },
   "top10": [
     {
+      "referenceId": "doi:10.47294/ksbda.27.2.57",
+      "ideaFit": "portfolio",
+      "titleEn": "A Study on Visual Design Portfolio Education Involving Design Work Created with Generative AI -focusing on an analysis of the perceptions of students and professional designers-",
+      "titleKo": "생성형 AI 활용 디자인 작업이 포함된 시각디자인 포트폴리오 제작 교육에 관한 연구 -학생과 현업 디자이너의 인식 분석을 중심으로-",
+      "urlOrDoi": "https://doi.org/10.47294/ksbda.27.2.57",
+      "sourceAccess": "abstract+metadata",
+      "verificationStatus": "unreviewed",
+      "evidenceBoundary": "초록·메타데이터에서 확인한 학생·현업 디자이너 인식 및 시각디자인 포트폴리오 교육 맥락입니다. 채용 성과나 진위 판별 정확도의 증거로 확대하지 않습니다.",
+      "fitRationaleKo": "AI 활용 작업을 포함한 시각디자인 포트폴리오 교육을 직접 다루므로, 결과물만이 아니라 문제 정의·AI 기여 범위·선택·수정 이력을 제시하는 Idea 03의 가장 직접적인 국내 근거입니다.",
+      "top10Rank": 1
+    },
+    {
+      "referenceId": "doi:10.3389/feduc.2026.1729156",
+      "ideaFit": "portfolio",
+      "titleEn": "GenAI-supported portfolio assessment for complex thinking: a GPT-based innovation in business education",
+      "titleKo": "복합적 사고를 위한 생성형 AI 지원 포트폴리오 평가: 경영교육의 GPT 기반 혁신",
+      "urlOrDoi": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2026.1729156/full",
+      "sourceAccess": "full text (official Frontiers open-access article)",
+      "verificationStatus": "unreviewed",
+      "evidenceBoundary": "경영교육의 포트폴리오 평가 및 소규모 인간–AI 비교 맥락입니다. AI 평가가 사람의 판단이나 다른 분야의 평가 결과를 대체한다고 해석하지 않습니다.",
+      "fitRationaleKo": "포트폴리오 평가에서 루브릭·평가 근거·교사 보정을 함께 다루므로, 리뷰어가 탐지 점수 대신 근거와 인간 검토 이력을 확인하는 Idea 03의 평가 흐름에 직접적입니다.",
+      "top10Rank": 2
+    },
+    {
       "referenceId": "doi:10.1145/3716640.3716651",
       "ideaFit": "educator",
-      "top10Rank": 1,
+      "top10Rank": 3,
       "titleEn": "Oversight in Action: Experiences with Instructor-Moderated LLM Responses in an Online Discussion Forum",
       "titleKo": "교사 조정 LLM 응답의 실제 운영: 온라인 토론 포럼 사례",
       "urlOrDoi": "https://dl.acm.org/doi/10.1145/3716640.3716651",
@@ -24,7 +49,7 @@
     {
       "referenceId": "doi:10.3389/feduc.2025.1710992",
       "ideaFit": "educator",
-      "top10Rank": 2,
+      "top10Rank": 4,
       "titleEn": "Human-in-the-loop assessment with AI: implications for teacher education in Ibero-American universities",
       "titleKo": "인간 개입형 AI 평가: 이베로아메리카 대학 교사교육에의 함의",
       "urlOrDoi": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2025.1710992/full",
@@ -36,7 +61,7 @@
     {
       "referenceId": "2026-08-09-goyounjung-metacognitive-scaffolding-in-genui-assisted-ux-prototyping-effects-on-novice-des",
       "ideaFit": "learner",
-      "top10Rank": 3,
+      "top10Rank": 5,
       "titleEn": "Metacognitive Scaffolding in GenUI-Assisted UX Prototyping: Effects on Novice Designers Reflective Thinking and Creative Self-Efficacy",
       "titleKo": "GenUI 지원 UX 프로토타이핑의 메타인지 비계: 초보 디자이너의 반사적 사고와 창의적 자기 효능에 미치는 영향",
       "urlOrDoi": "https://doi.org/10.1080/10447318.2026.2712079",
@@ -47,7 +72,7 @@
     {
       "referenceId": "2026-10-18-goyounjung-ai-pbl-exploratory-study-on-scaffolding-strategies-for-autonomous-generative-ai-",
       "ideaFit": "learner",
-      "top10Rank": 4,
+      "top10Rank": 6,
       "titleEn": "Exploratory Study on Scaffolding Strategies for Autonomous Generative AI Design Education: A Case of Learning by Doing-Based PBL Design Thinking Education",
       "titleKo": "주체적인 생성형 AI 디자인 교육을 위한 스캐폴딩 전략의 탐색적 연구: 행함에 의한 학습 기반 PBL-디자인씽킹 교육 사례",
       "urlOrDoi": "https://doi.org/10.15187/adr.2025.02.38.1.199",
@@ -58,7 +83,7 @@
     {
       "referenceId": "doi:10.1145/3772318.3790929",
       "ideaFit": "educator",
-      "top10Rank": 5,
+      "top10Rank": 7,
       "titleEn": "Criticmate: Stagewise Human–AI Co-Critique in Single-Screen UI Evaluation",
       "titleKo": "Criticmate: 단일 화면 UI 평가를 위한 단계형 인간–AI 공동 비평",
       "urlOrDoi": "https://doi.org/10.1145/3772318.3790929",
@@ -70,7 +95,7 @@
     {
       "referenceId": "doi:10.21606/iasdr.2025.394",
       "ideaFit": "educator",
-      "top10Rank": 6,
+      "top10Rank": 8,
       "titleEn": "Design Critique Reimagined: Instructors' Expectations of AI Feedback",
       "titleKo": "재구성되는 디자인 크리틱: AI 피드백에 대한 교수자의 기대",
       "urlOrDoi": "https://doi.org/10.21606/iasdr.2025.394",
@@ -82,7 +107,7 @@
     {
       "referenceId": "2026-10-01-yuna-ai-why-box-mvp-effects-of-a-question-based-ai-self-feedback-tool-on-designers-re",
       "ideaFit": "learner",
-      "top10Rank": 7,
+      "top10Rank": 9,
       "titleEn": "Effects of a Question-Based AI Self-Feedback Tool on Designers' Reflective Thinking: Focusing on the WHY BOX MVP Experiment",
       "titleKo": "질문 기반 AI 자기 피드백 도구가 디자이너의 성찰적 사고에 미치는 영향: WHY BOX MVP 실험",
       "urlOrDoi": "https://doi.org/10.47116/apjcri.2026.09.04 ; http://apjcriweb.org/content/vol12no9/4.html",
@@ -93,42 +118,20 @@
     {
       "referenceId": "2026-08-01-yuna-ai",
       "ideaFit": "learner",
-      "top10Rank": 8,
+      "top10Rank": 10,
       "titleEn": "A study on learner-led curriculum design for generative AI-based design education - Focusing on cases of college student goods design classes -",
       "titleKo": "생성형 AI 기반 디자인교육의 학습자 주도 커리큘럼 설계 연구 - 대학생 굿즈 디자인 수업 사례를 중심으로 -",
       "urlOrDoi": "https://www.riss.kr/link?id=A110252120",
       "sourceAccess": "abstract",
       "verificationStatus": "unreviewed",
       "fitRationaleKo": "학습자 주도 커리큘럼에서 선택 근거 기록과 전후 비교 수정 과정을 다뤄, 계획·성찰·통제권 보존에 직접적입니다."
-    },
-    {
-      "referenceId": "doi:10.1145/3544548.3580969",
-      "ideaFit": "learner",
-      "top10Rank": 9,
-      "titleEn": "Choice Over Control: How Users Write with Large Language Models using Diegetic and Non-Diegetic Prompting",
-      "titleKo": "통제보다 선택: 서사 내·외 프롬프팅으로 사용자가 LLM과 글을 쓰는 방식",
-      "urlOrDoi": "https://doi.org/10.1145/3544548.3580969",
-      "sourceAccessNote": "후보 원천에 source_access 값이 미기록되어 접근 가능 여부를 주장하지 않습니다.",
-      "verificationStatus": "GO — CHI 2023 공개 출판본·초록에서 표본과 핵심 결과를 교차 확인했습니다. 다만 글쓰기 과업 결과를 일반 업무 전반으로 과잉 일반화하지 않습니다.",
-      "fitRationaleKo": "글쓰기에서 사용자가 직접 프롬프트 통제보다 복수 제안 중 선택하는 방식을 전략적으로 조합한 실험이므로, 통제권을 명령 입력 하나로 환원하지 않게 합니다."
-    },
-    {
-      "referenceId": "2026-07-12-yuna-cocoa-co-planning-and-co-execution-with-ai-agents",
-      "ideaFit": "learner",
-      "top10Rank": 10,
-      "titleEn": "Cocoa: Co-Planning and Co-Execution with AI Agents",
-      "titleKo": "코코아: AI 에이전트와의 공동 기획 및 공동 실행",
-      "urlOrDoi": "https://dl.acm.org/doi/10.1145/3772318.3791673 / DOI: 10.1145/3772318.3791673",
-      "sourceAccess": "full",
-      "verificationStatus": "unreviewed",
-      "fitRationaleKo": "편집 가능한 계획, 역할 배정, 실행 이력, 공동 계획/실행을 제공하므로 학습자가 자신의 계획과 진행을 조정하는 에이전트 구조에 직접적입니다."
     }
   ],
   "allRelevantReferences": [
     {
       "referenceId": "doi:10.1145/3716640.3716651",
       "ideaFit": "educator",
-      "top10Rank": 1,
+      "top10Rank": 3,
       "titleEn": "Oversight in Action: Experiences with Instructor-Moderated LLM Responses in an Online Discussion Forum",
       "titleKo": "교사 조정 LLM 응답의 실제 운영: 온라인 토론 포럼 사례",
       "urlOrDoi": "https://dl.acm.org/doi/10.1145/3716640.3716651",
@@ -140,7 +143,7 @@
     {
       "referenceId": "doi:10.3389/feduc.2025.1710992",
       "ideaFit": "educator",
-      "top10Rank": 2,
+      "top10Rank": 4,
       "titleEn": "Human-in-the-loop assessment with AI: implications for teacher education in Ibero-American universities",
       "titleKo": "인간 개입형 AI 평가: 이베로아메리카 대학 교사교육에의 함의",
       "urlOrDoi": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2025.1710992/full",
@@ -152,7 +155,7 @@
     {
       "referenceId": "2026-08-09-goyounjung-metacognitive-scaffolding-in-genui-assisted-ux-prototyping-effects-on-novice-des",
       "ideaFit": "learner",
-      "top10Rank": 3,
+      "top10Rank": 5,
       "titleEn": "Metacognitive Scaffolding in GenUI-Assisted UX Prototyping: Effects on Novice Designers Reflective Thinking and Creative Self-Efficacy",
       "titleKo": "GenUI 지원 UX 프로토타이핑의 메타인지 비계: 초보 디자이너의 반사적 사고와 창의적 자기 효능에 미치는 영향",
       "urlOrDoi": "https://doi.org/10.1080/10447318.2026.2712079",
@@ -163,7 +166,7 @@
     {
       "referenceId": "2026-10-18-goyounjung-ai-pbl-exploratory-study-on-scaffolding-strategies-for-autonomous-generative-ai-",
       "ideaFit": "learner",
-      "top10Rank": 4,
+      "top10Rank": 6,
       "titleEn": "Exploratory Study on Scaffolding Strategies for Autonomous Generative AI Design Education: A Case of Learning by Doing-Based PBL Design Thinking Education",
       "titleKo": "주체적인 생성형 AI 디자인 교육을 위한 스캐폴딩 전략의 탐색적 연구: 행함에 의한 학습 기반 PBL-디자인씽킹 교육 사례",
       "urlOrDoi": "https://doi.org/10.15187/adr.2025.02.38.1.199",
@@ -174,7 +177,7 @@
     {
       "referenceId": "doi:10.1145/3772318.3790929",
       "ideaFit": "educator",
-      "top10Rank": 5,
+      "top10Rank": 7,
       "titleEn": "Criticmate: Stagewise Human–AI Co-Critique in Single-Screen UI Evaluation",
       "titleKo": "Criticmate: 단일 화면 UI 평가를 위한 단계형 인간–AI 공동 비평",
       "urlOrDoi": "https://doi.org/10.1145/3772318.3790929",
@@ -186,7 +189,7 @@
     {
       "referenceId": "doi:10.21606/iasdr.2025.394",
       "ideaFit": "educator",
-      "top10Rank": 6,
+      "top10Rank": 8,
       "titleEn": "Design Critique Reimagined: Instructors' Expectations of AI Feedback",
       "titleKo": "재구성되는 디자인 크리틱: AI 피드백에 대한 교수자의 기대",
       "urlOrDoi": "https://doi.org/10.21606/iasdr.2025.394",
@@ -198,7 +201,7 @@
     {
       "referenceId": "2026-10-01-yuna-ai-why-box-mvp-effects-of-a-question-based-ai-self-feedback-tool-on-designers-re",
       "ideaFit": "learner",
-      "top10Rank": 7,
+      "top10Rank": 9,
       "titleEn": "Effects of a Question-Based AI Self-Feedback Tool on Designers' Reflective Thinking: Focusing on the WHY BOX MVP Experiment",
       "titleKo": "질문 기반 AI 자기 피드백 도구가 디자이너의 성찰적 사고에 미치는 영향: WHY BOX MVP 실험",
       "urlOrDoi": "https://doi.org/10.47116/apjcri.2026.09.04 ; http://apjcriweb.org/content/vol12no9/4.html",
@@ -209,7 +212,7 @@
     {
       "referenceId": "2026-08-01-yuna-ai",
       "ideaFit": "learner",
-      "top10Rank": 8,
+      "top10Rank": 10,
       "titleEn": "A study on learner-led curriculum design for generative AI-based design education - Focusing on cases of college student goods design classes -",
       "titleKo": "생성형 AI 기반 디자인교육의 학습자 주도 커리큘럼 설계 연구 - 대학생 굿즈 디자인 수업 사례를 중심으로 -",
       "urlOrDoi": "https://www.riss.kr/link?id=A110252120",
@@ -220,7 +223,6 @@
     {
       "referenceId": "doi:10.1145/3544548.3580969",
       "ideaFit": "learner",
-      "top10Rank": 9,
       "titleEn": "Choice Over Control: How Users Write with Large Language Models using Diegetic and Non-Diegetic Prompting",
       "titleKo": "통제보다 선택: 서사 내·외 프롬프팅으로 사용자가 LLM과 글을 쓰는 방식",
       "urlOrDoi": "https://doi.org/10.1145/3544548.3580969",
@@ -231,7 +233,6 @@
     {
       "referenceId": "2026-07-12-yuna-cocoa-co-planning-and-co-execution-with-ai-agents",
       "ideaFit": "learner",
-      "top10Rank": 10,
       "titleEn": "Cocoa: Co-Planning and Co-Execution with AI Agents",
       "titleKo": "코코아: AI 에이전트와의 공동 기획 및 공동 실행",
       "urlOrDoi": "https://dl.acm.org/doi/10.1145/3772318.3791673 / DOI: 10.1145/3772318.3791673",
@@ -572,6 +573,85 @@
       "verificationStatus": "unreviewed",
       "evidenceBoundary": "수학 추론 검토 과제와 참여자 실험 결과입니다. 다른 도메인의 사실성, 보안, 법적 판단 또는 사용자의 실제 장기 검증 습관까지 개선한다고 일반화할 수 없습니다.",
       "fitRationaleKo": "사용자가 단계·의존 관계를 조작하며 오류를 찾는 설명 인터페이스를 제안하여, AI 추론을 학습자가 검증·통제하는 경험에 관련됩니다."
+    },
+    {
+      "referenceId": "doi:10.47294/ksbda.27.2.57",
+      "ideaFit": "portfolio",
+      "titleEn": "A Study on Visual Design Portfolio Education Involving Design Work Created with Generative AI -focusing on an analysis of the perceptions of students and professional designers-",
+      "titleKo": "생성형 AI 활용 디자인 작업이 포함된 시각디자인 포트폴리오 제작 교육에 관한 연구 -학생과 현업 디자이너의 인식 분석을 중심으로-",
+      "urlOrDoi": "https://doi.org/10.47294/ksbda.27.2.57",
+      "sourceAccess": "abstract+metadata",
+      "verificationStatus": "unreviewed",
+      "evidenceBoundary": "초록·메타데이터에서 확인한 학생·현업 디자이너 인식 및 시각디자인 포트폴리오 교육 맥락입니다. 채용 성과나 진위 판별 정확도의 증거로 확대하지 않습니다.",
+      "fitRationaleKo": "AI 활용 작업을 포함한 시각디자인 포트폴리오 교육을 직접 다루므로, 결과물만이 아니라 문제 정의·AI 기여 범위·선택·수정 이력을 제시하는 Idea 03의 가장 직접적인 국내 근거입니다.",
+      "top10Rank": 1
+    },
+    {
+      "referenceId": "doi:10.3389/feduc.2026.1729156",
+      "ideaFit": "portfolio",
+      "titleEn": "GenAI-supported portfolio assessment for complex thinking: a GPT-based innovation in business education",
+      "titleKo": "복합적 사고를 위한 생성형 AI 지원 포트폴리오 평가: 경영교육의 GPT 기반 혁신",
+      "urlOrDoi": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2026.1729156/full",
+      "sourceAccess": "full text (official Frontiers open-access article)",
+      "verificationStatus": "unreviewed",
+      "evidenceBoundary": "경영교육의 포트폴리오 평가 및 소규모 인간–AI 비교 맥락입니다. AI 평가가 사람의 판단이나 다른 분야의 평가 결과를 대체한다고 해석하지 않습니다.",
+      "fitRationaleKo": "포트폴리오 평가에서 루브릭·평가 근거·교사 보정을 함께 다루므로, 리뷰어가 탐지 점수 대신 근거와 인간 검토 이력을 확인하는 Idea 03의 평가 흐름에 직접적입니다.",
+      "top10Rank": 2
+    },
+    {
+      "referenceId": "doi:10.18653/v1/2026.acl-long.279",
+      "ideaFit": "portfolio",
+      "titleEn": "Measuring Human Contribution in AI-Assisted Content Generation",
+      "titleKo": "AI 지원 콘텐츠 생성에서 인간 기여도 측정",
+      "urlOrDoi": "https://aclanthology.org/2026.acl-long.279/ / https://doi.org/10.18653/v1/2026.acl-long.279",
+      "sourceAccess": "full text (official ACL Anthology)",
+      "verificationStatus": "unreviewed",
+      "evidenceBoundary": "AI 보조 콘텐츠의 인간 입력과 최종 산출물 관계를 정량화하는 방법론입니다. 이 지표를 개인 작업의 진위나 창작적 가치 판정으로 사용하지 않습니다.",
+      "fitRationaleKo": "인간 기여를 AI 사용 여부의 이분법이 아니라 입력·결정과 산출물의 관계로 다루어, 포트폴리오에서 기여 범위와 최종 책임을 설명하는 보조 관점을 제공합니다."
+    },
+    {
+      "referenceId": "arxiv:2610.37469",
+      "ideaFit": "portfolio",
+      "titleEn": "Who Shaped What? Untangling Human and AI Creative Contributions Through Spatial Provenance in Image Editing",
+      "titleKo": "무엇을 누가 만들었는가? 이미지 편집에서 공간적 출처를 통한 인간과 AI의 창작 기여 분리",
+      "urlOrDoi": "https://arxiv.org/abs/2610.37469",
+      "sourceAccess": "full text (arXiv)",
+      "verificationStatus": "unreviewed",
+      "evidenceBoundary": "20명 이미지 편집 디자인 프로브의 기여 인식과 영역별 편집 이력·히트맵 맥락입니다. 모든 디자인 작업이나 법적 저작권 귀속의 증거로 일반화하지 않습니다.",
+      "fitRationaleKo": "의도, 영역별 편집 이력, AI가 결정한 시각적 세부를 구분해 설명하는 방법은 AI 보조 이미지 작업의 출처와 인간 판단을 포트폴리오에서 읽게 하는 데 맞습니다."
+    },
+    {
+      "referenceId": "doi:10.1145/3706599.3716214",
+      "ideaFit": "portfolio",
+      "titleEn": "Unlimited Editions: Documenting Human Style in AI Art Generation",
+      "titleKo": "무한한 에디션: AI 예술 생성에서 인간 스타일의 기원 기록하기",
+      "urlOrDoi": "https://doi.org/10.1145/3706599.3716214 / https://arxiv.org/abs/2507.19497",
+      "sourceAccess": "full text (official arXiv author manuscript; ACM metadata)",
+      "verificationStatus": "unreviewed",
+      "evidenceBoundary": "AI 예술 생성에서 영향·의도·반복·변화의 기록을 다루는 디자인 연구입니다. 특정 기록 형식이 창작 기여를 완전히 증명한다고 주장하지 않습니다.",
+      "fitRationaleKo": "AI 사용 라벨이나 최종 결과만으로 판단하지 않고 레퍼런스 선택·프롬프트·선별·수정의 흔적을 남기자는 논지는 Idea 03의 후보 비교와 수정·반려 기록에 직접 연결됩니다."
+    },
+    {
+      "referenceId": "doi:10.1145/3772318.3791227",
+      "ideaFit": "portfolio",
+      "titleEn": "ORAgen Fables: Advancing the Design and Management of Content Attribution",
+      "titleKo": "ORAgen Fables: 콘텐츠 속성 설계 및 관리 개선",
+      "urlOrDoi": "https://doi.org/10.1145/3772318.3791227",
+      "sourceAccess": "abstract+metadata",
+      "verificationStatus": "unreviewed",
+      "evidenceBoundary": "생성형 미디어와 provenance 기술 이후 콘텐츠 출처 표기의 복잡성을 다루는 연구입니다. 특정 속성 방식의 정확성이나 법적 효력을 주장하지 않습니다.",
+      "fitRationaleKo": "누가 무엇에 기여했는지의 표기가 저작권·커뮤니티 규범·신뢰와 연결됨을 다루므로, 포트폴리오의 출처·권리와 기여 설명 항목을 설계하는 데 적합합니다."
+    },
+    {
+      "referenceId": "doi:10.1109/cvpr52729.2023.01372",
+      "ideaFit": "portfolio",
+      "titleEn": "Toward Verifiable and Reproducible Human Evaluation for Text-to-Image Generation",
+      "titleKo": "텍스트-이미지 생성의 검증 가능하고 재현 가능한 인간 평가를 향하여",
+      "urlOrDoi": "https://doi.org/10.1109/cvpr52729.2023.01372 / https://arxiv.org/abs/2304.01816",
+      "sourceAccess": "full text (official author repository); abstract+metadata verified",
+      "verificationStatus": "unreviewed",
+      "evidenceBoundary": "텍스트-이미지 생성의 인간 평가 방법론입니다. 포트폴리오 리뷰나 실제 디자인 품질 전체의 단일 정답 기준으로 해석하지 않습니다.",
+      "fitRationaleKo": "과업·평가 기준·평가자·비교 방식·기록을 명시하는 인간 평가 원칙은 포트폴리오 리뷰가 “좋아 보인다”는 인상 대신 재현 가능한 품질 검토가 되게 합니다."
     }
   ]
 }
