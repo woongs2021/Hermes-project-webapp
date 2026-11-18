@@ -71,6 +71,7 @@ export function DissertationReferencesPanel() {
   const visibleReferences = useMemo(() => filteredAndSorted(manifest.allRelevantReferences, filter, sort), [manifest, filter, sort])
   const topReferences = useMemo(() => filteredAndSorted(manifest.top10, topFilter, 'relevance'), [manifest, topFilter])
   const topCount = (fit: IdeaFit) => manifest.top10.filter((item) => item.ideaFit === fit).length
+  const allCount = (fit: IdeaFit) => manifest.allRelevantReferences.filter((item) => item.ideaFit === fit).length
   const selected = manifest.allRelevantReferences.find((item) => item.referenceId === selectedId) ?? manifest.top10[0]
   const selectedSourceHrefs = selected ? sourceHrefs(selected.urlOrDoi) : []
   const selectFilter = (nextFilter: ReferenceFilter) => {
@@ -138,7 +139,7 @@ export function DissertationReferencesPanel() {
         <div className="validated-paper-stack-header"><div><p className="card-kicker">All related references</p><h3>논문 아이디어 관련 논문 전체 {manifest.counts.allRelevant}개</h3><p>{manifest.selectionBoundaryKo}</p></div></div>
         <div className="dissertation-reference-controls">
           <div className="research-filter-chips dissertation-reference-filter-chips" aria-label="Reference idea filter">
-            {([['all', '전체'], ['educator', 'Idea 01 · 교육자'], ['learner', 'Idea 02 · 학습자'], ['portfolio', 'Idea 03 · 포트폴리오']] as const).map(([id, label]) => <button key={id} type="button" className={filter === id ? 'filter-chip active' : 'filter-chip'} aria-pressed={filter === id} onClick={() => selectFilter(id)}>{label}</button>)}
+            {([['all', `전체 ${manifest.counts.allRelevant}`], ['educator', `Idea 01 · 교육자 ${allCount('educator')}`], ['learner', `Idea 02 · 학습자 ${allCount('learner')}`], ['portfolio', `Idea 03 · 포트폴리오 ${allCount('portfolio')}`]] as const).map(([id, label]) => <button key={id} type="button" className={filter === id ? 'filter-chip active' : 'filter-chip'} aria-pressed={filter === id} onClick={() => selectFilter(id)}>{label}</button>)}
           </div>
           <div className="research-filter-chips dissertation-reference-sort-chips" aria-label="Reference sort order">
             <button type="button" className={sort === 'relevance' ? 'filter-chip active' : 'filter-chip'} aria-pressed={sort === 'relevance'} onClick={() => selectSort('relevance')}>관련성 높은 순</button>
