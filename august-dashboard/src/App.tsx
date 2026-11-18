@@ -233,7 +233,7 @@ const automationLoops: AutomationLoop[] = [
   { owner: 'Son', name: 'AI/AX SNS 최종 요약', rhythm: '수·금 09:50 KST', nextRun: '수 09:50 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '에이전트 실행', note: '검증된 신호를 읽기 쉬운 시장 요약으로 정리' },
   { owner: 'Son', name: 'AI/AX 비즈니스 시장 변화', rhythm: '수·금 09:35 KST', nextRun: '수 09:35 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '리서치 실행', note: '리서치 결과를 시장 변화로 번역' },
   { owner: 'Son', name: 'Threads 검토용 초안', rhythm: '월·수·금 09:30 KST', nextRun: '수 09:30 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '에이전트 실행', note: 'AI·디자인·교육 관점의 검토용 초안 전달' },
-  { owner: 'Son', name: '국내외 AX 사례 리포트', rhythm: '월·수·금 09:10 KST', nextRun: '수 09:10 KST', status: 'ok', delivery: '다이렉트 메시지·공개 페이지', cost: '리서치·배포', note: '중복 없는 국내·해외 AX 사례를 확인하고 금요일 주간 공개본을 발행' },
+  { owner: 'Son', name: '국내외 AX 사례 2+2 리포트', rhythm: '월·수·금 09:10 KST', nextRun: '수 09:10 KST', status: 'ok', delivery: '다이렉트 메시지·공개 페이지', cost: '리서치·배포', note: '국내·해외 각각 최소 2건의 중복 없는 AX 사례를 확인하고 금요일 주간 공개본을 발행' },
   { owner: 'Son', name: 'Career 주간 전체 모니터링', rhythm: '월 08:00 KST', nextRun: '다음 월 08:00 KST', status: 'ok', delivery: '공개 페이지·보고', cost: '리서치·배포', note: '대학·기업·글로벌 공고를 보수적으로 확인' },
   { owner: 'Son', name: 'Career 국내·대학 사전 점검', rhythm: '월 07:30 KST', nextRun: '다음 월 07:30 KST', status: 'ok', delivery: '내부 핸드오프', cost: '리서치 실행', note: '공개 전 공식 출처 기반의 국내 점검' },
   { owner: 'Son', name: 'Career 글로벌 A 사전 점검', rhythm: '월 07:40 KST', nextRun: '다음 월 07:40 KST', status: 'ok', delivery: '내부 핸드오프', cost: '리서치 실행', note: '글로벌 대상군 A의 공식 공고 점검' },
@@ -246,7 +246,7 @@ const automationLoops: AutomationLoop[] = [
   { owner: 'Muyeol', name: 'AI/AX job-shift 루프 검증', rhythm: '금 09:55 KST', nextRun: '금 09:55 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '소스·리스크·구조를 주간 검증' },
   { owner: 'Muyeol', name: '논문 아이디어 shortlist 사전 검증', rhythm: '금 10:20 KST', nextRun: '금 10:20 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '공개 전 근거와 안전 경계를 확인' },
   { owner: 'Muyeol', name: '주간 웹앱·Career 사전 검증', rhythm: '월 10:00 KST', nextRun: '다음 월 10:00 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '월요일 공개 전 데이터와 경계를 확인' },
-  { owner: 'Muyeol', name: 'AX 사례 주간 공개본 검증', rhythm: '월 10:25 KST', nextRun: '다음 월 10:25 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '국내·해외 사례, 중복, 원문 링크와 Pages 공개본을 독립 검증' },
+  { owner: 'Muyeol', name: 'AX 사례 2+2 주간 공개본 검증', rhythm: '월 10:25 KST', nextRun: '다음 월 10:25 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '국내·해외 각각 최소 2건, 중복, 원문 링크와 Pages 공개본을 독립 검증' },
   { owner: 'Muyeol', name: '주간 웹앱 데이터 수량 점검', rhythm: '월 09:40 KST', nextRun: '다음 월 09:40 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '공개 데이터 수량과 빌드 상태를 점검' },
 ]
 

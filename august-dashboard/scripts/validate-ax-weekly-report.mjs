@@ -6,6 +6,8 @@ const rootKeys = new Set(['version', 'publicSafe', 'status', 'sourcePolicy', 're
 const releaseKeys = new Set(['week', 'generatedAt', 'cases'])
 const caseKeys = new Set(['id', 'region', 'organization', 'titleKo', 'sourceTitle', 'sourceUrl', 'sourceName', 'sourceType', 'publishedAt', 'workflowKo', 'whatChangedKo', 'evidenceKo', 'implicationKo', 'claimBoundaryKo', 'publicSafe'])
 const banned = [/(?:api[_-]?key|secret|token|authorization|bearer)/i, /\/opt\/data\//i, /(?:chat[_-]?id|telegram[_-]?id|slack[_-]?id)/i, /(?:prompt|cron|jobs\.json)/i]
+// 2026-W47 is the published 1+1 pilot. New weekly releases require 2+2.
+const twoPlusTwoEffectiveWeek = '2026-W48'
 
 function fail(message) {
   console.error(`AX weekly report validation failed: ${message}`)
@@ -64,16 +66,18 @@ for (const [releaseIndex, release] of report.releases.entries()) {
   const generatedAt = Date.parse(release.generatedAt)
   if (previousGeneratedAt && generatedAt <= previousGeneratedAt) fail(`${location}.generatedAt must be later than the preceding release`)
   previousGeneratedAt = generatedAt
-  if (!Array.isArray(release.cases) || release.cases.length < 2) fail(`${location}.cases needs at least two cases`)
+  const requiredPerRegion = release.week >= twoPlusTwoEffectiveWeek ? 2 : 1
+  const requiredCaseCount = requiredPerRegion * 2
+  if (!Array.isArray(release.cases) || release.cases.length < requiredCaseCount) fail(`${location}.cases needs at least ${requiredCaseCount} cases`)
 
-  const regions = new Set()
+  const regionCounts = { Korea: 0, Global: 0 }
   for (const [caseIndex, item] of release.cases.entries()) {
     const caseLocation = `${location}.cases[${caseIndex}]`
     if (!item || typeof item !== 'object' || Array.isArray(item)) fail(`${caseLocation} must be an object`)
     onlyAllowed(item, caseKeys, caseLocation)
     if (item.publicSafe !== true) fail(`${caseLocation}.publicSafe must be true`)
     if (!['Korea', 'Global'].includes(item.region)) fail(`${caseLocation}.region must be Korea or Global`)
-    regions.add(item.region)
+    regionCounts[item.region] += 1
     for (const field of ['id', 'organization', 'titleKo', 'sourceTitle', 'sourceUrl', 'sourceName', 'sourceType', 'publishedAt', 'workflowKo', 'whatChangedKo', 'evidenceKo', 'implicationKo', 'claimBoundaryKo']) requireText(item[field], field, caseLocation)
     if (!/^https:\/\//.test(item.sourceUrl)) fail(`${caseLocation}.sourceUrl must use HTTPS`)
     if (ids.has(item.id) || urls.has(item.sourceUrl)) fail(`${caseLocation} duplicates a published case from this archive`)
@@ -81,7 +85,7 @@ for (const [releaseIndex, release] of report.releases.entries()) {
     urls.add(item.sourceUrl)
     caseCount += 1
   }
-  if (!regions.has('Korea') || !regions.has('Global')) fail(`${location} needs at least one Korea and one Global case`)
+  if (regionCounts.Korea < requiredPerRegion || regionCounts.Global < requiredPerRegion) fail(`${location} needs at least ${requiredPerRegion} Korea and ${requiredPerRegion} Global cases`)
 }
 
 console.log(`AX weekly report valid: ${report.releases.length} releases, ${caseCount} accumulated public cases`)
