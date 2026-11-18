@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from 'react'
 import './dissertation-references.css'
 
 type IdeaFit = 'educator' | 'learner' | 'portfolio'
+type ReferenceFilter = 'all' | IdeaFit
+type ReferenceSort = 'relevance' | 'source'
 
 type DissertationReference = {
   referenceId: string
@@ -36,6 +38,14 @@ const emptyManifest: ReferenceManifest = {
 const ideaLabel = (fit: IdeaFit) => fit === 'educator' ? 'Idea 01 · 교육자 AI 조교' : fit === 'learner' ? 'Idea 02 · 학습자 에이전트' : 'Idea 03 · AI 포트폴리오'
 const statusLabel = (status: string) => status.startsWith('GO') ? '검증 메모 있음' : status.startsWith('WATCH') ? '추가 확인 필요' : '후보 검토 중'
 const sourceHrefs = (value: string) => [...new Set(value.match(/https?:\/\/[^\s;]+/g) ?? [])]
+const filteredAndSorted = (references: DissertationReference[], filter: ReferenceFilter, sort: ReferenceSort) => {
+  const filtered = references.filter((item) => filter === 'all' || item.ideaFit === filter)
+  if (sort === 'source') return filtered
+  return filtered
+    .map((item, sourceIndex) => ({ item, sourceIndex }))
+    .sort((a, b) => (a.item.top10Rank ?? Number.MAX_SAFE_INTEGER) - (b.item.top10Rank ?? Number.MAX_SAFE_INTEGER) || a.sourceIndex - b.sourceIndex)
+    .map(({ item }) => item)
+}
 
 function ReferenceTitle({ item }: { item: DissertationReference }) {
   return <><span className="research-title-en">{item.titleEn}</span><span className="research-title-ko">{item.titleKo}</span></>
@@ -44,7 +54,8 @@ function ReferenceTitle({ item }: { item: DissertationReference }) {
 export function DissertationReferencesPanel() {
   const [manifest, setManifest] = useState<ReferenceManifest>(emptyManifest)
   const [selectedId, setSelectedId] = useState('')
-  const [filter, setFilter] = useState<'all' | IdeaFit>('all')
+  const [filter, setFilter] = useState<ReferenceFilter>('all')
+  const [sort, setSort] = useState<ReferenceSort>('relevance')
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}data/dissertation-references.json`, { cache: 'no-store' })
@@ -56,9 +67,19 @@ export function DissertationReferencesPanel() {
       .catch(() => setManifest(emptyManifest))
   }, [])
 
-  const visibleReferences = useMemo(() => manifest.allRelevantReferences.filter((item) => filter === 'all' || item.ideaFit === filter), [manifest, filter])
+  const visibleReferences = useMemo(() => filteredAndSorted(manifest.allRelevantReferences, filter, sort), [manifest, filter, sort])
   const selected = manifest.allRelevantReferences.find((item) => item.referenceId === selectedId) ?? manifest.top10[0]
   const selectedSourceHrefs = selected ? sourceHrefs(selected.urlOrDoi) : []
+  const selectFilter = (nextFilter: ReferenceFilter) => {
+    const nextVisible = filteredAndSorted(manifest.allRelevantReferences, nextFilter, sort)
+    setFilter(nextFilter)
+    setSelectedId(nextVisible[0]?.referenceId ?? '')
+  }
+  const selectSort = (nextSort: ReferenceSort) => {
+    const nextVisible = filteredAndSorted(manifest.allRelevantReferences, filter, nextSort)
+    setSort(nextSort)
+    setSelectedId(nextVisible[0]?.referenceId ?? '')
+  }
 
   return (
     <div className="research-board-grid dissertation-references-panel" aria-label="Dissertation references">
@@ -66,11 +87,11 @@ export function DissertationReferencesPanel() {
         <p className="card-kicker">Dissertation evidence map</p>
         <h3>논문 아이디어 레퍼런스</h3>
         <p>교육자용 AI 조교, 학습자 개인화 에이전트, AI 보조 디자인 포트폴리오의 설계 질문에 맞춰 관련 논문을 다시 엮었습니다.</p>
-        <div className="status-row">
+        <div className="status-row dissertation-idea-shortcuts" aria-label="논문 아이디어 빠른 선택">
           <span className="status-chip">references {manifest.counts.allRelevant}</span>
-          <span className="status-chip muted">Idea 01 {manifest.counts.educatorAssistant}</span>
-          <span className="status-chip muted">Idea 02 {manifest.counts.learnerAgent}</span>
-          <span className="status-chip muted">Idea 03 {manifest.counts.aiPortfolio}</span>
+          <button type="button" className={filter === 'educator' ? 'status-chip muted active' : 'status-chip muted'} aria-pressed={filter === 'educator'} onClick={() => selectFilter('educator')}>Idea 01 {manifest.counts.educatorAssistant}</button>
+          <button type="button" className={filter === 'learner' ? 'status-chip muted active' : 'status-chip muted'} aria-pressed={filter === 'learner'} onClick={() => selectFilter('learner')}>Idea 02 {manifest.counts.learnerAgent}</button>
+          <button type="button" className={filter === 'portfolio' ? 'status-chip muted active' : 'status-chip muted'} aria-pressed={filter === 'portfolio'} onClick={() => selectFilter('portfolio')}>Idea 03 {manifest.counts.aiPortfolio}</button>
         </div>
       </article>
 
@@ -107,11 +128,18 @@ export function DissertationReferencesPanel() {
 
       <section className="content-card dissertation-reference-list-card" aria-label="All dissertation references">
         <div className="validated-paper-stack-header"><div><p className="card-kicker">All related references</p><h3>논문 아이디어 관련 논문 전체 {manifest.counts.allRelevant}개</h3><p>{manifest.selectionBoundaryKo}</p></div></div>
-        <div className="research-filter-chips" aria-label="Reference idea filter">
-          {([['all', '전체'], ['educator', 'Idea 01 · 교육자'], ['learner', 'Idea 02 · 학습자'], ['portfolio', 'Idea 03 · 포트폴리오']] as const).map(([id, label]) => <button key={id} type="button" className={filter === id ? 'filter-chip active' : 'filter-chip'} onClick={() => setFilter(id)}>{label}</button>)}
+        <div className="dissertation-reference-controls">
+          <div className="research-filter-chips dissertation-reference-filter-chips" aria-label="Reference idea filter">
+            {([['all', '전체'], ['educator', 'Idea 01 · 교육자'], ['learner', 'Idea 02 · 학습자'], ['portfolio', 'Idea 03 · 포트폴리오']] as const).map(([id, label]) => <button key={id} type="button" className={filter === id ? 'filter-chip active' : 'filter-chip'} aria-pressed={filter === id} onClick={() => selectFilter(id)}>{label}</button>)}
+          </div>
+          <div className="research-filter-chips dissertation-reference-sort-chips" aria-label="Reference sort order">
+            <button type="button" className={sort === 'relevance' ? 'filter-chip active' : 'filter-chip'} aria-pressed={sort === 'relevance'} onClick={() => selectSort('relevance')}>관련성 높은 순</button>
+            <button type="button" className={sort === 'source' ? 'filter-chip active' : 'filter-chip'} aria-pressed={sort === 'source'} onClick={() => selectSort('source')}>수집 순</button>
+          </div>
         </div>
+        <p className="dissertation-reference-result-summary"><strong>{filter === 'all' ? '전체' : ideaLabel(filter)}</strong> 관련 논문 <strong>{visibleReferences.length}개</strong> · {sort === 'relevance' ? '직접 연관되어 Top 10에 든 논문을 먼저 보여줍니다.' : '처음 수집한 순서로 보여줍니다.'}</p>
         <ol className="dissertation-reference-list">
-          {visibleReferences.map((item) => <li key={item.referenceId}><button type="button" onClick={() => setSelectedId(item.referenceId)} aria-pressed={selectedId === item.referenceId}><span>{ideaLabel(item.ideaFit)}</span><strong><ReferenceTitle item={item} /></strong><small>{item.fitRationaleKo}</small></button></li>)}
+          {visibleReferences.map((item) => <li key={item.referenceId}><button type="button" onClick={() => setSelectedId(item.referenceId)} aria-pressed={selectedId === item.referenceId}><span>{ideaLabel(item.ideaFit)}{item.top10Rank ? ` · 전체 Top ${item.top10Rank}` : ''}</span><strong><ReferenceTitle item={item} /></strong><small>{item.fitRationaleKo}</small></button></li>)}
         </ol>
       </section>
     </div>

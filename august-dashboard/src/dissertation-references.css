@@ -16,6 +16,44 @@
   gap: 18px;
 }
 
+.dissertation-idea-shortcuts .status-chip {
+  font: inherit;
+}
+
+.dissertation-idea-shortcuts button {
+  cursor: pointer;
+}
+
+.dissertation-idea-shortcuts button.active {
+  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 10%, var(--surface));
+  border-color: color-mix(in srgb, var(--primary) 48%, var(--stroke));
+}
+
+.dissertation-reference-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dissertation-reference-filter-chips,
+.dissertation-reference-sort-chips {
+  justify-content: flex-start;
+}
+
+.dissertation-reference-sort-chips .filter-chip {
+  font-size: 0.82rem;
+}
+
+.dissertation-reference-result-summary {
+  margin: -4px 0 0;
+  color: var(--muted-ink);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
 .dissertation-reference-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
