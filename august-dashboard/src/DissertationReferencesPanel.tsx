@@ -54,6 +54,7 @@ function ReferenceTitle({ item }: { item: DissertationReference }) {
 export function DissertationReferencesPanel() {
   const [manifest, setManifest] = useState<ReferenceManifest>(emptyManifest)
   const [selectedId, setSelectedId] = useState('')
+  const [topFilter, setTopFilter] = useState<ReferenceFilter>('all')
   const [filter, setFilter] = useState<ReferenceFilter>('all')
   const [sort, setSort] = useState<ReferenceSort>('relevance')
 
@@ -68,6 +69,8 @@ export function DissertationReferencesPanel() {
   }, [])
 
   const visibleReferences = useMemo(() => filteredAndSorted(manifest.allRelevantReferences, filter, sort), [manifest, filter, sort])
+  const topReferences = useMemo(() => filteredAndSorted(manifest.top10, topFilter, 'relevance'), [manifest, topFilter])
+  const topCount = (fit: IdeaFit) => manifest.top10.filter((item) => item.ideaFit === fit).length
   const selected = manifest.allRelevantReferences.find((item) => item.referenceId === selectedId) ?? manifest.top10[0]
   const selectedSourceHrefs = selected ? sourceHrefs(selected.urlOrDoi) : []
   const selectFilter = (nextFilter: ReferenceFilter) => {
@@ -80,31 +83,36 @@ export function DissertationReferencesPanel() {
     setSort(nextSort)
     setSelectedId(nextVisible[0]?.referenceId ?? '')
   }
+  const selectTopFilter = (nextFilter: ReferenceFilter) => {
+    const nextTop = filteredAndSorted(manifest.top10, nextFilter, 'relevance')
+    setTopFilter(nextFilter)
+    setSelectedId(nextTop[0]?.referenceId ?? '')
+  }
 
   return (
     <div className="research-board-grid dissertation-references-panel" aria-label="Dissertation references">
       <article className="content-card research-board-brief">
         <p className="card-kicker">Dissertation evidence map</p>
         <h3>논문 아이디어 레퍼런스</h3>
-        <p>교육자용 AI 조교, 학습자 개인화 에이전트, AI 보조 디자인 포트폴리오의 설계 질문에 맞춰 관련 논문을 다시 엮었습니다.</p>
-        <div className="status-row dissertation-idea-shortcuts" aria-label="논문 아이디어 빠른 선택">
-          <span className="status-chip">references {manifest.counts.allRelevant}</span>
-          <button type="button" className={filter === 'educator' ? 'status-chip muted active' : 'status-chip muted'} aria-pressed={filter === 'educator'} onClick={() => selectFilter('educator')}>Idea 01 {manifest.counts.educatorAssistant}</button>
-          <button type="button" className={filter === 'learner' ? 'status-chip muted active' : 'status-chip muted'} aria-pressed={filter === 'learner'} onClick={() => selectFilter('learner')}>Idea 02 {manifest.counts.learnerAgent}</button>
-          <button type="button" className={filter === 'portfolio' ? 'status-chip muted active' : 'status-chip muted'} aria-pressed={filter === 'portfolio'} onClick={() => selectFilter('portfolio')}>Idea 03 {manifest.counts.aiPortfolio}</button>
+        <p>위에서는 아이디어에 직접 연결된 핵심 논문만 살피고, 아래에서는 전체 관련 논문을 아이디어별로 탐색할 수 있습니다.</p>
+        <div className="status-row dissertation-idea-shortcuts" aria-label="직접 연관 핵심 논문 아이디어 선택">
+          <button type="button" className={topFilter === 'all' ? 'status-chip active' : 'status-chip'} aria-pressed={topFilter === 'all'} onClick={() => selectTopFilter('all')}>직접 연관 {manifest.counts.top10}</button>
+          <button type="button" className={topFilter === 'educator' ? 'status-chip muted active' : 'status-chip muted'} aria-pressed={topFilter === 'educator'} onClick={() => selectTopFilter('educator')}>Idea 01 {topCount('educator')}</button>
+          <button type="button" className={topFilter === 'learner' ? 'status-chip muted active' : 'status-chip muted'} aria-pressed={topFilter === 'learner'} onClick={() => selectTopFilter('learner')}>Idea 02 {topCount('learner')}</button>
+          <button type="button" className={topFilter === 'portfolio' ? 'status-chip muted active' : 'status-chip muted'} aria-pressed={topFilter === 'portfolio'} onClick={() => selectTopFilter('portfolio')}>Idea 03 {topCount('portfolio')}</button>
         </div>
       </article>
 
       <section className="content-card validated-paper-stack-card dissertation-top10-card" aria-label="Top 10 dissertation references">
         <div className="validated-paper-stack-header">
           <div>
-            <p className="card-kicker">Dissertation relevance · Top {manifest.counts.top10}</p>
-            <h3>{manifest.sectionTitleKo}</h3>
-            <p>기존 후보의 제목·초록·메타데이터와 검증 메모에서 확인되는 설계 연관성으로 우선순위를 정했습니다. 이 순위는 연구 효과의 강도나 검증 완료 여부를 뜻하지 않습니다.</p>
+            <p className="card-kicker">Direct dissertation relevance · {topReferences.length}</p>
+            <h3>{topFilter === 'all' ? manifest.sectionTitleKo : `${ideaLabel(topFilter)}에 직접 연관된 핵심 논문 ${topReferences.length}개`}</h3>
+            <p>아이디어 탭마다 직접 연관된 Top 논문만 보여줍니다. 이 순위는 연구 효과의 강도나 검증 완료 여부를 뜻하지 않습니다.</p>
           </div>
         </div>
         <div className="dissertation-top10-grid">
-          {manifest.top10.map((item) => (
+          {topReferences.map((item) => (
             <button key={item.referenceId} type="button" className="validated-paper-card" onClick={() => setSelectedId(item.referenceId)} aria-pressed={selectedId === item.referenceId}>
               <span className="validated-paper-rank">{String(item.top10Rank).padStart(2, '0')}</span>
               <span className="validated-paper-copy"><strong><ReferenceTitle item={item} /></strong><small>{ideaLabel(item.ideaFit)}</small><span>{item.fitRationaleKo}</span></span>
