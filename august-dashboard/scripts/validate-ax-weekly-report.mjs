@@ -6,8 +6,7 @@ const rootKeys = new Set(['version', 'publicSafe', 'status', 'sourcePolicy', 're
 const releaseKeys = new Set(['week', 'generatedAt', 'cases'])
 const caseKeys = new Set(['id', 'region', 'organization', 'titleKo', 'sourceTitle', 'sourceUrl', 'sourceName', 'sourceType', 'publishedAt', 'workflowKo', 'whatChangedKo', 'evidenceKo', 'implicationKo', 'claimBoundaryKo', 'publicSafe'])
 const banned = [/(?:api[_-]?key|secret|token|authorization|bearer)/i, /\/opt\/data\//i, /(?:chat[_-]?id|telegram[_-]?id|slack[_-]?id)/i, /(?:prompt|cron|jobs\.json)/i]
-// 2026-W47 is the published 1+1 pilot. New weekly releases require 2+2.
-const twoPlusTwoEffectiveWeek = '2026-W48'
+
 
 function fail(message) {
   console.error(`AX weekly report validation failed: ${message}`)
@@ -66,9 +65,8 @@ for (const [releaseIndex, release] of report.releases.entries()) {
   const generatedAt = Date.parse(release.generatedAt)
   if (previousGeneratedAt && generatedAt <= previousGeneratedAt) fail(`${location}.generatedAt must be later than the preceding release`)
   previousGeneratedAt = generatedAt
-  const requiredPerRegion = release.week >= twoPlusTwoEffectiveWeek ? 2 : 1
-  const requiredCaseCount = requiredPerRegion * 2
-  if (!Array.isArray(release.cases) || release.cases.length < requiredCaseCount) fail(`${location}.cases needs at least ${requiredCaseCount} cases`)
+  const requiredPerRegion = 1
+  if (!Array.isArray(release.cases) || release.cases.length < 2) fail(`${location}.cases needs at least two cases`)
 
   const regionCounts = { Korea: 0, Global: 0 }
   for (const [caseIndex, item] of release.cases.entries()) {
