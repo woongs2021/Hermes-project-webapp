@@ -9793,6 +9793,11 @@
   margin: 0 auto;
 }
 
+/* Keep Dissertation's section rail visually separate from export controls. */
+.dissertation-shell > .personal-ax-report-shell {
+  margin-top: clamp(22px, 3vw, 32px);
+}
+
 .personal-ax-report-controls {
   display: flex;
   align-items: center;

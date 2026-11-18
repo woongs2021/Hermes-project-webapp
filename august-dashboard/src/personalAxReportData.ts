@@ -440,8 +440,8 @@ export const personalAxReports: PersonalAxReport[] = [
     eyebrow: 'Dissertation idea 03 · transparent AI-assisted design portfolio review',
     title: 'AI 보조 디자인 포트폴리오는 탐지 결과가 아니라, 문제 정의·선택·수정·책임의 흔적으로 검토될 수 있다',
     dek: '학생과 주니어 디자이너가 AI를 활용한 작업을 과장하거나 숨기지 않고 설명하고, 리뷰어가 결과물의 진위 판정 대신 기여·판단·권리·품질을 검토할 수 있는 포트폴리오 기록과 평가 흐름을 탐색하는 국내 학술지 투고용 연구 아이디어입니다.',
-    heroImage: 'assets/personal-ax-reports/dissertation-hero.jpg',
-    heroAlt: '코발트 블루와 선명한 레드의 종이·카드 레이어에 작은 빨간 핀과 원형 표식을 배치한 연구 자료의 추상 구성.',
+    heroImage: 'assets/personal-ax-reports/dissertation-idea-3-hero.jpg',
+    heroAlt: '밝은 작업면 위에 코발트 블루와 레드의 반투명 포트폴리오·문서 레이어를 배열한 디자인 과정 기록의 플랫레이.',
     sections: [
       { heading: '연구 문제와 제안 논지', paragraphs: [
         '이 연구는 AI 보조 디자인 작업의 포트폴리오를 “AI가 만들었는지 아닌지”로 가르는 문제로 보지 않습니다. 학생과 주니어 디자이너가 어떤 문제를 정의했고, AI를 어느 범위에서 사용했으며, 여러 후보를 어떻게 비교하고 무엇을 수정·반려했는지 설명할 수 있는가를 살피는 연구입니다. 리뷰어 역시 탐지기의 확률을 진실 판정으로 삼기보다, 공개 가능한 과정 기록과 최종 결과의 품질·권리·책임을 함께 검토합니다.',
