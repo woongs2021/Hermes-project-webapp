@@ -4,6 +4,14 @@ import { getReportPrompts, renderReportPromptHtmlSection } from './personalAxRep
 
 type DownloadStatus = 'idle' | 'html-downloaded' | 'pdf-generating' | 'pdf-downloaded' | 'error'
 
+const pdfExportColorOverrides = `
+  #personal-ax-report-print { background-color: rgba(255, 255, 255, 0.79) !important; box-shadow: 0 12px 36px rgba(1, 1, 2, 0.05) !important; }
+  #personal-ax-report-print .personal-ax-report-hero { border-color: rgba(1, 1, 2, 0.084) !important; }
+  #personal-ax-report-print .personal-ax-report-byline { border-inline-start-color: rgba(54, 86, 210, 0.43) !important; }
+  #personal-ax-report-print .personal-ax-report-more { background-color: rgba(248, 249, 255, 0.83) !important; border-color: rgba(42, 66, 162, 0.25) !important; }
+  #personal-ax-report-print .personal-ax-report-sources { background-color: rgba(244, 246, 255, 0.83) !important; }
+`
+
 const highlightPhrases = [
   // AI 리서치
   '실행 전 계획 공개, 실행 중 권한 확인, 실행 후 회복 가능성',
@@ -277,7 +285,17 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
         filename: `personal-ax-${report.id}-${exportDate}.pdf`,
         image: { type: 'jpeg' as const, quality: 0.98 },
         enableLinks: true,
-        html2canvas: { useCORS: true, allowTaint: false, scale: 2, logging: false },
+        html2canvas: {
+          useCORS: true,
+          allowTaint: false,
+          scale: 2,
+          logging: false,
+          onclone: (clonedDocument: Document) => {
+            const exportStyle = clonedDocument.createElement('style')
+            exportStyle.textContent = pdfExportColorOverrides
+            clonedDocument.head.append(exportStyle)
+          },
+        },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' as const },
         pagebreak: {
           mode: ['css', 'legacy'],

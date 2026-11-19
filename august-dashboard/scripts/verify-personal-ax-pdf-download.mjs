@@ -20,6 +20,8 @@ assert.match(panelSource, /margin:\s*\[12,\s*12,\s*14,\s*12\]/, 'PDF must use se
 assert.match(panelSource, /pagebreak:\s*\{\s*mode:\s*\['css',\s*'legacy'\],\s*avoid:\s*\[/, 'PDF must use CSS-aware page-break avoidance')
 assert.match(panelSource, /'\.personal-ax-report-section',\s*'\.designer-ai-timeline',\s*'\.personal-ax-report-sources',\s*'\.personal-ax-report-prompts'/, 'PDF must avoid splitting sections, figures, sources, and prompts')
 assert.match(panelSource, /html2canvas:\s*\{\s*useCORS:\s*true,\s*allowTaint:\s*false,\s*scale:\s*2/, 'PDF capture must use safe image CORS settings')
+assert.match(panelSource, /const pdfExportColorOverrides = `/, 'PDF capture must provide a clone-safe color fallback for html2canvas')
+assert.match(panelSource, /onclone:\s*\(clonedDocument: Document\)\s*=>\s*\{[\s\S]*?clonedDocument\.head\.append\(exportStyle\)/, 'PDF capture must apply the color fallback inside its cloned document')
 assert.match(panelSource, /PDF 다운로드/, 'direct PDF action must have a clear Korean label')
 assert.match(panelSource, /PDF 파일을 만드는 중입니다\. 잠시만 기다려 주세요\./, 'PDF generation state must inform the user in Korean')
 assert.match(panelSource, /PDF 파일을 준비했습니다\./, 'PDF success state must inform the user in Korean')
