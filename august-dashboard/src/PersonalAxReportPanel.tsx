@@ -277,14 +277,16 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
     pdfGenerationInProgress.current = true
     setDownloadStatus('pdf-generating')
     try {
-      const { default: html2pdf } = await import('html2pdf.js')
       const reportElement = document.querySelector<HTMLElement>('#personal-ax-report-print')
       if (!reportElement) throw new Error('Report element not found')
 
       const exportDate = new Date().toISOString().slice(0, 10)
+      const filename = `personal-ax-${report.id}-${exportDate}.pdf`
+
+      const { default: html2pdf } = await import('html2pdf.js')
       const pdfOptions = {
         margin: [12, 12, 14, 12] as [number, number, number, number],
-        filename: `personal-ax-${report.id}-${exportDate}.pdf`,
+        filename,
         image: { type: 'jpeg' as const, quality: 0.98 },
         enableLinks: true,
         html2canvas: {
@@ -336,7 +338,11 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
         ) : <span />}
         <div className="personal-ax-report-actions">
           <button type="button" onClick={downloadHtml}>HTML 다운로드</button>
-          <button type="button" onClick={downloadPdf} disabled={downloadStatus === 'pdf-generating'}>{downloadStatus === 'pdf-generating' ? 'PDF 만드는 중…' : 'PDF 다운로드'}</button>
+          {report.id === 'designer-ai-exposure' ? (
+            <a href={`${import.meta.env.BASE_URL}downloads/personal-ax-designer-ai-exposure.pdf`} download="personal-ax-designer-ai-exposure.pdf" onClick={() => setDownloadStatus('pdf-downloaded')}>PDF 다운로드</a>
+          ) : (
+            <button type="button" onClick={downloadPdf} disabled={downloadStatus === 'pdf-generating'}>{downloadStatus === 'pdf-generating' ? 'PDF 만드는 중…' : 'PDF 다운로드'}</button>
+          )}
         </div>
       </div>
       <p className="personal-ax-download-status" aria-live="polite">{downloadStatus === 'pdf-generating'
@@ -347,7 +353,9 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
             ? 'HTML 파일을 준비했습니다.'
             : downloadStatus === 'error'
               ? 'PDF 파일을 만들지 못했습니다. 다시 시도해 주세요.'
-              : '브라우저에서만 파일을 생성하며, 서버로 내용을 전송하지 않습니다.'}</p>
+              : report.id === 'designer-ai-exposure'
+                ? '전체 보고서를 미리 만든 PDF 파일로 바로 다운로드합니다.'
+                : '브라우저에서만 파일을 생성하며, 서버로 내용을 전송하지 않습니다.'}</p>
 
       <article className="personal-ax-report-article" id="personal-ax-report-print">
         <header>

@@ -23,10 +23,11 @@
     "verify:designer-ai-timeline": "node --experimental-strip-types scripts/verify-designer-ai-timeline.mjs",
     "verify:personal-ax-report-prompts": "node --experimental-strip-types scripts/verify-personal-ax-report-prompts.mjs",
     "build": "npm run validate:data && npm run generate:data && tsc -b && vite build",
-    "build:public": "tsc -b && vite build",
+    "build:public": "tsc -b && vite build && npm run generate:personal-ax-pdf",
     "lint": "oxlint",
     "preview": "vite preview",
-    "verify:personal-ax-pdf-download": "node scripts/verify-personal-ax-pdf-download.mjs"
+    "verify:personal-ax-pdf-download": "node scripts/verify-personal-ax-pdf-download.mjs",
+    "generate:personal-ax-pdf": "node scripts/generate-personal-ax-pdf.mjs"
   },
   "dependencies": {
     "html2pdf.js": "^0.14.0",
@@ -39,6 +40,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
     "oxlint": "^1.71.0",
+    "playwright": "^1.58.2",
     "typescript": "~6.0.2",
     "vite": "^8.1.1"
   }

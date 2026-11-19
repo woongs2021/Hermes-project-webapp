@@ -3473,6 +3473,18 @@ function App() {
     })
   }
 
+  // This intentionally undocumented render mode is used only by the build-time
+  // Chromium job. It keeps the generated, downloadable PDF limited to the
+  // selected report instead of printing dashboard navigation and chrome.
+  const pdfReportId = new URLSearchParams(window.location.search).get('pdfReport')
+  if (pdfReportId === 'designer-ai-exposure') {
+    return (
+      <main className="personal-ax-pdf-render">
+        <PersonalAxReportPanel reportId="designer-ai-exposure" />
+      </main>
+    )
+  }
+
   return (
     <main className="app-shell">
       <header className="topbar" aria-label="Dashboard navigation">

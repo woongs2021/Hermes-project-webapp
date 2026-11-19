@@ -9766,6 +9766,17 @@
 }
 
 /* Personal AX report: restrained editorial reading surface. */
+.personal-ax-pdf-render {
+  width: min(100%, 920px);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.personal-ax-pdf-render .personal-ax-report-controls,
+.personal-ax-pdf-render .personal-ax-download-status {
+  display: none;
+}
+
 .personal-ax-report-highlight {
   position: relative;
   z-index: 0;
@@ -9815,7 +9826,8 @@
 }
 
 .personal-ax-report-tabs button,
-.personal-ax-report-actions button {
+.personal-ax-report-actions button,
+.personal-ax-report-actions a {
   border: 1px solid var(--stroke);
   border-radius: 999px;
   padding: 8px 12px;
@@ -9831,7 +9843,9 @@
 .personal-ax-report-tabs button:focus-visible,
 .personal-ax-report-tabs button.active,
 .personal-ax-report-actions button:hover,
-.personal-ax-report-actions button:focus-visible {
+.personal-ax-report-actions button:focus-visible,
+.personal-ax-report-actions a:hover,
+.personal-ax-report-actions a:focus-visible {
   border-color: color-mix(in srgb, var(--primary) 55%, var(--stroke));
   background: color-mix(in srgb, var(--primary) 9%, var(--surface));
   color: var(--primary);

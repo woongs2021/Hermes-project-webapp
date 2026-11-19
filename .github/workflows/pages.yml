@@ -29,6 +29,9 @@ jobs:
       - name: Install dependencies
         working-directory: august-dashboard
         run: npm ci
+      - name: Install Chromium for the report PDF
+        working-directory: august-dashboard
+        run: npx playwright install --with-deps chromium
       - name: Build committed public dashboard
         working-directory: august-dashboard
         run: npm run build:public
