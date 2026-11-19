@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-19T13:20:00+00:00",
+  "generatedAt": "2026-11-19T14:30:00+00:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples present selected graphic motifs as brand surfaces across coffee, outdoor, apparel, signage, and digital mockup contexts; private chats, credentials, and provider account data are excluded.",
   "collections": [
     {
@@ -3811,6 +3811,107 @@
           "sourceGraphicImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19-rev60/60_vermilion_black_planes_manual_midjourney_source.jpg",
           "sourceGraphic": "Midjourney 60 — Vermilion Black Planes",
           "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19-rev60/06_hanging_cafe_sign_mockup_midjourney-60_nano-banana-pro_flat-rev01.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드"
+        }
+      ]
+    },
+    {
+      "id": "coffee-asset-example-06",
+      "title": "Coffee Mockup Example 6",
+      "created": "2026-11-19",
+      "status": "Surface study",
+      "sourceGraphic": "Midjourney 61 — Mono Grid Blocks",
+      "description": "블랙 모듈 블록과 미세한 그리드 결을 따뜻한 종이 바탕에 담은 모노크롬 커피 목업 세트입니다. #60의 강한 대각 리듬과 달리, 여백과 직교 구조로 조용한 편집적 인상을 만듭니다.",
+      "synthesisTool": "Higgsfield Nano Banana Pro",
+      "items": [
+        {
+          "id": "coffee-asset-example-06-01",
+          "title": "Coffee Mockup Example 6-1",
+          "description": "블랙 모듈 블록과 섬세한 회색 크로스해치 패널, 따뜻한 여백을 Paper Cup의 재질과 형태에 맞춰 차분한 무광 인쇄로 적용한 목업입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/01_white_paper_cup_mockup_midjourney-61_nano-banana-pro.png",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-06/2026-11-19/01_white_paper_cup_mockup_midjourney-61_nano-banana-pro_preview.webp",
+          "assetHash": "f5bbb661e11a21479cb082f01fe45624274eb098a49b2db4880103297edadf48",
+          "width": 2528,
+          "height": 1696,
+          "originalImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/01_white_paper_cup_mockup.jpg",
+          "sourceGraphicImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/61_mono_grid_blocks_manual_midjourney_source.jpg",
+          "sourceGraphic": "Midjourney 61 — Mono Grid Blocks",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/01_white_paper_cup_mockup_midjourney-61_nano-banana-pro.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드"
+        },
+        {
+          "id": "coffee-asset-example-06-02",
+          "title": "Coffee Mockup Example 6-2",
+          "description": "블랙 모듈 블록과 섬세한 회색 크로스해치 패널, 따뜻한 여백을 Counter Packaging의 재질과 형태에 맞춰 차분한 무광 인쇄로 적용한 목업입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/02_coffee_packaging_counter_mockup_midjourney-61_nano-banana-pro.png",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-06/2026-11-19/02_coffee_packaging_counter_mockup_midjourney-61_nano-banana-pro_preview.webp",
+          "assetHash": "2d0ed095f44ba3738aced0b07c15c691bed2e170250fbdd4a4033c58702cb7b2",
+          "width": 2528,
+          "height": 1696,
+          "originalImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/02_coffee_packaging_counter_mockup.jpg",
+          "sourceGraphicImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/61_mono_grid_blocks_manual_midjourney_source.jpg",
+          "sourceGraphic": "Midjourney 61 — Mono Grid Blocks",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/02_coffee_packaging_counter_mockup_midjourney-61_nano-banana-pro.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드"
+        },
+        {
+          "id": "coffee-asset-example-06-03",
+          "title": "Coffee Mockup Example 6-3",
+          "description": "블랙 모듈 블록과 섬세한 회색 크로스해치 패널, 따뜻한 여백을 Stacked Cups의 재질과 형태에 맞춰 차분한 무광 인쇄로 적용한 목업입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/03_coffee_bag_front_mockup_midjourney-61_nano-banana-pro.png",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-06/2026-11-19/03_coffee_bag_front_mockup_midjourney-61_nano-banana-pro_preview.webp",
+          "assetHash": "9146b496ce1edc08c7d8776de7a1858ad98d9ace81bd5cab8b03515cab1c4166",
+          "width": 2528,
+          "height": 1696,
+          "originalImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/03_coffee_bag_front_mockup.jpg",
+          "sourceGraphicImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/61_mono_grid_blocks_manual_midjourney_source.jpg",
+          "sourceGraphic": "Midjourney 61 — Mono Grid Blocks",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/03_coffee_bag_front_mockup_midjourney-61_nano-banana-pro.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드"
+        },
+        {
+          "id": "coffee-asset-example-06-04",
+          "title": "Coffee Mockup Example 6-4",
+          "description": "블랙 모듈 블록과 섬세한 회색 크로스해치 패널, 따뜻한 여백을 Carry Tote의 재질과 형태에 맞춰 차분한 무광 인쇄로 적용한 목업입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/04_takeaway_cup_hand_mockup_midjourney-61_nano-banana-pro.png",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-06/2026-11-19/04_takeaway_cup_hand_mockup_midjourney-61_nano-banana-pro_preview.webp",
+          "assetHash": "b654cb9885de0c490966859340db259ed552aad358b50ca99f165db547b0b981",
+          "width": 2528,
+          "height": 1696,
+          "originalImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/04_takeaway_cup_hand_mockup.jpg",
+          "sourceGraphicImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/61_mono_grid_blocks_manual_midjourney_source.jpg",
+          "sourceGraphic": "Midjourney 61 — Mono Grid Blocks",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/04_takeaway_cup_hand_mockup_midjourney-61_nano-banana-pro.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드"
+        },
+        {
+          "id": "coffee-asset-example-06-05",
+          "title": "Coffee Mockup Example 6-5",
+          "description": "블랙 모듈 블록과 섬세한 회색 크로스해치 패널, 따뜻한 여백을 Cup Close-up의 재질과 형태에 맞춰 차분한 무광 인쇄로 적용한 목업입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/05_plain_takeaway_cup_closeup_midjourney-61_nano-banana-pro.png",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-06/2026-11-19/05_plain_takeaway_cup_closeup_midjourney-61_nano-banana-pro_preview.webp",
+          "assetHash": "a35b2dcd7b9e007b781e69b37ed6974af91d649596f44ecb853ac57abb122256",
+          "width": 2528,
+          "height": 1696,
+          "originalImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/05_plain_takeaway_cup_closeup.jpg",
+          "sourceGraphicImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/61_mono_grid_blocks_manual_midjourney_source.jpg",
+          "sourceGraphic": "Midjourney 61 — Mono Grid Blocks",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/05_plain_takeaway_cup_closeup_midjourney-61_nano-banana-pro.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드"
+        },
+        {
+          "id": "coffee-asset-example-06-06",
+          "title": "Coffee Mockup Example 6-6",
+          "description": "블랙 모듈 블록과 섬세한 회색 크로스해치 패널, 따뜻한 여백을 Hanging Sign의 재질과 형태에 맞춰 차분한 무광 인쇄로 적용한 목업입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/06_hanging_cafe_sign_mockup_midjourney-61_nano-banana-pro.png",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-06/2026-11-19/06_hanging_cafe_sign_mockup_midjourney-61_nano-banana-pro_preview.webp",
+          "assetHash": "91135713c512472a62cc4c93f1513f5e772531c62b42c9683494870c6284b599",
+          "width": 2528,
+          "height": 1696,
+          "originalImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/06_hanging_cafe_sign_mockup.jpg",
+          "sourceGraphicImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/61_mono_grid_blocks_manual_midjourney_source.jpg",
+          "sourceGraphic": "Midjourney 61 — Mono Grid Blocks",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-06/2026-11-19/06_hanging_cafe_sign_mockup_midjourney-61_nano-banana-pro.png",
           "downloadLabel": "목업 완성본 PNG 다운로드"
         }
       ]
