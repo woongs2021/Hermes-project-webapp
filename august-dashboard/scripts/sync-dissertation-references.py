@@ -189,10 +189,9 @@ def public_record(item: dict[str, Any], row: dict[str, Any]) -> dict[str, Any]:
         "verificationStatus": "GO",
         "fitRationaleKo": text(item["fitRationaleKo"]),
         "publicSafe": True,
-        "approvedBy": text(item["approvedBy"]),
-        "approvedAt": text(item["approvedAt"]),
-        "candidatePoolLine": item["candidate"]["candidatePoolLine"],
-        "sourceFingerprint": item["candidate"]["sourceFingerprint"],
+        # Review provenance and candidate-pool selectors are internal workflow
+        # metadata.  They remain in the approved handoff, never in this public
+        # manifest.
     }
     if authors:
         record["authors"] = authors
