@@ -20,6 +20,7 @@
     "generate:team-pixel-avatars": "node --experimental-strip-types scripts/generate-team-pixel-avatars.mjs",
     "verify:team-pixel-avatars": "node --experimental-strip-types scripts/verify-team-pixel-avatars.mjs",
     "verify:team-atelier-sprites": "node scripts/verify-team-atelier-sprites.mjs",
+    "verify:designer-ai-timeline": "node --experimental-strip-types scripts/verify-designer-ai-timeline.mjs",
     "build": "npm run validate:data && npm run generate:data && tsc -b && vite build",
     "build:public": "tsc -b && vite build",
     "lint": "oxlint",

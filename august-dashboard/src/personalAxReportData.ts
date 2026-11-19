@@ -6,6 +6,22 @@ export type ReportSource = {
   access: '원문 확인' | '초록·메타데이터 확인'
 }
 
+export type MarketTimeline = {
+  label: '해석적 노출·시장변화 신호'
+  caveat: string
+  lenses: Array<{
+    id: 'freelance-platform' | 'startup' | 'enterprise'
+    label: string
+    summary: string
+    points: Array<{ signal: 1 | 2 | 3 | 4 | 5; taskSignal: string }>
+  }>
+  years: Array<{
+    year: number
+    detail: string
+    sourceNotes: string[]
+  }>
+}
+
 export type PersonalAxReport = {
   id: PersonalAxReportId
   label: string
@@ -22,6 +38,7 @@ export type PersonalAxReport = {
   }>
   sources: ReportSource[]
   prompts: string[]
+  marketTimeline?: MarketTimeline
 }
 
 /**
@@ -355,6 +372,63 @@ export const personalAxReports: PersonalAxReport[] = [
     prompts: [
       'Editorial comparison of global and Korean design work signals: layered warm paper fields, folded cobalt grid, one restrained coral decision marker, graphite shadows, calm high-end design research journal, no text, no logos, no robots, no generic AI-startup imagery.',
     ],
+    marketTimeline: {
+      label: '해석적 노출·시장변화 신호',
+      caveat: '아래 1–5 값은 공식 시장규모·고용규모·감원율 통계가 아니다. 공개 보고서와 관찰 가능한 도입 변화를 바탕으로, 각 시장에서 디자인 과업의 노출·변화 압력을 비교해 읽기 위한 해석적 신호다. 서로 다른 시장의 규모나 고용 결과를 직접 비교하거나 예측하는 지표로 사용하지 않는다.',
+      lenses: [
+        {
+          id: 'freelance-platform',
+          label: '프리랜서·플랫폼',
+          summary: '반복 제작·변형안·단가 경쟁이 먼저 닿는 외주 및 플랫폼 기반 과업.',
+          points: [
+            { signal: 1, taskSignal: '원격 외주와 템플릿형 제작 수요가 커지며 반복 산출물의 가격 비교가 두드러진다.' },
+            { signal: 1, taskSignal: '협업 툴 확산으로 납기·수정 횟수 중심의 운영이 정착하지만, 생성형 제작은 아직 초기다.' },
+            { signal: 3, taskSignal: '이미지 생성의 대중화로 무드보드·시안 변형·간단 에셋의 납기 기대가 빨라진다.' },
+            { signal: 4, taskSignal: '생성 이미지와 템플릿 도구가 플랫폼 의뢰의 초안·리사이즈·다국어 변형 압력을 키운다.' },
+            { signal: 4, taskSignal: '저가·대량 변형안 영역에서 단가와 제안 속도 경쟁이 가시화되고, 권리·유사성 확인이 과제가 된다.' },
+            { signal: 5, taskSignal: '에이전트형 제작 흐름이 반복 작업 묶음을 압축한다. 포트폴리오에는 문제 정의·검수 근거의 비중이 커진다.' },
+            { signal: 5, taskSignal: '2026년은 전망·관찰 단계다. 플랫폼별 실제 수입·고용 변화는 동일 지표로 공개되지 않아 별도 확인이 필요하다.' },
+          ],
+        },
+        {
+          id: 'startup',
+          label: '일반 스타트업',
+          summary: '제한된 인력으로 실험·출시를 반복하는 제품·브랜드 팀의 운영 변화.',
+          points: [
+            { signal: 1, taskSignal: '디자인 인력은 성장 실험과 제품 출시를 지원하며, 자동화는 주로 기존 SaaS 도구 안에 머문다.' },
+            { signal: 2, taskSignal: '원격 제품 개발과 디자인 시스템 정비가 늘며 문서화·컴포넌트 재사용의 가치가 커진다.' },
+            { signal: 3, taskSignal: '생성형 도구가 아이데이션·카피 초안·프로토타입 보조로 들어오며 실험 속도 기대가 높아진다.' },
+            { signal: 4, taskSignal: '작은 팀이 생성 도구로 초기 자산을 빠르게 만들지만, 사용자 검증과 제품 판단의 병목은 남는다.' },
+            { signal: 4, taskSignal: 'AI 기능 탑재 경쟁이 빨라지며 리서치·접근성·신뢰 설계를 함께 검증해야 하는 부담이 커진다.' },
+            { signal: 4, taskSignal: '역할은 제작자 단독보다 문제 분해·실험 설계·품질 게이트를 연결하는 방향으로 재조정된다.' },
+            { signal: 4, taskSignal: '2026년은 전망·관찰 단계다. 투자·채용 환경과 조직별 도입 방식이 달라 일괄적인 고용 결론은 낼 수 없다.' },
+          ],
+        },
+        {
+          id: 'enterprise',
+          label: '대기업',
+          summary: '보안·규제·브랜드·접근성·다부서 책임이 함께 작동하는 대규모 조직의 도입 변화.',
+          points: [
+            { signal: 1, taskSignal: '디자인 시스템과 협업 툴 중심의 표준화가 진행되지만, 생성형 AI 도입은 제한적이다.' },
+            { signal: 1, taskSignal: '원격 협업 확대로 자산 관리와 검수 흐름이 강화되고, 대규모 운영의 일관성이 중요해진다.' },
+            { signal: 2, taskSignal: '생성형 AI의 가능성을 탐색하지만 보안·데이터·브랜드 승인 절차가 실제 확산 속도를 조절한다.' },
+            { signal: 3, taskSignal: '내부 실험과 보조도구 사용이 늘며, 검수 가능한 프롬프트·자산·출력 관리의 필요가 드러난다.' },
+            { signal: 3, taskSignal: '공개 보고서는 업무 변형을 강조한다. 고위험 서비스에서는 접근성·규제·책임이 도입의 제약이자 품질 기준이 된다.' },
+            { signal: 3, taskSignal: 'AI는 우선 보조 흐름으로 자리 잡고, 디자이너는 운영 기준·예외 처리·다부서 조율의 역할을 더 맡게 된다.' },
+            { signal: 3, taskSignal: '2026년은 전망·관찰 단계다. 대기업 내부의 직군별 인력 변화는 공개 데이터만으로 확정할 수 없다.' },
+          ],
+        },
+      ],
+      years: [
+        { year: 2020, detail: '팬데믹 전환은 원격 협업, 자산 공유, 빠른 디지털 접점 제작을 앞당겼다. 이 시점의 변화는 생성형 AI 대체가 아니라 작업 환경과 협업 방식의 재편에 가깝다.', sourceNotes: ['OECD Employment Outlook 2023은 팬데믹 이후 노동시장과 기술 변화의 상호작용을 다룬다.', '이 연도의 신호는 디자인 직군의 고용 규모를 뜻하지 않는다.'] },
+        { year: 2021, detail: '협업 툴과 디자인 시스템이 원격 제품팀의 기본 인프라가 되며 반복 제작의 재사용성과 납기 관리가 중요해졌다. 아직 생성형 AI의 노동시장 효과를 읽을 근거는 제한적이다.', sourceNotes: ['OECD Employment Outlook 2023의 AI·노동시장 검토를 맥락 자료로 사용한다.', '플랫폼·스타트업·대기업의 실제 고용을 동일하게 비교한 공식 시계열은 아니다.'] },
+        { year: 2022, detail: '이미지·텍스트 생성 도구의 대중화가 초안, 변형, 리서치 보조의 기대치를 바꾸기 시작했다. 특히 반복 산출물이 많은 영역에서 속도와 단가에 관한 질문이 커졌다.', sourceNotes: ['IMF(2024)는 생성형 AI가 과업 단위로 직무에 노출될 수 있음을 논의한다.', '이 신호는 특정 도구의 사용량이나 매출을 측정한 값이 아니다.'] },
+        { year: 2023, detail: '생성 도구가 일상 제작 흐름에 들어오며 프리랜서·플랫폼의 초안 및 변형 작업에서 변화 압력이 먼저 강하게 읽힌다. 스타트업은 실험 속도를 얻는 대신 검증 부담도 함께 안게 된다.', sourceNotes: ['OECD Employment Outlook 2023은 AI 영향이 자동화·보완·조직 선택에 따라 달라질 수 있음을 강조한다.', '해석적 신호는 실제 감원 또는 임금 변화의 증거가 아니다.'] },
+        { year: 2024, detail: '조직은 생성 기능을 개별 도구가 아니라 제품·브랜드 운영 흐름에 연결하기 시작했다. 대기업에서는 보안, 권리, 접근성, 승인 절차가 도입 속도와 역할 재설계를 함께 규정한다.', sourceNotes: ['IMF(2024)와 한국은행의 직업별 AI 노출도 분석을 직무·과업 변화의 맥락 자료로 참고한다.', '한국은행 노출도는 실현된 직종별 감원율이 아니다.'] },
+        { year: 2025, detail: '고용주 기대와 글로벌 직업 노출 연구가 활발해졌지만, 공개 보고서도 직업 소멸보다 업무 변형과 보완을 함께 다룬다. 디자인 리더에게는 제작량만이 아니라 검수·권리·접근성 비용을 포함한 운영 지표가 중요해진다.', sourceNotes: ['ILO(2025)는 생성형 AI 노출을 직업 소멸과 동일시하지 않고 변형 가능성을 함께 제시한다.', 'WEF(2025)의 직무 변화 전망은 고용주 설문 기반 기대이며 관측된 해고 통계가 아니다.'] },
+        { year: 2026, detail: '이 연도는 확정 통계가 아닌 현재의 전망·관찰 구간이다. 세 시장 모두에서 AI 보조가 넓어지지만, 실제 고용 결과는 수요·조직 전략·규제·숙련 재배치·경기에 따라 달라진다.', sourceNotes: ['ILO(2025), OECD, IMF, WEF, 한국은행 및 한국디자인진흥원 자료를 해석의 출발점으로 사용한다.', '2026년의 1–5 값은 예측치나 공식 시장 규모가 아니라, 공개 근거의 범위를 넘지 않도록 표시한 해석적 신호다.'] },
+      ],
+    },
   },
   {
     id: 'threads-content',

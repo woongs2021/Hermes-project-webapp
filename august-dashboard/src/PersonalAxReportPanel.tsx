@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, type KeyboardEvent } from 'react'
 import { personalAxReports, type PersonalAxReport, type PersonalAxReportId } from './personalAxReportData'
 
 type DownloadStatus = 'idle' | 'downloaded' | 'error'
@@ -99,6 +99,69 @@ function reportHtml(report: PersonalAxReport) {
   return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(report.title)}</title><style>body{max-width:760px;margin:56px auto;padding:0 24px;color:#17233a;background:#fcfbf8;font:16px/1.8 system-ui,sans-serif}small{color:#60708a}h1{font-size:34px;line-height:1.28}h2{margin-top:44px;font-size:21px}section>p{text-indent:1em}a{color:#315f97}li{margin:8px 0}.eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:12px}</style></head><body><p class="eyebrow">${escapeHtml(report.eyebrow)}</p><img src="${escapeHtml(heroUrl)}" alt="${escapeHtml(report.heroAlt)}" style="width:100%;border-radius:16px;display:block;margin:0 0 28px"><h1>${escapeHtml(report.title)}</h1><p>${escapeHtml(report.dek)}</p>${sections}<section><h2>인용 레퍼런스</h2><ul>${sources}</ul></section><section><h2>미드저니 프롬프트</h2><ul>${prompts}</ul></section></body></html>`
 }
 
+function DesignerAiMarketTimeline({ timeline }: { timeline: NonNullable<PersonalAxReport['marketTimeline']> }) {
+  const [selectedIndex, setSelectedIndex] = useState(timeline.years.length - 1)
+  const selectedYear = timeline.years[selectedIndex]
+  const width = 700
+  const height = 250
+  const left = 48
+  const bottom = 214
+  const step = (width - left - 24) / (timeline.years.length - 1)
+  const signalY = (signal: number) => bottom - (signal - 1) * 38
+  const linePoints = (signals: number[]) => signals.map((signal, index) => `${left + index * step},${signalY(signal)}`).join(' ')
+
+  const selectByKeyboard = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    const keyDelta = event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : event.key === 'ArrowLeft' || event.key === 'ArrowUp' ? -1 : 0
+    if (!keyDelta) return
+    event.preventDefault()
+    const nextIndex = (index + keyDelta + timeline.years.length) % timeline.years.length
+    setSelectedIndex(nextIndex)
+    event.currentTarget.parentElement?.querySelector<HTMLButtonElement>(`button[data-year="${timeline.years[nextIndex].year}"]`)?.focus()
+  }
+
+  return (
+    <section className="designer-ai-timeline" aria-labelledby="designer-ai-timeline-title">
+      <div className="designer-ai-timeline-heading">
+        <div>
+          <p className="card-kicker">2020–2026 · market lenses</p>
+          <h4 id="designer-ai-timeline-title">디자이너 AI 위험: 시장별 변화 신호</h4>
+        </div>
+        <p className="designer-ai-timeline-label">{timeline.label} · 1 낮음 — 5 높음</p>
+      </div>
+      <p className="designer-ai-timeline-caveat"><strong>읽는 법.</strong> {timeline.caveat}</p>
+
+      <div className="designer-ai-timeline-legend" aria-label="시장 렌즈 범례">
+        {timeline.lenses.map((lens) => <div className={`designer-ai-timeline-legend-item ${lens.id}`} key={lens.id}><span aria-hidden="true" /> <strong>{lens.label}</strong><p>{lens.summary}</p></div>)}
+      </div>
+
+      <div className="designer-ai-timeline-chart" role="img" aria-label="2020년부터 2026년까지 프리랜서·플랫폼, 일반 스타트업, 대기업의 해석적 노출·시장변화 신호 그래프">
+        <svg viewBox={`0 0 ${width} ${height}`} aria-hidden="true" focusable="false">
+          {[1, 2, 3, 4, 5].map((signal) => <g key={signal}><line x1={left} x2={width - 24} y1={signalY(signal)} y2={signalY(signal)} /><text x="0" y={signalY(signal) + 4}>{signal}</text></g>)}
+          {timeline.lenses.map((lens) => <polyline className={lens.id} key={lens.id} points={linePoints(lens.points.map((point) => point.signal))} />)}
+          {timeline.lenses.map((lens) => lens.points.map((point, index) => <circle className={lens.id} cx={left + index * step} cy={signalY(point.signal)} key={`${lens.id}-${index}`} r={index === selectedIndex ? 5.5 : 3.5} />))}
+        </svg>
+      </div>
+
+      <div className="designer-ai-timeline-years" role="group" aria-label="연도 선택">
+        {timeline.years.map((year, index) => <button data-year={year.year} type="button" key={year.year} className={index === selectedIndex ? 'active' : ''} aria-pressed={index === selectedIndex} onClick={() => setSelectedIndex(index)} onKeyDown={(event) => selectByKeyboard(event, index)}>{year.year}</button>)}
+      </div>
+
+      <div className="designer-ai-timeline-detail" aria-live="polite">
+        <p className="card-kicker">selected year · {selectedYear.year}</p>
+        <h5>{selectedYear.year}년 상세 읽기</h5>
+        <p>{selectedYear.detail}</p>
+        <div className="designer-ai-timeline-lens-notes">
+          {timeline.lenses.map((lens) => {
+            const point = lens.points[selectedIndex]
+            return <div className={lens.id} key={lens.id}><strong>{lens.label} · 신호 {point.signal}/5</strong><p>{point.taskSignal}</p></div>
+          })}
+        </div>
+        <div className="designer-ai-timeline-sources"><strong>출처·해석 경계</strong><ul>{selectedYear.sourceNotes.map((note) => <li key={note}>{note}</li>)}</ul></div>
+      </div>
+    </section>
+  )
+}
+
 export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: PersonalAxReportId; reportIds?: PersonalAxReportId[] }) {
   const visibleReports = reportIds
     ? reportIds.map((id) => personalAxReports.find((item) => item.id === id)).filter((item): item is PersonalAxReport => Boolean(item))
@@ -182,6 +245,8 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
               : '연구의 결과를 모든 제품·조직에 대한 효과로 일반화하지 않으며, 본문에서 연구 범위와 해석의 경계를 함께 표시합니다.'}
           </p>
         </header>
+
+        {report.marketTimeline ? <DesignerAiMarketTimeline timeline={report.marketTimeline} /> : null}
 
         {orderedSections.map((section) => {
           const intro = section.paragraphs.slice(0, 2)
