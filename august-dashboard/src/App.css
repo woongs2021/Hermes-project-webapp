@@ -10128,7 +10128,7 @@
 
 .designer-ai-timeline-chart { margin-top: 20px; }
 .designer-ai-timeline-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
-.designer-ai-timeline-chart line { stroke: #d9e0e8; stroke-width: 1; }
+.designer-ai-timeline-chart line { stroke: #d9e0e8; stroke-width: 1; stroke-opacity: 0.3; }
 .designer-ai-timeline-chart text { fill: var(--muted-ink); font-size: 11px; }
 .designer-ai-timeline-chart .designer-ai-timeline-area { display: none; }
 .designer-ai-timeline-chart .designer-ai-timeline-line { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-opacity: 1; }

@@ -73,7 +73,7 @@ assert(cssSource.includes('--designer-ai-freelance: #1f5e9e;') && cssSource.incl
 assert(cssSource.includes('.designer-ai-timeline-chart .designer-ai-timeline-area { display: none; }'), 'timeline must remove overlapping transparent area fills')
 assert(cssSource.includes('.designer-ai-timeline-chart .designer-ai-timeline-line { fill: none;'), 'timeline strokes must remain unfilled after the area removal')
 assert(!cssSource.includes('.designer-ai-timeline-chart .freelance-platform {'), 'timeline must not use a generic series selector that refills line paths')
-assert(cssSource.includes('.designer-ai-timeline-chart line { stroke: #d9e0e8; stroke-width: 1; }'), 'timeline grid must use a stable opaque light-gray stroke')
+assert(cssSource.includes('.designer-ai-timeline-chart line { stroke: #d9e0e8; stroke-width: 1; stroke-opacity: 0.3; }'), 'timeline grid must use the requested 30% opacity light-gray stroke')
 assert(cssSource.includes('stroke-opacity: 1') && cssSource.includes('fill-opacity: 1'), 'strokes and dots must remain fully opaque')
 assert(/<details className="personal-ax-report-more" open><summary>더 깊이 읽기<\/summary>/.test(panelSource), 'all rendered 더 깊이 읽기 details must be open by default and retain a summary control')
 assert(personalAxReports.some((item) => item.sections.some((section) => section.paragraphs.length > 2)), 'reports must contain expandable deep-reading content to exercise the default-open contract')
