@@ -59,7 +59,8 @@ export type PersonalAxReport = {
     afterBulletsParagraphs?: string[]
   }>
   sources: ReportSource[]
-  prompts: string[]
+  /** Optional additive content for newly added reports; current reports omit it. */
+  prompts?: string[]
   marketTimeline?: MarketTimeline
 }
 
@@ -116,10 +117,6 @@ export const personalAxReports: PersonalAxReport[] = [
       { title: 'Plan-Then-Execute: An Empirical Study of User Trust and Team Performance When Using LLM Agents As A Daily Assistant', href: 'https://doi.org/10.1145/3706598.3713218', access: '원문 확인' },
       { title: 'Design Theater: Evaluating the Gap Between User-Facing Design Reasoning and Implementation in Generative UI Tools', href: 'https://doi.org/10.1609/aies.v9i2.43227', access: '원문 확인' },
     ],
-    prompts: [
-      'Calm editorial visualization of scoped agent permissions, warm-white paper, cobalt control markers, no text, no dashboard clichés.',
-      'A staged execution path with one human intervention point, tactile glass and restrained coral signal, no readable UI text.',
-    ],
   },
   {
     id: 'design-research',
@@ -168,11 +165,6 @@ export const personalAxReports: PersonalAxReport[] = [
       { title: 'Measuring AI literacy in design education: development and validation of the artificial intelligence literacy scale for design students', href: 'https://doi.org/10.1007/s10798-026-10128-0', access: '원문 확인' },
       { title: 'Designing With AI: A Systematic Literature Review on the Use, Development, and Perception of AI-Enabled UX Design Tools', href: 'https://doi.org/10.1155/ahci/3869207', access: '원문 확인' },
       { title: 'What is Human-Centered about Human-Centered AI? A Map of the Research Landscape', href: 'https://doi.org/10.1145/3544548.3580959', access: '원문 확인' },
-    ],
-    prompts: [
-      'Editorial desk with annotated design artifacts and one quiet AI review signal, soft paper grain, muted cobalt and coral, no text.',
-      'Abstract composition of human judgment and machine output held in balance, generous negative space, calm research publication mood.',
-      'Tactile quality-review tokens arranged as a learning system, warm-white background, no logos, no readable labels.',
     ],
   },
   {
@@ -223,10 +215,6 @@ export const personalAxReports: PersonalAxReport[] = [
       { title: 'Design Theater: Evaluating the Gap Between User-Facing Design Reasoning and Implementation in Generative UI Tools', href: 'https://doi.org/10.1609/aies.v9i2.43227', access: '원문 확인' },
       { title: 'Measuring AI literacy in design education: development and validation of the artificial intelligence literacy scale for design students', href: 'https://doi.org/10.1007/s10798-026-10128-0', access: '원문 확인' },
     ],
-    prompts: [
-      'Quiet AX operating loop as an editorial diagram, four tactile checkpoints, restrained warm-cool palette, no readable text.',
-      'A protected human decision space surrounded by subtle agent signals, calm premium product editorial, no sci-fi clichés.',
-    ],
   },
   {
     id: 'package-design',
@@ -275,11 +263,6 @@ export const personalAxReports: PersonalAxReport[] = [
       { title: 'Front-of-Pack Nutritional Labels as retail demand cues: Evidence from five voluntary-labeling markets', href: 'https://doi.org/10.1016/j.jretconser.2026.105057', access: '원문 확인' },
       { title: 'AI-redesigned packaging and consumer choice at retail shelves', href: 'https://doi.org/10.1108/IJRDM-06-2026-0473', access: '초록·메타데이터 확인' },
     ],
-    prompts: [
-      'Editorial still life of tactile package layers, quiet shelf shadows, warm paper and recycled fiber, no logos, no readable text.',
-      'Abstract front-of-pack information hierarchy as embossed labels and translucent material, calm retail research editorial, no text.',
-      'Reuse and sorting journey expressed through one premium package unfolding into clear material pathways, muted natural palette, no icons.',
-    ],
   },
   {
     id: 'design-education',
@@ -326,11 +309,6 @@ export const personalAxReports: PersonalAxReport[] = [
       { title: 'Can artificial intelligence support creativity in early design processes?', href: 'https://doi.org/10.1177/14780771241254637', access: '초록·메타데이터 확인' },
       { title: 'Communicating the use of generative AI to design students: Fostering ethics rather than teaching it', href: 'https://doi.org/10.21606/drs.2024.731', access: '초록·메타데이터 확인' },
       { title: 'Developing AI literacy through design education', href: 'https://doi.org/10.21606/nordes.2025.25', access: '초록·메타데이터 확인' },
-    ],
-    prompts: [
-      'Quiet editorial studio table with tracing paper, a cobalt folded form, graphite sketches and one coral annotation, warm paper texture, no text, no UI.',
-      'Abstract learning system made of layered translucent grids and tactile paper decisions, calm design journal photography, no logos, no readable marks.',
-      'Human judgment narrowing many generative possibilities into one considered direction, soft shadows, material honesty, no AI clichés.',
     ],
   },
   {
@@ -390,9 +368,6 @@ export const personalAxReports: PersonalAxReport[] = [
       { title: 'IMF, Gen-AI: Artificial Intelligence and the Future of Work (2024)', href: 'https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542666', access: '원문 확인' },
       { title: '한국은행, AI와 노동시장 변화: 직업별 AI 노출도를 중심으로', href: 'https://www.bok.or.kr/portal/bbs/P0002353/list.do?menuNo=200433', access: '원문 확인' },
       { title: '한국디자인진흥원 디자인산업 통계·조사', href: 'https://www.designdb.com/', access: '원문 확인' },
-    ],
-    prompts: [
-      'Editorial comparison of global and Korean design work signals: layered warm paper fields, folded cobalt grid, one restrained coral decision marker, graphite shadows, calm high-end design research journal, no text, no logos, no robots, no generic AI-startup imagery.',
     ],
     marketTimeline: {
       label: 'AI 때문에 디자인 일이 바뀌는 정도',
@@ -571,11 +546,6 @@ export const personalAxReports: PersonalAxReport[] = [
     sources: [
       { title: 'Chris의 Threads', href: 'https://www.threads.com/@woongstable', access: '원문 확인' },
     ],
-    prompts: [
-      'Calm editorial still life of an AI workbench: research cards, translucent workflow layers, one human annotation, warm white paper, muted cobalt and olive accents, tactile materials, no logos, no readable text, no futuristic cliché',
-      'A thoughtful designer-manager balancing three signals—automation, judgment, and context—as a precise kinetic mobile, mist lavender background, deep olive and ochre details, premium Korean editorial art direction, no text',
-      'Abstract archive of weekly observations transforming into a coherent path: stacked paper notes, subtle data threads, quiet studio light, restrained product editorial photography, no UI, no readable labels',
-    ],
   },
   {
     id: 'dissertation-idea-3',
@@ -620,7 +590,6 @@ export const personalAxReports: PersonalAxReport[] = [
       { title: 'GenAI-supported portfolio assessment for complex thinking: a GPT-based innovation in business education', href: 'https://doi.org/10.3389/feduc.2026.1729156', access: '원문 확인' },
       { title: 'Measuring Human Contribution in AI-Assisted Content Generation', href: 'https://aclanthology.org/2026.acl-long.279/', access: '원문 확인' },
     ],
-    prompts: ['A calm Korean editorial portfolio review desk: annotated design alternatives, a transparent process timeline, human decision markers, cobalt blue and restrained vermilion paper layers, no text, no logos, no detector imagery.'],
   },
   {
     id: 'dissertation-idea-2',
@@ -666,7 +635,6 @@ export const personalAxReports: PersonalAxReport[] = [
         '후속 검증은 한 학기 이상의 다기관 연구에서 학습자 수를 넓히고, 교육자·운영자의 부담과 학습자의 통제 경험을 함께 살피는 방향이 적절합니다. 현재 파일럿은 어느 기능을 제품화할지 단정하기보다, 어떤 개인화가 실제로 필요한지와 어떤 경계가 신뢰를 지키는지를 좁혀 보는 단계입니다.' ] }
     ],
     sources: [],
-    prompts: ['Warm Korean editorial research composition for learner-facing AI: three tactile study cards, one learner choice marker, cobalt blue with restrained vermilion, folded paper and calm material texture, no text, no logos, no generic AI startup imagery.']
   },
   {
     id: 'dissertation',
@@ -751,9 +719,6 @@ export const personalAxReports: PersonalAxReport[] = [
       { title: 'A Comparison of Thematic Analysis by Large Language Models and Junior UX Researchers in Early UX Problem Definition', href: 'https://doi.org/10.31678/sdc118.6', access: '초록·메타데이터 확인' },
       { title: 'A study on learner-led curriculum design for generative AI-based design education', href: 'https://www.riss.kr/link?id=A110252120', access: '초록·메타데이터 확인' },
       { title: 'Oversight in Action: Experiences with Instructor-Moderated LLM Responses in an Online Discussion Forum', href: 'https://dl.acm.org/doi/10.1145/3716640.3716651', access: '초록·메타데이터 확인' },
-    ],
-    prompts: [
-      'A calm Korean editorial research desk for educator-facing AI: annotated teaching cards, one human approval marker, folded paper grid, cobalt blue and restrained vermilion, warm tactile materials, no text, no logos, no generic AI startup imagery.',
     ],
   },
 ]

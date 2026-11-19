@@ -1,5 +1,6 @@
 import { useState, type KeyboardEvent } from 'react'
 import { personalAxReports, type PersonalAxReport, type PersonalAxReportId } from './personalAxReportData'
+import { getReportPrompts, renderReportPromptHtmlSection } from './personalAxReportPrompts'
 
 type DownloadStatus = 'idle' | 'downloaded' | 'error'
 
@@ -94,9 +95,9 @@ function reportHtml(report: PersonalAxReport) {
       ${section.afterBulletsParagraphs?.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('') ?? ''}
     </section>`).join('')
   const sources = report.sources.map((source) => `<li><a href="${escapeHtml(source.href)}">${escapeHtml(source.title)}</a> <small>${source.access}</small></li>`).join('')
-  const prompts = report.prompts.map((prompt) => `<li>${escapeHtml(prompt)}</li>`).join('')
+  const promptSection = renderReportPromptHtmlSection(report, escapeHtml)
 
-  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(report.title)}</title><style>body{max-width:760px;margin:56px auto;padding:0 24px;color:#17233a;background:#fcfbf8;font:16px/1.8 system-ui,sans-serif}small{color:#60708a}h1{font-size:34px;line-height:1.28}h2{margin-top:44px;font-size:21px}section>p{text-indent:1em}a{color:#315f97}li{margin:8px 0}.eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:12px}</style></head><body><p class="eyebrow">${escapeHtml(report.eyebrow)}</p><img src="${escapeHtml(heroUrl)}" alt="${escapeHtml(report.heroAlt)}" style="width:100%;border-radius:16px;display:block;margin:0 0 28px"><h1>${escapeHtml(report.title)}</h1><p>${escapeHtml(report.dek)}</p>${sections}<section><h2>인용 레퍼런스</h2><ul>${sources}</ul></section><section><h2>미드저니 프롬프트</h2><ul>${prompts}</ul></section></body></html>`
+  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(report.title)}</title><style>body{max-width:760px;margin:56px auto;padding:0 24px;color:#17233a;background:#fcfbf8;font:16px/1.8 system-ui,sans-serif}small{color:#60708a}h1{font-size:34px;line-height:1.28}h2{margin-top:44px;font-size:21px}section>p{text-indent:1em}a{color:#315f97}li{margin:8px 0}.eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:12px}</style></head><body><p class="eyebrow">${escapeHtml(report.eyebrow)}</p><img src="${escapeHtml(heroUrl)}" alt="${escapeHtml(report.heroAlt)}" style="width:100%;border-radius:16px;display:block;margin:0 0 28px"><h1>${escapeHtml(report.title)}</h1><p>${escapeHtml(report.dek)}</p>${sections}<section><h2>인용 레퍼런스</h2><ul>${sources}</ul></section>${promptSection}</body></html>`
 }
 
 function DesignerAiMarketTimeline({ timeline }: { timeline: NonNullable<PersonalAxReport['marketTimeline']> }) {
@@ -236,6 +237,7 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
   const isDissertationReport = report.id === 'dissertation' || report.id === 'dissertation-idea-2' || report.id === 'dissertation-idea-3'
   const isLearnerDissertation = report.id === 'dissertation-idea-2'
   const isPortfolioDissertation = report.id === 'dissertation-idea-3'
+  const prompts = getReportPrompts(report)
   const orderedSections = isDissertationReport
     ? [...report.sections].sort((a, b) => (a.heading === '예상 논문 제목과 초록' ? -1 : b.heading === '예상 논문 제목과 초록' ? 1 : 0))
     : report.sections
@@ -349,10 +351,12 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
           <ul>{report.sources.map((source) => <li key={source.href}><a href={source.href} target="_blank" rel="noreferrer">{source.title}</a><span>{source.access}</span></li>)}</ul>
         </section>
 
-        <section className="personal-ax-report-prompts">
-          <h4>미드저니 프롬프트</h4>
-          <ol>{report.prompts.map((prompt) => <li key={prompt}><code>{prompt}</code></li>)}</ol>
-        </section>
+        {prompts.length > 0 ? (
+          <section className="personal-ax-report-prompts">
+            <h4>미드저니 프롬프트</h4>
+            <ol>{prompts.map((prompt) => <li key={prompt}><code>{prompt}</code></li>)}</ol>
+          </section>
+        ) : null}
       </article>
     </div>
   )
