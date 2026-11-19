@@ -190,6 +190,31 @@ function DesignerAiMarketTimeline({ timeline }: { timeline: NonNullable<Personal
                   </section>
                 ))}
               </div>
+              {lens.platformContext && (
+                <section className="designer-ai-platform-context" aria-labelledby="designer-ai-platform-context-title">
+                  <header>
+                    <p className="card-kicker">Platform evidence · public indicators</p>
+                    <h6 id="designer-ai-platform-context-title">{lens.platformContext.heading}</h6>
+                    <p>{lens.platformContext.introduction}</p>
+                  </header>
+                  <div className="designer-ai-platform-context-list">
+                    {lens.platformContext.platforms.map((platform) => (
+                      <article key={platform.name}>
+                        <header><h6>{platform.name}</h6><p>{platform.indicatorScope}</p></header>
+                        <ul>
+                          {platform.indicators.map((indicator) => <li key={`${platform.name}-${indicator.date}`}><strong>{indicator.date} · {indicator.value}</strong><span>{indicator.description}</span></li>)}
+                        </ul>
+                        <dl>
+                          <div><dt>이 수치가 말할 수 있는 것</dt><dd>{platform.canSay}</dd></div>
+                          <div><dt>이 수치로 말할 수 없는 것</dt><dd>{platform.cannotSay}</dd></div>
+                        </dl>
+                      </article>
+                    ))}
+                  </div>
+                  <p className="designer-ai-platform-context-inference"><strong>사실과 분리한 해석.</strong> {lens.platformContext.inference.replace(/^해석: /, '')}</p>
+                  <p className="designer-ai-platform-context-warning"><strong>{lens.platformContext.scopeWarning.split(': ')[0]}.</strong> {lens.platformContext.scopeWarning.replace(/^[^:]+: /, '')}</p>
+                </section>
+              )}
             </article>
           ))}
         </div>

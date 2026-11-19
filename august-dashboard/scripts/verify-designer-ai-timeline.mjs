@@ -39,6 +39,23 @@ for (const lens of marketTimeline.lenses) {
   }
 }
 
+const freelancePlatform = marketTimeline.lenses.find((lens) => lens.id === 'freelance-platform')
+assert(freelancePlatform?.platformContext, 'freelance/platform lane must provide data-driven platform context')
+const platformContext = freelancePlatform.platformContext
+assert(platformContext.heading === '플랫폼 지표로 읽는 배경', 'platform evidence card must use the requested editorial heading')
+assert(platformContext.platforms.map((platform) => platform.name).join(',') === '숨고,크몽', 'platform evidence must name both 숨고 and 크몽')
+const soomgo = platformContext.platforms.find((platform) => platform.name === '숨고')
+const kmong = platformContext.platforms.find((platform) => platform.name === '크몽')
+assert(soomgo?.indicators.map((indicator) => `${indicator.date}:${indicator.value}`).join('|').includes('2020:누적 견적 2,000만 건') && soomgo.indicators.map((indicator) => `${indicator.date}:${indicator.value}`).join('|').includes('2021:등록 고수 70만 명 · 누적 견적 3,300만 건') && soomgo.indicators.map((indicator) => `${indicator.date}:${indicator.value}`).join('|').includes('2023:이용자 1,000만 명'), '숨고 must retain dated 2020, 2021, and 2023 platform-wide indicators')
+assert(kmong?.indicators.map((indicator) => `${indicator.date}:${indicator.value}`).join('|').includes('2021:시리즈 C 투자 312억 원') && kmong.indicators.map((indicator) => `${indicator.date}:${indicator.value}`).join('|').includes('2023:B2B 거래 100억 원 돌파') && kmong.indicators.map((indicator) => `${indicator.date}:${indicator.value}`).join('|').includes('2025:등록 인재 50만 명'), '크몽 must retain dated 2021, 2023, and 2025 company/business indicators')
+for (const platform of platformContext.platforms) {
+  assert(platform.indicatorScope.includes('전체'), `${platform.name} must label its metrics as platform/company-wide`)
+  assert(platform.canSay.length > 0, `${platform.name} needs a bounded statement of what the indicators can say`)
+  assert(platform.cannotSay.includes('디자인') && platform.cannotSay.includes('소득·고용'), `${platform.name} must explicitly exclude design-market and income/employment conclusions`)
+}
+assert(platformContext.inference.includes('매칭·B2B 인프라') && platformContext.inference.includes('개인 디자이너의 수요나 소득') && platformContext.inference.includes('증명하지는 않는다'), 'platform inference must be distinct and must not claim individual demand or income effects')
+assert(platformContext.scopeWarning.includes('회사·플랫폼 전체 지표') && platformContext.scopeWarning.includes('디자인 프리랜서 시장의 크기·수입·고용'), 'platform scope warning must explicitly exclude design freelance market size, income, and employment')
+
 for (const year of marketTimeline.years) {
   assert(year.detail.length > 0, `${year.year} needs selected-year detail copy`)
   assert(year.sourceNotes.length > 0, `${year.year} needs source or caveat copy`)
@@ -46,6 +63,8 @@ for (const year of marketTimeline.years) {
 
 assert(panelSource.includes('designer-ai-timeline-axes') && panelSource.includes('aria-label="타임라인 축 설명"'), 'both axis explanations must be present in accessible DOM')
 assert(panelSource.includes('designer-ai-market-trends') && panelSource.includes('trendDetails.map') && panelSource.includes('수요·일하는 방식') && panelSource.includes('더 빨라지는 일 / 사람의 판단') && panelSource.includes('다음에 볼 점'), 'renderer must expose detailed three-part market narratives after the timeline')
+assert(panelSource.includes('lens.platformContext') && panelSource.includes('designer-ai-platform-context') && panelSource.includes('platforms.map') && panelSource.includes('이 수치가 말할 수 있는 것') && panelSource.includes('이 수치로 말할 수 없는 것') && !panelSource.includes('숨고') && !panelSource.includes('크몽'), 'platform evidence must render from data fields rather than hardcoded JSX')
+assert(cssSource.includes('.designer-ai-platform-context-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));') && cssSource.includes('.designer-ai-platform-context-list { grid-template-columns: 1fr; }'), 'platform evidence card must provide calm responsive desktop and mobile layouts')
 assert(cssSource.includes('.designer-ai-market-trend-phases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));') && cssSource.includes('.designer-ai-market-trend-phases { grid-template-columns: 1fr; gap: 10px; }'), 'market detail section must provide calm desktop and mobile layouts')
 assert(panelSource.includes('designer-ai-timeline-x-axis-label') && panelSource.includes('designer-ai-timeline-y-axis-label'), 'both axis explanations must be visibly labelled in the SVG chart')
 assert(panelSource.includes('designer-ai-timeline-area') && panelSource.includes('areaPath('), 'chart must render filled SVG area paths')
@@ -55,4 +74,4 @@ assert(cssSource.includes('stroke-opacity: 1') && cssSource.includes('fill-opaci
 assert(/<details className="personal-ax-report-more" open><summary>더 깊이 읽기<\/summary>/.test(panelSource), 'all rendered 더 깊이 읽기 details must be open by default and retain a summary control')
 assert(personalAxReports.some((item) => item.sections.some((section) => section.paragraphs.length > 2)), 'reports must contain expandable deep-reading content to exercise the default-open contract')
 
-console.log('Designer AI timeline verified: 2020–2026 axes, plain-language 1–5 guide and caveat, three detailed market lanes, 60% filled areas, opaque strokes/dots, and default-open deep-reading controls.')
+console.log('Designer AI timeline verified: 2020–2026 axes, plain-language 1–5 guide and caveat, three detailed market lanes, rendered 숨고·크몽 platform evidence with dated indicators and scope limits, 60% filled areas, opaque strokes/dots, and default-open deep-reading controls.')

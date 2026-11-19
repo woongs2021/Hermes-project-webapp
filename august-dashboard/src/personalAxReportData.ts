@@ -23,6 +23,19 @@ export type MarketTimeline = {
       automationAndHumanJudgment: string
       watchNext: string
     }>
+    platformContext?: {
+      heading: string
+      introduction: string
+      platforms: Array<{
+        name: string
+        indicatorScope: string
+        indicators: Array<{ date: string; value: string; description: string }>
+        canSay: string
+        cannotSay: string
+      }>
+      inference: string
+      scopeWarning: string
+    }
   }>
   years: Array<{
     year: number
@@ -405,6 +418,36 @@ export const personalAxReports: PersonalAxReport[] = [
             { period: '2023–24', title: '초안·변형의 속도 경쟁이 의뢰 조건에 들어온 시기', demandAndWorkModel: '생성 이미지와 템플릿 도구가 일상 제작 흐름에 들어오며, 플랫폼 의뢰에서는 초안·리사이즈·다국어 변형을 더 빨리 제안해야 한다는 압력이 커졌다. 반복 산출물일수록 단가와 납기 비교가 앞서는 흐름이 보였다.', automationAndHumanJudgment: '무드보드, 간단 에셋, 여러 버전의 초안은 점점 상품처럼 비교되기 쉬워졌다. 대신 맥락이 다른 요구를 정리하고, 결과가 의뢰 목적과 브랜드 기준을 맞는지 리뷰하고, 수정 요청을 조율하는 판단은 자동 결과만으로 끝나지 않았다.', watchNext: '속도 경쟁이 넓어질수록 제안서에는 결과물 수만 적기보다 문제 정의, 검수 기준, 권리 확인 범위를 함께 보여 줄 필요가 있다.' },
             { period: '2025–26', title: '반복 작업 묶음과 책임 범위를 다시 나누는 시기', demandAndWorkModel: '저가·대량 변형안 영역에서는 제안 속도와 단가 압력이 더 뚜렷해지고, 에이전트형 제작 흐름은 반복 작업 묶음을 압축하는 방향으로 관찰된다. 2026년은 아직 끝나지 않은 현재 관찰 구간이다.', automationAndHumanJudgment: '반복 생성과 변형은 더 쉽게 묶이지만, 포트폴리오와 계약에서는 왜 이 방향을 택했는지, 무엇을 검수했는지, 권리·유사성 위험을 어떻게 다뤘는지가 더 중요해진다. 고객과의 기대를 맞추는 조율도 사람의 일로 남는다.', watchNext: '플랫폼별 실제 수입·고용 변화는 같은 방식으로 공개되지 않는다. 2026년의 신호를 고용 결과나 모든 프리랜서의 전망으로 읽지 않는 것이 중요하다.' },
           ],
+          platformContext: {
+            heading: '플랫폼 지표로 읽는 배경',
+            introduction: '아래 수치는 디자인 카테고리만의 거래나 인력을 뜻하지 않는다. 숨고와 크몽이 공개한 플랫폼·회사 전체 운영 및 사업 지표를, 의뢰가 매칭되고 비교되는 환경의 배경으로만 읽는다.',
+            platforms: [
+              {
+                name: '숨고',
+                indicatorScope: '플랫폼 전체 운영 지표',
+                indicators: [
+                  { date: '2020', value: '누적 견적 2,000만 건', description: '플랫폼 전체에서 누적된 견적 요청·응답 규모로 소개된 수치.' },
+                  { date: '2021', value: '등록 고수 70만 명 · 누적 견적 3,300만 건', description: '전문가 등록과 플랫폼 전체 견적 활동의 누적 운영 지표.' },
+                  { date: '2023', value: '이용자 1,000만 명', description: '플랫폼 전체 이용자 규모로 소개된 운영 지표.' },
+                ],
+                canSay: '여러 서비스 범주에서 의뢰·매칭 인프라가 커진 배경을 보여 주는 신호다.',
+                cannotSay: '디자인 프리랜서 시장 규모, 등록 디자이너 수, 디자인 프로젝트 물량, 디자이너 소득·고용을 뜻하지 않는다.',
+              },
+              {
+                name: '크몽',
+                indicatorScope: '회사·사업 전체 지표',
+                indicators: [
+                  { date: '2021', value: '시리즈 C 투자 312억 원', description: '회사에 대한 투자 유치 규모로 소개된 사업 지표.' },
+                  { date: '2023', value: 'B2B 거래 100억 원 돌파', description: 'B2B 서비스의 거래 규모로 소개된 사업 지표.' },
+                  { date: '2025', value: '등록 인재 50만 명', description: '플랫폼 전체 등록 인재 규모로 보도된 지표.' },
+                ],
+                canSay: '매칭 서비스가 B2B를 포함한 사업 인프라로 확장·재포지셔닝되는 움직임을 읽는 단서다.',
+                cannotSay: '디자인 카테고리 GMV, 등록 디자이너 수, 디자인 프로젝트 물량, 디자이너 소득·고용을 뜻하지 않는다.',
+              },
+            ],
+            inference: '해석: 이 지표들은 플랫폼의 매칭·B2B 인프라가 확장·재구성된 신호이므로, 디자인 일이 발주되고 비교되는 환경이 달라졌다고 읽을 수 있다. 다만 개인 디자이너의 수요나 소득이 늘거나 줄었다는 사실을 증명하지는 않는다.',
+            scopeWarning: '범위 경계: 위 수치는 모두 회사·플랫폼 전체 지표다. 디자인 프리랜서 시장의 크기·수입·고용 또는 디자인 직군의 변화를 직접 측정한 자료로 읽지 않는다.',
+          },
         },
         {
           id: 'startup',
