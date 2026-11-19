@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-09T00:06:58+09:00",
+  "generatedAt": "2026-11-19T21:20:00+09:00",
   "sourcePolicy": "Public-safe DNA Brand Asset mockup manifest. Midjourney + Mockup examples present selected graphic motifs as brand surfaces across coffee, outdoor, apparel, signage, and digital mockup contexts; private chats, credentials, and provider account data are excluded.",
   "collections": [
     {
@@ -3713,6 +3713,107 @@
       "synthesisTool": "Higgsfield Nano Banana Pro · natural package-surface integration",
       "resynthesizedAt": "2026-11-09T00:06:58+09:00",
       "displayOrder": 6
+    },
+    {
+      "id": "coffee-asset-example-05",
+      "title": "Coffee Mockup Example 5",
+      "created": "2026-11-19",
+      "status": "Surface study",
+      "sourceGraphic": "Midjourney 57 — Graphite Fold Plane",
+      "description": "그래파이트 종이의 접힘과 잉크 명암을 컵, 패키지, 사인 표면에 절제된 물성으로 적용한 커피 브랜드 목업 세트입니다. 텍스트 없이 표면의 깊이와 재질감을 중심으로 보여줍니다.",
+      "synthesisTool": "Higgsfield Nano Banana Pro",
+      "items": [
+        {
+          "id": "coffee-asset-example-05-01",
+          "title": "Coffee Mockup Example 5-1",
+          "description": "그래파이트 접힘 면의 명암과 종이 질감을 White Paper Cup 표면에 물성 있게 통합한 패턴 전용 목업입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/01_white_paper_cup_mockup_midjourney-57_nano-banana-pro.png",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-05/2026-11-19/01_white_paper_cup_mockup_midjourney-57_nano-banana-pro_preview.webp",
+          "assetHash": "8615d5f4f688f50b2ed5700ade012b5b602bdb4abf97dacc8f197e484230c832",
+          "width": 2528,
+          "height": 1696,
+          "originalImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/01_white_paper_cup_mockup.jpg",
+          "sourceGraphicImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/57_graphite_fold_plane_manual_midjourney_source.jpg",
+          "sourceGraphic": "Midjourney 57 — Graphite Fold Plane",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/01_white_paper_cup_mockup_midjourney-57_nano-banana-pro.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드"
+        },
+        {
+          "id": "coffee-asset-example-05-02",
+          "title": "Coffee Mockup Example 5-2",
+          "description": "그래파이트 접힘 면의 명암과 종이 질감을 Coffee Packaging Counter 표면에 물성 있게 통합한 패턴 전용 목업입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/02_coffee_packaging_counter_mockup_midjourney-57_nano-banana-pro.png",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-05/2026-11-19/02_coffee_packaging_counter_mockup_midjourney-57_nano-banana-pro_preview.webp",
+          "assetHash": "9196d8696c210e833c8419517f6783cbab9895f52a96403cd8383b6d3fc63b80",
+          "width": 2528,
+          "height": 1696,
+          "originalImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/02_coffee_packaging_counter_mockup.jpg",
+          "sourceGraphicImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/57_graphite_fold_plane_manual_midjourney_source.jpg",
+          "sourceGraphic": "Midjourney 57 — Graphite Fold Plane",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/02_coffee_packaging_counter_mockup_midjourney-57_nano-banana-pro.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드"
+        },
+        {
+          "id": "coffee-asset-example-05-03",
+          "title": "Coffee Mockup Example 5-3",
+          "description": "그래파이트 접힘 면의 명암과 종이 질감을 Coffee Bag Front 표면에 물성 있게 통합한 패턴 전용 목업입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/03_coffee_bag_front_mockup_midjourney-57_nano-banana-pro.png",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-05/2026-11-19/03_coffee_bag_front_mockup_midjourney-57_nano-banana-pro_preview.webp",
+          "assetHash": "fe8c33a0d1997d30062fbc64b65529375ca8173cf52290a16914f998c2edced5",
+          "width": 2528,
+          "height": 1696,
+          "originalImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/03_coffee_bag_front_mockup.jpg",
+          "sourceGraphicImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/57_graphite_fold_plane_manual_midjourney_source.jpg",
+          "sourceGraphic": "Midjourney 57 — Graphite Fold Plane",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/03_coffee_bag_front_mockup_midjourney-57_nano-banana-pro.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드"
+        },
+        {
+          "id": "coffee-asset-example-05-04",
+          "title": "Coffee Mockup Example 5-4",
+          "description": "그래파이트 접힘 면의 명암과 종이 질감을 Takeaway Cup Hand 표면에 물성 있게 통합한 패턴 전용 목업입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/04_takeaway_cup_hand_mockup_midjourney-57_nano-banana-pro.png",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-05/2026-11-19/04_takeaway_cup_hand_mockup_midjourney-57_nano-banana-pro_preview.webp",
+          "assetHash": "c23eb47c3ca5591a2e7db36ba90c654b14ee226915fb1a3e3207111be3615650",
+          "width": 2528,
+          "height": 1696,
+          "originalImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/04_takeaway_cup_hand_mockup.jpg",
+          "sourceGraphicImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/57_graphite_fold_plane_manual_midjourney_source.jpg",
+          "sourceGraphic": "Midjourney 57 — Graphite Fold Plane",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/04_takeaway_cup_hand_mockup_midjourney-57_nano-banana-pro.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드"
+        },
+        {
+          "id": "coffee-asset-example-05-05",
+          "title": "Coffee Mockup Example 5-5",
+          "description": "그래파이트 접힘 면의 명암과 종이 질감을 Plain Takeaway Cup Close-up 표면에 물성 있게 통합한 패턴 전용 목업입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/05_plain_takeaway_cup_closeup_midjourney-57_nano-banana-pro.png",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-05/2026-11-19/05_plain_takeaway_cup_closeup_midjourney-57_nano-banana-pro_preview.webp",
+          "assetHash": "176ebc5aff69af79d099b826d9cfe3f0c183481bf4014bb25c38d882234f1460",
+          "width": 2528,
+          "height": 1696,
+          "originalImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/05_plain_takeaway_cup_closeup.jpg",
+          "sourceGraphicImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/57_graphite_fold_plane_manual_midjourney_source.jpg",
+          "sourceGraphic": "Midjourney 57 — Graphite Fold Plane",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/05_plain_takeaway_cup_closeup_midjourney-57_nano-banana-pro.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드"
+        },
+        {
+          "id": "coffee-asset-example-05-06",
+          "title": "Coffee Mockup Example 5-6",
+          "description": "그래파이트 접힘 면의 명암과 종이 질감을 Hanging Cafe Sign 표면에 물성 있게 통합한 패턴 전용 목업입니다.",
+          "imageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/06_hanging_cafe_sign_mockup_midjourney-57_nano-banana-pro.png",
+          "previewImageSrc": "/assets/dna-brand-assets/midjourney-mockup-preview/coffee-asset-example-05/2026-11-19/06_hanging_cafe_sign_mockup_midjourney-57_nano-banana-pro_preview.webp",
+          "assetHash": "bf8ec72700cfa9783a1c4f89733a898a14c869e93d218f5e5f335f8aa4db1ecd",
+          "width": 2528,
+          "height": 1696,
+          "originalImageSrc": "/assets/dna-brand-assets/mockup/coffee-mockup-assets/2026-09-26/06_hanging_cafe_sign_mockup.jpg",
+          "sourceGraphicImageSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/57_graphite_fold_plane_manual_midjourney_source.jpg",
+          "sourceGraphic": "Midjourney 57 — Graphite Fold Plane",
+          "downloadSrc": "/assets/dna-brand-assets/midjourney-mockup/coffee-asset-example-05/2026-11-19/06_hanging_cafe_sign_mockup_midjourney-57_nano-banana-pro.png",
+          "downloadLabel": "목업 완성본 PNG 다운로드"
+        }
+      ]
     }
   ],
   "previewPolicy": "Midjourney + Mockup grid/list thumbnails use previewImageSrc WebP assets; detail view and download keep full-resolution imageSrc/downloadSrc."
