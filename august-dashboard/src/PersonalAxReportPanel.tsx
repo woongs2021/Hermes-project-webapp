@@ -1,8 +1,8 @@
-import { useState, type KeyboardEvent } from 'react'
+import { useRef, useState, type KeyboardEvent } from 'react'
 import { personalAxReports, type PersonalAxReport, type PersonalAxReportId } from './personalAxReportData'
 import { getReportPrompts, renderReportPromptHtmlSection } from './personalAxReportPrompts'
 
-type DownloadStatus = 'idle' | 'downloaded' | 'error'
+type DownloadStatus = 'idle' | 'html-downloaded' | 'pdf-generating' | 'pdf-downloaded' | 'error'
 
 const highlightPhrases = [
   // AI 리서치
@@ -232,6 +232,7 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
       : personalAxReports.filter((item) => item.id !== 'dissertation' && item.id !== 'dissertation-idea-2' && item.id !== 'dissertation-idea-3')
   const [activeId, setActiveId] = useState(reportIds?.[0] ?? reportId ?? visibleReports[0].id)
   const [downloadStatus, setDownloadStatus] = useState<DownloadStatus>('idle')
+  const pdfGenerationInProgress = useRef(false)
   const report = visibleReports.find((item) => item.id === activeId) ?? visibleReports[0]
   const isThreadsContentReport = report.id === 'threads-content'
   const isDissertationReport = report.id === 'dissertation' || report.id === 'dissertation-idea-2' || report.id === 'dissertation-idea-3'
@@ -254,9 +255,49 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
       anchor.click()
       anchor.remove()
       window.setTimeout(() => URL.revokeObjectURL(href), 0)
-      setDownloadStatus('downloaded')
+      setDownloadStatus('html-downloaded')
     } catch {
       setDownloadStatus('error')
+    }
+  }
+
+  const downloadPdf = async () => {
+    if (pdfGenerationInProgress.current || downloadStatus === 'pdf-generating') return
+
+    pdfGenerationInProgress.current = true
+    setDownloadStatus('pdf-generating')
+    try {
+      const { default: html2pdf } = await import('html2pdf.js')
+      const reportElement = document.querySelector<HTMLElement>('#personal-ax-report-print')
+      if (!reportElement) throw new Error('Report element not found')
+
+      const exportDate = new Date().toISOString().slice(0, 10)
+      const pdfOptions = {
+        margin: [12, 12, 14, 12] as [number, number, number, number],
+        filename: `personal-ax-${report.id}-${exportDate}.pdf`,
+        image: { type: 'jpeg' as const, quality: 0.98 },
+        enableLinks: true,
+        html2canvas: { useCORS: true, allowTaint: false, scale: 2, logging: false },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' as const },
+        pagebreak: {
+          mode: ['css', 'legacy'],
+          avoid: [
+            '.personal-ax-report-section',
+            '.designer-ai-timeline',
+            '.personal-ax-report-sources',
+            '.personal-ax-report-prompts',
+            '.dissertation-method-map',
+            '.personal-ax-report-hero',
+          ],
+        },
+      }
+
+      await html2pdf().set(pdfOptions).from(reportElement).save()
+      setDownloadStatus('pdf-downloaded')
+    } catch {
+      setDownloadStatus('error')
+    } finally {
+      pdfGenerationInProgress.current = false
     }
   }
 
@@ -274,10 +315,18 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
         ) : <span />}
         <div className="personal-ax-report-actions">
           <button type="button" onClick={downloadHtml}>HTML 다운로드</button>
-          <button type="button" onClick={() => window.print()}>인쇄 / PDF 저장</button>
+          <button type="button" onClick={downloadPdf} disabled={downloadStatus === 'pdf-generating'}>{downloadStatus === 'pdf-generating' ? 'PDF 만드는 중…' : 'PDF 다운로드'}</button>
         </div>
       </div>
-      <p className="personal-ax-download-status" aria-live="polite">{downloadStatus === 'downloaded' ? 'HTML 파일을 준비했습니다.' : downloadStatus === 'error' ? '브라우저에서 HTML 파일을 만들지 못했습니다. 인쇄 / PDF 저장을 사용해 주세요.' : '브라우저에서만 파일을 생성하며, 서버로 내용을 전송하지 않습니다.'}</p>
+      <p className="personal-ax-download-status" aria-live="polite">{downloadStatus === 'pdf-generating'
+        ? 'PDF 파일을 만드는 중입니다. 잠시만 기다려 주세요.'
+        : downloadStatus === 'pdf-downloaded'
+          ? 'PDF 파일을 준비했습니다.'
+          : downloadStatus === 'html-downloaded'
+            ? 'HTML 파일을 준비했습니다.'
+            : downloadStatus === 'error'
+              ? 'PDF 파일을 만들지 못했습니다. 다시 시도해 주세요.'
+              : '브라우저에서만 파일을 생성하며, 서버로 내용을 전송하지 않습니다.'}</p>
 
       <article className="personal-ax-report-article" id="personal-ax-report-print">
         <header>

@@ -1,0 +1,37 @@
+import assert from 'node:assert/strict'
+import { readFile } from 'node:fs/promises'
+import { fileURLToPath } from 'node:url'
+
+const panelPath = fileURLToPath(new URL('../src/PersonalAxReportPanel.tsx', import.meta.url))
+const packagePath = fileURLToPath(new URL('../package.json', import.meta.url))
+const [panelSource, packageSource] = await Promise.all([readFile(panelPath, 'utf8'), readFile(packagePath, 'utf8')])
+const packageJson = JSON.parse(packageSource)
+
+assert.equal(packageJson.dependencies?.['html2pdf.js'], '^0.14.0', 'html2pdf.js@0.14.0 must be a production dependency')
+assert.equal(packageJson.scripts?.['verify:personal-ax-pdf-download'], 'node scripts/verify-personal-ax-pdf-download.mjs', 'direct PDF verifier must be executable through npm')
+assert.match(panelSource, /await import\('html2pdf\.js'\)/, 'PDF generation must load html2pdf.js in the browser when needed')
+assert.doesNotMatch(panelSource, /window\.print\s*\(/, 'direct PDF download must not invoke the browser print dialog')
+assert.match(panelSource, /document\.querySelector<HTMLElement>\('#personal-ax-report-print'\)/, 'PDF must capture the rendered selected report target')
+assert.match(panelSource, /<article className="personal-ax-report-article" id="personal-ax-report-print">/, 'captured target must remain the report article')
+assert.match(panelSource, /const exportDate = new Date\(\)\.toISOString\(\)\.slice\(0, 10\)/, 'PDF filename must include an ISO report export date')
+assert.match(panelSource, /filename:\s*`personal-ax-\$\{report\.id\}-\$\{exportDate\}\.pdf`/, 'PDF filename must include the selected report id and report date')
+assert.match(panelSource, /jsPDF:\s*\{\s*unit:\s*'mm',\s*format:\s*'a4',\s*orientation:\s*'portrait'(?:\s+as const)?\s*\}/, 'PDF must use A4 portrait output')
+assert.match(panelSource, /margin:\s*\[12,\s*12,\s*14,\s*12\]/, 'PDF must use sensible A4 margins')
+assert.match(panelSource, /pagebreak:\s*\{\s*mode:\s*\['css',\s*'legacy'\],\s*avoid:\s*\[/, 'PDF must use CSS-aware page-break avoidance')
+assert.match(panelSource, /'\.personal-ax-report-section',\s*'\.designer-ai-timeline',\s*'\.personal-ax-report-sources',\s*'\.personal-ax-report-prompts'/, 'PDF must avoid splitting sections, figures, sources, and prompts')
+assert.match(panelSource, /html2canvas:\s*\{\s*useCORS:\s*true,\s*allowTaint:\s*false,\s*scale:\s*2/, 'PDF capture must use safe image CORS settings')
+assert.match(panelSource, /PDF 다운로드/, 'direct PDF action must have a clear Korean label')
+assert.match(panelSource, /PDF 파일을 만드는 중입니다\. 잠시만 기다려 주세요\./, 'PDF generation state must inform the user in Korean')
+assert.match(panelSource, /PDF 파일을 준비했습니다\./, 'PDF success state must inform the user in Korean')
+assert.match(panelSource, /PDF 파일을 만들지 못했습니다\. 다시 시도해 주세요\./, 'PDF failure state must be user-safe and Korean')
+assert.match(panelSource, /const pdfGenerationInProgress = useRef\(false\)/, 'PDF generation needs an immediate duplicate-click guard')
+assert.match(panelSource, /if \(pdfGenerationInProgress\.current \|\| downloadStatus === 'pdf-generating'\) return/, 'PDF generation must guard duplicate clicks before state repaint')
+assert.match(panelSource, /pdfGenerationInProgress\.current = false/, 'PDF generation must restore its duplicate-click guard after completion or failure')
+assert.match(panelSource, /disabled=\{downloadStatus === 'pdf-generating'\}/, 'PDF action must prevent duplicate clicks while generating')
+
+const controlsIndex = panelSource.indexOf('<div className="personal-ax-report-controls">')
+const statusIndex = panelSource.indexOf('<p className="personal-ax-download-status"')
+const articleIndex = panelSource.indexOf('<article className="personal-ax-report-article" id="personal-ax-report-print">')
+assert.ok(controlsIndex >= 0 && statusIndex > controlsIndex && articleIndex > statusIndex, 'controls and status must be outside the captured report article')
+
+console.log('Personal AX direct PDF download contract valid: dependency, DOM target, output options, state labels, and excluded controls verified.')

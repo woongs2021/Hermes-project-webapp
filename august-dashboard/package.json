@@ -25,9 +25,11 @@
     "build": "npm run validate:data && npm run generate:data && tsc -b && vite build",
     "build:public": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "verify:personal-ax-pdf-download": "node scripts/verify-personal-ax-pdf-download.mjs"
   },
   "dependencies": {
+    "html2pdf.js": "^0.14.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
