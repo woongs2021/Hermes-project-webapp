@@ -9,6 +9,8 @@ export type ReportSource = {
 export type MarketTimeline = {
   label: '해석적 노출·시장변화 신호'
   caveat: string
+  xAxis: string
+  yAxis: string
   lenses: Array<{
     id: 'freelance-platform' | 'startup' | 'enterprise'
     label: string
@@ -375,6 +377,8 @@ export const personalAxReports: PersonalAxReport[] = [
     marketTimeline: {
       label: '해석적 노출·시장변화 신호',
       caveat: '아래 1–5 값은 공식 시장규모·고용규모·감원율 통계가 아니다. 공개 보고서와 관찰 가능한 도입 변화를 바탕으로, 각 시장에서 디자인 과업의 노출·변화 압력을 비교해 읽기 위한 해석적 신호다. 서로 다른 시장의 규모나 고용 결과를 직접 비교하거나 예측하는 지표로 사용하지 않는다.',
+      xAxis: 'X축 · 달력 연도 및 관찰 시점(2020–2026). 2026년은 아직 끝나지 않은 현재의 관찰 구간이다.',
+      yAxis: 'Y축 · 디자인 과업의 해석적 노출·시장변화 신호(1 낮음 — 5 높음). 시장 규모·고용 규모·감원율이 아니다.',
       lenses: [
         {
           id: 'freelance-platform',

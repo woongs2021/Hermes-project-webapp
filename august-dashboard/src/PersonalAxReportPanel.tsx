@@ -108,7 +108,8 @@ function DesignerAiMarketTimeline({ timeline }: { timeline: NonNullable<Personal
   const bottom = 214
   const step = (width - left - 24) / (timeline.years.length - 1)
   const signalY = (signal: number) => bottom - (signal - 1) * 38
-  const linePoints = (signals: number[]) => signals.map((signal, index) => `${left + index * step},${signalY(signal)}`).join(' ')
+  const linePath = (signals: number[]) => signals.map((signal, index) => `${index === 0 ? 'M' : 'L'} ${left + index * step} ${signalY(signal)}`).join(' ')
+  const areaPath = (signals: number[]) => `${linePath(signals)} L ${left + (signals.length - 1) * step} ${bottom} L ${left} ${bottom} Z`
 
   const selectByKeyboard = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
     const keyDelta = event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : event.key === 'ArrowLeft' || event.key === 'ArrowUp' ? -1 : 0
@@ -129,16 +130,23 @@ function DesignerAiMarketTimeline({ timeline }: { timeline: NonNullable<Personal
         <p className="designer-ai-timeline-label">{timeline.label} · 1 낮음 — 5 높음</p>
       </div>
       <p className="designer-ai-timeline-caveat"><strong>읽는 법.</strong> {timeline.caveat}</p>
+      <div className="designer-ai-timeline-axes" aria-label="타임라인 축 설명">
+        <p><strong>{timeline.xAxis.split(' · ')[0]}</strong>{timeline.xAxis.replace(/^X축 · /, ' · ')}</p>
+        <p><strong>{timeline.yAxis.split(' · ')[0]}</strong>{timeline.yAxis.replace(/^Y축 · /, ' · ')}</p>
+      </div>
 
       <div className="designer-ai-timeline-legend" aria-label="시장 렌즈 범례">
         {timeline.lenses.map((lens) => <div className={`designer-ai-timeline-legend-item ${lens.id}`} key={lens.id}><span aria-hidden="true" /> <strong>{lens.label}</strong><p>{lens.summary}</p></div>)}
       </div>
 
-      <div className="designer-ai-timeline-chart" role="img" aria-label="2020년부터 2026년까지 프리랜서·플랫폼, 일반 스타트업, 대기업의 해석적 노출·시장변화 신호 그래프">
+      <div className="designer-ai-timeline-chart" role="img" aria-label={`${timeline.xAxis} ${timeline.yAxis} 프리랜서·플랫폼, 일반 스타트업, 대기업의 해석적 노출·시장변화 신호 그래프`}>
         <svg viewBox={`0 0 ${width} ${height}`} aria-hidden="true" focusable="false">
           {[1, 2, 3, 4, 5].map((signal) => <g key={signal}><line x1={left} x2={width - 24} y1={signalY(signal)} y2={signalY(signal)} /><text x="0" y={signalY(signal) + 4}>{signal}</text></g>)}
-          {timeline.lenses.map((lens) => <polyline className={lens.id} key={lens.id} points={linePoints(lens.points.map((point) => point.signal))} />)}
+          {timeline.lenses.map((lens) => <path className={`designer-ai-timeline-area ${lens.id}`} key={`${lens.id}-area`} d={areaPath(lens.points.map((point) => point.signal))} />)}
+          {timeline.lenses.map((lens) => <path className={`designer-ai-timeline-line ${lens.id}`} key={`${lens.id}-line`} d={linePath(lens.points.map((point) => point.signal))} />)}
           {timeline.lenses.map((lens) => lens.points.map((point, index) => <circle className={lens.id} cx={left + index * step} cy={signalY(point.signal)} key={`${lens.id}-${index}`} r={index === selectedIndex ? 5.5 : 3.5} />))}
+          <text className="designer-ai-timeline-y-axis-label" x="12" y="128" transform="rotate(-90 12 128)">Y축 · 해석적 신호 (1 낮음 — 5 높음)</text>
+          <text className="designer-ai-timeline-x-axis-label" x="520" y="244">X축 · 달력 연도 / 관찰 시점</text>
         </svg>
       </div>
 
@@ -256,7 +264,7 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
             <section className="personal-ax-report-section" key={section.heading}>
               <h4>{section.heading}</h4>
               {intro.map((paragraph, index) => <p key={paragraph} className={isProposedPaperAbstract && index === 0 ? 'personal-ax-paper-title' : undefined}>{highlightText(paragraph)}</p>)}
-              {details.length > 0 ? <details className="personal-ax-report-more"><summary>더 깊이 읽기</summary>{details.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}</details> : null}
+              {details.length > 0 ? <details className="personal-ax-report-more" open><summary>더 깊이 읽기</summary>{details.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}</details> : null}
               {section.bullets ? <ul>{section.bullets.map((bullet) => <li key={bullet}>{highlightText(bullet)}</li>)}</ul> : null}
               {section.afterBulletsParagraphs?.map((paragraph) => <p key={paragraph}>{highlightText(paragraph)}</p>)}
               {isDissertationReport && section.heading === '연구 설계: 인터뷰 → 프로토타입 → 4주 단일사례 사용' ? (

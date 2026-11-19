@@ -10081,6 +10081,18 @@
   line-height: 1.72 !important;
 }
 
+.designer-ai-timeline-axes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+  margin-top: 12px;
+  color: var(--muted-ink);
+  font-size: 0.78rem;
+  line-height: 1.65;
+}
+.designer-ai-timeline-axes p { margin: 0; }
+.designer-ai-timeline-axes strong { color: var(--ink); }
+
 .designer-ai-timeline-legend {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -10110,11 +10122,14 @@
 .designer-ai-timeline-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
 .designer-ai-timeline-chart line { stroke: color-mix(in srgb, var(--stroke) 84%, transparent); stroke-width: 1; }
 .designer-ai-timeline-chart text { fill: var(--muted-ink); font-size: 11px; }
-.designer-ai-timeline-chart polyline { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-.designer-ai-timeline-chart circle { stroke: var(--surface); stroke-width: 2.5; transition: r 150ms ease; }
+.designer-ai-timeline-chart .designer-ai-timeline-area { stroke: none; fill-opacity: 0.6; }
+.designer-ai-timeline-chart .designer-ai-timeline-line { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-opacity: 1; }
+.designer-ai-timeline-chart circle { stroke: var(--surface); stroke-width: 2.5; fill-opacity: 1; stroke-opacity: 1; transition: r 150ms ease; }
 .designer-ai-timeline-chart .freelance-platform { stroke: var(--primary); fill: var(--primary); }
 .designer-ai-timeline-chart .startup { stroke: #c8693c; fill: #c8693c; }
 .designer-ai-timeline-chart .enterprise { stroke: #6d7468; fill: #6d7468; }
+.designer-ai-timeline-chart .designer-ai-timeline-y-axis-label,
+.designer-ai-timeline-chart .designer-ai-timeline-x-axis-label { fill: var(--ink); font-size: 10px; font-weight: 700; }
 
 .designer-ai-timeline-years {
   display: grid;
@@ -10180,6 +10195,7 @@
 @media (max-width: 640px) {
   .designer-ai-timeline-heading { align-items: flex-start; flex-direction: column; }
   .designer-ai-timeline-label { max-width: none; text-align: left; }
+  .designer-ai-timeline-axes { grid-template-columns: 1fr; }
   .designer-ai-timeline-legend,
   .designer-ai-timeline-lens-notes { grid-template-columns: 1fr; }
   .designer-ai-timeline-legend { gap: 8px; }
