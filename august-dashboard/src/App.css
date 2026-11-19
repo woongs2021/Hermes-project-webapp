@@ -10192,6 +10192,32 @@
 .designer-ai-timeline-sources ul { margin: 7px 0 0; padding-left: 1.15rem; }
 .designer-ai-timeline-sources li { margin: 3px 0; font-size: inherit; line-height: 1.62 !important; }
 
+.designer-ai-market-trends {
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px solid var(--stroke);
+}
+.designer-ai-market-trends-heading { max-width: 650px; }
+.designer-ai-market-trends-heading .card-kicker { margin: 0; }
+.designer-ai-market-trends-heading h5 { margin: 5px 0 8px; color: var(--ink); font-size: clamp(1.15rem, 2vw, 1.45rem); }
+.designer-ai-market-trends-heading > p:last-child { margin: 0; color: var(--muted-ink); font-size: 0.88rem; line-height: 1.7 !important; }
+.designer-ai-market-trend-lanes { display: grid; gap: 18px; margin-top: 20px; }
+.designer-ai-market-trend-lane { min-width: 0; border-top: 2px solid var(--primary); padding-top: 12px; }
+.designer-ai-market-trend-lane.startup { border-top-color: #c8693c; }
+.designer-ai-market-trend-lane.enterprise { border-top-color: #6d7468; }
+.designer-ai-market-trend-lane header .card-kicker { margin: 0; }
+.designer-ai-market-trend-lane header h6 { margin: 5px 0 0; color: var(--ink); font-size: 0.96rem; line-height: 1.5; }
+.designer-ai-market-trend-phases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+.designer-ai-market-trend-phases > section { min-width: 0; padding: 14px; border: 1px solid var(--stroke); border-radius: 10px; background: color-mix(in srgb, var(--surface) 92%, var(--primary)); }
+.designer-ai-market-trend-phases h6 { margin: 5px 0 12px; color: var(--ink); font-size: 0.92rem; line-height: 1.45; }
+.designer-ai-market-trend-period { margin: 0; color: var(--primary) !important; font-size: 0.72rem; font-weight: 780; letter-spacing: 0.06em; }
+.designer-ai-market-trend-lane.startup .designer-ai-market-trend-period { color: #a84f28 !important; }
+.designer-ai-market-trend-lane.enterprise .designer-ai-market-trend-period { color: #56604f !important; }
+.designer-ai-market-trend-phases dl { display: grid; gap: 11px; margin: 0; }
+.designer-ai-market-trend-phases dl > div { display: grid; gap: 3px; }
+.designer-ai-market-trend-phases dt { color: var(--ink); font-size: 0.75rem; font-weight: 760; }
+.designer-ai-market-trend-phases dd { margin: 0; color: var(--muted-ink); font-size: 0.8rem; line-height: 1.65; }
+
 @media (max-width: 640px) {
   .designer-ai-timeline-heading { align-items: flex-start; flex-direction: column; }
   .designer-ai-timeline-label { max-width: none; text-align: left; }
@@ -10201,6 +10227,9 @@
   .designer-ai-timeline-legend { gap: 8px; }
   .designer-ai-timeline-years { margin-left: 28px; gap: 2px; }
   .designer-ai-timeline-years button { font-size: 0.68rem; }
+  .designer-ai-market-trends { margin-top: 24px; padding-top: 22px; }
+  .designer-ai-market-trend-phases { grid-template-columns: 1fr; gap: 10px; }
+  .designer-ai-market-trend-phases > section { padding: 13px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

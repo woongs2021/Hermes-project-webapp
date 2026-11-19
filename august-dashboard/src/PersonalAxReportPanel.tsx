@@ -139,13 +139,13 @@ function DesignerAiMarketTimeline({ timeline }: { timeline: NonNullable<Personal
         {timeline.lenses.map((lens) => <div className={`designer-ai-timeline-legend-item ${lens.id}`} key={lens.id}><span aria-hidden="true" /> <strong>{lens.label}</strong><p>{lens.summary}</p></div>)}
       </div>
 
-      <div className="designer-ai-timeline-chart" role="img" aria-label={`${timeline.xAxis} ${timeline.yAxis} 프리랜서·플랫폼, 일반 스타트업, 대기업의 해석적 노출·시장변화 신호 그래프`}>
+      <div className="designer-ai-timeline-chart" role="img" aria-label={`${timeline.xAxis} ${timeline.yAxis} 프리랜서·플랫폼, 일반 스타트업, 대기업의 AI 때문에 디자인 일이 바뀌는 정도 그래프`}>
         <svg viewBox={`0 0 ${width} ${height}`} aria-hidden="true" focusable="false">
           {[1, 2, 3, 4, 5].map((signal) => <g key={signal}><line x1={left} x2={width - 24} y1={signalY(signal)} y2={signalY(signal)} /><text x="0" y={signalY(signal) + 4}>{signal}</text></g>)}
           {timeline.lenses.map((lens) => <path className={`designer-ai-timeline-area ${lens.id}`} key={`${lens.id}-area`} d={areaPath(lens.points.map((point) => point.signal))} />)}
           {timeline.lenses.map((lens) => <path className={`designer-ai-timeline-line ${lens.id}`} key={`${lens.id}-line`} d={linePath(lens.points.map((point) => point.signal))} />)}
           {timeline.lenses.map((lens) => lens.points.map((point, index) => <circle className={lens.id} cx={left + index * step} cy={signalY(point.signal)} key={`${lens.id}-${index}`} r={index === selectedIndex ? 5.5 : 3.5} />))}
-          <text className="designer-ai-timeline-y-axis-label" x="12" y="128" transform="rotate(-90 12 128)">Y축 · 해석적 신호 (1 낮음 — 5 높음)</text>
+          <text className="designer-ai-timeline-y-axis-label" x="12" y="128" transform="rotate(-90 12 128)">Y축 · 디자인 일이 바뀌는 정도 (1 낮음 — 5 높음)</text>
           <text className="designer-ai-timeline-x-axis-label" x="520" y="244">X축 · 달력 연도 / 관찰 시점</text>
         </svg>
       </div>
@@ -166,6 +166,34 @@ function DesignerAiMarketTimeline({ timeline }: { timeline: NonNullable<Personal
         </div>
         <div className="designer-ai-timeline-sources"><strong>출처·해석 경계</strong><ul>{selectedYear.sourceNotes.map((note) => <li key={note}>{note}</li>)}</ul></div>
       </div>
+
+      <section className="designer-ai-market-trends" aria-labelledby="designer-ai-market-trends-title">
+        <div className="designer-ai-market-trends-heading">
+          <p className="card-kicker">Market trend detail · 2020–2026</p>
+          <h5 id="designer-ai-market-trends-title">시장별 변화, 조금 더 자세히 읽기</h5>
+          <p>아래 내용은 위 타임라인과 같은 공개 보고서·도입 변화의 범위에서 정리한 해석이다. 실제 고용·수입·감원 결과를 재는 통계가 아니며, 2026년은 아직 끝나지 않은 현재 관찰 구간이다.</p>
+        </div>
+        <div className="designer-ai-market-trend-lanes">
+          {timeline.lenses.map((lens) => (
+            <article className={`designer-ai-market-trend-lane ${lens.id}`} key={`${lens.id}-trend-detail`}>
+              <header><p className="card-kicker">{lens.label}</p><h6>{lens.summary}</h6></header>
+              <div className="designer-ai-market-trend-phases">
+                {lens.trendDetails.map((phase) => (
+                  <section key={phase.period}>
+                    <p className="designer-ai-market-trend-period">{phase.period}</p>
+                    <h6>{phase.title}</h6>
+                    <dl>
+                      <div><dt>수요·일하는 방식</dt><dd>{phase.demandAndWorkModel}</dd></div>
+                      <div><dt>더 빨라지는 일 / 사람의 판단</dt><dd>{phase.automationAndHumanJudgment}</dd></div>
+                      <div><dt>다음에 볼 점</dt><dd>{phase.watchNext}</dd></div>
+                    </dl>
+                  </section>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
     </section>
   )
 }

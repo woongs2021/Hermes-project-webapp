@@ -7,6 +7,7 @@ function assert(condition, message) {
 }
 
 const sourcePath = (relativePath) => fileURLToPath(new URL(relativePath, import.meta.url))
+const dataSource = readFileSync(sourcePath('../src/personalAxReportData.ts'), 'utf8')
 const panelSource = readFileSync(sourcePath('../src/PersonalAxReportPanel.tsx'), 'utf8')
 const cssSource = readFileSync(sourcePath('../src/App.css'), 'utf8')
 const report = personalAxReports.find((item) => item.id === 'designer-ai-exposure')
@@ -14,11 +15,13 @@ assert(report, 'designer-ai-exposure report must exist')
 assert(report.marketTimeline, 'report must provide a marketTimeline')
 
 const { marketTimeline } = report
-assert(marketTimeline.label === '해석적 노출·시장변화 신호', 'timeline label must distinguish interpretation from official market data')
-assert(marketTimeline.caveat.includes('공식 시장규모') && marketTimeline.caveat.includes('고용규모') && marketTimeline.caveat.includes('감원율'), 'timeline caveat must exclude market size, employment size, and layoff rate')
+assert(marketTimeline.label === 'AI 때문에 디자인 일이 바뀌는 정도', 'timeline label must use plain Korean')
+assert(marketTimeline.caveat.includes('반복 제작·생산·조율') && marketTimeline.caveat.includes('공식 시장 규모·고용 규모·감원율 통계가 아니며') && marketTimeline.caveat.includes('모든 디자인 일이 사라진다는 뜻도 아니다'), 'timeline caveat must plainly define the 1–5 guide and its limits')
+assert(!dataSource.includes('해석적 노출·시장변화 신호'), 'the former difficult label must not remain in the user-facing data source')
+assert(!panelSource.includes('해석적 노출·시장변화 신호'), 'the former difficult label must not remain in the chart renderer')
 assert(marketTimeline.xAxis.includes('달력 연도') && marketTimeline.xAxis.includes('2020–2026'), 'X axis must identify calendar year / observation timeframe from 2020 through 2026')
 assert(marketTimeline.xAxis.includes('2026년은 아직 끝나지 않은'), 'X axis must mark 2026 as the incomplete current observation period')
-assert(marketTimeline.yAxis.includes('해석적') && marketTimeline.yAxis.includes('시장 규모·고용 규모·감원율이 아니다'), 'Y axis must remain interpretive and not a market/employment/layoff metric')
+assert(marketTimeline.yAxis.includes('AI 때문에 디자인 일이 바뀌는 정도') && marketTimeline.yAxis.includes('시장 규모·고용 규모·감원율이 아니다'), 'Y axis must use the plain-language guide and exclude market/employment/layoff metrics')
 assert(marketTimeline.years.length === 7, 'timeline must include seven years')
 assert(marketTimeline.years.map((year) => year.year).join(',') === '2020,2021,2022,2023,2024,2025,2026', 'timeline years must run from 2020 through 2026 without gaps')
 assert(marketTimeline.lenses.length === 3, 'timeline must provide exactly three market lenses')
@@ -29,6 +32,11 @@ for (const lens of marketTimeline.lenses) {
   for (const point of lens.points) {
     assert(Number.isInteger(point.signal) && point.signal >= 1 && point.signal <= 5, `${lens.id} signal must stay in the interpretive 1–5 range`)
   }
+  assert(lens.trendDetails.length === 3, `${lens.id} must provide exactly three detailed market-trend phases`)
+  assert(lens.trendDetails.map((phase) => phase.period).join(',') === '2020–22,2023–24,2025–26', `${lens.id} detail phases must cover 2020–22, 2023–24, and 2025–26`)
+  for (const phase of lens.trendDetails) {
+    assert(phase.title.length > 0 && phase.demandAndWorkModel.length > 0 && phase.automationAndHumanJudgment.length > 0 && phase.watchNext.length > 0, `${lens.id} ${phase.period} must cover work model, automation/human judgment, and what to watch`)
+  }
 }
 
 for (const year of marketTimeline.years) {
@@ -37,6 +45,8 @@ for (const year of marketTimeline.years) {
 }
 
 assert(panelSource.includes('designer-ai-timeline-axes') && panelSource.includes('aria-label="타임라인 축 설명"'), 'both axis explanations must be present in accessible DOM')
+assert(panelSource.includes('designer-ai-market-trends') && panelSource.includes('trendDetails.map') && panelSource.includes('수요·일하는 방식') && panelSource.includes('더 빨라지는 일 / 사람의 판단') && panelSource.includes('다음에 볼 점'), 'renderer must expose detailed three-part market narratives after the timeline')
+assert(cssSource.includes('.designer-ai-market-trend-phases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));') && cssSource.includes('.designer-ai-market-trend-phases { grid-template-columns: 1fr; gap: 10px; }'), 'market detail section must provide calm desktop and mobile layouts')
 assert(panelSource.includes('designer-ai-timeline-x-axis-label') && panelSource.includes('designer-ai-timeline-y-axis-label'), 'both axis explanations must be visibly labelled in the SVG chart')
 assert(panelSource.includes('designer-ai-timeline-area') && panelSource.includes('areaPath('), 'chart must render filled SVG area paths')
 assert(panelSource.includes('designer-ai-timeline-line') && panelSource.includes('linePath('), 'chart must render separate SVG stroke paths')
@@ -45,4 +55,4 @@ assert(cssSource.includes('stroke-opacity: 1') && cssSource.includes('fill-opaci
 assert(/<details className="personal-ax-report-more" open><summary>더 깊이 읽기<\/summary>/.test(panelSource), 'all rendered 더 깊이 읽기 details must be open by default and retain a summary control')
 assert(personalAxReports.some((item) => item.sections.some((section) => section.paragraphs.length > 2)), 'reports must contain expandable deep-reading content to exercise the default-open contract')
 
-console.log('Designer AI timeline verified: 2020–2026 axes, interpretive boundary, 60% filled areas, opaque strokes/dots, and default-open deep-reading controls.')
+console.log('Designer AI timeline verified: 2020–2026 axes, plain-language 1–5 guide and caveat, three detailed market lanes, 60% filled areas, opaque strokes/dots, and default-open deep-reading controls.')
