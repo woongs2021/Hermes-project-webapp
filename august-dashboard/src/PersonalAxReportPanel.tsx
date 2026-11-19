@@ -1,6 +1,6 @@
 import { useRef, useState, type KeyboardEvent } from 'react'
 import { personalAxReports, type PersonalAxReport, type PersonalAxReportId } from './personalAxReportData'
-import { getReportPrompts, renderReportPromptHtmlSection } from './personalAxReportPrompts'
+import { getReportPrompts } from './personalAxReportPrompts'
 
 type DownloadStatus = 'idle' | 'html-downloaded' | 'pdf-generating' | 'pdf-downloaded' | 'error'
 
@@ -93,19 +93,19 @@ function escapeHtml(value: string) {
   })[character] ?? character)
 }
 
-function reportHtml(report: PersonalAxReport) {
-  const heroUrl = `${window.location.origin}${import.meta.env.BASE_URL}${report.heroImage}`
-  const sections = report.sections.map((section) => `
-    <section>
-      <h2>${escapeHtml(section.heading)}</h2>
-      ${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}
-      ${section.bullets ? `<ul>${section.bullets.map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join('')}</ul>` : ''}
-      ${section.afterBulletsParagraphs?.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('') ?? ''}
-    </section>`).join('')
-  const sources = report.sources.map((source) => `<li><a href="${escapeHtml(source.href)}">${escapeHtml(source.title)}</a> <small>${source.access}</small></li>`).join('')
-  const promptSection = renderReportPromptHtmlSection(report, escapeHtml)
+function cloneReportForExport(reportElement: HTMLElement) {
+  const clone = reportElement.cloneNode(true) as HTMLElement
+  clone.querySelectorAll<HTMLDetailsElement>('details.personal-ax-report-more').forEach((details) => { details.open = true })
+  clone.querySelectorAll<HTMLElement>('[src], [href]').forEach((element) => {
+    if (element.hasAttribute('src')) element.setAttribute('src', new URL(element.getAttribute('src') ?? '', window.location.href).href)
+    if (element.hasAttribute('href')) element.setAttribute('href', new URL(element.getAttribute('href') ?? '', window.location.href).href)
+  })
+  return clone
+}
 
-  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(report.title)}</title><style>body{max-width:760px;margin:56px auto;padding:0 24px;color:#17233a;background:#fcfbf8;font:16px/1.8 system-ui,sans-serif}small{color:#60708a}h1{font-size:34px;line-height:1.28}h2{margin-top:44px;font-size:21px}section>p{text-indent:1em}a{color:#315f97}li{margin:8px 0}.eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:12px}</style></head><body><p class="eyebrow">${escapeHtml(report.eyebrow)}</p><img src="${escapeHtml(heroUrl)}" alt="${escapeHtml(report.heroAlt)}" style="width:100%;border-radius:16px;display:block;margin:0 0 28px"><h1>${escapeHtml(report.title)}</h1><p>${escapeHtml(report.dek)}</p>${sections}<section><h2>인용 레퍼런스</h2><ul>${sources}</ul></section>${promptSection}</body></html>`
+function reportHtml(report: PersonalAxReport, reportElement: HTMLElement) {
+  const reportClone = cloneReportForExport(reportElement)
+  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(report.title)}</title><style>body{max-width:920px;margin:48px auto;padding:0 24px;color:#17233a;background:#fcfbf8;font:16px/1.8 system-ui,sans-serif}article{max-width:100%}img,svg{max-width:100%;height:auto}h3{font-size:34px;line-height:1.28}h4{margin-top:42px;font-size:21px}h5,h6{font-size:17px}p,li{overflow-wrap:anywhere}a{color:#315f97}li{margin:8px 0}details{display:block;margin:18px 0;padding:14px;background:#f5f7ff;border:1px solid #dbe2f3;border-radius:10px}summary{font-weight:700}table{width:100%;border-collapse:collapse}th,td{padding:8px;border:1px solid #dbe2f3;text-align:left;vertical-align:top}@media print{body{margin:0;max-width:none}}</style></head><body>${reportClone.outerHTML}</body></html>`
 }
 
 function DesignerAiMarketTimeline({ timeline }: { timeline: NonNullable<PersonalAxReport['marketTimeline']> }) {
@@ -253,7 +253,9 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
 
   const downloadHtml = () => {
     try {
-      const blob = new Blob([reportHtml(report)], { type: 'text/html;charset=utf-8' })
+      const reportElement = document.querySelector<HTMLElement>('#personal-ax-report-print')
+      if (!reportElement) throw new Error('Report element not found')
+      const blob = new Blob([reportHtml(report, reportElement)], { type: 'text/html;charset=utf-8' })
       const href = URL.createObjectURL(blob)
       const anchor = document.createElement('a')
       anchor.href = href
@@ -291,6 +293,7 @@ export function PersonalAxReportPanel({ reportId, reportIds }: { reportId?: Pers
           scale: 2,
           logging: false,
           onclone: (clonedDocument: Document) => {
+            clonedDocument.querySelectorAll<HTMLDetailsElement>('details.personal-ax-report-more').forEach((details) => { details.open = true })
             const exportStyle = clonedDocument.createElement('style')
             exportStyle.textContent = pdfExportColorOverrides
             clonedDocument.head.append(exportStyle)
