@@ -4,6 +4,7 @@ import { fallbackResearchBoard, loadResearchBoard, type ResearchBoard, type Rese
 import { fallbackChrisArchive, loadChrisArchive, type ChrisArchiveManifest } from './chrisArchive'
 import { fallbackDnaArchive, loadDnaArchive, loadMidjourneyDnaArchive, type DnaArchiveManifest } from './dnaArchive'
 import { fallbackBrandMockupAssets, loadBrandMockupAssets, type BrandMockupManifest } from './brandAssets'
+import { AiOccupationExposurePanel } from './AiOccupationExposurePanel'
 
 type GraphNode = {
   id: string
@@ -540,6 +541,8 @@ export function MonthlyResearchSynthesisPanel({ onSelectResearchItem }: { onSele
           </article>
         ))}
       </section>
+
+      <AiOccupationExposurePanel />
 
       <article className="content-card monthly-shortlist-card">
         <p className="card-kicker">High-signal shortlist</p>

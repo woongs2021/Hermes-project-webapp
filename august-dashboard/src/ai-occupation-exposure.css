@@ -1,0 +1,19 @@
+
+/* Weekly occupation exposure monitor */
+.occupation-exposure-card { grid-column: 1 / -1; display: grid; gap: 18px; padding: clamp(20px, 3vw, 36px); background: color-mix(in srgb, var(--panel-surface, #fff) 94%, #eaf0ec); }
+.occupation-exposure-header { display: flex; justify-content: space-between; gap: 24px; align-items: start; }
+.occupation-exposure-header h3 { margin: 4px 0 10px; font-size: clamp(1.5rem, 3vw, 2.35rem); letter-spacing: -0.04em; }
+.occupation-exposure-header p, .occupation-method, .occupation-row p, .occupation-designers p { color: var(--muted-ink); line-height: 1.6; }
+.occupation-count { flex: 0 0 auto; font-variant-numeric: tabular-nums; color: var(--ink) !important; border-bottom: 1px solid currentColor; padding-bottom: 4px; }
+.occupation-method { margin: 0; padding: 12px 14px; border-left: 2px solid #718b7b; background: rgba(113, 139, 123, .07); }
+.occupation-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 9px 12px; }
+.occupation-controls select { min-height: 38px; border: 1px solid var(--line, #d7d7d1); background: var(--panel-surface, #fff); color: inherit; padding: 0 28px 0 10px; border-radius: 2px; }
+.occupation-designer-toggle { display: inline-flex; gap: 8px; align-items: center; min-height: 38px; padding: 0 10px; border: 1px solid var(--line, #d7d7d1); cursor: pointer; }
+.occupation-designers { display: grid; grid-template-columns: minmax(190px, .7fr) 2fr; gap: 18px; padding: 15px 0; border-top: 1px solid var(--line, #d7d7d1); border-bottom: 1px solid var(--line, #d7d7d1); }
+.occupation-designers h4 { margin: 3px 0 0; font-size: 1rem; }.occupation-designers p { margin: 0; font-size: .88rem; }
+.occupation-table-wrap { overflow-x: auto; border-top: 1px solid var(--line, #d7d7d1); outline-offset: 4px; }
+.occupation-table-head, .occupation-row { min-width: 780px; display: grid; grid-template-columns: minmax(230px, 1.2fr) 120px 155px minmax(260px, 1.5fr); gap: 16px; align-items: center; }
+.occupation-table-head { padding: 10px 0; color: var(--muted-ink); font-size: .76rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+.occupation-row { padding: 13px 0; border-top: 1px solid var(--line, #d7d7d1); font-size: .9rem; }.occupation-row > div:first-child { display: grid; grid-template-columns: 34px 1fr; column-gap: 8px; }.occupation-row > div:first-child b { color: #718b7b; font-variant-numeric: tabular-nums; }.occupation-row strong { font-size: .95rem; }.occupation-row small { grid-column: 2; color: var(--muted-ink); margin-top: 3px; }.occupation-row p { margin: 0; font-size: .84rem; }.occupation-row em { display: block; width: max-content; margin-top: 4px; padding: 2px 6px; font-size: .72rem; font-style: normal; border-radius: 99px; }.pressure { background: #f5ece7; color: #87503d; }.augment { background: #e8f0eb; color: #35614b; }
+.occupation-sources { display: flex; flex-wrap: wrap; gap: 8px 16px; padding-top: 2px; font-size: .82rem; }.occupation-sources span { color: var(--muted-ink); }.occupation-sources ul { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 7px 15px; margin: 0; padding: 0; list-style: none; }.occupation-sources a { color: inherit; text-underline-offset: 3px; }
+@media (max-width: 720px) { .occupation-exposure-header { display: block; }.occupation-count { display: inline-block; margin-top: 12px; }.occupation-designers { grid-template-columns: 1fr; gap: 7px; }.occupation-table-head, .occupation-row { grid-template-columns: minmax(220px, 1.2fr) 105px 140px minmax(230px, 1.2fr); } }
