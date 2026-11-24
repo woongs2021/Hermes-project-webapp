@@ -218,7 +218,7 @@ type AutomationLoop = {
   note: string
 }
 
-// Public-safe snapshot of enabled Hermes schedules, refreshed 2026-11-16 KST.
+// Public-safe snapshot of enabled Hermes schedules, refreshed 2026-11-24 KST.
 // It intentionally excludes scheduler IDs, private destinations, paths, and raw logs.
 const automationLoops: AutomationLoop[] = [
   { owner: 'Karina', name: '아침 날씨·웜 노트', rhythm: '매일 09:00 KST', nextRun: '화 09:00 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '에이전트 실행', note: '하루를 짧고 다정하게 여는 브리핑' },
@@ -243,11 +243,14 @@ const automationLoops: AutomationLoop[] = [
   { owner: 'Faker', name: '논문 아이디어 shortlist 금요일 발행', rhythm: '금 10:45 KST', nextRun: '금 10:45 KST', status: 'ok', delivery: '공개 페이지·보고', cost: '빌드·배포', note: '검증 승인된 후보만 주간 공개에 반영' },
   { owner: 'Faker', name: 'Career 공개 검증·발행', rhythm: '월 08:35 KST', nextRun: '다음 월 08:35 KST', status: 'ok', delivery: '공개 페이지·보고', cost: '빌드·배포', note: '안전한 주간 Career 데이터만 검증·발행' },
   { owner: 'Faker', name: '자동화 보드 주간 갱신', rhythm: '월 10:10 KST', nextRun: '다음 월 10:10 KST', status: 'ok', delivery: '공개 페이지·보고', cost: '빌드·배포', note: '활성 운영 루프의 공개 안전 현황 갱신' },
+  { owner: 'Faker', name: 'Dissertation References 동기화', rhythm: '매일 10:10 KST', nextRun: '화 10:10 KST', status: 'ok', delivery: '공개 페이지·보고', cost: '빌드·배포', note: '검증 완료된 Dissertation References만 공개 보드에 동기화' },
   { owner: 'Muyeol', name: 'AI/AX job-shift 루프 검증', rhythm: '금 09:55 KST', nextRun: '금 09:55 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '소스·리스크·구조를 주간 검증' },
   { owner: 'Muyeol', name: '논문 아이디어 shortlist 사전 검증', rhythm: '금 10:20 KST', nextRun: '금 10:20 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '공개 전 근거와 안전 경계를 확인' },
   { owner: 'Muyeol', name: '주간 웹앱·Career 사전 검증', rhythm: '월 10:00 KST', nextRun: '다음 월 10:00 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '월요일 공개 전 데이터와 경계를 확인' },
   { owner: 'Muyeol', name: 'AX 사례 주간 공개본 검증 · 2+2 목표', rhythm: '월 10:25 KST', nextRun: '다음 월 10:25 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '국내·해외 각 1건 이상과 2+2 목표 달성도, 중복, 원문 링크와 Pages 공개본을 독립 검증' },
   { owner: 'Muyeol', name: '주간 웹앱 데이터 수량 점검', rhythm: '월 09:40 KST', nextRun: '다음 월 09:40 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '검증 실행', note: '공개 데이터 수량과 빌드 상태를 점검' },
+  { owner: 'Muyeol', name: 'Dissertation References 핸드오프 검증', rhythm: '매일 09:50 KST', nextRun: '화 09:50 KST', status: 'ok', delivery: '내부 핸드오프', cost: '검증 실행', note: '공개 전 레퍼런스 근거와 전달 경계를 매일 확인' },
+  { owner: 'Muyeol', name: 'AI 대체 직업 현황판 Top 100 갱신·검증', rhythm: '월 10:20 KST', nextRun: '다음 월 10:20 KST', status: 'ok', delivery: '공개 페이지·다이렉트 메시지', cost: '검증·배포', note: '직업별 AI 자동화 노출 현황판을 보수적으로 갱신하고 라이브 화면을 확인' },
 ]
 
 const automationOwnerOrder = ['Karina', 'Yuna', 'GoYJ', 'Son', 'Faker', 'Muyeol']
