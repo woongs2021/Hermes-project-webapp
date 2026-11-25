@@ -2258,6 +2258,123 @@
       "previewImageSrc": "/assets/dna-archive/2026-11-11/05_bloom_void_accent.webp",
       "downloadSrc": "https://github.com/woongs2021/Hermes-project-assets/releases/download/design-dna-2026-11/goyj-dna-2026-11-11__05_bloom_void_accent__1024.png",
       "downloadLabel": "원본 PNG 다운로드"
+    },
+    {
+      "id": "2026-11-25-archive60-style-divergence-1125-01",
+      "title": "Sage Cut Reserve",
+      "created": "2026-11-25",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-11-25/01_sage_cut_reserve.png",
+      "analysis": "PASS — no text, logo, UI, badge, line overlay, or poster hierarchy. Sage and charcoal edge masses leave a broad warm-paper reserve that is especially usable for overlay.",
+      "referenceAxis": "Hilal spatial editorial restraint / black void frame translated into gridless paper reserve",
+      "dnaClusters": [
+        "Editorial Evidence System",
+        "Protected Human Context"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "854c758d99d973a2ab78a994a7098f4f74e5ab3ee7089080c822c00bc1d4ea7f",
+      "selectedReason": "Chris instruction: 1 4 5번 저장해줘.",
+      "intendedLaterUse": "package sleeve ground, card-mask reserve, restrained brand background",
+      "motifType": "Spatial Color Field",
+      "qaVisualStatus": "PASS — no text, logo, UI, badge, line overlay, or poster hierarchy. Sage and charcoal edge masses leave a broad warm-paper reserve that is especially usable for overlay.",
+      "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY for future brand, package, mobile UI, and mockup composition. Based on the 60-item Chris Archive and Hermes design-system DNA, translated into composable visual material, not copied. 1:1 square. Useful for cropping, masking, overlaying, repeating, or placing on surfaces. No readable text, no letters, no numbers, no logos, no watermark, no poster headline, no app icon, no UI screenshot, no product mockup, no people, no photo. Do not make a complete poster or standalone artwork. Keep high design utility, clear negative space, crop-friendly edges, quiet editorial structure, tactile print/material feeling.\n\nSpecific direction:\nCreate a strictly flat 2D spatial color-field material on a warm chalk-paper ground. One oversized matte sage-green irregular plane enters from the upper-left edge; a second dense charcoal plane enters only from the lower-right corner. Between them preserve a wide quiet off-white negative-space corridor with gently asymmetric boundaries. Planes are opaque printed ink, not a grid, frame, card, panel, architecture, shadow, or perspective. No thin rules, no coordinates, no letters, no rectangles arranged as a layout. Use subtle dry paper fibre and ink gain. The result is a calm structural surface for crop and overlay, not a poster.\n\nHard exclusions:\nNo readable text, letters, numbers, brand names, logos, watermark, complete poster, completed package label, app icon, UI screenshot, product mockup, people, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, mixed visual systems, random decorative scratches, unnecessary orbit lines, route maps, dot-matrix default, warm-gray capsule default, circle badge default.",
+      "negativePrompt": "No readable text, letters, numbers, brand names, logos, watermark, complete poster, completed package label, app icon, UI screenshot, product mockup, people, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, mixed visual systems, random decorative scratches, unnecessary orbit lines, route maps, dot-matrix default, warm-gray capsule default, circle badge default.",
+      "sourceReferences": [
+        {
+          "title": "Hilal Spatial Studio minimal grid posters",
+          "tags": []
+        },
+        {
+          "title": "Black void typographic poster with gray frame",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-archive60-style-divergence-1125-04",
+      "title": "Macro Pixel Pulp",
+      "created": "2026-11-25",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-11-25/04_macro_pixel_pulp.png",
+      "analysis": "PASS — no readable glyph, numeral, UI, dot matrix, logo, or line system. Large irregular blocks do not resolve into letters and form the only all-over repeat candidate.",
+      "referenceAxis": "AI OS dot-matrix rhythm / coded-phone bitmap language, converted to non-glyph macro pulp repeat",
+      "dnaClusters": [
+        "Quiet Signal Rhythm",
+        "Editorial Evidence System"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "2b0f9a36f042c1bd50e868fc59cea0b4575cdb6f2e87077f6481ce10bd9e3a30",
+      "selectedReason": "Chris instruction: 1 4 5번 저장해줘.",
+      "intendedLaterUse": "repeat package wrap, fabric-like mobile-card backing, modular masking texture",
+      "motifType": "Pattern/Repeat",
+      "qaVisualStatus": "PASS — no readable glyph, numeral, UI, dot matrix, logo, or line system. Large irregular blocks do not resolve into letters and form the only all-over repeat candidate.",
+      "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY for future brand, package, mobile UI, and mockup composition. Based on the 60-item Chris Archive and Hermes design-system DNA, translated into composable visual material, not copied. 1:1 square. Useful for cropping, masking, overlaying, repeating, or placing on surfaces. No readable text, no letters, no numbers, no logos, no watermark, no poster headline, no app icon, no UI screenshot, no product mockup, no people, no photo. Do not make a complete poster or standalone artwork. Keep high design utility, clear negative space, crop-friendly edges, quiet editorial structure, tactile print/material feeling.\n\nSpecific direction:\nMake a full-bleed, strictly flat 2D repeat material on matte bone paper using only oversized irregular pulp blocks in graphite, muted teal, dusty salmon, and pale gray. Blocks are at least one-tenth of the square, have unequal blunt silhouettes, and drift in a loose all-over rhythm with generous breathing space and cropped edges. They must not align into rows, grids, charts, digits, letters, speech bubbles, screens, glyphs, pixel text, interfaces, cards, or dot matrices. No outlines, thin marks, lines, circles, capsules, gradients, or shadows. Add only low-density risograph texture and slight misregistration. It must read as a tactile repeat for wrap, mask, or surface layering—not a coded display, poster, or logo sheet.\n\nHard exclusions:\nNo readable text, letters, numbers, brand names, logos, watermark, complete poster, completed package label, app icon, UI screenshot, product mockup, people, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, mixed visual systems, random decorative scratches, unnecessary orbit lines, route maps, dot-matrix default, warm-gray capsule default, circle badge default.",
+      "negativePrompt": "No readable text, letters, numbers, brand names, logos, watermark, complete poster, completed package label, app icon, UI screenshot, product mockup, people, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, mixed visual systems, random decorative scratches, unnecessary orbit lines, route maps, dot-matrix default, warm-gray capsule default, circle badge default.",
+      "sourceReferences": [
+        {
+          "title": "AI OS alarm dot matrix phone poster",
+          "tags": []
+        },
+        {
+          "title": "Space Weather Coded Phone UI Specimen",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-archive60-style-divergence-1125-05",
+      "title": "Black Lime Cut Horizon",
+      "created": "2026-11-25",
+      "status": "chris_selected",
+      "imageSrc": "/assets/dna-archive/2026-11-25/05_black_lime_cut_horizon.png",
+      "analysis": "PASS — no text, logo, yellow line decoration, orbit, badge, or fake UI. One lime edge mass with lilac underprint is a distinct high-signal accent with a generous black reserve.",
+      "referenceAxis": "Fahlberg black-lime editorial tension / Traffik pastel geometry, reduced to one non-logo edge accent",
+      "dnaClusters": [
+        "Warm-Cool Intelligence",
+        "Protected Human Context"
+      ],
+      "model": "gpt_image_2_5",
+      "options": {
+        "aspect_ratio": "1:1",
+        "quality": "high",
+        "resolution": "1k",
+        "background": "opaque"
+      },
+      "width": 1024,
+      "height": 1024,
+      "assetHash": "d841c2a25f75e58bf2a5c8e79fc9d0276021ef69f0aaeae7b9debb6348db95f9",
+      "selectedReason": "Chris instruction: 1 4 5번 저장해줘.",
+      "intendedLaterUse": "dark mobile hero crop, high-signal carton edge, layered brand anchor",
+      "motifType": "Signal Accent",
+      "qaVisualStatus": "PASS — no text, logo, yellow line decoration, orbit, badge, or fake UI. One lime edge mass with lilac underprint is a distinct high-signal accent with a generous black reserve.",
+      "prompt": "PURE 2D GRAPHIC MOTIF MATERIAL ONLY for future brand, package, mobile UI, and mockup composition. Based on the 60-item Chris Archive and Hermes design-system DNA, translated into composable visual material, not copied. 1:1 square. Useful for cropping, masking, overlaying, repeating, or placing on surfaces. No readable text, no letters, no numbers, no logos, no watermark, no poster headline, no app icon, no UI screenshot, no product mockup, no people, no photo. Do not make a complete poster or standalone artwork. Keep high design utility, clear negative space, crop-friendly edges, quiet editorial structure, tactile print/material feeling.\n\nSpecific direction:\nCreate a flat 2D signal-accent material on a deep matte black uncoated-paper field. From the upper-right edge, a single oversized acid-lime angular cut-paper mass enters and is cropped by two edges; inside it, one small muted lilac underprint is visible as an offset area, not a line. Preserve at least sixty-five percent uninterrupted black reserve. The lime mass must be asymmetric, broad, and non-symbolic—not a circle, badge, logo, chevron, arrow, orbit, record, screen, or letter. No yellow line decoration, no thin outline, no glow, no dot, no stripe, no gradient, no 3D material, no shadow. Use very restrained dry ink grain. A quiet high-signal edge fragment for later composition, never a completed poster.\n\nHard exclusions:\nNo readable text, letters, numbers, brand names, logos, watermark, complete poster, completed package label, app icon, UI screenshot, product mockup, people, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, mixed visual systems, random decorative scratches, unnecessary orbit lines, route maps, dot-matrix default, warm-gray capsule default, circle badge default.",
+      "negativePrompt": "No readable text, letters, numbers, brand names, logos, watermark, complete poster, completed package label, app icon, UI screenshot, product mockup, people, photo, robot, brain symbol, magic sparkle, generic AI startup neon gradient, surveillance dashboard, fake UI copy, exact reference layout, known brand imitation, clutter, mixed visual systems, random decorative scratches, unnecessary orbit lines, route maps, dot-matrix default, warm-gray capsule default, circle badge default.",
+      "sourceReferences": [
+        {
+          "title": "Fahlberg circular orbit Show Me poster",
+          "tags": []
+        },
+        {
+          "title": "Uvita Twins Traffik pastel geometric poster",
+          "tags": []
+        }
+      ]
     }
   ]
 }
