@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-27T16:48:09.000Z",
+  "generatedAt": "2026-11-27T16:52:33.000Z",
   "sourcePolicy": "공개된 공식 회사·디자인 조직 페이지를 우선 사용한 디자인 중심 회사 레이더다. 순위는 기업 규모 순위가 아니라 Chris의 Design DNA·브랜드 시스템·UX/Product·디자인 리더십 학습 적합도를 기준으로 한 초기 큐레이션이다.",
   "items": [
     {
@@ -330,8 +330,28 @@
       ]
     },
     {
+      "id": "global-workbyworks",
+      "name": "Workbyworks Studio",
+      "scope": "Global",
+      "country": "United States / China",
+      "companyType": "design_studio",
+      "companyTypeKo": "다학제 브랜드 디자인 스튜디오",
+      "designFocusKo": "크리에이티브 디렉션, 브랜딩, 비주얼 아이덴티티, 패키지, 웹사이트와 북 디자인을 다루는 뉴욕·상하이 기반 스튜디오다.",
+      "whyNowKo": "브랜드 아이덴티티를 패키지·디지털·에디토리얼 접점까지 밀도 있게 확장하는 방식과 Essence 프로젝트를 함께 볼 수 있다.",
+      "rankRationaleKo": "해외 독립 스튜디오 우선 탐색 기준에서 시각 언어와 다매체 브랜드 실행을 함께 학습할 수 있는 비교축이다.",
+      "officialUrl": "https://workbyworks.studio/",
+      "evidenceUrl": "https://workbyworks.studio/work/essence",
+      "tags": [
+        "Creative direction",
+        "Branding",
+        "Packaging",
+        "Editorial"
+      ],
+      "priorityRank": 18
+    },
+    {
       "id": "kr-ahn-graphics",
-      "priorityRank": 18,
+      "priorityRank": 19,
       "name": "Ahn Graphics",
       "scope": "Korea",
       "country": "South Korea",
@@ -350,7 +370,7 @@
     },
     {
       "id": "global-designstudio",
-      "priorityRank": 19,
+      "priorityRank": 20,
       "name": "DesignStudio",
       "scope": "Global",
       "country": "United Kingdom",
@@ -369,7 +389,7 @@
     },
     {
       "id": "kr-mmmg",
-      "priorityRank": 20,
+      "priorityRank": 21,
       "name": "MMMG",
       "scope": "Korea",
       "country": "South Korea",
@@ -388,7 +408,7 @@
     },
     {
       "id": "global-akqa",
-      "priorityRank": 21,
+      "priorityRank": 22,
       "name": "AKQA",
       "scope": "Global",
       "country": "Global",
@@ -407,7 +427,7 @@
     },
     {
       "id": "kr-fnt",
-      "priorityRank": 22,
+      "priorityRank": 23,
       "name": "fnt",
       "scope": "Korea",
       "country": "South Korea",
@@ -426,7 +446,7 @@
     },
     {
       "id": "kr-everyday-practice",
-      "priorityRank": 23,
+      "priorityRank": 24,
       "name": "Everyday Practice",
       "scope": "Korea",
       "country": "South Korea",
