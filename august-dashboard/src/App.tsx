@@ -218,7 +218,7 @@ type AutomationLoop = {
   note: string
 }
 
-// Public-safe snapshot of enabled Hermes schedules, refreshed 2026-11-24 KST.
+// Public-safe snapshot of Hermes schedules, refreshed 2026-11-27 KST.
 // It intentionally excludes scheduler IDs, private destinations, paths, and raw logs.
 const automationLoops: AutomationLoop[] = [
   { owner: 'Karina', name: '아침 날씨·웜 노트', rhythm: '매일 09:00 KST', nextRun: '화 09:00 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '에이전트 실행', note: '하루를 짧고 다정하게 여는 브리핑' },
@@ -227,7 +227,7 @@ const automationLoops: AutomationLoop[] = [
   { owner: 'Karina', name: '밤 웜 노트', rhythm: '매일 22:00 KST', nextRun: '월 22:00 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '에이전트 실행', note: '회복과 정리를 돕는 짧은 인사' },
   { owner: 'Yuna', name: 'AI/AX 직무 영향 리서치', rhythm: '수·금 09:15 KST', nextRun: '수 09:15 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '리서치 실행', note: '국내외 직무·산업 변화 신호 조사' },
   { owner: 'Yuna', name: '논문 아이디어 근거 리서치', rhythm: '매일 09:30 KST', nextRun: '화 09:30 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '리서치 실행', note: '교육과 학습자 지원에 맞는 검증 후보 선별' },
-  { owner: 'GoYJ', name: 'Hermes DNA 그래픽 모티프', rhythm: '월·수·금 10:15 KST', nextRun: '월 10:15 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '이미지 생성', note: 'Design DNA용 그래픽 후보 생성' },
+  { owner: 'GoYJ', name: 'Hermes DNA 그래픽 모티프', rhythm: '월·수·금 10:15 KST', nextRun: '요금제 권한 복구 후 재개', status: 'paused', delivery: '다이렉트 메시지', cost: '이미지 생성', note: 'gpt_image_2_5 생성 권한이 Free 플랜에서 제한되어 일시정지' },
   { owner: 'GoYJ', name: '디자인 직무 영향 리서치', rhythm: '수·금 09:25 KST', nextRun: '수 09:25 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '리서치 실행', note: 'AI/AX와 디자인 역할 변화 해석' },
   { owner: 'GoYJ', name: 'UX·디자인 논문 근거 리서치', rhythm: '매일 09:40 KST', nextRun: '월 09:40 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '리서치 실행', note: 'UX·디자인 관점의 검증 후보 선별' },
   { owner: 'Son', name: 'AI/AX SNS 최종 요약', rhythm: '수·금 09:50 KST', nextRun: '수 09:50 KST', status: 'ok', delivery: '다이렉트 메시지', cost: '에이전트 실행', note: '검증된 신호를 읽기 쉬운 시장 요약으로 정리' },
