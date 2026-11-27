@@ -10,6 +10,7 @@ import { PersonalAxReportPanel } from './PersonalAxReportPanel'
 import { AxCaseWeeklyReportPanel } from './AxCaseWeeklyReportPanel'
 import { DissertationReferencesPanel } from './DissertationReferencesPanel'
 import { CareerPanel } from './CareerPanel'
+import { DesignCompanyRadarPanel } from './DesignCompanyRadarPanel'
 import { createTeamPixelOfficeAgents } from './teamPixelOffice'
 import { TeamPixelOfficePanel } from './TeamPixelOfficePanel'
 import './App.css'
@@ -20,7 +21,7 @@ const designDnaSystemPrinciplesDocHref = publicAssetPath('/docs/design-dna-syste
 const designDnaVisualStyleMethodDocHref = publicAssetPath('/docs/design-dna-visual-style-generation-method-2026-09-28.md')
 const sonProfileImageSrc = publicAssetPath('/assets/team/son_profile.jpg')
 
-type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'report' | 'ax-cases' | 'dissertation' | 'career' | 'weekly'
+type TabId = 'home' | 'obd' | 'research' | 'visuals' | 'chrisArchive' | 'design-dna' | 'design-company-radar' | 'report' | 'ax-cases' | 'dissertation' | 'career' | 'weekly'
 type ThemeMode = 'light' | 'dark'
 type ObdSubTabId = 'growth' | 'graph' | 'about'
 type DissertationSubTabId = 'dissertation-idea-1' | 'dissertation-idea-2' | 'dissertation-idea-3' | 'references'
@@ -129,6 +130,13 @@ const tabs: Tab[] = [
     description: 'Chris Archive 60개에서 얻은 감각을 하나의 헤르메스 브랜드 언어로 압축하고, 첫 에셋 방향까지 연결합니다.',
   },
   {
+    id: 'design-company-radar',
+    label: 'Design Radar',
+    eyebrow: 'Design learning watchlist',
+    title: 'Design Company Radar',
+    description: '국내외 디자인 회사와 조직을 Design DNA 학습 관점에서 비교하고, 공식 사이트와 디자인 근거를 함께 살펴봅니다.',
+  },
+  {
     id: 'report',
     label: 'Report',
     eyebrow: 'October 2026 · Personal AX report',
@@ -181,8 +189,8 @@ const tabGroups: TabGroup[] = [
   {
     id: 'corporate-ax',
     label: 'Corporate AX',
-    eyebrow: 'Archive / Design DNA',
-    tabIds: ['chrisArchive', 'design-dna'],
+    eyebrow: 'Archive / Design DNA / Design Radar',
+    tabIds: ['chrisArchive', 'design-dna', 'design-company-radar'],
   },
   {
     id: 'weekly',
@@ -3394,7 +3402,7 @@ function App() {
       ? {
           eyebrow: 'Corporate AX',
           title: '브랜드 자산과 디자인 DNA를 구축하는 AX 공간',
-          description: 'Chris Archive와 Design DNA를 중심으로 수집된 이미지, 미감, 언어, 구조를 장기적인 브랜드 시스템과 에셋 제작 기준으로 정리합니다.',
+          description: 'Chris Archive와 Design DNA, Design Radar를 중심으로 수집된 이미지, 미감, 언어, 구조와 외부 디자인 학습 기준을 장기적인 브랜드 시스템으로 정리합니다.',
         }
       : null
   const isDarkMode = themeMode === 'dark'
@@ -3599,6 +3607,8 @@ function App() {
           <ObdKnowledgeLoopPanel />
         ) : activeTab.id === 'design-dna' ? (
           <DesignDnaPanel />
+        ) : activeTab.id === 'design-company-radar' ? (
+          <DesignCompanyRadarPanel />
         ) : activeTab.id === 'research' ? (
           <ResearchKanbanPanel selectedResearchId={selectedResearchIdFromMonthly} />
         ) : activeTab.id === 'report' ? (
