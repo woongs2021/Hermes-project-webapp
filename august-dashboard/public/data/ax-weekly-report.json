@@ -43,6 +43,63 @@
           "publicSafe": true
         }
       ]
+    },
+    {
+      "week": "2026-W48",
+      "generatedAt": "2026-11-27T00:51:06Z",
+      "cases": [
+        {
+          "id": "2026-w48-krafton-kris-workflow-agent",
+          "region": "Korea",
+          "organization": "크래프톤",
+          "titleKo": "Slack·Jira·GitLab·사내 위키를 연결한 업무 에이전트 KRIS 사례",
+          "sourceTitle": "KRAFTON empowers 4,000 employees with gen AI using Google Cloud",
+          "sourceUrl": "https://cloud.google.com/customers/intl/ko-kr/krafton?hl=ko",
+          "sourceName": "Google Cloud 고객 사례",
+          "sourceType": "official",
+          "publishedAt": "2026",
+          "workflowKo": "협업 맥락 연결 · 일정·보고서·개발 진척 확인 · 게임 이용자 반응 분석",
+          "whatChangedKo": "크래프톤은 Slack에서 Jira·GitLab·사내 위키를 연결한 KRIS를 약 4,000명 임직원이 일정·보고서·개발 진척 확인에 활용하고, 게임 이용자 반응 분석에도 적용했다고 공개했다.",
+          "evidenceKo": "Google Cloud의 공개 고객 사례는 KRIS의 연결 대상과 약 4,000명 규모의 이용 범위, 업무·분석 활용 지점을 명시한다.",
+          "implicationKo": "AX는 단일 도구를 배포하는 일보다 협업 맥락과 업무 시스템을 이어 사람이 필요한 정보를 확인·검토하는 공통 인터페이스를 설계하는 일로 확장된다.",
+          "claimBoundaryKo": "공급사 공개 고객 사례의 자체 보고 내용이다. 전사 업무 효과, 이용 빈도, 장기 생산성·인력 효과를 독립적으로 검증한 결과로 일반화하지 않는다.",
+          "publicSafe": true
+        },
+        {
+          "id": "2026-w48-kakaomobility-conversational-navigation-agent",
+          "region": "Korea",
+          "organization": "카카오모빌리티",
+          "titleKo": "카카오내비의 대화형 AI Agent를 클로즈드 베타로 검증한 사례",
+          "sourceTitle": "Kakao Mobility builds conversational navigation with Gemini on Google Cloud",
+          "sourceUrl": "https://cloud.google.com/customers/intl/ko-kr/kakaomobility?hl=ko",
+          "sourceName": "Google Cloud 고객 사례",
+          "sourceType": "official",
+          "publishedAt": "2026",
+          "workflowKo": "음성 입력 · 장소 검색 · 길안내 · 화면 제어 · 음성 응답",
+          "whatChangedKo": "카카오모빌리티는 음성 입력부터 STT, Gemini 기반 에이전트, 화면 제어와 TTS를 연결해 장소 검색·안내 UX를 구성하고, 구독 회원 대상 클로즈드 베타로 검증 중이라고 공개했다.",
+          "evidenceKo": "Google Cloud의 공개 고객 사례는 대화형 내비게이션을 구성하는 음성·에이전트·화면 제어·TTS 흐름과 클로즈드 베타 운영 사실을 명시한다.",
+          "implicationKo": "주행 UX의 AX는 모델 성능만이 아니라 지연시간, 맥락 데이터, 오류 시 검색 보정까지 함께 설계해야 서비스 운영 단위로 작동한다.",
+          "claimBoundaryKo": "공급사 공개 고객 사례의 자체 보고 내용이며 아직 클로즈드 베타 단계다. 운영 범위와 사용자 효과를 일반화하지 않는다.",
+          "publicSafe": true
+        },
+        {
+          "id": "2026-w48-palo-alto-networks-development-lifecycle-claude",
+          "region": "Global",
+          "organization": "Palo Alto Networks",
+          "titleKo": "개발 생명주기 매핑 뒤 Claude를 개발 조직에 확대한 사례",
+          "sourceTitle": "Palo Alto Networks accelerates secure development with Claude on Google Cloud",
+          "sourceUrl": "https://cloud.google.com/customers/palo-alto-networks",
+          "sourceName": "Google Cloud 고객 사례",
+          "sourceType": "official",
+          "publishedAt": "2026",
+          "workflowKo": "개발 생명주기 · IDE 코드 완성 · 페어 프로그래밍 · 단위 테스트 생성",
+          "whatChangedKo": "Palo Alto Networks는 개발 생명주기를 매핑한 뒤 150명 파일럿을 거쳐 약 3,000명 개발자에게 IDE 기반 코드 완성·페어 프로그래밍·단위 테스트 생성을 확대했다고 공개했다.",
+          "evidenceKo": "Google Cloud의 공개 고객 사례는 150명 파일럿, 약 3,000명 개발자 확대, IDE 기반 활용 지점과 보안 경계를 고려한 도입 흐름을 명시한다.",
+          "implicationKo": "개발 AX는 모델을 배포하는 일보다 보안 경계 안에서 반복 업무와 온보딩 병목을 특정하고 검증한 뒤 확장하는 운영 설계가 핵심이 된다.",
+          "claimBoundaryKo": "공급사 공개 고객 사례의 자체 보고 내용이다. 생산성 개선 수치와 효과를 다른 조직의 결과로 일반화하지 않는다.",
+          "publicSafe": true
+        }
+      ]
     }
   ]
 }
