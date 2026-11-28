@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-27T16:52:33.000Z",
+  "generatedAt": "2026-11-28T01:07:10.000Z",
   "sourcePolicy": "공개된 공식 회사·디자인 조직 페이지를 우선 사용한 디자인 중심 회사 레이더다. 순위는 기업 규모 순위가 아니라 Chris의 Design DNA·브랜드 시스템·UX/Product·디자인 리더십 학습 적합도를 기준으로 한 초기 큐레이션이다.",
   "items": [
     {
@@ -461,6 +461,46 @@
         "Spatial design",
         "Brand",
         "Experience"
+      ]
+    },
+    {
+      "id": "kr-sulki-min",
+      "priorityRank": 25,
+      "name": "Sulki and Min",
+      "scope": "Korea",
+      "country": "South Korea",
+      "companyType": "design_studio",
+      "companyTypeKo": "독립 그래픽 디자인 스튜디오",
+      "designFocusKo": "서울을 기반으로 그래픽 아이덴티티, 출판물, 웹사이트, 전시·환경 그래픽과 서체를 설계하는 독립 디자인 실천이다.",
+      "whyNowKo": "문화기관·출판·공공 맥락에서 언어, 편집, 정보 구조를 일관된 시각 체계로 다루는 작업을 공식 아카이브로 볼 수 있다.",
+      "rankRationaleKo": "브랜드 표현 이전에 읽기 경험과 문화적 맥락을 설계하는 국내 그래픽 디자인 판단을 보완한다.",
+      "officialUrl": "https://www.sulki-min.com/wp/",
+      "evidenceUrl": "https://www.sulki-min.com/wp/sulki-and-min/",
+      "tags": [
+        "Graphic design",
+        "Editorial",
+        "Typography",
+        "Cultural institutions"
+      ]
+    },
+    {
+      "id": "global-porto-rocha",
+      "priorityRank": 26,
+      "name": "PORTO ROCHA",
+      "scope": "Global",
+      "country": "United States / United Kingdom",
+      "companyType": "design_agency",
+      "companyTypeKo": "전략·디자인 에이전시",
+      "designFocusKo": "뉴욕과 런던을 기반으로 브랜드 전략, 아이덴티티, 디지털·공간 경험을 연결하는 글로벌 디자인 에이전시다.",
+      "whyNowKo": "Tinder, MoMA PS1, Robinhood 등 공식 사례에서 브랜드 전환을 제품·문화·공간 접점으로 확장하는 방식을 비교할 수 있다.",
+      "rankRationaleKo": "해외 에이전시 우선 탐색 기준에서 전략적 포지셔닝과 높은 시각 실행력을 함께 학습할 수 있는 비교축이다.",
+      "officialUrl": "https://www.portorocha.com/",
+      "evidenceUrl": "https://www.portorocha.com/",
+      "tags": [
+        "Brand strategy",
+        "Identity",
+        "Digital experience",
+        "Cultural branding"
       ]
     }
   ]
